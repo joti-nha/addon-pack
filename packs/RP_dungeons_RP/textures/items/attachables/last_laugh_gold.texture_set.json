@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "last_laugh_gold",
-        "metalness_emissive_roughness": "last_laugh_gold_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"last_laugh_gold","metalness_emissive_roughness":"last_laugh_gold_mer"}}

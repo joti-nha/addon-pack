@@ -1,14 +1,1 @@
-{
-	"num_mip_levels": 4,
-	"padding": 8,
-	"resource_pack_name": "Jerry's Better Vanilla",
-	"texture_name": "atlas.terrain",
-	"texture_data": {
-		"bv_woodcutter": {
-			"textures": "textures/blocks/woodcutter_texture"
-		},
-		"bv_light_source": {
-			"textures": "textures/blocks/light_source"
-		}
-	}
-}
+{"num_mip_levels":4,"padding":8,"resource_pack_name":"Jerry's Better Vanilla","texture_name":"atlas.terrain","texture_data":{"bv_woodcutter":{"textures":"textures/blocks/woodcutter_texture"},"bv_light_source":{"textures":"textures/blocks/light_source"}}}

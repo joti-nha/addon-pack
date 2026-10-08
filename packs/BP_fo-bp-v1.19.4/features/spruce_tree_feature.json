@@ -1,16 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "minecraft:spruce_tree_feature"
-    },
-    "features": [
-      [ "ntk:mtv/tree_v_spruce_x_spruce_tree", 10 ],
-      [ "ntk:mtv/tree_v_spruce_x_spruce_tree_with_vines", 10 ],
-      [ "ntk:mtv/tree_x_spruce_x_sprouting_tree_01", 1 ],
-      [ "ntk:mtv/tree_x_spruce_x_spruce_narrow_tree_01", 25 ],
-      [ "ntk:mtv/tree_x_spruce_x_spruce_tree_01", 100 ],
-      [ "ntk:mtv/tree_x_spruce_x_spruce_wide_tree_01", 35 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"minecraft:spruce_tree_feature"},"features":[["ntk:mtv/tree_v_spruce_x_spruce_tree",10],["ntk:mtv/tree_v_spruce_x_spruce_tree_with_vines",10],["ntk:mtv/tree_x_spruce_x_sprouting_tree_01",1],["ntk:mtv/tree_x_spruce_x_spruce_narrow_tree_01",25],["ntk:mtv/tree_x_spruce_x_spruce_tree_01",100],["ntk:mtv/tree_x_spruce_x_spruce_wide_tree_01",35]]}}

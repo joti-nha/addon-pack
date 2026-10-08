@@ -1,17 +1,1 @@
-{
-	"format_version": "1.21.40",
-	"minecraft:item": {
-		"description": {
-			"identifier": "mnra_cata:starfall",
-			"menu_category": {
-				"category": "items"
-			}
-		},
-		"components": {
-			"minecraft:rarity": {
-				"value": "uncommon"
-			},
-			"minecraft:icon": "mnra_cata_starfall"
-		}
-	}
-}
+{"format_version":"1.21.40","minecraft:item":{"description":{"identifier":"mnra_cata:starfall","menu_category":{"category":"items"}},"components":{"minecraft:rarity":{"value":"uncommon"},"minecraft:icon":"mnra_cata_starfall"}}}

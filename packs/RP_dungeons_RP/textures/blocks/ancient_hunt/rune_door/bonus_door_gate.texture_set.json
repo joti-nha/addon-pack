@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "bonus_door_gate",
-        "metalness_emissive_roughness": "bonus_door_gate_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"bonus_door_gate","metalness_emissive_roughness":"bonus_door_gate_mer"}}

@@ -1,8 +1,1 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "ntk_stone_item_trophy_pedestal",
-		"heightmap": "ntk_item_trophy_pedestal_height",
-		"metalness_emissive_roughness": "ntk_stone_item_trophy_pedestal_mer"
-	}
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_stone_item_trophy_pedestal","heightmap":"ntk_item_trophy_pedestal_height","metalness_emissive_roughness":"ntk_stone_item_trophy_pedestal_mer"}}

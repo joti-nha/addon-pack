@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_cracked_granite_tiles",
-    "heightmap": "ntk_cracked_stone_tiles_height",
-    "metalness_emissive_roughness": "ntk_pbr_roughness_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_cracked_granite_tiles","heightmap":"ntk_cracked_stone_tiles_height","metalness_emissive_roughness":"ntk_pbr_roughness_mer"}}

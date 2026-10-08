@@ -1,14 +1,1 @@
-{
-	"format_version": "1.20.80",
-	"minecraft:item": {
-		"description": {
-			"identifier": "mnra_cata:verdant_steel_ingot",
-			"menu_category": {
-				"category": "items"
-			}
-		},
-		"components": {
-			"minecraft:icon": "mnra_cata_verdant_steel_ingot"
-		}
-	}
-}
+{"format_version":"1.20.80","minecraft:item":{"description":{"identifier":"mnra_cata:verdant_steel_ingot","menu_category":{"category":"items"}},"components":{"minecraft:icon":"mnra_cata_verdant_steel_ingot"}}}

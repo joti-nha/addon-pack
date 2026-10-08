@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "helmet_shadow_walker",
-        "metalness_emissive_roughness": "helmet_shadow_walker_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"helmet_shadow_walker","metalness_emissive_roughness":"helmet_shadow_walker_mer"}}

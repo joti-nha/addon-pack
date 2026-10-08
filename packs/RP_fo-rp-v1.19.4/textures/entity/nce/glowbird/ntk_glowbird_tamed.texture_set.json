@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_glowbird_tamed",
-    "heightmap": "ntk_glowbird_height",
-    "metalness_emissive_roughness": "ntk_glowbird_tamed_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_glowbird_tamed","heightmap":"ntk_glowbird_height","metalness_emissive_roughness":"ntk_glowbird_tamed_mer"}}

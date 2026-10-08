@@ -1,18 +1,1 @@
-{
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.purple_magic_arrow.trail": {
-			"loop": true,
-			"particle_effects": {
-				"0.0": [
-					{
-						"effect": "trail"
-					},
-					{
-						"effect": "smoke_trail"
-					}
-				]
-			}
-		}
-	}
-}
+{"format_version":"1.8.0","animations":{"animation.purple_magic_arrow.trail":{"loop":true,"particle_effects":{"0.0":[{"effect":"trail"},{"effect":"smoke_trail"}]}}}}

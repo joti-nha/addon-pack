@@ -1,12 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:twe/plant_x_kelp_x_weight"
-    },
-    "features": [
-      [ "minecraft:kelp_feature", 100 ],
-      [ "minecraft:kelp_feature", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:twe/plant_x_kelp_x_weight"},"features":[["minecraft:kelp_feature",100],["minecraft:kelp_feature",100]]}}

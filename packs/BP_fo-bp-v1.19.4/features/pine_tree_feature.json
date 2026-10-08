@@ -1,13 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "minecraft:pine_tree_feature"
-    },
-    "features": [
-      [ "ntk:mtv/tree_v_pine_x_pine_tree", 100 ],
-      [ "ntk:mtv/tree_x_spruce_x_pine_tree_01", 35 ],
-      [ "ntk:mtv/tree_x_spruce_x_pine_tree_02", 35 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"minecraft:pine_tree_feature"},"features":[["ntk:mtv/tree_v_pine_x_pine_tree",100],["ntk:mtv/tree_x_spruce_x_pine_tree_01",35],["ntk:mtv/tree_x_spruce_x_pine_tree_02",35]]}}

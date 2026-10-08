@@ -1,15 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:twe/pond_weight_x_vegetation"
-    },
-    "features": [
-      [ "ntk:twe/pond_x_clay_x_vegetation", 100 ],
-      [ "ntk:twe/pond_x_grass_x_vegetation", 100 ],
-      [ "ntk:twe/pond_x_moss_x_vegetation", 100 ],
-      [ "ntk:twe/pond_x_mossy_cobblestone_x_vegetation", 100 ],
-      [ "ntk:twe/pond_x_waterlily_x_vegetation", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:twe/pond_weight_x_vegetation"},"features":[["ntk:twe/pond_x_clay_x_vegetation",100],["ntk:twe/pond_x_grass_x_vegetation",100],["ntk:twe/pond_x_moss_x_vegetation",100],["ntk:twe/pond_x_mossy_cobblestone_x_vegetation",100],["ntk:twe/pond_x_waterlily_x_vegetation",100]]}}

@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "red_sunken_skeleton",
-        "metalness_emissive_roughness": "red_sunken_skeleton_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"red_sunken_skeleton","metalness_emissive_roughness":"red_sunken_skeleton_mer"}}

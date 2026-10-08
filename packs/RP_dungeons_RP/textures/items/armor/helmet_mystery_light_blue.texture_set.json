@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "helmet_mystery_light_blue",
-        "metalness_emissive_roughness": "helmet_mystery_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"helmet_mystery_light_blue","metalness_emissive_roughness":"helmet_mystery_mer"}}

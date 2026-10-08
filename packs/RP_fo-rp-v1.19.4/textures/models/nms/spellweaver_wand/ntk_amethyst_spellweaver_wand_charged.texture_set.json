@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_amethyst_spellweaver_wand_charged",
-    "heightmap": "ntk_spellweaver_wand_height",
-    "metalness_emissive_roughness": "ntk_spellweaver_wand_charged_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_amethyst_spellweaver_wand_charged","heightmap":"ntk_spellweaver_wand_height","metalness_emissive_roughness":"ntk_spellweaver_wand_charged_mer"}}

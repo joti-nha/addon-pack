@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "soul_entity_glint",
-        "metalness_emissive_roughness": "soul_entity_glint_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"soul_entity_glint","metalness_emissive_roughness":"soul_entity_glint_mer"}}

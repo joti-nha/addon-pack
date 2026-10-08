@@ -1,15 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:twe/patch_underground_x_dead_coral_block_x_weight"
-    },
-    "features": [
-      [ "ntk:twe/patch_underground_x_dead_coral_x_brain_x_ore", 100 ],
-      [ "ntk:twe/patch_underground_x_dead_coral_x_bubble_x_ore", 100 ],
-      [ "ntk:twe/patch_underground_x_dead_coral_x_fire_x_ore", 100 ],
-      [ "ntk:twe/patch_underground_x_dead_coral_x_horn_x_ore", 100 ],
-      [ "ntk:twe/patch_underground_x_dead_coral_x_tube_x_ore", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:twe/patch_underground_x_dead_coral_block_x_weight"},"features":[["ntk:twe/patch_underground_x_dead_coral_x_brain_x_ore",100],["ntk:twe/patch_underground_x_dead_coral_x_bubble_x_ore",100],["ntk:twe/patch_underground_x_dead_coral_x_fire_x_ore",100],["ntk:twe/patch_underground_x_dead_coral_x_horn_x_ore",100],["ntk:twe/patch_underground_x_dead_coral_x_tube_x_ore",100]]}}

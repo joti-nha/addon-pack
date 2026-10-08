@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_diamond_wand_charging_1",
-    "normal": "ntk_wand_height",
-    "metalness_emissive_roughness": "ntk_wand_charging_1_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_diamond_wand_charging_1","normal":"ntk_wand_height","metalness_emissive_roughness":"ntk_wand_charging_1_mer"}}

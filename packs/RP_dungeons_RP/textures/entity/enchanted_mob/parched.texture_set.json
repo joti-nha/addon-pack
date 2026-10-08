@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "parched",
-        "metalness_emissive_roughness": "parched_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"parched","metalness_emissive_roughness":"parched_mer"}}

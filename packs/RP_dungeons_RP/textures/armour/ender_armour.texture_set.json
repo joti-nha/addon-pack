@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "ender_armour",
-        "metalness_emissive_roughness": "ender_armour_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ender_armour","metalness_emissive_roughness":"ender_armour_mer"}}

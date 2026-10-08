@@ -1,8 +1,1 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "ntk_spawn_egg_scrollwright",
-		"normal": "ntk_spawn_egg_scrollwright_height",
-		"metalness_emissive_roughness": "ntk_spawn_egg_scrollwright_mer"
-	}
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_spawn_egg_scrollwright","normal":"ntk_spawn_egg_scrollwright_height","metalness_emissive_roughness":"ntk_spawn_egg_scrollwright_mer"}}

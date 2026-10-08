@@ -1,16 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "minecraft:azalea_tree_feature"
-    },
-    "features": [
-      [ "ntk:mtv/tree_v_azalea_x_azalea_tree", 50 ],
-      [ "ntk:mtv/tree_x_azalea_x_willow_branched_tree_01", 50 ],
-      [ "ntk:mtv/tree_x_azalea_x_willow_branched_tree_02", 50 ],
-      [ "ntk:mtv/tree_x_azalea_x_willow_branched_tree_03", 50 ],
-      [ "ntk:mtv/tree_x_azalea_x_willow_tree_01", 50 ],
-      [ "ntk:mtv/tree_x_azalea_x_willow_tree_02", 50 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"minecraft:azalea_tree_feature"},"features":[["ntk:mtv/tree_v_azalea_x_azalea_tree",50],["ntk:mtv/tree_x_azalea_x_willow_branched_tree_01",50],["ntk:mtv/tree_x_azalea_x_willow_branched_tree_02",50],["ntk:mtv/tree_x_azalea_x_willow_branched_tree_03",50],["ntk:mtv/tree_x_azalea_x_willow_tree_01",50],["ntk:mtv/tree_x_azalea_x_willow_tree_02",50]]}}

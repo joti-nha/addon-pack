@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_white_jellyfish_slime_block",
-    "heightmap": "ntk_pbr_height",
-    "metalness_emissive_roughness": "ntk_jellyfish_slime_block_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_white_jellyfish_slime_block","heightmap":"ntk_pbr_height","metalness_emissive_roughness":"ntk_jellyfish_slime_block_mer"}}

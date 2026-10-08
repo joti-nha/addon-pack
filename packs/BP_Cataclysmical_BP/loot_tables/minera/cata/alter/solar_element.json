@@ -1,13 +1,1 @@
-{
-	"pools": [
-		{
-			"rolls": 1,
-			"entries": [
-				{
-					"type": "item",
-					"name": "mnra_cata:solar_element"
-				}
-			]
-		}
-	]
-}
+{"pools":[{"rolls":1,"entries":[{"type":"item","name":"mnra_cata:solar_element"}]}]}

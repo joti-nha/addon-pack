@@ -1,8 +1,1 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "ntk_rotten_brute_flesh",
-		"normal": "ntk_rotten_brute_flesh_height",
-		"metalness_emissive_roughness": "ntk_rotten_brute_flesh_mer"
-	}
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_rotten_brute_flesh","normal":"ntk_rotten_brute_flesh_height","metalness_emissive_roughness":"ntk_rotten_brute_flesh_mer"}}

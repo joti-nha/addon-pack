@@ -1,12 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:mtv/tree_x_spruce_x_sprouting_trees_x_weight"
-    },
-    "features": [
-      [ "ntk:mtv/tree_x_spruce_x_bush_tree_01", 100 ],
-      [ "ntk:mtv/tree_x_spruce_x_sprouting_tree_01", 35 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:mtv/tree_x_spruce_x_sprouting_trees_x_weight"},"features":[["ntk:mtv/tree_x_spruce_x_bush_tree_01",100],["ntk:mtv/tree_x_spruce_x_sprouting_tree_01",35]]}}

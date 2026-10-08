@@ -1,17 +1,1 @@
-{
-  "format_version": "1.10.0",
-  "render_controllers": {
-    "controller.render.gourdian_fire": {
-      "geometry": "Geometry.default",
-      "materials": [ { "*": "Material.glow" } ],
-      "textures": [ "Texture.fire" ],
-	"ignore_lighting": true
-    },
-    "controller.render.gourdian_glow": {
-      "geometry": "Geometry.glow",
-      "materials": [ { "*": "Material.glow" } ],
-      "textures": [ "Texture.glow" ],
-	"ignore_lighting": true
-    }
-  }
-}
+{"format_version":"1.10.0","render_controllers":{"controller.render.gourdian_fire":{"geometry":"Geometry.default","materials":[{"*":"Material.glow"}],"textures":["Texture.fire"],"ignore_lighting":true},"controller.render.gourdian_glow":{"geometry":"Geometry.glow","materials":[{"*":"Material.glow"}],"textures":["Texture.glow"],"ignore_lighting":true}}}

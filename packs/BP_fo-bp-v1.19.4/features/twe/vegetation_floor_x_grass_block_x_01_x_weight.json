@@ -1,14 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:twe/vegetation_floor_x_grass_block_x_01_x_weight"
-    },
-    "features": [
-      [ "ntk:twe/plant_x_fern_x_02_x_scatter", 100 ],
-      [ "ntk:twe/plant_x_short_grass_x_02_x_scatter", 100 ],
-      [ "minecraft:fern_double_plant_patch_feature", 100 ],
-      [ "minecraft:double_plant_feature", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:twe/vegetation_floor_x_grass_block_x_01_x_weight"},"features":[["ntk:twe/plant_x_fern_x_02_x_scatter",100],["ntk:twe/plant_x_short_grass_x_02_x_scatter",100],["minecraft:fern_double_plant_patch_feature",100],["minecraft:double_plant_feature",100]]}}

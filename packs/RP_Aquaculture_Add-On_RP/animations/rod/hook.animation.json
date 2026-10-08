@@ -1,13 +1,1 @@
-{
-	"format_version": "1.8.0",
-	"animations": {
-		"animation.tm_aqc.bobber.hook": {
-			"loop": true,
-			"bones": {
-				"hook": {
-					"rotation": [0, "query.camera_rotation(1)", 0]
-				}
-			}
-		}
-	}
-}
+{"format_version":"1.8.0","animations":{"animation.tm_aqc.bobber.hook":{"loop":true,"bones":{"hook":{"rotation":[0,"query.camera_rotation(1)",0]}}}}}

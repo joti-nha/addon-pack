@@ -1,18 +1,1 @@
-{
-	"format_version": "1.21.20",
-	"minecraft:template_pool": {
-		"description": {
-			"identifier": "mnra_cata:sun_ritual_arena4"
-		},
-		"elements": [
-			{
-				"element": {
-					"element_type": "minecraft:single_pool_element",
-					"location": "minera/cata/sun_ritual_arena/arena4",
-					"processors": "mnra_cata:flare_stone_replacement"
-				},
-				"weight": 1
-			}
-		]
-	}
-}
+{"format_version":"1.21.20","minecraft:template_pool":{"description":{"identifier":"mnra_cata:sun_ritual_arena4"},"elements":[{"element":{"element_type":"minecraft:single_pool_element","location":"minera/cata/sun_ritual_arena/arena4","processors":"mnra_cata:flare_stone_replacement"},"weight":1}]}}

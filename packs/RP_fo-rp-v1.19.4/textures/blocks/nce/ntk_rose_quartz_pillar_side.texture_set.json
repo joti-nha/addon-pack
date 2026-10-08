@@ -1,8 +1,1 @@
-{
-  "format_version": "1.16.100",
-  "minecraft:texture_set": {
-    "color": "ntk_rose_quartz_pillar_side",
-    "heightmap": "ntk_pbr_height",
-    "metalness_emissive_roughness": "ntk_quartz_crystal_block_mer"
-  }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_rose_quartz_pillar_side","heightmap":"ntk_pbr_height","metalness_emissive_roughness":"ntk_quartz_crystal_block_mer"}}

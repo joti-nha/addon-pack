@@ -1,18 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:nbe/plant_weight_x_tip_grasses_x_weight"
-    },
-    "features": [
-      [ "ntk:nbe/plant_x_blue_tip_grass_x_02_x_scatter", 85 ],
-      [ "ntk:nbe/plant_x_light_blue_tip_grass_x_02_x_scatter", 85 ],
-      [ "ntk:nbe/plant_x_magenta_tip_grass_x_02_x_scatter", 85 ],
-      [ "ntk:nbe/plant_x_orange_tip_grass_x_02_x_scatter", 75 ],
-      [ "ntk:nbe/plant_x_pink_tip_grass_x_02_x_scatter", 75 ],
-      [ "ntk:nbe/plant_x_red_tip_grass_x_02_x_scatter", 95 ],
-      [ "ntk:nbe/plant_x_white_tip_grass_x_02_x_scatter", 100 ],
-      [ "ntk:nbe/plant_x_yellow_tip_grass_x_02_x_scatter", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:nbe/plant_weight_x_tip_grasses_x_weight"},"features":[["ntk:nbe/plant_x_blue_tip_grass_x_02_x_scatter",85],["ntk:nbe/plant_x_light_blue_tip_grass_x_02_x_scatter",85],["ntk:nbe/plant_x_magenta_tip_grass_x_02_x_scatter",85],["ntk:nbe/plant_x_orange_tip_grass_x_02_x_scatter",75],["ntk:nbe/plant_x_pink_tip_grass_x_02_x_scatter",75],["ntk:nbe/plant_x_red_tip_grass_x_02_x_scatter",95],["ntk:nbe/plant_x_white_tip_grass_x_02_x_scatter",100],["ntk:nbe/plant_x_yellow_tip_grass_x_02_x_scatter",100]]}}

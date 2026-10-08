@@ -1,14 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:twe/structure_weight_x_mega_stump_acacia"
-    },
-    "features": [
-      [ "ntk:twe/structure_x_mega_stump_acacia_01", 100 ],
-      [ "ntk:twe/structure_x_mega_stump_acacia_02", 100 ],
-      [ "ntk:twe/structure_x_mega_stump_acacia_03", 100 ],
-      [ "ntk:twe/structure_x_mega_stump_acacia_04", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:twe/structure_weight_x_mega_stump_acacia"},"features":[["ntk:twe/structure_x_mega_stump_acacia_01",100],["ntk:twe/structure_x_mega_stump_acacia_02",100],["ntk:twe/structure_x_mega_stump_acacia_03",100],["ntk:twe/structure_x_mega_stump_acacia_04",100]]}}

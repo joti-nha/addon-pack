@@ -1,16 +1,1 @@
-{
-	"resource_pack_name": "vanilla",
-	"texture_name": "atlas.items",
-	"texture_data": {
-		"shield": {
-			"textures": [
-				"textures/items/shield"
-			]
-		},
-		"test": {
-			"textures": [
-				"textures/items/test"
-			]
-		}
-	}
-}
+{"resource_pack_name":"vanilla","texture_name":"atlas.items","texture_data":{"shield":{"textures":["textures/items/shield"]},"test":{"textures":["textures/items/test"]}}}

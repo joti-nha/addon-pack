@@ -1,14 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "ntk:ars/structure_weight_x_wooden_bench_oak"
-    },
-    "features": [
-      [ "ntk:ars/structure_x_wooden_bench_oak_01", 100 ],
-      [ "ntk:ars/structure_x_wooden_bench_oak_02", 100 ],
-      [ "ntk:ars/structure_x_wooden_bench_oak_03", 100 ],
-      [ "ntk:ars/structure_x_wooden_bench_oak_04", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"ntk:ars/structure_weight_x_wooden_bench_oak"},"features":[["ntk:ars/structure_x_wooden_bench_oak_01",100],["ntk:ars/structure_x_wooden_bench_oak_02",100],["ntk:ars/structure_x_wooden_bench_oak_03",100],["ntk:ars/structure_x_wooden_bench_oak_04",100]]}}

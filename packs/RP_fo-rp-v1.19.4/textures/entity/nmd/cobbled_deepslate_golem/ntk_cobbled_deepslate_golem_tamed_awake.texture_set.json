@@ -1,8 +1,1 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "ntk_cobbled_deepslate_golem_tamed_awake",
-		"heightmap": "ntk_cobbled_deepslate_golem_height",
-		"metalness_emissive_roughness": "ntk_cobbled_deepslate_golem_awake_mer"
-	}
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_cobbled_deepslate_golem_tamed_awake","heightmap":"ntk_cobbled_deepslate_golem_height","metalness_emissive_roughness":"ntk_cobbled_deepslate_golem_awake_mer"}}

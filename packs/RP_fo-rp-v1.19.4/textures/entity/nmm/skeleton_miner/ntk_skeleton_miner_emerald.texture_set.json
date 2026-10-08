@@ -1,8 +1,1 @@
-{
-	"format_version": "1.16.100",
-	"minecraft:texture_set": {
-		"color": "ntk_skeleton_miner_emerald",
-		"heightmap": "ntk_skeleton_miner_mineral_height",
-		"metalness_emissive_roughness": "ntk_skeleton_miner_emerald_mer"
-	}
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"ntk_skeleton_miner_emerald","heightmap":"ntk_skeleton_miner_mineral_height","metalness_emissive_roughness":"ntk_skeleton_miner_emerald_mer"}}

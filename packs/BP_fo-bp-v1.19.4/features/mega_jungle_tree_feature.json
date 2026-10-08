@@ -1,11 +1,1 @@
-{
-  "format_version": "1.16.0",
-  "minecraft:weighted_random_feature": {
-    "description": {
-      "identifier": "minecraft:mega_jungle_tree_feature"
-    },
-    "features": [
-      [ "ntk:mtv/tree_v_mega_jungle_x_mega_jungle_tree", 100 ]
-    ]
-  }
-}
+{"format_version":"1.16.0","minecraft:weighted_random_feature":{"description":{"identifier":"minecraft:mega_jungle_tree_feature"},"features":[["ntk:mtv/tree_v_mega_jungle_x_mega_jungle_tree",100]]}}

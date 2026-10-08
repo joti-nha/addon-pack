@@ -1,16 +1,1 @@
-{
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.backpack_dynamic": {
-            "geometry": "c.item_slot == 'off_hand' ? Geometry.offhand : (c.item_slot == 'main_hand' ? Geometry.mainhand : Geometry.default)",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.default"
-            ]
-        }
-    }
-}
+{"format_version":"1.8.0","render_controllers":{"controller.render.backpack_dynamic":{"geometry":"c.item_slot == 'off_hand' ? Geometry.offhand : (c.item_slot == 'main_hand' ? Geometry.mainhand : Geometry.default)","materials":[{"*":"Material.default"}],"textures":["Texture.default"]}}}

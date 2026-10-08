@@ -1,18 +1,1 @@
-{
-	"format_version": "1.21.20",
-	"minecraft:template_pool": {
-		"description": {
-			"identifier": "mnra_cata:flare_star"
-		},
-		"elements": [
-			{
-				"element": {
-					"element_type": "minecraft:single_pool_element",
-					"location": "minera/cata/flare_star1",
-					"processors": "mnra_cata:flare_star_replacement"
-				},
-				"weight": 1
-			}
-		]
-	}
-}
+{"format_version":"1.21.20","minecraft:template_pool":{"description":{"identifier":"mnra_cata:flare_star"},"elements":[{"element":{"element_type":"minecraft:single_pool_element","location":"minera/cata/flare_star1","processors":"mnra_cata:flare_star_replacement"},"weight":1}]}}

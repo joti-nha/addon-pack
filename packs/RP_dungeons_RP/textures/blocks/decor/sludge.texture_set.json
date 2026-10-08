@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "sludge",
-        "metalness_emissive_roughness": "sludge_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"sludge","metalness_emissive_roughness":"sludge_mer"}}

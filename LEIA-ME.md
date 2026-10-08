@@ -45,7 +45,7 @@ Cada montagem sai com versão maior que a anterior (200 + número de commits), e
 `python ferramentas/otimizar.py` faz três coisas, todas sem mudar o que o jogo lê:
 
 - **JSON:** tira espaços, quebras de linha e comentários fora de textos. Cada arquivo é conferido depois: se o conteúdo lido não for idêntico ao original, ele fica como estava. `manifest.json` não é mexido.
-- **PNG:** recompressão sem perda (oxipng). Os pixels não mudam.
+- **PNG:** recompressão sem perda (oxipng). Os pixels, o tipo de cor e os metadados não mudam.
 - **Lixo:** remove `desktop.ini`, `Thumbs.db` e `.DS_Store`.
 
 Para rodar, instale antes o `pyoxipng` (`python -m pip install pyoxipng`).

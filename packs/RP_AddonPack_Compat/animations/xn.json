@@ -1,15 +1,1 @@
-{
-	"format_version": "1.8.0", /**/
-	"animations": {
-		"animation.sprite_pala.primero": {
-			"loop": true,
-			"bones": {
-				"bone": {
-					"rotation": [0, 45, 0],
-					"position": [-3.7, 15, 3.5],
-					"scale": 1.1
-				}
-			}
-		}
-	}
-}
+{"format_version":"1.8.0","animations":{"animation.sprite_pala.primero":{"loop":true,"bones":{"bone":{"rotation":[0,45,0],"position":[-3.7,15,3.5],"scale":1.1}}}}}

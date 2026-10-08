@@ -1,13 +1,1 @@
-{
-  "format_version": "1.13.0",
-  "minecraft:aggregate_feature": {
-    "description": {
-      "identifier": "ntk:twe/plant_x_dripleaf_small_d1_x_03_x_aggregate"
-    },
-    "early_out": "first_failure",
-    "features": [
-      "ntk:twe/plant_x_dripleaf_base_x_01_water_x_singleblock",
-      "ntk:twe/plant_x_dripleaf_small_d1_x_02_x_scatter"
-    ]
-  }
-}
+{"format_version":"1.13.0","minecraft:aggregate_feature":{"description":{"identifier":"ntk:twe/plant_x_dripleaf_small_d1_x_03_x_aggregate"},"early_out":"first_failure","features":["ntk:twe/plant_x_dripleaf_base_x_01_water_x_singleblock","ntk:twe/plant_x_dripleaf_small_d1_x_02_x_scatter"]}}

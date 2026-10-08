@@ -1,7 +1,1 @@
-{
-    "format_version": "1.16.100",
-    "minecraft:texture_set": {
-        "color": "encrusted_anchor",
-        "metalness_emissive_roughness": "encrusted_anchor_mer"
-    }
-}
+{"format_version":"1.16.100","minecraft:texture_set":{"color":"encrusted_anchor","metalness_emissive_roughness":"encrusted_anchor_mer"}}

@@ -1,13 +1,1 @@
-{
-	"format_version": "1.10.0",
-	"animation_controllers": {
-	  "controller.animation.projectile.ntk_thrown_jellyfish_slime.travelling": {
-      "initial_state": "default",
-      "states": {
-        "default": {
-          "animations": [ "travelling" ]
-        }
-      }
-    }
-	}
-}
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.projectile.ntk_thrown_jellyfish_slime.travelling":{"initial_state":"default","states":{"default":{"animations":["travelling"]}}}}}

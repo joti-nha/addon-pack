@@ -1,11 +1,1 @@
-{
-  "format_version": "1.8.0",
-  "render_controllers": {
-    "controller.render.windcaller_staff": {
-      "geometry": "Geometry.staff",
-      "materials": [{"*": "Material.default"}],
-      "textures": ["Texture.staff"],
-      "is_hurt_color": {}
-    }
-  }
-}
+{"format_version":"1.8.0","render_controllers":{"controller.render.windcaller_staff":{"geometry":"Geometry.staff","materials":[{"*":"Material.default"}],"textures":["Texture.staff"],"is_hurt_color":{}}}}
