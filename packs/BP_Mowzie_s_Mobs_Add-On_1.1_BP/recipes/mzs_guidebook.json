@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","minecraft:recipe_shaped":{"description":{"identifier":"hf_mzs:guidebook"},"tags":["crafting_table"],"pattern":["A"],"key":{"A":{"item":"minecraft:stick"}},"result":{"item":"hf_mzs:guidebook","count":1}}}

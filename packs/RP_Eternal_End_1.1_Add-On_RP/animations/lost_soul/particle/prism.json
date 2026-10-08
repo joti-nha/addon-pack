@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.panascais_end.lost_soul.particle.prism":{"loop":true,"animation_length":2,"particle_effects":{"0.0":[{"effect":"particle.tail","locator":"locator"},{"effect":"particle.idle.prism","locator":"locator"}]}}}}

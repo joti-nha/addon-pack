@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_andesite_x_chiseled_polished_andesite"},"priority":1,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:andesite"}],"result":{"item":"ntk:chiseled_polished_andesite","count":1},"unlock":[{"item":"minecraft:andesite"}]}}

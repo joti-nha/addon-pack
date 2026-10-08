@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.hf_mzs.highlight":{"states":{"default":{"transitions":[{"reg":"(1.0)"}]},"reg":{"transitions":[{"default":"(1.0)"}],"on_entry":["/execute if block ~~~ minecraft:air run event entity @s despawn","/execute unless entity @e[type=hf_mzs:sculptor, r=64, c=1] run event entity @s despawn"]}}}}}

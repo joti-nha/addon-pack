@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_bell"},"tags":["furnace"],"input":{"item":"minecraft:bell"},"output":{"item":"minecraft:gold_nugget","count":5},"unlock":[{"item":"minecraft:bell"}]}}

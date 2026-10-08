@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","render_controllers":{"controller.render.panascais_end.enderman_statue":{"arrays":{},"geometry":"Geometry.default","materials":[{"*":"q.property('panascais_end:state') == 'inactive' ? Material.inactive :  Material.active"}],"textures":["q.property('panascais_end:state') == 'inactive' ? Texture.inactive :  Texture.active"]}}}

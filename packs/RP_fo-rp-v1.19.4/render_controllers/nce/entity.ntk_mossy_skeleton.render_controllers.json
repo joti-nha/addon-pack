@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","render_controllers":{"controller.render.entity.ntk_mossy_skeleton":{"geometry":"Geometry.default","materials":[{"*":"Material.default"}],"textures":["Array.textures[query.variant * 2 + query.is_tamed]"],"arrays":{"textures":{"Array.textures":["Texture.mossy_skeleton_wild","Texture.mossy_skeleton_tamed"]}}}}}

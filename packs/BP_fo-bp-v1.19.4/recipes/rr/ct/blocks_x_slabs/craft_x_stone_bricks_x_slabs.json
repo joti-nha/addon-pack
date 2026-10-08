@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_stone_bricks_x_slabs"},"priority":3,"tags":["crafting_table"],"group":"stone_bricks","assume_symmetry":true,"pattern":["D "," D"],"key":{"D":{"item":"minecraft:stone_brick_slab"}},"result":{"item":"minecraft:stone_bricks","count":1},"unlock":[{"item":"minecraft:stone_brick_slab"}]}}

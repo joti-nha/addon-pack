@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_tin_boots"},"priority":1,"tags":["crafting_table"],"pattern":["T T","T T"],"key":{"T":{"item":"ntk:tin_ingot"}},"result":{"item":"ntk:tin_boots","count":1},"unlock":[{"item":"ntk:tin_ingot"}]}}

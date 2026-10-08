@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_jungle_stairs_x_stick"},"priority":1,"tags":["wood_cutter"],"group":"stick","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"minecraft:jungle_stairs"}},"result":{"item":"minecraft:stick","count":1},"unlock":[{"item":"minecraft:jungle_stairs"}]}}

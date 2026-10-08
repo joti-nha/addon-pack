@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_diorite_wall_x_polished_diorite_wall"},"priority":3,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:diorite_wall"}],"result":{"item":"ntk:polished_diorite_wall","count":1},"unlock":[{"item":"minecraft:diorite_wall"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_cherry_planks_x_slab"},"priority":0,"tags":["wood_cutter"],"group":"cherry_slab","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"minecraft:cherry_planks"}},"result":{"item":"minecraft:cherry_slab","count":2},"unlock":[{"item":"minecraft:cherry_planks"}]}}

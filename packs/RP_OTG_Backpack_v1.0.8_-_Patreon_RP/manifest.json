@@ -1,0 +1,46 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "OTG Backpack (Resources)",
+        "description": "Resource pack for OTG Backpack, including UI, textures, models, sounds, particles, and translations.",
+        "uuid": "59f5020f-93ce-4176-be01-22b3ec440777",
+        "version": [
+            1,
+            0,
+            8
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            50
+        ]
+    },
+    "modules": [
+        {
+            "description": "Visual Assets",
+            "type": "resources",
+            "uuid": "510e2042-08bd-4384-80a9-5aa6f62cdc61",
+            "version": [
+                1,
+                0,
+                8
+            ]
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "dinorawrski"
+        ],
+        "url": "https://www.youtube.com/@dinorawrski"
+    },
+    "dependencies": [
+        {
+            "uuid": "7f5a7c31-98be-4572-9a6d-1db09a31a777",
+            "version": [
+                1,
+                0,
+                8
+            ]
+        }
+    ]
+}

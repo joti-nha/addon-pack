@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:acacia_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:acacia_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:acacia_planks","count":3}}}

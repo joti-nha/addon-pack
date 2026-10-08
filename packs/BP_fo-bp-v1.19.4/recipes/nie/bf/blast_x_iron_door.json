@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_iron_door"},"tags":["blast_furnace"],"input":{"item":"minecraft:iron_door"},"output":{"item":"ntk:iron_powder","count":1},"unlock":[{"item":"minecraft:iron_door"}]}}

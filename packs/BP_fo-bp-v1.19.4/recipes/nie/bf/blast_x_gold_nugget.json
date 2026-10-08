@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_gold_nugget"},"tags":["blast_furnace"],"input":{"item":"minecraft:gold_nugget"},"output":{"item":"ntk:gold_powder","count":1},"unlock":[{"item":"minecraft:gold_nugget"}]}}

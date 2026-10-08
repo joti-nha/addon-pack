@@ -1,0 +1,1 @@
+{"format_version":"1.21.50","minecraft:item":{"description":{"identifier":"panascais_end:bottled_gilded_lost_soul"},"components":{"minecraft:icon":{"textures":{"default":"panascais_end:bottled_gilded_lost_soul"}},"minecraft:max_stack_size":1,"minecraft:entity_placer":{"entity":"panascais_end:lost_soul<panascais_end:apply_variant_gilded>"}}}}

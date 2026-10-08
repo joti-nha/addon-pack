@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_tin_ingot_x_tin_nugget"},"priority":1,"tags":["crafting_table"],"pattern":["TTT","TTT","TTT"],"key":{"T":{"item":"ntk:tin_nugget"}},"result":{"item":"ntk:tin_ingot","count":1},"unlock":[{"item":"ntk:tin_nugget"}]}}

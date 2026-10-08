@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_white_dye_x_white_tip_grass"},"priority":2,"tags":["crafting_table"],"group":"white_dye","assume_symmetry":true,"pattern":["TT"],"key":{"T":{"item":"ntk:white_tip_grass"}},"result":{"item":"minecraft:white_dye","count":1},"unlock":[{"item":"ntk:white_tip_grass"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:moonplum_pie"},"key":{"m":{"item":"panascais_caves:moonplum"},"e":{"tag":"minecraft:egg"},"s":{"item":"minecraft:sugar"},"w":{"item":"minecraft:wheat"}},"pattern":["mmm","ses","www"],"tags":["crafting_table"],"result":["panascais_caves:moonplum_pie"]}}

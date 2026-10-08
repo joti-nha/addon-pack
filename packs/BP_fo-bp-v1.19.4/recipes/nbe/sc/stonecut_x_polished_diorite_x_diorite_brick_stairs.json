@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_polished_diorite_x_diorite_brick_stairs"},"priority":3,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:polished_diorite"}],"result":{"item":"ntk:diorite_brick_stairs","count":1},"unlock":[{"item":"minecraft:polished_diorite"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_polished_limestone_x_limestone_brick_stairs"},"priority":3,"tags":["stonecutter"],"ingredients":[{"item":"ntk:polished_limestone"}],"result":{"item":"ntk:limestone_brick_stairs","count":1},"unlock":[{"item":"ntk:polished_limestone"}]}}

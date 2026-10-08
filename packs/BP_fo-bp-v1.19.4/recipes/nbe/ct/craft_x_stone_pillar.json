@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_stone_pillar"},"priority":1,"tags":["crafting_table"],"group":"stone_pillar","assume_symmetry":true,"pattern":["S","S"],"key":{"S":{"item":"ntk:polished_stone"}},"result":{"item":"ntk:stone_pillar","count":2},"unlock":[{"item":"ntk:polished_stone"}]}}

@@ -1,0 +1,16 @@
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 0 0 floret
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 22.5 0 solar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 45 0 lunar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 67.5 0 floret
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 90 0 solar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 112.5 0 lunar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 135 0 floret
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 157.5 0 solar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ 180 0 lunar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -157.5 0 floret
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -135 0 solar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -112.5 0 lunar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -90 0 floret
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -67.5 0 solar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -45 0 lunar
+summon mnra_cata:exodius_armor_elements ~ ~1 ~ -22.5 0 floret

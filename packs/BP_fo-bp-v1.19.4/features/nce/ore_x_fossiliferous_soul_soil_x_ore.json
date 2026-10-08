@@ -1,0 +1,1 @@
+{"format_version":"1.13.0","minecraft:ore_feature":{"description":{"identifier":"ntk:nce/ore_x_fossiliferous_soul_soil_x_ore"},"count":4,"replace_rules":[{"places_block":"ntk:fossiliferous_soul_soil","may_replace":["minecraft:soul_soil"]}]}}

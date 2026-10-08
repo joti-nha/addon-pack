@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:easy_arrow_recipe"},"tags":["crafting_table"],"ingredients":[{"item":"minecraft:stick","count":1},{"item":"bv:copper_nugget","count":1}],"result":{"item":"minecraft:arrow","count":1}}}

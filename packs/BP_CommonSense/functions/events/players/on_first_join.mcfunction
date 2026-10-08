@@ -1,0 +1,1 @@
+tag @a[tag=!bv:joined] add bv:joined

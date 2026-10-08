@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_calcite_x_calcite_wall"},"priority":2,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:calcite"}],"result":{"item":"ntk:calcite_wall","count":1},"unlock":[{"item":"minecraft:calcite"}]}}

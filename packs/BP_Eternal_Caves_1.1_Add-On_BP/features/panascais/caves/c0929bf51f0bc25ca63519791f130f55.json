@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/c0929bf51f0bc25ca63519791f130f55"},"places_block":"panascais_caves:venus_flytrap","enforce_placement_rules":false,"enforce_survivability_rules":false,"randomize_rotation":true,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]}}}

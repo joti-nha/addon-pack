@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animations":{"animation.panascais_end.doomed_wolf.attack":{"loop":true,"animation_length":0.8,"timeline":{"0.7":["/camera @p[r=3] fade time 0.4 0.3 0.4 color 1 1 1"]}}}}

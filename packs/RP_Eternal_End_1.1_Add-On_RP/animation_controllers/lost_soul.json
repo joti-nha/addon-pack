@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.panascais_end.lost_soul.movement":{"initial_state":"idle","states":{"idle":{"animations":["idle"],"transitions":[{"flying":"query.modified_move_speed >= 0.1"}],"blend_transition":0.1},"flying":{"animations":["fly"],"transitions":[{"idle":"query.modified_move_speed < 0.1"}],"blend_transition":0.1}}}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/b11bf95638995a76edbae25cefbe02ac"},"places_block":"minecraft:firefly_bush","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]}}}

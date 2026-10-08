@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_andesite_tiles_x_andesite_bricks"},"priority":1,"tags":["crafting_table"],"group":"andesite_tiles","assume_symmetry":true,"pattern":["AA","AA"],"key":{"A":{"item":"ntk:andesite_bricks"}},"result":{"item":"ntk:andesite_tiles","count":4},"unlock":[{"item":"ntk:andesite_bricks"}]}}

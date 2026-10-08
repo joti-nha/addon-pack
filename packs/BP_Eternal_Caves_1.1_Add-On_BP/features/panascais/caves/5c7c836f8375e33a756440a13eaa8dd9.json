@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:scatter_feature":{"description":{"identifier":"panascais_caves:panascais/caves/5c7c836f8375e33a756440a13eaa8dd9"},"places_feature":"minecraft:pale_hanging_moss_feature","distribution":{"iterations":1,"scatter_chance":"(t.ba >= 0 && t.ba <= 0.7) ? 35 : 0","x":0,"y":0,"z":0}}}

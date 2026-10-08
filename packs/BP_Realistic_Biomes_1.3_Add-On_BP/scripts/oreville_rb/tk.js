@@ -1,0 +1,1 @@
+import{world}from"@minecraft/server";import{djixls}from"oreville_rb/sd";import"oreville_rb/sh";world.afterEvents.playerSpawn.subscribe(({player:e,initialSpawn:r})=>{r&&!0!==e.getDynamicProperty("derxpf")&&(e.setDynamicProperty("derxpf",!0))});export default function(){return{oexpzu:({yrcwet:e})=>djixls.show("$handbook:dwgecg",e)}}

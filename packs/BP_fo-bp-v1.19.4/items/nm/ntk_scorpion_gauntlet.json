@@ -1,0 +1,119 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:scorpion_gauntlet",
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:equipment",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.scorpion_gauntlet.name\n§7%effect.fatal_poison§r"
+			},
+			"minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_scorpion_gauntlet"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": true
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 1
+			},
+      "minecraft:durability": {
+				"max_durability": 64,
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+				}
+			},
+			"minecraft:damage": {
+			  "value": 4
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [ "ntk:scorpion_gauntlet" ],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [ "ntk:scorpion_telson" ],
+						"repair_amount": 20
+					}
+				]
+			},
+			"minecraft:tags": {
+        "tags": ["minecraft:is_tool", 
+          "ntk:items",
+          "ntk:is_need_durability_fixer",
+          "ntk:equippable",
+          "ntk:mainhand_equipment",
+          "ntk:melee_weapon",
+          "ntk:gauntlet",
+          "ntk:scorpion_gauntlet",
+          
+          "ntk:fatal_poison_effect"
+        ]
+      },
+      "ntk:fatal_poison_effect_on_hit_entity": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:scorpion_gauntlet",
+          "item_slot": "Mainhand",
+          "fatal_poison_effect": 300, // divide by 20
+          "fatal_poison_amplifier": 0,
+          "fatal_poison_level": 1,
+          "fatal_poison_particles": true,
+          "sound_effect": "mob.bee.sting",
+          "sound_pitch_min": 0.8,
+          "sound_pitch_max": 1.2,
+          "sound_volume": 0.5
+        }
+      ],
+			"ntk:on_hit_entity": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:scorpion_gauntlet",
+          "item_slot": "Mainhand",
+          "durability_damage": 1,
+          "durability_damage_chance": 100.0
+        }
+      ],
+			"ntk:on_mine_block": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:scorpion_gauntlet",
+          "item_slot": "Mainhand",
+          "durability_damage": 2,
+          "durability_damage_chance": 100.0
+        }
+      ]
+    }
+  }
+}

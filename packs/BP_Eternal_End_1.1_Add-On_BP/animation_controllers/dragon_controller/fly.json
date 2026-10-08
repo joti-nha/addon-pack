@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.panascais_end.dragon_controller.fly":{"initial_state":"default","states":{"default":{"transitions":[{"falling":"q.vertical_speed < -1"}]},"falling":{"on_entry":["/effect @s levitation 1 1 true"],"transitions":[{"default":"1"}]}}}}}

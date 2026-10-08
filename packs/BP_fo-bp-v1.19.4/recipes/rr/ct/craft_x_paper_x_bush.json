@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_paper_x_bush"},"priority":2,"tags":["crafting_table"],"group":"paper","ingredients":[{"item":"minecraft:bush"}],"result":{"item":"minecraft:paper","count":1},"unlock":[{"item":"minecraft:bush"}]}}

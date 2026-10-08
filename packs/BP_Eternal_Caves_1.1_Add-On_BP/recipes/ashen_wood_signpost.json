@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:ashen_wood_signpost"},"key":{"F":"panascais_caves:ashen_fence","P":"panascais_caves:ashen_planks"},"pattern":[" F ","PPP"," F "],"tags":["crafting_table"],"result":{"item":"panascais_caves:ashen_wood_signpost","count":2}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_pile_of_cornflower"},"priority":1,"tags":["crafting_table"],"group":"pile_of_cornflower","assume_symmetry":true,"pattern":["AAA","AAA","AAA"],"key":{"A":{"item":"minecraft:cornflower"}},"result":{"item":"ntk:pile_of_cornflower","count":1},"unlock":[{"item":"minecraft:cornflower"}]}}

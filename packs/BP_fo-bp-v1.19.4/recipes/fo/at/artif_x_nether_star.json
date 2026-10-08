@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:artif_x_nether_star"},"priority":1,"tags":["artifacture_table"],"group":"nether_star","assume_symmetry":true,"pattern":["NN","NN"],"key":{"N":{"item":"ntk:nether_star_fragment"}},"result":{"item":"minecraft:nether_star","count":1},"unlock":[{"item":"ntk:nether_star_fragment"}]}}

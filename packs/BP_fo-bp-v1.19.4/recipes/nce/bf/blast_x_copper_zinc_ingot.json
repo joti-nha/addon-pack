@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_copper_zinc_ingot"},"tags":["blast_furnace"],"input":{"item":"ntk:copper_zinc_ingot"},"output":{"item":"ntk:brass_ingot","count":2},"unlock":[{"item":"ntk:copper_zinc_ingot"}]}}

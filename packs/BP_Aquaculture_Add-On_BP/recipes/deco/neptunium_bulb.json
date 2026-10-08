@@ -1,0 +1,1 @@
+{"format_version":"1.20.30","minecraft:recipe_shaped":{"description":{"identifier":"tm_aqc:neptunium_bulb"},"tags":["tm_aqc_table"],"pattern":[" A ","ABA"," C "],"key":{"A":"tm_aqc:neptunium_scale_block","B":"minecraft:sea_lantern","C":"minecraft:redstone"},"unlock":{"context":"AlwaysUnlocked"},"result":{"item":"tm_aqc:neptunium_bulb","count":4}}}

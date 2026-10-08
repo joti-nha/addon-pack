@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:spruce_buttonnback"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:spruce_button"}],"result":[{"item":"minecraft:spruce_planks","count":1}]}}

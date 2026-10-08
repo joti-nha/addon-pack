@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_raw_arthropod_meat"},"tags":["furnace"],"input":{"item":"ntk:raw_arthropod_meat"},"output":{"item":"ntk:cooked_arthropod_meat","count":1},"unlock":[{"item":"ntk:raw_arthropod_meat"}]}}

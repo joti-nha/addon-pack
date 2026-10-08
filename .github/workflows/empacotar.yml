@@ -1,0 +1,36 @@
+name: Empacotar Addon Pack
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: empacotar
+  cancel-in-progress: true
+
+jobs:
+  empacotar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Montar o .mcaddon
+        run: python ferramentas/empacotar.py -o Addon_Pack_Completo.mcaddon
+      - name: Publicar na release "ultima"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          N=$(( 200 + $(git rev-list --count HEAD) ))
+          gh release delete ultima --yes --cleanup-tag || true
+          gh release create ultima Addon_Pack_Completo.mcaddon \
+            --title "Addon Pack (última montagem)" \
+            --notes "Montagem $N, gerada do commit ${GITHUB_SHA::7}. Antes de importar, apague do jogo os packs antigos do Addon Pack." \
+            --target "$GITHUB_SHA"

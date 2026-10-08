@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:cobblestone_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:stone_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:cobblestone","data":0,"count":3}}}

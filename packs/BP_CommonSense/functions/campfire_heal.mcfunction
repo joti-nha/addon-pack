@@ -1,0 +1,34 @@
+execute as @a at @s if block ~ ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~ ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~ campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="east"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="north"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="south"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~-1 ~ ~1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a at @s if block ~1 ~ ~-1 campfire["extinguished"=false,"minecraft:cardinal_direction"="west"] run tag @s add bonfire
+execute as @a[tag=bonfire] run effect @s regeneration 3 2 true
+execute as @a[tag=bonfire] run tag @s remove bonfire

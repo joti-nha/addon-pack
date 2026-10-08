@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_salt_x_block_of_salt"},"priority":2,"tags":["crafting_table"],"group":"salt","ingredients":[{"item":"ntk:block_of_salt"}],"result":{"item":"ntk:salt","count":9},"unlock":[{"item":"ntk:block_of_salt"}]}}

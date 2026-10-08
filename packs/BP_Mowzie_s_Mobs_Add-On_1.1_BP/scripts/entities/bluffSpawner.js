@@ -1,0 +1,1 @@
+import*as mc from"@minecraft/server";import*as vector from"../utils/vector";export function eventBehavior(t){t.entity.isValid()&&"hf_mzs:spawn_entity"===t.eventId&&mc.world.gameRules.doMobSpawning&&t.entity.dimension.spawnEntity("hf_mzs:bluff",t.entity.location)}

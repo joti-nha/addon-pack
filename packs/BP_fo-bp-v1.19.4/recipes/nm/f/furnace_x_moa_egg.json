@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_moa_egg"},"tags":["furnace"],"input":{"item":"ntk:moa_egg"},"output":{"item":"ntk:large_fried_egg","count":1},"unlock":[{"item":"ntk:moa_egg"}]}}

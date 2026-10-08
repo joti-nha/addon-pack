@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.item.ntk_scorpion_gauntlet.wield_first_person":{"loop":true,"bones":{"rightItem":{"rotation":[180,90,0],"position":[0,2,0]}}},"animation.item.ntk_scorpion_gauntlet.wield_third_person":{"loop":true,"bones":{"rightItem":{"rotation":[180,90,0],"position":[0,2,-0.5]}}}}}

@@ -1,0 +1,1 @@
+{"pools":[{"rolls":1,"entries":[{"weight":100,"type":"item","name":"ntk:magenta_tip_grass","functions":[{"function":"set_count","count":1}]}]},{"rolls":1,"entries":[{"weight":100,"type":"item","name":"minecraft:flower_pot","functions":[{"function":"set_count","count":1}]}]}]}

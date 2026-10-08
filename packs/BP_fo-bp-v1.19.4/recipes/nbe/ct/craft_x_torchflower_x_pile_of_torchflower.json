@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_torchflower_x_pile_of_torchflower"},"priority":2,"tags":["crafting_table"],"group":"torchflower","ingredients":[{"item":"ntk:pile_of_torchflower"}],"result":{"item":"minecraft:torchflower","count":9},"unlock":[{"item":"ntk:pile_of_torchflower"}]}}

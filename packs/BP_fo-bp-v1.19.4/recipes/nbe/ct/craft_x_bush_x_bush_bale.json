@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_bush_x_bush_bale"},"priority":3,"tags":["crafting_table"],"group":"bush","ingredients":[{"item":"ntk:bush_bale"}],"result":{"item":"minecraft:bush","count":9},"unlock":[{"item":"ntk:bush_bale"}]}}

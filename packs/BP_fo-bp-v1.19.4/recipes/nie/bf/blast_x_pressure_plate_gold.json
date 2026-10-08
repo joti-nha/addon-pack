@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_pressure_plate_gold"},"tags":["blast_furnace"],"input":{"item":"minecraft:light_weighted_pressure_plate"},"output":{"item":"ntk:gold_powder","count":1},"unlock":[{"item":"minecraft:light_weighted_pressure_plate"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","minecraft:recipe_shaped":{"description":{"identifier":"hf_mzs:painted_acacia"},"tags":["crafting_table"],"pattern":["AAA","ABC","D  "],"key":{"A":{"item":"minecraft:acacia_planks"},"B":{"item":"minecraft:yellow_dye"},"C":{"item":"minecraft:white_dye"},"D":{"item":"minecraft:cyan_dye"}},"result":{"item":"hf_mzs:painted_acacia_wood","count":4}}}

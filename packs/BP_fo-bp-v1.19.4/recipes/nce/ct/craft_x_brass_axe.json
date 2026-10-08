@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_brass_axe"},"priority":1,"tags":["crafting_table"],"pattern":["ZZ","ZS"," S"],"key":{"Z":{"item":"ntk:brass_ingot"},"S":{"item":"minecraft:stick"}},"result":{"item":"ntk:brass_axe","count":1},"unlock":[{"item":"ntk:brass_ingot"},{"item":"minecraft:stick"}]}}

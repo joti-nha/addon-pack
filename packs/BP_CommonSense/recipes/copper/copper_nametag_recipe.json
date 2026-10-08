@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:copper_nametag_recipe"},"tags":["crafting_table"],"pattern":["C","P","P"],"key":{"P":{"item":"minecraft:paper"},"C":{"item":"minecraft:copper_ingot"}},"result":{"item":"minecraft:nametag","count":1}}}

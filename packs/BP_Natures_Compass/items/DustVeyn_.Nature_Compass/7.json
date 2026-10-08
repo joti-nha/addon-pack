@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:item":{"description":{"identifier":"dustveyn.nature_compass:compass_7","menu_category":{"category":"none"}},"components":{"minecraft:icon":"dustveyn.nature_compass:compass_7","minecraft:display_name":{"value":"%dustveyn.nature_compass.compass.name"},"minecraft:max_stack_size":1}}}

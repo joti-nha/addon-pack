@@ -1,0 +1,1 @@
+{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"otg:furnace_arrow_7","menu_category":{"category":"none"}},"components":{"minecraft:icon":"furnace_arrow_7","minecraft:max_stack_size":1,"minecraft:display_name":{"value":"item.otg:furnace_arrow_7.name"}}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_furnace":{"description":{"identifier":"tm_aqc:shrimp"},"tags":["furnace","smoker","campfire","soul_campfire"],"input":"tm_aqc:raw_shrimp","output":{"item":"tm_aqc:cooked_shrimp","count":1}}}

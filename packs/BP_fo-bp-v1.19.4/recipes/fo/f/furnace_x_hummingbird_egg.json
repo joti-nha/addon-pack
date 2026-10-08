@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_hummingbird_egg"},"tags":["furnace"],"input":{"item":"ntk:hummingbird_egg"},"output":{"item":"ntk:fried_egg","count":1},"unlock":[{"item":"ntk:hummingbird_egg"}]}}

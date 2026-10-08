@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_zinc_pickaxe"},"tags":["blast_furnace"],"input":{"item":"ntk:zinc_pickaxe"},"output":{"item":"ntk:zinc_nugget","count":1},"unlock":[{"item":"ntk:zinc_pickaxe"}]}}

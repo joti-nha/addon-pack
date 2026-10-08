@@ -1,0 +1,1 @@
+{"format_version":"1.20.30","minecraft:recipe_shaped":{"description":{"identifier":"tm_aqc:neptunium_fishing_spear"},"tags":["tm_aqc_table"],"pattern":["  A"," B ","B  "],"key":{"A":"tm_aqc:neptunium_scale","B":"minecraft:stick"},"unlock":{"context":"AlwaysUnlocked"},"result":"tm_aqc:neptunium_fishing_spear"}}

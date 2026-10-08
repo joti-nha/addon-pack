@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:smoker_x_pufferfish"},"tags":["smoker"],"input":{"item":"minecraft:pufferfish"},"output":{"item":"ntk:cooked_pufferfish","count":1},"unlock":[{"item":"minecraft:pufferfish"}]}}

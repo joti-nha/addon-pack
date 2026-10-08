@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_diamond_crate_key"},"tags":["furnace"],"input":{"item":"ntk:diamond_crate_key"},"output":{"item":"ntk:diamond_powder","count":1},"unlock":[{"item":"ntk:diamond_crate_key"}]}}

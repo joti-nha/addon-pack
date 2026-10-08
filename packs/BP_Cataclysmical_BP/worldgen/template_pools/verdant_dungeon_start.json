@@ -1,0 +1,1 @@
+{"format_version":"1.21.20","minecraft:template_pool":{"description":{"identifier":"mnra_cata:verdant_dungeon_start"},"elements":[{"element":{"element_type":"minecraft:single_pool_element","location":"minera/cata/verdant_dungeon/verdant_arena","processors":"mnra_cata:unbreakable_gneiss_replacement"},"weight":1}]}}

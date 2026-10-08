@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_firefly_bush_x_firefly_bush_bale"},"priority":3,"tags":["crafting_table"],"group":"firefly_bush","ingredients":[{"item":"ntk:firefly_bush_bale"}],"result":{"item":"minecraft:firefly_bush","count":9},"unlock":[{"item":"ntk:firefly_bush_bale"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_andesite_bricks"},"tags":["blast_furnace"],"input":{"item":"ntk:andesite_bricks"},"output":{"item":"ntk:cracked_andesite_bricks","count":1},"unlock":[{"item":"ntk:andesite_bricks"}]}}

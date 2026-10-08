@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_furnace":{"description":{"identifier":"bv:cooked_egg_recipe"},"tags":["furnace"],"input":"minecraft:egg","output":"bv:cooked_egg"}}

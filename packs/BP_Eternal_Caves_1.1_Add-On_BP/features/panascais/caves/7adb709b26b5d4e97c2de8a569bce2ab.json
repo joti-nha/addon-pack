@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:structure_template_feature":{"description":{"identifier":"panascais_caves:panascais/caves/7adb709b26b5d4e97c2de8a569bce2ab"},"structure_name":"panascais_caves:trigger/suspicious_sand","facing_direction":"south","constraints":{"block_intersection":{"block_allowlist":["minecraft:air"]}}}}

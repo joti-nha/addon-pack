@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animations":{"animation.panascais_end.ender_slime.jump":{"loop":true,"animation_length":1,"timeline":{"0":["/playsound jump.slime @a[r=15] ~ ~ ~ 1"],"0.5":["/playsound land.slime @a[r=15] ~ ~ ~ 1"]}}}}

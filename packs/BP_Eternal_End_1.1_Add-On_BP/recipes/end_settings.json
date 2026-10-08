@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_end:settings"},"key":{"i":"minecraft:iron_ingot","e":"minecraft:ender_pearl"},"pattern":[" i ","iei"," i "],"tags":["crafting_table"],"result":"panascais_end:settings","priority":100}}

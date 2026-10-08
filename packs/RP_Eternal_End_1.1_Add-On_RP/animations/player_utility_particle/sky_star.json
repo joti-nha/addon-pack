@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.panascais_end.player_utility_particle.sky_star":{"loop":true,"animation_length":6,"particle_effects":{"0.5":[{"effect":"particle.sky_star","locator":"top_static_locator"}]}}}}

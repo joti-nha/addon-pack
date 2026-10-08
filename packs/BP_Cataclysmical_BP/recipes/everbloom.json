@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:recipe_shaped":{"description":{"identifier":"mnra_cata:everbloom"},"pattern":["11","121","311"],"key":{"1":{"item":"mnra_cata:floret_element"},"2":{"item":"mnra_cata:blossom_jewel"},"3":{"item":"mnra_cata:verdant_steel_ingot"}},"result":{"item":"mnra_cata:everbloom","count":1},"tags":["crafting_table"],"unlock":{"context":"AlwaysUnlocked"}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","render_controllers":{"controller.render.armadillo_fox_armor":{"geometry":"geometry.fox_armour","materials":[{"*":"material.default"}],"textures":["textures/entity/armor/fox_armor_texture"]}}}

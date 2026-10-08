@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:recipe_shapeless":{"description":{"identifier":"mnra_cata:polished_asteroid"},"tags":["stonecutter"],"ingredients":[{"item":"mnra_cata:asteroid"}],"result":{"item":"mnra_cata:polished_asteroid","count":1},"unlock":{"context":"AlwaysUnlocked"}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:quartz_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:quartz_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:quartz_block","count":3}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:blast_x_golden_crate_key"},"tags":["blast_furnace"],"input":{"item":"ntk:golden_crate_key"},"output":{"item":"ntk:gold_powder","count":1},"unlock":[{"item":"ntk:golden_crate_key"}]}}

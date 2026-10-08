@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.hf_mzs.gong":{"initial_state":"default","states":{"default":{"transitions":[{"use":"q.property('hf_mzs:ringing')"}]},"use":{"animations":["ring"],"transitions":[{"default":"q.any_animation_finished || (q.state_time >= 0.05 ? q.property('hf_mzs:ringing') : false)"}]}}}}}

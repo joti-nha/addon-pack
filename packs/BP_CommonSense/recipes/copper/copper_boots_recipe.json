@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:copper_boots_recipe"},"tags":["crafting_table"],"pattern":["C C","C C"],"key":{"C":{"item":"minecraft:copper_ingot"}},"result":{"item":"bv:copper_boots","count":1}}}

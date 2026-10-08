@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","render_controllers":{"controller.render.entity.ntk_crystalmite":{"geometry":"Geometry.default","materials":[{"*":"Material.default"}],"textures":["Array.textures[query.variant]"],"arrays":{"textures":{"Array.textures":["Texture.crystalmite_amethyst_variant_0","Texture.crystalmite_quartz_variant_1","Texture.crystalmite_rose_quartz_variant_2"]}}}}}

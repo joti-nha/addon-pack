@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_vine_x_vine_block"},"priority":2,"tags":["crafting_table"],"group":"vine","ingredients":[{"item":"ntk:vine_block"}],"result":{"item":"minecraft:vine","count":9},"unlock":[{"item":"ntk:vine_block"}]}}

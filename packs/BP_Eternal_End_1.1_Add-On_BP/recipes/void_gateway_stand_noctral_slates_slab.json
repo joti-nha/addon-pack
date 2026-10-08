@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_end:void_gateway_stand_noctral_slates_slab"},"key":{"E":{"item":"minecraft:emerald"},"N":{"item":"panascais_end:noctral_slates_slab"},"S":{"item":"minecraft:end_stone"}},"pattern":["NEN"," S ","NNN"],"tags":["crafting_table"],"result":"panascais_end:void_gateway_stand"}}

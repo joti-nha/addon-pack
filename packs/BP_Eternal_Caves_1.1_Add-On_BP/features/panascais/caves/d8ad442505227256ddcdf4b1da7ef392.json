@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/d8ad442505227256ddcdf4b1da7ef392"},"count":3,"replace_rules":[{"places_block":"panascais_caves:sapphire_ore","may_replace":["minecraft:stone"]},{"places_block":"panascais_caves:deepslate_sapphire_ore","may_replace":["minecraft:deepslate"]}]}}

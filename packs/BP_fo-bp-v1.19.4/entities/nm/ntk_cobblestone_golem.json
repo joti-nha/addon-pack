@@ -1,0 +1,994 @@
+// Forsaken Odyssey: damage_sensor 
+{
+  "format_version": "1.26.40",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ntk:cobblestone_golem",
+      "spawn_category": "monster",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "component:golem_wild": {
+        "minecraft:health": {
+          "value": 50,
+          "max": 50
+        },
+        "minecraft:loot": {
+          "table": "loot_tables/nm/entities/ntk_cobblestone_golem_wild.json"
+        },
+        "minecraft:type_family": {
+          "family": [
+            "cobblestone_golem",
+            "golem",
+            "earth_elemental",
+            "elemental",
+            "magical",
+            "mob"
+          ]
+        },
+        
+        "minecraft:attack": {
+          "damage": [ 7, 8 ]
+        },
+        "minecraft:tameable": {
+          "probability": 1.0,
+          "tame_items": [
+            "ntk:enchanted_emerald"
+          ],
+          "tame_event": {
+            "event": "event:on_tame",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 1,
+          "hurt_owner": false,
+          "entity_types": [
+            {
+              "must_see": true,
+              "reevaluate_description": false,
+              "max_dist": 16.0,
+              "walk_speed_multiplier": 1.1,
+              "sprint_speed_multiplier": 1.1,
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": "elder_golem"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "component:golem_tamed": {
+        "minecraft:health": {
+          "value": 70,
+          "max": 70
+        },
+        "minecraft:is_tamed": {},
+        "minecraft:loot": {
+          "table": "loot_tables/nm/entities/ntk_cobblestone_golem_tamed.json"
+        },
+        "minecraft:type_family": {
+          "family": [
+            "cobblestone_golem",
+            "golem",
+            "earth_elemental",
+            "elemental",
+            "magical",
+            "mob",
+            "player_tamed",
+            "player_tamed_aggressive"
+          ]
+        },
+        
+        "minecraft:attack": {
+          "damage": [ 8, 9 ]
+        },
+        "minecraft:sittable": {
+          "sit_event": {
+            "event": "event:on_sit",
+            "target": "self"
+          },
+          "stand_event": {
+            "event": "event:on_stand",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 1,
+          "hurt_owner": false,
+          "entity_types": [
+            {
+              "must_see": true,
+              "reevaluate_description": true,
+              "max_dist": 16.0,
+              "sprint_speed_multiplier": 1.1,
+              "walk_speed_multiplier": 1.1,
+              "filters": {}
+            }
+          ]
+        },
+        "minecraft:behavior.owner_hurt_by_target": {
+          "priority": 2,
+          "entity_types": [
+            {
+              "must_see": true,
+              "reevaluate_description": true,
+              "max_dist": 16.0,
+              "sprint_speed_multiplier": 1.1,
+              "walk_speed_multiplier": 1.1,
+              "filters": {}
+            }
+          ]
+        },
+        "minecraft:behavior.owner_hurt_target": {
+          "priority": 3,
+          "entity_types": [
+            {
+              "must_see": true,
+              "reevaluate_description": true,
+              "max_dist": 16.0,
+              "sprint_speed_multiplier": 1.1,
+              "walk_speed_multiplier": 1.1,
+              "filters": {}
+            }
+          ]
+        },
+        "minecraft:behavior.nearest_attackable_target": {
+          "priority": 5,
+          "attack_owner": false,
+          "must_reach": false,
+          "must_see": true,
+          "reselect_targets": true,
+          "set_persistent": false,
+          "must_see_forget_duration": 3.0,
+          "persist_time": 0.0,
+          "scan_interval": 10,
+          "target_acquisition_probability": 1.0,
+          "target_invisible_multiplier": 0.7,
+          "target_search_height": -1.0,
+          "target_sneak_visibility_multiplier": 0.8,
+          "within_radius": 10.0,
+          "attack_interval": {
+            "min": 0,
+            "max": 0
+          },
+          "entity_types": [
+            {
+              "must_see": true,
+              "reevaluate_description": true,
+              "max_dist": 8.0,
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_tamed",
+                    "subject": "other",
+                    "operator": "==",
+                    "value": false
+                  },
+                  { "test": "is_family", "subject": "other", "operator": "!=", "value": "creeper" },
+                  { "test": "is_family", "subject": "other", "operator": "!=", "value": "enderman" },
+                  { "test": "is_family", "subject": "other", "operator": "!=", "value": "piglin" },
+                  { "test": "is_family", "subject": "other", "operator": "!=", "value": "zombie_pigman" },
+                  {
+                    "any_of": [
+                      { "test": "is_family", "subject": "other", "operator": "==", "value": "monster" }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "minecraft:behavior.follow_owner": {
+          "priority": 7,
+          "can_teleport": true,
+          "ignore_vibration": true,
+          "max_distance": 60.0,
+          "start_distance": 14.0,
+          "stop_distance": 4.0,
+          "post_teleport_distance": 4,
+          "speed_multiplier": 1.1
+        }
+      },
+      
+      "component:golem_standing": {
+        "minecraft:balloonable": {
+          "mass": 1.00
+        },
+        "minecraft:knockback_resistance": {
+          "value": 0.5
+        },
+        "minecraft:movement": {
+          "value": 0.2
+        },
+        
+        "minecraft:collision_box": {
+          "width": 1.5, // -25%
+          "height": 2.1875
+        },
+        "minecraft:jump.static": {
+          "jump_power": 0.42
+        },
+        "minecraft:movement.basic": {
+          "max_turn": 30.0
+        },
+        "minecraft:navigation.walk": {
+          "avoid_damage_blocks": true,
+          "avoid_portals": false,
+          "avoid_sun": false,
+          "avoid_water": true,
+          "can_breach": false,
+          "can_break_doors": false,
+          "can_jump": true,
+          "can_open_doors": false,
+          "can_open_iron_doors": false,
+          "can_pass_doors": true,
+          "can_path_from_air": false,
+          "can_path_over_lava": false,
+          "can_path_over_water": true,
+          "can_sink": true,
+          "can_swim": false,
+          "can_walk": true,
+          "can_walk_in_lava": false,
+          "is_amphibious": false,
+          "blocks_to_avoid": [
+            "minecraft:fire",
+            "minecraft:flowing_lava",
+            "minecraft:lava",
+            "minecraft:soul_fire"
+          ]
+        },
+        "minecraft:pushable_by_block": {},
+        "minecraft:pushable_by_entity": {},
+        "minecraft:behavior.melee_attack": {
+          "priority": 6,
+          "attack_once": false,
+          "can_spread_on_fire": true,
+          "require_complete_path": false,
+          "track_target": true,
+          "cooldown_time": 1.0,
+          "min_path_time": 0.2,
+          "max_path_time": 0.55,
+          "path_inner_boundary": 16.0,
+          "path_outer_boundary": 32.0,
+          "path_fail_time_increase": 0.75,
+          "inner_boundary_time_increase": 0.25,
+          "outer_boundary_time_increase": 0.5,
+          "random_stop_interval": 0,
+          "reach_multiplier": 2.0,
+          "speed_multiplier": 1.1,
+          "melee_fov": 90.0,
+          "x_max_rotation": 30.0,
+          "y_max_head_rotation": 30.0,
+          "attack_types": "",
+          "on_attack": {
+            "event": "event:on_attack",
+            "target": "self"
+          },
+          "on_kill": {
+            "event": "event:on_kill",
+            "target": "self"
+          }
+        },
+        "minecraft:behavior.random_stroll": {
+          "priority": 9,
+          "interval": 120,
+          "xz_dist": 10,
+          "y_dist": 7,
+          "speed_multiplier": 0.9
+        },
+        "minecraft:behavior.look_at_target": {
+          "priority": 10,
+          "probability": 0.02,
+          "angle_of_view_horizontal": 360,
+          "angle_of_view_vertical": 360,
+          "look_distance": 8.0,
+          "look_time": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "minecraft:behavior.look_at_player": {
+          "priority": 11,
+          "probability": 0.02,
+          "angle_of_view_horizontal": 360,
+          "angle_of_view_vertical": 360,
+          "look_distance": 8.0,
+          "look_time": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "minecraft:behavior.random_look_around": {
+          "priority": 12,
+          "max_angle_of_view_horizontal": 30,
+          "min_angle_of_view_horizontal": -30,
+          "look_time": {
+            "min": 2,
+            "max": 4
+          }
+        },
+        "minecraft:behavior.look_at_entity": {
+          "priority": 13,
+          "probability": 0.02,
+          "angle_of_view_horizontal": 360,
+          "angle_of_view_vertical": 360,
+          "look_distance": 8.0,
+          "look_time": {
+            "min": 2,
+            "max": 4
+          },
+          "filters": {
+            "all_of": [
+              {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "==",
+                "value": "mob"
+              },
+              {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "inanimate"
+              }
+            ]
+          }
+        }
+      },
+      "component:golem_sitting": {
+        "minecraft:balloonable": {
+          "mass": 1.25
+        },
+        "minecraft:is_collidable": {},
+        "minecraft:is_stackable": {},
+        "minecraft:knockback_resistance": {
+          "value": 1.0
+        },
+        
+        "minecraft:collision_box": {
+          "width": 1.25, // +25%
+          "height": 1.0 // Jumpable height.
+        },
+        "minecraft:pushable_by_block": {},
+        "minecraft:behavior.stay_while_sitting": {
+          "priority": 4
+        }
+      },
+      
+      "component:golem_at_wet_place": {
+        "minecraft:is_shaking": {},
+        "minecraft:timer": {
+          "looping": false,
+          "randomInterval": true,
+          "time": [ 60.0, 120.0 ],
+          "time_down_event": {
+            "event": "event:on_timer_down",
+            "target": "self"
+          }
+        }
+      },
+      
+      "component:golem_despawnable": {
+        "minecraft:despawn": {
+          "despawn_from_chance": true,
+          "despawn_from_inactivity": true,
+          "despawn_from_simulation_edge": true,
+          "remove_child_entities": false,
+          "min_range_inactivity_timer": 30,
+          "min_range_random_chance": 800,
+          "despawn_from_distance": {
+            "max_distance": 128,
+            "min_distance": 32
+          },
+          "filters": {}
+        }
+      },
+      "component:golem_persistent": {
+        "minecraft:persistent": {}
+      },
+      
+      "component:golem_transformation_mossy_cobblestone_golem": {
+        "minecraft:transformation": {
+          "into": "ntk:mossy_cobblestone_golem<event:spawn_from_transformation>",
+          "begin_transform_sound": "",
+          "transformation_sound": "convert_to_drowned",
+          "drop_equipment": false,
+          "drop_inventory": false,
+          "keep_level": true,
+          "keep_owner": true,
+          "preserve_equipment": true,
+          "delay": 0.5,
+          "add": {
+            "component_groups": []
+          }
+        }
+      },
+      "component:golem_transformation_cobbled_deepslate_wild": {
+        "minecraft:transformation": {
+          "into": "ntk:cobbled_deepslate_golem<event:spawn_from_lightning_strike_transformation_wild>",
+          "begin_transform_sound": "",
+          "transformation_sound": "",
+          "drop_equipment": false,
+          "drop_inventory": false,
+          "keep_level": false,
+          "keep_owner": false,
+          "preserve_equipment": true,
+          "delay": 0.5,
+          "add": {
+            "component_groups": []
+          }
+        }
+      },
+      "component:golem_transformation_cobbled_deepslate_tamed": {
+        "minecraft:transformation": {
+          "into": "ntk:cobbled_deepslate_golem<event:spawn_from_lightning_strike_transformation_tamed>",
+          "begin_transform_sound": "",
+          "transformation_sound": "",
+          "drop_equipment": false,
+          "drop_inventory": false,
+          "keep_level": false,
+          "keep_owner": true,
+          "preserve_equipment": true,
+          "delay": 0.5,
+          "add": {
+            "component_groups": []
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:scale": {
+        "value": 1.0
+      },
+      
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "breathes_lava": false,
+        "breathes_solids": true,
+        "breathes_water": true,
+        "generates_bubbles": false,
+        "inhale_time": 0,
+        "suffocate_time": 60,
+        "total_supply": 60,
+        "breathe_blocks": [],
+        "non_breathe_blocks": []
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "fall",
+            "deals_damage": "yes",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "hurt",
+						"on_damage": {
+						  "event": "event:on_damage_sensor_fall",
+						  "target": "self",
+						  "filters": {}
+						}
+          },
+          {
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+            "on_damage": {
+						  "event": "event:on_damage_sensor_sweet_berry_bush",
+						  "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_block",
+                    "subject": "block",
+                    "operator": "==",
+                    "value": "minecraft:sweet_berry_bush"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+            "on_damage": {
+              "event": "event:on_damage_sensor_lightning",
+              "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "operator": "==",
+                    "value": "lightning"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "event:on_environment_sensor_on_wet_place",
+            "target": "self",
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "minecraft:is_shaking"
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "minecraft:timer"
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "minecraft:transformation"
+                },
+                {
+                  "any_of": [
+                    {
+                      "test": "in_water",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": true
+                    },
+                    {
+                      "test": "is_underwater",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "event": "event:on_environment_sensor_on_stop_transformation",
+            "target": "self",
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": "minecraft:is_shaking"
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": "minecraft:timer"
+                },
+                {
+                  "test": "in_water",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                },
+                {
+                  "test": "is_underwater",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                }
+              ]
+            }
+          },
+          {
+            "event": "event:on_environment_sensor_on_stop_transformation",
+            "target": "self",
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": true
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": "minecraft:is_shaking"
+                },
+                {
+                  "test": "has_component",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": "minecraft:timer"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:experience_reward": {
+        "on_bred": "Math.Random(1,7)",
+        "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
+      },
+			"minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "lava",
+            "damage_per_tick": 1,
+            "filters": {
+              "all_of": [
+                {
+                  "test": "in_lava",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "interact_text": "action.interact.repair_golem",
+            "play_sounds": "",
+            "vibration": "entity_interact",
+            "swing": true,
+            "use_item": true,
+            "cooldown": 0.0,
+            "cooldown_after_being_attacked": 0.0,
+            "drop_item_y_offset": 0.0,
+            "health_amount": 10,
+            "hurt_item": 0,
+            "on_interact": {
+              "event": "event:on_interact_with_cobblestone",
+              "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_missing_health",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                  },
+                  {
+                    "any_of": [
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "operator": "==",
+                        "domain": "main_hand",
+                        "value": "cobblestone"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minecraft:leashable": {
+        "can_be_cut": true,
+        "can_be_stolen": true,
+        "on_unleash_interact_only": false,
+        "unleash_on_removal": true,
+        "presets": [
+          {
+            "spring_type": "dampened",
+            "soft_distance": 4.0,
+            "hard_distance": 7.0,
+            "max_distance": 10.0,
+            "rotation_adjustment": 0.0, 
+            "filter": {}
+          }
+        ],
+        "on_leash": {
+          "event": "event:on_leash",
+          "target": "self"
+        },
+        "on_unleash": {
+          "event": "event:on_unleash",
+          "target": "self"
+        }
+      },
+      "minecraft:leashable_to": {
+        "can_retrieve_from": false,
+        "unleash_on_removal": true
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": false,
+        "default_trigger": {
+          "event": "event:on_unnamed",
+          "target": "self"
+        },
+        "name_actions": [
+          {
+            "name_filter": "Named",
+            "on_named": {
+              "event": "event:on_named",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": true
+      },
+      
+      "minecraft:behavior.nap": {
+        "priority": 8,
+        "cooldown_min": 1.0,
+        "cooldown_max": 4.0,
+        "mob_detect_dist": 4.0,
+        "mob_detect_height": 3.0,
+        "can_nap_filters": {
+          "all_of": [
+            {
+              "test": "is_tamed",
+              "subject": "self",
+              "operator": "==",
+              "value": false
+            },
+            {
+              "test": "is_daytime",
+              "subject": "self",
+              "operator": "==",
+              "value": false
+            },
+            {
+              "test": "on_ground",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            }
+          ]
+        },
+        "wake_mob_exceptions": {
+          "any_of": [
+            {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "elder_golem"
+                },
+                {
+                  "any_of": [
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "animal" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "aquatic" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "elemental" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "fish" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "monster" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "myconid" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "spirit" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "squid" },
+                    { "test": "is_family", "subject": "other", "operator": "==", "value": "treant" },
+                    {
+                      "all_of": [
+                        {
+                          "test": "is_family",
+                          "subject": "other",
+                          "operator": "==",
+                          "value": "player"
+                        },
+                        {
+                          "test": "is_sneak_held",
+                          "subject": "other",
+                          "operator": "==",
+                          "value": true
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "component:golem_wild",
+            "component:golem_standing",
+            "component:golem_despawnable"
+          ]
+        }
+      },
+      "event:spawn_from_summoning_scroll": {
+        "add": {
+          "component_groups": [
+            "component:golem_wild",
+            "component:golem_standing",
+            "component:golem_persistent"
+          ]
+        }
+      },
+      "event:spawn_from_transformation": {
+        "add": {
+          "component_groups": [
+            "component:golem_wild",
+            "component:golem_standing",
+            "component:golem_despawnable"
+          ]
+        }
+      },
+      
+      "event:on_tame": {
+        "remove": {
+          "component_groups": [
+            "component:golem_wild",
+            "component:golem_despawnable"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:golem_tamed",
+            "component:golem_persistent"
+          ]
+        }
+      },
+      
+      "event:on_sit": {
+        "queue_command": {
+          "command": [
+            "playsound mob.ntk_cobblestone_golem.sit @a[r=8] ~ ~ ~ 1.0 0.5 0.0"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "component:golem_standing"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:golem_sitting"
+          ]
+        }
+      },
+      "event:on_stand": {
+        "queue_command": {
+          "command": [
+            "playsound mob.ntk_cobblestone_golem.stand @a[r=8] ~ ~ ~ 1.0 0.5 0.0"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "component:golem_sitting"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:golem_standing"
+          ]
+        }
+      },
+      
+      "event:on_damage_sensor_lightning": {
+        "sequence": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": false
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "component:golem_transformation_cobbled_deepslate_wild"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": true
+                }
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "component:golem_transformation_cobbled_deepslate_tamed"
+              ]
+            }
+          }
+        ]
+      },
+      "event:on_environment_sensor_on_wet_place": {
+        "add": {
+          "component_groups": [
+            "component:golem_at_wet_place"
+          ]
+        }
+      },
+			"event:on_environment_sensor_on_stop_transformation": {
+        "remove": {
+          "component_groups": [
+            "component:golem_at_wet_place"
+          ]
+        }
+      },
+      "event:on_interact_with_cobblestone": {
+        "queue_command": {
+          "command": [
+            "playsound mob.ntk_cobblestone_golem.repair @a[r=8] ~ ~ ~ 1.0 0.7 0.0"
+          ]
+        }
+			},
+      "event:on_timer_down": {
+        "remove": {
+          "component_groups": [
+            "component:golem_at_wet_place"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:golem_transformation_mossy_cobblestone_golem"
+          ]
+        }
+      },
+      
+      "event:on_attack": {},
+      "event:on_damage_sensor_fall": {},
+      "event:on_damage_sensor_sweet_berry_bush": {},
+			"event:on_kill": {},
+      "event:on_leash": {},
+			"event:on_named": {},
+			"event:on_unleash": {},
+			"event:on_unnamed": {}
+    }
+  }
+}

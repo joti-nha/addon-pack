@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:cured_mossback_meat"},"key":{"M":"panascais_caves:mossback_meat","S":"panascais_caves:salt"},"pattern":[" S ","SMS"," S "],"tags":["crafting_table"],"result":"panascais_caves:cured_mossback_meat"}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_purpur_stairs_x_purpur_slab"},"priority":4,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:purpur_stairs"}],"result":{"item":"minecraft:purpur_slab","count":1},"unlock":[{"item":"minecraft:purpur_stairs"}]}}

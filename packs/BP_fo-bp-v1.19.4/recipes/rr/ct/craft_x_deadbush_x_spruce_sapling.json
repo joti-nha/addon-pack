@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_deadbush_x_spruce_sapling"},"priority":2,"tags":["crafting_table"],"group":"deadbush","ingredients":[{"item":"minecraft:spruce_sapling"}],"result":{"item":"minecraft:deadbush","count":1},"unlock":[{"item":"minecraft:spruce_sapling"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:peony_duplication"},"tags":["crafting_table"],"ingredients":[{"item":"minecraft:peony"},{"item":"minecraft:bone_meal"}],"result":{"item":"minecraft:peony","count":2}}}

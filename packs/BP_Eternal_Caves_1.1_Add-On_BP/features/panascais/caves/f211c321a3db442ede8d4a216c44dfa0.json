@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/f211c321a3db442ede8d4a216c44dfa0"},"count":32,"replace_rules":[{"places_block":"panascais_caves:salt_ore","may_replace":["minecraft:stone"]},{"places_block":"panascais_caves:deepslate_salt_ore","may_replace":["minecraft:deepslate"]}]}}

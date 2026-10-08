@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/7831fe7f5f09bf9e6c6daffdd1f870eb"},"count":3,"replace_rules":[{"places_block":"panascais_caves:crystal_opal_ore","may_replace":["minecraft:stone"]},{"places_block":"panascais_caves:deepslate_crystal_opal_ore","may_replace":["minecraft:deepslate"]}]}}

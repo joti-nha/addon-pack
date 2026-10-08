@@ -1,0 +1,78 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Common Sense 1.7.1 RE",
+		"description": "Qol and others Fun Features",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "cb355f71-36ce-46da-a135-92db99634f8d",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "5af103a0-5561-43f6-88d9-21a03308ddcb",
+			"description": "1.0.0",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7b17371f-b60d-4800-950b-9e910301203e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"subpacks": [
+		{
+			"folder_name": "sub5",
+			"name": "§950% Opacity§r crosshair.",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "sub3",
+			"name": "§930% Opacity§r crosshair.",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "sub1",
+			"name": "§910% Opacity§r crosshair.",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "sub0",
+			"name": "§90% Opacity§r crosshair.",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "subvnla",
+			"name": "§9Vanilla Possition§r crosshair(less precise).",
+			"memory_tier": 0
+		}
+	]
+}

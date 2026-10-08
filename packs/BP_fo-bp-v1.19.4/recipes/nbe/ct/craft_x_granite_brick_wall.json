@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_granite_brick_wall"},"priority":0,"tags":["crafting_table"],"group":"granite_brick_wall","assume_symmetry":true,"pattern":["GGG","GGG"],"key":{"G":{"item":"ntk:granite_bricks"}},"result":{"item":"ntk:granite_brick_wall","count":6},"unlock":[{"item":"ntk:granite_bricks"}]}}

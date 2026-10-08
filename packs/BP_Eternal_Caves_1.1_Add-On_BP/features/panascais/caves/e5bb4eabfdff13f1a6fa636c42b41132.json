@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/e5bb4eabfdff13f1a6fa636c42b41132"},"places_block":"minecraft:cave_vines_head_with_berries","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_not_attach_to":{"top":["minecraft:air"]}}}

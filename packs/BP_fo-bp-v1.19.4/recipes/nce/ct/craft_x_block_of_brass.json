@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_block_of_brass"},"priority":1,"tags":["crafting_table"],"pattern":["ZZZ","ZZZ","ZZZ"],"key":{"Z":{"item":"ntk:brass_ingot"}},"result":{"item":"ntk:block_of_brass","count":1},"unlock":[{"item":"ntk:brass_ingot"}]}}

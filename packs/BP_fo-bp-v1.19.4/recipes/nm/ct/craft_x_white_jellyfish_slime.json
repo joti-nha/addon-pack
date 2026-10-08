@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_white_jellyfish_slime"},"priority":1,"tags":["crafting_table"],"group":"white_jellyfish_slime","ingredients":[{"item":"ntk:white_jellyfish_slime_block"}],"result":{"item":"ntk:white_jellyfish_slime","count":9},"unlock":[{"item":"ntk:white_jellyfish_slime_block"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:ore_feature":{"description":{"identifier":"mnra_cata:platinum_ore"},"count":4,"replace_rules":[{"places_block":{"name":"mnra_cata:platinum_ore","states":{}},"may_replace":[{"name":"minecraft:stone","states":{"stone_type":"stone"}}]}]}}

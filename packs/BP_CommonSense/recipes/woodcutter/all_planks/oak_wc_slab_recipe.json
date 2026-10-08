@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:oak_wc_slab_recipe"},"tags":["stonecutter"],"priority":1,"ingredients":[{"item":"minecraft:planks","data":0}],"result":{"item":"minecraft:wooden_slab","count":2,"data":0}}}

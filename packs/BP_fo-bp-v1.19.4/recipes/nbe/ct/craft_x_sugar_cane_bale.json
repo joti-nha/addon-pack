@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_sugar_cane_bale"},"priority":1,"tags":["crafting_table"],"group":"sugar_cane_bale","assume_symmetry":true,"pattern":["AAA","AAA","AAA"],"key":{"A":{"item":"minecraft:sugar_cane"}},"result":{"item":"ntk:sugar_cane_bale","count":1},"unlock":[{"item":"minecraft:sugar_cane"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.21.20","minecraft:template_pool":{"description":{"identifier":"mnra_cata:verdant_sentinel"},"elements":[{"element":{"element_type":"minecraft:single_pool_element","location":"minera/cata/verdant_dungeon/verdant_sentinel","processors":"mnra_cata:gneiss_replacement"},"weight":1}]}}

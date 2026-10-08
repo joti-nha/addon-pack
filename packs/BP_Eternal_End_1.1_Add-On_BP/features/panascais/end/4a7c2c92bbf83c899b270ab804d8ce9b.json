@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:scatter_feature":{"description":{"identifier":"panascais_end:panascais/end/4a7c2c92bbf83c899b270ab804d8ce9b"},"places_feature":"panascais_end:panascais/end/cef4eee24e2101e6af9eeeb5f4d90967","distribution":{"iterations":"t.ab = (q.noise((v.worldx + 4250) * 0.05, (v.worldz + 4250) * 0.05) + 1) / 2; return 1;","x":0,"y":0,"z":0}}}

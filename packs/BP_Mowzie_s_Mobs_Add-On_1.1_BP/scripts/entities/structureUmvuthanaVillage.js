@@ -1,0 +1,1 @@
+import*as mc from"@minecraft/server";import*as vector from"../utils/vector";export function eventBehavior(r){}

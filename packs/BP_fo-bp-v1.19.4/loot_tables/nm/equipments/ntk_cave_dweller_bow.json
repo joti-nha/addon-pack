@@ -1,0 +1,1 @@
+{"pools":[{"rolls":1,"entries":[{"weight":100,"type":"item","name":"minecraft:bow","functions":[{"function":"set_count","count":1},{"function":"set_damage","damage":{"min":0.1,"max":0.2}},{"function":"enchant_random_gear","chance":0.1}]}]}]}

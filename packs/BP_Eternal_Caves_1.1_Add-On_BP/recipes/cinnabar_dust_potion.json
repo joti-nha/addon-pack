@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_brewing_mix":{"description":{"identifier":"panascais_caves:cinnabar_dust_potion"},"input":"minecraft:potion_type:awkward","output":"minecraft:potion_type:poison","reagent":"panascais_caves:cinnabar_dust","tags":["brewing_stand"]}}

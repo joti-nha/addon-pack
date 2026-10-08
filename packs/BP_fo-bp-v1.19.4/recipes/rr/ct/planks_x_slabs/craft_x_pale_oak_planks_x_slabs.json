@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_pale_oak_planks_x_slabs"},"priority":5,"tags":["crafting_table"],"group":"pale_oak_planks","assume_symmetry":true,"pattern":["A "," A"],"key":{"A":{"item":"minecraft:pale_oak_slab"}},"result":{"item":"minecraft:pale_oak_planks","count":1},"unlock":[{"item":"minecraft:pale_oak_slab"}]}}

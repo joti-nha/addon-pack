@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:rose_duplication"},"tags":["crafting_table"],"ingredients":[{"item":"minecraft:poppy"},{"item":"minecraft:bone_meal"}],"result":{"item":"minecraft:poppy","count":2}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_end:spored_slab_daylight_sensor"},"key":{"#":"panascais_end:spored_slab","G":"minecraft:glass","Q":"minecraft:quartz"},"pattern":["GGG","QQQ","###"],"tags":["crafting_table"],"result":"minecraft:daylight_detector"}}

@@ -1,0 +1,1 @@
+scriptevent panascais_end:portal place

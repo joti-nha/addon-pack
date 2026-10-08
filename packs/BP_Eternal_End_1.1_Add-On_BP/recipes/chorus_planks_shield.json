@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_end:chorus_planks_shield"},"key":{"I":"minecraft:iron_ingot","#":"panascais_end:chorus_planks"},"pattern":["#I#","###"," # "],"tags":["crafting_table"],"result":"minecraft:shield"}}

@@ -1,0 +1,286 @@
+pack.name=Mowzie's Mobs - V 1.1.0
+pack.description=オリジナルのJava Mod（§l§mBob Mowzie§f）を元に制作 | 制作: §l§6Honeyfrost§r§f
+
+## ENTITIES
+item.spawn_egg.entity.hf_mzs:frostmaw.name=フロストモーのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:frostmaw.name=フロストモー
+entity.hf_mzs:frostmaw<>.name=フロストモー
+entity.hf_mzs:frostmaw_projectile.name=フロストモー
+item.spawn_egg.entity.hf_mzs:wroughtnaut.name=フェロウズ・ロットノートのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:wroughtnaut.name=フェロウズ・ロットノート
+entity.hf_mzs:wroughtnaut<>.name=フェロウズ・ロットノート
+entity.hf_mzs:laser_projectile.name=フェロウズ・ロットノート
+item.spawn_egg.entity.hf_mzs:umvuthana.name=ウンヴタナのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana.name=ウンヴタナ
+interact.hf_mzs.umvuthana_sol_visage=マスクに戻る
+item.spawn_egg.entity.hf_mzs:umvuthana_crane.name=ウンヴタナ・クレーンのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana_crane.name=ウンヴタナ・クレーン
+item.spawn_egg.entity.hf_mzs:umvuthana_raptor.name=ウンヴタナ・ラプターのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana_raptor.name=ウンヴタナ・ラプター
+item.spawn_egg.entity.hf_mzs:umvuthi.name=ウンヴティ、太陽鳥のスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthi.name=ウンヴティ、太陽鳥
+
+item.spawn_egg.entity.hf_mzs:lantern.name=ランタンのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:lantern.name=ランタン
+item.spawn_egg.entity.hf_mzs:grottol.name=グロットルのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:grottol.name=グロットル
+item.spawn_egg.entity.hf_mzs:naga.name=ナーガのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:naga.name=ナーガ
+item.spawn_egg.entity.hf_mzs:foliaath.name=フォリアースのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:foliaath.name=フォリアース
+interact.hf_mzs.foliaath_feed=餌を与える
+item.spawn_egg.entity.hf_mzs:sculptor.name=トンビ、彫刻師のスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:sculptor.name=トンビ、彫刻師
+entity.hf_mzs:timer.name=残り時間
+item.spawn_egg.entity.hf_mzs:bluff.name=ブラフのスポーンエッグ §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:bluff.name=ブラフ
+
+entity.boss.hf_mzs:frostmaw.name=§bフロストモー§r
+entity.boss.hf_mzs:wroughtnaut.name=§cフェロウズ・ロットノート§r
+entity.boss.hf_mzs:umvuthi.name=§6ウンヴティ、太陽鳥§r
+entity.boss.hf_mzs:sculptor.name=§2トンビ、彫刻師§r
+## ITEMS
+item.hf_mzs:debugging_tool.name=デバッグスティック §f(§c Mowzie's Mobs §f)
+item.hf_mzs:guidebook.name=ガイドブック §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:ice_crystal.name=氷のクリスタル §f(§c Mowzie's Mobs §f)
+item.hf_mzs:wroughtnaut_axe.name=千の金属の斧 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:wroughtnaut_helmet.name=ロットノートの兜 §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:mask_bliss.name=至福の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_faith.name=信仰の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_fear.name=恐怖の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_fury.name=激怒の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_rage.name=憤怒の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_misery.name=悲哀の仮面 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sol_visage.name=ソル・ヴィサージュ §f(§c Mowzie's Mobs §f)
+item.hf_mzs:suns_blessing.name=太陽の祝福 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:luminous_jelly.name=ルミナスジェリー §f(§c Mowzie's Mobs §f)
+item.hf_mzs:foliaath_seed.name=フォリアースの種 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol.name=捕らえられたグロットル §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol_pink.name=捕らえられたピンクのグロットル §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol_mixed.name=捕らえられたミックスグロットル §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:earthrend_gauntlet.name=大地裂きのガントレット §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sculptor_staff.name=彫刻師の杖 §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:geomancer_sandals.name=ジオマンサーのサンダル §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_beads.name=ジオマンサーの数珠 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_belt.name=ジオマンサーのベルト §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_robe.name=ジオマンサーのローブ §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sand_rake.name=砂の熊手 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:gong.name=ゴング §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mob_remover.name=モブリムーバー §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:blowgun.name=吹き矢 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:dart.name=ダーツ §f(§c Mowzie's Mobs §f)
+item.hf_mzs:naga_fang.name=ナーガの牙 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:naga_fang_dagger.name=ナーガの牙の短剣 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:spear.name=槍 §f(§c Mowzie's Mobs §f)
+item.hf_mzs:potion_poison_resistance.name=毒耐性のポーション §f(§c Mowzie's Mobs §f)
+item.hf_mzs:bluff_rod.name=ブラフの杖 §f(§c Mowzie's Mobs §f)
+
+## INTERACTIONS
+action.hf_mzs.take_ice_crystal=氷のクリスタルを盗む
+action.hf_mzs.sculptor.interact=対話する
+
+## DIALOGUE & TELLRAW
+action.hf_mzs.umvuthi.trade=取引する
+menu.hf_mzs.umvuthi_trade_name=ウンヴティ、太陽鳥
+menu.hf_mzs.umvuthi_trade_content_buy=§l§6太陽の祝福§rの価格は§l§g7個の金ブロック§rです
+menu.hf_mzs.umvuthi_trade_button_buy=§l§n太陽の祝福§rを獲得
+menu.hf_mzs.umvuthi_trade_content_cant=§l§n太陽の祝福§rの価格は§l§g7個の金ブロック§rですが、足りないようです
+menu.hf_mzs.umvuthi_trade_button_cant=キャンセル
+menu.hf_mzs.umvuthi_trade_content_refill=§l§6太陽の祝福§rの回復は無料です
+menu.hf_mzs.umvuthi_trade_button_refill=§l§n太陽の祝福§rを回復
+
+message.hf_mzs.suns_blessing_dublicate=§m[太陽の祝福は1つしか所持できません]
+message.hf_mzs.sol_visage_limit=§m[アバヴタナは10体までしか召喚できません]
+
+dialogue.hf_mzs.sculptor_test.name=トンビ、彫刻師
+dialogue.hf_mzs.sculptor_test.text_sculptor_1=試験を開始しますか？
+dialogue.hf_mzs.sculptor_test.text_sculptor_2=必要アイテム: §l1x ブラフの杖§r
+dialogue.hf_mzs.sculptor_test.text_sculptor_3=報酬: §l1x 大地裂きのガントレット§r
+dialogue.hf_mzs.sculptor_test.text_sculptor_4=§r[§9ヒント§r]§r: 自力で十分な高さにジャンプするのは難しい。ジャンプ力と移動速度を上げる方法を見つけよう！
+
+dialogue.hf_mzs.sculptor_creative_message=§r[§a情報§r] §aサバイバルまたはアドベンチャーモードに変更して試験を開始してください§r
+dialogue.hf_mzs.sculptor_no_interact_message=§r[§a情報§r] §a現在、彫刻師とは対話できません§r
+dialogue.hf_mzs.sculptor_test_obstructed_message=§r[§aInfo§r] §aテストエリアが障害物で塞がれています。すべての障害物を取り除いてテストを開始してください§r
+
+dialogue.hf_mzs.sculptor_obstructed.name=トンビ、彫刻師
+dialogue.hf_mzs.sculptor_obstructed.text_sculptor_1=試験エリアが塞がれています
+dialogue.hf_mzs.sculptor_obstructed.text_sculptor_2=試験を開始するには、ハイライトされたブロックをすべて取り除いてください
+
+dialogue.hf_mzs.sculptor_descending.name=トンビ、彫刻師
+dialogue.hf_mzs.sculptor_descending.text_sculptor_1=彫刻師が降りてくるのを待ってから再挑戦してください
+
+dialogue.hf_mzs.sculptor_dead.name=トンビ、彫刻師
+dialogue.hf_mzs.sculptor_dead.text_sculptor_1=もう一度挑戦しますか？
+
+dialogue.hf_mzs.sculptor_test.missing_item=§r[§a情報§r] §a試験を開始するにはブラフの杖が1本必要です§r
+
+dialogue.hf_mzs.sculptor_test.start=開始
+dialogue.hf_mzs.sculptor_test.cancel=キャンセル
+
+dialogue.hf_mzs.earthrend_gauntlet.boulder_hint=地面を狙うと岩を召喚できます
+dialogue.hf_mzs.earthrend_gauntlet.boulder_ground_hint=地上のブロックからしか岩を召喚できない
+dialogue.hf_mzs.earthrend_gauntlet.boulder_no_space=岩を召喚するスペースがありません
+
+actionbar.hf_mzs.suns_blessing_solar_flare=[§l§nソーラーフレア§r使用中]
+actionbar.hf_mzs.suns_blessing_solar_beam=[§l§nソーラービーム§r使用中]
+actionbar.hf_mzs.suns_blessing_supernova=[§l§nスーパーノヴァ§r使用中]
+actionbar.hf_mzs.suns_blessing_supernova_ready=[§l§nスーパーノヴァ§r準備完了]\n      使用して発動\n    ジャンプでキャンセル
+actionbar.hf_mzs.suns_blessing_supernova_cancel=[§l§nスーパーノヴァ§rキャンセル]
+actionbar.hf_mzs.suns_blessing_supernova_count1=[1/3 しゃがむと§l§nスーパーノヴァ§r準備]
+actionbar.hf_mzs.suns_blessing_supernova_count2=[2/3 しゃがむと§l§nスーパーノヴァ§r準備]
+actionbar.hf_mzs.suns_blessing_supernova_fail=[§l§nスーパーノヴァ§rを発動するためのエネルギーが不足しています！]
+actionbar.hf_mzs.frozen=[§b凍結中§r]
+
+message.hf_mzs.poison_resistance_10=§m[毒耐性があと10秒で切れます]
+message.hf_mzs.poison_resistance_expired=§m[毒耐性が切れました]
+
+message.hf_mzs.gauntlet_durability=§2ガントレットの耐久値: §r
+
+## BLOCKS
+tile.hf_mzs:generator.name=ジェネレーター §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:painted_acacia_wood.name=塗装されたアカシアの板材 §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:painted_acacia_slab.name=塗装されたアカシアのハーフブロック §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:thatch.name=茅（かや） §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:clawed_log.name=爪跡のある原木 §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:invisible_slab.name=透明なハーフブロック §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:invisible_quarter.name=透明なクォーターブロック §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:invisible_block.name=透明なブロック §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:frostmaw_gen_trigger.name=フロストモーの構造生成 §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:monastery_gen_trigger.name=修道院の構造生成 §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:umvuthi_gen_trigger.name=ウンヴティの構造生成 §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:wroughtnaut_gen_trigger.name=ロットノートの構造生成 §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:raked_sand.name=ならされた砂 §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:red_raked_sand.name=ならされた赤い砂 §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:custom_jigsaw.name=カスタムジグソーブロック §f(§c Mowzie's Mobs §f)
+
+## GUIDEBOOK
+action.hf_mzs.open_guidebook=開く
+## TITLES
+guidebook.hf_mzs.title_start=§lホーム§r
+guidebook.hf_mzs.title_entities=§lモブ§r
+guidebook.hf_mzs.title_frostmaw=§lフロストモー§r
+guidebook.hf_mzs.title_wroughtnaut=§lフェロウズ・ロットノート§r
+guidebook.hf_mzs.title_umvuthana=§lウンヴタナ§r
+guidebook.hf_mzs.title_umvuthi=§lウンヴティ、太陽鳥§r
+guidebook.hf_mzs.title_naga=§lナーガ§r
+guidebook.hf_mzs.title_foliaath=§lフォリアース§r
+guidebook.hf_mzs.title_grottol=§lグロットル§r
+guidebook.hf_mzs.title_lantern=§lランタン§r
+guidebook.hf_mzs.title_sculptor=§lトンビ、彫刻師§r
+guidebook.hf_mzs.title_bluff=§lブラフ§r
+guidebook.hf_mzs.title_travellers=§l旅人§r
+
+guidebook.hf_mzs.title_items=§lアイテム§r
+guidebook.hf_mzs.title_ice_crystal=§l氷のクリスタル§r
+guidebook.hf_mzs.title_wroughtnaut_helmet=§lロットノートの兜§r
+guidebook.hf_mzs.title_wroughtnaut_axe=§l千の金属の斧§r
+guidebook.hf_mzs.title_umvuthana_masks=§lウンヴタナの仮面§r
+guidebook.hf_mzs.title_sol_visage=§lソル・ヴィサージュ§r
+guidebook.hf_mzs.title_suns_blessing=§l太陽の祝福§r
+guidebook.hf_mzs.title_naga_fang=§lナーガの牙§r
+guidebook.hf_mzs.title_naga_fang_dagger=§lナーガの牙の短剣§r
+guidebook.hf_mzs.title_blowgun=§l吹き矢§r
+guidebook.hf_mzs.title_foliaath_seed=§lフォリアースの種§r
+guidebook.hf_mzs.title_spear=§l槍§r
+guidebook.hf_mzs.title_earthrend_gauntlet=§l大地裂きのガントレット§r
+guidebook.hf_mzs.title_sculptor_staff=§l彫刻師の杖§r
+guidebook.hf_mzs.title_geomancy_armor=§lジオマンサーの防具§r
+guidebook.hf_mzs.title_rake=§l砂の熊手§r
+
+guidebook.hf_mzs.title_structures=§l建造物§r
+guidebook.hf_mzs.title_monastery=§l修道院§r
+guidebook.hf_mzs.title_umvuthana_grove=§lウンヴタナの森§r
+guidebook.hf_mzs.title_wroughtnaut_chamber=§lロットノートの間§r
+
+guidebook.hf_mzs.title_discord=§l公式ソーシャルメディア§r
+guidebook.hf_mzs.title_credits=§lクレジット§r
+## BUTTONS
+
+guidebook.hf_mzs.button_start=§l§8ホーム§r
+guidebook.hf_mzs.button_entities=§l§8モブ§r
+guidebook.hf_mzs.button_frostmaw=§l§3フロストモー§r
+guidebook.hf_mzs.button_wroughtnaut=§l§4フェロウズ・ロットノート§r
+guidebook.hf_mzs.button_umvuthana=§l§eウンヴタナ§r
+guidebook.hf_mzs.button_umvuthi=§l§6ウンヴティ、太陽鳥§r
+guidebook.hf_mzs.button_naga=§l§qナーガ§r
+guidebook.hf_mzs.button_foliaath=§l§uフォリアース§r
+guidebook.hf_mzs.button_grottol=§l§sグロットル§r
+guidebook.hf_mzs.button_lantern=§l§aランタン§r
+guidebook.hf_mzs.button_sculptor=§l§2トンビ、彫刻師§r
+guidebook.hf_mzs.button_bluff=§l§nブラフ§r
+guidebook.hf_mzs.button_travellers=§l旅人§r
+
+guidebook.hf_mzs.button_items=§l§8アイテム§r
+guidebook.hf_mzs.button_ice_crystal=§l§3氷のクリスタル§r
+guidebook.hf_mzs.button_wroughtnaut_helmet=§l§4ロットノートの兜§r
+guidebook.hf_mzs.button_wroughtnaut_axe=§l§4千の金属の斧§r
+guidebook.hf_mzs.button_umvuthana_masks=§l§eウンヴタナの仮面§r
+guidebook.hf_mzs.button_sol_visage=§l§6ソル・ヴィサージュ§r
+guidebook.hf_mzs.button_suns_blessing=§l§6太陽の祝福§r
+guidebook.hf_mzs.button_naga_fang=§l§qナーガの牙§r
+guidebook.hf_mzs.button_naga_fang_dagger=§l§aナーガの牙の短剣§r
+guidebook.hf_mzs.button_blowgun=§l§2吹き矢§r
+guidebook.hf_mzs.button_foliaath_seed=§l§uフォリアースの種§r
+guidebook.hf_mzs.button_spear=§l§8槍§r
+guidebook.hf_mzs.button_earthrend_gauntlet=§l§q大地裂きのガントレット§r
+guidebook.hf_mzs.button_sculptor_staff=§l§q彫刻師の杖§r
+guidebook.hf_mzs.button_geomancy_armor=§l§qジオマンサーの防具§r
+guidebook.hf_mzs.button_rake=§l§e砂の熊手§r
+
+guidebook.hf_mzs.button_structures=§l§8建造物§r
+guidebook.hf_mzs.button_monastery=§l§2修道院§r
+guidebook.hf_mzs.button_umvuthana_grove=§l§6ウンヴタナの森§r
+guidebook.hf_mzs.button_wroughtnaut_chamber=§l§4ロットノートの間§r
+
+guidebook.hf_mzs.button_discord=§l公式ソーシャルメディア§r
+guidebook.hf_mzs.button_credits=§lクレジット§r
+
+## ENTRY CONTENTS
+guidebook.hf_mzs.body_start=ようこそ §l§cMowzie's Mobs§r へ！このアドオンは、Minecraft に様々な架空の生物を追加し、独自の AI、豊かな雰囲気、そして滑らかなアニメーションを誇ります。%s%s制作: Honeyfrost | Mowzie's Studios LLC のライセンスのもと開発。
+
+guidebook.hf_mzs.body_entities=§r
+guidebook.hf_mzs.body_frostmaw=§bフロストモー§r は、雪の降る地域で見つかる危険な獣です。その巨大な体、驚異的な速さ、そして強力な氷の息によって、ほぼ倒すことが不可能です。もし旅の途中で眠っているものに遭遇したら、別の道を選ぶのが賢明でしょう。%s%sこの獣は貴重な §b氷のクリスタル§r を守っており、それを使うことで純粋な氷のエネルギーを解き放つことができます。
+guidebook.hf_mzs.body_wroughtnaut=何年も前に地下に埋もれたこの重装甲の騎士たちは、人でもなく、ただの彫像でもありません。%s%s彼らは何かを守っているのか？それを忘れました。何かを待っているのか？それも忘れました。誰かを悼んでいるのか？それすらも忘れました。ただ、彼らは自らの部屋に近づく者を倒すことしか知りません。%s%s§cフェロウズ・ロットノート§r にダメージを与える唯一の方法は、その背中の弱点を攻撃することです。
+guidebook.hf_mzs.body_wroughtnaut_april_fools=何年も前に地下で失われた… 宇宙から来たロボットなのか？ たぶんね。 何かを待っているのか？ そうかもしれない。 ただ単に暗い部屋で劇的に立ち続けることに強くこだわっているだけなのか？ その通り。 目からレーザーを撃てるのか？ 間違いなく撃てる。%s%s§cFerrous Wroughtnaut§rにダメージを与える方法は一つだけ。その弱点は背中にある。
+guidebook.hf_mzs.body_umvuthana=§eアバヴタナ§r（§eウンヴタナ§r の複数形）は、サバンナの厄災です。これらの鳥のような生物は、歩いた地面を焦がし、動物を容赦なく狩ります。%s%s§eアバヴタナ§r は獲物を素早く包囲し、執拗に追いかけるため、サバンナを移動することは非常に危険です。%s%s時には、§eアバヴタナ§r は仮面をドロップし、プレイヤーが装備することで異なる小さなバフを得ることができます。%s%s戦闘では、§eアバヴタナ§r は鋭い爪で順番に敵を攻撃します。狩りの群れは、特に長い鉤爪を持ち、それを使って攻撃を防ぐ §eウンヴタナ・ラプター§r に率いられています。
+guidebook.hf_mzs.body_umvuthi=§6ウンヴティ§r は §eアバヴタナ§r の創造主であり、§6ウンヴタナの森§r の玉座に座り、太陽の力を利用してサンストライク、ソーラーフレア、そして強力なソーラービームを放ちます。%s%s彼は戦闘時に仮面から従者の §eウンヴタナ§r（回復役の §eウンヴタナ・クレーン§r を含む）を召喚することができます。彼の仮面をかぶった子供たちは、彼を神として崇拝しています。%s%s十分な装備のない旅人は、彼の太陽魔法に倒されないよう距離を取るべきです。§6ウンヴティ§r を倒すことができた者には、彼の仮面である §gソル・ヴィサージュ§r が与えられます。
+guidebook.hf_mzs.body_naga=海岸の崖は危険な場所です。冒険者たちは、この地域に住む翼のある蛇、§qナーガ§r の話をします。%s%s驚異的な速さと致命的な酸性毒を持つこれらの生き物は、狙いを定めるのが難しいですが、正確に矢を放てば、§qナーガ§r を空から落とすことができます。攻撃の瞬間を狙えば、容易に倒せるでしょう。%s%s§qナーガ§r を倒すと、§q牙§r をドロップし、それを使って毒耐性のポーションやダーツ、§aナーガの牙の短剣§r を作成することができます。%s%s彼らは暗闇の中でのみスポーンします。
+guidebook.hf_mzs.body_foliaath=§uフォリアース§r はジャングルに潜む植物の怪物で、動くものを何でも食べようとします！§uフォリアース§r は普通のシダに見えますが、近づくと飛び出してきます。%s%s§uフォリアース§r に十分に近づいて攻撃するのはほぼ不可能です。対処する別の方法を考えてみてください。%s%s倒すと、§uフォリアースの種§r をドロップします。%s%s彼らは暗闇の中でのみスポーンします。
+guidebook.hf_mzs.body_grottol=これらの可愛らしい結晶のような甲殻類は、洞窟や渓谷の奥深くに住んでいます。「生きた鉱石」として知られる §sグロットル§r は、希少なダイヤモンドの供給源です。%s%s§sグロットル§r は素早く、驚くほど賢いため、掘り進む前に捕まえられるのは最速の冒険者だけです。%s%s鉄以上のツルハシでなければ、その硬いダイヤモンドの殻を壊すことはできません。%s%s彼らは暗闇の中でのみスポーンします。
+guidebook.hf_mzs.body_lantern=§aランタン§r は、屋根付きの森の樹冠に点在し、クラゲのように光を放っています。一部の文化では、これらの生物が最近亡くなった魂を宿していると信じられています。また、他の人々は流れ星のように願いをかけます。%s%s内部の §aルミナスジェリー§r は、暗闇を一時的に照らし、食べると暗視効果を得ることができます。%s%s彼らは暗闇の中でのみスポーンします。
+guidebook.hf_mzs.body_sculptor=地術の達人である §2彫刻師§r は、高山の §2修道院§r で訪問者を待ち、難易度の高いパルクール試験を課します。%s%sかつてこの過酷な登山を頂上まで制覇した弟子はいません。しかし、成功した者は、§2大地裂きの僧§r の力に値する者とされます。§2彫刻師§r は、強力なアーティファクトである §q大地裂きのガントレット§r を与え、それを持つ者は地を操る力を得ることができます。%s%s§2彫刻師§r と会話し、§nブラフの杖§r を1本渡して試練を開始しましょう。時間内に頂上へ到達し、§2彫刻師§r に接触すれば勝利です。自力で十分にジャンプするのは難しいため、ジャンプ力と移動速度を強化する方法を見つけましょう。
+guidebook.hf_mzs.body_bluff=§2大地裂きの僧§r が姿を消してから数世紀が経ちました。彼らの §2修道院§r は、今では廃墟となり荒れ果てています。元素の怪物である §nブラフ§r がそこに群がり、残された魔力に引き寄せられています。%s%s倒すと §nブラフの杖§r をドロップし、§2ジオマンサーの防具§r の修理や §2彫刻師の試練§r を開始するのに使用できます。
+
+guidebook.hf_mzs.body_items=§r
+guidebook.hf_mzs.body_ice_crystal=眠れる §bフロストモー§r に守られた §b氷のクリスタル§r は、使用者に氷の息で敵を凍らせる力を与えます。使用後は再充電の時間が必要です。%s%s§bフロストモー§r を倒すことで入手できます。もしかすると、もっと簡単な方法があるかもしれません…？
+guidebook.hf_mzs.body_wroughtnaut_helmet=§cフェロウズ・ロットノート§r の壊れない兜であり、倒すことで入手できます。
+guidebook.hf_mzs.body_wroughtnaut_axe=§c千の金属の斧§r は、§cフェロウズ・ロットノート§r の壊れない武器です。インタラクトすると、前方の敵にダメージを与える横薙ぎ攻撃を発動できます。しゃがみながらインタラクトすると、地面を叩きつけるスラム攻撃を発動し、周囲の敵を引き寄せます。%s%s§cフェロウズ・ロットノート§r を倒すことで入手できます。
+guidebook.hf_mzs.body_umvuthana_masks=§eアバヴタナ§r を倒すことで入手できます。§6ウンヴタナの森§r でこれらの仮面を装備してみましょう。何か特別なことが起こるかもしれません。%s%s異なる仮面には、それぞれ異なる効果があります。%s§e至福の仮面§r はジャンプ力を強化します。%s§e信念の仮面§r は最大体力を増加させます。%s§e恐怖の仮面§r は移動速度を上昇させます。%s§e激怒の仮面§r は攻撃力を強化します。%s§e憤怒の仮面§r は採掘速度を上昇させます。%s§e悲哀の仮面§r は耐性を付与します。
+guidebook.hf_mzs.body_sol_visage=§6ウンヴティ、太陽鳥§r の壊れない仮面。装備すると、戦闘時に友好的な §eアバヴタナ§r を召喚できます。ただし、§6ウンヴティ§r が使っていたヘリオマンシー（太陽魔法）の力は失われており、これを使用することはできません。しかし…他に方法があるかもしれません？%s%s§6ウンヴティ§r を倒すことで入手できます。
+guidebook.hf_mzs.body_suns_blessing=§6ウンヴティ§r との取引で 7 つの金ブロックと交換できるアイテムであり、強力な太陽の力を得ることができます。%s- ブロックをタップすると、サンストライクを発動します。%s- インタラクトすると、ソーラーフレアを放ち、敵を押し飛ばします。%s- しゃがみながらインタラクトすると、強力なソーラービームを発射します。%s- 3回しゃがむことでスーパーノヴァをチャージできます。チャージ完了後、インタラクトで発動し、ジャンプでキャンセルできます。%s%s§6ウンヴティ§r から復元できますが、良好な関係である必要があります。
+guidebook.hf_mzs.body_naga_fang=§qナーガの牙§r は、毒耐性ポーションや吹き矢の弾（§2吹き矢§r 用）、そして §aナーガの牙の短剣§r のクラフトに使用できます。%s%s§qナーガ§r を倒すことで入手できます。
+guidebook.hf_mzs.body_naga_fang_dagger=§aナーガの牙の短剣§r は、敵にヒットすると毒状態にし、背後から攻撃するとダメージが2倍になります。%s%s§qナーガの牙§r と棒を組み合わせることでクラフトできます。
+guidebook.hf_mzs.body_blowgun=毒のダーツを発射するための武器です。この武器の射程は比較的短いですが、連射が可能です。%s%s竹3本と糸2本でクラフトできます。
+guidebook.hf_mzs.body_foliaath_seed=§uフォリアース§r を育てるには、種を入手し、草ブロックまたは土ブロックに植えます。2日間の間、半日ごとに赤ちゃんの §uフォリアース§r に肉を与えてください。その後、完全に成長した §uフォリアース§r になります。%s%s注意してください：成長した §uフォリアース§r は手懐けられておらず、プレイヤーを攻撃する可能性があります！
+guidebook.hf_mzs.body_spear=槍§r は近接武器で、5ダメージを与え、33% の確率で動物を即座に倒します。%s%s棒2本、火打石1個、羽根1枚でクラフトできます。
+guidebook.hf_mzs.body_earthrend_gauntlet=§2彫刻家§rによって作られた強力なアーティファクト§qアースレンド・ガントレット§rは、装備者に地脈術の力を与える。%s%sこれを使えば巨大な岩を持ち上げ、簡単に敵に投げつけることができる。岩は土系のブロックからのみ生成可能。チャージすると、§qアースレンド・ガントレット§rは地中を泳ぐように、ほぼ力を使わずに移動できるようになるが、地面上のアイテム付近では慎重に使う必要がある。%sさらに、高い§2アースピラー§rを作って敵から身を守ることも可能で、このピラーは岩の上に召喚するとサイズが変化する。%s%s§2彫刻家の試練§rをクリアすると入手可能。
+guidebook.hf_mzs.body_sculptor_staff=§2彫刻師§r の選んだ武器。このアイテムを使用すると、短いディレイの後に3つの小さな岩を召喚し、前方に発射します。%s%s§2彫刻師§r を倒すか、§2修道院§r のチェストで入手できます。
+guidebook.hf_mzs.body_geomancy_armor=これらの強力な装備品は§2修道院§rで見つけることができ、それぞれが使用者にユニークな効果を与える:%s%s- §q地相術士の数珠§rは、素手の戦闘で+3の攻撃力を与える。これには§2アースレンド・ガントレット§rも含まれる%s- §q地相術士のローブ§rは、着用者がダメージを与えるか受けるたびに、近くで岩が噴出する小さな確率を与える。アースレンド・ガントレットがないと岩を投げることはできない。岩は地上のブロックからしか生成できない。%s- §q地相術士のベルト§rは、鈍化効果を受けている間、着用者にダメージ耐性を与える%s- §q地相術士のサンダル§rは、中程度の高さから落下したときにプレイヤーに短時間の移動速度を付与する。%s%s§2地相術の鎧§rは§nブラフ・ロッド§rで修理できる。
+guidebook.hf_mzs.body_rake=§e砂の熊手§r を使用すると、通常の砂を §eならされた砂§r に変えることができます。%s%s- 砂ブロックまたは赤い砂ブロックにインタラクトすると、砂をならします。%s- しゃがみながら §eならされた砂§r にインタラクトすると、異なる向きに変更できます。%s%s§2修道院§r で見つかり、あらゆる種類の木材で修理できます。
+
+guidebook.hf_mzs.body_structures=§r
+guidebook.hf_mzs.body_monastery=凍てつく山々の頂上にある §2修道院§r は、静寂に包まれた聖域であり、§nブラフ§r と最後の §2大地裂きの僧§r - §2トンビ、彫刻師§r の住処です。%s%s地術の達人である §2トンビ§r は、古代 §2大地裂きの僧§r の秘密を守り、訪問者に対し、氷に覆われた崖やそびえ立つ尖塔を駆け抜ける過酷なパルクール試練を課します。%s%s§2修道院§r は、山岳バイオームのどこかに存在します。
+guidebook.hf_mzs.body_umvuthana_grove=太陽が降り注ぐサバンナの中心で、§6ウンヴティ§r は燃え盛る焚火の前に玉座を構え、誇り高く座っています。彼の領域はバオバブの木々へと広がり、その中で仮面をかぶった §eアバヴタナ§r たちが暮らしています。%s%s§6ウンヴティ§r は交易に応じますが、彼が「仲間」と認めた者に限られます。%s%s§6ウンヴタナの森§r はサバンナで見つけることができます。
+guidebook.hf_mzs.body_wroughtnaut_chamber=地下深くには、§cロットノートの間§r があります。荒々しい石から彫り込まれた暗い聖堂であり、生気のない静寂に包まれています。その空虚さは、忘れ去られた目的を反響させ、そこに残されたのはただ一体の §cフェロウズ・ロットノート§r だけです。%s%s§cロットノートの間§r は地下深くに存在し、洞窟や裂け目に露出した開口部から発見できます。
+
+guidebook.hf_mzs.body_discord=Instagram、X、TikTok で「honeyfrostmc」を検索してフォローしてください。%s%sDiscord に参加するには、次のリンクを訪れてください: honeyfrost.net/discord
+guidebook.hf_mzs.body_credits=§l§mMowzie's Mobsチーム§r%s%s- Bob Mowzie%s- Wadoo%s- VakyPanda%s- Noonyez%s- pau101%s%s§l協力者§r%s%s- Sculptorのテクスチャ: Probleyes%s- Foliaathのテクスチャ: Monky%s- Ferrous Wroughtnaut: Frenderman%s- ランタンのテクスチャ: ron0mc%s- Nagaのテクスチャ: Lk_%s- UmvuthiとUmvuthanaのサウンド: MrCompost%s- Sculptors Theme 作曲: Nicholas Escobar%s- Umvuthana GroveとMonasteryの建築：TheMaximusJk%s%s§l§6Honeyfrostチーム§r%s%s- Alan Capellino%s- Alexander Shimarov%s- Amman%s- Artem Baklin%s- Arsalan Nikouseresht%s- Benjamin Deconihout%s- Benjamin Goicoechea%s- Dennis Wonneberger%s- Ivan Perminov%s- Kirill Vorontsov%s- Mathieu Laveissiere%s- Maxim Kharin%s- Mikhail Kuznetsov%s- Oleh Batozhskyi%s- Petar Mijailovic%s- Vladimir Gavrilov%s- Zahari Stoyanov%s- Kirill (snakki)%s- Vladimir Savelev

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_furnace":{"description":{"identifier":"ntk:furnace_x_exposed_copper_bars"},"tags":["furnace"],"input":{"item":"minecraft:exposed_copper_bars"},"output":{"item":"minecraft:copper_nugget","count":1},"unlock":[{"item":"minecraft:exposed_copper_bars"}]}}

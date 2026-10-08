@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/6600646cb58fb55d32e21da3aae4fe6c"},"places_block":"minecraft:waterlily","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_attach_to":{"bottom":["minecraft:water"]},"randomize_rotation":true}}

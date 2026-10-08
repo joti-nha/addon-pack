@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_diorite_bricks_x_diorite_tiles"},"priority":4,"tags":["stonecutter"],"ingredients":[{"item":"ntk:diorite_bricks"}],"result":{"item":"ntk:diorite_tiles","count":1},"unlock":[{"item":"ntk:diorite_bricks"}]}}

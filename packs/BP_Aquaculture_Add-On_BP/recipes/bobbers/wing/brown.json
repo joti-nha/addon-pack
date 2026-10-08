@@ -1,0 +1,1 @@
+{"format_version":"1.20.30","minecraft:recipe_shaped":{"description":{"identifier":"tm_aqc:winged_bobber_brown"},"tags":["tm_aqc_table"],"pattern":[" A ","DCD"," B "],"key":{"A":"minecraft:iron_ingot","B":"minecraft:stick","C":"minecraft:brown_dye","D":"minecraft:feather"},"unlock":{"context":"AlwaysUnlocked"},"result":"tm_aqc:winged_bobber_brown"}}

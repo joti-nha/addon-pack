@@ -1,0 +1,1 @@
+{"format_version":"1.13.0","minecraft:structure_template_feature":{"description":{"identifier":"hf_mzs:wroughtnaut_feature"},"structure_name":"hf_mzs:triggers/wroughtnaut_trigger","facing_direction":"random","constraints":{"grounded":{},"block_intersection":{"block_allowlist":["minecraft:air"]}}}}

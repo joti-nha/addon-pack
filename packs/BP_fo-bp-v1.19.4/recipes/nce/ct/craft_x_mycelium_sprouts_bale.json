@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_mycelium_sprouts_bale"},"priority":1,"tags":["crafting_table"],"pattern":["MMM","MMM","MMM"],"key":{"M":{"item":"ntk:tall_mycelium_sprouts"}},"result":{"item":"ntk:mycelium_sprouts_bale","count":1},"unlock":[{"item":"ntk:tall_mycelium_sprouts"}]}}

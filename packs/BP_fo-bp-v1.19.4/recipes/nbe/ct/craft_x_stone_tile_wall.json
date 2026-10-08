@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_stone_tile_wall"},"priority":0,"tags":["crafting_table"],"group":"stone_tile_wall","assume_symmetry":true,"pattern":["SSS","SSS"],"key":{"S":{"item":"ntk:stone_tiles"}},"result":{"item":"ntk:stone_tile_wall","count":6},"unlock":[{"item":"ntk:stone_tiles"}]}}

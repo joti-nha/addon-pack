@@ -1,0 +1,1 @@
+execute as @a run tag @s remove bv:off_hand_torch

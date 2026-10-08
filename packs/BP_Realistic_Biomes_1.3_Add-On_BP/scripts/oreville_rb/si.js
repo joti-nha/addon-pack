@@ -1,0 +1,1 @@
+import{Player,PlayerPermissionLevel,world}from"@minecraft/server";export function fxxwsn(e,r){if("string"==typeof e){const r=world.getEntity(e);if(void 0===r||!(r instanceof Player))return!1;return r.playerPermissionLevel===PlayerPermissionLevel.Operator}return e.playerPermissionLevel===PlayerPermissionLevel.Operator}

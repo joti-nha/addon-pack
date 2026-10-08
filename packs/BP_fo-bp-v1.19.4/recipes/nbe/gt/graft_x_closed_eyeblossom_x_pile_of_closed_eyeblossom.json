@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:graft_x_closed_eyeblossom_x_pile_of_closed_eyeblossom"},"priority":2,"tags":["grafting_table"],"group":"closed_eyeblossom","ingredients":[{"item":"ntk:pile_of_closed_eyeblossom"}],"result":{"item":"minecraft:closed_eyeblossom","count":9},"unlock":[{"item":"ntk:pile_of_closed_eyeblossom"}]}}

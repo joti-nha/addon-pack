@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_cherry_log_x_stairs"},"priority":1,"tags":["wood_cutter"],"group":"cherry_stairs","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"minecraft:cherry_log"}},"result":{"item":"minecraft:cherry_stairs","count":4},"unlock":[{"item":"minecraft:cherry_log"}]}}

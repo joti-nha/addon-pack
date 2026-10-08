@@ -1,0 +1,1 @@
+{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"otg:backpack_guidebook","menu_category":{"category":"items","group":"otg:itemGroup.name.misc"}},"components":{"minecraft:icon":"backpack_guidebook","minecraft:max_stack_size":1,"minecraft:display_name":{"value":"item.otg:backpack_guidebook.name"},"minecraft:glint":true}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_dry_grass_bale"},"priority":1,"tags":["crafting_table"],"group":"dry_grass_bale","assume_symmetry":true,"pattern":["AAA","AAA","AAA"],"key":{"A":{"item":"minecraft:tall_dry_grass"}},"result":{"item":"ntk:dry_grass_bale","count":1},"unlock":[{"item":"minecraft:tall_dry_grass"}]}}

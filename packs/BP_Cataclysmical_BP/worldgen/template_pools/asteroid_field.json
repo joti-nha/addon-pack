@@ -1,0 +1,1 @@
+{"format_version":"1.21.20","minecraft:template_pool":{"description":{"identifier":"mnra_cata:asteroid_field"},"elements":[{"element":{"element_type":"minecraft:single_pool_element","location":"minera/cata/asteroid_field/asteroid_field1","processors":"mnra_cata:astral_ore_replacement"},"weight":1}]}}

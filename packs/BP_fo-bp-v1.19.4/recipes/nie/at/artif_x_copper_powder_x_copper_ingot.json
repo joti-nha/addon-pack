@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:artif_x_copper_powder_x_copper_ingot"},"priority":2,"tags":["artifacture_table"],"group":"copper_powder","ingredients":[{"item":"minecraft:copper_ingot"}],"result":{"item":"ntk:copper_powder","count":9},"unlock":[{"item":"ntk:artifacture_table"},{"item":"minecraft:copper_ingot"}]}}

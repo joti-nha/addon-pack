@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/cb664774a4a9b3ff28869e30669e0831"},"replace_rules":[{"places_block":"minecraft:gilded_blackstone","may_replace":["minecraft:blackstone"]}],"count":6}}

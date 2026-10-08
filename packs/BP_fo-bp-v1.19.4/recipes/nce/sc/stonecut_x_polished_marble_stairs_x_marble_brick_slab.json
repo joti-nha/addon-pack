@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_polished_marble_stairs_x_marble_brick_slab"},"priority":3,"tags":["stonecutter"],"ingredients":[{"item":"ntk:polished_marble_stairs"}],"result":{"item":"ntk:marble_brick_slab","count":1},"unlock":[{"item":"ntk:polished_marble_stairs"}]}}

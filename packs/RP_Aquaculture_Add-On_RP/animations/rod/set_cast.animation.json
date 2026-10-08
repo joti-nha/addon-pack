@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.tm_aqc.rod.set_cast":{"loop":"hold_on_last_frame","animation_length":0.01,"timeline":{"0.0":["v.cast = 1;"]}},"animation.tm_aqc.rod.set_uncast":{"loop":"hold_on_last_frame","animation_length":0.01,"timeline":{"0.0":["v.cast = 0;"]}}}}

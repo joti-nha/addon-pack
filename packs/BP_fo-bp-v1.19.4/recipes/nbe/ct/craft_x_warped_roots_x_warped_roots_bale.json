@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_warped_roots_x_warped_roots_bale"},"priority":2,"tags":["crafting_table"],"group":"warped_roots","ingredients":[{"item":"ntk:warped_roots_bale"}],"result":{"item":"minecraft:warped_roots","count":9},"unlock":[{"item":"ntk:warped_roots_bale"}]}}

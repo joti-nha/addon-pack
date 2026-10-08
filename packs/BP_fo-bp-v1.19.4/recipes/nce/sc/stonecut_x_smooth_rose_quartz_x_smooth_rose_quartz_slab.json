@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_smooth_rose_quartz_x_smooth_rose_quartz_slab"},"priority":0,"tags":["stonecutter"],"ingredients":[{"item":"ntk:smooth_rose_quartz_block"}],"result":{"item":"ntk:smooth_rose_quartz_slab","count":2},"unlock":[{"item":"ntk:smooth_rose_quartz_block"}]}}

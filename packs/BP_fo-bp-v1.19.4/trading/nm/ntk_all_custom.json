@@ -1,0 +1,732 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:moss_berry", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:mosshroom_fungus", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:sugar_cane_bale", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // CROPS
+        {
+          "num_to_select": 1,
+          "trades": [
+            
+          ]
+        }, // END
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:stack_of_books_9", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_charcoal", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_black_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_blue_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_brown_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_cyan_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_gray_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_green_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_light_blue_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_light_gray_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_lime_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_magenta_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_orange_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_pink_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_purple_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_red_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_white_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_yellow_dye", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_gunpowder", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:double_pile_of_sticks", "quantity": 3 }, { "item": "ntk:pile_of_sticks", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_sugar", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // ITEM
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:brass_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:bronze_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:flint_block", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:olivine", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:raw_tin", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:raw_zinc", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:rose_quartz_shard", "quantity": 18 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:tin_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:zinc_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // MINERALS
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:block_of_blaze_powder", "quantity": 2 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:clump_of_crimson_fungus", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:crimson_roots_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:warped_roots_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // NETHER
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:bucket_of_jellyfish", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:bucket_of_prismarine_clam", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:jellyfish_slime_block", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // OCEANIC
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:double_pile_of_bamboo", "quantity": 3 }, { "item": "ntk:pile_of_bamboo", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:blooming_corrupted_oak_sapling", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:clump_of_brown_mushrooms", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:clump_of_red_mushrooms", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:corrupted_oak_leaves", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:corrupted_grass_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:corrupted_oak_sapling", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:fern_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_allium", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_azure_bluet", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_blue_orchid", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_cornflower", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_dandelion", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_lilac", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_lily_of_the_valley", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_oxeye_daisy", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_peony", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_pink_petals", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_poppy", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_rose_bush", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_sunflower", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_orange_tulip", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_pink_tulip", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_red_tulip", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pile_of_white_tulip", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:glow_lichen_block", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:glowcelium_sprouts_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:grass_carpet", "quantity": 21 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:hanging_moss", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:lush_grass_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:moss_sprouts_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:mossy_willow_leaves", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:mossy_willow_sapling", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:mycelium_sprouts_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:overgrown_jungle_leaves", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:overgrown_jungle_plant", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:grass_bale", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:blue_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:light_blue_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:magenta_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:orange_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pink_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:red_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:white_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:yellow_tip_grass", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:vine_block", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // PLANTS
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:active_heated_netherrack", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:polished_limestone", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:polished_marble", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }, // STONES
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:amphibian_gills", "quantity": 6 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:bat_wing", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:black_feather", "quantity": 6 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:blue_feather", "quantity": 6 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:deopard_fur", "quantity": 6 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:fang", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:firebird_egg", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:fire_feather", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:glowbird_egg", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:glow_ink_sac_block", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:ink_sac_block", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:leather_pile", "quantity": 7 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:moa_egg", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 2 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:myceling_egg", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:pearl", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:phantom_membrane_block", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:raven_egg", "quantity": 3 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_rotten_brute_flesh", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:block_of_rotten_flesh", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:scorpion_telson", "quantity": 5 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:soul_firebird_egg", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1}],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:soul_fire_feather", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:sparrow_egg", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:squirrel_hide", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        } // WILD
+      ]
+    }
+  ]
+}

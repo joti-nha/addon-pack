@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","render_controllers":{"controller.render.entity.ntk_red_mushling":{"geometry":"Geometry.default","materials":[{"*":"Material.default"}],"textures":["Array.textures[query.is_sleeping ? 0 : (query.is_tamed ? 2 : 1)]"],"arrays":{"textures":{"Array.textures":["Texture.red_mushling_sleeping","Texture.red_mushling_wild","Texture.red_mushling_tamed"]}}}}}

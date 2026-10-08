@@ -1,0 +1,96 @@
+item.rev:flintlock=§a手炮
+item.rev:mauler=§e粉碎者
+item.rev:musket=§e火枪
+item.rev:shotgun_normal=§e散弹枪
+item.rev:hunting_musket=§b猎用火枪
+item.rev:repeater_crossbow=§e连发弩
+item.rev:repeater_crossbow_c_1=§e连发弩
+item.rev:repeater_crossbow_c_2=§e连发弩
+item.rev:repeater_crossbow_c_3=§e连发弩
+item.rev:shotgun_s=§b双管散弹枪
+item.rev:hand_mortar=§b手持迫击炮
+item.rev:crooked_mortar=§b歪斜迫击炮
+item.rev:auto_gun=§b自动步枪
+item.rev:auto_gun_empty=§b自动步枪 (空)
+item.rev:despoiler=§b掠夺者
+
+rev:guns_name=枪械
+rev:shadow_guns_name=暗影武器
+rev:bullets_name=弹药
+
+item.spawn_egg.entity.rev:offshoot.name=生成Offshoot
+entity.rev:offshoot.name=Offshoot
+
+item.rev:shadow_flintlock=§5暗影手炮
+item.rev:shadow_musket=§5暗影火枪
+item.rev:shadow_shotgun_normal=§5暗影散弹枪
+item.rev:shadow_shotgun_s=§5暗影双管散弹枪
+item.rev:shadow_hand_mortar=§5暗影迫击炮
+item.rev:shadow_mauler=§5暗影粉碎者
+item.rev:shadow_auto_gun=§5暗影自动步枪
+item.rev:shadow_hunting_musket=§5暗影猎用火枪
+item.rev:shadow_despoiler=§5暗影掠夺者
+item.rev:shadow_crooked_mortar=§5暗影歪斜迫击炮
+
+item.rev:flintlock_bullets=轻型弹药
+item.rev:musket_bullets=重型弹药
+item.rev:shotgun_shells=散弹弹壳
+item.rev:shotgun_s_shells=连装弹壳
+item.rev:mortar_bullet=迫击炮弹
+
+tile.rev:firearm_forger.name=枪械锻造台
+item.rev:light_bullets=轻型弹药
+
+rev.ui.config.title=§g§l偏好设置
+rev.ui.do_holding_animations.improvised=§i启用持枪动画
+rev.ui.do_disable_camerashake=§i启用屏幕抖动
+rev.ui.do_hit_sound=§i击中时播放 "叮!" 音效
+rev.ui.do_fast_particles=§i使用详细粒子效果
+rev.ui.do_offhand_sneak_restriction=§i§c[!]§r§i潜行时限制副手使用
+rev.ui.do_offhand_item_restriction=§i§c[!]§r§i限制特定物品的副手使用
+rev.ui.do_pseudo_infinity=§i§c[!]§a [管理员] §r§i启用伪无限（关闭后，无限附魔将像在弓上一样正常生效）§4[此设置为全局设置]
+rev.tip.settings_command=§6提示：§r§i使用 §a/improvisedgunsmenu§r§i 命令来访问您的偏好设置、颜色自定义，以及查看您的成就。§r
+rev.tip.dual_wielding=§6提示：§r§i您可以将火器锻造师中的任何武器放入您的§a副手§i中，以§b同时使用两把武器！§r
+rev.ui.remove_offshoot=§i§c[!]§a [管理员] §r§i启用 Offshoot 的生成§4[此设置为全局设置]
+rev.tip.bloom_reduction=§6提示：§r§i武器在射击时移动越少越精准。保持静止可获得最高精准度！§r
+rev.ui.config.saved=§a[Improvised Guns] 设置已保存。
+
+rev.ui.hub.title=§n§lImprovised Guns 设置
+rev.ui.hub.config=§8§l偏好设置
+rev.ui.hub.colors=§8§l个性化
+rev.ui.hub.advancements=§8§l进度
+rev.ui.hub.desc=§6偏好设置: §r§i调整视觉效果与音效行为。\n§6个性化: §r§i自定义每种武器射出子弹的颜色。\n§6进度: §r§i查看此模组的进度达成情况。
+
+rev.ui.color.title=§6§l个性化
+rev.ui.color.r=§4红色 (0-255)
+rev.ui.color.g=§2绿色 (0-255)
+rev.ui.color.b=§9蓝色 (0-255)
+rev.ui.reset_color=§g重置颜色？
+rev.ui.accept_and_back=§8§l接受并返回
+rev.ui.color_changed=§a[Improvised Guns] 已更改颜色：
+rev.ui.color_reset=§a[Improvised Guns] 已重置颜色：
+
+rev.ui.advancement.ibetz.name=改良贝齐
+rev.ui.advancement.ibetz.desc=制造并使用一把来自枪械锻造台的武器
+
+rev.ui.advancement.shdwn.name=对决...
+rev.ui.advancement.shdwn.desc=使用枪械锻造台的武器击败一名 Offshoot
+
+rev.ui.advancement.vdstr.name=正义策略
+rev.ui.advancement.vdstr.desc=使用枪械锻造台的武器击败 50 格以外的实体
+
+rev.ui.advancement.dntai.name=盲射
+rev.ui.advancement.dntai.desc=在不使用瞄准镜的情况下，使用猎用火枪击败 70 格以外的实体
+
+rev.ui.advancement.drage.name=及其后果...
+rev.ui.advancement.drage.desc=获得并使用一把暗影武器
+
+rev.ui.advancement.cldmg.name=间接伤害
+rev.ui.advancement.cldmg.desc=使用枪械锻造台的穿透性武器一枪击杀 5 个敌人
+
+rev.ui.advancement.nocha.name=毫无机会
+rev.ui.advancement.nocha.desc=使用枪械锻造台的武器在不到一秒内击杀铁傀儡。
+
+rev.ui.achievement.hasma.name= 已达成目标
+rev.ui.advancement.status.completed=已完成
+rev.ui.advancement.status.not_completed=未完成

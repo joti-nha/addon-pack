@@ -1,0 +1,1 @@
+{"format_version":"1.21.90","minecraft:item":{"description":{"identifier":"panascais_caves:sapphire","menu_category":{"category":"items","group":"panascais_common:gems"}},"components":{"minecraft:icon":{"textures":{"default":"panascais_caves:sapphire"}},"minecraft:display_name":{"value":"item.panascais_caves:sapphire.title"}}}}

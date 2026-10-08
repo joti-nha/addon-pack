@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:dynamite"},"key":{"g":"minecraft:gunpowder","p":"minecraft:paper","s":"minecraft:string"},"pattern":["ggg","psp"],"tags":["crafting_table"],"result":"panascais_caves:dynamite","priority":100}}

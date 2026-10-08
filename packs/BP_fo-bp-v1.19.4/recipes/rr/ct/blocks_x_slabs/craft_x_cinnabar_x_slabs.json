@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_cinnabar_x_slabs"},"priority":3,"tags":["crafting_table"],"group":"cinnabar","assume_symmetry":true,"pattern":["S "," S"],"key":{"S":{"item":"minecraft:cinnabar_slab"}},"result":{"item":"minecraft:cinnabar","count":1},"unlock":[{"item":"minecraft:cinnabar_slab"}]}}

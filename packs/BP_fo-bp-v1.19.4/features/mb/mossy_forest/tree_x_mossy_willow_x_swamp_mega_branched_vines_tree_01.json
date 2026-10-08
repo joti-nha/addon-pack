@@ -1,0 +1,202 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/tree_x_mossy_willow_x_swamp_mega_branched_vines_tree_01"
+    },
+    "mega_trunk": {
+      "trunk_block": "ntk:mossy_willow_log",
+      "trunk_height": {
+        "base": 5, // 5, 6, 8
+        "intervals": [ 3, 4 ]
+      },
+      "trunk_width": 2,
+      "trunk_decoration": {
+        "decoration_block": "minecraft:vine",
+        "decoration_chance": 10.0,
+        "num_steps": 1,
+        "step_direction": "down"
+      },
+      "branches": {
+        "branch_length": 4,
+        "branch_slope": 0.5,
+        "branch_interval": {
+          "range_min": 1,
+          "range_max": 2
+        },
+        "branch_altitude_factor": {
+          "min": 0.5,
+          "max": 0.9
+        },
+        "branch_canopy": {
+          "canopy": {
+            "leaf_block": "ntk:mossy_willow_leaves",
+            "min_width": 1,
+            "canopy_offset": {
+              "min": -1,
+              "max": 0
+            },
+            "variation_chance": [
+              {
+                "numerator": 1,
+                "denominator": 2
+              },
+              {
+                "numerator": 1,
+                "denominator": 2
+              },
+              {
+                "numerator": 1,
+                "denominator": 2
+              },
+              {
+                "numerator": 1,
+                "denominator": 1
+              }
+            ],
+            "canopy_decoration": {
+              "decoration_block": "minecraft:vine",
+              "decoration_chance": 25.0,
+              "num_steps": 2,
+              "step_direction": "down"
+            }
+          }
+        }
+      }
+    },
+    "canopy": {
+      "leaf_block": "ntk:mossy_willow_leaves",
+      "min_width": 2,
+      "canopy_offset": {
+        "min": -3,
+        "max": 0
+      },
+      "variation_chance": [
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 2
+        },
+        {
+          "numerator": 1,
+          "denominator": 1
+        }
+      ],
+      "canopy_decoration": {
+        "decoration_block": "minecraft:vine",
+        "decoration_chance": 25.0,
+        "num_steps": 3,
+        "step_direction": "down"
+      }
+    },
+    "base_block": [
+      "minecraft:dirt_with_roots",
+      "minecraft:moss_block"
+    ],
+    "may_grow_on": [
+      { "tags": "query.all_tags('ntk:dirt')" },
+      { "tags": "query.all_tags('ntk:moss')" },
+      { "tags": "query.all_tags('ntk:mud')" },
+      { "tags": "query.all_tags('ntk:bryumed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:grassed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:mossed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:myceliated_blocks', 'ntk:stones')" },
+      // Soil:
+      "minecraft:clay",
+      "minecraft:coarse_dirt",
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots",
+      "minecraft:farmland",
+      "minecraft:grass_block",
+      "minecraft:moss_block",
+      "minecraft:mud",
+      "minecraft:muddy_mangrove_roots",
+      "minecraft:mycelium",
+      "minecraft:pale_moss_block",
+      "minecraft:podzol"
+    ],
+    "may_grow_through": [
+      { "tags": "query.all_tags('ntk:dirt')" },
+      { "tags": "query.all_tags('ntk:moss')" },
+      { "tags": "query.all_tags('ntk:mud')" },
+      { "tags": "query.all_tags('ntk:bryumed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:grassed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:mossed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:myceliated_blocks', 'ntk:stones')" },
+      // Soil:
+      "minecraft:clay",
+      "minecraft:coarse_dirt",
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots",
+      "minecraft:farmland",
+      "minecraft:grass_block",
+      "minecraft:moss_block",
+      "minecraft:mud",
+      "minecraft:muddy_mangrove_roots",
+      "minecraft:mycelium",
+      "minecraft:pale_moss_block",
+      "minecraft:podzol"
+    ],
+    "may_replace": [
+      { "tags": "query.all_tags('ntk:environmental_block')" },
+      { "tags": "query.all_tags('ntk:leaves')" },
+      { "tags": "query.all_tags('ntk:plant')" },
+      "minecraft:air",
+      "minecraft:flowing_water",
+      "minecraft:water",
+      // Grass:
+      "minecraft:bush",
+      "minecraft:fern",
+      "minecraft:firefly_bush",
+      "minecraft:large_fern",
+      "minecraft:seagrass",
+      "minecraft:short_dry_grass",
+      "minecraft:short_grass",
+      "minecraft:tall_dry_grass",
+      "minecraft:tall_grass",
+      // Flower:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Fungus:
+      "minecraft:brown_mushroom",
+      "minecraft:red_mushroom",
+      // Sapling:
+      "minecraft:azalea",
+      "minecraft:flowering_azalea",
+      "minecraft:mangrove_propagule",
+      // Plants:
+      "minecraft:big_dripleaf",
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:moss_carpet",
+      "minecraft:pale_hanging_moss",
+      "minecraft:pale_moss_carpet",
+      "minecraft:small_dripleaf_block",
+      "minecraft:vine",
+      "minecraft:waterlily",
+      // Leaves:
+      "minecraft:acacia_leaves",
+      "minecraft:azalea_leaves",
+      "minecraft:azalea_leaves_flowered",
+      "minecraft:birch_leaves",
+      "minecraft:cherry_leaves",
+      "minecraft:dark_oak_leaves",
+      "minecraft:jungle_leaves",
+      "minecraft:mangrove_leaves",
+      "minecraft:oak_leaves",
+      "minecraft:pale_oak_leaves",
+      "minecraft:spruce_leaves",
+      // Other:
+      "minecraft:sculk_vein",
+      "minecraft:snow_layer",
+      "minecraft:web"
+    ]
+  }
+}

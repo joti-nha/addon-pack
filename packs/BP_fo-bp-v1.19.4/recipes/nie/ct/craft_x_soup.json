@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:craft_x_soup"},"priority":1,"tags":["crafting_table"],"group":"soup","ingredients":[{"item":"ntk:salt","count":2},{"item":"minecraft:bowl"}],"result":{"item":"ntk:soup","count":1},"unlock":[{"item":"ntk:salt"},{"item":"minecraft:bowl"}]}}

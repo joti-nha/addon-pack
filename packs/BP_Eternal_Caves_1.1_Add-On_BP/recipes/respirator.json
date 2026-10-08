@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:respirator"},"key":{"C":"minecraft:copper_helmet","W":"minecraft:wool","S":"panascais_caves:sulfur_pollen"},"pattern":["SCS","W W"],"tags":["crafting_table"],"result":"panascais_caves:respirator"}}

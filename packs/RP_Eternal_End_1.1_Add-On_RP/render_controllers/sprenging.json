@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","render_controllers":{"controller.render.panascais_end.sprenging":{"arrays":{"textures":{"Array.skins":["Texture.variant_0","Texture.variant_1"]}},"geometry":"Geometry.default","materials":[{"*":"Material.default"}],"textures":["Array.skins[q.property('panascais_end:skin')]"]}}}

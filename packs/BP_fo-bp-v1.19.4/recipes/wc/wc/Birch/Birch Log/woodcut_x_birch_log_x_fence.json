@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_birch_log_x_fence"},"priority":1,"tags":["wood_cutter"],"group":"birch_fence","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"minecraft:birch_log"}},"result":{"item":"minecraft:birch_fence","count":3},"unlock":[{"item":"minecraft:birch_log"}]}}

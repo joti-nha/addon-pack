@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:netherite_horsenback"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:netherite_horse_armor"}],"result":[{"item":"minecraft:netherite_ingot","count":1}]}}

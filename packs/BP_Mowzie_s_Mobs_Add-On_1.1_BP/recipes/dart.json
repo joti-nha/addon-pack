@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","minecraft:recipe_shaped":{"description":{"identifier":"hf_mzs:dart"},"tags":["crafting_table"],"pattern":["A","B","C"],"key":{"A":{"item":"hf_mzs:naga_fang"},"B":{"item":"minecraft:stick"},"C":{"item":"minecraft:feather"}},"result":{"item":"hf_mzs:dart","count":8}}}

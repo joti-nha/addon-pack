@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","minecraft:recipe_shaped":{"description":{"identifier":"hf_mzs:spear"},"tags":["crafting_table"],"pattern":[" A","BC"," C"],"key":{"A":{"item":"minecraft:flint"},"B":{"item":"minecraft:feather"},"C":{"item":"minecraft:stick"}},"result":{"item":"hf_mzs:spear","count":1}}}

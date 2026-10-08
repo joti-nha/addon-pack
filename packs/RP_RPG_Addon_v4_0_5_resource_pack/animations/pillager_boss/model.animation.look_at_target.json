@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","animations":{"animation.pillager_boss.look_at_target":{"loop":true,"bones":{"bone":{"position":[4,0,0]},"full_head":{"rotation":["return query.mark_variant == 1 ? 0 : query.target_x_rotation;","return query.mark_variant == 1 ? 0 : query.target_y_rotation;",0]}}}}}

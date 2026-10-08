@@ -1,0 +1,1 @@
+{"format_version":"1.20.41","minecraft:client_entity":{"description":{"identifier":"hf_mzs:custom_jigsaw_util","materials":{"default":"entity_alphatest"},"textures":{"default":"textures/hf/mzs/entity/empty"},"geometry":{"default":"geometry.hf_mzs.empty"},"render_controllers":["controller.render.default"]}}}

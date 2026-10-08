@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_shears_x_iron_ingot_x_metal_ingots"},"priority":2,"tags":["crafting_table"],"pattern":[" I","M "],"key":{"I":{"item":"minecraft:iron_ingot"},"M":{"tag":"ntk:metal_ingots"}},"result":{"item":"minecraft:shears"},"unlock":[{"item":"minecraft:iron_ingot"},{"tag":"ntk:metal_ingots"}]}}

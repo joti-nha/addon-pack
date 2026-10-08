@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:better_exposed_cut_copper_stair_recipe"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:exposed_cut_copper"}},"pattern":["P ","PP"],"result":{"item":"minecraft:exposed_cut_copper_stairs","count":4}}}

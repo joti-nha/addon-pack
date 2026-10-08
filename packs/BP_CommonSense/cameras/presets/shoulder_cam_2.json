@@ -1,0 +1,1 @@
+{"format_version":"1.20.10","minecraft:camera_preset":{"identifier":"bv:shoulder_cam_2","inherit_from":"minecraft:follow_orbit","player_effects":true,"radius":2.5,"view_offset":[1,0.2]}}

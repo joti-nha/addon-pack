@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:recipe_shaped":{"description":{"identifier":"mnra_cata:elemental_alter"},"pattern":["121","333"],"key":{"1":{"item":"mnra_cata:astral_alloy"},"2":{"item":"minecraft:diamond"},"3":{"item":"mnra_cata:polished_asteroid"}},"result":{"item":"mnra_cata:elemental_alter","count":1},"tags":["crafting_table"],"unlock":{"context":"AlwaysUnlocked"}}}

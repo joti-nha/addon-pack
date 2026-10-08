@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_stone_brick_slab_x_stone_tile_slab"},"priority":4,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:stone_brick_slab"}],"result":{"item":"ntk:stone_tile_slab","count":1},"unlock":[{"item":"minecraft:stone_brick_slab"}]}}

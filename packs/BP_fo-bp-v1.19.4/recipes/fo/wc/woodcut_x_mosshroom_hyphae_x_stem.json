@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_mosshroom_hyphae_x_sten"},"priority":0,"tags":["wood_cutter"],"group":"mosshroom_stem","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"ntk:mosshroom_hyphae"}},"result":{"item":"ntk:mosshroom_stem","count":1},"unlock":[{"item":"ntk:mosshroom_hyphae"}]}}

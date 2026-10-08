@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_stone_wall_x_stone_tile_wall"},"priority":2,"tags":["stonecutter"],"ingredients":[{"item":"ntk:stone_wall"}],"result":{"item":"ntk:stone_tile_wall","count":1},"unlock":[{"item":"ntk:stone_wall"}]}}

@@ -1,0 +1,1 @@
+import{TimeOfDay}from"@minecraft/server";import{sendMessage,abubmrm}from"oreville_rb/rb";export default function(){return{oexpzu({yrcwet:e}){abubmrm(TimeOfDay.Midnight),e.playSound("oreville_rb:ipsklvu_nwlfer_zxdrkji_igqbujz"),sendMessage(e,{rawtext:[{translate:"action.oreville_rb:igqbujz.vqeluhc"}]})}}}

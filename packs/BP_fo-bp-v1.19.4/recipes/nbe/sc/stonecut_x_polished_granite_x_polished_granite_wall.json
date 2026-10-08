@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shapeless":{"description":{"identifier":"ntk:stonecut_x_polished_granite_x_polished_granite_wall"},"priority":3,"tags":["stonecutter"],"ingredients":[{"item":"minecraft:polished_granite"}],"result":{"item":"ntk:polished_granite_wall","count":1},"unlock":[{"item":"minecraft:polished_granite"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_olivine_leggings"},"priority":1,"tags":["crafting_table"],"pattern":["SOS","O O","O O"],"key":{"O":{"item":"ntk:olivine"},"S":{"item":"ntk:metal_scrap"}},"result":{"item":"ntk:olivine_leggings","count":1},"unlock":[{"item":"ntk:olivine"},{"item":"ntk:metal_scrap"}]}}

@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.projectile.ntk_teleportation_magic_missile.travelling":{"initial_state":"default","states":{"default":{"animations":["travelling"],"particle_effects":[{"effect":"teleportation_magic_missile_particle","locator":"projectile_particle_locator"}]}}}}}

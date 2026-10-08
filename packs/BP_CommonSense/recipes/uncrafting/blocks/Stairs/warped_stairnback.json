@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:warped_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:warped_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:warped_planks","count":3}}}

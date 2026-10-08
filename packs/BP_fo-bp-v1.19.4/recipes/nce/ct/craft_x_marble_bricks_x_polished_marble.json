@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_marble_bricks_x_polished_marble"},"priority":1,"tags":["crafting_table"],"pattern":["AA","AA"],"key":{"A":{"item":"ntk:polished_marble"}},"result":{"item":"ntk:marble_bricks","count":4},"unlock":[{"item":"ntk:polished_marble"}]}}

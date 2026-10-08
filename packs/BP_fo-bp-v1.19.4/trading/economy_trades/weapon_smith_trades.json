@@ -1,0 +1,468 @@
+// Forsaken Odyssey:
+{
+  "tiers": [
+    { // Level 1 - Novice:
+      "total_exp_required": 0,
+      "groups": [
+        { // Buy:
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:coal:0", "quantity": 15, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:charcoal", "quantity": 15, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 5,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:wooden_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 5, "max": 14 } }] }],
+              "trader_exp": 1,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:wooden_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 5, "max": 14 } }] }],
+              "trader_exp": 1,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:wooden_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 5, "max": 14 } }] }],
+              "trader_exp": 1,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 2 - Initiate:
+      "total_exp_required": 5,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:block_of_flint", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:stone_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 24 } }] }],
+              "trader_exp": 2,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:stone_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 24 } }] }],
+              "trader_exp": 2,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:stone_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 24 } }] }],
+              "trader_exp": 2,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 3 - Apprentice:
+      "total_exp_required": 15,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:copper_ingot", "quantity": 16, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:copper_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 24 } }] }],
+              "trader_exp": 4,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:copper_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 24 } }] }],
+              "trader_exp": 4,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:copper_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 24 } }] }],
+              "trader_exp": 4,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 4 - Adept:
+      "total_exp_required": 35,
+      "groups": [
+        { // Buy:
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:tin_ingot", "quantity": 6, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:zinc_ingot", "quantity": 6, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 5,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:tin_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:zinc_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 8,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:tin_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:zinc_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 8,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:tin_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:zinc_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 8,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 5 - Journeyman:
+      "total_exp_required": 75,
+      "groups": [
+        { // Buy:
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [{ "item": "ntk:bronze_ingot", "quantity": 8, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 16,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:brass_ingot", "quantity": 8, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 16,
+              "max_uses": 5,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 10, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:bronze_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:brass_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 16,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 10, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:bronze_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:brass_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 16,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 10, "price_multiplier": 0.2 }],
+              "gives": [{ 
+                "choice": [
+                  { "item": "ntk:bronze_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] },
+                  { "item": "ntk:brass_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 10, "max": 30 } }] }
+                ]
+              }],
+              "trader_exp": 16,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 6 - Veteran:
+      "total_exp_required": 155,
+      "groups": [
+        { // Buy:
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 8, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 32,
+              "max_uses": 5,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "ntk:metal_rod", "quantity": 8, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 32,
+              "max_uses": 5,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 14, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:iron_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 30 } }] }],
+              "trader_exp": 32,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 14, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:iron_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 30 } }] }],
+              "trader_exp": 32,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 14, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:iron_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 8, "max": 30 } }] }],
+              "trader_exp": 32,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 7 - Expert:
+      "total_exp_required": 315,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "ntk:bone_dagger", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] },
+                { "item": "ntk:bone_dagger", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] }
+              ],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 64,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.2 }],
+              "gives":  [{ "item": "ntk:bone_dagger", "quantity": 1, "functions": [{ "function": "set_damage", "damage": 1.0 }] }],
+              "trader_exp": 64,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 8 - Elite:
+      "total_exp_required": 635,
+      "groups": [
+        { // Buy:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [
+                { "item": "ntk:wooden_club", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] },
+                { "item": "ntk:bone_dagger", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] }
+              ],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 128,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                { "item": "ntk:dripstone_club", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] },
+                { "item": "ntk:dripstone_club", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] }
+              ],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 128,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                { "item": "ntk:magma_club", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] },
+                { "item": "ntk:magma_club", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] }
+              ],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 128,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 9 - Master:
+      "total_exp_required": 1275,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "ntk:scorpion_gauntlet", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] },
+                { "item": "ntk:scorpion_gauntlet", "quantity": 1, "price_multiplier": 0.05, "functions": [{ "function": "set_damage", "damage": 1.0 }] }
+              ],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 256,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8, "price_multiplier": 0.2 }],
+              "gives":  [{ "item": "ntk:scorpion_gauntlet", "quantity": 1, "functions": [{ "function": "set_damage", "damage": 1.0 }] }],
+              "trader_exp": 256,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 10 - Grandmaster:
+      "total_exp_required": 2555,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:diamond", "quantity": 1, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 512,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 3,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 22, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:diamond_axe", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 14, "max": 30 }}] }],
+              "trader_exp": 512,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 22, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:diamond_spear", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 14, "max": 30 }}] }],
+              "trader_exp": 512,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 22, "price_multiplier": 0.2 }],
+              "gives": [{ "item": "minecraft:diamond_sword", "quantity": 1, "functions": [{ "function": "enchant_with_levels", "treasure": false, "levels": { "min": 14, "max": 30 }}] }],
+              "trader_exp": 512,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

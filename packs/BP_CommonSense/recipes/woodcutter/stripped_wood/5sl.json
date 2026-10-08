@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:9srecipes_e0342003jy"},"tags":["stonecutter"],"priority":1,"ingredients":[{"item":"minecraft:wood","data":13}],"result":{"item":"minecraft:stripped_dark_oak_log","count":1,"data":0}}}

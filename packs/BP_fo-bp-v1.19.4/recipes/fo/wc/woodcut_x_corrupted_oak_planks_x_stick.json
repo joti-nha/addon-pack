@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:woodcut_x_corrupted_oak_planks_x_stick"},"priority":1,"tags":["wood_cutter"],"group":"stick","assume_symmetry":true,"pattern":["   "," # ","   "],"key":{"#":{"item":"ntk:corrupted_oak_planks"}},"result":{"item":"minecraft:stick","count":2},"unlock":[{"item":"ntk:corrupted_oak_planks"}]}}

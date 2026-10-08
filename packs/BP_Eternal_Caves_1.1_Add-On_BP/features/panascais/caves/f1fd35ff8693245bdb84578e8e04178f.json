@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/f1fd35ff8693245bdb84578e8e04178f"},"places_block":"panascais_caves:spiderweb_cover","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]}}}

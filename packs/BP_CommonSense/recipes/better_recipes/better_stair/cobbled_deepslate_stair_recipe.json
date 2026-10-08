@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:better_cobbled_deepslate_stair_recipe"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:cobbled_deepslate"}},"pattern":["P ","PP"],"result":{"item":"minecraft:cobbled_deepslate_stairs","count":4}}}

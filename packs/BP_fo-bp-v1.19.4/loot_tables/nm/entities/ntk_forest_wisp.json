@@ -1,0 +1,1 @@
+{"pools":[{"rolls":1,"entries":[{"weight":100,"type":"item","name":"ntk:enchanted_dust","functions":[{"function":"set_count","count":{"min":1,"max":2}},{"function":"looting_enchant","count":{"min":0,"max":1}}]}]}]}

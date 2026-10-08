@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/f74bcdf9a64778bdc760d2208bd7a0dc"},"count":64,"replace_rules":[{"places_block":"panascais_caves:smooth_dripstone","may_replace":["minecraft:stone","minecraft:dripstone_block"]}]}}

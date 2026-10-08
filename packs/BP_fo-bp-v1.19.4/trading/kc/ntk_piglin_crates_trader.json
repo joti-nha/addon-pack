@@ -1,0 +1,64 @@
+{
+  "tiers": [
+    { // Level 1 - Novice:
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:crimson_hyphae_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:warped_hyphae_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Apprentice:
+      "total_exp_required": 10,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8 }],
+              "gives": [{ "item": "ntk:piglin_crate_key", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald_block", "quantity": 6 },
+                { "item": "minecraft:emerald", "quantity": 60 }
+              ],
+              "gives": [{ "item": "ntk:piglin_crate", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

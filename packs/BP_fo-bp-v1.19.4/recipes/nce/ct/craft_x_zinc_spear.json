@@ -1,0 +1,1 @@
+{"format_version":"1.26.0","minecraft:recipe_shaped":{"description":{"identifier":"ntk:craft_x_zinc_speae"},"priority":1,"tags":["crafting_table"],"pattern":["  A"," I ","I  "],"key":{"A":{"item":"ntk:zinc_ingot"},"I":{"item":"minecraft:stick"}},"result":{"item":"ntk:zinc_spear","count":1},"unlock":[{"item":"ntk:zinc_ingot"},{"item":"minecraft:stick"}]}}

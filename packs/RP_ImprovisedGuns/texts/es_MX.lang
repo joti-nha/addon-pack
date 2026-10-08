@@ -1,0 +1,99 @@
+item.rev:flintlock=§aCañón de Mano
+item.rev:mauler=§eMutilador
+item.rev:musket=§eMosquete
+item.rev:shotgun_normal=§eEscopeta
+item.rev:hunting_musket=§bMosquete de Caza
+item.rev:repeater_crossbow=§eBallesta Repetidora
+item.rev:repeater_crossbow_c_1=§eBallesta Repetidora
+item.rev:repeater_crossbow_c_2=§eBallesta Repetidora
+item.rev:repeater_crossbow_c_3=§eBallesta Repetidora
+item.rev:shotgun_s=§bEscopeta de Doble Cañón
+item.rev:hand_mortar=§bMortero de Mano
+item.rev:auto_gun=§bRifle Automático
+item.rev:auto_gun_empty=§bRifle Automático (Vacío)
+item.rev:despoiler=§bSaqueador
+item.rev:crooked_mortar=§bMortero Torcido
+
+rev:guns_name=Armas de Fuego
+rev:shadow_guns_name=Armas Sombrías
+rev:bullets_name=Municiones
+
+item.spawn_egg.entity.rev:offshoot.name=Invocar Offshoot
+entity.rev:offshoot.name=Offshoot
+
+item.rev:shadow_flintlock=§5Cañón de Mano
+item.rev:shadow_musket=§5Mosquete
+item.rev:shadow_shotgun_normal=§5Escopeta
+item.rev:shadow_shotgun_s=§5Escopeta de Doble Cañón
+item.rev:shadow_hand_mortar=§5Mortero de Mano
+item.rev:shadow_mauler=§5Mutilador
+item.rev:shadow_auto_gun=§5Rifle Automático
+item.rev:shadow_hunting_musket=§5Mosquete de Caza
+item.rev:shadow_despoiler=§5Saqueador
+item.rev:shadow_crooked_mortar=§5Mortero Torcido
+
+
+item.rev:flintlock_bullets=Balas Ligeras
+item.rev:musket_bullets=Balas Pesadas
+item.rev:shotgun_shells=Cartuchos de Perdigones
+item.rev:shotgun_s_shells=Cartuchos Unidos
+item.rev:mortar_bullet=Proyectil de Mortero
+
+tile.rev:firearm_forger.name=Forjador de Armas de Fuego
+item.rev:light_bullets=Balas Ligeras
+
+rev.ui.config.title=§g§lPreferencias
+rev.ui.do_holding_animations.improvised=§iHabilitar animaciones al sostener armas
+rev.ui.do_disable_camerashake=§iActivar agitación de la cámara
+rev.ui.do_hit_sound=§iReproducir sonido de "Ding!" al dar un tiro
+rev.ui.do_fast_particles=§iUsar partículas detalladas
+rev.ui.do_offhand_sneak_restriction=§i§c[!]§r§iRestringir uso de mano secundaria al agacharse
+rev.ui.do_offhand_item_restriction=§i§c[!]§r§iRestringir uso de mano secundaria con ciertos objetos
+rev.ui.do_pseudo_infinity=§i§c[!]§a [Administrador] §r§iHabilitar Pseudo-Infinidad (Desactiva para que el encantamiento de infinidad funcione como en un arco) §4[Esta configuración es global]
+rev.tip.settings_command=§6Consejo: §r§iUtiliza el comando §a/improvisedgunsmenu§r§i para acceder a tus preferencias, personalización de colores, y ver tus logros.§r
+rev.tip.dual_wielding=§6Consejo: §r§iPuedes colocar cualquier arma del Forjador de Armas de Fuego en tu §amano secundaria§i para usar §bdos armas al mismo tiempo!§r
+rev.ui.remove_offshoot=§i§c[!]§a [Administrador] §r§iHabilitar aparición del Offshoot §4[Esta configuración es global]
+rev.tip.bloom_reduction=§6Tip: §r§iLas armas son más precisas cuanto menos te mueves al disparar. ¡No te muevas para tener la precisión máxima!§r
+
+
+rev.ui.config.saved=§a[Improvised Guns] Configuración guardada.
+
+rev.ui.hub.title=§n§lAjustes de Improvised Guns
+rev.ui.hub.config=§8§lPreferencias
+rev.ui.hub.colors=§8§lPersonalización
+rev.ui.hub.advancements=§8§lLogros
+rev.ui.hub.desc=§6Preferencias: §r§iAjusta y cambia comportamientos visuales y sonoros.\n§6Personalización: §r§iPersonaliza el color de las balas disparadas por cada arma.\n§6Logros: §r§iRevisa y mira el estado de tus logros en este Add-On.
+
+rev.ui.color.title=§6§lPersonalización
+rev.ui.color.r=§4Rojo (0-255)
+rev.ui.color.g=§2Verde (0-255)
+rev.ui.color.b=§9Azul (0-255)
+rev.ui.reset_color=§g¿Restablecer colores?
+rev.ui.accept_and_back=§8§lAceptar y Volver
+rev.ui.color_changed=§a[Improvised Guns] Colores cambiados para 
+rev.ui.color_reset=§a[Improvised Guns] Colores restablecidos para 
+
+rev.ui.advancement.ibetz.name=Improv' Betsy
+rev.ui.advancement.ibetz.desc=Fabrica y usa un arma del Forjador de Armas de Fuego
+
+rev.ui.advancement.shdwn.name=Duelo...
+rev.ui.advancement.shdwn.desc=Usa un arma del Forjador de Armas de Fuego para derrotar a un Offshoot
+
+rev.ui.advancement.vdstr.name=Estrategia Justa
+rev.ui.advancement.vdstr.desc=Derrota a una entidad con un arma del Forjador de Armas de Fuego a 50 o más bloques de distancia
+
+rev.ui.advancement.dntai.name=Sin Mira
+rev.ui.advancement.dntai.desc=Derrota a una entidad usando el Mosquete de Caza a 70 o más bloques de distancia sin usar la mira
+
+rev.ui.advancement.drage.name=Y sus consecuencias...
+rev.ui.advancement.drage.desc=Obtén y usa un Arma Sombría
+
+rev.ui.advancement.cldmg.name=Daño Colateral
+rev.ui.advancement.cldmg.desc=Usa un arma penetrante del Forjador de Armas de Fuego para matar a 5 enemigos con un solo disparo
+
+rev.ui.advancement.nocha.name=Sin Oportunidad
+rev.ui.advancement.nocha.desc=Usa armas del Forjador de Armas de Fuego para matar a un Gólem de Hierro en menos de un segundo.
+
+rev.ui.achievement.hasma.name= ha alcanzado la meta
+rev.ui.advancement.status.completed=Completado
+rev.ui.advancement.status.not_completed=No Completado

@@ -1,0 +1,1 @@
+{"format_version":"1.20.80","minecraft:recipe_shaped":{"description":{"identifier":"mnra_cata:gneiss_brick_slab"},"pattern":["111"],"key":{"1":{"item":"mnra_cata:gneiss_brick"}},"result":{"item":"mnra_cata:gneiss_brick_slab","count":6},"tags":["crafting_table"],"unlock":{"context":"AlwaysUnlocked"}}}
