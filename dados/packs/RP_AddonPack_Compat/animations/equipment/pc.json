@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.megaverse.default_bow.longbow": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"scale": ["c.is_first_person?0.75:1", "c.is_first_person?1.75:2", /**/ "c.is_first_person?1.75:2"]
+				}
+			}
+		},
+		"animation.megaverse.default_bow.wield": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [1, 0, 0]
+				}
+			}
+		},
+		"animation.megaverse.default_bow.wield_first_person_pull": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [1, 0, 0]
+				}
+			}
+		}
+	}
+}

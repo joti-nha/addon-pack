@@ -1,0 +1,35 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Forsaken Grimoires (Addon Pack) RP",
+    "description": "Texturas e textos dos Grimorios.",
+    "uuid": "bf3b2235-936a-47a9-be2c-6b8b7e30bbfd",
+    "version": [
+      0,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "4e1b93a0-be70-4460-a753-64bc493edc2b",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Addon Pack"
+    ],
+    "product_type": "addon"
+  }
+}

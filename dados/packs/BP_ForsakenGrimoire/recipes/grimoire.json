@@ -1,0 +1,31 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "fgr:grimoire"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "AWA",
+      " P "
+    ],
+    "key": {
+      "P": {
+        "item": "ntk:enchanted_pearl"
+      },
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "W": {
+        "item": "minecraft:writable_book"
+      }
+    },
+    "result": {
+      "item": "fgr:grimoire",
+      "count": 1
+    }
+  }
+}

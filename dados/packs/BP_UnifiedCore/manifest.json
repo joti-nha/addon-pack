@@ -1,0 +1,63 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Addon Pack - Unified Core (BP)",
+    "description": "Camada propria do Addon Pack: scripts e itens de unificacao.",
+    "uuid": "31f6c045-36ab-4b4a-8e88-06eb005f1288",
+    "version": [
+      0,
+      1,
+      1
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      130
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "99d59899-010c-4b34-92a7-8576122edd61",
+      "version": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "b5485ff8-aa12-45ac-a04a-9f2db6c8c39c",
+      "entry": "scripts/main.js",
+      "version": [
+        0,
+        1,
+        1
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "17ffc2bc-afba-441c-b65f-ea336ab7eb2e",
+      "version": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.5.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Addon Pack (camada propria)"
+    ]
+  }
+}

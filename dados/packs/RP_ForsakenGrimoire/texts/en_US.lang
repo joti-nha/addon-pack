@@ -1,0 +1,6 @@
+item.fgr:grimoire=Grimoire
+item.fgr:grimoire.name=Grimoire
+item.fgr:card_empty=Empty slot
+item.fgr:card_empty.name=Empty slot
+tile.fgr:arcane_lectern.name=Arcane Lectern
+entity.fgr:lectern.name=Arcane Lectern

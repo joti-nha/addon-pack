@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "addonpack_unified",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "ap_rpg_book": {
+      "textures": "textures/unified/rpg_book"
+    },
+    "ap_traveler_book": {
+      "textures": "textures/unified/traveler_book"
+    }
+  }
+}

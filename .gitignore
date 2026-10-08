@@ -1,0 +1,7 @@
+# Originais de terceiros nunca entram no repositório
+originais/
+*.mcaddon
+*.mcpack
+*.mctemplate
+*.zip
+__pycache__/

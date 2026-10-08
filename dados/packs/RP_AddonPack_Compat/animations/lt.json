@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sentinel_halberd.first_person": {
+			"loop": true,
+			"bones": {
+				"halberd": {
+					"position": [0.5, 10, -12],
+					"scale": 0.6
+				}
+			}
+		},
+		"animation.sentinel_halberd.sentinel_halberd": {
+			"loop": true,
+			"bones": {
+				"halberd": {
+					"position": [0.5, 10, -12], /**/
+					"scale": 0.6
+				}
+			}
+		}
+	}
+}

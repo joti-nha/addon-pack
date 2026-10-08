@@ -1,0 +1,6 @@
+item.fgr:grimoire=Grimório
+item.fgr:grimoire.name=Grimório
+item.fgr:card_empty=Slot vazio
+item.fgr:card_empty.name=Slot vazio
+tile.fgr:arcane_lectern.name=Atril Arcano
+entity.fgr:lectern.name=Atril Arcano

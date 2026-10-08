@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Addon Pack Compat (A&S) 1.0.0 RP",
+    "description": "Compatibilidade do Addon Pack com Actions & Stuff. Pack proprio do modpack, separado do A&S Compatibility avulso.",
+    "uuid": "63acd05c-0373-43fc-9075-7d8e4124549c",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      111
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "add83dd5-a19c-4fe5-8928-540fa1b2a06a",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

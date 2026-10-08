@@ -1,0 +1,60 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Forsaken Grimoires (Addon Pack) BP",
+    "description": "Grimorios e Tomo Arcano para as magias do Forsaken Odyssey. Camada propria do Addon Pack.",
+    "uuid": "b4436f5e-5172-4c5d-a423-6dc02fee4390",
+    "version": [
+      0,
+      1,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "8071aa48-e19b-499b-839d-079946ac0212",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "1cd51263-f1b4-4563-aa14-fd41619d6ea6",
+      "version": [
+        0,
+        1,
+        0
+      ],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "bf3b2235-936a-47a9-be2c-6b8b7e30bbfd",
+      "version": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.5.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Addon Pack"
+    ],
+    "product_type": "addon"
+  }
+}

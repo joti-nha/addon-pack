@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ntk:quartz_wand",
+      "item": {
+        "ntk:quartz_wand": "query.get_equipped_item_name('main_hand') == 'quartz_wand'"
+      },
+      "render_controllers": [
+        {
+          "controller.render.item.ntk_wand_uncharged": "!query.item_is_charged"
+        },
+        {
+          "controller.render.item.ntk_wand_charged": "query.item_is_charged"
+        }
+      ],
+      "geometry": {
+        "wand_uncharged": "geometry.item.ntk_wand_uncharged",
+        "wand_charging_0": "geometry.item.ntk_wand_charging_0",
+        "wand_charging_1": "geometry.item.ntk_wand_charging_1",
+        "wand_charging_2": "geometry.item.ntk_wand_charging_2",
+        "wand_charged": "geometry.item.ntk_wand_charged"
+      },
+      "materials": {
+        "default": "ntk_item_emissive_alpha",
+        "enchanted": "ntk_item_emissive_alpha"
+      },
+      "textures": {
+        "wand_uncharged": "textures/models/nms/wand/ntk_quartz_wand_uncharged",
+        "wand_charging_0": "textures/models/nms/wand/ntk_quartz_wand_charging_0",
+        "wand_charging_1": "textures/models/nms/wand/ntk_quartz_wand_charging_1",
+        "wand_charging_2": "textures/models/nms/wand/ntk_quartz_wand_charging_2",
+        "wand_charged": "textures/models/nms/wand/ntk_quartz_wand_charged",
+        "enchanted_glint": "textures/misc/enchanted_item_glint"
+      },
+      "sound_effects": {
+        "charging": "item.ntk_wand.charging"
+      },
+      "animations": {
+        "controller_wield": "controller.animation.item.ntk_wand.wield",
+        "1st_person_wield": "animation.item.ntk_wand.1st_person_wield",
+        "1st_person_wield_charging": "animation.item.ntk_wand.1st_person_wield_charging",
+        "1st_person_wield_charged": "animation.item.ntk_wand.1st_person_wield_charged",
+        "3rd_person_wield": "animation.item.ntk_wand.3rd_person_wield",
+        "3rd_person_wield_charging": "animation.item.ntk_wand.3rd_person_wield_charging",
+        "3rd_person_wield_charged": "animation.item.ntk_wand.3rd_person_wield_charged"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.charge_amount = query.main_hand_item_use_duration > 0.0f ? (math.clamp((q.main_hand_item_max_duration - q.main_hand_item_use_duration) / 5, 1, 3)) : 0;"
+        ],
+        "animate": [
+          "controller_wield"
+        ],
+        "parent_setup": "c.item_slot == 'main_hand' ? { v.oreville_mainhand_visible = 1; v.oreville_mainhand_custom_pos = 1; } : c.item_slot == 'off_hand' ? { v.oreville_offhand_visible = 1; } : 0;"
+      }
+    }
+  }
+}

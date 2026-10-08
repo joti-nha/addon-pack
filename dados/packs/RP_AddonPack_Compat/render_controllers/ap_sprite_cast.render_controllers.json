@@ -1,0 +1,17 @@
+{
+ "format_version": "1.10.0",
+ "render_controllers": {
+  "controller.render.ap.sprite_cast": {
+   "geometry": "t.cast == 1 ? Geometry.cast : Geometry.default",
+   "materials": [
+    {
+     "*": "variable.is_enchanted ? Material.enchanted : Material.default"
+    }
+   ],
+   "textures": [
+    "t.cast == 1 ? Texture.cast : Texture.default",
+    "Texture.enchanted"
+   ]
+  }
+ }
+}
