@@ -5648,7 +5648,7 @@ world.afterEvents.playerSpawn.subscribe((event) => {
         return;
     const hasBook = player.getDynamicProperty(DynamicPropertyEnum.HasBook);
     if (!hasBook) {
-        ItemUtils.giveItem(player, new ItemStack("tm_aqc:guide_book"));
+        // [Addon Pack] guia nao e mais entregue no 1o acesso (continua craftavel)
         player.setDynamicProperty(DynamicPropertyEnum.HasBook, true);
     }
 });

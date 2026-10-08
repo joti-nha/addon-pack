@@ -1,11 +1,12 @@
 {
-    "messages_text/text": {
-        "bindings": [
-            {
-                "binding_type": "view",
-                "source_property_name": "(not ('%.10s' * #text = 'bob.toast;'))",
-                "target_property_name": "#visible"
-            }
-        ]
-    }
+  "namespace": "chat",
+  "messages_text/text": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "((not ('%.10s' * #text = 'bob.toast;')) and (('§␛' + #text + '§r') - ('§␛' + 'toast.') = ('§␛' + #text + '§r')))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
 }

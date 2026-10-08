@@ -9,6 +9,7 @@
       }
     },
     "components": {
+      "minecraft:tags": { "tags": ["oreville:is_sword"] },
       "minecraft:display_name": {
         "value": "Vibranium Sword"
       },

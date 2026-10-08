@@ -8,6 +8,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "the_ardent_crystal",
 			"minecraft:wearable": {
 				"slot": "slot.armor.head",

@@ -8,11 +8,11 @@ const FEATURES = [
 	{ key: "bv:give_guide", defaultState: false, label: "Give Guidebook on Death", score: "bv:give_guidebook", prefix: "" },
 	{ key: "bv:dynamic_light", defaultState: false, label: "Dynamic Light", score: "bv:dylight", prefix: "[F1] " },
 	{ key: "bv:horse_leaves", defaultState: false, label: "Horses Break Leaves", score: "bv:breakleaves", prefix: "[F2] " },
-	{ key: "bv:campfire", defaultState: false, label: "Campfire Heal Effect", score: "bv:campheal", prefix: "" },
-	{ key: "bv:nohurtpets_owner", defaultState: false, label: "No hurt pets (Owner Only)", score: "bv:nohurtowner", prefix: "" },
+	{ key: "bv:campfire", defaultState: true, label: "Campfire Heal Effect", score: "bv:campheal", prefix: "" },
+	{ key: "bv:nohurtpets_owner", defaultState: true, label: "No hurt pets (Owner Only)", score: "bv:nohurtowner", prefix: "" },
 	{ key: "bv:no_hurt", defaultState: false, label: "No hurt pets (All Players)", score: "bv:nohurt", prefix: "" },
 	{ key: "bv:auto_totem", defaultState: false, label: "Auto Totem of Undying", score: "bv:auto_totem", prefix: "" },
-	{ key: "bv:offtorch", defaultState: false, label: "Better Off-hand", score: "bv:off_hand_torch", prefix: "" },
+	{ key: "bv:offtorch", defaultState: true, label: "Better Off-hand", score: "bv:off_hand_torch", prefix: "" },
 	{ key: "bv:hotbar_lantern", defaultState: false, label: "Lanterns light on Hotbar", score: "bv:dlight_hotbar_toggle", prefix: "" }
 ];
 
@@ -36,10 +36,24 @@ world.afterEvents.itemUse.subscribe((event) => {
 
 // 3. CONFIGURAÇÃO CORRETA (V2): Usando worldLoad em vez de worldInitialize
 world.afterEvents.worldLoad.subscribe(() => {
+	const firstTime = [];
 	for (const feature of FEATURES) {
 		if (world.getDynamicProperty(feature.key) === undefined) {
 			world.setDynamicProperty(feature.key, feature.defaultState);
+			firstTime.push(feature);
 		}
+	}
+	// [Addon Pack] Padrões pré-configurados: os recursos ligados por padrão também precisam do placar
+	// (o menu só grava o placar ao alternar). Espera as funções de início criarem os objetivos.
+	if (firstTime.length > 0) {
+		system.runTimeout(() => {
+			for (const feature of firstTime) {
+				if (!feature.defaultState) continue;
+				try {
+					world.getDimension("overworld").runCommand(`scoreboard players set .Initialised ${feature.score} 2`);
+				} catch (e) { }
+			}
+		}, 200);
 	}
 });
 

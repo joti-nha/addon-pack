@@ -9,6 +9,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "unbound_boots",
 			"minecraft:display_name": {
 				"value": "item.dk:unbound_boots.name"

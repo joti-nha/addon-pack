@@ -43,7 +43,7 @@
             "minecraft:hand_equipped": true,
             "minecraft:custom_components": [ "pog:tool_durability" ],
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_axe",
                     "better_on_bedrock:amethyst_tier"
                 ]

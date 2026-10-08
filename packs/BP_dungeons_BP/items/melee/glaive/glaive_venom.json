@@ -10,7 +10,7 @@
     "components": {
       "minecraft:icon": "venom_glaive",
       "minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_tool", 
           "dungeons:poison_cloud",
           "minecraft:is_spear",
           "dungeons:melee_lore",

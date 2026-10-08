@@ -47,12 +47,7 @@
         "value": 64
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:material",
-          "ntk:organic_material",
-          "ntk:fang"
-        ]
+        "tags": ["ntk:items", "ntk:material", "ntk:organic_material", "ntk:fang", "oreville:is_sword"]
       }
     }
   }

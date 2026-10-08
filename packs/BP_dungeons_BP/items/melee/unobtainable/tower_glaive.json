@@ -10,7 +10,7 @@
         "components": {
             "minecraft:icon": "tower_glaive",
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_spear"
                 ]
             },

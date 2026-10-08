@@ -39,10 +39,7 @@
 				"value": true
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_axe"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_axe", "oreville:is_mace"]
 			},
 			"minecraft:rarity": {
 				"value": "uncommon"

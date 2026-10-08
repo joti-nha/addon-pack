@@ -10,7 +10,7 @@
 				"default": "textures/entity/baby_ghast"
 			},
 			"geometry": {
-				"default": "geometry.baby_ghast"
+				"default": "geometry.bob_baby_ghast"
 			},
 			"scripts": {
                 "should_update_bones_and_effects_offscreen": true                

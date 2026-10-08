@@ -31,9 +31,7 @@
 				"duration": 5
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool"
-				]
+				"tags": ["minecraft:is_tool", "oreville:is_crossbow"]
 			}
 		}
 	}

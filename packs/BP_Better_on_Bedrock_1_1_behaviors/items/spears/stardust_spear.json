@@ -24,7 +24,7 @@
             "minecraft:use_animation": "spear",
 
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_trident"
                 ]
             }

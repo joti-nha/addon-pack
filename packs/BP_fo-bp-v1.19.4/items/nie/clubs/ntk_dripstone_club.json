@@ -69,18 +69,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:is_need_durability_fixer",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:melee_weapon",
-          "ntk:club",
-          "ntk:dripstone_club",
-          
-          "ntk:extra_damage_effect",
-          "ntk:knockback_effect"
-        ]
+        "tags": ["ntk:items", "ntk:is_need_durability_fixer", "ntk:equippable", "ntk:mainhand_equipment", "ntk:melee_weapon", "ntk:club", "ntk:dripstone_club", "ntk:extra_damage_effect", "ntk:knockback_effect", "oreville:is_mace"]
       },
 			"ntk:extra_damage_effect_on_hit_entity": [
         {

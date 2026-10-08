@@ -43,7 +43,7 @@
 				]
 			},
 			"minecraft:tags": {
-				"tags": [
+				"tags": ["minecraft:is_armor", 
 					"mnra_cata:Armor_Toughness-1",
 					"mnra_cata:EquipmentSound"
 				]

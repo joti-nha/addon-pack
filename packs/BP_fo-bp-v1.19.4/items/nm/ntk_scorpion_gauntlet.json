@@ -69,7 +69,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_tool", 
           "ntk:items",
           "ntk:is_need_durability_fixer",
           "ntk:equippable",

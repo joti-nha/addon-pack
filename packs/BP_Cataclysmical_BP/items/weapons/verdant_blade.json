@@ -55,12 +55,7 @@
 				"replace_block_item": true
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_sword",
-					"mnra_cata:is_mob_shield_breakable",
-					"minecraft:is_spear"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_sword", "mnra_cata:is_mob_shield_breakable", "minecraft:is_spear", "oreville:is_sword"]
 			},
 			"minecraft:cooldown": {
 				"category": "verdant_blade",

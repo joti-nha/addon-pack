@@ -13,7 +13,7 @@
 				"enchanted": "textures/misc/enchanted_glint_entity"
 			},
 			"geometry": {
-				"default": "geometry.enchanter"
+				"default": "geometry.bob_enchanter"
 			},
 			"animations": {
 				"basic": "controller.animation.enchanter.moves",

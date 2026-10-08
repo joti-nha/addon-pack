@@ -46,7 +46,7 @@
 				"value": "rare"
 			},
 			"minecraft:tags": {
-				"tags": [
+				"tags": ["minecraft:is_armor", 
 					"mnra_cata:Armor_Toughness-5",
 					"mnra_cata:Knockback_Resistance-1",
 					"mnra_cata:StrongEquipmentSound"

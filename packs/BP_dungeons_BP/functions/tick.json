@@ -1,5 +1,14 @@
 {
   "values": [
+    "disable_command_stuff",
+    "events/worlds/on_initialise",
+    "events/players/on_death",
+    "events/players/on_first_join",
+    "settings/config",
+    "item_effect",
+    "item_effect_trinkets",
+    "armor_effects",
+    "tick",
     "stun_cd"
   ]
 }

@@ -20,7 +20,7 @@
         "max_durability": 120
       },
       "minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_tool", 
           "rnr:ritual_dagger",
           "rnr:ritual_dagger_unactivated"
         ]

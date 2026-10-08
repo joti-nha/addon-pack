@@ -8,7 +8,7 @@
 				"group": "itemGroup.name.sword"
 			}
 		},
-		"components": {
+		"components": {"minecraft:tags":{"tags":["oreville:is_bow"]},
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:display_name": {

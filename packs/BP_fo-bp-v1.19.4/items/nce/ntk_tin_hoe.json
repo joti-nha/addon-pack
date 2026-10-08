@@ -102,20 +102,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:smeltable",
-          "ntk:mainhand_equipment",
-          "ntk:tool",
-          "ntk:hoe",
-          "ntk:tin_hoe",
-          
-          "minecraft:is_hoe",
-          "minecraft:is_tool",
-          "minecraft:iron_tier",
-          "minecraft:digger"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:smeltable", "ntk:mainhand_equipment", "ntk:tool", "ntk:hoe", "ntk:tin_hoe", "minecraft:is_hoe", "minecraft:is_tool", "minecraft:iron_tier", "minecraft:digger", "oreville:is_hoe"]
       },
 			"ntk:on_mine_block": [
         {

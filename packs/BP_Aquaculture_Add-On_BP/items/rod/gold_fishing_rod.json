@@ -11,7 +11,7 @@
       "minecraft:max_stack_size": 1,
       "minecraft:hand_equipped": true,
       "minecraft:custom_components": ["tm_aqc:rod"],
-      "minecraft:tags": { "tags": ["tm_aqc:rod"] },
+      "minecraft:tags": { "tags": ["tm_aqc:rod", "oreville:is_fishing_rod"] },
       "minecraft:repairable": {
         "repair_items": [
           {

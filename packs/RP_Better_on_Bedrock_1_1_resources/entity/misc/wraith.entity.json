@@ -10,7 +10,7 @@
 				"default": "textures/entity/wraith"
 			},
 			"geometry": {
-				"default": "geometry.wraith"
+				"default": "geometry.bob_wraith"
 			},
 			"scripts": {
                 "should_update_bones_and_effects_offscreen": true                

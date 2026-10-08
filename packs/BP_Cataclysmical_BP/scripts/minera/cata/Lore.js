@@ -163,7 +163,7 @@ world.afterEvents.playerSpawn.subscribe((event => {
 		let GoldBlock = new ItemStack("minecraft:gold_block")
 
 		//spawn items
-		inventory.container.addItem(TerrorDetector)
+		// [Addon Pack] Detector de Terror nao e mais entregue no 1o acesso (continua craftavel)
 
 		if (player.nameTag === ('HappyDreamXD')) {
 			inventory.container.addItem(Meowclysm,)

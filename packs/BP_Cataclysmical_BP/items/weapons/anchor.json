@@ -5,6 +5,7 @@
 			"identifier": "mnra_cata:anchor"
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["oreville:is_mace"] },
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:can_destroy_in_creative": false,

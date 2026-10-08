@@ -98,17 +98,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:melee_weapon",
-          "ntk:staff",
-          "ntk:staff_of_the_sea",
-          
-          "ntk:spirit_piercer_effect",
-          "ntk:water_aspect_effect"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:mainhand_equipment", "ntk:melee_weapon", "ntk:staff", "ntk:staff_of_the_sea", "ntk:spirit_piercer_effect", "ntk:water_aspect_effect", "oreville:is_on_a_stick"]
 			},
       "ntk:water_aspect_effect_on_hit_entity": [
         {

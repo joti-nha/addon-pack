@@ -3,34 +3,229 @@
   "minecraft:entity": {
     "description": {
       "identifier": "minecraft:evocation_illager",
-      "is_summonable": true,
       "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "better_on_bedrock:enchanted": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      },
       "spawn_category": "monster"
     },
-    "components": {
-      "minecraft:environment_sensor": {
-        "triggers": [
+    "component_groups": {
+      "dungeons:regular_loot": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/evocation_illager.json"
+        }
+      },
+      "dungeons:ancient_hunt_member": {
+        "minecraft:loot": {
+          "table": "loot_tables/entities/evocation_illager_ancient_hunt.json"
+        }
+      },
+      "minecraft:celebrate": {
+        "minecraft:behavior.celebrate": {
+          "celebration_sound": "celebrate",
+          "duration": 30,
+          "jump_interval": {
+            "range_max": 3.5,
+            "range_min": 1
+          },
+          "on_celebration_end_event": {
+            "event": "minecraft:stop_celebrating",
+            "target": "self"
+          },
+          "priority": 5,
+          "sound_interval": {
+            "range_max": 7,
+            "range_min": 2
+          }
+        }
+      },
+      "minecraft:raid_despawn": {
+        "minecraft:despawn": {
+          "despawn_from_distance": {}
+        }
+      },
+      "minecraft:raid_configuration": {
+        "minecraft:ambient_sound_interval": {
+          "event_name": "ambient.in.raid",
+          "range": 4,
+          "value": 2
+        },
+        "minecraft:behavior.move_to_village": {
+          "priority": 6,
+          "speed_multiplier": 0.7
+        },
+        "minecraft:dweller": {
+          "can_find_poi": false,
+          "dwelling_type": "village",
+          "can_migrate": true,
+          "dweller_role": "hostile",
+          "first_founding_reward": 0,
+          "update_interval_base": 60,
+          "update_interval_variant": 40
+        }
+      },
+      "minecraft:raid_persistence": {
+        "minecraft:persistent": {}
+      },
+      "enchanted": {
+        "minecraft:health": {
+          "value": 50,
+          "max": 50
+        },
+        "minecraft:attack": {
+          "damage": 4
+        },
+        "minecraft:experience_reward": {
+          "on_death": 125
+        }
+      },
+      "": {
+        "minecraft:variant": {
+          "value": 0
+        }
+      }
+    },
+    "events": {
+      "dungeons:register_as_ancient_hunt": {
+        "add": {
+          "component_groups": [
+            "dungeons:ancient_hunt_member"
+          ]
+        },
+        "remove": {
+          "component_groups": [
+            "dungeons:regular_loot"
+          ]
+        }
+      },
+      "dungeons:deregister_as_ancient_hunt": {
+        "remove": {
+          "component_groups": [
+            "dungeons:ancient_hunt_member"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "dungeons:regular_loot"
+          ]
+        }
+      },
+      "minecraft:entity_spawned": {
+        "randomize": [
           {
-            "event": "dungeons:register_as_ancient_hunt",
-            "target": "self",
             "filters": {
-              "test": "has_tag",
-              "subject": "self",
-              "value": "dungeons:ancient_hunt"
-            }
+              "test": "has_biome_tag",
+              "value": "roofed"
+            },
+            "weight": 1,
+            "trigger": "dungeons:spawn_enchanter_normal"
           },
           {
-            "event": "dungeons:deregister_as_ancient_hunt",
-            "target": "self",
+            "weight": 1
+          }
+        ]
+      },
+      "minecraft:raid_expired": {
+        "sequence": [
+          {
             "filters": {
-              "test": "has_tag",
-              "operator": "!=",
-              "subject": "self",
-              "value": "dungeons:ancient_hunt"
+              "test": "has_nametag",
+              "value": false
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:raid_persistence"
+              ]
             }
           }
         ]
       },
+      "dungeons:spawn_enchanter_for_raid": {
+        "queue_command": {
+          "command": [
+            "summon dungeons:enchanter ~1~~ ~~ minecraft:spawn_for_raid"
+          ]
+        }
+      },
+      "dungeons:spawn_enchanter_normal": {
+        "queue_command": {
+          "command": [
+            "summon dungeons:enchanter ~1~~"
+          ]
+        }
+      },
+      "minecraft:spawn_for_raid": {
+        "randomize": [
+          {
+            "weight": 1,
+            "trigger": "dungeons:spawn_enchanter_for_raid",
+            "add": {
+              "component_groups": [
+                "minecraft:raid_configuration",
+                "minecraft:raid_despawn",
+                "minecraft:raid_persistence"
+              ]
+            }
+          },
+          {
+            "weight": 2,
+            "add": {
+              "component_groups": [
+                "minecraft:raid_configuration",
+                "minecraft:raid_despawn",
+                "minecraft:raid_persistence"
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:stop_celebrating": {
+        "remove": {
+          "component_groups": [
+            "minecraft:celebrate"
+          ]
+        }
+      },
+      "minecraft:start_celebrating": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": [
+                "minecraft:celebrate"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "test": "has_nametag",
+              "value": false
+            },
+            "remove": {
+              "component_groups": [
+                "minecraft:raid_persistence"
+              ]
+            }
+          }
+        ]
+      },
+      "better_on_bedrock:spawn_enchanted": {
+        "add": {
+          "component_groups": [
+            "enchanted"
+          ]
+        },
+        "set_property": {
+          "better_on_bedrock:enchanted": true
+        }
+      }
+    },
+    "components": {
       "minecraft:behavior.avoid_mob_type": {
         "entity_types": [
           {
@@ -309,6 +504,29 @@
         "width": 0.6
       },
       "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "dungeons:register_as_ancient_hunt",
+            "target": "self",
+            "filters": {
+              "test": "has_tag",
+              "subject": "self",
+              "value": "dungeons:ancient_hunt"
+            }
+          },
+          {
+            "event": "dungeons:deregister_as_ancient_hunt",
+            "target": "self",
+            "filters": {
+              "test": "has_tag",
+              "operator": "!=",
+              "subject": "self",
+              "value": "dungeons:ancient_hunt"
+            }
+          }
+        ]
+      },
       "minecraft:equip_item": {},
       "minecraft:experience_reward": {
         "on_death": 10
@@ -373,189 +591,6 @@
           "monster",
           "illager",
           "mob"
-        ]
-      }
-    },
-    "component_groups": {
-      "dungeons:regular_loot":{
-        "minecraft:loot": {
-          "table": "loot_tables/entities/evocation_illager.json"
-        }
-      },
-      "dungeons:ancient_hunt_member":{
-        "minecraft:loot": {
-          "table": "loot_tables/entities/evocation_illager_ancient_hunt.json"
-        }
-      },
-      "minecraft:celebrate": {
-        "minecraft:behavior.celebrate": {
-          "celebration_sound": "celebrate",
-          "duration": 30,
-          "jump_interval": {
-            "range_max": 3.5,
-            "range_min": 1
-          },
-          "on_celebration_end_event": {
-            "event": "minecraft:stop_celebrating",
-            "target": "self"
-          },
-          "priority": 5,
-          "sound_interval": {
-            "range_max": 7,
-            "range_min": 2
-          }
-        }
-      },
-      "minecraft:raid_despawn": {
-        "minecraft:despawn": {
-          "despawn_from_distance": {}
-        }
-      },
-      "minecraft:raid_configuration": {
-        "minecraft:ambient_sound_interval": {
-          "event_name": "ambient.in.raid",
-          "range": 4,
-          "value": 2
-        },
-        "minecraft:behavior.move_to_village": {
-          "priority": 6,
-          "speed_multiplier": 0.7
-        },
-        "minecraft:dweller": {
-          "can_find_poi": false,
-          "dwelling_type": "village",
-          "can_migrate": true,
-          "dweller_role": "hostile",
-          "first_founding_reward": 0,
-          "update_interval_base": 60,
-          "update_interval_variant": 40
-        }
-      },
-      "minecraft:raid_persistence": {
-        "minecraft:persistent": {}
-      }
-    },
-    "events": {
-      "dungeons:register_as_ancient_hunt":{
-        "add": {
-          "component_groups": [
-            "dungeons:ancient_hunt_member"
-          ]
-        },
-        "remove": {
-          "component_groups": [
-            "dungeons:regular_loot"
-          ]
-        }
-      },
-      "dungeons:deregister_as_ancient_hunt":{
-        "remove": {
-          "component_groups": [
-            "dungeons:ancient_hunt_member"
-          ]
-        },
-        "add": {
-          "component_groups": [
-            "dungeons:regular_loot"
-          ]
-        }
-      },
-      "minecraft:entity_spawned": {
-        "randomize": [
-          {
-            "filters": {
-              "test": "has_biome_tag",
-              "value": "roofed"
-            },
-            "weight": 1,
-            "trigger": "dungeons:spawn_enchanter_normal"
-          },
-          {
-            "weight": 1
-          }
-        ]
-      },
-      "minecraft:raid_expired": {
-        "sequence": [
-          {
-            "filters": {
-              "test": "has_nametag",
-              "value": false
-            },
-            "remove": {
-              "component_groups": [
-                "minecraft:raid_persistence"
-              ]
-            }
-          }
-        ]
-      },
-      "dungeons:spawn_enchanter_for_raid": {
-        "queue_command": {
-          "command": [
-            "summon dungeons:enchanter ~1~~ ~~ minecraft:spawn_for_raid"
-          ]
-        }
-      },
-      "dungeons:spawn_enchanter_normal": {
-        "queue_command": {
-          "command": [
-            "summon dungeons:enchanter ~1~~"
-          ]
-        }
-      },
-      "minecraft:spawn_for_raid": {
-        "randomize": [
-          {
-            "weight": 1,
-            "trigger": "dungeons:spawn_enchanter_for_raid",
-            "add": {
-              "component_groups": [
-                "minecraft:raid_configuration",
-                "minecraft:raid_despawn",
-                "minecraft:raid_persistence"
-              ]
-            }
-          },
-          {
-            "weight": 2,
-            "add": {
-              "component_groups": [
-                "minecraft:raid_configuration",
-                "minecraft:raid_despawn",
-                "minecraft:raid_persistence"
-              ]
-            }
-          }
-        ]
-      },
-      "minecraft:stop_celebrating": {
-        "remove": {
-          "component_groups": [
-            "minecraft:celebrate"
-          ]
-        }
-      },
-      "minecraft:start_celebrating": { // Event must be called exactly this for village to fire it when a raid is lost
-        "sequence": [
-          {
-            "add": {
-              "component_groups": [
-                "minecraft:celebrate"
-              ]
-            }
-          },
-          {
-            "filters": {
-              "test": "has_nametag",
-              "value": false
-            },
-            "remove": {
-              "component_groups": [
-                "minecraft:raid_persistence"
-              ]
-            }
-          }
         ]
       }
     }

@@ -7,12 +7,12 @@
         "default": {
           "animations": ["move_arms_vanilla"],
           "transitions": [
-            { "carry": "query.variant == 9 && query.mark_variant == 1" }
+            { "carry": "query.skin_id == 9 && query.mark_variant == 1" }
           ]
         },
         "carry": {
           "transitions": [
-            { "default": "!(query.variant == 9 && query.mark_variant == 1)" }
+            { "default": "!(query.skin_id == 9 && query.mark_variant == 1)" }
           ]
         }
       }
@@ -23,12 +23,12 @@
         "default": {
           "animations": ["bob_vanilla"],
           "transitions": [
-            { "carry": "query.variant == 9 && query.mark_variant == 1" }
+            { "carry": "query.skin_id == 9 && query.mark_variant == 1" }
           ]
         },
         "carry": {
           "transitions": [
-            { "default": "!(query.variant == 9 && query.mark_variant == 1)" }
+            { "default": "!(query.skin_id == 9 && query.mark_variant == 1)" }
           ]
         }
       }

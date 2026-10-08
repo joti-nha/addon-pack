@@ -9,13 +9,7 @@
     },
     "components": {
       "minecraft:tags": {
-        "tags": [
-          "minecraft:is_tool",
-          "minecraft:is_sword",
-          "dungeons:swirling",
-          "dungeons:melee_lore",
-          "alylica:disable_melee_swing"
-        ]
+        "tags": ["minecraft:is_tool", "dungeons:swirling", "dungeons:melee_lore", "alylica:disable_melee_swing", "minecraft:is_axe"]
       },
       "dungeons:custom_swing": {
         "has_cooldown": false,

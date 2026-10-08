@@ -10,7 +10,7 @@
 				"default": "textures/entity/pillager_boss/head_main"
 			},
 			"geometry": {
-				"default": "geometry.unknown"
+				"default": "geometry.rpg_pillager_boss"
 			},
 			"particle_effects": {
 				"smash_particle": "minecraft:knockback_roar_particle",

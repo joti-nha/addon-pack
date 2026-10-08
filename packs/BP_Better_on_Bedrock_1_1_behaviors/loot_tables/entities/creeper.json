@@ -1,51 +1,51 @@
 {
   "pools": [
     {
-      "rolls": 1,
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:gunpowder",
-          "weight": 15,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 0,
-                "max": 2
-              }
+                "max": 2,
+                "min": 0
+              },
+              "function": "set_count"
             },
             {
-              "function": "looting_enchant",
               "count": {
-                "min": 0,
-                "max": 1
-              }
+                "max": 1,
+                "min": 0
+              },
+              "function": "looting_enchant"
             }
-          ]
+          ],
+          "name": "minecraft:gunpowder",
+          "type": "item",
+          "weight": 1
         },
         {
-          "type": "item",
-          "name": "better_on_bedrock:soul_star",
-          "weight": 4,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 0,
-                "max": 1
-              }
+                "max": 1,
+                "min": 0
+              },
+              "function": "set_count"
             },
             {
-              "function": "looting_enchant",
               "count": {
-                "min": 0,
-                "max": 1
-              }
+                "max": 1,
+                "min": 0
+              },
+              "function": "looting_enchant"
             }
-          ]
+          ],
+          "name": "better_on_bedrock:soul_star",
+          "type": "item",
+          "weight": 4
         }
-      ]
+      ],
+      "rolls": 1
     },
     {
       "conditions": [
@@ -54,57 +54,57 @@
           "entity_type": "minecraft:skeleton"
         }
       ],
-      "rolls": 1,
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:record_13"
+          "name": "minecraft:record_13",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_cat"
+          "name": "minecraft:record_cat",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_blocks"
+          "name": "minecraft:record_blocks",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_chirp"
+          "name": "minecraft:record_chirp",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_far"
+          "name": "minecraft:record_far",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_mall"
+          "name": "minecraft:record_mall",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_mellohi"
+          "name": "minecraft:record_mellohi",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_stal"
+          "name": "minecraft:record_stal",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_strad"
+          "name": "minecraft:record_strad",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_ward"
+          "name": "minecraft:record_ward",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_11"
+          "name": "minecraft:record_11",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_wait"
+          "name": "minecraft:record_wait",
+          "type": "item"
         }
-      ]
+      ],
+      "rolls": 1
     },
     {
       "conditions": [
@@ -113,61 +113,474 @@
           "entity_type": "minecraft:stray"
         }
       ],
-      "rolls": 1,
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:record_13"
+          "name": "minecraft:record_13",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_cat"
+          "name": "minecraft:record_cat",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_blocks"
+          "name": "minecraft:record_blocks",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_chirp"
+          "name": "minecraft:record_chirp",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_far"
+          "name": "minecraft:record_far",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_mall"
+          "name": "minecraft:record_mall",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_mellohi"
+          "name": "minecraft:record_mellohi",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_stal"
+          "name": "minecraft:record_stal",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_strad"
+          "name": "minecraft:record_strad",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_ward"
+          "name": "minecraft:record_ward",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_11"
+          "name": "minecraft:record_11",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "minecraft:record_wait"
+          "name": "minecraft:record_wait",
+          "type": "item"
         },
         {
-          "type": "item",
-          "name": "better_on_bedrock:record_stardust"
+          "name": "better_on_bedrock:record_stardust",
+          "type": "item"
         }
-      ]
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "minecraft:bogged"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:enchanted_skeleton"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:enchanted_bogged"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:wither_skeleton_archer"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:enchanted_wither_skeleton_archer"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:sunken_skeleton"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "condition": "killed_by_entity",
+          "entity_type": "dungeons:enchanted_sunken_skeleton"
+        }
+      ],
+      "entries": [
+        {
+          "name": "minecraft:record_13",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_cat",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_blocks",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_chirp",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_far",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mall",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_mellohi",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_stal",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_strad",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_ward",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_11",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:record_wait",
+          "type": "item"
+        }
+      ],
+      "rolls": 1
     }
   ]
 }

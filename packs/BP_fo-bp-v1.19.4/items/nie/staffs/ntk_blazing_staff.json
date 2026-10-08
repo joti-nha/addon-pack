@@ -102,17 +102,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:range_weapon",
-          "ntk:staff",
-          "ntk:blazing_staff",
-          
-          "ntk:fire_aspect_effect",
-          "ntk:flame_effect"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:mainhand_equipment", "ntk:range_weapon", "ntk:staff", "ntk:blazing_staff", "ntk:fire_aspect_effect", "ntk:flame_effect", "oreville:is_on_a_stick"]
 			},
       "ntk:fire_aspect_effect_on_hit_entity": [
         {

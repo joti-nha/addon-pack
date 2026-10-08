@@ -46,10 +46,7 @@
 				"value": "uncommon"
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_axe"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_axe", "oreville:is_axe"]
 			},
 			"minecraft:fire_resistant": {
 				"value": true

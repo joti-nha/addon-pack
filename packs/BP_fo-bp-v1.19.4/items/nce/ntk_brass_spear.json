@@ -128,18 +128,7 @@
         ]
       },
       "minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:smeltable",
-          "ntk:mainhand_equipment",
-          "ntk:melee_weapon",
-          "ntk:spear",
-          "ntk:brass_spear",
-          
-          "minecraft:is_spear",
-          "minecraft:iron_tier"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:smeltable", "ntk:mainhand_equipment", "ntk:melee_weapon", "ntk:spear", "ntk:brass_spear", "minecraft:is_spear", "minecraft:iron_tier", "oreville:is_spear"]
       }
     }
   }

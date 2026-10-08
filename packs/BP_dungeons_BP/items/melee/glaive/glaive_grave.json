@@ -10,7 +10,7 @@
     "components": {
       "minecraft:icon": "grave_bane",
       "minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_tool", 
           "dungeons:smiting",
           "minecraft:is_spear",
           "dungeons:melee_lore",

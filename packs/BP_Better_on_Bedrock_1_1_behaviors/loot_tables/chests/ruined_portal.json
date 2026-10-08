@@ -1,245 +1,268 @@
 {
   "pools": [
     {
-      "rolls": {
-        "min": 4,
-        "max": 8
-      },
-      "entries": [    
+      "entries": [
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 2,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:obsidian",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            }
-          ],
+          "type": "item",
           "weight": 40
         },
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 4,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:flint",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
-            }
-          ],
+          "type": "item",
           "weight": 40
         },
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 18,
+                "min": 9
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:iron_nugget",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 9,
-                "max": 18
-              }
-            }
-          ],
+          "type": "item",
           "weight": 40
         },
         {
+          "name": "minecraft:flint_and_steel",
           "type": "item",
-          "name": "minecraft:flint_and_steel",       
           "weight": 40
         },
         {
+          "name": "minecraft:fireball",
           "type": "item",
-          "name": "minecraft:fireball",         
           "weight": 40
         },
         {
+          "name": "minecraft:golden_apple",
           "type": "item",
-          "name": "minecraft:golden_apple",   
           "weight": 15
         },
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 24,
+                "min": 4
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:gold_nugget",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 4,
-                "max": 24
-              }
-            }
-          ],
+          "type": "item",
           "weight": 15
         },
         {
-          "type": "item",
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ],
           "name": "minecraft:golden_sword",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_axe",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_hoe",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_shovel",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_pickaxe",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_boots",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_chestplate",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_helmet",
+          "type": "item",
+          "weight": 15
+        },
+        {
           "functions": [
             {
               "function": "enchant_randomly"
             }
           ],
-          "weight": 15
-        },
-        {
-          "type": "item",
           "name": "minecraft:golden_leggings",
-          "functions": [
-            {
-              "function": "enchant_randomly"
-            }
-          ],
+          "type": "item",
           "weight": 15
         },
         {
+          "functions": [
+            {
+              "count": {
+                "max": 1,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "bv:magic_mirror",
           "type": "item",
+          "weight": 6
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 12,
+                "min": 4
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:speckled_melon",
+          "type": "item",
           "weight": 5
         },
         {
-          "type": "item",
           "name": "minecraft:horsearmorgold",
+          "type": "item",
           "weight": 5
         },
         {
-          "type": "item",
           "name": "minecraft:light_weighted_pressure_plate",
+          "type": "item",
           "weight": 5
         },
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 12,
+                "min": 4
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:golden_carrot",
+          "type": "item",
+          "weight": 5
+        },
+        {
+          "name": "minecraft:clock",
+          "type": "item",
+          "weight": 5
+        },
+        {
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 4,
-                "max": 12
-              }
+                "max": 8,
+                "min": 2
+              },
+              "function": "set_count"
             }
           ],
-          "weight": 5
-        },
-        {
-          "type": "item",
-          "name": "minecraft:clock",  
-          "weight": 5
-        },
-        {
-          "type": "item",
           "name": "minecraft:gold_ingot",
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 8
-              }
-            }
-          ],
+          "type": "item",
           "weight": 5
         },
         {
+          "name": "minecraft:bell",
           "type": "item",
-          "name": "minecraft:bell", 
           "weight": 1
         },
         {
-          "type": "item",
           "name": "minecraft:appleEnchanted",
+          "type": "item",
           "weight": 1
         },
         {
-          "type": "item",
-          "name": "minecraft:gold_block",
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 2
-              }
+                "max": 2,
+                "min": 1
+              },
+              "function": "set_count"
             }
           ],
+          "name": "minecraft:gold_block",
+          "type": "item",
           "weight": 1
         }
-      ]
+      ],
+      "rolls": {
+        "max": 9,
+        "min": 4
+      }
     }
   ]
 }

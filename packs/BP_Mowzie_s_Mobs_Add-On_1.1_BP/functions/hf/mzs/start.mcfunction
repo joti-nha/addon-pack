@@ -1,4 +1,4 @@
 gamerule commandblockoutput false
 gamerule sendcommandfeedback false
-give @s[tag=!hf_mzs_spawned] hf_mzs:guidebook
+# [Addon Pack] give do guia removido (continua craftavel)
 tag @s add hf_mzs_spawned

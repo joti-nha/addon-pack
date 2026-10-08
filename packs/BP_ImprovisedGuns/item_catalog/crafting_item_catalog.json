@@ -7,6 +7,1300 @@
         "groups": [
           {
             "group_identifier": {
+              "icon": "tm_aqc:neptunium_fishing_rod",
+              "name": "tm_aqc:itemGroup.name.rods"
+            },
+            "items": [
+              "tm_aqc:iron_fishing_rod",
+              "tm_aqc:gold_fishing_rod",
+              "tm_aqc:diamond_fishing_rod",
+              "tm_aqc:netherite_fishing_rod",
+              "tm_aqc:neptunium_fishing_rod"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:cooked_fillet",
+              "name": "tm_aqc:itemGroup.name.food"
+            },
+            "items": [
+              "tm_aqc:cooked_fillet",
+              "tm_aqc:cooked_shrimp",
+              "tm_aqc:cooked_lobster",
+              "tm_aqc:cooked_crayfish",
+              "tm_aqc:cooked_clam",
+              "tm_aqc:raw_fillet",
+              "tm_aqc:raw_shrimp",
+              "tm_aqc:raw_lobster",
+              "tm_aqc:raw_crayfish",
+              "tm_aqc:raw_clam",
+              "tm_aqc:clam_chowder",
+              "tm_aqc:fish_chowder",
+              "tm_aqc:green_juice",
+              "tm_aqc:gumbo",
+              "tm_aqc:lobster_bisque",
+              "tm_aqc:stone_soup",
+              "tm_aqc:super_mushroom_stew",
+              "tm_aqc:garbage_goulash",
+              "tm_aqc:clam_chowder_bucket",
+              "tm_aqc:fish_chowder_bucket",
+              "tm_aqc:green_juice_bucket",
+              "tm_aqc:gumbo_bucket",
+              "tm_aqc:lobster_bisque_bucket",
+              "tm_aqc:stone_soup_bucket",
+              "tm_aqc:super_mushroom_stew_bucket",
+              "tm_aqc:garbage_goulash_bucket"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_scale",
+              "name": "tm_aqc:itemGroup.name.items"
+            },
+            "items": [
+              "tm_aqc:neptunium_scale",
+              "tm_aqc:scale",
+              "tm_aqc:pin_bone",
+              "tm_aqc:shell_piece",
+              "tm_aqc:pearl",
+              "tm_aqc:gold_pearl",
+              "tm_aqc:black_pearl",
+              "tm_aqc:message_in_a_bottle"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:fishing_stool",
+              "name": "tm_aqc:itemGroup.name.functional_blocks"
+            },
+            "items": [
+              "tm_aqc:fishing_stool",
+              "tm_aqc:fish_mount",
+              "tm_aqc:worm_farm",
+              "tm_aqc:modification_station",
+              "tm_aqc:stew_pot",
+              "tm_aqc:catchscale",
+              "tm_aqc:cutting_board",
+              "tm_aqc:anglers_crafting_table"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:fishing_basket",
+              "name": "tm_aqc:itemGroup.name.equipment"
+            },
+            "items": [
+              "tm_aqc:fish_scanner",
+              "tm_aqc:sonar",
+              "tm_aqc:fishing_basket",
+              "tm_aqc:bait_bucket",
+              "tm_aqc:snorkel",
+              "tm_aqc:flippers",
+              "tm_aqc:fishing_net",
+              "tm_aqc:fishing_pot"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:basic_bobber_red",
+              "name": "tm_aqc:itemGroup.name.bobbers"
+            },
+            "items": [
+              "tm_aqc:basic_bobber_black",
+              "tm_aqc:basic_bobber_blue",
+              "tm_aqc:basic_bobber_brown",
+              "tm_aqc:basic_bobber_cyan",
+              "tm_aqc:basic_bobber_gray",
+              "tm_aqc:basic_bobber_green",
+              "tm_aqc:basic_bobber_light_blue",
+              "tm_aqc:basic_bobber_light_gray",
+              "tm_aqc:basic_bobber_lime",
+              "tm_aqc:basic_bobber_magenta",
+              "tm_aqc:basic_bobber_orange",
+              "tm_aqc:basic_bobber_pink",
+              "tm_aqc:basic_bobber_purple",
+              "tm_aqc:basic_bobber_red",
+              "tm_aqc:basic_bobber_white",
+              "tm_aqc:basic_bobber_yellow",
+              "tm_aqc:feathered_bobber_black",
+              "tm_aqc:feathered_bobber_blue",
+              "tm_aqc:feathered_bobber_brown",
+              "tm_aqc:feathered_bobber_cyan",
+              "tm_aqc:feathered_bobber_gray",
+              "tm_aqc:feathered_bobber_green",
+              "tm_aqc:feathered_bobber_light_blue",
+              "tm_aqc:feathered_bobber_light_gray",
+              "tm_aqc:feathered_bobber_lime",
+              "tm_aqc:feathered_bobber_magenta",
+              "tm_aqc:feathered_bobber_orange",
+              "tm_aqc:feathered_bobber_pink",
+              "tm_aqc:feathered_bobber_purple",
+              "tm_aqc:feathered_bobber_red",
+              "tm_aqc:feathered_bobber_white",
+              "tm_aqc:feathered_bobber_yellow",
+              "tm_aqc:winged_bobber_black",
+              "tm_aqc:winged_bobber_blue",
+              "tm_aqc:winged_bobber_brown",
+              "tm_aqc:winged_bobber_cyan",
+              "tm_aqc:winged_bobber_gray",
+              "tm_aqc:winged_bobber_green",
+              "tm_aqc:winged_bobber_light_blue",
+              "tm_aqc:winged_bobber_light_gray",
+              "tm_aqc:winged_bobber_lime",
+              "tm_aqc:winged_bobber_magenta",
+              "tm_aqc:winged_bobber_orange",
+              "tm_aqc:winged_bobber_pink",
+              "tm_aqc:winged_bobber_purple",
+              "tm_aqc:winged_bobber_red",
+              "tm_aqc:winged_bobber_white",
+              "tm_aqc:winged_bobber_yellow",
+              "tm_aqc:creeper_bobber_black",
+              "tm_aqc:creeper_bobber_blue",
+              "tm_aqc:creeper_bobber_brown",
+              "tm_aqc:creeper_bobber_cyan",
+              "tm_aqc:creeper_bobber_gray",
+              "tm_aqc:creeper_bobber_green",
+              "tm_aqc:creeper_bobber_light_blue",
+              "tm_aqc:creeper_bobber_light_gray",
+              "tm_aqc:creeper_bobber_lime",
+              "tm_aqc:creeper_bobber_magenta",
+              "tm_aqc:creeper_bobber_orange",
+              "tm_aqc:creeper_bobber_pink",
+              "tm_aqc:creeper_bobber_purple",
+              "tm_aqc:creeper_bobber_red",
+              "tm_aqc:creeper_bobber_white",
+              "tm_aqc:creeper_bobber_yellow",
+              "tm_aqc:potato_bobber"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_fillet_knife",
+              "name": "tm_aqc:itemGroup.name.fillet_knife"
+            },
+            "items": [
+              "tm_aqc:iron_fillet_knife",
+              "tm_aqc:gold_fillet_knife",
+              "tm_aqc:diamond_fillet_knife",
+              "tm_aqc:netherite_fillet_knife",
+              "tm_aqc:neptunium_fillet_knife"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_chestplate",
+              "name": "tm_aqc:itemGroup.name.armor"
+            },
+            "items": [
+              "tm_aqc:scale_helmet",
+              "tm_aqc:scale_chestplate",
+              "tm_aqc:scale_leggings",
+              "tm_aqc:scale_boots",
+              "tm_aqc:neptunium_helmet",
+              "tm_aqc:neptunium_chestplate",
+              "tm_aqc:neptunium_leggings",
+              "tm_aqc:neptunium_boots"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_pickaxe",
+              "name": "tm_aqc:itemGroup.name.tools"
+            },
+            "items": [
+              "tm_aqc:neptunium_sword",
+              "tm_aqc:neptunium_pickaxe",
+              "tm_aqc:neptunium_axe",
+              "tm_aqc:neptunium_shovel",
+              "tm_aqc:neptunium_hoe"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_harpoon",
+              "name": "tm_aqc:itemGroup.name.harpoons"
+            },
+            "items": [
+              "tm_aqc:iron_harpoon",
+              "tm_aqc:gold_harpoon",
+              "tm_aqc:diamond_harpoon",
+              "tm_aqc:netherite_harpoon",
+              "tm_aqc:neptunium_harpoon"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_fishing_spear",
+              "name": "tm_aqc:itemGroup.name.spears"
+            },
+            "items": [
+              "tm_aqc:iron_fishing_spear",
+              "tm_aqc:gold_fishing_spear",
+              "tm_aqc:diamond_fishing_spear",
+              "tm_aqc:netherite_fishing_spear",
+              "tm_aqc:neptunium_fishing_spear"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_hook",
+              "name": "tm_aqc:itemGroup.name.hooks"
+            },
+            "items": [
+              "tm_aqc:iron_hook",
+              "tm_aqc:gold_hook",
+              "tm_aqc:diamond_hook",
+              "tm_aqc:neptunium_hook",
+              "tm_aqc:light_hook",
+              "tm_aqc:heavy_hook",
+              "tm_aqc:double_hook",
+              "tm_aqc:glow_hook",
+              "tm_aqc:redstone_hook",
+              "tm_aqc:note_hook",
+              "tm_aqc:essence_hook",
+              "tm_aqc:creeper_hook"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:worm",
+              "name": "tm_aqc:itemGroup.name.bait"
+            },
+            "items": [
+              "tm_aqc:leech",
+              "tm_aqc:magnet",
+              "tm_aqc:gold_magnet",
+              "tm_aqc:spinner",
+              "tm_aqc:worm",
+              "tm_aqc:gold_worm",
+              "tm_aqc:slime_worm",
+              "tm_aqc:slime_minnow",
+              "tm_aqc:slime_shad",
+              "tm_aqc:slime_shiner",
+              "tm_aqc:slime_spitter",
+              "tm_aqc:slime_shrimp",
+              "tm_aqc:slime_crayfish"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:arapaima",
+              "name": "tm_aqc:itemGroup.name.fish"
+            },
+            "items": [
+              "tm_aqc:airbreathing_catfish",
+              "tm_aqc:american_pollock",
+              "tm_aqc:arapaima",
+              "tm_aqc:atlantic_cod",
+              "tm_aqc:atlantic_halibut",
+              "tm_aqc:atlantic_herring",
+              "tm_aqc:bamboo_spitter",
+              "tm_aqc:bayad",
+              "tm_aqc:black_crappie",
+              "tm_aqc:black_piranha",
+              "tm_aqc:blind_creeker",
+              "tm_aqc:blue_catfish",
+              "tm_aqc:bluegill",
+              "tm_aqc:brown_bullhead",
+              "tm_aqc:brown_shrooma",
+              "tm_aqc:brown_trout",
+              "tm_aqc:bullhead_catfish",
+              "tm_aqc:chain_pickerel",
+              "tm_aqc:channel_catfish",
+              "tm_aqc:common_bream",
+              "tm_aqc:common_carp",
+              "tm_aqc:common_shiner",
+              "tm_aqc:flathead_catfish",
+              "tm_aqc:florida_gar",
+              "tm_aqc:gizzard_shad",
+              "tm_aqc:golden_shiner",
+              "tm_aqc:goldfish",
+              "tm_aqc:grass_pickerel",
+              "tm_aqc:green_sunfish",
+              "tm_aqc:greenland_halibut",
+              "tm_aqc:largemouth_bass",
+              "tm_aqc:minnow",
+              "tm_aqc:mud_sunfish",
+              "tm_aqc:muskellunge",
+              "tm_aqc:nile_perch",
+              "tm_aqc:nile_tilapia",
+              "tm_aqc:pacific_halibut",
+              "tm_aqc:pink_salmon",
+              "tm_aqc:pumpkinseed",
+              "tm_aqc:rainbow_trout",
+              "tm_aqc:red_grouper",
+              "tm_aqc:red_shrooma",
+              "tm_aqc:redear_sunfish",
+              "tm_aqc:redfin_pickerel",
+              "tm_aqc:sacramento_blackfish",
+              "tm_aqc:sakurafin",
+              "tm_aqc:sharptooth_catfish",
+              "tm_aqc:skipjack_tuna",
+              "tm_aqc:smallmouth_bass",
+              "tm_aqc:spotted_bass",
+              "tm_aqc:striped_bass",
+              "tm_aqc:synodontis",
+              "tm_aqc:tambaqui",
+              "tm_aqc:warmouth",
+              "tm_aqc:white_catfish",
+              "tm_aqc:white_crappie",
+              "tm_aqc:yellow_bullhead",
+              "tm_aqc:yellow_perch",
+              "tm_aqc:yellow_walleye"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:arapaima_monstrous",
+              "name": "tm_aqc:itemGroup.name.fish_monstrous"
+            },
+            "items": [
+              "tm_aqc:airbreathing_catfish_monstrous",
+              "tm_aqc:american_pollock_monstrous",
+              "tm_aqc:arapaima_monstrous",
+              "tm_aqc:atlantic_cod_monstrous",
+              "tm_aqc:atlantic_halibut_monstrous",
+              "tm_aqc:atlantic_herring_monstrous",
+              "tm_aqc:bamboo_spitter_monstrous",
+              "tm_aqc:bayad_monstrous",
+              "tm_aqc:black_crappie_monstrous",
+              "tm_aqc:black_piranha_monstrous",
+              "tm_aqc:blind_creeker_monstrous",
+              "tm_aqc:blue_catfish_monstrous",
+              "tm_aqc:bluegill_monstrous",
+              "tm_aqc:brown_bullhead_monstrous",
+              "tm_aqc:brown_shrooma_monstrous",
+              "tm_aqc:brown_trout_monstrous",
+              "tm_aqc:bullhead_catfish_monstrous",
+              "tm_aqc:chain_pickerel_monstrous",
+              "tm_aqc:channel_catfish_monstrous",
+              "tm_aqc:common_bream_monstrous",
+              "tm_aqc:common_carp_monstrous",
+              "tm_aqc:common_shiner_monstrous",
+              "tm_aqc:flathead_catfish_monstrous",
+              "tm_aqc:florida_gar_monstrous",
+              "tm_aqc:gizzard_shad_monstrous",
+              "tm_aqc:golden_shiner_monstrous",
+              "tm_aqc:goldfish_monstrous",
+              "tm_aqc:grass_pickerel_monstrous",
+              "tm_aqc:green_sunfish_monstrous",
+              "tm_aqc:greenland_halibut_monstrous",
+              "tm_aqc:largemouth_bass_monstrous",
+              "tm_aqc:minnow_monstrous",
+              "tm_aqc:mud_sunfish_monstrous",
+              "tm_aqc:muskellunge_monstrous",
+              "tm_aqc:nile_perch_monstrous",
+              "tm_aqc:nile_tilapia_monstrous",
+              "tm_aqc:pacific_halibut_monstrous",
+              "tm_aqc:pink_salmon_monstrous",
+              "tm_aqc:pumpkinseed_monstrous",
+              "tm_aqc:rainbow_trout_monstrous",
+              "tm_aqc:red_grouper_monstrous",
+              "tm_aqc:red_shrooma_monstrous",
+              "tm_aqc:redear_sunfish_monstrous",
+              "tm_aqc:redfin_pickerel_monstrous",
+              "tm_aqc:sacramento_blackfish_monstrous",
+              "tm_aqc:sakurafin_monstrous",
+              "tm_aqc:sharptooth_catfish_monstrous",
+              "tm_aqc:skipjack_tuna_monstrous",
+              "tm_aqc:smallmouth_bass_monstrous",
+              "tm_aqc:spotted_bass_monstrous",
+              "tm_aqc:striped_bass_monstrous",
+              "tm_aqc:synodontis_monstrous",
+              "tm_aqc:tambaqui_monstrous",
+              "tm_aqc:warmouth_monstrous",
+              "tm_aqc:white_catfish_monstrous",
+              "tm_aqc:white_crappie_monstrous",
+              "tm_aqc:yellow_bullhead_monstrous",
+              "tm_aqc:yellow_perch_monstrous",
+              "tm_aqc:yellow_walleye_monstrous"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:bucket_arapaima",
+              "name": "tm_aqc:itemGroup.name.bucket"
+            },
+            "items": [
+              "tm_aqc:bucket_airbreathing_catfish",
+              "tm_aqc:bucket_arapaima",
+              "tm_aqc:bucket_atlantic_cod",
+              "tm_aqc:bucket_atlantic_halibut",
+              "tm_aqc:bucket_atlantic_herring",
+              "tm_aqc:bucket_bamboo_spitter",
+              "tm_aqc:bucket_bayad",
+              "tm_aqc:bucket_black_crappie",
+              "tm_aqc:bucket_sacramento_blackfish",
+              "tm_aqc:bucket_blind_creeker",
+              "tm_aqc:bucket_blue_catfish",
+              "tm_aqc:bucket_bluegill",
+              "tm_aqc:bucket_brown_bullhead",
+              "tm_aqc:bucket_brown_shrooma",
+              "tm_aqc:bucket_brown_trout",
+              "tm_aqc:bucket_bullhead_catfish",
+              "tm_aqc:bucket_chain_pickerel",
+              "tm_aqc:bucket_channel_catfish",
+              "tm_aqc:bucket_common_bream",
+              "tm_aqc:bucket_common_carp",
+              "tm_aqc:bucket_common_shiner",
+              "tm_aqc:bucket_flathead_catfish",
+              "tm_aqc:bucket_florida_gar",
+              "tm_aqc:bucket_gizzard_shad",
+              "tm_aqc:bucket_golden_shiner",
+              "tm_aqc:bucket_goldfish",
+              "tm_aqc:bucket_grass_pickerel",
+              "tm_aqc:bucket_green_sunfish",
+              "tm_aqc:bucket_greenland_halibut",
+              "tm_aqc:bucket_largemouth_bass",
+              "tm_aqc:bucket_minnow",
+              "tm_aqc:bucket_mud_sunfish",
+              "tm_aqc:bucket_muskellunge",
+              "tm_aqc:bucket_nile_perch",
+              "tm_aqc:bucket_nile_tilapia",
+              "tm_aqc:bucket_pacific_halibut",
+              "tm_aqc:bucket_pink_salmon",
+              "tm_aqc:bucket_black_piranha",
+              "tm_aqc:bucket_american_pollock",
+              "tm_aqc:bucket_pumpkinseed",
+              "tm_aqc:bucket_rainbow_trout",
+              "tm_aqc:bucket_red_grouper",
+              "tm_aqc:bucket_red_shrooma",
+              "tm_aqc:bucket_redear_sunfish",
+              "tm_aqc:bucket_redfin_pickerel",
+              "tm_aqc:bucket_sakurafin",
+              "tm_aqc:bucket_sharptooth_catfish",
+              "tm_aqc:bucket_skipjack_tuna",
+              "tm_aqc:bucket_smallmouth_bass",
+              "tm_aqc:bucket_spotted_bass",
+              "tm_aqc:bucket_striped_bass",
+              "tm_aqc:bucket_synodontis",
+              "tm_aqc:bucket_tambaqui",
+              "tm_aqc:bucket_warmouth",
+              "tm_aqc:bucket_white_catfish",
+              "tm_aqc:bucket_white_crappie",
+              "tm_aqc:bucket_yellow_bullhead",
+              "tm_aqc:bucket_yellow_perch",
+              "tm_aqc:bucket_yellow_walleye"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:american_lobster",
+              "name": "tm_aqc:itemGroup.name.crustaceans_bivalves"
+            },
+            "items": [
+              "tm_aqc:american_lobster",
+              "tm_aqc:devil_crayfish",
+              "tm_aqc:rusty_crayfish",
+              "tm_aqc:giant_tiger_prawn",
+              "tm_aqc:pink_shrimp",
+              "tm_aqc:hard_clam"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:american_lobster_monstrous",
+              "name": "tm_aqc:itemGroup.name.crustaceans_monstrous"
+            },
+            "items": [
+              "tm_aqc:american_lobster_monstrous",
+              "tm_aqc:devil_crayfish_monstrous",
+              "tm_aqc:rusty_crayfish_monstrous",
+              "tm_aqc:giant_tiger_prawn_monstrous",
+              "tm_aqc:pink_shrimp_monstrous"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:bucket_american_lobster",
+              "name": "tm_aqc:itemGroup.name.bucket_crustaceans_bivalves"
+            },
+            "items": [
+              "tm_aqc:bucket_american_lobster",
+              "tm_aqc:bucket_devil_crayfish",
+              "tm_aqc:bucket_rusty_crayfish",
+              "tm_aqc:bucket_giant_tiger_prawn",
+              "tm_aqc:bucket_pink_shrimp",
+              "tm_aqc:bucket_hard_clam"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_bricks",
+              "name": "tm_aqc:itemGroup.name.neptunium_deco"
+            },
+            "items": [
+              "tm_aqc:neptunium_scale_block",
+              "tm_aqc:smelted_neptunium",
+              "tm_aqc:chiselled_neptunium",
+              "tm_aqc:cut_neptunium",
+              "tm_aqc:neptunium_bricks",
+              "tm_aqc:neptunium_grate",
+              "tm_aqc:neptunium_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:scale_bricks",
+              "name": "tm_aqc:itemGroup.name.scale_deco"
+            },
+            "items": [
+              "tm_aqc:scale_block",
+              "tm_aqc:smelted_scale",
+              "tm_aqc:chiselled_scale",
+              "tm_aqc:cut_scale",
+              "tm_aqc:scale_bricks",
+              "tm_aqc:scale_grate",
+              "tm_aqc:scale_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:shell_bricks",
+              "name": "tm_aqc:itemGroup.name.shell_deco"
+            },
+            "items": [
+              "tm_aqc:shell_block",
+              "tm_aqc:chiselled_shell",
+              "tm_aqc:cut_shell",
+              "tm_aqc:shell_bricks",
+              "tm_aqc:shell_grate",
+              "tm_aqc:shell_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.pearl_deco"
+            },
+            "items": [
+              "tm_aqc:pearl_block",
+              "tm_aqc:chiselled_pearl",
+              "tm_aqc:cut_pearl",
+              "tm_aqc:pearl_bricks",
+              "tm_aqc:pearl_grate",
+              "tm_aqc:pearl_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:gold_pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.gold_pearl_deco"
+            },
+            "items": [
+              "tm_aqc:gold_pearl_block",
+              "tm_aqc:chiselled_gold_pearl",
+              "tm_aqc:cut_gold_pearl",
+              "tm_aqc:gold_pearl_bricks",
+              "tm_aqc:gold_pearl_grate",
+              "tm_aqc:gold_pearl_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:black_pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.black_pearl_deco"
+            },
+            "items": [
+              "tm_aqc:black_pearl_block",
+              "tm_aqc:chiselled_black_pearl",
+              "tm_aqc:cut_black_pearl",
+              "tm_aqc:black_pearl_bricks",
+              "tm_aqc:black_pearl_grate",
+              "tm_aqc:black_pearl_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:staff",
+              "name": "itemGroup.better_on_bedrock:magic_staffs.name"
+            },
+            "items": [
+              "better_on_bedrock:staff",
+              "better_on_bedrock:flame_staff",
+              "better_on_bedrock:ice_staff",
+              "better_on_bedrock:flender_staff"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:wooden_spear",
+              "name": "itemGroup.better_on_bedrock:spears.name"
+            },
+            "items": [
+              "better_on_bedrock:wooden_spear",
+              "better_on_bedrock:stone_spear",
+              "better_on_bedrock:iron_spear",
+              "better_on_bedrock:golden_spear",
+              "better_on_bedrock:diamond_spear",
+              "better_on_bedrock:amethyst_spear",
+              "better_on_bedrock:stardust_spear"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:adventure_hat",
+              "name": "itemGroup.better_on_bedrock:wearables.name"
+            },
+            "items": [
+              "better_on_bedrock:adventure_hat",
+              "better_on_bedrock:willager_hat",
+              "better_on_bedrock:the_ardent_crystal",
+              "better_on_bedrock:schroom_hat"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:fixed_ghost_necklace",
+              "name": "itemGroup.better_on_bedrock:trophy_items.name"
+            },
+            "items": [
+              "better_on_bedrock:fixed_ghost_necklace",
+              "better_on_bedrock:broken_ghost_necklace",
+              "better_on_bedrock:ghost_necklace_fragment",
+              "better_on_bedrock:nether_amulet_empty",
+              "better_on_bedrock:nether_amulet_3_stone_yellow_red_green"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:quest_paper",
+              "name": "itemGroup.better_on_bedrock:quests_and_bounties.name"
+            },
+            "items": [
+              "better_on_bedrock:quest_paper",
+              "better_on_bedrock:quest_scroll_closed",
+              "better_on_bedrock:bought_quest"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:rune",
+              "name": "itemGroup.better_on_bedrock:runes.name"
+            },
+            "items": [
+              "better_on_bedrock:rune",
+              "better_on_bedrock:flame_rune",
+              "better_on_bedrock:ice_rune",
+              "better_on_bedrock:flender_rune"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:common_lootbag",
+              "name": "itemGroup.better_on_bedrock:lootbags.name"
+            },
+            "items": [
+              "better_on_bedrock:common_lootbag",
+              "better_on_bedrock:uncommon_lootbag",
+              "better_on_bedrock:rare_lootbag"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:willager_statue",
+              "name": "itemGroup.better_on_bedrock:trophy_blocks.name"
+            },
+            "items": [
+              "better_on_bedrock:willager_statue",
+              "better_on_bedrock:enchantaegis_trophy",
+              "better_on_bedrock:flender_trophy",
+              "better_on_bedrock:shielded_pyroclast_trophy",
+              "better_on_bedrock:withered_samurai_trophy"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:waystone_block",
+              "name": "itemGroup.better_on_bedrock:waystone.name"
+            },
+            "items": [
+              "better_on_bedrock:waystone_block",
+              "better_on_bedrock:waypoint_marker",
+              "better_on_bedrock:ender_tear"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:willager_eye",
+              "name": "itemGroup.better_on_bedrock:boss_eyes.name"
+            },
+            "items": [
+              "better_on_bedrock:willager_eye",
+              "better_on_bedrock:enchanter_eye",
+              "better_on_bedrock:flender_eye",
+              "better_on_bedrock:armored_pyroclast_eye",
+              "better_on_bedrock:samurai_eye"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:spruce_crafting_table",
+              "name": "itemGroup.better_on_bedrock:crafting_tables.name"
+            },
+            "items": [
+              "better_on_bedrock:spruce_crafting_table",
+              "better_on_bedrock:birch_crafting_table",
+              "better_on_bedrock:jungle_crafting_table",
+              "better_on_bedrock:acacia_crafting_table",
+              "better_on_bedrock:dark_oak_crafting_table",
+              "better_on_bedrock:mangrove_crafting_table",
+              "better_on_bedrock:cherry_crafting_table",
+              "better_on_bedrock:pale_crafting_table",
+              "better_on_bedrock:bamboo_crafting_table",
+              "better_on_bedrock:chorus_crafting_table",
+              "better_on_bedrock:voiding_crafting_table",
+              "better_on_bedrock:vacant_crafting_table"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:willager_plushie",
+              "name": "itemGroup.better_on_bedrock:plushies.name"
+            },
+            "items": [
+              "better_on_bedrock:willager_plushie",
+              "better_on_bedrock:enchanter_plushie",
+              "better_on_bedrock:lich_plushie"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:stardust_ingot",
+              "name": "itemGroup.better_on_bedrock:stardust.name"
+            },
+            "items": [
+              "better_on_bedrock:stardust_nugget",
+              "better_on_bedrock:stardust",
+              "better_on_bedrock:stardust_ingot"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:oak_small_log",
+              "name": "itemGroup.better_on_bedrock:thin_logs.name"
+            },
+            "items": [
+              "better_on_bedrock:oak_small_log",
+              "better_on_bedrock:spruce_small_log",
+              "better_on_bedrock:birch_small_log",
+              "better_on_bedrock:jungle_small_log",
+              "better_on_bedrock:acacia_small_log",
+              "better_on_bedrock:dark_oak_small_log",
+              "better_on_bedrock:mangrove_small_log",
+              "better_on_bedrock:cherry_small_log",
+              "better_on_bedrock:pale_small_log",
+              "better_on_bedrock:crimson_small_log",
+              "better_on_bedrock:warped_small_log",
+              "better_on_bedrock:voiding_small_log",
+              "better_on_bedrock:vacant_small_log",
+              "better_on_bedrock:chorus_small_log"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "better_on_bedrock:chorus_grass",
+              "name": "itemGroup.better_on_bedrock:end_grass.name"
+            },
+            "items": [
+              "better_on_bedrock:fall_nylium",
+              "better_on_bedrock:shroom_nylium",
+              "better_on_bedrock:shrub_nylium",
+              "better_on_bedrock:chorus_grass",
+              "better_on_bedrock:void_grass"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:floret_hatchet",
+              "name": "mnra_cata:itemGroup.name.elemental_weapon"
+            },
+            "items": [
+              "mnra_cata:floret_hatchet",
+              "mnra_cata:everbloom",
+              "mnra_cata:morningstar",
+              "mnra_cata:blazing_excalibur",
+              "mnra_cata:moonsickle"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "mnra_cata:itemGroup.name.trinkets",
+              "icon": "mnra_cata:stellar_ring"
+            },
+            "items": [
+              "mnra_cata:stellar_ring",
+              "mnra_cata:floret_ring",
+              "mnra_cata:verdant_ring",
+              "mnra_cata:sun_ring",
+              "mnra_cata:twilight_ring",
+              "mnra_cata:solar_ring",
+              "mnra_cata:phantasma_ring",
+              "mnra_cata:stellar_necklace",
+              "mnra_cata:floret_necklace",
+              "mnra_cata:terror_necklace",
+              "mnra_cata:verdant_necklace",
+              "mnra_cata:phantasma_necklace",
+              "mnra_cata:twilight_necklace",
+              "mnra_cata:starfall_necklace",
+              "mnra_cata:solar_necklace",
+              "mnra_cata:sun_necklace",
+              "mnra_cata:stellar_charm",
+              "mnra_cata:floret_charm",
+              "mnra_cata:solar_charm",
+              "mnra_cata:verdant_aegis",
+              "mnra_cata:celestial_aegis",
+              "mnra_cata:astro_jelly_in_a_bottle",
+              "mnra_cata:calibrated_stellar_core",
+              "mnra_cata:terror_eye",
+              "mnra_cata:sun_engine"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:wooden_greatsword",
+              "name": "mnra_cata:itemGroup.name.greatsword"
+            },
+            "items": [
+              "mnra_cata:wooden_greatsword",
+              "mnra_cata:stone_greatsword",
+              "mnra_cata:copper_greatsword",
+              "mnra_cata:iron_greatsword",
+              "mnra_cata:gold_greatsword",
+              "mnra_cata:diamond_greatsword",
+              "mnra_cata:netherite_greatsword",
+              "mnra_cata:platinum_greatsword",
+              "mnra_cata:stellar_greatsword",
+              "mnra_cata:phantasma_greatsword",
+              "mnra_cata:exodius_greatsword",
+              "mnra_cata:ecliptic_greatsword"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:twilight_edge",
+              "name": "mnra_cata:itemGroup.name.miscellaneous_weapon"
+            },
+            "items": [
+              "mnra_cata:twilight_edge",
+              "mnra_cata:sun_striker_claymore",
+              "mnra_cata:plasm_dagger",
+              "mnra_cata:platinum_halberd",
+              "mnra_cata:stellar_mace",
+              "mnra_cata:sunlight",
+              "mnra_cata:star_fallen",
+              "mnra_cata:star_fracture"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "mnra_cata:itemGroup.name.flawless_item",
+              "icon": "mnra_cata:verdant_greatsword"
+            },
+            "items": [
+              "mnra_cata:verdant_greatsword",
+              "mnra_cata:divine_scythe_of_heaven"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:verdant_blade",
+              "name": "mnra_cata:itemGroup.name.boss_weapon"
+            },
+            "items": [
+              "mnra_cata:verdant_blade",
+              "mnra_cata:phoenix_blade"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "mnra_cata:itemGroup.name.miscellaneous_shooters",
+              "icon": "mnra_cata:ray_gun"
+            },
+            "items": [
+              "mnra_cata:ray_gun",
+              "mnra_cata:spore_thrower",
+              "mnra_cata:terror_skull_launcher"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:recall_mirror",
+              "name": "mnra_cata:itemGroup.name.mirrors"
+            },
+            "items": [
+              "mnra_cata:recall_mirror",
+              "mnra_cata:starbound_mirror",
+              "mnra_cata:twinbound_mirror"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:flare_stone_brick",
+              "name": "mnra_cata:itemGroup.name.flare_stone"
+            },
+            "items": [
+              "mnra_cata:flare_stone_brick",
+              "mnra_cata:cracked_flare_stone_brick",
+              "mnra_cata:chiseled_flare_stone_brick",
+              "mnra_cata:chiseled_flare_stone",
+              "mnra_cata:flare_stone_pillar",
+              "mnra_cata:polished_flare_stone",
+              "mnra_cata:flare_stone_tiles",
+              "mnra_cata:flare_stone_bulb",
+              "mnra_cata:flare_stone_chain",
+              "mnra_cata:flare_stone_lantern",
+              "mnra_cata:flare_stone_geyser"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "mnra_cata:gneiss_brick",
+              "name": "mnra_cata:itemGroup.name.gneiss"
+            },
+            "items": [
+              "mnra_cata:gneiss_brick",
+              "mnra_cata:cracked_gneiss_brick",
+              "mnra_cata:smooth_gneiss_brick",
+              "mnra_cata:cut_gneiss",
+              "mnra_cata:gneiss_grate",
+              "mnra_cata:gneiss_chain",
+              "mnra_cata:gneiss_lantern"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:aetherium_ingot",
+              "name": "panascais_common:ingots"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:sapphire",
+              "name": "panascais_common:gems"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:the_deep_mistake_scroll",
+              "name": "panascais_common:scrolls"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:trial_of_water_rune",
+              "name": "panascais_common:runes"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:raw_aetherium",
+              "name": "panascais_common:raw_ores"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:blue_amethyst_lamp",
+              "name": "panascais_common:amethyst_lamps"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:blue_amethyst_shard",
+              "name": "panascais_common:amethyst_shards"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:sandstone_sledge",
+              "name": "panascais_common:sledges"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:ancient_sandstone_statue",
+              "name": "panascais_common:statues"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:mummy_treasure_chest",
+              "name": "panascais_common:treasure_chests"
+            },
+            "items": []
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:blue_amethyst_block",
+              "name": "panascais_common:amethyst_blocks"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:budding_blue_amethyst",
+              "name": "panascais_common:budding_amethysts"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:blue_amethyst_cluster",
+              "name": "panascais_common:amethyst_clusters"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:large_blue_amethyst_bud",
+              "name": "panascais_common:amethyst_buds"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:lush_bush",
+              "name": "panascais_common:mini_trees"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:cobweb",
+              "name": "panascais_common:webs"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:stone_pebbles",
+              "name": "panascais_common:pebbles"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:turtle_skeleton",
+              "name": "panascais_common:skeletons"
+            },
+            "items": []
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:cured_addax_meat",
+              "name": "panascais_common:cured_food"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:fermented_molten_pepper_mug",
+              "name": "panascais_common:fermented_drinks"
+            },
+            "items": []
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:raw_aetherium_block",
+              "name": "panascais_common:raw_mineral_blocks"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:aetherium_block",
+              "name": "panascais_common:mineral_blocks"
+            },
+            "items": []
+          },
+          {
+            "group_identifier": {
+              "icon": "panascais_caves:packed_ice_bricks",
+              "name": "panascais_common:packed_ice"
+            },
+            "items": []
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
               "icon": "rev:mauler",
               "name": "rev:guns_name"
             },
@@ -52,6 +1346,2718 @@
               "rev:flintlock_bullets",
               "rev:mortar_bullet",
               "rev:shotgun_shells"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "oreville_rb:ubxsvme",
+              "name": "oreville_rb:nxiufw_nhgyven"
+            },
+            "items": [
+              "oreville_rb:lrxouxw",
+              "oreville_rb:ubxsvme",
+              "oreville_rb:zpwbyco",
+              "oreville_rb:igqbujz",
+              "oreville_rb:vzzgido",
+              "oreville_rb:lksmfpz"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "dungeons:trial_key_stone",
+              "name": "dungeons:itemGroup.name.trialtotemKeys"
+            },
+            "items": [
+              "dungeons:trial_key_stone",
+              "dungeons:trial_key_mossy",
+              "dungeons:trial_key_calcite",
+              "dungeons:trial_key_void"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:redstone_key",
+              "name": "dungeons:itemGroup.name.bossKeys"
+            },
+            "items": [
+              "dungeons:redstone_key",
+              "dungeons:nameless_key",
+              "dungeons:questionable_key",
+              "dungeons:wretched_key",
+              "dungeons:corrupted_key",
+              "dungeons:jungle_key",
+              "dungeons:tempest_key",
+              "dungeons:ancient_key",
+              "dungeons:obsidian_key",
+              "dungeons:heart_key",
+              "dungeons:void_key",
+              "dungeons:blaze_key",
+              "dungeons:echo_key",
+              "dungeons:skeleton_key"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:enchanted_rune_a",
+              "name": "dungeons:itemGroup.name.enchantedRunes"
+            },
+            "items": [
+              "dungeons:enchanted_rune_a",
+              "dungeons:enchanted_rune_c",
+              "dungeons:enchanted_rune_i",
+              "dungeons:enchanted_rune_o",
+              "dungeons:enchanted_rune_p",
+              "dungeons:enchanted_rune_r",
+              "dungeons:enchanted_rune_s",
+              "dungeons:enchanted_rune_t",
+              "dungeons:enchanted_rune_u"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:redstone_painting_block",
+              "name": "dungeons:itemGroup.name.dungeonsPainting"
+            },
+            "items": [
+              "dungeons:redstone_painting_block",
+              "dungeons:nameless_painting_block",
+              "dungeons:mooshroom_painting_block",
+              "dungeons:wraith_painting_block",
+              "dungeons:cauldron_painting_block",
+              "dungeons:abomination_painting_block",
+              "dungeons:tempest_painting_block",
+              "dungeons:guardian_painting_block",
+              "dungeons:obsidian_painting_block",
+              "dungeons:heart_painting_block",
+              "dungeons:wildfire_painting_block",
+              "dungeons:endersent_painting_block",
+              "dungeons:vengeful_painting_block",
+              "dungeons:spooky_painting_block"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:redstone_ministrosity_statue",
+              "name": "dungeons:itemGroup.name.bossTrophies"
+            },
+            "items": [
+              "dungeons:redstone_ministrosity_statue",
+              "dungeons:staff_statue",
+              "dungeons:corrupted_core",
+              "dungeons:ice_crown_replica",
+              "dungeons:benevolent_brew_statue",
+              "dungeons:abomination_bloom",
+              "dungeons:whirlwindgig",
+              "dungeons:enormous_eyeball",
+              "dungeons:obsidian_claw",
+              "dungeons:silver_crown",
+              "dungeons:blaze_cage",
+              "dungeons:enchanted_pearl",
+              "dungeons:eternal_brazier",
+              "dungeons:skullager"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:redstone_monstrosity_plushie",
+              "name": "dungeons:itemGroup.name.bossPlushies"
+            },
+            "items": [
+              "dungeons:redstone_monstrosity_plushie",
+              "dungeons:mooshroom_monstrosity_plushie",
+              "dungeons:corrupted_cauldron_plushie",
+              "dungeons:jungle_abomination_plushie",
+              "dungeons:tempest_golem_plushie",
+              "dungeons:ancient_guardian_plushie",
+              "dungeons:obsidian_monstrosity_plushie"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "dungeons:katana",
+              "name": "dungeons:itemGroup.name.commonMelee"
+            },
+            "items": [
+              "dungeons:sword",
+              "dungeons:katana",
+              "dungeons:claymore",
+              "dungeons:cutlass",
+              "dungeons:daggers",
+              "dungeons:rapier",
+              "dungeons:sickles",
+              "dungeons:glaive",
+              "dungeons:battlestaff",
+              "dungeons:sharpened_pickaxe",
+              "dungeons:axe",
+              "dungeons:double_axe",
+              "dungeons:rush_spear",
+              "dungeons:coral_blade",
+              "dungeons:tempest_knife",
+              "dungeons:soul_knife",
+              "dungeons:soul_scythe",
+              "dungeons:gauntlets",
+              "dungeons:whip",
+              "dungeons:broken_sawblade",
+              "dungeons:great_hammer",
+              "dungeons:mace",
+              "dungeons:anchor",
+              "dungeons:bone_club",
+              "dungeons:backstabber",
+              "dungeons:void_touched_blades",
+              "dungeons:obsidian_claymore"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:dark_katana",
+              "name": "dungeons:itemGroup.name.uniqueMelee"
+            },
+            "items": [
+              "dungeons:diamond_sword",
+              "dungeons:hawkbrand",
+              "dungeons:dark_katana",
+              "dungeons:masters_katana",
+              "dungeons:broadsword",
+              "dungeons:great_axeblade",
+              "dungeons:heartstealer",
+              "dungeons:dancers_sword",
+              "dungeons:nameless_blade",
+              "dungeons:frost_knives",
+              "dungeons:moon_daggers",
+              "dungeons:sheer_daggers",
+              "dungeons:bee_stinger",
+              "dungeons:freezing_foil",
+              "dungeons:the_last_laugh",
+              "dungeons:nightmares_bite",
+              "dungeons:grave_bane",
+              "dungeons:venom_glaive",
+              "dungeons:battlestaff_of_terror",
+              "dungeons:growing_staff",
+              "dungeons:sharpened_diamond_pickaxe",
+              "dungeons:the_monkey_motivator",
+              "dungeons:firebrand",
+              "dungeons:highlands_axe",
+              "dungeons:cursed_axe",
+              "dungeons:whirlwind",
+              "dungeons:fortune_spear",
+              "dungeons:whispering_spear",
+              "dungeons:sponge_striker",
+              "dungeons:chill_gale_knife",
+              "dungeons:resolute_tempest_knife",
+              "dungeons:eternal_knife",
+              "dungeons:truthseeker",
+              "dungeons:frost_scythe",
+              "dungeons:jailors_scythe",
+              "dungeons:fighters_bindings",
+              "dungeons:maulers",
+              "dungeons:soul_fists",
+              "dungeons:vine_whip",
+              "dungeons:mechanised_sawblade",
+              "dungeons:hammer_of_gravity",
+              "dungeons:stormlander",
+              "dungeons:suns_grace",
+              "dungeons:flail",
+              "dungeons:encrusted_anchor",
+              "dungeons:bone_cudgel",
+              "dungeons:swift_striker",
+              "dungeons:the_beginning_and_the_end",
+              "dungeons:starless_night"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:sinister_sword",
+              "name": "dungeons:itemGroup.name.seasonalMelee"
+            },
+            "items": [
+              "dungeons:sinister_sword",
+              "dungeons:skull_scythe",
+              "dungeons:bonehead_hammer",
+              "dungeons:cackling_broom",
+              "dungeons:spine_chill_spear",
+              "dungeons:sparkler"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:longbow",
+              "name": "dungeons:itemGroup.name.commonRanged"
+            },
+            "items": [
+              "dungeons:longbow",
+              "dungeons:snow_bow",
+              "dungeons:hunting_bow",
+              "dungeons:soul_bow",
+              "dungeons:wind_bow",
+              "dungeons:bubble_bow",
+              "dungeons:twisting_vine_bow",
+              "dungeons:power_bow",
+              "dungeons:shortbow",
+              "dungeons:trickbow",
+              "dungeons:void_bow",
+              "dungeons:burst_crossbow",
+              "dungeons:soul_crossbow",
+              "dungeons:heavy_crossbow",
+              "dungeons:exploding_crossbow",
+              "dungeons:scatter_crossbow",
+              "dungeons:dual_crossbows",
+              "dungeons:rapid_crossbow",
+              "dungeons:cog_crossbow",
+              "dungeons:harpoon_crossbow",
+              "dungeons:shadow_crossbow"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:red_snake",
+              "name": "dungeons:itemGroup.name.uniqueRanged"
+            },
+            "items": [
+              "dungeons:red_snake",
+              "dungeons:guardian_bow",
+              "dungeons:bonebow",
+              "dungeons:twin_bow",
+              "dungeons:winters_touch",
+              "dungeons:hunters_promise",
+              "dungeons:masters_bow",
+              "dungeons:ancient_bow",
+              "dungeons:nocturnal_bow",
+              "dungeons:bow_of_lost_souls",
+              "dungeons:burst_gale_bow",
+              "dungeons:echo_of_the_valley",
+              "dungeons:bubble_burster",
+              "dungeons:weeping_vine_bow",
+              "dungeons:elite_power_bow",
+              "dungeons:sabrewing",
+              "dungeons:purple_storm",
+              "dungeons:mechanical_shortbow",
+              "dungeons:love_spell_bow",
+              "dungeons:the_pink_scoundrel",
+              "dungeons:the_green_menace",
+              "dungeons:call_of_the_void",
+              "dungeons:azure_seeker",
+              "dungeons:the_slicer",
+              "dungeons:corrupted_crossbow",
+              "dungeons:soul_hunter_crossbow",
+              "dungeons:feral_soul_crossbow",
+              "dungeons:voidcaller",
+              "dungeons:doom_crossbow",
+              "dungeons:slayer_crossbow",
+              "dungeons:firebolt_thrower",
+              "dungeons:imploding_crossbow",
+              "dungeons:harp_crossbow",
+              "dungeons:lightning_harp_crossbow",
+              "dungeons:baby_crossbows",
+              "dungeons:spellbound_crossbows",
+              "dungeons:auto_crossbow",
+              "dungeons:butterfly_crossbow",
+              "dungeons:pride_of_the_piglins",
+              "dungeons:nautical_crossbow",
+              "dungeons:veiled_crossbow"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:haunted_bow",
+              "name": "dungeons:itemGroup.name.seasonalRanged"
+            },
+            "items": [
+              "dungeons:haunted_bow",
+              "dungeons:webbed_bow",
+              "dungeons:phantom_bow",
+              "dungeons:gloopy_bow",
+              "dungeons:sugar_rush",
+              "dungeons:shrieking_crossbow"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:dark_helmet",
+              "name": "dungeons:itemGroup.name.commonArmours"
+            },
+            "items": [
+              "dungeons:dark_helmet",
+              "dungeons:dark_chestplate",
+              "dungeons:dark_leggings",
+              "dungeons:dark_boots",
+              "dungeons:thief_helmet",
+              "dungeons:thief_chestplate",
+              "dungeons:thief_leggings",
+              "dungeons:thief_boots",
+              "dungeons:grim_helmet",
+              "dungeons:grim_chestplate",
+              "dungeons:grim_leggings",
+              "dungeons:grim_boots",
+              "dungeons:ghostly_helmet",
+              "dungeons:ghostly_chestplate",
+              "dungeons:ghostly_leggings",
+              "dungeons:ghostly_boots",
+              "dungeons:wolf_helmet",
+              "dungeons:wolf_chestplate",
+              "dungeons:wolf_leggings",
+              "dungeons:wolf_boots",
+              "dungeons:snow_helmet",
+              "dungeons:snow_chestplate",
+              "dungeons:snow_leggings",
+              "dungeons:snow_boots",
+              "dungeons:plate_helmet",
+              "dungeons:plate_chestplate",
+              "dungeons:plate_leggings",
+              "dungeons:plate_boots",
+              "dungeons:evocation_helmet",
+              "dungeons:evocation_chestplate",
+              "dungeons:evocation_leggings",
+              "dungeons:evocation_boots",
+              "dungeons:ocelot_helmet",
+              "dungeons:ocelot_chestplate",
+              "dungeons:ocelot_leggings",
+              "dungeons:ocelot_boots",
+              "dungeons:root_rot_helmet",
+              "dungeons:root_rot_chestplate",
+              "dungeons:root_rot_leggings",
+              "dungeons:root_rot_boots",
+              "dungeons:emerald_helmet",
+              "dungeons:emerald_chestplate",
+              "dungeons:emerald_leggings",
+              "dungeons:emerald_boots",
+              "dungeons:turtle_helmet",
+              "dungeons:turtle_chestplate",
+              "dungeons:turtle_leggings",
+              "dungeons:turtle_boots",
+              "dungeons:squid_helmet",
+              "dungeons:squid_chestplate",
+              "dungeons:squid_leggings",
+              "dungeons:squid_boots",
+              "dungeons:sprout_helmet",
+              "dungeons:sprout_chestplate",
+              "dungeons:sprout_leggings",
+              "dungeons:sprout_boots",
+              "dungeons:piglin_helmet",
+              "dungeons:piglin_chestplate",
+              "dungeons:piglin_leggings",
+              "dungeons:piglin_boots",
+              "dungeons:guard_helmet",
+              "dungeons:guard_chestplate",
+              "dungeons:guard_leggings",
+              "dungeons:guard_boots",
+              "dungeons:entertainer_helmet",
+              "dungeons:entertainer_chestplate",
+              "dungeons:entertainer_leggings",
+              "dungeons:entertainer_boots",
+              "dungeons:shulker_helmet",
+              "dungeons:shulker_chestplate",
+              "dungeons:shulker_leggings",
+              "dungeons:shulker_boots",
+              "dungeons:teleportation_helmet",
+              "dungeons:teleportation_chestplate",
+              "dungeons:teleportation_leggings",
+              "dungeons:teleportation_boots",
+              "dungeons:champions_helmet",
+              "dungeons:champions_chestplate",
+              "dungeons:champions_leggings",
+              "dungeons:champions_boots",
+              "dungeons:phantom_helmet",
+              "dungeons:phantom_chestplate",
+              "dungeons:phantom_leggings",
+              "dungeons:phantom_boots",
+              "dungeons:beenest_helmet",
+              "dungeons:beenest_chestplate",
+              "dungeons:beenest_leggings",
+              "dungeons:beenest_boots",
+              "dungeons:soul_helmet",
+              "dungeons:soul_chestplate",
+              "dungeons:soul_leggings",
+              "dungeons:soul_boots",
+              "dungeons:battle_helmet",
+              "dungeons:battle_chestplate",
+              "dungeons:battle_leggings",
+              "dungeons:battle_boots",
+              "dungeons:spelunker_helmet",
+              "dungeons:spelunker_chestplate",
+              "dungeons:spelunker_leggings",
+              "dungeons:spelunker_boots",
+              "dungeons:mercenary_helmet",
+              "dungeons:mercenary_chestplate",
+              "dungeons:mercenary_leggings",
+              "dungeons:mercenary_boots",
+              "dungeons:climbing_helmet",
+              "dungeons:climbing_chestplate",
+              "dungeons:climbing_leggings",
+              "dungeons:climbing_boots",
+              "dungeons:reinforced_mail_helmet",
+              "dungeons:reinforced_mail_chestplate",
+              "dungeons:reinforced_mail_leggings",
+              "dungeons:reinforced_mail_boots",
+              "dungeons:scale_mail_helmet",
+              "dungeons:scale_mail_chestplate",
+              "dungeons:scale_mail_leggings",
+              "dungeons:scale_mail_boots",
+              "dungeons:hunters_helmet",
+              "dungeons:hunters_chestplate",
+              "dungeons:hunters_leggings",
+              "dungeons:hunters_boots",
+              "dungeons:mystery_helmet",
+              "dungeons:mystery_chestplate",
+              "dungeons:mystery_leggings",
+              "dungeons:mystery_boots"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:titans_shroud_helmet",
+              "name": "dungeons:itemGroup.name.uniqueArmours"
+            },
+            "items": [
+              "dungeons:titans_shroud_helmet",
+              "dungeons:titans_shroud_chestplate",
+              "dungeons:titans_shroud_leggings",
+              "dungeons:titans_shroud_boots",
+              "dungeons:spider_helmet",
+              "dungeons:spider_chestplate",
+              "dungeons:spider_leggings",
+              "dungeons:spider_boots",
+              "dungeons:wither_helmet",
+              "dungeons:wither_chestplate",
+              "dungeons:wither_leggings",
+              "dungeons:wither_boots",
+              "dungeons:ghost_kindler_helmet",
+              "dungeons:ghost_kindler_chestplate",
+              "dungeons:ghost_kindler_leggings",
+              "dungeons:ghost_kindler_boots",
+              "dungeons:black_wolf_helmet",
+              "dungeons:black_wolf_chestplate",
+              "dungeons:black_wolf_leggings",
+              "dungeons:black_wolf_boots",
+              "dungeons:fox_helmet",
+              "dungeons:fox_chestplate",
+              "dungeons:fox_leggings",
+              "dungeons:fox_boots",
+              "dungeons:frost_helmet",
+              "dungeons:frost_chestplate",
+              "dungeons:frost_leggings",
+              "dungeons:frost_boots",
+              "dungeons:full_metal_helmet",
+              "dungeons:full_metal_chestplate",
+              "dungeons:full_metal_leggings",
+              "dungeons:full_metal_boots",
+              "dungeons:ember_helmet",
+              "dungeons:ember_chestplate",
+              "dungeons:ember_leggings",
+              "dungeons:ember_boots",
+              "dungeons:verdant_helmet",
+              "dungeons:verdant_chestplate",
+              "dungeons:verdant_leggings",
+              "dungeons:verdant_boots",
+              "dungeons:shadow_walker_helmet",
+              "dungeons:shadow_walker_chestplate",
+              "dungeons:shadow_walker_leggings",
+              "dungeons:shadow_walker_boots",
+              "dungeons:black_spot_helmet",
+              "dungeons:black_spot_chestplate",
+              "dungeons:black_spot_leggings",
+              "dungeons:black_spot_boots",
+              "dungeons:gilded_glory_helmet",
+              "dungeons:gilded_glory_chestplate",
+              "dungeons:gilded_glory_leggings",
+              "dungeons:gilded_glory_boots",
+              "dungeons:opulent_helmet",
+              "dungeons:opulent_chestplate",
+              "dungeons:opulent_leggings",
+              "dungeons:opulent_boots",
+              "dungeons:nimble_turtle_helmet",
+              "dungeons:nimble_turtle_chestplate",
+              "dungeons:nimble_turtle_leggings",
+              "dungeons:nimble_turtle_boots",
+              "dungeons:glow_squid_helmet",
+              "dungeons:glow_squid_chestplate",
+              "dungeons:glow_squid_leggings",
+              "dungeons:glow_squid_boots",
+              "dungeons:living_vines_helmet",
+              "dungeons:living_vines_chestplate",
+              "dungeons:living_vines_leggings",
+              "dungeons:living_vines_boots",
+              "dungeons:golden_piglin_helmet",
+              "dungeons:golden_piglin_chestplate",
+              "dungeons:golden_piglin_leggings",
+              "dungeons:golden_piglin_boots",
+              "dungeons:ender_helmet",
+              "dungeons:ender_chestplate",
+              "dungeons:ender_leggings",
+              "dungeons:ender_boots",
+              "dungeons:troubadour_helmet",
+              "dungeons:troubadour_chestplate",
+              "dungeons:troubadour_leggings",
+              "dungeons:troubadour_boots",
+              "dungeons:sturdy_shulker_helmet",
+              "dungeons:sturdy_shulker_chestplate",
+              "dungeons:sturdy_shulker_leggings",
+              "dungeons:sturdy_shulker_boots",
+              "dungeons:unstable_helmet",
+              "dungeons:unstable_chestplate",
+              "dungeons:unstable_leggings",
+              "dungeons:unstable_boots",
+              "dungeons:heros_helmet",
+              "dungeons:heros_chestplate",
+              "dungeons:heros_leggings",
+              "dungeons:heros_boots",
+              "dungeons:frost_bite_helmet",
+              "dungeons:frost_bite_chestplate",
+              "dungeons:frost_bite_leggings",
+              "dungeons:frost_bite_boots",
+              "dungeons:beehive_helmet",
+              "dungeons:beehive_chestplate",
+              "dungeons:beehive_leggings",
+              "dungeons:beehive_boots",
+              "dungeons:souldancer_helmet",
+              "dungeons:souldancer_chestplate",
+              "dungeons:souldancer_leggings",
+              "dungeons:souldancer_boots",
+              "dungeons:splendid_helmet",
+              "dungeons:splendid_chestplate",
+              "dungeons:splendid_leggings",
+              "dungeons:splendid_boots",
+              "dungeons:cave_crawler_helmet",
+              "dungeons:cave_crawler_chestplate",
+              "dungeons:cave_crawler_leggings",
+              "dungeons:cave_crawler_boots",
+              "dungeons:renegade_helmet",
+              "dungeons:renegade_chestplate",
+              "dungeons:renegade_leggings",
+              "dungeons:renegade_boots",
+              "dungeons:rugged_climbing_helmet",
+              "dungeons:rugged_climbing_chestplate",
+              "dungeons:rugged_climbing_leggings",
+              "dungeons:rugged_climbing_boots",
+              "dungeons:goat_helmet",
+              "dungeons:goat_chestplate",
+              "dungeons:goat_leggings",
+              "dungeons:goat_boots",
+              "dungeons:stalwart_helmet",
+              "dungeons:stalwart_chestplate",
+              "dungeons:stalwart_leggings",
+              "dungeons:stalwart_boots",
+              "dungeons:highland_helmet",
+              "dungeons:highland_chestplate",
+              "dungeons:highland_leggings",
+              "dungeons:highland_boots",
+              "dungeons:archers_helmet",
+              "dungeons:archers_chestplate",
+              "dungeons:archers_leggings",
+              "dungeons:archers_boots"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:spooky_gourdian_helmet",
+              "name": "dungeons:itemGroup.name.seasonalArmours"
+            },
+            "items": [
+              "dungeons:spooky_gourdian_helmet",
+              "dungeons:spooky_gourdian_chestplate",
+              "dungeons:spooky_gourdian_leggings",
+              "dungeons:spooky_gourdian_boots",
+              "dungeons:cloaked_skull_helmet",
+              "dungeons:cloaked_skull_chestplate",
+              "dungeons:cloaked_skull_leggings",
+              "dungeons:cloaked_skull_boots",
+              "dungeons:cauldron_helmet",
+              "dungeons:cauldron_chestplate",
+              "dungeons:cauldron_leggings",
+              "dungeons:cauldron_boots",
+              "dungeons:hungry_horror_helmet",
+              "dungeons:hungry_horror_chestplate",
+              "dungeons:hungry_horror_leggings",
+              "dungeons:hungry_horror_boots",
+              "dungeons:hungriest_horror_helmet",
+              "dungeons:hungriest_horror_chestplate",
+              "dungeons:hungriest_horror_leggings",
+              "dungeons:hungriest_horror_boots",
+              "dungeons:sweet_tooth_helmet",
+              "dungeons:sweet_tooth_chestplate",
+              "dungeons:sweet_tooth_leggings",
+              "dungeons:sweet_tooth_boots"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:shock_powder",
+              "name": "dungeons:itemGroup.name.commonArtefact"
+            },
+            "items": [
+              "dungeons:satchel_of_elements",
+              "dungeons:ice_wand",
+              "dungeons:lightning_rod",
+              "dungeons:harvester",
+              "dungeons:scatter_mines",
+              "dungeons:blast_fungus",
+              "dungeons:eye_of_the_guardian",
+              "dungeons:corrupted_beacon",
+              "dungeons:updraft_tome",
+              "dungeons:spinblade",
+              "dungeons:soul_healer",
+              "dungeons:totem_of_regeneration",
+              "dungeons:iron_hide_amulet",
+              "dungeons:death_cap_mushroom",
+              "dungeons:boots_of_swiftness",
+              "dungeons:ghost_cloak",
+              "dungeons:light_feather",
+              "dungeons:totem_of_shielding",
+              "dungeons:totem_of_casting",
+              "dungeons:totem_of_soul_protection",
+              "dungeons:satchel_of_snacks",
+              "dungeons:satchel_of_elixirs",
+              "dungeons:powershaker",
+              "dungeons:shadow_shifter",
+              "dungeons:shock_powder",
+              "dungeons:reeling_rod",
+              "dungeons:gong_of_weakening",
+              "dungeons:wind_horn",
+              "dungeons:corrupted_seeds",
+              "dungeons:love_medallion",
+              "dungeons:enchanters_tome",
+              "dungeons:tasty_bone",
+              "dungeons:wonderful_wheat",
+              "dungeons:enchanted_grass",
+              "dungeons:buzzy_nest",
+              "dungeons:golem_kit",
+              "dungeons:soul_lantern",
+              "dungeons:vexing_chant",
+              "dungeons:firework_quiver",
+              "dungeons:flaming_quiver",
+              "dungeons:torment_quiver",
+              "dungeons:thundering_quiver",
+              "dungeons:harpoon_quiver",
+              "dungeons:void_quiver",
+              "dungeons:tome_of_duplication"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:rare_satchel_of_elements",
+              "name": "dungeons:itemGroup.name.rareArtefact"
+            },
+            "items": [
+              "dungeons:rare_satchel_of_elements",
+              "dungeons:rare_ice_wand",
+              "dungeons:rare_lightning_rod",
+              "dungeons:rare_harvester",
+              "dungeons:rare_scatter_mines",
+              "dungeons:rare_blast_fungus",
+              "dungeons:rare_eye_of_the_guardian",
+              "dungeons:rare_corrupted_beacon",
+              "dungeons:rare_updraft_tome",
+              "dungeons:rare_spinblade",
+              "dungeons:rare_soul_healer",
+              "dungeons:rare_totem_of_regeneration",
+              "dungeons:rare_iron_hide_amulet",
+              "dungeons:rare_death_cap_mushroom",
+              "dungeons:rare_boots_of_swiftness",
+              "dungeons:rare_ghost_cloak",
+              "dungeons:rare_light_feather",
+              "dungeons:rare_totem_of_shielding",
+              "dungeons:rare_totem_of_casting",
+              "dungeons:rare_totem_of_soul_protection",
+              "dungeons:rare_satchel_of_snacks",
+              "dungeons:rare_satchel_of_elixirs",
+              "dungeons:rare_powershaker",
+              "dungeons:rare_shadow_shifter",
+              "dungeons:rare_shock_powder",
+              "dungeons:rare_reeling_rod",
+              "dungeons:rare_gong_of_weakening",
+              "dungeons:rare_wind_horn",
+              "dungeons:rare_corrupted_seeds",
+              "dungeons:rare_love_medallion",
+              "dungeons:rare_enchanters_tome",
+              "dungeons:rare_tasty_bone",
+              "dungeons:rare_wonderful_wheat",
+              "dungeons:rare_enchanted_grass",
+              "dungeons:rare_buzzy_nest",
+              "dungeons:rare_golem_kit",
+              "dungeons:rare_soul_lantern",
+              "dungeons:rare_vexing_chant",
+              "dungeons:rare_firework_quiver",
+              "dungeons:rare_flaming_quiver",
+              "dungeons:rare_torment_quiver",
+              "dungeons:rare_thundering_quiver",
+              "dungeons:rare_harpoon_quiver",
+              "dungeons:rare_void_quiver",
+              "dungeons:rare_tome_of_duplication",
+              "dungeons:corrupted_pumpkin"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:firework_arrow",
+              "name": "dungeons:itemGroup.name.customArrows"
+            },
+            "items": [
+              "dungeons:firework_arrow",
+              "dungeons:burning_arrow",
+              "dungeons:torment_arrow",
+              "dungeons:thundering_arrow",
+              "dungeons:harpoon_arrow",
+              "dungeons:void_arrow"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "dungeons:redstone_monstrosity_explorer_map",
+              "name": "dungeons:itemGroup.name.explorerMaps"
+            },
+            "items": [
+              "dungeons:redstone_monstrosity_explorer_map",
+              "dungeons:nameless_one_explorer_map",
+              "dungeons:mooshroom_monstrosity_explorer_map",
+              "dungeons:wretched_wraith_explorer_map",
+              "dungeons:corrupted_cauldron_explorer_map",
+              "dungeons:jungle_abomination_explorer_map",
+              "dungeons:tempest_golem_explorer_map",
+              "dungeons:ancient_guardian_explorer_map",
+              "dungeons:obsidian_monstrosity_explorer_map",
+              "dungeons:arch_illager_explorer_map",
+              "dungeons:enchanted_explorer_map"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "dungeons:grim_guardian_spawn",
+              "name": "dungeons:itemGroup.name.ancientSpawners"
+            },
+            "items": [
+              "dungeons:abyssal_eye_spawn",
+              "dungeons:abominable_weaver_spawn",
+              "dungeons:ancient_terror_spawn",
+              "dungeons:barrage_spawn",
+              "dungeons:cursed_presence_spawn",
+              "dungeons:first_enchanter_spawn",
+              "dungeons:frostwarden_spawn",
+              "dungeons:grim_guardian_spawn",
+              "dungeons:haunted_caller_spawn",
+              "dungeons:oozing_menace_spawn",
+              "dungeons:pestilent_conjurer_spawn",
+              "dungeons:scuttling_torment_spawn",
+              "dungeons:seeking_flame_spawn",
+              "dungeons:solemn_giant_spawn",
+              "dungeons:the_swarm_spawn",
+              "dungeons:the_tiny_scourge_spawn",
+              "dungeons:the_tower_spawn",
+              "dungeons:the_unending_spawn",
+              "dungeons:thundering_growth_spawn",
+              "dungeons:unbreakable_one_spawn",
+              "dungeons:unstoppable_tusk_spawn",
+              "dungeons:vengeful_mariner_spawn",
+              "dungeons:vigilant_scoundrel_spawn",
+              "dungeons:watcher_of_the_end_spawn",
+              "dungeons:windbeard_spawn",
+              "dungeons:ancient_mooshroom_spawn"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "dungeons:trial_totem_stone",
+              "name": "dungeons:itemGroup.name.trialTotems"
+            },
+            "items": [
+              "dungeons:trial_totem_stone",
+              "dungeons:trial_totem_mossy_stone",
+              "dungeons:trial_totem_calcite",
+              "dungeons:trial_totem_void",
+              "dungeons:trial_totem_blackstone"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.planks"
+            },
+            "items": [
+              "ntk:corrupted_oak_planks",
+              "ntk:mossy_willow_planks",
+              "ntk:overgrown_jungle_planks",
+              "ntk:mosshroom_planks"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.walls"
+            },
+            "items": [
+              "ntk:stone_wall",
+              "ntk:polished_stone_wall",
+              "ntk:stone_tile_wall",
+              "ntk:polished_granite_wall",
+              "ntk:granite_brick_wall",
+              "ntk:mossy_granite_brick_wall",
+              "ntk:granite_tile_wall",
+              "ntk:polished_diorite_wall",
+              "ntk:diorite_brick_wall",
+              "ntk:mossy_diorite_brick_wall",
+              "ntk:diorite_tile_wall",
+              "ntk:polished_andesite_wall",
+              "ntk:andesite_brick_wall",
+              "ntk:mossy_andesite_brick_wall",
+              "ntk:andesite_tile_wall",
+              "ntk:calcite_wall",
+              "ntk:polished_calcite_wall",
+              "ntk:dripstone_wall",
+              "ntk:polished_dripstone_wall",
+              "ntk:mossy_deepslate_brick_wall",
+              "ntk:end_stone_wall",
+              "ntk:polished_end_stone_wall",
+              "ntk:smooth_end_stone_wall",
+              "ntk:mossy_end_stone_brick_wall",
+              "ntk:end_stone_tile_wall",
+              "ntk:limestone_wall",
+              "ntk:polished_limestone_wall",
+              "ntk:limestone_brick_wall",
+              "ntk:marble_wall",
+              "ntk:polished_marble_wall",
+              "ntk:marble_brick_wall",
+              "ntk:corrupted_stone_wall",
+              "ntk:polished_corrupted_stone_wall",
+              "ntk:smooth_corrupted_stone_wall",
+              "ntk:corrupted_stone_brick_wall",
+              "ntk:corrupted_stone_tile_wall",
+              "ntk:soul_stone_wall",
+              "ntk:polished_soul_stone_wall",
+              "ntk:soul_stone_brick_wall"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.fence"
+            },
+            "items": [
+              "ntk:corrupted_oak_fence",
+              "ntk:mossy_willow_fence",
+              "ntk:overgrown_jungle_fence",
+              "ntk:mosshroom_fence"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.fenceGate"
+            },
+            "items": [
+              "ntk:corrupted_oak_fence_gate",
+              "ntk:mossy_willow_fence_gate",
+              "ntk:overgrown_jungle_fence_gate",
+              "ntk:mosshroom_fence_gate"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.stairs"
+            },
+            "items": [
+              "ntk:corrupted_oak_stairs",
+              "ntk:mossy_willow_stairs",
+              "ntk:overgrown_jungle_stairs",
+              "ntk:mosshroom_stairs",
+              "ntk:polished_stone_stairs",
+              "ntk:stone_tile_stairs",
+              "ntk:granite_brick_stairs",
+              "ntk:mossy_granite_brick_stairs",
+              "ntk:granite_tile_stairs",
+              "ntk:diorite_brick_stairs",
+              "ntk:mossy_diorite_brick_stairs",
+              "ntk:diorite_tile_stairs",
+              "ntk:andesite_brick_stairs",
+              "ntk:mossy_andesite_brick_stairs",
+              "ntk:andesite_tile_stairs",
+              "ntk:calcite_stairs",
+              "ntk:polished_calcite_stairs",
+              "ntk:dripstone_stairs",
+              "ntk:polished_dripstone_stairs",
+              "ntk:mossy_deepslate_brick_stairs",
+              "ntk:end_stone_stairs",
+              "ntk:polished_end_stone_stairs",
+              "ntk:smooth_end_stone_stairs",
+              "ntk:mossy_end_stone_brick_stairs",
+              "ntk:end_stone_tile_stairs",
+              "ntk:limestone_stairs",
+              "ntk:polished_limestone_stairs",
+              "ntk:limestone_brick_stairs",
+              "ntk:marble_stairs",
+              "ntk:polished_marble_stairs",
+              "ntk:marble_brick_stairs",
+              "ntk:corrupted_stone_stairs",
+              "ntk:polished_corrupted_stone_stairs",
+              "ntk:smooth_corrupted_stone_stairs",
+              "ntk:corrupted_stone_brick_stairs",
+              "ntk:corrupted_stone_tile_stairs",
+              "ntk:rose_quartz_stairs",
+              "ntk:smooth_rose_quartz_stairs",
+              "ntk:soul_stone_stairs",
+              "ntk:polished_soul_stone_stairs",
+              "ntk:soul_stone_brick_stairs"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.door"
+            },
+            "items": [
+              "ntk:corrupted_oak_door",
+              "ntk:mossy_willow_door",
+              "ntk:overgrown_jungle_door",
+              "ntk:mosshroom_door"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.trapdoor"
+            },
+            "items": [
+              "ntk:corrupted_oak_trapdoor",
+              "ntk:mossy_willow_trapdoor",
+              "ntk:overgrown_jungle_trapdoor",
+              "ntk:mosshroom_trapdoor"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.slab"
+            },
+            "items": [
+              "ntk:corrupted_oak_slab",
+              "ntk:mossy_willow_slab",
+              "ntk:overgrown_jungle_slab",
+              "ntk:mosshroom_slab",
+              "ntk:polished_stone_slab",
+              "ntk:stone_tile_slab",
+              "ntk:granite_brick_slab",
+              "ntk:mossy_granite_brick_slab",
+              "ntk:granite_tile_slab",
+              "ntk:diorite_brick_slab",
+              "ntk:mossy_diorite_brick_slab",
+              "ntk:diorite_tile_slab",
+              "ntk:andesite_brick_slab",
+              "ntk:mossy_andesite_brick_slab",
+              "ntk:andesite_tile_slab",
+              "ntk:calcite_slab",
+              "ntk:polished_calcite_slab",
+              "ntk:dripstone_slab",
+              "ntk:polished_dripstone_slab",
+              "ntk:mossy_deepslate_brick_slab",
+              "ntk:end_stone_slab",
+              "ntk:polished_end_stone_slab",
+              "ntk:smooth_end_stone_slab",
+              "ntk:mossy_end_stone_brick_slab",
+              "ntk:end_stone_tile_slab",
+              "ntk:limestone_slab",
+              "ntk:polished_limestone_slab",
+              "ntk:limestone_brick_slab",
+              "ntk:marble_slab",
+              "ntk:polished_marble_slab",
+              "ntk:marble_brick_slab",
+              "ntk:corrupted_stone_slab",
+              "ntk:polished_corrupted_stone_slab",
+              "ntk:smooth_corrupted_stone_slab",
+              "ntk:corrupted_stone_brick_slab",
+              "ntk:corrupted_stone_tile_slab",
+              "ntk:rose_quartz_slab",
+              "ntk:smooth_rose_quartz_slab",
+              "ntk:soul_stone_slab",
+              "ntk:polished_soul_stone_slab",
+              "ntk:soul_stone_brick_slab"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.stoneBrick"
+            },
+            "items": [
+              "ntk:chiseled_polished_stone",
+              "ntk:granite_bricks",
+              "ntk:mossy_granite_bricks",
+              "ntk:cracked_granite_bricks",
+              "ntk:chiseled_polished_granite",
+              "ntk:chiseled_granite_bricks",
+              "ntk:diorite_bricks",
+              "ntk:mossy_diorite_bricks",
+              "ntk:cracked_diorite_bricks",
+              "ntk:chiseled_polished_diorite",
+              "ntk:chiseled_diorite_bricks",
+              "ntk:andesite_bricks",
+              "ntk:mossy_andesite_bricks",
+              "ntk:cracked_andesite_bricks",
+              "ntk:chiseled_polished_andesite",
+              "ntk:chiseled_andesite_bricks",
+              "ntk:mossy_deepslate_bricks",
+              "ntk:mossy_end_stone_bricks",
+              "ntk:cracked_end_stone_bricks",
+              "ntk:chiseled_polished_end_stone",
+              "ntk:chiseled_end_stone_bricks",
+              "ntk:limestone_bricks",
+              "ntk:cracked_limestone_bricks",
+              "ntk:marble_bricks",
+              "ntk:cracked_marble_bricks",
+              "ntk:corrupted_stone_bricks",
+              "ntk:cracked_corrupted_stone_bricks",
+              "ntk:chiseled_polished_corrupted_stone",
+              "ntk:chiseled_corrupted_stone_bricks",
+              "ntk:soul_stone_bricks",
+              "ntk:cracked_soul_stone_bricks",
+              "ntk:chiseled_polished_soul_stone"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:stone_tiles",
+              "name": "ntk:itemGroup.name.tiles"
+            },
+            "items": [
+              "ntk:stone_tiles",
+              "ntk:cracked_stone_tiles",
+              "ntk:granite_tiles",
+              "ntk:cracked_granite_tiles",
+              "ntk:diorite_tiles",
+              "ntk:cracked_diorite_tiles",
+              "ntk:andesite_tiles",
+              "ntk:cracked_andesite_tiles",
+              "ntk:end_stone_tiles",
+              "ntk:cracked_end_stone_tiles",
+              "ntk:corrupted_stone_tiles",
+              "ntk:cracked_corrupted_stone_tiles"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:stone_pillar",
+              "name": "ntk:itemGroup.name.pillars"
+            },
+            "items": [
+              "ntk:stone_pillar",
+              "ntk:cracked_stone_pillar",
+              "ntk:granite_pillar",
+              "ntk:cracked_granite_pillar",
+              "ntk:diorite_pillar",
+              "ntk:cracked_diorite_pillar",
+              "ntk:andesite_pillar",
+              "ntk:cracked_andesite_pillar",
+              "ntk:end_stone_pillar",
+              "ntk:cracked_end_stone_pillar",
+              "ntk:corrupted_stone_pillar"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:block_of_rose_quartz",
+              "name": "ntk:itemGroup.name.rose_quartz_blocks"
+            },
+            "items": [
+              "ntk:block_of_rose_quartz",
+              "ntk:rose_quartz_bricks",
+              "ntk:rose_quartz_pillar",
+              "ntk:chiseled_rose_quartz_block",
+              "ntk:smooth_rose_quartz_block"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:block_of_white_dye",
+              "name": "ntk:itemGroup.name.block_of_dyes"
+            },
+            "items": [
+              "ntk:block_of_white_dye",
+              "ntk:block_of_light_gray_dye",
+              "ntk:block_of_gray_dye",
+              "ntk:block_of_black_dye",
+              "ntk:block_of_brown_dye",
+              "ntk:block_of_red_dye",
+              "ntk:block_of_orange_dye",
+              "ntk:block_of_yellow_dye",
+              "ntk:block_of_lime_dye",
+              "ntk:block_of_green_dye",
+              "ntk:block_of_cyan_dye",
+              "ntk:block_of_light_blue_dye",
+              "ntk:block_of_blue_dye",
+              "ntk:block_of_purple_dye",
+              "ntk:block_of_magenta_dye",
+              "ntk:block_of_pink_dye"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jellyfish_slime_block",
+              "name": "ntk:itemGroup.name.jellyfish_slime_blocks"
+            },
+            "items": [
+              "ntk:jellyfish_slime_block",
+              "ntk:white_jellyfish_slime_block",
+              "ntk:light_gray_jellyfish_slime_block",
+              "ntk:gray_jellyfish_slime_block",
+              "ntk:black_jellyfish_slime_block",
+              "ntk:brown_jellyfish_slime_block",
+              "ntk:red_jellyfish_slime_block",
+              "ntk:orange_jellyfish_slime_block",
+              "ntk:yellow_jellyfish_slime_block",
+              "ntk:lime_jellyfish_slime_block",
+              "ntk:green_jellyfish_slime_block",
+              "ntk:cyan_jellyfish_slime_block",
+              "ntk:light_blue_jellyfish_slime_block",
+              "ntk:blue_jellyfish_slime_block",
+              "ntk:purple_jellyfish_slime_block",
+              "ntk:magenta_jellyfish_slime_block",
+              "ntk:pink_jellyfish_slime_block"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:sugar_cane_bale",
+              "name": "ntk:itemGroup.name.bales"
+            },
+            "items": [
+              "ntk:sugar_cane_bale",
+              "ntk:fern_bale",
+              "ntk:grass_bale",
+              "ntk:dry_grass_bale",
+              "ntk:bush_bale",
+              "ntk:lush_bush_bale",
+              "ntk:firefly_bush_bale",
+              "ntk:corrupted_grass_bale",
+              "ntk:pale_hanging_moss_bale",
+              "ntk:hanging_roots_bale",
+              "ntk:moss_sprouts_bale",
+              "ntk:mycelium_sprouts_bale",
+              "ntk:glowcelium_sprouts_bale",
+              "ntk:crimson_roots_bale",
+              "ntk:warped_roots_bale"
+            ]
+          },
+          {
+            "items": [
+              "ntk:smooth_end_stone",
+              "ntk:smooth_corrupted_stone",
+              "ntk:block_of_tin",
+              "ntk:block_of_zinc",
+              "ntk:block_of_bronze",
+              "ntk:block_of_brass",
+              "ntk:block_of_olivine",
+              "ntk:block_of_raw_tin",
+              "ntk:block_of_raw_zinc",
+              "ntk:quartz_crystal_block",
+              "ntk:rose_quartz_crystal_block",
+              "ntk:block_of_charcoal",
+              "ntk:block_of_phantom_membrane",
+              "ntk:block_of_flint",
+              "ntk:block_of_gunpowder",
+              "ntk:block_of_blaze_powder",
+              "ntk:block_of_ink_sac",
+              "ntk:block_of_glow_ink_sac",
+              "ntk:block_of_sugar",
+              "ntk:block_of_salt",
+              "ntk:block_of_rotten_flesh",
+              "ntk:block_of_rotten_brute_flesh",
+              "ntk:block_of_leaf_litter",
+              "ntk:pile_of_leather",
+              "ntk:pile_of_sticks",
+              "ntk:double_pile_of_sticks",
+              "ntk:pile_of_bamboo",
+              "ntk:double_pile_of_bamboo",
+              "ntk:stack_of_books_4",
+              "ntk:stack_of_books_9",
+              "ntk:pile_of_bones_9"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.helmet"
+            },
+            "items": [
+              "ntk:tin_helmet",
+              "ntk:zinc_helmet",
+              "ntk:bronze_helmet",
+              "ntk:brass_helmet",
+              "ntk:olivine_helmet"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.chestplate"
+            },
+            "items": [
+              "ntk:tin_chestplate",
+              "ntk:zinc_chestplate",
+              "ntk:bronze_chestplate",
+              "ntk:brass_chestplate",
+              "ntk:olivine_chestplate"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.leggings"
+            },
+            "items": [
+              "ntk:tin_leggings",
+              "ntk:zinc_leggings",
+              "ntk:bronze_leggings",
+              "ntk:brass_leggings",
+              "ntk:olivine_leggings"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.boots"
+            },
+            "items": [
+              "ntk:tin_boots",
+              "ntk:zinc_boots",
+              "ntk:bronze_boots",
+              "ntk:brass_boots",
+              "ntk:olivine_boots"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.sword"
+            },
+            "items": [
+              "ntk:tin_sword",
+              "ntk:zinc_sword",
+              "ntk:bronze_sword",
+              "ntk:brass_sword",
+              "ntk:olivine_sword"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.spear"
+            },
+            "items": [
+              "ntk:tin_spear",
+              "ntk:zinc_spear",
+              "ntk:bronze_spear",
+              "ntk:brass_spear",
+              "ntk:olivine_spear"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.axe"
+            },
+            "items": [
+              "ntk:flint_axe",
+              "ntk:tin_axe",
+              "ntk:zinc_axe",
+              "ntk:bronze_axe",
+              "ntk:brass_axe",
+              "ntk:olivine_axe"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.pickaxe"
+            },
+            "items": [
+              "ntk:tin_pickaxe",
+              "ntk:zinc_pickaxe",
+              "ntk:bronze_pickaxe",
+              "ntk:brass_pickaxe",
+              "ntk:olivine_pickaxe"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.shovel"
+            },
+            "items": [
+              "ntk:tin_shovel",
+              "ntk:zinc_shovel",
+              "ntk:bronze_shovel",
+              "ntk:brass_shovel",
+              "ntk:olivine_shovel"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.hoe"
+            },
+            "items": [
+              "ntk:tin_hoe",
+              "ntk:zinc_hoe",
+              "ntk:bronze_hoe",
+              "ntk:brass_hoe",
+              "ntk:olivine_hoe"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.cookedFood"
+            },
+            "items": [
+              "ntk:cooked_tropical_fish",
+              "ntk:cooked_pufferfish",
+              "ntk:cooked_moa",
+              "ntk:cooked_clurve_meat",
+              "ntk:cooked_squirrel",
+              "ntk:cooked_rat",
+              "ntk:cooked_arthropod_meat",
+              "ntk:cooked_lurknash_meat",
+              "ntk:roasted_melon_seeds",
+              "ntk:roasted_pumpkin_seeds"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.miscFood"
+            },
+            "items": [
+              "ntk:fried_egg",
+              "ntk:large_fried_egg",
+              "ntk:cheese",
+              "ntk:cheese_bread",
+              "ntk:egg_sandwich",
+              "ntk:chocolate_bar",
+              "ntk:chorus_jelly"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:apple_pie",
+              "name": "ntk:itemGroup.name.pies"
+            },
+            "items": [
+              "ntk:apple_pie",
+              "ntk:beetroot_pie",
+              "ntk:sweet_berry_pie",
+              "ntk:glow_berry_pie",
+              "ntk:moss_berry_pie"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:sweet_berry_cookie",
+              "name": "ntk:itemGroup.name.cookies"
+            },
+            "items": [
+              "ntk:sweet_berry_cookie",
+              "ntk:glow_berry_cookie",
+              "ntk:moss_berry_cookie"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:soup",
+              "name": "ntk:itemGroup.name.soups_and_stews"
+            },
+            "items": [
+              "ntk:soup",
+              "ntk:carrot_soup",
+              "ntk:potato_soup",
+              "ntk:pumpkin_stew",
+              "ntk:pea_stew",
+              "ntk:seagrass_stew",
+              "ntk:cactus_stew",
+              "ntk:glow_lichen_stew",
+              "ntk:chorus_stew",
+              "ntk:crimson_stew",
+              "ntk:warped_stew",
+              "ntk:mosshroom_stew"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:empty_bamboo_cup",
+              "name": "ntk:itemGroup.name.bamboo_cups"
+            },
+            "items": [
+              "ntk:empty_bamboo_cup",
+              "ntk:bamboo_cup_with_water",
+              "ntk:bamboo_cup_with_milk",
+              "ntk:bamboo_cup_with_chocolate",
+              "ntk:bamboo_cup_with_sweet_berry_juice",
+              "ntk:bamboo_cup_with_glow_berry_juice"
+            ]
+          },
+          {
+            "items": [
+              "ntk:empty_jar"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jar_of_water_full",
+              "name": "ntk:itemGroup.name.jar_of_liquids"
+            },
+            "items": [
+              "ntk:jar_of_water_full",
+              "ntk:jar_of_water_half",
+              "ntk:jar_of_honey_full",
+              "ntk:jar_of_honey_half",
+              "ntk:jar_of_milk_full",
+              "ntk:jar_of_milk_half",
+              "ntk:jar_of_chocolate_full",
+              "ntk:jar_of_chocolate_half",
+              "ntk:jar_of_sweet_berry_juice_full",
+              "ntk:jar_of_sweet_berry_juice_half",
+              "ntk:jar_of_glow_berry_juice_full",
+              "ntk:jar_of_glow_berry_juice_half"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jar_of_cookies_8",
+              "name": "ntk:itemGroup.name.jar_of_cookies"
+            },
+            "items": [
+              "ntk:jar_of_cookies_8",
+              "ntk:jar_of_sweet_berry_cookies_8",
+              "ntk:jar_of_glow_berry_cookies_8",
+              "ntk:jar_of_moss_berry_cookies_8"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:bottle_of_white_cloud",
+              "name": "ntk:itemGroup.name.bottle_of_clouds"
+            },
+            "items": [
+              "ntk:bottle_of_white_cloud",
+              "ntk:bottle_of_light_gray_cloud",
+              "ntk:bottle_of_gray_cloud",
+              "ntk:bottle_of_black_cloud",
+              "ntk:bottle_of_brown_cloud",
+              "ntk:bottle_of_red_cloud",
+              "ntk:bottle_of_orange_cloud",
+              "ntk:bottle_of_yellow_cloud",
+              "ntk:bottle_of_lime_cloud",
+              "ntk:bottle_of_green_cloud",
+              "ntk:bottle_of_cyan_cloud",
+              "ntk:bottle_of_light_blue_cloud",
+              "ntk:bottle_of_blue_cloud",
+              "ntk:bottle_of_purple_cloud",
+              "ntk:bottle_of_magenta_cloud",
+              "ntk:bottle_of_pink_cloud"
+            ]
+          },
+          {
+            "items": [
+              "ntk:potion_of_brute"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:farmer_hat",
+              "name": "ntk:itemGroup.name.hats"
+            },
+            "items": [
+              "ntk:farmer_hat",
+              "ntk:fisherman_hat",
+              "ntk:shepherd_hat",
+              "ntk:fletcher_hat",
+              "ntk:librarian_hat",
+              "ntk:witch_hat"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:wooden_club",
+              "name": "ntk:itemGroup.name.clubs"
+            },
+            "items": [
+              "ntk:wooden_club",
+              "ntk:dripstone_club",
+              "ntk:magma_club"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:blazing_staff",
+              "name": "ntk:itemGroup.name.staffs"
+            },
+            "items": [
+              "ntk:blazing_staff",
+              "ntk:staff_of_the_sea",
+              "ntk:powder_staff",
+              "ntk:curserer_staff",
+              "ntk:piglin_fire_staff",
+              "ntk:arcane_staff",
+              "ntk:teleportation_staff",
+              "ntk:levitation_staff"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:book_of_biomes",
+              "name": "ntk:itemGroup.name.magic_books"
+            },
+            "items": [
+              "ntk:guide_book",
+              "ntk:learning_book_of_villaging",
+              "ntk:learning_book_of_book_keeping",
+              "ntk:learning_book_of_crates_trading",
+              "ntk:learning_book_of_scrollwright",
+              "ntk:book_of_biomes",
+              "ntk:book_of_curses",
+              "ntk:sealed_flying_book",
+              "ntk:sealed_cursed_flying_book",
+              "ntk:sealed_enchanted_flying_book",
+              "ntk:sealed_virtuous_flying_book"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:quartz_wand",
+              "name": "ntk:itemGroup.name.wands"
+            },
+            "items": [
+              "ntk:quartz_wand",
+              "ntk:golden_wand",
+              "ntk:amethyst_wand",
+              "ntk:diamond_wand"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:quartz_spellweaver_wand",
+              "name": "ntk:itemGroup.name.spellweaver_wands"
+            },
+            "items": [
+              "ntk:quartz_spellweaver_wand",
+              "ntk:golden_spellweaver_wand",
+              "ntk:amethyst_spellweaver_wand",
+              "ntk:diamond_spellweaver_wand"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:empty_scroll",
+              "name": "ntk:itemGroup.name.scrolls"
+            },
+            "items": [
+              "ntk:empty_scroll",
+              "ntk:scroll_of_cleansing_1",
+              "ntk:scroll_of_cleansing_2",
+              "ntk:scroll_of_cleansing_3",
+              "ntk:scroll_of_purification_1",
+              "ntk:scroll_of_purification_2",
+              "ntk:scroll_of_purification_3",
+              "ntk:scroll_of_regeneration_1",
+              "ntk:scroll_of_regeneration_2",
+              "ntk:scroll_of_regeneration_3",
+              "ntk:scroll_of_protection_1",
+              "ntk:scroll_of_protection_2",
+              "ntk:scroll_of_protection_3",
+              "ntk:scroll_of_fire_protection_1",
+              "ntk:scroll_of_fire_protection_2",
+              "ntk:scroll_of_fire_protection_3",
+              "ntk:scroll_of_invisibility_1",
+              "ntk:scroll_of_invisibility_2",
+              "ntk:scroll_of_invisibility_3",
+              "ntk:scroll_of_acceleration_1",
+              "ntk:scroll_of_acceleration_2",
+              "ntk:scroll_of_acceleration_3",
+              "ntk:scroll_of_strength_1",
+              "ntk:scroll_of_strength_2",
+              "ntk:scroll_of_strength_3",
+              "ntk:scroll_of_slowness_1",
+              "ntk:scroll_of_slowness_2",
+              "ntk:scroll_of_slowness_3",
+              "ntk:scroll_of_poison_cloud_1",
+              "ntk:scroll_of_poison_cloud_2",
+              "ntk:scroll_of_poison_cloud_3",
+              "ntk:scroll_of_field_levitation_1",
+              "ntk:scroll_of_field_levitation_2",
+              "ntk:scroll_of_field_levitation_3",
+              "ntk:scroll_of_resurgence_1",
+              "ntk:scroll_of_resurgence_2",
+              "ntk:scroll_of_resurgence_3",
+              "ntk:scroll_of_berserk_1",
+              "ntk:scroll_of_berserk_2",
+              "ntk:scroll_of_berserk_3",
+              "ntk:scroll_of_lethargy_1",
+              "ntk:scroll_of_lethargy_2",
+              "ntk:scroll_of_lethargy_3",
+              "ntk:scroll_of_displacement_1",
+              "ntk:scroll_of_displacement_2",
+              "ntk:scroll_of_displacement_3",
+              "ntk:scroll_of_converging_1",
+              "ntk:scroll_of_converging_2",
+              "ntk:scroll_of_converging_3",
+              "ntk:scroll_of_hoarding_1",
+              "ntk:scroll_of_hoarding_2",
+              "ntk:scroll_of_hoarding_3",
+              "ntk:scroll_of_flame_burst_1",
+              "ntk:scroll_of_flame_burst_2",
+              "ntk:scroll_of_flame_burst_3",
+              "ntk:scroll_of_fire_blast_1",
+              "ntk:scroll_of_fire_blast_2",
+              "ntk:scroll_of_fire_blast_3",
+              "ntk:scroll_of_lightning_bolt_1",
+              "ntk:scroll_of_lightning_bolt_2",
+              "ntk:scroll_of_lightning_bolt_3",
+              "ntk:scroll_of_weaving_webs",
+              "ntk:scroll_of_flourishing_1",
+              "ntk:scroll_of_flourishing_2",
+              "ntk:scroll_of_flourishing_3",
+              "ntk:scroll_of_earthquake_1",
+              "ntk:scroll_of_earthquake_2",
+              "ntk:scroll_of_earthquake_3",
+              "ntk:summoning_scroll_of_iron_golem",
+              "ntk:summoning_scroll_of_snow_golem",
+              "ntk:summoning_scroll_of_cobblestone_golem",
+              "ntk:summoning_scroll_of_mossy_cobblestone_golem",
+              "ntk:summoning_scroll_of_cobbled_deepslate_golem",
+              "ntk:summoning_scroll_of_deepslate_golem",
+              "ntk:summoning_scroll_of_magma_golem",
+              "ntk:summoning_scroll_of_slime",
+              "ntk:summoning_scroll_of_magma_cube",
+              "ntk:summoning_scroll_of_sulfur_cube",
+              "ntk:summoning_scroll_of_skeleton",
+              "ntk:summoning_scroll_of_wither_skeleton",
+              "ntk:summoning_scroll_of_stray",
+              "ntk:summoning_scroll_of_bogged",
+              "ntk:summoning_scroll_of_parched",
+              "ntk:summoning_scroll_of_mossy_skeleton",
+              "ntk:unknown_scroll",
+              "ntk:scroll_of_clear_sky",
+              "ntk:scroll_of_rain",
+              "ntk:scroll_of_thunderstorm",
+              "ntk:scroll_of_homeward_bound"
+            ]
+          },
+          {
+            "items": [
+              "ntk:totem_of_health_seer",
+              "ntk:jar_opener",
+              "ntk:scorpion_gauntlet",
+              "ntk:piglin_war_hammer",
+              "ntk:bone_dagger"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "ntk:oak_wood_lamp",
+              "name": "ntk:itemGroup.name.wood_lamps"
+            },
+            "items": [
+              "ntk:oak_wood_lamp",
+              "ntk:spruce_wood_lamp",
+              "ntk:birch_wood_lamp",
+              "ntk:jungle_wood_lamp",
+              "ntk:acacia_wood_lamp",
+              "ntk:dark_oak_wood_lamp",
+              "ntk:mangrove_wood_lamp",
+              "ntk:cherry_wood_lamp",
+              "ntk:pale_oak_wood_lamp",
+              "ntk:bamboo_wood_lamp",
+              "ntk:crimson_hyphae_lamp",
+              "ntk:warped_hyphae_lamp",
+              "ntk:corrupted_oak_wood_lamp",
+              "ntk:mossy_willow_wood_lamp",
+              "ntk:overgrown_jungle_wood_lamp",
+              "ntk:mosshroom_hyphae_lamp"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:oak_wood_lantern",
+              "name": "ntk:itemGroup.name.wood_lanterns"
+            },
+            "items": [
+              "ntk:oak_wood_lantern",
+              "ntk:spruce_wood_lantern",
+              "ntk:birch_wood_lantern",
+              "ntk:jungle_wood_lantern",
+              "ntk:acacia_wood_lantern",
+              "ntk:dark_oak_wood_lantern",
+              "ntk:mangrove_wood_lantern",
+              "ntk:cherry_wood_lantern",
+              "ntk:pale_oak_wood_lantern",
+              "ntk:bamboo_wood_lantern",
+              "ntk:crimson_hyphae_lantern",
+              "ntk:warped_hyphae_lantern",
+              "ntk:corrupted_oak_wood_lantern",
+              "ntk:mossy_willow_wood_lantern",
+              "ntk:overgrown_jungle_wood_lantern",
+              "ntk:mosshroom_hyphae_lantern"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:stone_lantern",
+              "name": "ntk:itemGroup.name.stone_lanterns"
+            },
+            "items": [
+              "ntk:stone_lantern",
+              "ntk:cobblestone_lantern",
+              "ntk:mossy_cobblestone_lantern",
+              "ntk:stone_brick_lantern",
+              "ntk:mossy_stone_brick_lantern",
+              "ntk:cracked_stone_brick_lantern",
+              "ntk:sandstone_lantern",
+              "ntk:smooth_sandstone_lantern",
+              "ntk:red_sandstone_lantern",
+              "ntk:smooth_red_sandstone_lantern",
+              "ntk:granite_lantern",
+              "ntk:diorite_lantern",
+              "ntk:andesite_lantern",
+              "ntk:brick_lantern",
+              "ntk:nether_brick_lantern",
+              "ntk:red_nether_brick_lantern",
+              "ntk:blackstone_lantern",
+              "ntk:polished_blackstone_brick_lantern",
+              "ntk:cracked_polished_blackstone_brick_lantern",
+              "ntk:basalt_lantern",
+              "ntk:smooth_basalt_lantern",
+              "ntk:dripstone_lantern",
+              "ntk:calcite_lantern",
+              "ntk:deepslate_lantern",
+              "ntk:cobbled_deepslate_lantern",
+              "ntk:deepslate_brick_lantern",
+              "ntk:cracked_deepslate_brick_lantern",
+              "ntk:tuff_lantern",
+              "ntk:tuff_brick_lantern",
+              "ntk:packed_mud_lantern",
+              "ntk:mud_brick_lantern",
+              "ntk:resin_brick_lantern",
+              "ntk:cinnabar_lantern",
+              "ntk:cinnabar_brick_lantern",
+              "ntk:sulfur_lantern",
+              "ntk:sulfur_brick_lantern",
+              "ntk:end_stone_lantern",
+              "ntk:end_stone_brick_lantern",
+              "ntk:purpur_lantern",
+              "ntk:corrupted_stone_lantern",
+              "ntk:smooth_corrupted_stone_lantern",
+              "ntk:corrupted_stone_brick_lantern",
+              "ntk:cracked_corrupted_stone_brick_lantern"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:stone_soul_lantern",
+              "name": "ntk:itemGroup.name.stone_soul_lanterns"
+            },
+            "items": [
+              "ntk:stone_soul_lantern",
+              "ntk:cobblestone_soul_lantern",
+              "ntk:mossy_cobblestone_soul_lantern",
+              "ntk:stone_brick_soul_lantern",
+              "ntk:mossy_stone_brick_soul_lantern",
+              "ntk:cracked_stone_brick_soul_lantern",
+              "ntk:sandstone_soul_lantern",
+              "ntk:smooth_sandstone_soul_lantern",
+              "ntk:red_sandstone_soul_lantern",
+              "ntk:smooth_red_sandstone_soul_lantern",
+              "ntk:granite_soul_lantern",
+              "ntk:diorite_soul_lantern",
+              "ntk:andesite_soul_lantern",
+              "ntk:brick_soul_lantern",
+              "ntk:nether_brick_soul_lantern",
+              "ntk:red_nether_brick_soul_lantern",
+              "ntk:blackstone_soul_lantern",
+              "ntk:polished_blackstone_brick_soul_lantern",
+              "ntk:cracked_polished_blackstone_brick_soul_lantern",
+              "ntk:basalt_soul_lantern",
+              "ntk:smooth_basalt_soul_lantern",
+              "ntk:dripstone_soul_lantern",
+              "ntk:calcite_soul_lantern",
+              "ntk:deepslate_soul_lantern",
+              "ntk:cobbled_deepslate_soul_lantern",
+              "ntk:deepslate_brick_soul_lantern",
+              "ntk:cracked_deepslate_brick_soul_lantern",
+              "ntk:tuff_soul_lantern",
+              "ntk:tuff_brick_soul_lantern",
+              "ntk:packed_mud_soul_lantern",
+              "ntk:mud_brick_soul_lantern",
+              "ntk:resin_brick_soul_lantern",
+              "ntk:cinnabar_soul_lantern",
+              "ntk:cinnabar_brick_soul_lantern",
+              "ntk:sulfur_soul_lantern",
+              "ntk:sulfur_brick_soul_lantern",
+              "ntk:end_stone_soul_lantern",
+              "ntk:end_stone_brick_soul_lantern",
+              "ntk:purpur_soul_lantern",
+              "ntk:corrupted_stone_soul_lantern",
+              "ntk:smooth_corrupted_stone_soul_lantern",
+              "ntk:corrupted_stone_brick_soul_lantern",
+              "ntk:cracked_corrupted_stone_brick_soul_lantern"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:copper_lamp",
+              "name": "ntk:itemGroup.name.copper_lamps"
+            },
+            "items": [
+              "ntk:copper_lamp",
+              "ntk:exposed_copper_lamp",
+              "ntk:weathered_copper_lamp",
+              "ntk:oxidized_copper_lamp",
+              "ntk:waxed_copper_lamp",
+              "ntk:waxed_exposed_copper_lamp",
+              "ntk:waxed_weathered_copper_lamp",
+              "ntk:waxed_oxidized_copper_lamp"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:large_copper_lantern",
+              "name": "ntk:itemGroup.name.large_copper_lanterns"
+            },
+            "items": [
+              "ntk:large_copper_lantern",
+              "ntk:exposed_large_copper_lantern",
+              "ntk:weathered_large_copper_lantern",
+              "ntk:oxidized_large_copper_lantern",
+              "ntk:waxed_large_copper_lantern",
+              "ntk:waxed_exposed_large_copper_lantern",
+              "ntk:waxed_weathered_large_copper_lantern",
+              "ntk:waxed_oxidized_large_copper_lantern"
+            ]
+          },
+          {
+            "items": [
+              "ntk:amethyst_lamp",
+              "ntk:quartz_lamp",
+              "ntk:rose_quartz_lamp",
+              "ntk:jack_o_soul_lantern"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:copper_evaporator",
+              "name": "ntk:itemGroup.name.copper_evaporators"
+            },
+            "items": [
+              "ntk:copper_evaporator",
+              "ntk:copper_evaporator_with_water",
+              "ntk:copper_evaporator_with_milk",
+              "ntk:copper_evaporator_with_lava",
+              "ntk:copper_evaporator_with_tearing_lava",
+              "ntk:copper_evaporator_with_snow",
+              "ntk:copper_evaporator_with_ice",
+              "ntk:copper_evaporator_with_packed_ice",
+              "ntk:copper_evaporator_with_blue_ice",
+              "ntk:copper_evaporator_with_mud",
+              "ntk:copper_evaporator_with_rotten_flesh_1",
+              "ntk:copper_evaporator_with_rotten_flesh_2",
+              "ntk:copper_evaporator_with_rotten_flesh_3",
+              "ntk:copper_evaporator_with_salt",
+              "ntk:copper_evaporator_with_cheese",
+              "ntk:copper_evaporator_with_obsidian",
+              "ntk:copper_evaporator_with_crying_obsidian",
+              "ntk:copper_evaporator_with_packed_mud",
+              "ntk:copper_evaporator_with_leather_scrap_1",
+              "ntk:copper_evaporator_with_leather_scrap_2",
+              "ntk:copper_evaporator_with_leather_scrap_3"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:metal_evaporator",
+              "name": "ntk:itemGroup.name.metal_evaporators"
+            },
+            "items": [
+              "ntk:metal_evaporator",
+              "ntk:metal_evaporator_with_water",
+              "ntk:metal_evaporator_with_milk",
+              "ntk:metal_evaporator_with_lava",
+              "ntk:metal_evaporator_with_tearing_lava",
+              "ntk:metal_evaporator_with_snow",
+              "ntk:metal_evaporator_with_ice",
+              "ntk:metal_evaporator_with_packed_ice",
+              "ntk:metal_evaporator_with_blue_ice",
+              "ntk:metal_evaporator_with_mud",
+              "ntk:metal_evaporator_with_rotten_flesh_1",
+              "ntk:metal_evaporator_with_rotten_flesh_2",
+              "ntk:metal_evaporator_with_rotten_flesh_3",
+              "ntk:metal_evaporator_with_salt",
+              "ntk:metal_evaporator_with_cheese",
+              "ntk:metal_evaporator_with_obsidian",
+              "ntk:metal_evaporator_with_crying_obsidian",
+              "ntk:metal_evaporator_with_packed_mud",
+              "ntk:metal_evaporator_with_leather_scrap_1",
+              "ntk:metal_evaporator_with_leather_scrap_2",
+              "ntk:metal_evaporator_with_leather_scrap_3"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:oak_wood_crate",
+              "name": "ntk:itemGroup.name.wood_crates"
+            },
+            "items": [
+              "ntk:oak_wood_crate",
+              "ntk:spruce_wood_crate",
+              "ntk:birch_wood_crate",
+              "ntk:jungle_wood_crate",
+              "ntk:acacia_wood_crate",
+              "ntk:dark_oak_wood_crate",
+              "ntk:mangrove_wood_crate",
+              "ntk:cherry_wood_crate",
+              "ntk:pale_oak_wood_crate",
+              "ntk:bamboo_wood_crate",
+              "ntk:crimson_hyphae_crate",
+              "ntk:warped_hyphae_crate"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:copper_crate",
+              "name": "ntk:itemGroup.name.locked_crates"
+            },
+            "items": [
+              "ntk:copper_crate",
+              "ntk:iron_crate",
+              "ntk:golden_crate",
+              "ntk:diamond_crate",
+              "ntk:piglin_crate",
+              "ntk:trial_crate",
+              "ntk:ominous_trial_crate"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:copper_crate_key",
+              "name": "ntk:itemGroup.name.crates_keys"
+            },
+            "items": [
+              "ntk:copper_crate_key",
+              "ntk:iron_crate_key",
+              "ntk:golden_crate_key",
+              "ntk:diamond_crate_key",
+              "ntk:piglin_crate_key"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:potted_lush_bush",
+              "name": "ntk:itemGroup.name.potted_plants"
+            },
+            "items": [
+              "ntk:potted_white_tip_grass",
+              "ntk:potted_red_tip_grass",
+              "ntk:potted_orange_tip_grass",
+              "ntk:potted_yellow_tip_grass",
+              "ntk:potted_light_blue_tip_grass",
+              "ntk:potted_blue_tip_grass",
+              "ntk:potted_magenta_tip_grass",
+              "ntk:potted_pink_tip_grass",
+              "ntk:potted_corrupted_grass",
+              "ntk:potted_lush_bush",
+              "ntk:potted_moss_sprouts",
+              "ntk:potted_mycelium_sprouts",
+              "ntk:potted_glowcelium_sprouts",
+              "ntk:potted_mosshroom_fungus",
+              "ntk:potted_corrupted_oak_sapling",
+              "ntk:potted_blooming_corrupted_oak_sapling",
+              "ntk:potted_mossy_willow_sapling",
+              "ntk:potted_overgrown_jungle_sapling",
+              "ntk:potted_hanging_moss"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:spore_pot",
+              "name": "ntk:itemGroup.name.spore_pots"
+            },
+            "items": [
+              "ntk:spore_pot",
+              "ntk:sugar_spore_pot",
+              "ntk:charcoal_spore_pot",
+              "ntk:gunpowder_spore_pot",
+              "ntk:glowstone_spore_pot",
+              "ntk:blaze_spore_pot",
+              "ntk:copper_spore_pot",
+              "ntk:iron_spore_pot",
+              "ntk:gold_spore_pot",
+              "ntk:redstone_spore_pot",
+              "ntk:lapis_lazuli_spore_pot",
+              "ntk:amethyst_spore_pot",
+              "ntk:emerald_spore_pot",
+              "ntk:diamond_spore_pot",
+              "ntk:netherite_spore_pot",
+              "ntk:enchanted_spore_pot"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:stone_minecart_trophy",
+              "name": "ntk:itemGroup.name.trophies"
+            },
+            "items": [
+              "ntk:stone_minecart_trophy",
+              "ntk:stone_brute_zombie_trophy",
+              "ntk:stone_rat_curserer_trophy",
+              "ntk:stone_elder_golem_trophy",
+              "ntk:stone_piglin_chief_trophy",
+              "ntk:stone_shulkore_trophy",
+              "ntk:stone_crate_trophy",
+              "ntk:stone_crate_key_trophy",
+              "ntk:copper_minecart_trophy",
+              "ntk:copper_brute_zombie_trophy",
+              "ntk:copper_rat_curserer_trophy",
+              "ntk:copper_elder_golem_trophy",
+              "ntk:copper_piglin_chief_trophy",
+              "ntk:copper_shulkore_trophy",
+              "ntk:copper_crate_trophy",
+              "ntk:copper_crate_key_trophy",
+              "ntk:iron_minecart_trophy",
+              "ntk:iron_brute_zombie_trophy",
+              "ntk:iron_rat_curserer_trophy",
+              "ntk:iron_elder_golem_trophy",
+              "ntk:iron_piglin_chief_trophy",
+              "ntk:iron_shulkore_trophy",
+              "ntk:iron_crate_trophy",
+              "ntk:iron_crate_key_trophy",
+              "ntk:golden_minecart_trophy",
+              "ntk:golden_brute_zombie_trophy",
+              "ntk:golden_rat_curserer_trophy",
+              "ntk:golden_elder_golem_trophy",
+              "ntk:golden_piglin_chief_trophy",
+              "ntk:golden_shulkore_trophy",
+              "ntk:golden_crate_trophy",
+              "ntk:golden_crate_key_trophy",
+              "ntk:diamond_minecart_trophy",
+              "ntk:diamond_brute_zombie_trophy",
+              "ntk:diamond_rat_curserer_trophy",
+              "ntk:diamond_elder_golem_trophy",
+              "ntk:diamond_piglin_chief_trophy",
+              "ntk:diamond_shulkore_trophy",
+              "ntk:diamond_crate_trophy",
+              "ntk:diamond_crate_key_trophy"
+            ]
+          },
+          {
+            "items": [
+              "ntk:grafting_table",
+              "ntk:artifacture_table",
+              "ntk:magic_spells_table"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:oak_woodcutter",
+              "name": "ntk:itemGroup.name.woodcutters"
+            },
+            "items": [
+              "ntk:oak_woodcutter",
+              "ntk:stripped_oak_woodcutter",
+              "ntk:spruce_woodcutter",
+              "ntk:stripped_spruce_woodcutter",
+              "ntk:birch_woodcutter",
+              "ntk:stripped_birch_woodcutter",
+              "ntk:jungle_woodcutter",
+              "ntk:stripped_jungle_woodcutter",
+              "ntk:acacia_woodcutter",
+              "ntk:stripped_acacia_woodcutter",
+              "ntk:dark_oak_woodcutter",
+              "ntk:stripped_dark_oak_woodcutter",
+              "ntk:mangrove_woodcutter",
+              "ntk:stripped_mangrove_woodcutter",
+              "ntk:cherry_woodcutter",
+              "ntk:stripped_cherry_woodcutter",
+              "ntk:pale_oak_woodcutter",
+              "ntk:stripped_pale_oak_woodcutter",
+              "ntk:crimson_woodcutter",
+              "ntk:stripped_crimson_woodcutter",
+              "ntk:warped_woodcutter",
+              "ntk:stripped_warped_woodcutter",
+              "ntk:corrupted_oak_woodcutter",
+              "ntk:stripped_corrupted_oak_woodcutter",
+              "ntk:mossy_willow_woodcutter",
+              "ntk:stripped_mossy_willow_woodcutter",
+              "ntk:overgrown_jungle_woodcutter",
+              "ntk:stripped_overgrown_jungle_woodcutter",
+              "ntk:mosshroom_woodcutter",
+              "ntk:stripped_mosshroom_woodcutter"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:golden_chain",
+              "name": "ntk:itemGroup.name.chains"
+            },
+            "items": [
+              "ntk:golden_chain"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:bucket_of_jellyfish",
+              "name": "ntk:itemGroup.name.bucket_of_mob"
+            },
+            "items": [
+              "ntk:bucket_of_jellyfish",
+              "ntk:bucket_of_prismarine_clam"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jar_of_forest_wisp_charged",
+              "name": "ntk:itemGroup.name.jar_of_mob"
+            },
+            "items": [
+              "ntk:jar_of_forest_wisp_charged",
+              "ntk:jar_of_forest_wisp_uncharged"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jellyfish_slime",
+              "name": "ntk:itemGroup.name.jellyfish_slimes"
+            },
+            "items": [
+              "ntk:jellyfish_slime",
+              "ntk:white_jellyfish_slime",
+              "ntk:light_gray_jellyfish_slime",
+              "ntk:gray_jellyfish_slime",
+              "ntk:black_jellyfish_slime",
+              "ntk:brown_jellyfish_slime",
+              "ntk:red_jellyfish_slime",
+              "ntk:orange_jellyfish_slime",
+              "ntk:yellow_jellyfish_slime",
+              "ntk:lime_jellyfish_slime",
+              "ntk:green_jellyfish_slime",
+              "ntk:cyan_jellyfish_slime",
+              "ntk:light_blue_jellyfish_slime",
+              "ntk:blue_jellyfish_slime",
+              "ntk:purple_jellyfish_slime",
+              "ntk:magenta_jellyfish_slime",
+              "ntk:pink_jellyfish_slime"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:brown_feather",
+              "name": "ntk:itemGroup.name.feathers"
+            },
+            "items": [
+              "ntk:brown_feather",
+              "ntk:black_feather",
+              "ntk:green_feather",
+              "ntk:blue_feather",
+              "ntk:orange_feather",
+              "ntk:purple_feather",
+              "ntk:golden_feather",
+              "ntk:fire_feather",
+              "ntk:soul_fire_feather"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:arcane_quill",
+              "name": "ntk:itemGroup.name.quills"
+            },
+            "items": [
+              "ntk:arcane_quill",
+              "ntk:gale_quill",
+              "ntk:earthen_quill",
+              "ntk:lush_quill",
+              "ntk:wild_quill",
+              "ntk:ominous_quill",
+              "ntk:void_quill",
+              "ntk:radiant_quill",
+              "ntk:ember_quill",
+              "ntk:soul_quill"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:prismarine_rod",
+              "name": "ntk:itemGroup.name.rods"
+            },
+            "items": [
+              "ntk:metal_rod",
+              "ntk:prismarine_rod"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:charcoal_powder",
+              "name": "ntk:itemGroup.name.powders_and_dusts"
+            },
+            "items": [
+              "ntk:charcoal_powder",
+              "ntk:copper_powder",
+              "ntk:iron_powder",
+              "ntk:gold_powder",
+              "ntk:lapis_lazuli_powder",
+              "ntk:amethyst_powder",
+              "ntk:emerald_powder",
+              "ntk:diamond_powder",
+              "ntk:netherite_powder",
+              "ntk:enchanted_dust"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:leather_scrap",
+              "name": "ntk:itemGroup.name.scraps"
+            },
+            "items": [
+              "ntk:leather_scrap",
+              "ntk:metal_scrap",
+              "ntk:elytra_scrap"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:pearl",
+              "name": "ntk:itemGroup.name.pearls"
+            },
+            "items": [
+              "ntk:pearl",
+              "ntk:blazing_pearl",
+              "ntk:enchanted_pearl",
+              "ntk:arcazure_pearl"
+            ]
+          },
+          {
+            "items": [
+              "ntk:raw_tin",
+              "ntk:raw_zinc",
+              "ntk:tin_ingot",
+              "ntk:zinc_ingot",
+              "ntk:copper_tin_ingot",
+              "ntk:copper_zinc_ingot",
+              "ntk:bronze_ingot",
+              "ntk:brass_ingot",
+              "ntk:tin_nugget",
+              "ntk:zinc_nugget",
+              "ntk:bronze_nugget",
+              "ntk:brass_nugget",
+              "ntk:olivine_fragment",
+              "ntk:olivine",
+              "ntk:rose_quartz_shard",
+              "ntk:calcite_chunk",
+              "ntk:salt",
+              "ntk:mud_brick",
+              "ntk:glowcelium_bone_meal",
+              "ntk:sprouted_bone",
+              "ntk:chain_links",
+              "ntk:squirrel_hide",
+              "ntk:fang",
+              "ntk:bat_wing",
+              "ntk:deopard_fur",
+              "ntk:amphibian_gills",
+              "ntk:scorpion_telson",
+              "ntk:mud_ball",
+              "ntk:cursed_eye",
+              "ntk:enchanted_emerald",
+              "ntk:nether_star_fragment",
+              "ntk:sealing_bookmark"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.ore"
+            },
+            "items": [
+              "ntk:tin_ore",
+              "ntk:zinc_ore",
+              "ntk:prismarine_ore",
+              "ntk:deepslate_tin_ore",
+              "ntk:deepslate_zinc_ore",
+              "ntk:deepslate_prismarine_ore",
+              "ntk:netherrack_diamond_ore",
+              "ntk:netherrack_olivine_ore",
+              "ntk:heated_netherrack_olivine_ore",
+              "ntk:soul_sand_echo_shard_ore"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.stone"
+            },
+            "items": [
+              "ntk:polished_stone",
+              "ntk:polished_calcite",
+              "ntk:polished_dripstone",
+              "ntk:polished_end_stone",
+              "ntk:limestone",
+              "ntk:polished_limestone",
+              "ntk:marble",
+              "ntk:polished_marble",
+              "ntk:corrupted_stone",
+              "ntk:polished_corrupted_stone",
+              "ntk:soul_stone",
+              "ntk:polished_soul_stone"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.log"
+            },
+            "items": [
+              "ntk:corrupted_oak_log",
+              "ntk:stripped_corrupted_oak_log",
+              "ntk:mossy_willow_log",
+              "ntk:stripped_mossy_willow_log",
+              "ntk:overgrown_jungle_log",
+              "ntk:stripped_overgrown_jungle_log",
+              "ntk:mosshroom_stem",
+              "ntk:stripped_mosshroom_stem"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.wood"
+            },
+            "items": [
+              "ntk:corrupted_oak_wood",
+              "ntk:stripped_corrupted_oak_wood",
+              "ntk:mossy_willow_wood",
+              "ntk:stripped_mossy_willow_wood",
+              "ntk:overgrown_jungle_wood",
+              "ntk:stripped_overgrown_jungle_wood",
+              "ntk:mosshroom_hyphae",
+              "ntk:stripped_mosshroom_hyphae"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.leaves"
+            },
+            "items": [
+              "ntk:corrupted_oak_leaves",
+              "ntk:mossy_willow_leaves",
+              "ntk:overgrown_jungle_leaves"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.sapling"
+            },
+            "items": [
+              "ntk:corrupted_oak_sapling",
+              "ntk:blooming_corrupted_oak_sapling",
+              "ntk:mossy_willow_sapling",
+              "ntk:overgrown_jungle_sapling"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.crop"
+            },
+            "items": [
+              "ntk:pumpkin_slice",
+              "ntk:moss_berries",
+              "ntk:copper_apple",
+              "ntk:iron_apple",
+              "ntk:blazing_apple",
+              "ntk:lapis_lazuli_apple",
+              "ntk:amethyst_apple",
+              "ntk:emerald_apple",
+              "ntk:diamond_apple",
+              "ntk:netherite_apple"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.grass"
+            },
+            "items": [
+              "ntk:short_lush_bush",
+              "ntk:tall_lush_bush",
+              "ntk:corrupted_grass",
+              "ntk:short_moss_sprouts",
+              "ntk:tall_moss_sprouts",
+              "ntk:short_mycelium_sprouts",
+              "ntk:tall_mycelium_sprouts",
+              "ntk:short_glowcelium_sprouts",
+              "ntk:tall_glowcelium_sprouts"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.rawFood"
+            },
+            "items": [
+              "ntk:raw_moa",
+              "ntk:raw_clurve_meat",
+              "ntk:raw_squirrel",
+              "ntk:raw_rat",
+              "ntk:raw_arthropod_meat",
+              "ntk:raw_lurknash_meat"
+            ]
+          },
+          {
+            "group_identifier": {
+              "name": "minecraft:itemGroup.name.mushroom"
+            },
+            "items": [
+              "ntk:mosshroom_fungus",
+              "ntk:clump_of_brown_mushrooms",
+              "ntk:clump_of_red_mushrooms",
+              "ntk:clump_of_crimson_fungus",
+              "ntk:clump_of_warped_fungus",
+              "ntk:clump_of_mosshroom_fungus",
+              "ntk:mosshroom_block",
+              "ntk:mosshroom_light",
+              "ntk:glow_lichen_block"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:fossiliferous_stone",
+              "name": "ntk:itemGroup.name.fossiliferous_blocks"
+            },
+            "items": [
+              "ntk:fossiliferous_stone",
+              "ntk:fossiliferous_deepslate",
+              "ntk:fossiliferous_corrupted_dirt",
+              "ntk:fossiliferous_corrupted_stone",
+              "ntk:fossiliferous_netherrack",
+              "ntk:fossiliferous_heated_netherrack",
+              "ntk:fossiliferous_soul_soil",
+              "ntk:fossiliferous_soul_sand"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:grassed_stone",
+              "name": "ntk:itemGroup.name.grassed_and_mossed_stones"
+            },
+            "items": [
+              "ntk:grassed_stone",
+              "ntk:mossed_stone"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:myceliated_deepslate",
+              "name": "ntk:itemGroup.name.myceliated_stones"
+            },
+            "items": [
+              "ntk:myceliated_deepslate"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:grassed_oak_log_side",
+              "name": "ntk:itemGroup.name.grassed_logs"
+            },
+            "items": [
+              "ntk:grassed_oak_log_side",
+              "ntk:grassed_oak_log_top",
+              "ntk:grassed_spruce_log_side",
+              "ntk:grassed_spruce_log_top",
+              "ntk:grassed_birch_log_side",
+              "ntk:grassed_birch_log_top",
+              "ntk:grassed_jungle_log_side",
+              "ntk:grassed_jungle_log_top",
+              "ntk:grassed_acacia_log_side",
+              "ntk:grassed_acacia_log_top",
+              "ntk:grassed_dark_oak_log_side",
+              "ntk:grassed_dark_oak_log_top",
+              "ntk:grassed_mangrove_log_side",
+              "ntk:grassed_mangrove_log_top",
+              "ntk:grassed_cherry_log_side",
+              "ntk:grassed_cherry_log_top",
+              "ntk:grassed_pale_oak_log_side",
+              "ntk:grassed_pale_oak_log_top",
+              "ntk:grassed_corrupted_oak_log_side",
+              "ntk:grassed_corrupted_oak_log_top",
+              "ntk:grassed_mossy_willow_log_side",
+              "ntk:grassed_mossy_willow_log_top",
+              "ntk:grassed_overgrown_jungle_log_side",
+              "ntk:grassed_overgrown_jungle_log_top"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:mossed_oak_log_side",
+              "name": "ntk:itemGroup.name.mossed_logs"
+            },
+            "items": [
+              "ntk:mossed_oak_log_side",
+              "ntk:mossed_oak_log_top",
+              "ntk:mossed_spruce_log_side",
+              "ntk:mossed_spruce_log_top",
+              "ntk:mossed_birch_log_side",
+              "ntk:mossed_birch_log_top",
+              "ntk:mossed_jungle_log_side",
+              "ntk:mossed_jungle_log_top",
+              "ntk:mossed_acacia_log_side",
+              "ntk:mossed_acacia_log_top",
+              "ntk:mossed_dark_oak_log_side",
+              "ntk:mossed_dark_oak_log_top",
+              "ntk:mossed_mangrove_log_side",
+              "ntk:mossed_mangrove_log_top",
+              "ntk:mossed_cherry_log_side",
+              "ntk:mossed_cherry_log_top",
+              "ntk:mossed_pale_oak_log_side",
+              "ntk:mossed_pale_oak_log_top",
+              "ntk:mossed_corrupted_oak_log_side",
+              "ntk:mossed_corrupted_oak_log_top",
+              "ntk:mossed_mossy_willow_log_side",
+              "ntk:mossed_mossy_willow_log_top",
+              "ntk:mossed_overgrown_jungle_log_side",
+              "ntk:mossed_overgrown_jungle_log_top"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:oak_roots",
+              "name": "ntk:itemGroup.name.wood_roots"
+            },
+            "items": [
+              "ntk:oak_roots",
+              "ntk:spruce_roots",
+              "ntk:birch_roots",
+              "ntk:jungle_roots",
+              "ntk:acacia_roots",
+              "ntk:dark_oak_roots",
+              "ntk:cherry_roots",
+              "ntk:pale_oak_roots",
+              "ntk:corrupted_oak_roots",
+              "ntk:mossy_willow_roots",
+              "ntk:overgrown_jungle_roots"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:pile_of_dandelion",
+              "name": "ntk:itemGroup.name.pile_of_flowers"
+            },
+            "items": [
+              "ntk:pile_of_dandelion",
+              "ntk:pile_of_golden_dandelion",
+              "ntk:pile_of_poppy",
+              "ntk:pile_of_blue_orchid",
+              "ntk:pile_of_allium",
+              "ntk:pile_of_azure_bluet",
+              "ntk:pile_of_red_tulip",
+              "ntk:pile_of_orange_tulip",
+              "ntk:pile_of_white_tulip",
+              "ntk:pile_of_pink_tulip",
+              "ntk:pile_of_oxeye_daisy",
+              "ntk:pile_of_cornflower",
+              "ntk:pile_of_lily_of_the_valley",
+              "ntk:pile_of_sunflower",
+              "ntk:pile_of_lilac",
+              "ntk:pile_of_rose_bush",
+              "ntk:pile_of_peony",
+              "ntk:pile_of_pitcher_plant",
+              "ntk:pile_of_pink_petals",
+              "ntk:pile_of_wildflowers",
+              "ntk:pile_of_wither_rose",
+              "ntk:pile_of_torchflower",
+              "ntk:pile_of_cactus_flower",
+              "ntk:pile_of_closed_eyeblossom",
+              "ntk:pile_of_open_eyeblossom"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:white_tip_grass",
+              "name": "ntk:itemGroup.name.tip_grasses"
+            },
+            "items": [
+              "ntk:white_tip_grass",
+              "ntk:red_tip_grass",
+              "ntk:orange_tip_grass",
+              "ntk:yellow_tip_grass",
+              "ntk:light_blue_tip_grass",
+              "ntk:blue_tip_grass",
+              "ntk:magenta_tip_grass",
+              "ntk:pink_tip_grass"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:jellyfish_polyp",
+              "name": "ntk:itemGroup.name.jellyfish_polyps"
+            },
+            "items": [
+              "ntk:jellyfish_polyp",
+              "ntk:white_jellyfish_polyp",
+              "ntk:light_gray_jellyfish_polyp",
+              "ntk:gray_jellyfish_polyp",
+              "ntk:black_jellyfish_polyp",
+              "ntk:brown_jellyfish_polyp",
+              "ntk:red_jellyfish_polyp",
+              "ntk:orange_jellyfish_polyp",
+              "ntk:yellow_jellyfish_polyp",
+              "ntk:lime_jellyfish_polyp",
+              "ntk:green_jellyfish_polyp",
+              "ntk:cyan_jellyfish_polyp",
+              "ntk:light_blue_jellyfish_polyp",
+              "ntk:blue_jellyfish_polyp",
+              "ntk:purple_jellyfish_polyp",
+              "ntk:magenta_jellyfish_polyp",
+              "ntk:pink_jellyfish_polyp"
+            ]
+          },
+          {
+            "group_identifier": {
+              "icon": "ntk:moa_egg",
+              "name": "ntk:itemGroup.name.eggs"
+            },
+            "items": [
+              "ntk:moa_egg",
+              "ntk:sparrow_egg",
+              "ntk:raven_egg",
+              "ntk:glowbird_egg",
+              "ntk:firebird_egg",
+              "ntk:soul_firebird_egg",
+              "ntk:hummingbird_egg",
+              "ntk:myceling_egg",
+              "ntk:glowceling_egg"
+            ]
+          },
+          {
+            "items": [
+              "ntk:mud_soil",
+              "ntk:corrupted_dirt",
+              "ntk:heated_netherrack",
+              "ntk:active_heated_netherrack",
+              "ntk:hanging_moss",
+              "ntk:grass_carpet",
+              "ntk:glow_lichen_carpet",
+              "ntk:vine_block",
+              "ntk:rotten_brute_flesh",
+              "ntk:quartz_cluster",
+              "ntk:rose_quartz_cluster"
             ]
           }
         ]

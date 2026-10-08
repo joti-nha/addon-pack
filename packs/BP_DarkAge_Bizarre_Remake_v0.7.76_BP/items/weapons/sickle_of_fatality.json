@@ -5,6 +5,7 @@
 			"identifier": "dk:sickle_of_fatality"
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_hoe"] },
 			"minecraft:max_stack_size": 1,
 			"minecraft:damage": 14,
 			"minecraft:can_destroy_in_creative": false,

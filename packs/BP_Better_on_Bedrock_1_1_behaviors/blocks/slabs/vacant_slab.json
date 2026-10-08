@@ -56,7 +56,7 @@
         ],
         "components": {
             "minecraft:geometry": {
-                "identifier": "geometry.slab",
+                "identifier": "geometry.bob_slab",
                 "bone_visibility": {
                     "bottom_slab": "q.block_state('minecraft:vertical_half') == 'bottom'",
                     "top_slab": "q.block_state('minecraft:vertical_half') == 'top'"

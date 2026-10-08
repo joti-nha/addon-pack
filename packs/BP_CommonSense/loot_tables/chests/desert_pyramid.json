@@ -1,520 +1,556 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "entries": [
         {
-            "rolls": {
-                "min": 2,
-                "max": 5
-            },
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:diamond",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 3
-                            }
-                        }
-                    ],
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "bv:magic_mirror",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "max": 1
-                            }
-                        }
-                    ],
-                    "weight": 15
-                },
-                {
-                    "pools": [
-                        {
-                            "rolls": {
-                                "min": 2,
-                                "max": 4
-                            },
-                            "entries": [
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:diamond",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 3
-                                            }
-                                        }
-                                    ],
-                                    "weight": 5
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "bv:magic_mirror",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 1
-                                            }
-                                        }
-                                    ],
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:iron_ingot",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 5
-                                            }
-                                        }
-                                    ],
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:gold_ingot",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 2,
-                                                "max": 7
-                                            }
-                                        }
-                                    ],
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:emerald",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 3
-                                            }
-                                        }
-                                    ],
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:bone",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 4,
-                                                "max": 6
-                                            }
-                                        }
-                                    ],
-                                    "weight": 25
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:spider_eye",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 3
-                                            }
-                                        }
-                                    ],
-                                    "weight": 25
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:rotten_flesh",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 3,
-                                                "max": 7
-                                            }
-                                        }
-                                    ],
-                                    "weight": 25
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:leather",
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 5
-                                            },
-                                            "add": false
-                                        }
-                                    ],
-                                    "weight": 20
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:horsearmoriron",
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:copper_horse_armor",
-                                    "weight": 15
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:horsearmorgold",
-                                    "weight": 10
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:horsearmordiamond",
-                                    "weight": 5
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:book",
-                                    "weight": 20,
-                                    "functions": [
-                                        {
-                                            "function": "enchant_randomly"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:golden_apple",
-                                    "weight": 20
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:appleEnchanted",
-                                    "weight": 2
-                                },
-                                {
-                                    "type": "empty",
-                                    "weight": 15
-                                }
-                            ]
-                        },
-                        {
-                            "rolls": 4,
-                            "entries": [
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:bone",
-                                    "weight": 10,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 8
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:gunpowder",
-                                    "weight": 10,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 8
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:rotten_flesh",
-                                    "weight": 10,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 8
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:string",
-                                    "weight": 10,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 8
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:sand",
-                                    "weight": 10,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": {
-                                                "min": 1,
-                                                "max": 8
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "rolls": 1,
-                            "entries": [
-                                {
-                                    "type": "empty",
-                                    "weight": 6
-                                },
-                                {
-                                    "type": "item",
-                                    "name": "minecraft:dune_armor_trim_smithing_template",
-                                    "weight": 1,
-                                    "functions": [
-                                        {
-                                            "function": "set_count",
-                                            "count": 2
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:iron_ingot",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 5
-                            }
-                        }
-                    ],
-                    "weight": 15
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:gold_ingot",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 2,
-                                "max": 7
-                            }
-                        }
-                    ],
-                    "weight": 15
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:emerald",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 3
-                            }
-                        }
-                    ],
-                    "weight": 15
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:bone",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 4,
-                                "max": 6
-                            }
-                        }
-                    ],
-                    "weight": 25
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:spider_eye",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 3
-                            }
-                        }
-                    ],
-                    "weight": 25
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:rotten_flesh",
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 3,
-                                "max": 7
-                            }
-                        }
-                    ],
-                    "weight": 25
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:saddle",
-                    "weight": 20
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:horsearmoriron",
-                    "weight": 15
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:horsearmorgold",
-                    "weight": 10
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:horsearmordiamond",
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:book",
-                    "weight": 20,
-                    "functions": [
-                        {
-                            "function": "enchant_randomly"
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:golden_apple",
-                    "weight": 20
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:appleEnchanted",
-                    "weight": 2
-                },
-                {
-                    "type": "empty",
-                    "weight": 15
-                }
-            ]
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:diamond",
+          "type": "item",
+          "weight": 5
         },
         {
-            "rolls": 4,
-            "entries": [
+          "functions": [
+            {
+              "count": {
+                "max": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "bv:magic_mirror",
+          "type": "item",
+          "weight": 15
+        },
+        {
+          "pools": [
+            {
+              "entries": [
                 {
-                    "type": "item",
-                    "name": "minecraft:bone",
-                    "weight": 10,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 8
-                            }
-                        }
-                    ]
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 3,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:diamond",
+                  "type": "item",
+                  "weight": 5
                 },
                 {
-                    "type": "item",
-                    "name": "minecraft:gunpowder",
-                    "weight": 10,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 8
-                            }
-                        }
-                    ]
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 1,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "bv:magic_mirror",
+                  "type": "item",
+                  "weight": 15
                 },
                 {
-                    "type": "item",
-                    "name": "minecraft:rotten_flesh",
-                    "weight": 10,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 8
-                            }
-                        }
-                    ]
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 5,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:iron_ingot",
+                  "type": "item",
+                  "weight": 15
                 },
                 {
-                    "type": "item",
-                    "name": "minecraft:string",
-                    "weight": 10,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 8
-                            }
-                        }
-                    ]
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 7,
+                        "min": 2
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:gold_ingot",
+                  "type": "item",
+                  "weight": 15
                 },
                 {
-                    "type": "item",
-                    "name": "minecraft:sand",
-                    "weight": 10,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 1,
-                                "max": 8
-                            }
-                        }
-                    ]
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 3,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:emerald",
+                  "type": "item",
+                  "weight": 15
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 6,
+                        "min": 4
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:bone",
+                  "type": "item",
+                  "weight": 25
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 3,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:spider_eye",
+                  "type": "item",
+                  "weight": 25
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 7,
+                        "min": 3
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:rotten_flesh",
+                  "type": "item",
+                  "weight": 25
+                },
+                {
+                  "functions": [
+                    {
+                      "add": false,
+                      "count": {
+                        "max": 5,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:leather",
+                  "type": "item",
+                  "weight": 20
+                },
+                {
+                  "name": "minecraft:horsearmoriron",
+                  "type": "item",
+                  "weight": 15
+                },
+                {
+                  "name": "minecraft:copper_horse_armor",
+                  "type": "item",
+                  "weight": 15
+                },
+                {
+                  "name": "minecraft:horsearmorgold",
+                  "type": "item",
+                  "weight": 10
+                },
+                {
+                  "name": "minecraft:horsearmordiamond",
+                  "type": "item",
+                  "weight": 5
+                },
+                {
+                  "functions": [
+                    {
+                      "function": "enchant_randomly"
+                    }
+                  ],
+                  "name": "minecraft:book",
+                  "type": "item",
+                  "weight": 20
+                },
+                {
+                  "name": "minecraft:golden_apple",
+                  "type": "item",
+                  "weight": 20
+                },
+                {
+                  "name": "minecraft:appleEnchanted",
+                  "type": "item",
+                  "weight": 2
+                },
+                {
+                  "type": "empty",
+                  "weight": 15
                 }
-            ]
+              ],
+              "rolls": {
+                "max": 4,
+                "min": 2
+              }
+            },
+            {
+              "entries": [
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 8,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:bone",
+                  "type": "item",
+                  "weight": 10
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 8,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:gunpowder",
+                  "type": "item",
+                  "weight": 10
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 8,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:rotten_flesh",
+                  "type": "item",
+                  "weight": 10
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 8,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:string",
+                  "type": "item",
+                  "weight": 10
+                },
+                {
+                  "functions": [
+                    {
+                      "count": {
+                        "max": 8,
+                        "min": 1
+                      },
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:sand",
+                  "type": "item",
+                  "weight": 10
+                }
+              ],
+              "rolls": 4
+            },
+            {
+              "entries": [
+                {
+                  "type": "empty",
+                  "weight": 6
+                },
+                {
+                  "functions": [
+                    {
+                      "count": 2,
+                      "function": "set_count"
+                    }
+                  ],
+                  "name": "minecraft:dune_armor_trim_smithing_template",
+                  "type": "item",
+                  "weight": 1
+                }
+              ],
+              "rolls": 1
+            }
+          ]
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 5,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:iron_ingot",
+          "type": "item",
+          "weight": 15
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 7,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:gold_ingot",
+          "type": "item",
+          "weight": 15
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:emerald",
+          "type": "item",
+          "weight": 15
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 6,
+                "min": 4
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:bone",
+          "type": "item",
+          "weight": 25
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:spider_eye",
+          "type": "item",
+          "weight": 25
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 7,
+                "min": 3
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:rotten_flesh",
+          "type": "item",
+          "weight": 25
+        },
+        {
+          "name": "minecraft:saddle",
+          "type": "item",
+          "weight": 20
+        },
+        {
+          "name": "minecraft:horsearmoriron",
+          "type": "item",
+          "weight": 15
+        },
+        {
+          "name": "minecraft:horsearmorgold",
+          "type": "item",
+          "weight": 10
+        },
+        {
+          "name": "minecraft:horsearmordiamond",
+          "type": "item",
+          "weight": 5
+        },
+        {
+          "functions": [
+            {
+              "function": "enchant_randomly"
+            }
+          ],
+          "name": "minecraft:book",
+          "type": "item",
+          "weight": 20
+        },
+        {
+          "name": "minecraft:golden_apple",
+          "type": "item",
+          "weight": 20
+        },
+        {
+          "name": "minecraft:appleEnchanted",
+          "type": "item",
+          "weight": 2
+        },
+        {
+          "type": "empty",
+          "weight": 15
         }
-    ]
+      ],
+      "rolls": {
+        "max": 5,
+        "min": 2
+      }
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 8,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:bone",
+          "type": "item",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 8,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:gunpowder",
+          "type": "item",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 8,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:rotten_flesh",
+          "type": "item",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 8,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:string",
+          "type": "item",
+          "weight": 10
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 8,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:sand",
+          "type": "item",
+          "weight": 10
+        }
+      ],
+      "rolls": 4
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 4,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:rune",
+          "type": "item",
+          "weight": 7
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 4,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:ice_rune",
+          "type": "item",
+          "weight": 1
+        }
+      ],
+      "rolls": {
+        "max": 4,
+        "min": 2
+      }
+    }
+  ]
 }

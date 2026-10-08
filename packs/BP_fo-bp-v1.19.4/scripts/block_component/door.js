@@ -26,7 +26,7 @@ const vanillaDoors = [
 ];
 
 const BlockDoorBeforeOnPlayerPlaceComponent = {
-  beforeOnPlayerPlace(event, params) => {
+  beforeOnPlayerPlace(event, params) {
     const { block, dimension, face, permutationToPlace, player } = event;
     event.cancel = true;
     const eventChance = params.event_chance ?? 100.0

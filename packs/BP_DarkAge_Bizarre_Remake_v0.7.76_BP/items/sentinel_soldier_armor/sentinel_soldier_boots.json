@@ -9,6 +9,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "sentinel_soldier_boots",
 			"minecraft:display_name": {
 				"value": "item.dk:sentinel_soldier_boots.name"

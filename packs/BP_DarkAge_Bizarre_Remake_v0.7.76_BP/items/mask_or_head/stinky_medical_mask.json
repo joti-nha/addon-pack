@@ -9,6 +9,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "stinky_medical_mask",
 			"minecraft:display_name": {
 				"value": "item.dk:stinky_medical_mask.name"

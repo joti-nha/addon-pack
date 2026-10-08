@@ -9,6 +9,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "elemental_soldier_chestplate",
 			"minecraft:display_name": {
 				"value": "item.dk:elemental_soldier_chestplate.name"

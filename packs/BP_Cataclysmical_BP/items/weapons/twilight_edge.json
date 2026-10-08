@@ -43,10 +43,7 @@
 				"duration": 5
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_sword"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_sword", "oreville:is_sword"]
 			},
 			"minecraft:enchantable": {
 				"slot": "sword",

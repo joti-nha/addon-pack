@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.wraith.idle": {
+		"animation.bob_wraith.idle": {
 			"loop": true,
 			"animation_length": 5.28,
 			"bones": {
@@ -99,7 +99,7 @@
 				}
 			}
 		},
-		"animation.wraith.move": {
+		"animation.bob_wraith.move": {
 			"loop": true,
 			"animation_length": 3.28,
 			"bones": {
@@ -180,7 +180,7 @@
 				}
 			}
 		},
-		"animation.wraith.attack": {
+		"animation.bob_wraith.attack": {
 			"animation_length": 1.24,
 			"bones": {
 				"body": {
@@ -326,7 +326,7 @@
 				}
 			}
 		},
-		"animation.wraith.teleport_in": {
+		"animation.bob_wraith.teleport_in": {
 			"animation_length": 1.04,
 			"bones": {
 				"body": {
@@ -426,7 +426,7 @@
 				}
 			}
 		},
-		"animation.wraith.teleport_out": {
+		"animation.bob_wraith.teleport_out": {
 			"animation_length": 1.72,
 			"bones": {
 				"body": {

@@ -1,6 +1,5 @@
 
-execute if entity @p[tag=!joined7] at @p run give @p better_on_bedrock:lost_journal 1
-execute if entity @p[tag=!joined7] at @p run give @p better_on_bedrock:quest_paper 1
+# [Addon Pack] sem itens iniciais (diario e papel de missao continuam craftaveis)
 
 tag @p add joined
 tag @p add joined5

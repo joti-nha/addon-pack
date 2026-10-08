@@ -1,66 +1,123 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "entries": [
         {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:emerald",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 0,
-                                "max": 2
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:paper",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 0,
-                                "max": 2
-                            }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "conditions": [
-                {
-                    "condition": "random_chance_with_looting",
-                    "chance": 0.25,
-                    "looting_multiplier": 0.25
-                }
-            ],
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "dungeons:enchanters_tome",
-                    "weight": 1
-                }
-            ]
+          "functions": [
+            {
+              "count": {
+                "max": 2,
+                "min": 0
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:emerald",
+          "type": "item",
+          "weight": 1
         }
-    ]
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 2,
+                "min": 0
+              },
+              "function": "set_count"
+            },
+            {
+              "count": {
+                "max": 1,
+                "min": 0
+              },
+              "function": "looting_enchant"
+            }
+          ],
+          "name": "minecraft:paper",
+          "type": "item",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "conditions": [
+        {
+          "chance": 0.25,
+          "condition": "random_chance_with_looting",
+          "looting_multiplier": 0.25
+        }
+      ],
+      "entries": [
+        {
+          "name": "dungeons:enchanters_tome",
+          "type": "item",
+          "weight": 1
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 1,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:enchanter_eye",
+          "type": "item",
+          "weight": 100
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 1,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:rune",
+          "type": "item",
+          "weight": 100
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 1,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:enchantaegis_trophy",
+          "type": "item",
+          "weight": 100
+        }
+      ],
+      "rolls": 1
+    }
+  ]
 }

@@ -54,7 +54,7 @@
 				}
 			},
 			"minecraft:damage": {
-        "value": 8
+        "value": 6
 			},
 			"minecraft:digger": {
 				"use_efficiency": true,
@@ -106,20 +106,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:smeltable",
-          "ntk:mainhand_equipment",
-          "ntk:tool",
-          "ntk:axe",
-          "ntk:olivine_axe",
-          
-          "minecraft:is_axe",
-          "minecraft:is_tool",
-          "minecraft:diamond_tier",
-          "minecraft:digger"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:smeltable", "ntk:mainhand_equipment", "ntk:tool", "ntk:axe", "ntk:olivine_axe", "minecraft:is_axe", "minecraft:is_tool", "minecraft:diamond_tier", "minecraft:digger", "oreville:is_axe"]
       },
 			"ntk:on_mine_block": [
         {

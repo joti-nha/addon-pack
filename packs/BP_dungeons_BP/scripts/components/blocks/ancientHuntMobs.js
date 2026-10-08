@@ -2339,3 +2339,12 @@ const spawnData = [
   }
 
 ];
+
+// [Addon Pack] Improvised Guns: o Offshoot (rev:offshoot, esqueleto armado) aparece junto dos esqueletos
+// das estruturas, com ~40% do peso de cada esqueleto comum (nunca menos que 1). Se o addon nao estiver
+// instalado, o try/catch do spawn ignora a entrada.
+for (const entry of [...spawnData]) {
+  if (entry.entity === "minecraft:skeleton" && !entry.requireWater) {
+    spawnData.push({ ...entry, entity: "rev:offshoot", weight: Math.max(1, Math.round(entry.weight * 0.4)) });
+  }
+}

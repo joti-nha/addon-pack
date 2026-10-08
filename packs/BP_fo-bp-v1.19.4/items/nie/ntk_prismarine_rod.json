@@ -47,13 +47,7 @@
         "value": 64
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:material",
-          "ntk:refined_material",
-          "ntk:rod",
-          "ntk:prismarine_rod"
-        ]
+        "tags": ["ntk:items", "ntk:material", "ntk:refined_material", "ntk:rod", "ntk:prismarine_rod", "oreville:is_rod"]
       }
     }
   }

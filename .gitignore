@@ -1,5 +1,4 @@
-# Originais de terceiros nunca entram no repositório
-originais/
+# Pacote gerado pelo empacotar.py
 *.mcaddon
 *.mcpack
 *.mctemplate

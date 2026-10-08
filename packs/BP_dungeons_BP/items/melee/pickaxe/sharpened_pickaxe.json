@@ -55,14 +55,7 @@
             },
             "minecraft:can_destroy_in_creative": false,
             "minecraft:tags": {
-                "tags": [
-                    "minecraft:is_tool",
-                    "minecraft:is_pickaxe",
-                    "minecraft:digger",
-                    "minecraft:is_sword",
-                    "dungeons:melee_lore",
-                    "dungeons:sharpened_pickaxe"
-                ]
+                "tags": ["minecraft:is_tool", "minecraft:is_pickaxe", "minecraft:digger", "dungeons:melee_lore", "dungeons:sharpened_pickaxe", "oreville:is_pickaxe"]
             }
         }
     }

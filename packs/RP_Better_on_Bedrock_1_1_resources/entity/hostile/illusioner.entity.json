@@ -10,7 +10,7 @@
 				"default": "textures/entity/hostile/illusioner"
 			},
 			"geometry": {
-				"default": "geometry.illusioner"
+				"default": "geometry.bob_illusioner"
 			},
 			"scripts": {
                 "should_update_bones_and_effects_offscreen": true                

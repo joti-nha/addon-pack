@@ -102,20 +102,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:smeltable",
-          "ntk:mainhand_equipment",
-          "ntk:tool",
-          "ntk:shovel",
-          "ntk:olivine_shovel",
-          
-          "minecraft:is_shovel",
-          "minecraft:is_tool",
-          "minecraft:diamond_tier",
-          "minecraft:digger"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:smeltable", "ntk:mainhand_equipment", "ntk:tool", "ntk:shovel", "ntk:olivine_shovel", "minecraft:is_shovel", "minecraft:is_tool", "minecraft:diamond_tier", "minecraft:digger", "oreville:is_shovel"]
       },
 			"ntk:on_mine_block": [
         {

@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.illusioner.new": {
+		"animation.bob_illusioner.new": {
 			"loop": true,
 			"bones": {
 				"arms": {
@@ -15,7 +15,7 @@
 				}
 			}
 		},
-		"animation.illusioner.new2": {
+		"animation.bob_illusioner.new2": {
 			"loop": true,
 			"bones": {
 				"arms": {
@@ -35,7 +35,7 @@
 				}
 			}
 		},
-		"animation.illusioner.new3": {
+		"animation.bob_illusioner.new3": {
 			"loop": true,
 			"bones": {
 				"arms": {
@@ -55,7 +55,7 @@
 				}
 			}
 		},
-		"animation.illusioner.idle": {
+		"animation.bob_illusioner.idle": {
 			"loop": true,
 			"bones": {
 				"arms": {
@@ -69,7 +69,7 @@
 				}
 			}
 		},
-		"animation.illusioner.bow": {
+		"animation.bob_illusioner.bow": {
 			"loop": true,
 			"bones": {
 				"arms": {
@@ -89,7 +89,7 @@
 				}
 			}
 		},
-		"animation.illusioner.walk": {
+		"animation.bob_illusioner.walk": {
 			"loop": true,
 			"bones": {
 				"arms": {

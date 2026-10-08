@@ -10,7 +10,7 @@
 				"default": "textures/entity/geomancer"
 			},
 			"geometry": {
-				"default": "geometry.geomancer"
+				"default": "geometry.bob_geomancer"
 			},
 			"scripts": {
                 "should_update_bones_and_effects_offscreen": true                

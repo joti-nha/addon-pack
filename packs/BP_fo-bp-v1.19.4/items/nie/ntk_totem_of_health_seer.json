@@ -58,7 +58,7 @@
         "protection": 0
       },
 			"minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_armor", 
           "ntk:items",
           "ntk:equippable",
           "ntk:offhand_equipment",

@@ -4092,12 +4092,20 @@ function getRaceHealthRatio(player, race) {
   }
 }
 
+// [Addon Pack] "Vida extra": Health Boost (RPG/pocoes) soma +4 de vida por nivel; o limite da raca nao pode engoli-la.
+function healthBoostBonus(player) {
+  try {
+    const eff = player.getEffect("health_boost");
+    return eff ? (eff.amplifier + 1) * 4 : 0;
+  } catch (_) { return 0; }
+}
+
 function capHealthToRace(player, race) {
   if (!player?.isValid?.() || !race) return;
   try {
     const health = player.getComponent("minecraft:health");
     if (!health) return;
-    const cap = getRaceMaxHealth(race);
+    const cap = getRaceMaxHealth(race) + healthBoostBonus(player);
     if (health.currentValue > cap + 0.05) {
       health.setCurrentValue(cap);
     }
@@ -4109,7 +4117,7 @@ function healPlayerWithinRaceCap(player, race, amount) {
   try {
     const health = player.getComponent("minecraft:health");
     if (!health) return;
-    const cap = getRaceMaxHealth(race ?? getRace(player));
+    const cap = getRaceMaxHealth(race ?? getRace(player)) + healthBoostBonus(player);
     health.setCurrentValue(Math.min(cap, health.currentValue + amount));
   } catch (_) {}
 }
@@ -4130,8 +4138,9 @@ function syncRaceMaxHealth(player) {
   const race = getRace(player);
   if (!race) return;
 
-  const hudMax = getRaceHudMaxHealth(race);
-  const raceCap = getRaceMaxHealth(race);
+  const boost = healthBoostBonus(player);
+  const hudMax = getRaceHudMaxHealth(race) + boost;
+  const raceCap = getRaceMaxHealth(race) + boost;
   let health;
   try {
     health = player.getComponent("minecraft:health");
@@ -4643,10 +4652,12 @@ function showBeastfolkSubraceSelector(player) {
     }
     form.button("§8← Back to Races\n§7Return to the main list");
 
+    RACE_FORM_PENDING.set(player.id, mc.system.currentTick);
     form.show(player).then((result) => {
+      RACE_FORM_PENDING.delete(player.id);
       if (result.canceled || result.selection === undefined) {
         if (!player.hasTag("race_assigned")) {
-          mc.system.runTimeout(() => showBeastfolkSubraceSelector(player), 100);
+          mc.system.runTimeout(() => showBeastfolkSubraceSelector(player), 40);
         }
         return;
       }
@@ -4663,6 +4674,7 @@ function showBeastfolkSubraceSelector(player) {
       }
       if (chosen) setRace(player, chosen);
     }).catch(() => {
+      RACE_FORM_PENDING.delete(player.id);
       if (!player.hasTag("race_assigned")) {
         mc.system.runTimeout(() => showBeastfolkSubraceSelector(player), 60);
       }
@@ -4670,28 +4682,48 @@ function showBeastfolkSubraceSelector(player) {
   });
 }
 
+const RACE_FORM_PENDING = new Map(); // playerId -> tick em que o formulario foi aberto
+// [Addon Pack] valvula de seguranca: se o jogador fechar a tela varias vezes seguidas (ou ela nao aparecer
+// direito), para de reabrir por 1 minuto, para nunca prender a tela.
+const RACE_FORM_CLOSES = new Map(); // playerId -> fechamentos seguidos
+const RACE_FORM_PAUSE = new Map();  // playerId -> tick ate o qual nao reabre
+function raceFormClosed(player) {
+  const n = (RACE_FORM_CLOSES.get(player.id) ?? 0) + 1;
+  if (n >= 3) {
+    RACE_FORM_CLOSES.set(player.id, 0);
+    RACE_FORM_PAUSE.set(player.id, mc.system.currentTick + 1200);
+    try { player.sendMessage("§eA escolha de raça volta a aparecer em 1 minuto. §7(Ela é obrigatória.)"); } catch (_) {}
+    return false;
+  }
+  RACE_FORM_CLOSES.set(player.id, n);
+  return true;
+}
 function showRaceSelector(player) {
   mc.system.run(() => {
+    if (!player?.isValid?.() || player.hasTag("race_assigned")) return;
+    const since = RACE_FORM_PENDING.get(player.id);
+    if (since !== undefined && mc.system.currentTick - since < 1200) return; // ja aberto
+    if ((RACE_FORM_PAUSE.get(player.id) ?? 0) > mc.system.currentTick) return; // pausa de seguranca
+    RACE_FORM_PENDING.set(player.id, mc.system.currentTick);
     const form = new ActionFormData()
       .title("Choose Your Race")
       .body("§7Your choice is §cpermanent§7. Choose wisely!\n");
 
     for (const race of RACES) {
-      if (race.isCategory) {
-        form.button(`${race.label}\n§7${race.abilityDescription}`);
-      } else {
-        form.button(`${race.label}\n§7${race.abilityDescription}`);
-      }
+      form.button(`${race.label}\n§7${race.abilityDescription}`);
     }
 
     form.show(player).then((result) => {
+      RACE_FORM_PENDING.delete(player.id);
       if (result.canceled || result.selection === undefined) {
-        // Re-show after a moment if they dismissed it without choosing
-        if (!player.hasTag("race_assigned")) {
-          mc.system.runTimeout(() => showRaceSelector(player), 100);
+        // [Addon Pack] tela obrigatoria: se estava ocupado, tenta de novo; se o jogador fechou, reabre em breve.
+        const busy = result.cancelationReason === "UserBusy";
+        if (!player.hasTag("race_assigned") && (busy || raceFormClosed(player))) {
+          mc.system.runTimeout(() => showRaceSelector(player), busy ? 20 : 60);
         }
         return;
       }
+      RACE_FORM_CLOSES.set(player.id, 0);
       const chosen = RACES[result.selection];
       if (!chosen) return;
       if (chosen.isCategory && chosen.key === "beastfolk") {
@@ -4700,13 +4732,22 @@ function showRaceSelector(player) {
       }
       if (!chosen.isCategory) setRace(player, chosen);
     }).catch(() => {
-      // If form fails, retry
+      RACE_FORM_PENDING.delete(player.id);
       if (!player.hasTag("race_assigned")) {
         mc.system.runTimeout(() => showRaceSelector(player), 60);
       }
     });
   });
 }
+
+// [Addon Pack] Rede de seguranca: qualquer jogador sem raca escolhida (mundo antigo, formulario
+// perdido, outro menu aberto na hora) volta a ver a tela de selecao.
+mc.system.runInterval(() => {
+  for (const p of mc.world.getAllPlayers()) {
+    if (!p.hasTag("race_assigned")) showRaceSelector(p);
+  }
+}, 100);
+mc.world.beforeEvents.playerLeave.subscribe(({ player }) => { RACE_FORM_PENDING.delete(player.id); });
 
 // ─────────────────────────────────────────────
 //  SPAWN HANDLER

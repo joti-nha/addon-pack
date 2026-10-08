@@ -8,6 +8,7 @@
             }
         },
         "components": {
+      "minecraft:tags": { "tags": ["oreville:is_sword"] },
             "minecraft:icon": "better_on_bedrock:resin_dagger",
             "minecraft:display_name": {
                 "value": "item.better_on_bedrock:resin_dagger.name"

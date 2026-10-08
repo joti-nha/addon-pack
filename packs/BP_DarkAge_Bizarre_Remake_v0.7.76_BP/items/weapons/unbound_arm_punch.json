@@ -5,6 +5,7 @@
 			"identifier": "dk:unbound_arm_punch"
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_tool"] },
 			"minecraft:max_stack_size": 1,
 			"minecraft:should_despawn": true,
 			"minecraft:hand_equipped": true,

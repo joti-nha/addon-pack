@@ -27,10 +27,7 @@
 				"duration": 5
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_sword"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_sword", "oreville:is_sword"]
 			},
 			"minecraft:fire_resistant": {
 				"value": true

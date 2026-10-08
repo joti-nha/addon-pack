@@ -90,16 +90,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:range_weapon",
-          "ntk:staff",
-          "ntk:teleportation_staff",
-          
-          "ntk:scatter_blink_effect"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:mainhand_equipment", "ntk:range_weapon", "ntk:staff", "ntk:teleportation_staff", "ntk:scatter_blink_effect", "oreville:is_on_a_stick"]
       },
       "ntk:scatter_blink_effect_on_hit_entity": [
         {

@@ -1,221 +1,343 @@
 {
   "pools": [
     {
-      "rolls": {
-        "min": 0,
-        "max": 1
-      },
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:crossbow"
+          "name": "minecraft:crossbow",
+          "type": "item"
         }
-      ]
+      ],
+      "rolls": {
+        "max": 1,
+        "min": 0
+      }
     },
     {
-      "rolls": {
-        "min": 2,
-        "max": 3
-      },
       "entries": [
         {
-          "type": "item",
-          "weight": 7,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 3,
-                "max": 5
-              }
+                "max": 5,
+                "min": 3
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:wheat"
+          "name": "minecraft:wheat",
+          "type": "item",
+          "weight": 7
         },
         {
-          "type": "item",
-          "weight": 5,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 5
-              }
+                "max": 5,
+                "min": 2
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:potato"
+          "name": "minecraft:potato",
+          "type": "item",
+          "weight": 5
         },
         {
-          "type": "item",
-          "weight": 5,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 3,
-                "max": 5
-              }
+                "max": 5,
+                "min": 3
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:carrot"
+          "name": "minecraft:carrot",
+          "type": "item",
+          "weight": 5
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 4,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:rune",
+          "type": "item",
+          "weight": 7
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 4,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:ice_rune",
+          "type": "item",
+          "weight": 1
+        },
+        {
+          "name": "better_on_bedrock:barley_seed",
+          "type": "item",
+          "weight": 3
+        },
+        {
+          "name": "better_on_bedrock:tomato_seed",
+          "type": "item",
+          "weight": 3
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:onion_seed",
+          "type": "item",
+          "weight": 7
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:cabbage_seed",
+          "type": "item",
+          "weight": 6
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:tomato_seed",
+          "type": "item",
+          "weight": 7
+        },
+        {
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "better_on_bedrock:eggplant_seed",
+          "type": "item",
+          "weight": 7
         }
-      ]
+      ],
+      "rolls": {
+        "max": 3,
+        "min": 2
+      }
     },
     {
-      "rolls": {
-        "min": 1,
-        "max": 3
-      },
       "entries": [
         {
-          "type": "item",
+          "functions": [
+            {
+              "count": {
+                "max": 3,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
           "name": "minecraft:dark_oak_log",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 2,
-                "max": 3
-              }
-            }
-          ]
+          "type": "item",
+          "weight": 1
         }
-      ]
+      ],
+      "rolls": {
+        "max": 3,
+        "min": 1
+      }
     },
     {
-      "rolls": {
-        "min": 2,
-        "max": 3
-      },
       "entries": [
         {
+          "name": "minecraft:experience_bottle",
           "type": "item",
-          "weight": 7,
-          "name": "minecraft:experience_bottle"
+          "weight": 7
         },
         {
-          "type": "item",
-          "weight": 4,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 6
-              }
+                "max": 6,
+                "min": 1
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:string"
+          "name": "minecraft:string",
+          "type": "item",
+          "weight": 4
         },
         {
-          "type": "item",
-          "weight": 4,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 2,
-                "max": 7
-              }
+                "max": 7,
+                "min": 2
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:arrow"
+          "name": "minecraft:arrow",
+          "type": "item",
+          "weight": 4
         },
         {
-          "type": "item",
-          "weight": 3,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 3
-              }
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:tripwire_hook"
+          "name": "minecraft:tripwire_hook",
+          "type": "item",
+          "weight": 3
         },
         {
-          "type": "item",
-          "weight": 3,
           "functions": [
             {
-              "function": "set_count",
               "count": {
-                "min": 1,
-                "max": 3
-              }
+                "max": 3,
+                "min": 1
+              },
+              "function": "set_count"
             }
           ],
-          "name": "minecraft:iron_ingot"
+          "name": "minecraft:iron_ingot",
+          "type": "item",
+          "weight": 3
         },
         {
-          "type": "item",
           "functions": [
             {
               "function": "minecraft:enchant_randomly"
             }
           ],
-          "name": "minecraft:book"
+          "name": "minecraft:book",
+          "type": "item"
+        },
+        {
+          "name": "minecraft:sentry_armor_trim_smithing_template",
+          "type": "item"
         }
-      ]
+      ],
+      "rolls": {
+        "max": 3,
+        "min": 2
+      }
     },
     {
-      "rolls": {
-        "min": 0,
-        "max": 1
-      },
       "entries": [
         {
-          "type": "item",
-          "name": "minecraft:goat_horn",
           "functions": [
             {
-              "function": "set_data",
               "data": {
-                "min": 0,
-                "max": 3
-              }
+                "max": 3,
+                "min": 0
+              },
+              "function": "set_data"
             }
-          ]
+          ],
+          "name": "minecraft:goat_horn",
+          "type": "item"
         }
-      ]
+      ],
+      "rolls": {
+        "max": 1,
+        "min": 0
+      }
     },
     {
-      "rolls": 1,
       "entries": [
         {
           "type": "empty",
           "weight": 3
         },
         {
-          "type": "item",
-          "name": "minecraft:sentry_armor_trim_smithing_template",
-          "weight": 1,
           "functions": [
             {
-              "function": "set_count",
-              "count": 2
+              "count": 2,
+              "function": "set_count"
             }
-          ]
+          ],
+          "name": "minecraft:sentry_armor_trim_smithing_template",
+          "type": "item",
+          "weight": 1
         }
-      ]
+      ],
+      "rolls": 1
     },
     {
-      "rolls": 1,
       "entries": [
         {
           "type": "empty",
           "weight": 19
         },
         {
-          "type": "item",
           "name": "dungeons:obsidian_monstrosity_explorer_map",
+          "type": "item",
           "weight": 1
         }
-      ]
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "functions": [
+            {
+              "function": "set_data"
+            },
+            {
+              "count": {
+                "max": 3,
+                "min": 2
+              },
+              "function": "set_count"
+            }
+          ],
+          "name": "minecraft:log2",
+          "type": "item"
+        }
+      ],
+      "rolls": {
+        "max": 3,
+        "min": 1
+      }
     }
   ]
 }

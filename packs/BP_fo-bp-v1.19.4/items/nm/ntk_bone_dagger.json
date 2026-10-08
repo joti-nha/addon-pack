@@ -105,17 +105,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:is_need_durability_fixer",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:melee_weapon",
-          "ntk:dagger",
-          "ntk:bone_dagger",
-          
-          "ntk:spirit_piercer_effect"
-        ]
+        "tags": ["ntk:items", "ntk:is_need_durability_fixer", "ntk:equippable", "ntk:mainhand_equipment", "ntk:melee_weapon", "ntk:dagger", "ntk:bone_dagger", "ntk:spirit_piercer_effect", "oreville:is_sword"]
       },
 			"ntk:on_hit_entity": [
         {

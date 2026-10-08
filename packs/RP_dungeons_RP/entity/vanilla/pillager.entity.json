@@ -4,27 +4,32 @@
     "description": {
       "identifier": "minecraft:pillager",
       "materials": {
+        "enchanted": "entity_enchant",
+        "enchanted_rtx": "entity_alphatest_glint",
         "default": "pillager"
       },
       "textures": {
+        "enchanted": "textures/misc/enchanted_glint_entity",
         "default": "textures/entity/pillager",
         "gold": "textures/entity/pillager/gold_pillager",
         "diamond": "textures/entity/pillager/diamond_pillager"
       },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ],
+        "should_update_bones_and_effects_offscreen": true,
+        "animate": [
+          "pillager_root_controller"
+        ]
+      },
+      "enable_attachables": true,
       "geometry": {
         "default": "geometry.pillager",
         "armored": "geometry.armored_pillager"
       },
       "spawn_egg": {
         "texture": "spawn_egg_pillager"
-      },
-      "scripts": {
-        "pre_animation": [
-          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
-        ],
-        "animate": [
-          "pillager_root_controller"
-        ]
       },
       "animations": {
         "humanoid_base_pose": "animation.humanoid.base_pose",
@@ -49,11 +54,14 @@
         "controller_pillager_attack": "controller.animation.pillager.attack",
         "pillager_root_controller": "controller.animation.pillager.root"
       },
+      "hide_armor": true,
       "render_controllers": [
-        "controller.render.armored_pillager"
-      ],
-      "enable_attachables": true,
-      "hide_armor": true
+        "controller.render.armored_pillager",
+        "controller.render.pillager",
+        {
+          "controller.render.enchanted": "q.property('better_on_bedrock:enchanted') && !q.graphics_mode_is_any('raytraced')"
+        }
+      ]
     }
   }
 }

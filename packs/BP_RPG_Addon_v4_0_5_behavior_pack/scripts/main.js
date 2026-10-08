@@ -1,6 +1,26 @@
 // src/main.ts
 import { world as world12, system as system9, ItemLockMode as ItemLockMode5 } from "@minecraft/server";
 
+// [Addon Pack] Menus do RPG (Guide, Skill Tree, Soul Shop...) tentam de novo quando o jogo responde "UserBusy"
+// (acontece ao abrir logo apos usar o item; antes o menu simplesmente nao aparecia).
+import { ActionFormData as __AFD, ModalFormData as __MFD, MessageFormData as __MSG } from "@minecraft/server-ui";
+for (const __F of [__AFD, __MFD, __MSG]) {
+  const __orig = __F.prototype.show;
+  __F.prototype.show = function (player) {
+    const self = this;
+    return new Promise((resolve, reject) => {
+      let tries = 0;
+      const attempt = () => {
+        __orig.call(self, player).then((r) => {
+          if (r && r.canceled && r.cancelationReason === "UserBusy" && tries++ < 30) system9.runTimeout(attempt, 6);
+          else resolve(r);
+        }).catch(reject);
+      };
+      attempt();
+    });
+  };
+}
+
 // src/systems/init.ts
 import { world, ItemStack, ItemLockMode } from "@minecraft/server";
 var SCOREBOARDS = ["class", "souls", "level"];
@@ -23,13 +43,13 @@ world.afterEvents.playerSpawn.subscribe((event) => {
     player.removeTag("shop_assassin_poisen");
     player.addTag("shop_assassin_poison");
   }
-  event.player.sendMessage("\xA7b=========================================");
-  event.player.sendMessage("\xA7eWelcome to the RPG Addon!");
-  event.player.sendMessage("\xA7fIf you find any bugs or have issues, please report them on Discord.");
-  event.player.sendMessage("\xA7fGive us your feedback and ideas for the next update to help make it even better!");
-  event.player.sendMessage("\xA7a[ join discord , link is in addon descripion on curseforge ]");
-  event.player.sendMessage("\xA7b=========================================");
+  // [Addon Pack] mensagens de boas-vindas/Discord removidas (evita avalanche no 1o acesso).
   initPlayer(event.player);
+  // [Addon Pack] HUD do RPG desativado por padrao (1o acesso). O jogador liga em Settings > HUD (tag hide_rpg_hud).
+  if (!player.hasTag("rpg_hud_default_applied")) {
+    player.addTag("rpg_hud_default_applied");
+    player.addTag("hide_rpg_hud");
+  }
 });
 world.afterEvents.playerLeave.subscribe((event) => {
   const pid = event.playerId;

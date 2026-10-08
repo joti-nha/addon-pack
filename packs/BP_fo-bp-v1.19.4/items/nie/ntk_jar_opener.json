@@ -57,7 +57,7 @@
 			  "value": 1
 			},
 			"minecraft:tags": {
-        "tags": [
+        "tags": ["minecraft:is_tool", 
           "ntk:items",
           "ntk:equippable",
           "ntk:mainhand_equipment",

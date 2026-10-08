@@ -1121,10 +1121,7 @@
 				]
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_pickaxe",
-					"minecraft:is_tool"
-				]
+				"tags": ["minecraft:is_pickaxe", "minecraft:is_tool", "oreville:is_pickaxe"]
 			},
 			"minecraft:block_placer": {
 				"block": "mnra_cata:sunflare_pickaxe",

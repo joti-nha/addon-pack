@@ -34,10 +34,7 @@
 				]
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_axe"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_axe", "oreville:is_axe"]
 			},
 			"minecraft:digger": {
 				"use_efficiency": true,

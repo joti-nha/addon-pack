@@ -4,7 +4,7 @@
         "description": {
             "identifier": "better_on_bedrock:diamond_spear",
             "menu_category": {
-                "category": "equipment"
+                "category": "none"
             }
         },
         "components": {
@@ -24,7 +24,7 @@
             "minecraft:use_animation": "spear",
 
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_trident"
                 ]
             }

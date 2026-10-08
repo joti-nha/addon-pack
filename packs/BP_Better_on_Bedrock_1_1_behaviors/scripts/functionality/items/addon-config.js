@@ -90,11 +90,10 @@ export function configItem(player) {
 
     if (!player.hasTag("gotConfig")) {
         player.addTag("allow_corpse");
-        player.addTag("toolTip");
+        // [Addon Pack] "What's That UI" (toolTip) desligado por padrao: a Reliquia da Videncia (Eternal Caves) o substitui
         player.addTag("gotConfig");
         player.addTag("pog:ambientSounds");
 
-        const inventory = player.getComponent(EntityInventoryComponent.componentId).container;
-        inventory.addItem(new ItemStack("better_on_bedrock:guide_book"));
+        // [Addon Pack] guia nao e mais entregue no 1o acesso (continua craftavel)
     };
 };

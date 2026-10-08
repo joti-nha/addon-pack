@@ -7,7 +7,7 @@
         "category": "equipment"
       }
     },
-    "components": {
+    "components": {"minecraft:tags":{"tags":["oreville:is_on_a_stick"]},
       "minecraft:hover_text_color": "green",
       "minecraft:hand_equipped": true,
       "minecraft:icon": "ice_wand",

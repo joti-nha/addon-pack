@@ -5,6 +5,7 @@
 			"identifier": "mnra_cata:meowclysm"
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["oreville:is_sword"] },
 			"minecraft:max_stack_size": 1,
 			"minecraft:hand_equipped": true,
 			"minecraft:can_destroy_in_creative": false,

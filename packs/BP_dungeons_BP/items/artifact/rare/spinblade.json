@@ -7,7 +7,7 @@
         "category": "equipment"
       }
     },
-    "components": {
+    "components": {"minecraft:tags":{"tags":["oreville:is_sword"]},
       "minecraft:hover_text_color": "green",
       "minecraft:hand_equipped": true,
       "minecraft:icon": "spinblade",

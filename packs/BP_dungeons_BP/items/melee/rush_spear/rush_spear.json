@@ -11,7 +11,7 @@
             "dungeons:rush_spear": {},
             "minecraft:icon": "rush_spear",
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_spear",
                     "dungeons:melee_lore"
                 ]

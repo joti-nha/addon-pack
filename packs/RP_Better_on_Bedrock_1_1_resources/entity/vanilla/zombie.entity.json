@@ -16,7 +16,7 @@
             },
             "geometry": {
                 "cold": "geometry.zombie_jungle",
-                "warm": "geometry.frozen_zombie"
+                "warm": "geometry.bob_frozen_zombie"
             },
             "scripts": {
                 "scale": "query.is_baby ? 2.0 : 1.0",

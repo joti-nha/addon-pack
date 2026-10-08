@@ -52,13 +52,7 @@
 				"replace_block_item": true
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:block_item",
-          "ntk:compacted_block",
-          "ntk:pile_of_flowers",
-          "ntk:pile_of_torchflower"
-        ]
+        "tags": ["ntk:items", "ntk:block_item", "ntk:compacted_block", "ntk:pile_of_flowers", "ntk:pile_of_torchflower", "oreville:is_torch"]
       }
 		}
 	}

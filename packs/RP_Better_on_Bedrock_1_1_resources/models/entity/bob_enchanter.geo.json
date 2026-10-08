@@ -3,7 +3,7 @@
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.enchanter",
+				"identifier": "geometry.bob_enchanter",
 				"texture_width": 112,
 				"texture_height": 112,
 				"visible_bounds_width": 3,

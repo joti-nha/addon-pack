@@ -12,12 +12,12 @@
         "item": "dungeons:blue_print"
       },
       "W": {
-        "item": "dungeons:diamond_sword"
+        "item": "minecraft:diamond_sword"
       }
     },
     "unlock": [
       {
-        "item": "dungeons:diamond_sword"
+        "item": "minecraft:diamond_sword"
       }
     ],
     "pattern": [
@@ -25,8 +25,8 @@
       "W"
     ],
     "result": [
-      { "item": "dungeons:diamond_sword", "count": 1 },
-      { "item": "dungeons:diamond_sword", "count": 1 }
+      { "item": "minecraft:diamond_sword", "count": 1 },
+      { "item": "minecraft:diamond_sword", "count": 1 }
     ]
   }
 }

@@ -45,7 +45,7 @@
                 "value": true
             },
             "minecraft:tags": {
-                "tags": [
+                "tags": ["minecraft:is_tool", 
                     "minecraft:is_hoe",
                     "better_on_bedrock:stardust_tier"
                 ]

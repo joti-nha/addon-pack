@@ -5,6 +5,7 @@
 			"identifier": "mnra_cata:calamity"
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["oreville:is_sword"] },
 			"minecraft:block_placer": {
 				"block": "mnra_cata:calamity",
 				"use_on": [

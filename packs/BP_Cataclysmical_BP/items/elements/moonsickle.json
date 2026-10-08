@@ -39,11 +39,7 @@
 				"value": true
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_tool",
-					"minecraft:is_sword",
-					"mnra_cata:is_mob_shield_breakable"
-				]
+				"tags": ["minecraft:is_tool", "minecraft:is_sword", "mnra_cata:is_mob_shield_breakable", "oreville:is_hoe"]
 			},
 			"minecraft:rarity": {
 				"value": "rare"

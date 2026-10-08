@@ -60,9 +60,7 @@
 				"hitbox_margin": 0.8
 			},
 			"minecraft:tags": {
-				"tags": [
-					"minecraft:is_spear"
-				]
+				"tags": ["minecraft:is_spear", "oreville:is_axe"]
 			},
 			"minecraft:swing_sounds": {
 				"attack_hit": "item.spear.attack_hit",

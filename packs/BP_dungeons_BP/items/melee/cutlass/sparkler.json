@@ -9,14 +9,7 @@
     },
     "components": {
       "minecraft:tags": {
-        "tags": [
-          "minecraft:is_tool",
-          "minecraft:is_sword",
-          "dungeons:rampaging",
-          "alylica:disable_melee_swing",
-          "dungeons:melee_lore",
-          "dungeons:seasonal_item"
-        ]
+        "tags": ["minecraft:is_tool", "minecraft:is_sword", "dungeons:rampaging", "alylica:disable_melee_swing", "dungeons:melee_lore", "dungeons:seasonal_item", "oreville:is_on_a_stick"]
       },
       "dungeons:durability_fix": {
         "tag": "minecraft:is_sword_item_destructible"

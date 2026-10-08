@@ -9,15 +9,7 @@
     },
     "components": {
       "minecraft:tags": {
-        "tags": [
-          "dungeons:chains",
-          "minecraft:is_tool",
-          "minecraft:is_sword",
-          "dungeons:soul_collection",
-          "alylica:disable_melee_swing",
-          "dungeons:melee_lore",
-          "dungeons:unique_item"
-        ]
+        "tags": ["dungeons:chains", "minecraft:is_tool", "dungeons:soul_collection", "alylica:disable_melee_swing", "dungeons:melee_lore", "dungeons:unique_item", "minecraft:is_hoe"]
       },
       "dungeons:durability_fix": {
         "tag": "minecraft:is_sword_item_destructible"

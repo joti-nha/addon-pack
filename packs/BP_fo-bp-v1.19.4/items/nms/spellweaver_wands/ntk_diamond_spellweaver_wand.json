@@ -564,15 +564,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:range_weapon",
-          "ntk:wand",
-          "ntk:spellweaver_wand",
-          "ntk:diamond_spellweaver_wand"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:mainhand_equipment", "ntk:range_weapon", "ntk:wand", "ntk:spellweaver_wand", "ntk:diamond_spellweaver_wand", "oreville:is_on_a_stick"]
       },
       "ntk:wand_on_use": [
         {

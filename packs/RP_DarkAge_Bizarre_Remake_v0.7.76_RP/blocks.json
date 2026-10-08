@@ -1,11 +1,6749 @@
 {
-	"format_version": [
-		1,
-		1,
-		0
-	],
-	"dk:meteorite": {
-		"sound": "stone",
-		"textures": "meteorite"
-	}
+  "format_version": "1.10.0",
+  "tm_aqc:worm_farm": {
+    "sound": "wood"
+  },
+  "tm_aqc:fishing_stool": {
+    "sound": "cloth"
+  },
+  "tm_aqc:cutting_board": {
+    "sound": "wood"
+  },
+  "tm_aqc:fish_mount": {
+    "sound": "itemframe"
+  },
+  "tm_aqc:pin_bone_block": {
+    "sound": "bone_block"
+  },
+  "tm_aqc:neptunium_scale_block": {
+    "sound": "copper"
+  },
+  "tm_aqc:smelted_neptunium": {
+    "sound": "copper"
+  },
+  "tm_aqc:chiselled_neptunium": {
+    "sound": "copper"
+  },
+  "tm_aqc:cut_neptunium": {
+    "sound": "copper"
+  },
+  "tm_aqc:neptunium_bulb": {
+    "sound": "copper"
+  },
+  "tm_aqc:neptunium_grate": {
+    "sound": "copper"
+  },
+  "tm_aqc:neptunium_bricks": {
+    "sound": "copper"
+  },
+  "tm_aqc:scale_block": {
+    "sound": "coral"
+  },
+  "tm_aqc:smelted_scale": {
+    "sound": "coral"
+  },
+  "tm_aqc:chiselled_scale": {
+    "sound": "coral"
+  },
+  "tm_aqc:cut_scale": {
+    "sound": "coral"
+  },
+  "tm_aqc:scale_bulb": {
+    "sound": "coral"
+  },
+  "tm_aqc:scale_grate": {
+    "sound": "coral"
+  },
+  "tm_aqc:scale_bricks": {
+    "sound": "coral"
+  },
+  "tm_aqc:shell_block": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:chiselled_shell": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:cut_shell": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:shell_bulb": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:shell_grate": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:shell_bricks": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:pearl_block": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:chiselled_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:cut_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:pearl_bulb": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:pearl_grate": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:pearl_bricks": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:gold_pearl_block": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:chiselled_gold_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:cut_gold_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:gold_pearl_bulb": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:gold_pearl_grate": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:gold_pearl_bricks": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:black_pearl_block": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:chiselled_black_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:cut_black_pearl": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:black_pearl_bulb": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:black_pearl_grate": {
+    "sound": "deepslate_bricks"
+  },
+  "tm_aqc:black_pearl_bricks": {
+    "sound": "deepslate_bricks"
+  },
+  "grass": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": {
+      "up": "grass_top",
+      "down": "grass_bottom",
+      "side": "grass_side"
+    },
+    "carried_textures": {
+      "up": "grass_carried_top",
+      "down": "grass_carried_bottom",
+      "side": "grass_carried"
+    },
+    "sound": "grass"
+  },
+  "grass_path": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": {
+      "up": "grass_path_top",
+      "down": "dirt",
+      "side": "grass_path_side"
+    },
+    "sound": "grass"
+  },
+  "deepslate": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": {
+      "up": "deepslate_top",
+      "down": "deepslate_top",
+      "side": "deepslate"
+    },
+    "sound": "deepslate"
+  },
+  "hardened_clay": {
+    "isotropic": false,
+    "textures": "hardened_clay",
+    "sound": "stone"
+  },
+  "sand": {
+    "isotropic": true,
+    "textures": "sand",
+    "ambient_occlusion_exponent": 1.0,
+    "sound": "sand"
+  },
+  "red_sand": {
+    "isotropic": true,
+    "textures": "red_sand",
+    "ambient_occlusion_exponent": 1.0,
+    "sound": "sand"
+  },
+  "red_sandstone": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": {
+      "up": "redsandstone_top",
+      "down": "redsandstone_bottom",
+      "side": "redsandstone_side"
+    },
+    "ambient_occlusion_exponent": 1.0,
+    "sound": "stone"
+  },
+  "sandstone": {
+    "isotropic": {
+      "up": true,
+      "down": true
+    },
+    "textures": {
+      "up": "sandstone_top",
+      "down": "sandstone_bottom",
+      "side": "sandstone_side"
+    },
+    "ambient_occlusion_exponent": 1.0,
+    "sound": "stone"
+  },
+  "white_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "white_terracotta",
+    "sound": "stone"
+  },
+  "orange_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "orange_terracotta",
+    "sound": "stone"
+  },
+  "magenta_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "magenta_terracotta",
+    "sound": "stone"
+  },
+  "light_blue_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "light_blue_terracotta",
+    "sound": "stone"
+  },
+  "yellow_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "yellow_terracotta",
+    "sound": "stone"
+  },
+  "lime_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "lime_terracotta",
+    "sound": "stone"
+  },
+  "pink_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "pink_terracotta",
+    "sound": "stone"
+  },
+  "gray_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "gray_terracotta",
+    "sound": "stone"
+  },
+  "light_gray_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "light_gray_terracotta",
+    "sound": "stone"
+  },
+  "cyan_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "cyan_terracotta",
+    "sound": "stone"
+  },
+  "purple_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "purple_terracotta",
+    "sound": "stone"
+  },
+  "blue_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "blue_terracotta",
+    "sound": "stone"
+  },
+  "brown_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "brown_terracotta",
+    "sound": "stone"
+  },
+  "green_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "green_terracotta",
+    "sound": "stone"
+  },
+  "red_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "red_terracotta",
+    "sound": "stone"
+  },
+  "black_terracotta": {
+    "isotropic": {
+      "up": false,
+      "down": false
+    },
+    "textures": "black_terracotta",
+    "sound": "stone"
+  },
+  "better_on_bedrock:tin_block": {
+    "sound": "metal"
+  },
+  "better_on_bedrock:corstinite_block": {
+    "sound": "netherite"
+  },
+  "better_on_bedrock:stardust_block": {
+    "sound": "netherite"
+  },
+  "better_on_bedrock:cut_resin": {
+    "sound": "resin",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:waystone_block": {
+    "sound": "better_on_bedrock:waystone"
+  },
+  "better_on_bedrock:smooth_resin": {
+    "sound": "resin",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:lamp_resin": {
+    "sound": "resin",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:chorus_trapdoor": {
+    "sound": "wood",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:vacant_trapdoor": {
+    "sound": "wood",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:voiding_trapdoor": {
+    "sound": "wood",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:pale_pumpkin": {
+    "sound": "wood",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:pale_crafting_table": {
+    "sound": "wood",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:pale_spore_blossom": {
+    "sound": "moss_block",
+    "brightness_gamma": 25
+  },
+  "better_on_bedrock:eyepale_vines_body": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:eyepale_vines_head": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:tall_blossom": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:tall_eyeblossom": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:lilax_heads": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:iris": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:anenome": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:hydrangea": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:desert_grass": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:lush_grass": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:bluegrod": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:clematis": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:bellflower": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:lich_plushie": {
+    "sound": "cloth"
+  },
+  "better_on_bedrock:willager_plushie": {
+    "sound": "cloth"
+  },
+  "better_on_bedrock:enchanter_plushie": {
+    "sound": "cloth"
+  },
+  "better_on_bedrock:acacia_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:bamboo_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:birch_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:cherry_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:dark_oak_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:jungle_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:mangrove_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:spruce_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:vacant_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_crafting_table": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:withered_samurai_trophy": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:dusk_planks": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_planks": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:shrublog": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_log_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:shrublog_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_log_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_wood_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:vacant_wood_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_wood_stripped": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:shrubleaves": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:voiding_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_planks": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_slab": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:dusk_slab": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_slab": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:alluminum_ore": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:corstinite_ore": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:andesite_bricks": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:deepslate_stardust_ore": {
+    "sound": "deepslate_stardust"
+  },
+  "better_on_bedrock:stardust_ore": {
+    "sound": "stardust"
+  },
+  "better_on_bedrock:tin_ore": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:upward_blossom_head": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:upward_blossom_base": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:upward_blossom_stem": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:vacant_flower": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:vacant_spore_body": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:vacant_vine_spore": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:tall_vacant_dusk_flower": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:tall_vacant_lumen_flower": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:vacant_lumen_flower": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:void_block": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:abyss_stone": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite_smooth": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite_smoother": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite_chiseled": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite_frame": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:malbite_bricks": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:abyss_stone_crying": {
+    "sound": "stone"
+  },
+  "better_on_bedrock:voided_abyss_blossom_stem": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:voided_bush": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:vacant_blossom": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_door": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_door": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:vacant_door": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:vacant_tree_vines": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:vineed": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:shrubshroom": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:mushroom_vine_base_base": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:shrub": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:shrubflower": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:voiding_grass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:voiding_shortgrass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:tall_abyss_grass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:voiding_abyss_bush": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:voiding_abyss_grass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lunar": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lunar2": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lunar3": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lunar4": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lil": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lil2": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lil3": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lil4": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:flare": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:flare2": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:flare3": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:flare4": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:gloomy": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:gloomy2": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:gloomy3": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:gloomy4": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:end_spore_stem": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:end_blossom_root": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:end_spore": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:voiding_plains_end_blossom": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:small_chorus_spore": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:small_lilly": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_lily": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:tentacled_vacant_grass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_vine_head": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_vines": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_block": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:chorus_grass": {
+    "sound": "better_on_bedrock:end_nylium",
+    "isotropic": {
+      "up": true
+    },
+    "textures": {
+      "up": "chorus_grass",
+      "down": "end_stone",
+      "side": "chorus_grass_side"
+    }
+  },
+  "better_on_bedrock:shrubflower_stem": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:void_grass": {
+    "sound": "better_on_bedrock:end_nylium",
+    "isotropic": {
+      "up": true
+    },
+    "textures": {
+      "up": "vp_nylium_top",
+      "down": "end_stone",
+      "side": "vp_nylium_side"
+    }
+  },
+  "better_on_bedrock:shrub_nylium": {
+    "sound": "better_on_bedrock:end_nylium",
+    "isotropic": {
+      "up": true
+    },
+    "textures": {
+      "up": "shrub_nylium_top",
+      "down": "end_stone",
+      "side": "shrub_nylium_side"
+    }
+  },
+  "better_on_bedrock:purple_slimeshroom": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lime_slimeshroom": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:lumen_flower": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:glowshroom_furr": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:glowshroom_stem": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:glowshroom_stem_base": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:glowshroom": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:shroom_shrub": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:mushroom_vine_head": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:mushroom_vine_body": {
+    "sound": "moss_block"
+  },
+  "better_on_bedrock:mushroom_growth_white": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:shroom_nylium": {
+    "sound": "better_on_bedrock:end_nylium",
+    "isotropic": {
+      "up": true
+    },
+    "textures": {
+      "up": "better_on_bedrock:shroom_nylium_top",
+      "down": "end_stone",
+      "side": "better_on_bedrock:shroom_nylium_side"
+    }
+  },
+  "better_on_bedrock:fall_nylium": {
+    "sound": "better_on_bedrock:end_nylium",
+    "isotropic": {
+      "up": true
+    },
+    "textures": {
+      "up": "better_on_bedrock:fall_nylium_top",
+      "down": "end_stone",
+      "side": "better_on_bedrock:fall_nylium_side"
+    }
+  },
+  "better_on_bedrock:tall_chorus_grass": {
+    "sound": "better_on_bedrock:end_foliage"
+  },
+  "better_on_bedrock:soul_jar_block": {
+    "sound": "glass"
+  },
+  "better_on_bedrock:shielded_pyroclast_trophy": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:flender_trophy": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:enchantaegis_trophy": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:willager_statue": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:quetzacaw_egg_block": {
+    "sound": "roots"
+  },
+  "better_on_bedrock:wild_carrot": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:wildflower": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:tiny_sprout": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:big_sprout": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:taller_grass": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:pink_lavender": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:cabbage_crop": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:tall_lavender": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:spruce_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:cherry_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:mangrove_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:pale_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:acacia_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:birch_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:dark_oak_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:oak_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:jungle_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:voiding_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:vacant_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:chorus_small_log": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:healthy_carrot": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:quest_block": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:grape": {
+    "sound": "sweet_berry_bush"
+  },
+  "better_on_bedrock:blueberry_block": {
+    "sound": "sweet_berry_bush"
+  },
+  "better_on_bedrock:blueberry_worldgen": {
+    "sound": "sweet_berry_bush"
+  },
+  "better_on_bedrock:forge_table": {
+    "sound": "metal"
+  },
+  "better_on_bedrock:enchant_bench": {
+    "sound": "wood"
+  },
+  "better_on_bedrock:grape_fully_grown": {
+    "sound": "sweet_berry_bush"
+  },
+  "better_on_bedrock:willager_hat": {
+    "sound": "cloth"
+  },
+  "better_on_bedrock:tomato_crop": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:eggplant_crop": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:barley_crop": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:onion_crop": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:orange_leaves": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:peach_leaves": {
+    "sound": "grass"
+  },
+  "better_on_bedrock:coconut": {
+    "sound": "wood"
+  },
+  "mnra_cata:feralplast": {
+    "sound": "mud",
+    "textures": "mnra_cata_feralplast"
+  },
+  "mnra_cata:floret_ore": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_floret_ore"
+  },
+  "mnra_cata:floret_block": {
+    "sound": "iron",
+    "textures": "mnra_cata_floret_block"
+  },
+  "mnra_cata:feral_roots": {
+    "sound": "mud"
+  },
+  "mnra_cata:gneiss_grate": {
+    "sound": "copper_grate",
+    "textures": "mnra_cata_gneiss_grate"
+  },
+  "mnra_cata:asteroid": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_asteroid"
+  },
+  "mnra_cata:asteroid_brick": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_asteroid_brick"
+  },
+  "mnra_cata:astral_ore": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_astral_ore"
+  },
+  "mnra_cata:astral_dust": {
+    "sound": "stone"
+  },
+  "mnra_cata:astral_block": {
+    "sound": "iron",
+    "textures": "mnra_cata_astral_block"
+  },
+  "mnra_cata:smooth_gneiss_brick": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_smooth_gneiss_brick"
+  },
+  "mnra_cata:gneiss": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss"
+  },
+  "mnra_cata:gneiss_brick_slab": {
+    "sound": "mud_bricks"
+  },
+  "mnra_cata:gneiss_brick": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss_brick"
+  },
+  "mnra_cata:gneiss_rocks": {
+    "sound": "mud_bricks"
+  },
+  "mnra_cata:gneiss_lantern": {
+    "sound": "mud_bricks"
+  },
+  "mnra_cata:gneiss_chain": {
+    "sound": "chain"
+  },
+  "mnra_cata:gneiss_door": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss_door"
+  },
+  "mnra_cata:gneiss_door_lock": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss_door_lock"
+  },
+  "mnra_cata:unbreakable_gneiss_brick": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss_brick"
+  },
+  "mnra_cata:unbreakable_gneiss": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_gneiss"
+  },
+  "mnra_cata:unbreakable_smooth_gneiss_brick": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_smooth_gneiss_brick"
+  },
+  "mnra_cata:unbreakable_cut_gneiss": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_cut_gneiss"
+  },
+  "mnra_cata:cut_gneiss": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_cut_gneiss"
+  },
+  "mnra_cata:solar_ore": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_solar_ore"
+  },
+  "mnra_cata:flare_stone": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_flare_stone"
+  },
+  "mnra_cata:flare_stone_brick": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_flare_stone_brick"
+  },
+  "mnra_cata:polished_flare_stone": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_polished_flare_stone"
+  },
+  "mnra_cata:emberglow": {
+    "sound": "sculk"
+  },
+  "mnra_cata:flare_stone_chain": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:flare_stone_lantern": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:flare_stone_brick_slab": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:flare_stone_tiles": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_flare_stone_tiles"
+  },
+  "mnra_cata:occult_alter": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:flare_stone_geyser": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:flare_stone_rock": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:verdant_crusher": {
+    "sound": "mud_bricks"
+  },
+  "mnra_cata:flare_stone_bulb": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_flare_stone_bulb"
+  },
+  "mnra_cata:chiseled_flare_stone": {
+    "sound": "ancient_debris",
+    "textures": {
+      "up": "mnra_cata_chiseled_flare_stone_top",
+      "side": "mnra_cata_chiseled_flare_stone",
+      "down": "mnra_cata_flare_stone_pillar_top"
+    }
+  },
+  "mnra_cata:flare_stone_pillar": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:polished_feralplast": {
+    "sound": "mud",
+    "textures": "mnra_cata_polished_feralplast"
+  },
+  "mnra_cata:feralplast_brick": {
+    "sound": "mud",
+    "textures": "mnra_cata_feralplast_brick"
+  },
+  "mnra_cata:grim_stone": {
+    "sound": "stone",
+    "textures": "mnra_cata_grim_stone"
+  },
+  "mnra_cata:grim_stone_brick": {
+    "sound": "stone",
+    "textures": "mnra_cata_grim_stone_brick"
+  },
+  "mnra_cata:polished_grim_stone": {
+    "sound": "stone",
+    "textures": "mnra_cata_polished_grim_stone"
+  },
+  "mnra_cata:polished_asteroid": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_polished_asteroid"
+  },
+  "mnra_cata:asteroid_brick_slab": {
+    "sound": "deepslate_bricks"
+  },
+  "mnra_cata:abyssal_stone": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_abyssal_stone"
+  },
+  "mnra_cata:abyssal_stone_brick": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_abyssal_stone_brick"
+  },
+  "mnra_cata:lunar_ore": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_lunar_ore"
+  },
+  "mnra_cata:elemental_alter": {
+    "sound": "deepslate_bricks"
+  },
+  "mnra_cata:alter_pedestal": {
+    "sound": "deepslate_bricks"
+  },
+  "mnra_cata:feral_flower": {
+    "sound": "cactus_flower"
+  },
+  "mnra_cata:platinum_ore": {
+    "sound": "stone",
+    "textures": "mnra_cata_platinum_ore"
+  },
+  "mnra_cata:deepslate_platinum_ore": {
+    "sound": "deepslate",
+    "textures": "mnra_cata_deepslate_platinum_ore"
+  },
+  "mnra_cata:platinum_block": {
+    "sound": "stone",
+    "textures": "mnra_cata_platinum_block"
+  },
+  "mnra_cata:solar_tesla_coil": {
+    "sound": "ancient_debris"
+  },
+  "mnra_cata:terrorite_brick": {
+    "sound": "calcite",
+    "textures": "mnra_cata_terrorite_brick"
+  },
+  "mnra_cata:terrorite_tile": {
+    "sound": "calcite",
+    "textures": "mnra_cata_terrorite_tile"
+  },
+  "mnra_cata:cracked_flare_stone_brick": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_cracked_flare_stone_brick"
+  },
+  "mnra_cata:chiseled_flare_stone_brick": {
+    "sound": "ancient_debris",
+    "textures": "mnra_cata_chiseled_flare_stone_brick"
+  },
+  "mnra_cata:ancient_pot": {
+    "sound": "decorated_pot"
+  },
+  "mnra_cata:block_test": {
+    "sound": "stone",
+    "textures": "mnra_cata_block_test"
+  },
+  "mnra_cata:block_test2": {
+    "textures": "mnra_cata_block_test2",
+    "sound": "stone"
+  },
+  "mnra_cata:verdant_vault": {
+    "sound": "vault"
+  },
+  "mnra_cata:platinum_vault": {
+    "sound": "vault"
+  },
+  "mnra_cata:solar_block": {
+    "sound": "iron",
+    "textures": "mnra_cata_solar_block"
+  },
+  "mnra_cata:terrorite": {
+    "sound": "calcite",
+    "textures": "mnra_cata_terrorite"
+  },
+  "mnra_cata:cut_terrorite": {
+    "sound": "calcite",
+    "textures": "mnra_cata_cut_terrorite"
+  },
+  "mnra_cata:exodius_ore": {
+    "sound": "tuff_bricks",
+    "textures": "mnra_cata_exodius_ore"
+  },
+  "mnra_cata:polished_abyssal_stone": {
+    "sound": "deepslate_bricks",
+    "textures": "mnra_cata_polished_abyssal_stone"
+  },
+  "mnra_cata:mourning_stone": {
+    "sound": "basalt",
+    "textures": "mnra_cata_mourning_stone"
+  },
+  "mnra_cata:polished_mourning_stone": {
+    "sound": "basalt",
+    "textures": "mnra_cata_polished_mourning_stone"
+  },
+  "mnra_cata:twilight_ore": {
+    "sound": "amethyst_cluster"
+  },
+  "mnra_cata:ecliptic_block": {
+    "textures": "mnra_cata_ecliptic_block",
+    "sound": "netherite"
+  },
+  "mnra_cata:void_attractor": {
+    "sound": "soul_sand"
+  },
+  "mnra_cata:terror_stabilizer": {
+    "sound": "calcite"
+  },
+  "mnra_cata:dungeon_spawner_normal": {
+    "sound": "trial_spawner"
+  },
+  "mnra_cata:dungeon_spawner_hard": {
+    "sound": "trial_spawner"
+  },
+  "mnra_cata:dungeon_spawner_basic": {
+    "sound": "trial_spawner"
+  },
+  "mnra_cata:cracked_gneiss_brick": {
+    "sound": "mud_bricks",
+    "textures": "mnra_cata_cracked_gneiss_brick"
+  },
+  "bv:light_source": {
+    "textures": "bv_light_source",
+    "sound": "bv_light_source_sounds"
+  },
+  "dk:meteorite": {
+    "sound": "stone",
+    "textures": "meteorite"
+  },
+  "panascais_caves:deepslate_aetherium_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_corruptium_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_cryorite_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_crystal_opal_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_nocturite_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_onyx_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_pyronite_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_ruby_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_salt_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_sapphire_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_sphalerite_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_titanium_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:deepslate_verdite_ore": {
+    "sound": "deepslate"
+  },
+  "panascais_caves:aetherium_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:corruptium_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:cryorite_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:crystal_opal_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:nocturite_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:onyx_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:pyronite_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:ruby_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:salt_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:sapphire_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:sphalerite_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:titanium_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:verdite_ore": {
+    "sound": "stone"
+  },
+  "panascais_caves:coarse_dunite": {
+    "sound": "stone"
+  },
+  "panascais_caves:coarse_dunite_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:coarse_dunite_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:coarse_dunite_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_dunite": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_dunite_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_dunite_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_dunite_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_bricks_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_bricks_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:dunite_bricks_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:chiseled_dunite": {
+    "sound": "stone"
+  },
+  "panascais_caves:chiseled_marble": {
+    "sound": "stone"
+  },
+  "panascais_caves:cracked_marble": {
+    "sound": "stone"
+  },
+  "panascais_caves:cracked_marble_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:cracked_marble_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:cracked_marble_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_bricks_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_bricks_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_bricks_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_marble": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_marble_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_marble_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_marble_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_clinker": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_clinker_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_clinker_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_clinker_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:marble_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_bricks_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_bricks_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_bricks_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_limestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_limestone_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_limestone_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_limestone_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:chiseled_limestone_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_tiles": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_tiles_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_tiles_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_tiles_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:limestone_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:chiseled_limestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:cobbled_grimrock": {
+    "sound": "stone"
+  },
+  "panascais_caves:cobbled_grimrock_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:cobbled_grimrock_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:cobbled_grimrock_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_bricks_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_bricks_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_bricks_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_clinker": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_clinker_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_clinker_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_clinker_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_grimrock": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_grimrock_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_grimrock_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:polished_grimrock_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:cracked_grimrock_bricks": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_krux_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_krux_pillar_ending": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_nadd_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_nadd_pillar_ending": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_vard_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:grimrock_vard_pillar_ending": {
+    "sound": "stone"
+  },
+  "panascais_caves:dripstone_pillar": {
+    "sound": "stone"
+  },
+  "panascais_caves:dripstone_clinker": {
+    "sound": "stone"
+  },
+  "panascais_caves:dripstone_clinker_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:dripstone_clinker_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:dripstone_clinker_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:smooth_dripstone": {
+    "sound": "stone"
+  },
+  "panascais_caves:smooth_dripstone_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:smooth_dripstone_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:smooth_dripstone_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:chiseled_dripstone": {
+    "sound": "stone"
+  },
+  "panascais_caves:cobbled_pitchstone": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:cobbled_pitchstone_slab": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:cobbled_pitchstone_stairs": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:cobbled_pitchstone_wall": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_cobbled_pitchstone": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_cobbled_pitchstone_slab": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_cobbled_pitchstone_stairs": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_cobbled_pitchstone_wall": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_pitchstone": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_pitchstone_slab": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_pitchstone_stairs": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:infused_pitchstone_wall": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:pitchstone": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:pitchstone_slab": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:pitchstone_stairs": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:pitchstone_wall": {
+    "sound": "shroomlight"
+  },
+  "panascais_caves:raw_aetherium_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:raw_corruptium_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:raw_cryorite_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:raw_nocturite_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:raw_pyronite_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:raw_verdite_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:stone_pebbles": {
+    "sound": "stone"
+  },
+  "panascais_caves:mud_pebbles": {
+    "sound": "stone"
+  },
+  "panascais_caves:pitchstone_pebbles": {
+    "sound": "stone"
+  },
+  "panascais_caves:ancient_sandstone_statue": {
+    "sound": "stone"
+  },
+  "panascais_caves:sandstone_sledge": {
+    "sound": "stone"
+  },
+  "panascais_caves:sandy_stone": {
+    "sound": "stone"
+  },
+  "panascais_caves:serpents_altar": {
+    "sound": "stone"
+  },
+  "panascais_caves:rune_block": {
+    "sound": "stone"
+  },
+  "panascais_caves:hot_treadstone": {
+    "sound": "stone"
+  },
+  "panascais_caves:ashy_blackstone": {
+    "sound": "stone"
+  },
+  "panascais_caves:ash_covered_blackstone": {
+    "sound": "stone"
+  },
+  "panascais_caves:mirestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:mirestone_slab": {
+    "sound": "stone"
+  },
+  "panascais_caves:mirestone_stairs": {
+    "sound": "stone"
+  },
+  "panascais_caves:mirestone_wall": {
+    "sound": "stone"
+  },
+  "panascais_caves:infested_mirestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:molding_mirestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:mycotic_mirestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:hyphic_mirestone": {
+    "sound": "stone"
+  },
+  "panascais_caves:blaze_bulb": {
+    "sound": "stone"
+  },
+  "panascais_caves:ashen_log": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_wood": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_planks": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_door": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_fence": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_slab": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_stairs": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_log_chopping_block": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_wood_signpost": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_log": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_wood": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_planks": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_door": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_fence": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_slab": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_stairs": {
+    "sound": "wood"
+  },
+  "panascais_caves:palm_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_caves:moonplum": {
+    "sound": "wood"
+  },
+  "panascais_caves:mummy_treasure_chest": {
+    "sound": "wood"
+  },
+  "panascais_caves:mimic_treasure_chest": {
+    "sound": "wood"
+  },
+  "panascais_caves:frozen_treasure_chest": {
+    "sound": "wood"
+  },
+  "panascais_caves:sporelith_stem": {
+    "sound": "wood"
+  },
+  "panascais_caves:sporelith_cap": {
+    "sound": "wood"
+  },
+  "panascais_caves:ashen_sapling": {
+    "sound": "grass"
+  },
+  "panascais_caves:palm_sapling": {
+    "sound": "grass"
+  },
+  "panascais_caves:ashen_leaves": {
+    "sound": "grass"
+  },
+  "panascais_caves:palm_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:cattail": {
+    "sound": "grass"
+  },
+  "panascais_caves:roots": {
+    "sound": "grass"
+  },
+  "panascais_caves:dead_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:mossy_cover": {
+    "sound": "grass"
+  },
+  "panascais_caves:ice_cabbage": {
+    "sound": "grass"
+  },
+  "panascais_caves:snowy_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:bioluminescent_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:tall_arid_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:arid_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:lush_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:tall_lush_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:scorched_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:tall_scorched_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:hyphic_grass": {
+    "sound": "grass"
+  },
+  "panascais_caves:arid_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:venus_flytrap": {
+    "sound": "grass"
+  },
+  "panascais_caves:blushgrass": {
+    "sound": "grass"
+  },
+  "panascais_caves:broadblade": {
+    "sound": "grass"
+  },
+  "panascais_caves:dimmroot": {
+    "sound": "grass"
+  },
+  "panascais_caves:pendraloom": {
+    "sound": "grass"
+  },
+  "panascais_caves:molten_pepper": {
+    "sound": "grass"
+  },
+  "panascais_caves:faintmire": {
+    "sound": "grass"
+  },
+  "panascais_caves:dry_reeds": {
+    "sound": "grass"
+  },
+  "panascais_caves:dry_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:scorched_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:snowy_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:infernia_blossom": {
+    "sound": "grass"
+  },
+  "panascais_caves:sporelith": {
+    "sound": "grass"
+  },
+  "panascais_caves:glowroot": {
+    "sound": "grass"
+  },
+  "panascais_caves:lush_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:ashy_bush": {
+    "sound": "grass"
+  },
+  "panascais_caves:glowing_mushrooms": {
+    "sound": "grass"
+  },
+  "panascais_caves:root_with_glowing_mushrooms": {
+    "sound": "grass"
+  },
+  "panascais_caves:timberfungus": {
+    "sound": "grass"
+  },
+  "panascais_caves:spindle_shroom": {
+    "sound": "grass"
+  },
+  "panascais_caves:brown_nutcap": {
+    "sound": "grass"
+  },
+  "panascais_caves:beige_nutcap": {
+    "sound": "grass"
+  },
+  "panascais_caves:laceflare_fungi": {
+    "sound": "grass"
+  },
+  "panascais_caves:clover_patch": {
+    "sound": "leaf_litter"
+  },
+  "panascais_caves:hanging_lumicele": {
+    "sound": "leaf_litter"
+  },
+  "panascais_caves:lumicele_cover": {
+    "sound": "leaf_litter"
+  },
+  "panascais_caves:saguaro_cactus": {
+    "sound": "cloth"
+  },
+  "panascais_caves:bulbous_cactus": {
+    "sound": "cloth"
+  },
+  "panascais_caves:scroll": {
+    "sound": "cloth"
+  },
+  "panascais_caves:rafflesia": {
+    "sound": "spore_blossom"
+  },
+  "panascais_caves:aetherium_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:corruptium_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:cryorite_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:crystal_opal_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:nocturite_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:onyx_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:pyronite_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:ruby_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:salt_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:sapphire_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:sphalerite_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:verdite_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:forge": {
+    "sound": "metal"
+  },
+  "panascais_caves:titanium_lantern": {
+    "sound": "metal"
+  },
+  "panascais_caves:titanium_torch": {
+    "sound": "metal"
+  },
+  "panascais_caves:titanium_stool": {
+    "sound": "metal"
+  },
+  "panascais_caves:titanium_anvil": {
+    "sound": "anvil"
+  },
+  "panascais_caves:titanium_block": {
+    "sound": "metal"
+  },
+  "panascais_caves:large_blue_amethyst_bud": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_caves:large_green_amethyst_bud": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_caves:large_orange_amethyst_bud": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_caves:large_red_amethyst_bud": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_caves:large_yellow_amethyst_bud": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_caves:medium_blue_amethyst_bud": {
+    "sound": "medium_amethyst_bud"
+  },
+  "panascais_caves:medium_green_amethyst_bud": {
+    "sound": "medium_amethyst_bud"
+  },
+  "panascais_caves:medium_orange_amethyst_bud": {
+    "sound": "medium_amethyst_bud"
+  },
+  "panascais_caves:medium_red_amethyst_bud": {
+    "sound": "medium_amethyst_bud"
+  },
+  "panascais_caves:medium_yellow_amethyst_bud": {
+    "sound": "medium_amethyst_bud"
+  },
+  "panascais_caves:small_blue_amethyst_bud": {
+    "sound": "small_amethyst_bud"
+  },
+  "panascais_caves:small_green_amethyst_bud": {
+    "sound": "small_amethyst_bud"
+  },
+  "panascais_caves:small_orange_amethyst_bud": {
+    "sound": "small_amethyst_bud"
+  },
+  "panascais_caves:small_red_amethyst_bud": {
+    "sound": "small_amethyst_bud"
+  },
+  "panascais_caves:small_yellow_amethyst_bud": {
+    "sound": "small_amethyst_bud"
+  },
+  "panascais_caves:blue_amethyst_cluster": {
+    "sound": "amethyst_cluster"
+  },
+  "panascais_caves:green_amethyst_cluster": {
+    "sound": "amethyst_cluster"
+  },
+  "panascais_caves:orange_amethyst_cluster": {
+    "sound": "amethyst_cluster"
+  },
+  "panascais_caves:red_amethyst_cluster": {
+    "sound": "amethyst_cluster"
+  },
+  "panascais_caves:yellow_amethyst_cluster": {
+    "sound": "amethyst_cluster"
+  },
+  "panascais_caves:blue_amethyst_block": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:green_amethyst_block": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:orange_amethyst_block": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:red_amethyst_block": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:yellow_amethyst_block": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:budding_blue_amethyst": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:budding_green_amethyst": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:budding_orange_amethyst": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:budding_red_amethyst": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:budding_yellow_amethyst": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:blue_amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:green_amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:orange_amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:red_amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:yellow_amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "panascais_caves:polished_packed_ice": {
+    "sound": "glass"
+  },
+  "panascais_caves:polished_packed_ice_slab": {
+    "sound": "glass"
+  },
+  "panascais_caves:polished_packed_ice_stairs": {
+    "sound": "glass"
+  },
+  "panascais_caves:polished_packed_ice_wall": {
+    "sound": "glass"
+  },
+  "panascais_caves:packed_ice_bricks": {
+    "sound": "glass"
+  },
+  "panascais_caves:packed_ice_bricks_slab": {
+    "sound": "glass"
+  },
+  "panascais_caves:packed_ice_bricks_stairs": {
+    "sound": "glass"
+  },
+  "panascais_caves:packed_ice_bricks_wall": {
+    "sound": "glass"
+  },
+  "panascais_caves:chiseled_packed_ice_bricks": {
+    "sound": "glass"
+  },
+  "panascais_caves:chiseled_packed_ice": {
+    "sound": "glass"
+  },
+  "panascais_caves:cut_packed_ice": {
+    "sound": "glass"
+  },
+  "panascais_caves:packed_ice_pillar": {
+    "sound": "glass"
+  },
+  "panascais_caves:chiseled_packed_ice_pillar": {
+    "sound": "glass"
+  },
+  "panascais_caves:hanging_icicle": {
+    "sound": "glass"
+  },
+  "panascais_caves:standing_icicle": {
+    "sound": "glass"
+  },
+  "panascais_caves:ash": {
+    "sound": "snow"
+  },
+  "panascais_caves:ash_layer": {
+    "sound": "snow"
+  },
+  "panascais_caves:snowy_cover": {
+    "sound": "snow"
+  },
+  "panascais_caves:sand_layer": {
+    "sound": "sand"
+  },
+  "panascais_caves:quicksand": {
+    "sound": "sand"
+  },
+  "panascais_caves:red_sand_layer": {
+    "sound": "sand"
+  },
+  "panascais_caves:falling_sand": {
+    "sound": "sand"
+  },
+  "panascais_caves:wet_sand": {
+    "sound": "mud"
+  },
+  "panascais_caves:tuff_sledge": {
+    "sound": "tuff"
+  },
+  "panascais_caves:tuff_rocks": {
+    "sound": "tuff"
+  },
+  "panascais_caves:tuff_pillar": {
+    "sound": "tuff"
+  },
+  "panascais_caves:tuff_pillar_ending": {
+    "sound": "tuff"
+  },
+  "panascais_caves:chiseled_tuff_pillar": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cracked_chiseled_tuff_pillar": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cracked_tuff_pillar": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cobbled_tuff": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cobbled_tuff_slab": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cobbled_tuff_stairs": {
+    "sound": "tuff"
+  },
+  "panascais_caves:cobbled_tuff_wall": {
+    "sound": "tuff"
+  },
+  "panascais_caves:mossy_cobbled_tuff": {
+    "sound": "tuff"
+  },
+  "panascais_caves:ancient_tuff_statue": {
+    "sound": "tuff_bricks"
+  },
+  "panascais_caves:hanging_cobweb": {
+    "sound": "web"
+  },
+  "panascais_caves:spiderweb_cover": {
+    "sound": "web"
+  },
+  "panascais_caves:cobweb": {
+    "sound": "web"
+  },
+  "panascais_caves:fireweb": {
+    "sound": "web"
+  },
+  "panascais_caves:sporelith_roots_web": {
+    "sound": "web"
+  },
+  "panascais_caves:web": {
+    "sound": "web"
+  },
+  "panascais_caves:lava_spider_egg": {
+    "sound": "turtle_egg"
+  },
+  "panascais_caves:spider_egg_husk": {
+    "sound": "turtle_egg"
+  },
+  "panascais_caves:basalt_pikes": {
+    "sound": "basalt"
+  },
+  "panascais_caves:lava_puddle": {
+    "sound": "basalt"
+  },
+  "panascais_caves:brittle_mud": {
+    "sound": "basalt"
+  },
+  "panascais_caves:brittle_mud_slab": {
+    "sound": "basalt"
+  },
+  "panascais_caves:brittle_mud_stairs": {
+    "sound": "basalt"
+  },
+  "panascais_caves:brittle_mud_wall": {
+    "sound": "basalt"
+  },
+  "panascais_caves:mossy_brittle_mud": {
+    "sound": "basalt"
+  },
+  "panascais_caves:mossy_brittle_mud_slab": {
+    "sound": "basalt"
+  },
+  "panascais_caves:mossy_brittle_mud_stairs": {
+    "sound": "basalt"
+  },
+  "panascais_caves:mossy_brittle_mud_wall": {
+    "sound": "basalt"
+  },
+  "panascais_caves:overgrown_brittle_mud": {
+    "sound": "basalt"
+  },
+  "panascais_caves:dirty_brittle_mud": {
+    "sound": "basalt"
+  },
+  "panascais_caves:dirty_brittle_mud_slab": {
+    "sound": "basalt"
+  },
+  "panascais_caves:dirty_brittle_mud_stairs": {
+    "sound": "basalt"
+  },
+  "panascais_caves:dirty_brittle_mud_wall": {
+    "sound": "basalt"
+  },
+  "panascais_caves:hanging_moss": {
+    "sound": "vines"
+  },
+  "panascais_caves:hanging_cinderbell": {
+    "sound": "vines"
+  },
+  "panascais_caves:standing_cinderbell": {
+    "sound": "vines"
+  },
+  "panascais_caves:mist_vines": {
+    "sound": "vines"
+  },
+  "panascais_caves:thorn_vines": {
+    "sound": "vines"
+  },
+  "panascais_caves:sporelith_roots": {
+    "sound": "weeping_vines"
+  },
+  "panascais_caves:mycota_roots": {
+    "sound": "weeping_vines"
+  },
+  "panascais_caves:bulbous_moss": {
+    "sound": "moss_block"
+  },
+  "panascais_caves:bulbous_moss_layer": {
+    "sound": "moss_carpet"
+  },
+  "panascais_caves:papyrus": {
+    "sound": "bamboo"
+  },
+  "panascais_caves:bones": {
+    "sound": "resin"
+  },
+  "panascais_caves:skeleton": {
+    "sound": "resin"
+  },
+  "panascais_caves:fish_skeleton": {
+    "sound": "resin"
+  },
+  "panascais_caves:large_fish_skeleton": {
+    "sound": "resin"
+  },
+  "panascais_caves:turtle_skeleton": {
+    "sound": "resin"
+  },
+  "panascais_caves:spinal_skeleton": {
+    "sound": "resin"
+  },
+  "panascais_caves:glow_worms": {
+    "sound": "honey_block"
+  },
+  "panascais_caves:mycota": {
+    "sound": "nylium"
+  },
+  "panascais_caves:mycota_layer": {
+    "sound": "nylium"
+  },
+  "panascais_caves:hyphic": {
+    "sound": "stem"
+  },
+  "panascais_caves:hyphic_layer": {
+    "sound": "stem"
+  },
+  "panascais_caves:fountain_fungus": {
+    "sound": "fungus"
+  },
+  "panascais_caves:charpod": {
+    "sound": "fungus"
+  },
+  "panascais_caves:sulfur_crystal": {
+    "sound": "sulfur"
+  },
+  "panascais_caves:cinnabar_crystal": {
+    "sound": "cinnabar"
+  },
+  "panascais_caves:fuming_fungi": {
+    "sound": "fungus"
+  },
+  "panascais_caves:sulfur_tear": {
+    "sound": "grass"
+  },
+  "panascais_caves:vapor_moss": {
+    "sound": "grass"
+  },
+  "panascais_caves:biome_detect": {
+    "sound": ""
+  },
+  "panascais_caves:block_placer": {
+    "sound": ""
+  },
+  "panascais_end:ametrine_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:purpurite_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpurite_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_iron_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_copper_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_gold_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_redstone_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_lapis_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_emerald_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_diamond_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:end_stone_quartz_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:gilded_rock": {
+    "sound": "stone"
+  },
+  "panascais_end:ametrine_geode_rock": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_stone_sediment": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_stone": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_slates_stone": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_slates_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_slates_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_slates_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_bricks_stone": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_bricks_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_bricks_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_bricks_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:noctral_pillar": {
+    "sound": "stone"
+  },
+  "panascais_end:chiseled_dark_purpur": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_block": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_pillar": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_tiles": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_tiles_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_tiles_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:dark_purpur_tiles_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:purpur_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:raw_purpurite_block": {
+    "sound": "stone"
+  },
+  "panascais_end:raw_dark_purpurite_block": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_bricks": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_wall": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_slab": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_stairs": {
+    "sound": "stone"
+  },
+  "panascais_end:chiseled_viridian": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_pillar": {
+    "sound": "stone"
+  },
+  "panascais_end:viridian_ore": {
+    "sound": "stone"
+  },
+  "panascais_end:verdant_stalk": {
+    "sound": "bamboo"
+  },
+  "panascais_end:choral_spire": {
+    "sound": "bamboo"
+  },
+  "panascais_end:enderite_block": {
+    "sound": "metal"
+  },
+  "panascais_end:ametrine_block": {
+    "sound": "metal"
+  },
+  "panascais_end:gilded_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:gilded_endral_layer": {
+    "sound": "grass"
+  },
+  "panascais_end:eclipsed_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:eclipsed_endral_layer": {
+    "sound": "grass"
+  },
+  "panascais_end:verdant_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:verdant_endral_layer": {
+    "sound": "grass"
+  },
+  "panascais_end:coarse_gilded_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:coarse_eclipsed_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:coarse_verdant_endral": {
+    "sound": "grass"
+  },
+  "panascais_end:flare_fern": {
+    "sound": "grass"
+  },
+  "panascais_end:tealcap": {
+    "sound": "grass"
+  },
+  "panascais_end:limecap": {
+    "sound": "grass"
+  },
+  "panascais_end:lilecap": {
+    "sound": "grass"
+  },
+  "panascais_end:bead_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:blade_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:orb_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:gilded_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:curlwhisp_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:spiral_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:frostspike_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:twinblade_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:flare_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:flathead_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:scorched_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:glowtide_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:violite_void_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:golden_void_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:starglow_grass": {
+    "sound": "grass"
+  },
+  "panascais_end:mistveil_bloom": {
+    "sound": "grass"
+  },
+  "panascais_end:gleamfloat": {
+    "sound": "grass"
+  },
+  "panascais_end:gilded_wheat": {
+    "sound": "grass"
+  },
+  "panascais_end:bloomling": {
+    "sound": "grass"
+  },
+  "panascais_end:layerloom": {
+    "sound": "grass"
+  },
+  "panascais_end:sporesprout": {
+    "sound": "grass"
+  },
+  "panascais_end:lotus_bloom": {
+    "sound": "grass"
+  },
+  "panascais_end:spore_algae": {
+    "sound": "grass"
+  },
+  "panascais_end:viola_speckle": {
+    "sound": "grass"
+  },
+  "panascais_end:lyric_sprouts": {
+    "sound": "grass"
+  },
+  "panascais_end:honey_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:chorus_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:cryolite_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:whispering_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:fungal_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:spored_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:scorched_sapling": {
+    "sound": "grass"
+  },
+  "panascais_end:cryolite_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:whispering_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:honey_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:chorus_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:spored_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:spored_leaves_slab": {
+    "sound": "grass"
+  },
+  "panascais_end:scorched_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:hanging_whispering_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:hanging_cryolite_leaves": {
+    "sound": "grass"
+  },
+  "panascais_end:dusk_soil": {
+    "sound": "gravel"
+  },
+  "panascais_end:dusk_soil_sediment": {
+    "sound": "gravel"
+  },
+  "panascais_end:fungal_leaves": {
+    "sound": "fungus"
+  },
+  "panascais_end:fungal_leaves_slab": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_sediment": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_slab": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_stairs": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_wall": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_slats": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_slats_slab": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_slats_stairs": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_mire_slats_wall": {
+    "sound": "fungus"
+  },
+  "panascais_end:frilltops": {
+    "sound": "fungus"
+  },
+  "panascais_end:meadowlings": {
+    "sound": "fungus"
+  },
+  "panascais_end:springbulb": {
+    "sound": "fungus"
+  },
+  "panascais_end:tanglecaps": {
+    "sound": "fungus"
+  },
+  "panascais_end:mycelion_endral": {
+    "sound": "nylium"
+  },
+  "panascais_end:mycelion_endral_layer": {
+    "sound": "nylium"
+  },
+  "panascais_end:coarse_mycelion_endral": {
+    "sound": "nylium"
+  },
+  "panascais_end:chorus_door": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_log": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:chorus_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_door": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_log": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:honey_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_door": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_log": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:cryolite_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_log": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_door": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:fungal_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_log": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_door": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:spored_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_log": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_door": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:scorched_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_log": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_stripped_log": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_stripped_wood": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_thin_log": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_planks": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_door": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_fence": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_fence_gate": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_slab": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_stairs": {
+    "sound": "wood"
+  },
+  "panascais_end:whispering_trapdoor": {
+    "sound": "wood"
+  },
+  "panascais_end:normal_wasteland_biome_marker": {},
+  "panascais_end:normal_forest_biome_marker": {},
+  "panascais_end:gilded_ridge_biome_marker": {},
+  "panascais_end:gilded_woods_biome_marker": {},
+  "panascais_end:gilded_fields_biome_marker": {},
+  "panascais_end:prism_peaks_biome_marker": {},
+  "panascais_end:prism_ponds_biome_marker": {},
+  "panascais_end:prism_forest_biome_marker": {},
+  "panascais_end:sporelight_void_islands_biome_marker": {},
+  "panascais_end:sporelight_spored_forest_biome_marker": {},
+  "panascais_end:sporelight_mixed_forest_biome_marker": {},
+  "panascais_end:sporelight_fungal_forest_biome_marker": {},
+  "panascais_end:prism_default_biome_marker": {},
+  "panascais_end:prism_pillars_biome_marker": {},
+  "panascais_end:verdant_grove_biome_marker": {},
+  "panascais_end:verdant_glade_biome_marker": {},
+  "panascais_end:verdant_spike_islands_biome_marker": {},
+  "panascais_end:shadow_fold_biome_marker": {},
+  "panascais_end:mobspawner_spawner": {},
+  "panascais_end:shulker_spawner": {},
+  "panascais_end:villager_spawner": {},
+  "panascais_end:village_chest_spawner": {},
+  "panascais_end:dungeon_chest_spawner": {},
+  "panascais_end:frostling_spawner": {},
+  "panascais_end:endboss_arena_spawner": {},
+  "panascais_end:sunsilk_lace": {
+    "sound": "vines"
+  },
+  "panascais_end:moon_berry_vines": {
+    "sound": "vines"
+  },
+  "panascais_end:wicked_wisteria": {
+    "sound": "vines"
+  },
+  "panascais_end:shadow_wisteria": {
+    "sound": "vines"
+  },
+  "panascais_end:violite_wisteria": {
+    "sound": "vines"
+  },
+  "panascais_end:frozen_jelly": {
+    "sound": "slime"
+  },
+  "panascais_end:packed_frozen_jelly": {
+    "sound": "glass"
+  },
+  "panascais_end:frostbloom": {
+    "sound": "glass"
+  },
+  "panascais_end:moonflower": {
+    "sound": "glass"
+  },
+  "panascais_end:auracrest": {
+    "sound": "glass"
+  },
+  "panascais_end:icelumia": {
+    "sound": "glass"
+  },
+  "panascais_end:ice_spike": {
+    "sound": "glass"
+  },
+  "panascais_end:frosted_endral": {
+    "sound": "snow"
+  },
+  "panascais_end:frosted_endral_layer": {
+    "sound": "snow"
+  },
+  "panascais_end:coarse_frosted_endral": {
+    "sound": "snow"
+  },
+  "panascais_end:eternal_debris": {
+    "sound": "ancient_debris"
+  },
+  "panascais_end:ametrine_geode": {
+    "sound": "amethyst_block"
+  },
+  "panascais_end:ametrine_crystal": {
+    "sound": "large_amethyst_bud"
+  },
+  "panascais_end:respawn_anchor": {
+    "sound": "stone"
+  },
+  "panascais_end:cloud": {
+    "sound": "wool"
+  },
+  "hf_mzs:painted_acacia_wood": {
+    "textures": "hf_mzs.painted_acacia",
+    "sound": "wood"
+  },
+  "hf_mzs:painted_acacia_slab": {
+    "textures": "hf_mzs.painted_acacia",
+    "sound": "wood"
+  },
+  "hf_mzs:clawed_log": {
+    "textures": "hf_mzs.clawed_log",
+    "sound": "wood"
+  },
+  "hf_mzs:thatch": {
+    "sound": "grass"
+  },
+  "hf_mzs:gong_main": {
+    "sound": "stone"
+  },
+  "hf_mzs:gong_side": {
+    "sound": "stone"
+  },
+  "hf_mzs:invisible_slab": {
+    "sound": "stone"
+  },
+  "hf_mzs:raked_sand": {
+    "sound": "sand"
+  },
+  "hf_mzs:red_raked_sand": {
+    "sound": "sand"
+  },
+  "hf_mzs:custom_jigsaw": {
+    "textures": {
+      "up": "hf_mzs.custom_jigsaw",
+      "down": "hf_mzs.custom_jigsaw",
+      "north": "hf_mzs.custom_jigsaw",
+      "south": "hf_mzs.custom_jigsaw",
+      "east": "hf_mzs.custom_jigsaw",
+      "west": "hf_mzs.custom_jigsaw"
+    },
+    "sound": "stone"
+  },
+  "test:vibranium_ore": {
+    "textures": "vibranium_ore",
+    "sound": "stone"
+  },
+  "oreville_rb:snrmlcw_qxpjfpt": {
+    "sound": "stone"
+  },
+  "oreville_rb:srsvfjz": {
+    "sound": "stone"
+  },
+  "oreville_rb:tinhdde": {
+    "sound": "stone"
+  },
+  "oreville_rb:shzrcpr_zuiegwv_kjdshj": {
+    "sound": "stone"
+  },
+  "oreville_rb:shzrcpr_zuiegwv_mvctlz": {
+    "sound": "stone"
+  },
+  "oreville_rb:vzisbfe_nagzrlz": {
+    "sound": "stone"
+  },
+  "oreville_rb:vzisbfe_zuiegwv": {
+    "sound": "stone"
+  },
+  "oreville_rb:swizuin_lxtrkgw": {
+    "sound": "stone"
+  },
+  "oreville_rb:zvgoxqr_vxpbbpp": {
+    "sound": "stone"
+  },
+  "oreville_rb:yhsrxrz_nbujrxa": {
+    "sound": "stone"
+  },
+  "oreville_rb:wdxcrzg_silnmyc": {
+    "sound": "stone"
+  },
+  "oreville_rb:mnbaemj_ywyqlrq": {
+    "sound": "stone"
+  },
+  "oreville_rb:mnbaemj_bhwercc": {
+    "sound": "stone"
+  },
+  "oreville_rb:wxxdlws": {
+    "sound": "stone"
+  },
+  "oreville_rb:nagzrlz": {
+    "sound": "stone"
+  },
+  "oreville_rb:uabslpp_snrmlcw_xwkzzoy": {
+    "sound": "stone"
+  },
+  "oreville_rb:hlsjcdc_lpfcvck": {
+    "sound": "stone"
+  },
+  "oreville_rb:capzdqm_ihonzzd": {
+    "sound": "stone"
+  },
+  "oreville_rb:glzjipm": {
+    "sound": "stone"
+  },
+  "oreville_rb:fkcabzc_xgerndu": {
+    "sound": "stone"
+  },
+  "oreville_rb:ukqrhgv_xgerndu": {
+    "sound": "stone"
+  },
+  "oreville_rb:wnlmvkn_zuiegwv": {
+    "sound": "stone"
+  },
+  "oreville_rb:xyhcyrp_cetxhtn": {
+    "sound": "stone"
+  },
+  "oreville_rb:yxrtsfj_renlfni": {
+    "sound": "stone"
+  },
+  "oreville_rb:jmsdfte_nagzrlz": {
+    "sound": "stone"
+  },
+  "oreville_rb:jmsdfte_jtfzoyx": {
+    "sound": "stone"
+  },
+  "oreville_rb:gevnfky": {
+    "sound": "stone"
+  },
+  "oreville_rb:ddcoiqx_tinhdde": {
+    "sound": "stone"
+  },
+  "oreville_rb:ddcoiqx_nagzrlz": {
+    "sound": "stone"
+  },
+  "oreville_rb:ddcoiqx_zuiegwv": {
+    "sound": "stone"
+  },
+  "oreville_rb:zuiegwv": {
+    "sound": "stone"
+  },
+  "oreville_rb:jrmrxxw_jtxrdqu": {
+    "sound": "stone"
+  },
+  "oreville_rb:wjxhpp_zuiegwv": {
+    "sound": "stone"
+  },
+  "oreville_rb:tyxxbac": {
+    "sound": "stone"
+  },
+  "oreville_rb:jazgorv_xgerndu": {
+    "sound": "stone"
+  },
+  "dungeons:redstone_core_block": {
+    "sound": "heavy_core"
+  },
+  "dungeons:void_fluid": {
+    "sound": "resin"
+  },
+  "dungeons:void_portal_frame": {
+    "sound": "glass"
+  },
+  "dungeons:redstone_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:nameless_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:mooshroom_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:wraith_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:cauldron_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:abomination_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:spooky_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:tempest_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:guardian_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:endersent_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:wildfire_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:vengeful_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:obsidian_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:heart_painting_block": {
+    "sound": "lantern"
+  },
+  "dungeons:desert_bricks": {
+    "sound": "stone",
+    "textures": "desert_bricks"
+  },
+  "dungeons:chiseled_desert_bricks": {
+    "sound": "stone",
+    "textures": "chiseled_desert_bricks"
+  },
+  "dungeons:desert_brick_tile": {
+    "sound": "stone",
+    "textures": "desert_brick_tile"
+  },
+  "dungeons:sandy_desert_bricks": {
+    "textures": "sandy_desert_bricks",
+    "sound": "stone"
+  },
+  "dungeons:desert_brick_pillar": {
+    "sound": "stone"
+  },
+  "dungeons:desert_brick_pillar_base": {
+    "sound": "stone"
+  },
+  "dungeons:desert_brick_pillar_base_gilded": {
+    "sound": "stone"
+  },
+  "dungeons:obsidian_claw": {
+    "sound": "stone"
+  },
+  "dungeons:silver_crown": {
+    "sound": "metal"
+  },
+  "dungeons:golden_lock": {
+    "sound": "heavy_core",
+    "textures": "golden_lock"
+  },
+  "dungeons:diamond_lock": {
+    "sound": "heavy_core",
+    "textures": "diamond_lock"
+  },
+  "dungeons:trial_lock": {
+    "sound": "heavy_core",
+    "textures": "challenge_lock"
+  },
+  "dungeons:ancient_portal_frame": {
+    "sound": "basalt"
+  },
+  "dungeons:ancient_portal": {
+    "sound": "glass"
+  },
+  "dungeons:ancient_barrier": {
+    "sound": "glass"
+  },
+  "dungeons:orange_glowshroom": {
+    "sound": "nether_wart"
+  },
+  "dungeons:green_glowshroom": {
+    "sound": "nether_wart"
+  },
+  "dungeons:cyan_glowshroom": {
+    "sound": "nether_wart"
+  },
+  "dungeons:abominable_weaver_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:grim_guardian_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:oozing_menace_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:ancient_mooshroom_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:first_enchanter_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:scuttling_torment_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:the_unending_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:solemn_giant_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:thundering_growth_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:unbreakable_one_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:seeking_flame_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:windbeard_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:unstoppable_tusk_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:cursed_presence_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:watcher_of_the_end_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:barrage_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:abyssal_eye_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:the_tiny_scourge_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:the_tower_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:pestilent_conjurer_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:vigilant_scoundrel_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:ancient_terror_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:vengeful_mariner_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:frostwarden_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:haunted_caller_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:the_swarm_spawn": {
+    "sound": "heavy_core",
+    "textures": {
+      "down": "gilded_obsidian",
+      "side": "ancient_respawn_anchor",
+      "up": "polished_blackstone"
+    }
+  },
+  "dungeons:gilded_obsidian": {
+    "sound": "stone"
+  },
+  "dungeons:spike_trap": {
+    "sound": "stone",
+    "textures": {
+      "up": "spike_trap_block",
+      "side": "desert_brick_pillar_base",
+      "down": "desert_brick_pillar_top"
+    }
+  },
+  "dungeons:ancient_gold_block": {
+    "sound": "metal",
+    "textures": "ancient_gold_block"
+  },
+  "dungeons:spider_egg": {
+    "sound": "honey_block",
+    "textures": {
+      "up": "spider_egg_top",
+      "side": "spider_egg",
+      "down": "spider_egg_bottom"
+    }
+  },
+  "dungeons:sticky_sludge": {
+    "sound": "slime"
+  },
+  "dungeons:netherite_grindstone": {
+    "sound": "netherite"
+  },
+  "dungeons:nether_brick_tile": {
+    "textures": "nether_brick_tile",
+    "sound": "nether_brick"
+  },
+  "dungeons:chiseled_nether_brick_tile": {
+    "textures": "chiseled_nether_brick_tile",
+    "sound": "nether_brick"
+  },
+  "dungeons:nether_brick_tile_slab": {
+    "sound": "nether_brick"
+  },
+  "dungeons:lava_lock": {
+    "sound": "nether_brick",
+    "textures": "lava_lock"
+  },
+  "dungeons:spawner_obsidian": {
+    "sound": "stone",
+    "textures": "obsidian"
+  },
+  "dungeons:blue_magma": {
+    "sound": "netherrack",
+    "textures": "blue_magma"
+  },
+  "dungeons:redstone_crystal": {
+    "sound": "stone"
+  },
+  "dungeons:purple_mossy_end_stone": {
+    "sound": "nylium"
+  },
+  "dungeons:yellow_mossy_end_stone": {
+    "sound": "nylium"
+  },
+  "dungeons:purple_chorus_leaves": {
+    "sound": "azalea_leaves"
+  },
+  "dungeons:yellow_chorus_leaves": {
+    "sound": "azalea_leaves"
+  },
+  "dungeons:purple_ender_grass": {
+    "sound": "azalea_leaves"
+  },
+  "dungeons:yellow_ender_grass": {
+    "sound": "azalea_leaves"
+  },
+  "dungeons:dark_purpur": {
+    "sound": "stone",
+    "textures": "dark_purpur"
+  },
+  "dungeons:dark_purpur_bricks": {
+    "sound": "stone",
+    "textures": "dark_purpur_bricks"
+  },
+  "dungeons:dark_purpur_pillar": {
+    "sound": "stone"
+  },
+  "dungeons:end_stone_pillar": {
+    "sound": "stone"
+  },
+  "dungeons:purple_ender_vine": {
+    "sound": "azalea_leaves"
+  },
+  "dungeons:slime_launcher": {
+    "sound": "slime"
+  },
+  "dungeons:ocean_bricks": {
+    "textures": "ocean_bricks",
+    "sound": "tuff_bricks"
+  },
+  "dungeons:ocean_tiles": {
+    "textures": "ocean_tiles",
+    "sound": "tuff_bricks"
+  },
+  "dungeons:sandy_ocean_bricks": {
+    "textures": "sandy_ocean_bricks",
+    "sound": "tuff_bricks"
+  },
+  "dungeons:ocean_brick_slab": {
+    "sound": "tuff_bricks"
+  },
+  "dungeons:ocean_tiles_slab": {
+    "sound": "tuff_bricks"
+  },
+  "dungeons:sandy_ocean_brick_slab": {
+    "sound": "tuff_bricks"
+  },
+  "dungeons:chiseled_ocean_tile": {
+    "textures": "chiseled_ocean_tile",
+    "sound": "tuff_bricks"
+  },
+  "dungeons:chiseled_ocean_bricks": {
+    "textures": {
+      "up": "chiseled_ocean_bricks_top",
+      "down": "chiseled_ocean_bricks_top",
+      "side": "chiseled_ocean_bricks_side"
+    },
+    "sound": "tuff_bricks"
+  },
+  "dungeons:bonus_door": {
+    "sound": "tuff_bricks"
+  },
+  "dungeons:bonus_door_gate": {
+    "sound": "stone",
+    "textures": "bonus_door_gate"
+  },
+  "dungeons:redstone_monstrosity_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:mooshroom_monstrosity_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:obsidian_monstrosity_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:corrupted_cauldron_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:jungle_abomination_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:tempest_golem_plushie": {
+    "sound": "wool"
+  },
+  "dungeons:ancient_guardian_plushie": {
+    "sound": "wool"
+  },
+  "ntk:corrupted_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:grassed_corrupted_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_corrupted_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_mossy_willow_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_mossy_willow_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_overgrown_jungle_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_overgrown_jungle_log_top": {
+    "sound": "wood"
+  },
+  "ntk:jar_of_forest_wisp_charged": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_forest_wisp_uncharged": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_1": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_2": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_3": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_4": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_5": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_6": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_7": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_moss_berry_cookies_8": {
+    "sound": "glass"
+  },
+  "ntk:lush_bush_bale": {
+    "sound": "grass"
+  },
+  "ntk:mosshroom_woodcutter": {
+    "sound": "stem"
+  },
+  "ntk:mossy_willow_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:potted_lush_bush": {
+    "sound": "stone"
+  },
+  "ntk:short_lush_bush": {
+    "sound": "grass"
+  },
+  "ntk:stripped_corrupted_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_mosshroom_woodcutter": {
+    "sound": "stem"
+  },
+  "ntk:stripped_mossy_willow_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_overgrown_jungle_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:tall_lush_bush": {
+    "sound": "grass"
+  },
+  "ntk:wild_beetroot": {
+    "sound": "grass"
+  },
+  "ntk:wild_carrot": {
+    "sound": "grass"
+  },
+  "ntk:wild_potato": {
+    "sound": "grass"
+  },
+  "ntk:wild_wheat": {
+    "sound": "grass"
+  },
+  "ntk:spawner_allay": {
+    "sound": "stone"
+  },
+  "ntk:spawner_blaze": {
+    "sound": "stone"
+  },
+  "ntk:spawner_cat": {
+    "sound": "stone"
+  },
+  "ntk:spawner_hoglin": {
+    "sound": "stone"
+  },
+  "ntk:spawner_pig": {
+    "sound": "stone"
+  },
+  "ntk:spawner_piglin": {
+    "sound": "stone"
+  },
+  "ntk:spawner_piglin_brute": {
+    "sound": "stone"
+  },
+  "ntk:spawner_pillager": {
+    "sound": "stone"
+  },
+  "ntk:spawner_rabbit": {
+    "sound": "stone"
+  },
+  "ntk:spawner_shulker": {
+    "sound": "stone"
+  },
+  "ntk:spawner_skeleton": {
+    "sound": "stone"
+  },
+  "ntk:spawner_skeleton_horse": {
+    "sound": "stone"
+  },
+  "ntk:spawner_villager": {
+    "sound": "stone"
+  },
+  "ntk:spawner_vindicator": {
+    "sound": "stone"
+  },
+  "ntk:spawner_witch": {
+    "sound": "stone"
+  },
+  "ntk:spawner_wither_skeleton": {
+    "sound": "stone"
+  },
+  "ntk:spawner_zoglin": {
+    "sound": "stone"
+  },
+  "ntk:spawner_zombie_horse": {
+    "sound": "stone"
+  },
+  "ntk:spawner_zombie_villager": {
+    "sound": "stone"
+  },
+  "ntk:spawner_zombified_piglin": {
+    "sound": "stone"
+  },
+  "ntk:acacia_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:bamboo_wood_crate": {
+    "sound": "bamboo_wood"
+  },
+  "ntk:birch_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:cherry_wood_crate": {
+    "sound": "cherry_wood"
+  },
+  "ntk:copper_crate": {
+    "sound": "wood"
+  },
+  "ntk:copper_crate_key_trophy": {
+    "sound": "copper"
+  },
+  "ntk:copper_crate_trophy": {
+    "sound": "copper"
+  },
+  "ntk:crimson_hyphae_crate": {
+    "sound": "nether_wood"
+  },
+  "ntk:dark_oak_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:diamond_crate": {
+    "sound": "wood"
+  },
+  "ntk:diamond_crate_key_trophy": {
+    "sound": "metal"
+  },
+  "ntk:diamond_crate_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_crate": {
+    "sound": "wood"
+  },
+  "ntk:golden_crate_key_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_crate_trophy": {
+    "sound": "metal"
+  },
+  "ntk:iron_crate": {
+    "sound": "wood"
+  },
+  "ntk:iron_crate_key_trophy": {
+    "sound": "iron"
+  },
+  "ntk:iron_crate_trophy": {
+    "sound": "iron"
+  },
+  "ntk:jungle_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:mangrove_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:oak_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:ominous_trial_crate": {
+    "sound": "vault"
+  },
+  "ntk:pale_oak_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:piglin_crate": {
+    "sound": "stone"
+  },
+  "ntk:spawner_crates_trader": {
+    "sound": "stone"
+  },
+  "ntk:spawner_piglin_crates_trader": {
+    "sound": "stone"
+  },
+  "ntk:spruce_wood_crate": {
+    "sound": "wood"
+  },
+  "ntk:stone_crate_key_trophy": {
+    "sound": "stone"
+  },
+  "ntk:stone_crate_trophy": {
+    "sound": "stone"
+  },
+  "ntk:trial_crate": {
+    "sound": "vault"
+  },
+  "ntk:warped_hyphae_crate": {
+    "sound": "nether_wood"
+  },
+  "ntk:acacia_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:acacia_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:amethyst_lamp": {
+    "sound": "amethyst_block"
+  },
+  "ntk:andesite_lantern": {
+    "sound": "stone"
+  },
+  "ntk:andesite_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:bamboo_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:bamboo_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:basalt_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:basalt_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:birch_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:birch_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:blackstone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:blackstone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:calcite_lantern": {
+    "sound": "calcite"
+  },
+  "ntk:calcite_soul_lantern": {
+    "sound": "calcite"
+  },
+  "ntk:cherry_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:cherry_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:cinnabar_brick_lantern": {
+    "sound": "cinnabar"
+  },
+  "ntk:cinnabar_brick_soul_lantern": {
+    "sound": "cinnabar"
+  },
+  "ntk:cinnabar_lantern": {
+    "sound": "cinnabar"
+  },
+  "ntk:cinnabar_soul_lantern": {
+    "sound": "cinnabar"
+  },
+  "ntk:cobbled_deepslate_lantern": {
+    "sound": "deepslate"
+  },
+  "ntk:cobbled_deepslate_soul_lantern": {
+    "sound": "deepslate"
+  },
+  "ntk:cobblestone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:cobblestone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:cracked_deepslate_brick_lantern": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:cracked_deepslate_brick_soul_lantern": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:cracked_polished_blackstone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:cracked_polished_blackstone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:cracked_stone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:cracked_stone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:crimson_hyphae_lamp": {
+    "sound": "wood"
+  },
+  "ntk:crimson_hyphae_lantern": {
+    "sound": "wood"
+  },
+  "ntk:dark_oak_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:dark_oak_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:deepslate_brick_lantern": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:deepslate_brick_soul_lantern": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:deepslate_lantern": {
+    "sound": "deepslate"
+  },
+  "ntk:deepslate_soul_lantern": {
+    "sound": "deepslate"
+  },
+  "ntk:diorite_lantern": {
+    "sound": "stone"
+  },
+  "ntk:diorite_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:dripstone_lantern": {
+    "sound": "dripstone_block"
+  },
+  "ntk:dripstone_soul_lantern": {
+    "sound": "dripstone_block"
+  },
+  "ntk:end_stone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:exposed_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:exposed_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:granite_lantern": {
+    "sound": "stone"
+  },
+  "ntk:granite_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:jack_o_soul_lantern": {
+    "sound": "wood"
+  },
+  "ntk:jungle_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:jungle_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:mangrove_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:mangrove_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:mossy_cobblestone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:mossy_cobblestone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:mossy_stone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:mossy_stone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:mud_brick_lantern": {
+    "sound": "mud_bricks"
+  },
+  "ntk:mud_brick_soul_lantern": {
+    "sound": "mud_bricks"
+  },
+  "ntk:nether_brick_lantern": {
+    "sound": "nether_brick"
+  },
+  "ntk:nether_brick_soul_lantern": {
+    "sound": "nether_brick"
+  },
+  "ntk:oak_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:oak_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:oxidized_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:oxidized_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:packed_mud_lantern": {
+    "sound": "packed_mud"
+  },
+  "ntk:packed_mud_soul_lantern": {
+    "sound": "packed_mud"
+  },
+  "ntk:pale_oak_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:pale_oak_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:polished_blackstone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:polished_blackstone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:purpur_lantern": {
+    "sound": "stone"
+  },
+  "ntk:purpur_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:quartz_lamp": {
+    "sound": "stone"
+  },
+  "ntk:red_nether_brick_lantern": {
+    "sound": "nether_brick"
+  },
+  "ntk:red_nether_brick_soul_lantern": {
+    "sound": "nether_brick"
+  },
+  "ntk:red_sandstone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:red_sandstone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:resin_brick_lantern": {
+    "sound": "resin_brick"
+  },
+  "ntk:resin_brick_soul_lantern": {
+    "sound": "resin_brick"
+  },
+  "ntk:sandstone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:sandstone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:smooth_basalt_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_basalt_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_red_sandstone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:smooth_red_sandstone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:smooth_sandstone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:smooth_sandstone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:spruce_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:spruce_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:stone_brick_lantern": {
+    "sound": "stone"
+  },
+  "ntk:stone_brick_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:stone_lantern": {
+    "sound": "stone"
+  },
+  "ntk:stone_soul_lantern": {
+    "sound": "stone"
+  },
+  "ntk:sulfur_brick_lantern": {
+    "sound": "sulfur"
+  },
+  "ntk:sulfur_brick_soul_lantern": {
+    "sound": "sulfur"
+  },
+  "ntk:sulfur_lantern": {
+    "sound": "sulfur"
+  },
+  "ntk:sulfur_soul_lantern": {
+    "sound": "sulfur"
+  },
+  "ntk:tuff_lantern": {
+    "sound": "tuff"
+  },
+  "ntk:tuff_soul_lantern": {
+    "sound": "tuff"
+  },
+  "ntk:tuff_brick_lantern": {
+    "sound": "tuff_bricks"
+  },
+  "ntk:tuff_brick_soul_lantern": {
+    "sound": "tuff_bricks"
+  },
+  "ntk:warped_hyphae_lamp": {
+    "sound": "wood"
+  },
+  "ntk:warped_hyphae_lantern": {
+    "sound": "wood"
+  },
+  "ntk:waxed_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:waxed_exposed_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:waxed_exposed_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:waxed_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:waxed_oxidized_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:waxed_oxidized_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:waxed_weathered_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:waxed_weathered_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:weathered_copper_lamp": {
+    "sound": "copper"
+  },
+  "ntk:weathered_large_copper_lantern": {
+    "sound": "copper"
+  },
+  "ntk:magic_spells_table": {
+    "sound": "stone"
+  },
+  "ntk:spawner_book_keeper": {
+    "sound": "stone"
+  },
+  "ntk:spawner_scrollwright": {
+    "sound": "stone"
+  },
+  "ntk:blooming_corrupted_oak_sapling": {
+    "sound": "grass"
+  },
+  "ntk:chiseled_corrupted_stone_bricks": {
+    "sound": "basalt"
+  },
+  "ntk:chiseled_polished_corrupted_stone": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_dirt": {
+    "sound": "grass"
+  },
+  "ntk:corrupted_grass_bale": {
+    "sound": "grass"
+  },
+  "ntk:corrupted_grass": {
+    "sound": "grass"
+  },
+  "ntk:corrupted_oak_double_slab": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_door": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_fence": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_fence_gate": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_leaves": {
+    "sound": "grass"
+  },
+  "ntk:corrupted_oak_log": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_planks": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:corrupted_oak_sapling": {
+    "sound": "grass"
+  },
+  "ntk:corrupted_oak_slab": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_stairs": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_trapdoor": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_wood": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_oak_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:corrupted_stone": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_double_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_stairs": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_brick_wall": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_bricks": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_double_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_pillar": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_stairs": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_tile_double_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_tile_slab": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_tile_stairs": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_tile_wall": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_tiles": {
+    "sound": "basalt"
+  },
+  "ntk:corrupted_stone_wall": {
+    "sound": "basalt"
+  },
+  "ntk:cracked_corrupted_stone_bricks": {
+    "sound": "basalt"
+  },
+  "ntk:cracked_corrupted_stone_brick_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:cracked_corrupted_stone_brick_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:cracked_corrupted_stone_tiles": {
+    "sound": "basalt"
+  },
+  "ntk:fossiliferous_corrupted_dirt": {
+    "sound": "grass"
+  },
+  "ntk:fossiliferous_corrupted_stone": {
+    "sound": "basalt"
+  },
+  "ntk:hanging_moss": {
+    "sound": "hanging_roots"
+  },
+  "ntk:moss_sprouts_bale": {
+    "sound": "grass"
+  },
+  "ntk:mossed_corrupted_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_corrupted_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_mossy_willow_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_mossy_willow_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_overgrown_jungle_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_overgrown_jungle_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_door": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_double_slab": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_fence": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_fence_gate": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_leaves": {
+    "sound": "grass"
+  },
+  "ntk:mossy_willow_log": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_planks": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:mossy_willow_sapling": {
+    "sound": "grass"
+  },
+  "ntk:mossy_willow_slab": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_stairs": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_trapdoor": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_wood": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:mossy_willow_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_door": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_double_slab": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_fence": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_fence_gate": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_leaves": {
+    "sound": "grass"
+  },
+  "ntk:overgrown_jungle_log": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_planks": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:overgrown_jungle_sapling": {
+    "sound": "grass"
+  },
+  "ntk:overgrown_jungle_slab": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_stairs": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_trapdoor": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_wood": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_wood_lamp": {
+    "sound": "wood"
+  },
+  "ntk:overgrown_jungle_wood_lantern": {
+    "sound": "wood"
+  },
+  "ntk:polished_corrupted_stone": {
+    "sound": "basalt"
+  },
+  "ntk:polished_corrupted_stone_double_slab": {
+    "sound": "basalt"
+  },
+  "ntk:polished_corrupted_stone_slab": {
+    "sound": "basalt"
+  },
+  "ntk:polished_corrupted_stone_stairs": {
+    "sound": "basalt"
+  },
+  "ntk:polished_corrupted_stone_wall": {
+    "sound": "basalt"
+  },
+  "ntk:potted_blooming_corrupted_oak_sapling": {
+    "sound": "stone"
+  },
+  "ntk:potted_corrupted_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_corrupted_oak_sapling": {
+    "sound": "stone"
+  },
+  "ntk:potted_hanging_moss": {
+    "sound": "stone"
+  },
+  "ntk:potted_moss_sprouts": {
+    "sound": "stone"
+  },
+  "ntk:potted_mossy_willow_sapling": {
+    "sound": "stone"
+  },
+  "ntk:potted_overgrown_jungle_sapling": {
+    "sound": "stone"
+  },
+  "ntk:short_moss_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:smooth_corrupted_stone": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_double_slab": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_slab": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_soul_lantern": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_stairs": {
+    "sound": "basalt"
+  },
+  "ntk:smooth_corrupted_stone_wall": {
+    "sound": "basalt"
+  },
+  "ntk:stripped_corrupted_oak_log": {
+    "sound": "wood"
+  },
+  "ntk:stripped_corrupted_oak_wood": {
+    "sound": "wood"
+  },
+  "ntk:stripped_mossy_willow_log": {
+    "sound": "wood"
+  },
+  "ntk:stripped_mossy_willow_wood": {
+    "sound": "wood"
+  },
+  "ntk:stripped_overgrown_jungle_log": {
+    "sound": "wood"
+  },
+  "ntk:stripped_overgrown_jungle_wood": {
+    "sound": "wood"
+  },
+  "ntk:tall_moss_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:acacia_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:andesite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:andesite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:andesite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:andesite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:andesite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:andesite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:andesite_tile_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:andesite_tile_slab": {
+    "sound": "stone"
+  },
+  "ntk:andesite_tile_stairs": {
+    "sound": "stone"
+  },
+  "ntk:andesite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:birch_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:block_of_black_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_blaze_powder": {
+    "sound": "sand"
+  },
+  "ntk:block_of_blue_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_brown_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_charcoal": {
+    "sound": "stone"
+  },
+  "ntk:block_of_cyan_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_flint": {
+    "sound": "stone"
+  },
+  "ntk:block_of_glow_ink_sac": {
+    "sound": "coral"
+  },
+  "ntk:block_of_gray_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_green_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_gunpowder": {
+    "sound": "sand"
+  },
+  "ntk:block_of_ink_sac": {
+    "sound": "coral"
+  },
+  "ntk:block_of_leaf_litter": {
+    "sound": "leaf_litter"
+  },
+  "ntk:block_of_light_blue_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_light_gray_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_lime_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_magenta_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_orange_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_phantom_membrane": {
+    "sound": "coral"
+  },
+  "ntk:block_of_pink_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_purple_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_red_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_rotten_flesh": {
+    "sound": "netherrack"
+  },
+  "ntk:block_of_sugar": {
+    "sound": "sand"
+  },
+  "ntk:block_of_white_dye": {
+    "sound": "coral"
+  },
+  "ntk:block_of_yellow_dye": {
+    "sound": "coral"
+  },
+  "ntk:blue_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:bush_bale": {
+    "sound": "grass"
+  },
+  "ntk:calcite_double_slab": {
+    "sound": "calcite"
+  },
+  "ntk:calcite_slab": {
+    "sound": "calcite"
+  },
+  "ntk:calcite_stairs": {
+    "sound": "calcite"
+  },
+  "ntk:calcite_wall": {
+    "sound": "calcite"
+  },
+  "ntk:cherry_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:chiseled_andesite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_end_stone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_diorite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_granite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_polished_andesite": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_polished_end_stone": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_polished_diorite": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_polished_granite": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_polished_stone": {
+    "sound": "stone"
+  },
+  "ntk:clump_of_brown_mushrooms": {
+    "sound": "grass"
+  },
+  "ntk:clump_of_crimson_fungus": {
+    "sound": "fungus"
+  },
+  "ntk:clump_of_red_mushrooms": {
+    "sound": "grass"
+  },
+  "ntk:clump_of_warped_fungus": {
+    "sound": "fungus"
+  },
+  "ntk:cracked_andesite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:cracked_andesite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:cracked_andesite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:cracked_end_stone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:cracked_end_stone_pillar": {
+    "sound": "stone"
+  },
+  "ntk:cracked_end_stone_tiles": {
+    "sound": "stone"
+  },
+  "ntk:cracked_diorite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:cracked_diorite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:cracked_diorite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:cracked_granite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:cracked_granite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:cracked_granite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:cracked_stone_pillar": {
+    "sound": "stone"
+  },
+  "ntk:cracked_stone_tiles": {
+    "sound": "stone"
+  },
+  "ntk:crimson_roots_bale": {
+    "sound": "fungus"
+  },
+  "ntk:dark_oak_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:diorite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:diorite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:diorite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:diorite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:diorite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:diorite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:diorite_tile_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:diorite_tile_slab": {
+    "sound": "stone"
+  },
+  "ntk:diorite_tile_stairs": {
+    "sound": "stone"
+  },
+  "ntk:diorite_tile_wall": {
+    "sound": "stone"
+  },
+  "ntk:diorite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:double_pile_of_bamboo": {
+    "sound": "bamboo"
+  },
+  "ntk:double_pile_of_sticks": {
+    "sound": "wood"
+  },
+  "ntk:dripstone_double_slab": {
+    "sound": "dripstone_block"
+  },
+  "ntk:dripstone_slab": {
+    "sound": "dripstone_block"
+  },
+  "ntk:dripstone_stairs": {
+    "sound": "dripstone_block"
+  },
+  "ntk:dripstone_wall": {
+    "sound": "dripstone_block"
+  },
+  "ntk:dry_grass_bale": {
+    "sound": "grass"
+  },
+  "ntk:end_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_pillar": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_tile_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_tile_slab": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_tile_stairs": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_tile_wall": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_tiles": {
+    "sound": "stone"
+  },
+  "ntk:end_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:fern_bale": {
+    "sound": "grass"
+  },
+  "ntk:firefly_bush_bale": {
+    "sound": "firefly_bush"
+  },
+  "ntk:glow_lichen_block": {
+    "sound": "moss_block"
+  },
+  "ntk:glow_lichen_carpet": {
+    "sound": "moss_carpet"
+  },
+  "ntk:golden_chain": {
+    "sound": "chain"
+  },
+  "ntk:grafting_table": {
+    "sound": "moss_block"
+  },
+  "ntk:granite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:granite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:granite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:granite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:granite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:granite_pillar": {
+    "sound": "stone"
+  },
+  "ntk:granite_tile_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:granite_tile_slab": {
+    "sound": "stone"
+  },
+  "ntk:granite_tile_stairs": {
+    "sound": "stone"
+  },
+  "ntk:granite_tile_wall": {
+    "sound": "stone"
+  },
+  "ntk:granite_tiles": {
+    "sound": "stone"
+  },
+  "ntk:grass_bale": {
+    "sound": "grass"
+  },
+  "ntk:grass_carpet": {
+    "sound": "moss_carpet"
+  },
+  "ntk:grassed_acacia_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_acacia_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_birch_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_birch_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_cherry_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_cherry_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_dark_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_dark_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_jungle_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_jungle_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_mangrove_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_mangrove_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_pale_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_pale_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_spruce_log_side": {
+    "sound": "wood"
+  },
+  "ntk:grassed_spruce_log_top": {
+    "sound": "wood"
+  },
+  "ntk:grassed_stone": {
+    "sound": "stone"
+  },
+  "ntk:hanging_roots_bale": {
+    "sound": "hanging_roots"
+  },
+  "ntk:jungle_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:light_blue_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:magenta_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:mossed_acacia_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_acacia_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_birch_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_birch_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_cherry_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_cherry_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_dark_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_dark_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_jungle_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_jungle_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_mangrove_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_mangrove_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_pale_oak_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_pale_oak_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_spruce_log_side": {
+    "sound": "wood"
+  },
+  "ntk:mossed_spruce_log_top": {
+    "sound": "wood"
+  },
+  "ntk:mossed_stone": {
+    "sound": "stone"
+  },
+  "ntk:mossy_andesite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_andesite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_andesite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:mossy_andesite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:mossy_andesite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:mossy_deepslate_brick_double_slab": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:mossy_deepslate_brick_slab": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:mossy_deepslate_brick_stairs": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:mossy_deepslate_brick_wall": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:mossy_deepslate_bricks": {
+    "sound": "deepslate_bricks"
+  },
+  "ntk:mossy_diorite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_diorite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_diorite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:mossy_diorite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:mossy_diorite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:mossy_end_stone_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_end_stone_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_end_stone_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:mossy_end_stone_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:mossy_end_stone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:mossy_granite_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_granite_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:mossy_granite_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:mossy_granite_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:mossy_granite_bricks": {
+    "sound": "stone"
+  },
+  "ntk:oak_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:orange_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:pale_hanging_moss_bale": {
+    "sound": "pale_hanging_moss"
+  },
+  "ntk:pale_oak_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:pile_of_allium": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_azure_bluet": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_bamboo": {
+    "sound": "bamboo"
+  },
+  "ntk:pile_of_blue_orchid": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_bones_1": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_2": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_3": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_4": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_5": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_6": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_7": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_8": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_bones_9": {
+    "sound": "tuff"
+  },
+  "ntk:pile_of_cactus_flower": {
+    "sound": "cactus_flower"
+  },
+  "ntk:pile_of_closed_eyeblossom": {
+    "sound": "eyeblossom"
+  },
+  "ntk:pile_of_cornflower": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_dandelion": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_golden_dandelion": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_leather": {
+    "sound": "cloth"
+  },
+  "ntk:pile_of_lilac": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_lily_of_the_valley": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_open_eyeblossom": {
+    "sound": "eyeblossom"
+  },
+  "ntk:pile_of_orange_tulip": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_oxeye_daisy": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_peony": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_pink_petals": {
+    "sound": "pink_petals"
+  },
+  "ntk:pile_of_pink_tulip": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_pitcher_plant": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_poppy": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_red_tulip": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_rose_bush": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_sticks": {
+    "sound": "wood"
+  },
+  "ntk:pile_of_sunflower": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_torchflower": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_white_tulip": {
+    "sound": "grass"
+  },
+  "ntk:pile_of_wildflowers": {
+    "sound": "pink_petals"
+  },
+  "ntk:pile_of_wither_rose": {
+    "sound": "grass"
+  },
+  "ntk:pink_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:polished_calcite": {
+    "sound": "calcite"
+  },
+  "ntk:polished_andesite_wall": {
+    "sound": "stone"
+  },
+  "ntk:polished_calcite_double_slab": {
+    "sound": "calcite"
+  },
+  "ntk:polished_calcite_slab": {
+    "sound": "calcite"
+  },
+  "ntk:polished_calcite_stairs": {
+    "sound": "calcite"
+  },
+  "ntk:polished_calcite_wall": {
+    "sound": "calcite"
+  },
+  "ntk:polished_diorite_wall": {
+    "sound": "stone"
+  },
+  "ntk:polished_dripstone": {
+    "sound": "dripstone_block"
+  },
+  "ntk:polished_dripstone_double_slab": {
+    "sound": "dripstone_block"
+  },
+  "ntk:polished_dripstone_slab": {
+    "sound": "dripstone_block"
+  },
+  "ntk:polished_dripstone_stairs": {
+    "sound": "dripstone_block"
+  },
+  "ntk:polished_dripstone_wall": {
+    "sound": "dripstone_block"
+  },
+  "ntk:polished_end_stone": {
+    "sound": "stone"
+  },
+  "ntk:polished_end_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_end_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_end_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:polished_end_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:polished_granite_wall": {
+    "sound": "stone"
+  },
+  "ntk:polished_stone": {
+    "sound": "stone"
+  },
+  "ntk:polished_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:polished_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:potted_blue_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_light_blue_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_magenta_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_orange_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_pink_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_red_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_white_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:potted_yellow_tip_grass": {
+    "sound": "stone"
+  },
+  "ntk:red_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:smooth_end_stone": {
+    "sound": "stone"
+  },
+  "ntk:smooth_end_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:smooth_end_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:smooth_end_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:smooth_end_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:spruce_roots": {
+    "sound": "mangrove_roots"
+  },
+  "ntk:stack_of_books_4": {
+    "sound": "wood"
+  },
+  "ntk:stack_of_books_9": {
+    "sound": "wood"
+  },
+  "ntk:stone_pillar": {
+    "sound": "stone"
+  },
+  "ntk:stone_tile_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:stone_tile_slab": {
+    "sound": "stone"
+  },
+  "ntk:stone_tile_stairs": {
+    "sound": "stone"
+  },
+  "ntk:stone_tile_wall": {
+    "sound": "stone"
+  },
+  "ntk:stone_tiles": {
+    "sound": "stone"
+  },
+  "ntk:stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:sugar_cane_bale": {
+    "sound": "grass"
+  },
+  "ntk:vine_block": {
+    "sound": "grass"
+  },
+  "ntk:warped_roots_bale": {
+    "sound": "fungus"
+  },
+  "ntk:white_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:yellow_tip_grass": {
+    "sound": "grass"
+  },
+  "ntk:active_heated_netherrack": {
+    "sound": "netherrack"
+  },
+  "ntk:block_of_brass": {
+    "sound": "copper"
+  },
+  "ntk:block_of_bronze": {
+    "sound": "copper"
+  },
+  "ntk:block_of_olivine": {
+    "sound": "metal"
+  },
+  "ntk:block_of_raw_tin": {
+    "sound": "stone"
+  },
+  "ntk:block_of_raw_zinc": {
+    "sound": "stone"
+  },
+  "ntk:block_of_rose_quartz": {
+    "sound": "stone"
+  },
+  "ntk:block_of_tin": {
+    "sound": "metal"
+  },
+  "ntk:block_of_zinc": {
+    "sound": "metal"
+  },
+  "ntk:chiseled_polished_soul_stone": {
+    "sound": "stone"
+  },
+  "ntk:chiseled_rose_quartz_block": {
+    "sound": "stone"
+  },
+  "ntk:clump_of_mosshroom_fungus": {
+    "sound": "fungus"
+  },
+  "ntk:cracked_limestone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:cracked_marble_bricks": {
+    "sound": "calcite"
+  },
+  "ntk:cracked_soul_stone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:deepslate_prismarine_ore": {
+    "sound": "deepslate"
+  },
+  "ntk:deepslate_tin_ore": {
+    "sound": "deepslate"
+  },
+  "ntk:deepslate_zinc_ore": {
+    "sound": "deepslate"
+  },
+  "ntk:fossiliferous_deepslate": {
+    "sound": "deepslate"
+  },
+  "ntk:fossiliferous_heated_netherrack": {
+    "sound": "netherrack"
+  },
+  "ntk:fossiliferous_netherrack": {
+    "sound": "netherrack"
+  },
+  "ntk:fossiliferous_stone": {
+    "sound": "stone"
+  },
+  "ntk:fossiliferous_soul_sand": {
+    "sound": "soul_sand"
+  },
+  "ntk:fossiliferous_soul_soil": {
+    "sound": "soul_soil"
+  },
+  "ntk:glowbird_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:glowbird_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:glowbird_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:glowbird_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:glowceling_egg_block": {
+    "sound": "calcite"
+  },
+  "ntk:glowcelium_sprouts_bale": {
+    "sound": "grass"
+  },
+  "ntk:heated_netherrack": {
+    "sound": "netherrack"
+  },
+  "ntk:heated_netherrack_olivine_ore": {
+    "sound": "netherrack"
+  },
+  "ntk:limestone": {
+    "sound": "stone"
+  },
+  "ntk:limestone_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:limestone_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:limestone_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:limestone_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:limestone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:limestone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:limestone_slab": {
+    "sound": "stone"
+  },
+  "ntk:limestone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:limestone_wall": {
+    "sound": "stone"
+  },
+  "ntk:marble": {
+    "sound": "calcite"
+  },
+  "ntk:marble_brick_double_slab": {
+    "sound": "calcite"
+  },
+  "ntk:marble_brick_slab": {
+    "sound": "calcite"
+  },
+  "ntk:marble_brick_stairs": {
+    "sound": "calcite"
+  },
+  "ntk:marble_brick_wall": {
+    "sound": "calcite"
+  },
+  "ntk:marble_bricks": {
+    "sound": "calcite"
+  },
+  "ntk:marble_double_slab": {
+    "sound": "calcite"
+  },
+  "ntk:marble_slab": {
+    "sound": "calcite"
+  },
+  "ntk:marble_stairs": {
+    "sound": "calcite"
+  },
+  "ntk:marble_wall": {
+    "sound": "calcite"
+  },
+  "ntk:moss_berry_bush": {
+    "sound": "grass"
+  },
+  "ntk:mosshroom_block": {
+    "sound": "nether_wart"
+  },
+  "ntk:mosshroom_door": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_double_slab": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_fence": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_fence_gate": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_fungus": {
+    "sound": "fungus"
+  },
+  "ntk:mosshroom_hyphae": {
+    "sound": "stem"
+  },
+  "ntk:mosshroom_hyphae_lamp": {
+    "sound": "stem"
+  },
+  "ntk:mosshroom_hyphae_lantern": {
+    "sound": "stem"
+  },
+  "ntk:mosshroom_light": {
+    "sound": "shroomlight"
+  },
+  "ntk:mosshroom_planks": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_slab": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_stairs": {
+    "sound": "nether_wood"
+  },
+  "ntk:mosshroom_stem": {
+    "sound": "stem"
+  },
+  "ntk:mosshroom_trapdoor": {
+    "sound": "nether_wood"
+  },
+  "ntk:myceliated_deepslate": {
+    "sound": "grass"
+  },
+  "ntk:myceling_egg_block": {
+    "sound": "calcite"
+  },
+  "ntk:mycelium_sprouts_bale": {
+    "sound": "grass"
+  },
+  "ntk:netherrack_diamond_ore": {
+    "sound": "netherrack"
+  },
+  "ntk:netherrack_olivine_ore": {
+    "sound": "netherrack"
+  },
+  "ntk:polished_limestone": {
+    "sound": "stone"
+  },
+  "ntk:polished_limestone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_limestone_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_limestone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:polished_limestone_wall": {
+    "sound": "stone"
+  },
+  "ntk:polished_marble": {
+    "sound": "calcite"
+  },
+  "ntk:polished_marble_double_slab": {
+    "sound": "calcite"
+  },
+  "ntk:polished_marble_slab": {
+    "sound": "calcite"
+  },
+  "ntk:polished_marble_stairs": {
+    "sound": "calcite"
+  },
+  "ntk:polished_marble_wall": {
+    "sound": "calcite"
+  },
+  "ntk:polished_soul_stone": {
+    "sound": "stone"
+  },
+  "ntk:polished_soul_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_soul_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:polished_soul_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:polished_soul_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:potted_glowcelium_sprouts": {
+    "sound": "stone"
+  },
+  "ntk:potted_mosshroom_fungus": {
+    "sound": "stone"
+  },
+  "ntk:potted_mycelium_sprouts": {
+    "sound": "stone"
+  },
+  "ntk:prismarine_ore": {
+    "sound": "stone"
+  },
+  "ntk:quartz_cluster": {
+    "sound": "glass"
+  },
+  "ntk:quartz_crystal_block": {
+    "sound": "calcite"
+  },
+  "ntk:rose_quartz_bricks": {
+    "sound": "stone"
+  },
+  "ntk:rose_quartz_cluster": {
+    "sound": "glass"
+  },
+  "ntk:rose_quartz_crystal_block": {
+    "sound": "calcite"
+  },
+  "ntk:rose_quartz_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:rose_quartz_lamp": {
+    "sound": "glass"
+  },
+  "ntk:rose_quartz_pillar": {
+    "sound": "stone"
+  },
+  "ntk:rose_quartz_slab": {
+    "sound": "stone"
+  },
+  "ntk:rose_quartz_stairs": {
+    "sound": "stone"
+  },
+  "ntk:short_glowcelium_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:short_mycelium_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:smooth_rose_quartz_block": {
+    "sound": "stone"
+  },
+  "ntk:smooth_rose_quartz_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:smooth_rose_quartz_slab": {
+    "sound": "stone"
+  },
+  "ntk:smooth_rose_quartz_stairs": {
+    "sound": "stone"
+  },
+  "ntk:soul_sand_echo_shard_ore": {
+    "sound": "soul_sand"
+  },
+  "ntk:soul_stone": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_brick_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_brick_slab": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_brick_stairs": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_brick_wall": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_bricks": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_double_slab": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_slab": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_stairs": {
+    "sound": "stone"
+  },
+  "ntk:soul_stone_wall": {
+    "sound": "stone"
+  },
+  "ntk:stripped_mosshroom_hyphae": {
+    "sound": "stem"
+  },
+  "ntk:stripped_mosshroom_stem": {
+    "sound": "stem"
+  },
+  "ntk:tall_glowcelium_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:tall_mycelium_sprouts": {
+    "sound": "grass"
+  },
+  "ntk:tin_ore": {
+    "sound": "stone"
+  },
+  "ntk:zinc_ore": {
+    "sound": "stone"
+  },
+  "ntk:amethyst_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:artifacture_table": {
+    "sound": "amethyst_block"
+  },
+  "ntk:bamboo_cup_with_chocolate": {
+    "sound": "bamboo"
+  },
+  "ntk:bamboo_cup_with_glow_berry_juice": {
+    "sound": "bamboo"
+  },
+  "ntk:bamboo_cup_with_milk": {
+    "sound": "bamboo"
+  },
+  "ntk:bamboo_cup_with_sweet_berry_juice": {
+    "sound": "bamboo"
+  },
+  "ntk:bamboo_cup_with_water": {
+    "sound": "bamboo"
+  },
+  "ntk:blaze_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:block_of_salt": {
+    "sound": "tuff"
+  },
+  "ntk:charcoal_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:copper_evaporator": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_blue_ice": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_cheese": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_crying_obsidian": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_ice": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_lava": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_leather_scrap_1": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_leather_scrap_2": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_leather_scrap_3": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_milk": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_mud": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_obsidian": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_packed_ice": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_packed_mud": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_rotten_flesh_1": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_rotten_flesh_2": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_rotten_flesh_3": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_salt": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_snow": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_tearing_lava": {
+    "sound": "copper"
+  },
+  "ntk:copper_evaporator_with_water": {
+    "sound": "copper"
+  },
+  "ntk:copper_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:diamond_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:emerald_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:empty_bamboo_cup": {
+    "sound": "bamboo"
+  },
+  "ntk:empty_jar": {
+    "sound": "glass"
+  },
+  "ntk:enchanted_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:glowstone_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:gold_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:gunpowder_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:iron_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:jar_of_chocolate_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_chocolate_half": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_1": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_2": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_3": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_4": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_5": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_6": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_7": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_cookies_8": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_1": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_2": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_3": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_4": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_5": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_6": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_7": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_cookies_8": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_juice_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_glow_berry_juice_half": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_honey_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_honey_half": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_milk_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_milk_half": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_1": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_2": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_3": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_4": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_5": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_6": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_7": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_cookies_8": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_juice_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_sweet_berry_juice_half": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_water_full": {
+    "sound": "glass"
+  },
+  "ntk:jar_of_water_half": {
+    "sound": "glass"
+  },
+  "ntk:lapis_lazuli_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:metal_evaporator": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_blue_ice": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_cheese": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_crying_obsidian": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_ice": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_lava": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_leather_scrap_1": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_leather_scrap_2": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_leather_scrap_3": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_milk": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_mud": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_obsidian": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_packed_ice": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_packed_mud": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_rotten_flesh_1": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_rotten_flesh_2": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_rotten_flesh_3": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_salt": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_snow": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_tearing_lava": {
+    "sound": "copper"
+  },
+  "ntk:metal_evaporator_with_water": {
+    "sound": "copper"
+  },
+  "ntk:netherite_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:redstone_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:sugar_spore_pot": {
+    "sound": "decorated_pot"
+  },
+  "ntk:black_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:black_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:black_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:black_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:black_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:blue_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:blue_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:blue_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:blue_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:blue_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:brown_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:brown_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:brown_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:brown_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:brown_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:cyan_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:cyan_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:cyan_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:cyan_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:cyan_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:firebird_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:firebird_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:firebird_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:firebird_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:gray_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:gray_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:gray_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:gray_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:gray_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:green_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:green_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:green_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:green_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:green_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:hummingbird_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:hummingbird_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:hummingbird_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:hummingbird_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:light_blue_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_blue_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_blue_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_blue_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_blue_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:light_gray_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_gray_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_gray_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_gray_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:light_gray_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:lime_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:lime_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:lime_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:lime_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:lime_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:magenta_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:magenta_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:magenta_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:magenta_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:magenta_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:moa_egg_block": {
+    "sound": "calcite"
+  },
+  "ntk:mud_soil": {
+    "sound": "honey_block"
+  },
+  "ntk:orange_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:orange_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:orange_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:orange_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:orange_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:pink_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:pink_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:pink_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:pink_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:pink_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:purple_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:purple_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:purple_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:purple_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:purple_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:raven_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:raven_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:raven_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:raven_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:red_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:red_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:red_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:red_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:red_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:soul_firebird_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:soul_firebird_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:soul_firebird_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:soul_firebird_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:sparrow_egg_1_block": {
+    "sound": "calcite"
+  },
+  "ntk:sparrow_egg_2_block": {
+    "sound": "calcite"
+  },
+  "ntk:sparrow_egg_3_block": {
+    "sound": "calcite"
+  },
+  "ntk:sparrow_egg_4_block": {
+    "sound": "calcite"
+  },
+  "ntk:spawner_book_curserer": {
+    "sound": "stone"
+  },
+  "ntk:spawner_cave_dweller": {
+    "sound": "stone"
+  },
+  "ntk:white_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:white_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:white_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:white_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:white_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:yellow_jellyfish_polyp_1_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:yellow_jellyfish_polyp_2_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:yellow_jellyfish_polyp_3_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:yellow_jellyfish_polyp_4_block": {
+    "sound": "frog_spawn"
+  },
+  "ntk:yellow_jellyfish_slime_block": {
+    "sound": "slime"
+  },
+  "ntk:block_of_rotten_brute_flesh": {
+    "sound": "netherrack"
+  },
+  "ntk:copper_brute_zombie_trophy": {
+    "sound": "copper"
+  },
+  "ntk:copper_elder_golem_trophy": {
+    "sound": "copper"
+  },
+  "ntk:copper_piglin_chief_trophy": {
+    "sound": "copper"
+  },
+  "ntk:copper_rat_curserer_trophy": {
+    "sound": "copper"
+  },
+  "ntk:copper_shulkore_trophy": {
+    "sound": "copper"
+  },
+  "ntk:diamond_brute_zombie_trophy": {
+    "sound": "metal"
+  },
+  "ntk:diamond_elder_golem_trophy": {
+    "sound": "metal"
+  },
+  "ntk:diamond_piglin_chief_trophy": {
+    "sound": "metal"
+  },
+  "ntk:diamond_rat_curserer_trophy": {
+    "sound": "metal"
+  },
+  "ntk:diamond_shulkore_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_brute_zombie_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_elder_golem_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_piglin_chief_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_rat_curserer_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_shulkore_trophy": {
+    "sound": "metal"
+  },
+  "ntk:iron_brute_zombie_trophy": {
+    "sound": "iron"
+  },
+  "ntk:iron_elder_golem_trophy": {
+    "sound": "iron"
+  },
+  "ntk:iron_piglin_chief_trophy": {
+    "sound": "iron"
+  },
+  "ntk:iron_rat_curserer_trophy": {
+    "sound": "iron"
+  },
+  "ntk:iron_shulkore_trophy": {
+    "sound": "iron"
+  },
+  "ntk:spawner_brute_zombie": {
+    "sound": "stone"
+  },
+  "ntk:spawner_cobbled_deepslate_golem": {
+    "sound": "stone"
+  },
+  "ntk:spawner_cursed_rat": {
+    "sound": "stone"
+  },
+  "ntk:spawner_elder_golem": {
+    "sound": "stone"
+  },
+  "ntk:spawner_giant_rat": {
+    "sound": "stone"
+  },
+  "ntk:spawner_piglin_chief": {
+    "sound": "stone"
+  },
+  "ntk:spawner_rat": {
+    "sound": "stone"
+  },
+  "ntk:spawner_rat_curserer": {
+    "sound": "stone"
+  },
+  "ntk:spawner_shulkore": {
+    "sound": "stone"
+  },
+  "ntk:stone_brute_zombie_trophy": {
+    "sound": "stone"
+  },
+  "ntk:stone_elder_golem_trophy": {
+    "sound": "stone"
+  },
+  "ntk:stone_piglin_chief_trophy": {
+    "sound": "stone"
+  },
+  "ntk:stone_rat_curserer_trophy": {
+    "sound": "stone"
+  },
+  "ntk:stone_shulkore_trophy": {
+    "sound": "stone"
+  },
+  "ntk:copper_minecart_trophy": {
+    "sound": "copper"
+  },
+  "ntk:diamond_minecart_trophy": {
+    "sound": "metal"
+  },
+  "ntk:golden_minecart_trophy": {
+    "sound": "metal"
+  },
+  "ntk:iron_minecart_trophy": {
+    "sound": "iron"
+  },
+  "ntk:spawner_skeleton_miner": {
+    "sound": "stone"
+  },
+  "ntk:stone_minecart_trophy": {
+    "sound": "stone"
+  },
+  "ntk:acacia_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:birch_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:cherry_woodcutter": {
+    "sound": "cherry_wood"
+  },
+  "ntk:crimson_woodcutter": {
+    "sound": "stem"
+  },
+  "ntk:dark_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:jungle_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:mangrove_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:pale_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:spruce_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_acacia_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_birch_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_cherry_woodcutter": {
+    "sound": "cherry_wood"
+  },
+  "ntk:stripped_crimson_woodcutter": {
+    "sound": "stem"
+  },
+  "ntk:stripped_dark_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_jungle_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_mangrove_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_pale_oak_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_spruce_woodcutter": {
+    "sound": "wood"
+  },
+  "ntk:stripped_warped_woodcutter": {
+    "sound": "stem"
+  },
+  "ntk:warped_woodcutter": {
+    "sound": "stem"
+  }
 }

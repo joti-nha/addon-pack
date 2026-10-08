@@ -9,15 +9,7 @@
     },
     "components": {
       "minecraft:tags": {
-        "tags": [
-          "dungeons:poison",
-          "dungeons:whip",
-          "minecraft:is_tool",
-          "minecraft:is_sword",
-          "alylica:disable_melee_swing",
-          "dungeons:melee_lore",
-          "dungeons:unique_item"
-        ]
+        "tags": ["dungeons:poison", "dungeons:whip", "minecraft:is_tool", "alylica:disable_melee_swing", "dungeons:melee_lore", "dungeons:unique_item", "minecraft:is_pickaxe"]
       },
       "dungeons:durability_fix": {
         "tag": "minecraft:is_sword_item_destructible"

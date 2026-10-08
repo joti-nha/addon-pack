@@ -9,12 +9,7 @@
     },
     "components": {
       "minecraft:tags": {
-        "tags": [
-          "minecraft:is_tool",
-          "minecraft:is_sword",
-          "alylica:disable_melee_swing",
-          "dungeons:melee_lore"
-        ]
+        "tags": ["minecraft:is_tool", "minecraft:is_sword", "alylica:disable_melee_swing", "dungeons:melee_lore", "oreville:is_hoe"]
       },
       "dungeons:durability_fix": {
         "tag": "minecraft:is_sword_item_destructible"

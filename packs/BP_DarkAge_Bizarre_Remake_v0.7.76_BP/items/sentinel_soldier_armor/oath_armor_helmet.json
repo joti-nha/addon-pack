@@ -9,6 +9,7 @@
 			}
 		},
 		"components": {
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] },
 			"minecraft:icon": "oath_armor_helmet",
 			"minecraft:display_name": {
 				"value": "item.dk:oath_armor_helmet.name"

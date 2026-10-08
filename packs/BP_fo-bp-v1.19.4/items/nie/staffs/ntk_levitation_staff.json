@@ -90,16 +90,7 @@
 				]
 			},
 			"minecraft:tags": {
-        "tags": [
-          "ntk:items",
-          "ntk:equippable",
-          "ntk:mainhand_equipment",
-          "ntk:melee_weapon",
-          "ntk:staff",
-          "ntk:levitation_staff",
-          
-          "ntk:levitation_effect"
-        ]
+        "tags": ["ntk:items", "ntk:equippable", "ntk:mainhand_equipment", "ntk:melee_weapon", "ntk:staff", "ntk:levitation_staff", "ntk:levitation_effect", "oreville:is_on_a_stick"]
 			},
       "ntk:levitation_effect_on_hit_entity": [
         {
