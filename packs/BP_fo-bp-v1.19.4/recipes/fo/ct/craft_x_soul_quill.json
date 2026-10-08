@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_soul_quill"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "soul_quill",
+    "ingredients": [
+      {
+        "item": "ntk:soul_fire_feather"
+      },
+      {
+        "item": "ntk:diamond_powder"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      }
+    ],
+    "result": {
+      "item": "ntk:soul_quill"
+    },
+    "unlock": [
+      {
+        "item": "ntk:soul_fire_feather"
+      },
+      {
+        "item": "ntk:diamond_powder"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_warped_mushling_wild",
+    "heightmap": "ntk_warped_mushling_height",
+    "metalness_emissive_roughness": "ntk_warped_mushling_mer"
+  }
+}

@@ -1,0 +1,70 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:gargoyle_grounded",
+			"materials": {
+				"default": "villager_v2"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/gargoyle/gargoyle"
+			},
+			"geometry": {
+				"default": "geometry.gargoyle"
+			},
+			"spawn_egg": {
+				"base_color": "#6c6711",
+				"overlay_color": "#1e2170"
+			},
+			"scripts": {
+				"animate": [
+					"idle_c",
+					"shielding_c",
+					"melee_c",
+					"base_pose_c",
+					"walk_c",
+					{
+						"die": "query.is_chested"
+					}
+				]
+			},
+			"animations": {
+				"base_pose": "animation.gargoyle.ground_pose",
+				"walk": "animation.gargoyle.walk",
+				"idle": "animation.gargoyle.gound_idle",
+				"tail_idle": "animation.gargoyle.gound_tail_idle",
+				"melee_shield": "animation.gargoyle.melee_shield",
+				"melee_bite": "animation.gargoyle.melee_bite",
+				"melee_spin": "animation.gargoyle.melee_tail",
+				"melee_heavy": "animation.gargoyle.melee_heavy",
+				"melee_medium": "animation.gargoyle.melee_medium",
+				"shielding": "animation.gargoyle.shielding",
+				"base_pose_c": "controller.animation.gargoyle_grounded.base_pose",
+				"idle_c": "controller.animation.gargoyle_grounded.idle",
+				"shielding_c": "controller.animation.gargoyle_grounded.shield",
+				"melee_c": "controller.animation.gargoyle_grounded.melee",
+				"walk_c": "controller.animation.gargoyle_grounded.walk",
+				"transition": "animation.gargoyle.secod_phase_transition",
+				"fly": "animation.gargoyle.fly",
+				"die": "animation.gargoyle.die"
+			},
+			"render_controllers": [
+				"controller.render.gargoyle_grounded"
+			],
+			"sound_effects": {
+				"flap": "mob.phantom.flap",
+				"swing": "mob.gargoyle.swing",
+				"explosion": "random.explode",
+				"attack_m": "mob.gargoyle.attack_m",
+				"attack_h": "mob.gargoyle.attack_h",
+				"die": "mob.gargoyle.die",
+				"bite": "mob.phantom.bite"
+			},
+			"particle_effects": {
+				"fire_charge": "dk:gargoyle_fire_charge",
+				"explosion": "dk:gargoyle_mouth_explosion",
+				"diana": "dk:target_diana"
+			}
+		}
+	}
+}

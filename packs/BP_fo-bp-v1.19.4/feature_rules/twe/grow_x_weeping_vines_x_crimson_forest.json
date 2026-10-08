@@ -1,0 +1,43 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:grow_x_weeping_vines_x_crimson_forest",
+      "places_feature": "ntk:twe/grow_x_weeping_vines_x_02_x_snap"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "crimson_forest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 130.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 32 , 128 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

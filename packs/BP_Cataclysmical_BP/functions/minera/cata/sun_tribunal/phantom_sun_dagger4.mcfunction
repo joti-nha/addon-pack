@@ -1,0 +1,11 @@
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~ -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~3 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~6 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~9 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~12 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~15 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~-3 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~-6 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~-9 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~-12 -90
+summon mnra_cata:phantom_sun_dagger ~-15 ~1 ~-15 -90

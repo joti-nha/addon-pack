@@ -1,0 +1,34 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:recall_mirror"
+		},
+		"pattern": [
+			" 11",
+			"321",
+			"13"
+		],
+		"key": {
+			"1": {
+				"item": "minecraft:gold_ingot"
+			},
+			"2": {
+				"item": "minecraft:diamond"
+			},
+			"3": {
+				"item": "mnra_cata:starfall"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:recall_mirror",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

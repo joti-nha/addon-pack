@@ -1,0 +1,35 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tm_aqc.ui_icon3",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "background",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "icon3",
+					"parent": "background",
+					"pivot": [6.2, 0, 0],
+					"cubes": [
+						{
+							"origin": [12.125, -9.8, 23.975],
+							"size": [2.875, 2.925, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:furnace_x_diamond_nautilus_armor"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "minecraft:diamond_nautilus_armor"
+    },
+    "output": {
+      "item": "minecraft:diamond",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond_nautilus_armor"
+      }
+    ]
+  }
+}

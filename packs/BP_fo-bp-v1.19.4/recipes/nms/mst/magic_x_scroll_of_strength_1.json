@@ -1,0 +1,51 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:magic_x_scroll_of_strength_1"
+    },
+    "priority": 1,
+    "tags": [ "magic_spells_table" ],
+    "group": "scroll_of_strength_1",
+    "assume_symmetry": false,
+    "pattern": [
+      "#Q",
+      "RI"
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:empty_scroll"
+      },
+      "Q": {
+        "item": "ntk:arcane_quill"
+      },
+      "R": {
+        "item": "minecraft:rotten_flesh"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:scroll_of_strength_1",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:magic_spells_table"
+      },
+      {
+        "item": "ntk:empty_scroll"
+      },
+      {
+        "item": "ntk:arcane_quill"
+      },
+      {
+        "item": "minecraft:rotten_flesh"
+      },
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ]
+  }
+}

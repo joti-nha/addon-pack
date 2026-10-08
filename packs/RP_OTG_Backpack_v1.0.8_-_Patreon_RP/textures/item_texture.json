@@ -1,0 +1,462 @@
+{
+    "resource_pack_name": "otg_backpack",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "backpack": {
+            "textures": "textures/items/backpack.png"
+        },
+        "backpack_copper": {
+            "textures": "textures/items/backpack_copper.png"
+        },
+        "backpack_iron": {
+            "textures": "textures/items/backpack_iron.png"
+        },
+        "backpack_gold": {
+            "textures": "textures/items/backpack_gold.png"
+        },
+        "backpack_diamond": {
+            "textures": "textures/items/backpack_diamond.png"
+        },
+        "backpack_netherite": {
+            "textures": "textures/items/backpack_netherite.png"
+        },
+        "backpack_creeper_icon": {
+            "textures": "textures/items/backpack_creeper.png"
+        },
+        "cosmetic_creeper": {
+            "textures": "textures/items/cosmetic_creeper"
+        },
+        "backpack_enderman_icon": {
+            "textures": "textures/items/backpack_enderman.png"
+        },
+        "cosmetic_enderman": {
+            "textures": "textures/items/cosmetic_enderman"
+        },
+        "backpack_snowfox_icon": {
+            "textures": "textures/items/backpack_snowfox.png"
+        },
+        "cosmetic_snowfox": {
+            "textures": "textures/items/cosmetic_snowfox"
+        },
+        "locked_slot": {
+            "textures": "textures/ui/blank_ui_bg"
+        },
+        "locked_pocket": {
+            "textures": "textures/ui/transparent_ui_bg"
+        },
+        "backpack_sort_button": {
+            "textures": "textures/ui/backpack_sort_button"
+        },
+        "backpack_crafting_table_button": {
+            "textures": "textures/ui/backpack_crafting_table_button"
+        },
+        "backpack_crafting_table_spawn_button": {
+            "textures": "textures/ui/backpack_crafting_table_spawn_button"
+        },
+        "backpack_crafting_table_all_button": {
+            "textures": "textures/ui/backpack_crafting_table_all_button"
+        },
+        "backpack_craft_all_button": {
+            "textures": "textures/ui/backpack_crafting_table_all_button"
+        },
+        "backpack_craft_confirm_button": {
+            "textures": "textures/ui/backpack_craft_confirm_button"
+        },
+        "backpack_furnace_button": {
+            "textures": "textures/ui/backpack_furnace_button"
+        },
+        "backpack_furnace_smelting_button": {
+            "textures": "textures/ui/backpack_furnace_smelting_button"
+        },
+        "backpack_blast_furnace_button": {
+            "textures": "textures/ui/backpack_blast_furnace_button"
+        },
+        "backpack_blast_furnace_smelting_button": {
+            "textures": "textures/ui/backpack_blast_furnace_smelting_button"
+        },
+        "backpack_furnace_button_hidden": {
+            "textures": "textures/ui/backpack_furnace_button"
+        },
+        "backpack_furnace_button_visible": {
+            "textures": "textures/ui/backpack_furnace_button"
+        },
+        "backpack_furnace_smelting_button_hidden": {
+            "textures": "textures/ui/backpack_furnace_smelting_button"
+        },
+        "backpack_furnace_smelting_button_visible": {
+            "textures": "textures/ui/backpack_furnace_smelting_button"
+        },
+        "backpack_blast_furnace_button_hidden": {
+            "textures": "textures/ui/backpack_blast_furnace_button"
+        },
+        "backpack_blast_furnace_button_visible": {
+            "textures": "textures/ui/backpack_blast_furnace_button"
+        },
+        "backpack_blast_furnace_smelting_button_hidden": {
+            "textures": "textures/ui/backpack_blast_furnace_smelting_button"
+        },
+        "backpack_blast_furnace_smelting_button_visible": {
+            "textures": "textures/ui/backpack_blast_furnace_smelting_button"
+        },
+        "backpack_stone_cutter_button": {
+            "textures": "textures/ui/backpack_stone_cutter_button"
+        },
+        "backpack_anvil_button": {
+            "textures": "textures/ui/backpack_anvil_button"
+        },
+        "backpack_enchantment_table_button": {
+            "textures": "textures/ui/backpack_enchantment_table_button"
+        },
+        "backpack_brewing_stand_button": {
+            "textures": "textures/ui/backpack_brewing_stand_button"
+        },
+        "backpack_smithing_table_button": {
+            "textures": "textures/ui/backpack_smithing_table_button"
+        },
+        "backpack_ender_chest_button": {
+            "textures": "textures/ui/backpack_ender_chest_button"
+        },
+        "backpack_trash_bin": {
+            "textures": "textures/ui/backpack_trash_bin"
+        },
+        "backpack_upgrade_button": {
+            "textures": "textures/ui/backpack_upgrade_button"
+        },
+        "backpack_max_level": {
+            "textures": "textures/ui/backpack_max_level"
+        },
+        "backpack_void_button": {
+            "textures": "textures/ui/backpack_void_button"
+        },
+        "backpack_theme_toggle_button": {
+            "textures": "textures/ui/backpack_theme_toggle_button"
+        },
+        "backpack_theme_toggle_button_dark": {
+            "textures": "textures/ui/backpack_theme_toggle_button_dark"
+        },
+        "backpack_theme_toggle_button_default": {
+            "textures": "textures/ui/backpack_theme_toggle_button_default"
+        },
+        "backpack_ui_mode_toggle_button_default": {
+            "textures": "textures/ui/backpack_ui_toggle_button_default"
+        },
+        "backpack_ui_mode_toggle_button_classic": {
+            "textures": "textures/ui/backpack_ui_toggle_button_classic"
+        },
+        "backpack_ui_mode_toggle_button_pocket": {
+            "textures": "textures/ui/backpack_ui_toggle_button_pocket"
+        },
+        "backpack_overpack_page_button_1": {
+            "textures": "textures/ui/backpack_overpack_page_1_button"
+        },
+        "backpack_overpack_page_button_2": {
+            "textures": "textures/ui/backpack_overpack_page_2_button"
+        },
+        "backpack_jukebox_play_button": {
+            "textures": "textures/ui/backpack_jukebox_play_button"
+        },
+        "backpack_jukebox_stop_button": {
+            "textures": "textures/ui/backpack_jukebox_stop_button"
+        },
+        "backpack_stockpile_button": {
+            "textures": "textures/ui/backpack_stackpile_hidden_button"
+        },
+        "backpack_stockpile_button_hidden": {
+            "textures": "textures/ui/backpack_stackpile_hidden_button"
+        },
+        "backpack_stockpile_button_visible": {
+            "textures": "textures/ui/backpack_stackpile_visible_button"
+        },
+        "backpack_stockpile_collect_button": {
+            "textures": "textures/ui/backpack_stackpile_withdraw_button"
+        },
+        "backpack_stockpile_pause_button": {
+            "textures": "textures/ui/backpack_stackpile_withdraw_button"
+        },
+        "backpack_stockpile_withdraw_button": {
+            "textures": "textures/ui/backpack_stackpile_withdraw_button"
+        },
+        "backpack_mode_button_backpack": {
+            "textures": "textures/ui/backpack_placement_back_button"
+        },
+        "backpack_mode_button_place": {
+            "textures": "textures/ui/backpack_placement_ground_button"
+        },
+        "backpack_placement_back_button": {
+            "textures": "textures/ui/backpack_placement_back_button"
+        },
+        "backpack_placement_ground_button": {
+            "textures": "textures/ui/backpack_placement_ground_button"
+        },
+        "tank_water_deposit": {
+            "textures": "textures/ui/tank_water_deposit"
+        },
+        "tank_water_deposit_on": {
+            "textures": "textures/ui/tank_water_deposit"
+        },
+        "tank_water_deposit_off": {
+            "textures": "textures/ui/tank_water_deposit"
+        },
+        "tank_lava_deposit": {
+            "textures": "textures/ui/tank_lava_deposit"
+        },
+        "tank_lava_deposit_on": {
+            "textures": "textures/ui/tank_lava_deposit"
+        },
+        "tank_lava_deposit_off": {
+            "textures": "textures/ui/tank_lava_deposit"
+        },
+        "tank_water_container_details": {
+            "textures": "textures/ui/tank_water_container_details"
+        },
+        "tank_lava_container_details": {
+            "textures": "textures/ui/tank_lava_container_details"
+        },
+        "backpack_rest_campfire_button": {
+            "textures": "textures/ui/backpack_rest_campfire_button"
+        },
+        "tank_water_bottom_container_0p": {
+            "textures": "textures/ui/tank_water_bottom_container_0p"
+        },
+        "tank_water_bottom_container_1p": {
+            "textures": "textures/ui/tank_water_bottom_container_1p"
+        },
+        "tank_water_bottom_container_2p": {
+            "textures": "textures/ui/tank_water_bottom_container_2p"
+        },
+        "tank_water_bottom_container_3p": {
+            "textures": "textures/ui/tank_water_bottom_container_3p"
+        },
+        "tank_water_bottom_container_4p": {
+            "textures": "textures/ui/tank_water_bottom_container_4p"
+        },
+        "tank_water_bottom_container_5p": {
+            "textures": "textures/ui/tank_water_bottom_container_5p"
+        },
+        "tank_water_bottom_container_6p": {
+            "textures": "textures/ui/tank_water_bottom_container_6p"
+        },
+        "tank_water_bottom_container_7p": {
+            "textures": "textures/ui/tank_water_bottom_container_7p"
+        },
+        "tank_water_bottom_container_8p": {
+            "textures": "textures/ui/tank_water_bottom_container_8p"
+        },
+        "tank_water_bottom_container_9p": {
+            "textures": "textures/ui/tank_water_bottom_container_9p"
+        },
+        "tank_water_bottom_container_10p": {
+            "textures": "textures/ui/tank_water_bottom_container_10p"
+        },
+        "tank_water_top_container_0p": {
+            "textures": "textures/ui/tank_water_top_container_0p"
+        },
+        "tank_water_top_container_1p": {
+            "textures": "textures/ui/tank_water_top_container_1p"
+        },
+        "tank_water_top_container_2p": {
+            "textures": "textures/ui/tank_water_top_container_2p"
+        },
+        "tank_water_top_container_3p": {
+            "textures": "textures/ui/tank_water_top_container_3p"
+        },
+        "tank_water_top_container_4p": {
+            "textures": "textures/ui/tank_water_top_container_4p"
+        },
+        "tank_water_top_container_5p": {
+            "textures": "textures/ui/tank_water_top_container_5p"
+        },
+        "tank_water_top_container_6p": {
+            "textures": "textures/ui/tank_water_top_container_6p"
+        },
+        "tank_water_top_container_7p": {
+            "textures": "textures/ui/tank_water_top_container_7p"
+        },
+        "tank_water_top_container_8p": {
+            "textures": "textures/ui/tank_water_top_container_8p"
+        },
+        "tank_water_top_container_9p": {
+            "textures": "textures/ui/tank_water_top_container_9p"
+        },
+        "tank_water_top_container_10p": {
+            "textures": "textures/ui/tank_water_top_container_10p"
+        },
+        "tank_lava_bottom_container_0p": {
+            "textures": "textures/ui/tank_lava_bottom_container_0p"
+        },
+        "tank_lava_bottom_container_1p": {
+            "textures": "textures/ui/tank_lava_bottom_container_1p"
+        },
+        "tank_lava_bottom_container_2p": {
+            "textures": "textures/ui/tank_lava_bottom_container_2p"
+        },
+        "tank_lava_bottom_container_3p": {
+            "textures": "textures/ui/tank_lava_bottom_container_3p"
+        },
+        "tank_lava_bottom_container_4p": {
+            "textures": "textures/ui/tank_lava_bottom_container_4p"
+        },
+        "tank_lava_bottom_container_5p": {
+            "textures": "textures/ui/tank_lava_bottom_container_5p"
+        },
+        "tank_lava_bottom_container_6p": {
+            "textures": "textures/ui/tank_lava_bottom_container_6p"
+        },
+        "tank_lava_bottom_container_7p": {
+            "textures": "textures/ui/tank_lava_bottom_container_7p"
+        },
+        "tank_lava_bottom_container_8p": {
+            "textures": "textures/ui/tank_lava_bottom_container_8p"
+        },
+        "tank_lava_bottom_container_9p": {
+            "textures": "textures/ui/tank_lava_bottom_container_9p"
+        },
+        "tank_lava_bottom_container_10p": {
+            "textures": "textures/ui/tank_lava_bottom_container_10p"
+        },
+        "tank_lava_top_container_0p": {
+            "textures": "textures/ui/tank_lava_top_container_0p"
+        },
+        "tank_lava_top_container_1p": {
+            "textures": "textures/ui/tank_lava_top_container_1p"
+        },
+        "tank_lava_top_container_2p": {
+            "textures": "textures/ui/tank_lava_top_container_2p"
+        },
+        "tank_lava_top_container_3p": {
+            "textures": "textures/ui/tank_lava_top_container_3p"
+        },
+        "tank_lava_top_container_4p": {
+            "textures": "textures/ui/tank_lava_top_container_4p"
+        },
+        "tank_lava_top_container_5p": {
+            "textures": "textures/ui/tank_lava_top_container_5p"
+        },
+        "tank_lava_top_container_6p": {
+            "textures": "textures/ui/tank_lava_top_container_6p"
+        },
+        "tank_lava_top_container_7p": {
+            "textures": "textures/ui/tank_lava_top_container_7p"
+        },
+        "tank_lava_top_container_8p": {
+            "textures": "textures/ui/tank_lava_top_container_8p"
+        },
+        "tank_lava_top_container_9p": {
+            "textures": "textures/ui/tank_lava_top_container_9p"
+        },
+        "tank_lava_top_container_10p": {
+            "textures": "textures/ui/tank_lava_top_container_10p"
+        },
+        "furnace_arrow_0": {
+            "textures": "textures/ui/furnace_arrow_0"
+        },
+        "furnace_arrow_1": {
+            "textures": "textures/ui/furnace_arrow_1"
+        },
+        "furnace_arrow_2": {
+            "textures": "textures/ui/furnace_arrow_2"
+        },
+        "furnace_arrow_3": {
+            "textures": "textures/ui/furnace_arrow_3"
+        },
+        "furnace_arrow_4": {
+            "textures": "textures/ui/furnace_arrow_4"
+        },
+        "furnace_arrow_5": {
+            "textures": "textures/ui/furnace_arrow_5"
+        },
+        "furnace_arrow_6": {
+            "textures": "textures/ui/furnace_arrow_6"
+        },
+        "furnace_arrow_7": {
+            "textures": "textures/ui/furnace_arrow_7"
+        },
+        "furnace_arrow_8": {
+            "textures": "textures/ui/furnace_arrow_8"
+        },
+        "furnace_arrow_9": {
+            "textures": "textures/ui/furnace_arrow_9"
+        },
+        "furnace_arrow_10": {
+            "textures": "textures/ui/furnace_arrow_10"
+        },
+        "backpack_upgrade_copper": {
+            "textures": "textures/items/backpack_upgrade_copper"
+        },
+        "backpack_upgrade_iron": {
+            "textures": "textures/items/backpack_upgrade_iron"
+        },
+        "backpack_upgrade_gold": {
+            "textures": "textures/items/backpack_upgrade_gold"
+        },
+        "backpack_upgrade_diamond": {
+            "textures": "textures/items/backpack_upgrade_diamond"
+        },
+        "backpack_upgrade_netherite": {
+            "textures": "textures/items/backpack_upgrade_netherite"
+        },
+        "backpack_upgrade_soulbind": {
+            "textures": "textures/items/backpack_upgrade_soulbind"
+        },
+        "backpack_upgrade_magnet": {
+            "textures": "textures/items/backpack_upgrade_magnet"
+        },
+        "backpack_upgrade_hearts_1": {
+            "textures": "textures/items/backpack_upgrade_hearts_1"
+        },
+        "backpack_upgrade_hearts_2": {
+            "textures": "textures/items/backpack_upgrade_hearts_2"
+        },
+        "backpack_upgrade_hearts_3": {
+            "textures": "textures/items/backpack_upgrade_hearts_3"
+        },
+        "backpack_upgrade_furnace": {
+            "textures": "textures/items/backpack_upgrade_furnace"
+        },
+        "backpack_upgrade_compressor": {
+            "textures": "textures/items/backpack_upgrade_compressor"
+        },
+        "backpack_upgrade_void": {
+            "textures": "textures/items/backpack_upgrade_void"
+        },
+        "backpack_upgrade_totem": {
+            "textures": "textures/items/backpack_upgrade_totem"
+        },
+        "backpack_upgrade_radiance": {
+            "textures": "textures/items/backpack_upgrade_radiance"
+        },
+        "backpack_upgrade_sustenance": {
+            "textures": "textures/items/backpack_upgrade_sustenance"
+        },
+        "backpack_upgrade_overpack": {
+            "textures": "textures/items/backpack_upgrade_overpack"
+        },
+        "backpack_upgrade_stockpile": {
+            "textures": "textures/items/backpack_upgrade_stockpile"
+        },
+        "backpack_upgrade_water_breathing": {
+            "textures": "textures/items/backpack_upgrade_water_breathing"
+        },
+        "backpack_upgrade_strength": {
+            "textures": "textures/items/backpack_upgrade_strength"
+        },
+        "backpack_upgrade_speed": {
+            "textures": "textures/items/backpack_upgrade_speed"
+        },
+        "backpack_upgrade_jump_boost": {
+            "textures": "textures/items/backpack_upgrade_jump_boost"
+        },
+        "backpack_upgrade_excavation": {
+            "textures": "textures/items/backpack_upgrade_excavation"
+        },
+        "backpack_upgrade_forestry": {
+            "textures": "textures/items/backpack_upgrade_forestry"
+        },
+        "backpack_upgrade_template": {
+            "textures": "textures/items/backpack_upgrade_template"
+        },
+        "backpack_guidebook": {
+            "textures": "textures/items/backpack_guidebook"
+        }
+    }
+}

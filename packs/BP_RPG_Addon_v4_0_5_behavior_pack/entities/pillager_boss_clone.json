@@ -1,0 +1,199 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "rpg:pillager_boss_clone",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"rpg:roar_attack": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 2,
+					"duration": 2.08,
+					"attack_time": 1.04,
+					"knockback_damage": 0,
+					"knockback_horizontal_strength": 5,
+					"knockback_vertical_strength": 2,
+					"knockback_range": 6,
+					"cooldown_time": 2.0,
+					"track_target": true,
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "monster"
+					},
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "monster"
+					}
+				},
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"rpg:ranged_mode": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"rpg:idle_mode": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"rpg:flying_mode": {
+				"minecraft:variant": {
+					"value": 3
+				},
+				"minecraft:mark_variant": {
+					"value": 2
+				},
+				"minecraft:physics": {
+					"has_gravity": false,
+					"has_collision": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": ["pillager_boss", "monster", "mob"]
+			},
+			"minecraft:variant": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.0,
+				"height": 2.5
+			},
+			"minecraft:health": {
+				"value": 1000,
+				"max": 1000
+			},
+			"minecraft:physics": {
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1.0
+			},
+			"minecraft:movement": {
+				"value": 0.0
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"avoid_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:movement.basic": {
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fire",
+						"deals_damage": "no"
+					},
+					{
+						"cause": "fire_tick",
+						"deals_damage": "no"
+					},
+					{
+						"cause": "lava",
+						"deals_damage": "no"
+					},
+					{
+						"cause": "entity_explosion",
+						"damage_multiplier": 0.2
+					},
+					{
+						"cause": "block_explosion",
+						"damage_multiplier": 0.2
+					},
+					{
+						"cause": "all",
+						"damage_multiplier": 0.75
+					}
+				]
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 3,
+				"look_distance": 64,
+				"probability": 1.0
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"must_see": true,
+				"within_radius": 24.0,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						},
+						"max_dist": 24.0
+					}
+				]
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": [
+								{ "test": "distance_to_nearest_player", "operator": "<=", "value": 4.0 },
+								{ "test": "is_variant", "operator": "!=", "value": 0 },
+								{ "test": "has_tag", "operator": "!=", "value": "phase_2_clone" }
+							]
+						},
+						"event": "rpg:melee_mode"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{ "test": "distance_to_nearest_player", "operator": ">", "value": 4.0 },
+								{ "test": "distance_to_nearest_player", "operator": "<=", "value": 24.0 },
+								{ "test": "is_variant", "operator": "!=", "value": 1 },
+								{ "test": "has_tag", "operator": "!=", "value": "phase_2_clone" }
+							]
+						},
+						"event": "rpg:ranged_mode"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{ "test": "distance_to_nearest_player", "operator": ">", "value": 24.0 },
+								{ "test": "is_variant", "operator": "!=", "value": 2 },
+								{ "test": "has_tag", "operator": "!=", "value": "phase_2_clone" }
+							]
+						},
+						"event": "rpg:idle_mode"
+					}
+				]
+			}
+		},
+		"events": {
+			"rpg:melee_mode": {
+				"add": { "component_groups": ["rpg:roar_attack"] },
+				"remove": { "component_groups": ["rpg:ranged_mode", "rpg:idle_mode"] }
+			},
+			"rpg:ranged_mode": {
+				"add": { "component_groups": ["rpg:ranged_mode"] },
+				"remove": { "component_groups": ["rpg:roar_attack", "rpg:idle_mode"] }
+			},
+			"rpg:idle_mode": {
+				"add": { "component_groups": ["rpg:idle_mode"] },
+				"remove": { "component_groups": ["rpg:roar_attack", "rpg:ranged_mode"] }
+			},
+			"rpg:fly_mode": {
+				"add": { "component_groups": ["rpg:flying_mode", "rpg:ranged_mode"] },
+				"remove": { "component_groups": ["rpg:roar_attack", "rpg:idle_mode"] }
+			}
+		}
+	}
+}

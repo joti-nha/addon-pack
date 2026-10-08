@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:infernum_boots"
+		},
+		"pattern": [
+			"1 1",
+			"2 2"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:sun_fragment"
+			},
+			"2": {
+				"item": "mnra_cata:infernal_ash"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:infernum_boots",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

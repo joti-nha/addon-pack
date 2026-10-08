@@ -1,0 +1,23 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mnra_cata:smooth_gneiss_brick"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "mnra_cata:gneiss"
+			}
+		],
+		"result": {
+			"item": "mnra_cata:smooth_gneiss_brick",
+			"count": 1
+		},
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

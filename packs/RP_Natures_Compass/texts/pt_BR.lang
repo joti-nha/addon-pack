@@ -1,0 +1,10 @@
+pack.description=§lDesenvolvido por §cDustVeyn Studio.
+
+dustveyn.nature_compass.compass.name=Bússola da natureza
+dustveyn.nature_compass.select_biome.desc=Selecione o bioma
+dustveyn.nature_compass.choose_a_biome.desc=Escolha um bioma:
+dustveyn.nature_compass.biome_not_found.desc=Bioma não encontrado!
+dustveyn.nature_compass.biome_found.desc=Bioma encontrado!
+dustveyn.nature_compass.search.info=Procurar
+dustveyn.nature_compass.biome_name.desc=Nome do Bioma
+dustveyn.nature_compass.teleport.desc=Teleportar

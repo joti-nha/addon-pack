@@ -1,0 +1,190 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 8,
+				"max": 10
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:air",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 1
+							}
+						}
+					],
+					"weight": 80
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:gold_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 2
+							}
+						}
+					],
+					"weight": 25
+				},
+				{
+					"type": "item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 25
+				},
+				{
+					"type": "item",
+					"name": "minecraft:emerald",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 2
+							}
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:wheat",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 5
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potato",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 5
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:carrot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 5
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:beetroot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 5
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:melon_slice",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 6
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 55
+				},
+				{
+					"type": "item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_book_contents",
+							"title": "Diary",
+							"author": "Outcast",
+							"pages": [
+								"I have worked for a long time with the Armada Unbound. I hope that they will accept me to be part of their advanced civilization, all those who behave well and have contributed to the Armada Unbound.",
+								"You have the opportunity to be part of your civilization. Or so I heard, those who were in the caravan with me before I was captured told me that it would be too much good luck if we were captured by the Armada Unbound.",
+								"I hope it's true."
+							]
+						}
+					],
+					"weight": 5
+				}
+			]
+		}
+	]
+}

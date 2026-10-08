@@ -1,0 +1,74 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.item.ntk_staff_of_the_sea",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "rightItem",
+					"pivot": [0, 20, 0]
+				},
+				{
+					"name": "staff_head",
+					"parent": "rightItem",
+					"pivot": [0, 22, 0],
+					"cubes": [
+						{"origin": [-0.5, 21, -3], "size": [1, 4, 1], "uv": [8, 20]},
+						{"origin": [-0.5, 25, -2], "size": [1, 1, 4], "uv": [12, 5]},
+						{"origin": [-0.5, 21, 2], "size": [1, 4, 1], "uv": [18, 16]},
+						{"origin": [-0.5, 20, -2], "size": [1, 1, 4], "uv": [12, 0]},
+						{"origin": [2, 21, -0.5], "size": [1, 4, 1], "uv": [4, 18]},
+						{"origin": [-3, 21, -0.5], "size": [1, 4, 1], "uv": [0, 17]},
+						{"origin": [-2, 25, -0.5], "size": [4, 1, 1], "uv": [4, 2]},
+						{"origin": [-2, 20, -0.5], "size": [4, 1, 1], "uv": [4, 0]}
+					]
+				},
+				{
+					"name": "heart",
+					"parent": "staff_head",
+					"pivot": [0, 23, 0],
+					"cubes": [
+						{"origin": [-1, 22, -1], "size": [2, 2, 2], "uv": [10, 16]}
+					],
+					"locators": {
+						"staff_head_particles": [0, 23, 0]
+					}
+				},
+				{
+					"name": "neck",
+					"parent": "rightItem",
+					"pivot": [0, 20, 0],
+					"cubes": [
+						{"origin": [-1, 17, -1], "size": [2, 4, 2], "uv": [12, 10]},
+						{"origin": [-2, 13, 0], "size": [4, 7, 0], "uv": [4, 11]},
+						{"origin": [0, 13, -2], "size": [0, 7, 4], "uv": [4, 0]},
+						{"origin": [-0.75, 14, -0.75], "size": [1.5, 3, 1.5], "uv": [12, 5]}
+					]
+				},
+				{
+					"name": "holder_bottom",
+					"parent": "rightItem",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.75, 0, -0.75], "size": [1.5, 3.5, 1.5], "uv": [18, 0]}
+					]
+				},
+				{
+					"name": "rod",
+					"parent": "rightItem",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, 1, -0.5], "size": [1, 16, 1], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

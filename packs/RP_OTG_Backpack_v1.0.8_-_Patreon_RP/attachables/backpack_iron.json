@@ -1,0 +1,44 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "otg:backpack_iron",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/attachable/backpack_iron"
+            },
+            "geometry": {
+                "default": "geometry.otg_backpack",
+                "offhand": "geometry.otg_backpack",
+                "mainhand": "geometry.backpack_mainhand"
+            },
+            "render_controllers": [
+                "controller.render.backpack_dynamic"
+            ],
+            "animations": {
+                "offhand_first": "animation.backpack.first_person_hold",
+                "offhand_third": "animation.backpack.third_person_hold",
+                "mainhand_first": "animation.backpack_mainhand.first_person_hold",
+                "mainhand_third": "animation.backpack_mainhand.third_person_hold"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "offhand_first": "c.item_slot == 'off_hand' && c.is_first_person"
+                    },
+                    {
+                        "offhand_third": "c.item_slot == 'off_hand' && !c.is_first_person"
+                    },
+                    {
+                        "mainhand_first": "c.item_slot == 'main_hand' && c.is_first_person"
+                    },
+                    {
+                        "mainhand_third": "c.item_slot == 'main_hand' && !c.is_first_person"
+                    }
+                ]
+            }
+        }
+    }
+}

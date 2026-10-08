@@ -1,0 +1,76 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_deadbush_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:deadbush",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air",
+      "minecraft:flowing_water",
+      "minecraft:water",
+      // Grassses:
+      "minecraft:seagrass",
+      // Sprouts:
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      "minecraft:crimson_roots",
+      "minecraft:nether_sprouts",
+      "minecraft:warped_roots",
+      // Flowers:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Plants:
+      { "tags": "query.all_tags('ntk:hanging_moss')" },
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:vine",
+      // Environmental Blocks:
+      "minecraft:resin_clump"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        // Soil-type Blocks:
+        { "tags": "query.all_tags('ntk:soil', 'ntk:full_block')" },
+        "minecraft:coarse_dirt",
+        "minecraft:dirt",
+				"minecraft:dirt_with_roots",
+        "minecraft:moss_block",
+        "minecraft:mud",
+        "minecraft:muddy_mangrove_roots",
+        "minecraft:mycelium",
+        "minecraft:pale_moss_block",
+        "minecraft:podzol",
+        "minecraft:red_sand",
+        "minecraft:sand",
+        // Terracottas:
+        "minecraft:black_terracotta",
+        "minecraft:blue_terracotta",
+        "minecraft:brown_terracotta",
+        "minecraft:cyan_terracotta",
+        "minecraft:gray_terracotta",
+        "minecraft:green_terracotta",
+        "minecraft:hardened_clay",
+        "minecraft:light_blue_terracotta",
+        "minecraft:light_gray_terracotta",
+        "minecraft:lime_terracotta",
+        "minecraft:magenta_terracotta",
+        "minecraft:orange_terracotta",
+        "minecraft:pink_terracotta",
+        "minecraft:purple_terracotta",
+        "minecraft:red_terracotta",
+        "minecraft:white_terracotta",
+        "minecraft:yellow_terracotta"
+			]
+		}
+  }
+}

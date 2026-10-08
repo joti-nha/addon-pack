@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_lurknash": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+				"Array.textures[query.variant * 2 + query.is_tamed]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.lurknash_wild",
+						"Texture.lurknash_tamed"
+					]
+				}
+			}
+    }
+  }
+}

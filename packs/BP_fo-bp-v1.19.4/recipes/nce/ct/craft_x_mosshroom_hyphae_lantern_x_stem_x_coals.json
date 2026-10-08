@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mosshroom_hyphae_lantern_x_stem_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GCG",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "ntk:mosshroom_stem"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "C": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:mosshroom_hyphae_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:mosshroom_stem"
+      },
+      {
+        "item": "minecraft:glass_pane"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

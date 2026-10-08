@@ -1,0 +1,1 @@
+execute as @a[tag=!bv:dlight_hotbar] at @s run tag @s add bv:dlight_hotbar

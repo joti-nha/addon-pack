@@ -1,0 +1,1 @@
+let id=0;export function sfqzkx(){return`${Date.now().toString(16)}_${(++id).toString(16)}`}export function hzisif(){let t=(new Date).getTime();return"xvetma".replace(/[xy]/g,e=>{const n=(t+16*Math.random())%16|0;return t=Math.floor(t/16),("x"===e?n:3&n|8).toString(16)})}

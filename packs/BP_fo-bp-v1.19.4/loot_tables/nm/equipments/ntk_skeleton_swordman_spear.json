@@ -1,0 +1,139 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:iron_spear",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:iron_helmet",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:iron_chestplate",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:iron_leggings",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:iron_boots",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

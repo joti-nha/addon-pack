@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:furnace_x_waxed_copper_lantern"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "minecraft:waxed_copper_lantern"
+    },
+    "output": {
+      "item": "minecraft:copper_nugget",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:waxed_copper_lantern"
+      }
+    ]
+  }
+}

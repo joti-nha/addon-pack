@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bv:sushi",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
+			}
+		},
+		"components": {
+			"minecraft:icon": "bv_sushi",
+			"minecraft:use_modifiers": {
+				"use_duration": 1.6
+			},
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": 1
+			},
+			"minecraft:use_animation": "eat",
+			"on_consume": {
+				"run_command": {
+					"command": [
+						"say oi"
+					]
+				}
+			}
+		}
+	}
+}

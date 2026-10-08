@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_stripped_mossy_willow_wood"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "LL",
+      "LL"
+    ],
+    "key": {
+      "L": {
+        "item": "ntk:stripped_mossy_willow_log"
+      }
+    },
+    "result": {
+      "item": "ntk:stripped_mossy_willow_wood",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "ntk:stripped_mossy_willow_log"
+      }
+    ]
+  }
+}

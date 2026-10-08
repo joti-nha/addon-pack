@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_olivine_speae"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "  A",
+      " I ",
+      "I  "
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:olivine"
+      },
+      "I": {
+        "item": "ntk:metal_rod"
+      }
+    },
+    "result": {
+      "item": "ntk:olivine_spear",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:olivine"
+      },
+      {
+        "item": "ntk:metal_rod"
+      }
+    ]
+  }
+}
+

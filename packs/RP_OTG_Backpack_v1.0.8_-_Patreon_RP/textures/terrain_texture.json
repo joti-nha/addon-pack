@@ -1,0 +1,81 @@
+{
+    "resource_pack_name": "otg_backpack",
+    "texture_name": "atlas.terrain",
+    "texture_data": {
+        "rest_campfire": {
+            "textures": "textures/blocks/rest_campfire"
+        },
+        "placed_backpack": {
+            "textures": "textures/blocks/placed_backpack"
+        },
+        "placed_backpack_basic_creeper": {
+            "textures": "textures/blocks/placed_backpack_basic_creeper"
+        },
+        "placed_backpack_basic_enderman": {
+            "textures": "textures/blocks/placed_backpack_basic_enderman"
+        },
+        "placed_backpack_basic_snowfox": {
+            "textures": "textures/blocks/placed_backpack_basic_snowfox"
+        },
+        "placed_backpack_copper": {
+            "textures": "textures/blocks/placed_backpack_copper"
+        },
+        "placed_backpack_copper_creeper": {
+            "textures": "textures/blocks/placed_backpack_copper_creeper"
+        },
+        "placed_backpack_copper_enderman": {
+            "textures": "textures/blocks/placed_backpack_copper_enderman"
+        },
+        "placed_backpack_copper_snowfox": {
+            "textures": "textures/blocks/placed_backpack_copper_snowfox"
+        },
+        "placed_backpack_iron": {
+            "textures": "textures/blocks/placed_backpack_iron"
+        },
+        "placed_backpack_iron_creeper": {
+            "textures": "textures/blocks/placed_backpack_iron_creeper"
+        },
+        "placed_backpack_iron_enderman": {
+            "textures": "textures/blocks/placed_backpack_iron_enderman"
+        },
+        "placed_backpack_iron_snowfox": {
+            "textures": "textures/blocks/placed_backpack_iron_snowfox"
+        },
+        "placed_backpack_gold": {
+            "textures": "textures/blocks/placed_backpack_gold"
+        },
+        "placed_backpack_gold_creeper": {
+            "textures": "textures/blocks/placed_backpack_gold_creeper"
+        },
+        "placed_backpack_gold_enderman": {
+            "textures": "textures/blocks/placed_backpack_gold_enderman"
+        },
+        "placed_backpack_gold_snowfox": {
+            "textures": "textures/blocks/placed_backpack_gold_snowfox"
+        },
+        "placed_backpack_diamond": {
+            "textures": "textures/blocks/placed_backpack_diamond"
+        },
+        "placed_backpack_diamond_creeper": {
+            "textures": "textures/blocks/placed_backpack_diamond_creeper"
+        },
+        "placed_backpack_diamond_enderman": {
+            "textures": "textures/blocks/placed_backpack_diamond_enderman"
+        },
+        "placed_backpack_diamond_snowfox": {
+            "textures": "textures/blocks/placed_backpack_diamond_snowfox"
+        },
+        "placed_backpack_netherite": {
+            "textures": "textures/blocks/placed_backpack_netherite"
+        },
+        "placed_backpack_netherite_creeper": {
+            "textures": "textures/blocks/placed_backpack_netherite_creeper"
+        },
+        "placed_backpack_netherite_enderman": {
+            "textures": "textures/blocks/placed_backpack_netherite_enderman"
+        },
+        "placed_backpack_netherite_snowfox": {
+            "textures": "textures/blocks/placed_backpack_netherite_snowfox"
+        }
+    }
+}

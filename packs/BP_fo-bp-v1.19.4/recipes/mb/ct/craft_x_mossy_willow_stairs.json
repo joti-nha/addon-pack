@@ -1,0 +1,29 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_mossy_willow_stairs"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"P  ",
+			"PP ",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "ntk:mossy_willow_planks"
+			}
+		},
+		"result": {
+			"item": "ntk:mossy_willow_stairs",
+			"count": 4
+		},
+    "unlock": [
+      {
+        "item": "ntk:mossy_willow_planks"
+      }
+    ]
+	}
+}

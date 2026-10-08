@@ -1,0 +1,51 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_artifacture_table"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "artifacture_table",
+    "assume_symmetry": true,
+    "pattern": [
+      "AqA",
+      "AQA",
+      "SQS"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "q": {
+        "item": "minecraft:quartz"
+      },
+      "Q": {
+        "item": "minecraft:quartz_block",
+        "data": 0
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ntk:artifacture_table",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:amethyst_shard"
+      },
+      {
+        "item": "minecraft:quartz"
+      },
+      {
+        "item": "minecraft:quartz_block",
+        "data": 0
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}

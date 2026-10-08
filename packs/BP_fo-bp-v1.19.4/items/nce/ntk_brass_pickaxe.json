@@ -1,0 +1,131 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:brass_pickaxe",
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:itemGroup.name.pickaxe",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.brass_pickaxe.name"
+			},
+      "minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_brass_pickaxe"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": true
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 1
+			},
+      "minecraft:durability": {
+				"max_durability": 255,
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+				}
+			},
+			"minecraft:damage": {
+			  "value": 3
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": { "tags": "query.all_tags('ntk:pickaxe_diggable')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('ntk:any_tool_diggable')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_pickaxe_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_digger_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_tool_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.any_tag('stone', 'rail', 'stone_pick_diggable')" },
+						"speed": 5
+					}
+				]
+			},
+			"minecraft:enchantable": {
+				"slot": "pickaxe",
+				"value": 23
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [ "ntk:brass_pickaxe" ],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [ "ntk:brass_ingot" ],
+						"repair_amount": 85
+					}
+				]
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:equippable",
+          "ntk:smeltable",
+          "ntk:mainhand_equipment",
+          "ntk:tool",
+          "ntk:pickaxe",
+          "ntk:brass_pickaxe",
+          
+          "minecraft:is_pickaxe",
+          "minecraft:is_tool",
+          "minecraft:iron_tier",
+          "minecraft:digger"
+        ]
+      },
+			"ntk:on_mine_block": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:brass_pickaxe",
+          "item_slot": "Mainhand",
+          "durability_damage": 1,
+          "durability_damage_chance": 100.0
+        }
+      ]
+    }
+  }
+}

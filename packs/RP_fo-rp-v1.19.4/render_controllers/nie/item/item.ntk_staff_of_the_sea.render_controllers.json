@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10",
+  "render_controllers": {
+    "controller.render.item.ntk_staff_of_the_sea": {
+      "geometry": "geometry.default",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [
+				"array.skins[query.is_in_water]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.inactive_staff_of_the_sea",
+						"Texture.active_staff_of_the_sea"
+					]
+				}
+			}
+    }
+  }
+}

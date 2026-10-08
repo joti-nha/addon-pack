@@ -1,0 +1,152 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:potted_white_tip_grass",
+      "menu_category": {
+				"category": "items",
+				"group": "ntk:itemGroup.name.potted_plants",
+				"is_hidden_in_commands": false
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.potted_white_tip_grass.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_potted_plant_cross"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_pot",
+          "render_method": "alpha_test_single_sided",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+					"face_dimming": true,
+					"isotropic": false
+        },
+        "base_alpha": {
+          "texture": "ntk_potted_white_tip_grass_flower",
+          "render_method": "alpha_test_single_sided",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+					"face_dimming": false,
+					"isotropic": false
+        },
+        "foliage": {
+          "texture": "ntk_potted_tip_grass_foliage",
+          "render_method": "alpha_test_single_sided",
+          "tint_method": "grass",
+          "ambient_occlusion": 0.0,
+					"face_dimming": false,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_potted_plant_cross"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_potted_white_tip_grass",
+            "render_method": "alpha_test_single_sided",
+            "tint_method": "none",
+            "ambient_occlusion": 0.0,
+            "face_dimming": false,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_potted_white_tip_grass",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#894c3b"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": [ "up" ]
+          }
+        ]
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "popped",
+            "stops_liquid_flowing_from_direction": []
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -3, 0, -3 ],
+          "size": [ 6, 6, 6 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -3, 0, -3 ],
+        "size": [ 6, 6, 6 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.0
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.none",
+        "up": "note.harp"
+      },
+      "minecraft:movable": {
+        "movement_type": "popped"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": false,
+        "redstone_conductor": false
+      },
+      "minecraft:transformation": {
+			  "rotation": [ 0, 0, 0 ]
+			},
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_potted_white_tip_grass.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:instant_diggable",
+        "ntk:interactable_block",
+        "ntk:solid_block",
+        "ntk:flower_pot",
+        "ntk:potted_plant",
+        "ntk:potted_flower",
+        "ntk:potted_grass",
+        "ntk:potted_tip_grass",
+        "ntk:potted_white_tip_grass"
+      ],
+      "ntk:potted_plant_on_player_interact": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:potted_white_tip_grass",
+          "block_state": "",
+          "state_value": "",
+          "item_slot": "Mainhand",
+          "removed_potted_plant": "ntk:white_tip_grass",
+          "plant_count": 1,
+          "pot_type": "minecraft:flower_pot"
+        }
+      ]
+    }
+  }
+}

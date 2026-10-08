@@ -1,0 +1,784 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "ntk:nether_soul_wisp",
+      "spawn_category": "creature",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "ntk:charged": {
+          "client_sync": true,
+          "type": "bool",
+          "default": true
+        }
+      }
+    },
+    "component_groups": {
+      "component:nether_soul_wisp_charged": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "interact_text": "Give Feather",
+              "play_sounds": "fizz",
+              "transform_to_item": "minecraft:echo_shard",
+              "vibration": "entity_interact",
+              "swing": false,
+              "use_item": true,
+              "cooldown": 60.0,
+              "cooldown_after_being_attacked": 60.0,
+              "drop_item_y_offset": 0.0,
+              "health_amount": 1,
+              "hurt_item": 0,
+              "on_interact": {
+                "event": "event:on_interact_with_soul_fire_feather",
+                "target": "self",
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment_tag",
+                      "subject": "other",
+                      "operator": "==",
+                      "domain": "hand",
+                      "value": "ntk:soul_fire_feather"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "interact_text": "Fill Bottle",
+              "play_sounds": "potion.brewed",
+              "transform_to_item": "minecraft:potion:14",
+              "vibration": "entity_interact",
+              "use_item": true,
+              "swing": false,
+              "cooldown": 180.0,
+              "cooldown_after_being_attacked": 180.0,
+              "drop_item_y_offset": 0.0,
+              "health_amount": 0,
+              "hurt_item": 0,
+              "on_interact": {
+                "event": "event:on_interact_with_glass_bottle",
+                "target": "self",
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "operator": "==",
+                      "domain": "hand",
+                      "value": "glass_bottle"
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "minecraft:behavior.tempt": {
+          "priority": 3,
+          "can_get_scared": false,
+          "can_tempt_vertically": true,
+          "can_tempt_while_ridden": false,
+          "speed_multiplier": 0.8,
+          "within_radius": 16.0,
+          "tempt_sound": "",
+          "sound_interval": [ 4.0, 8.0 ],
+          "items": [
+            "ntk:soul_fire_feather"
+          ]
+        },
+        "minecraft:behavior.beg": {
+          "priority": 4,
+          "look_distance": 8,
+          "look_time": {
+            "min": 2,
+            "max": 4
+          },
+          "items": [
+            { "tags": "query.all_tags('ntk:soul_fire_feather')" }
+          ]
+        }
+      },
+      "component:nether_soul_wisp_charging": {
+        "minecraft:timer": {
+          "looping": false,
+          "time": 300,
+          "time_down_event": {
+            "event": "event:on_timer_down",
+            "target": "self"
+          }
+        }
+      },
+      
+      "component:nether_soul_wisp_despawnable": {
+        "minecraft:despawn": {
+          "despawn_from_chance": true,
+          "despawn_from_inactivity": true,
+          "despawn_from_simulation_edge": true,
+          "remove_child_entities": false,
+          "min_range_inactivity_timer": 30,
+          "min_range_random_chance": 800,
+          "despawn_from_distance": {
+            "max_distance": 128,
+            "min_distance": 32
+          },
+          "filters": {}
+        }
+      },
+      "component:nether_soul_wisp_persistent": {
+        "minecraft:persistent": {}
+      },
+      
+      "component:nether_soul_wisp_transforming_into_nether_wisp_charged": {
+        "minecraft:transformation": {
+          "into": "ntk:nether_wisp<event:spawn_from_transformation_charged>",
+          "begin_transform_sound": "",
+          "transformation_sound": "",
+          "drop_equipment": false,
+          "drop_inventory": false,
+          "keep_level": true,
+          "keep_owner": true,
+          "preserve_equipment": true,
+          "add": {
+            "component_groups": []
+          }
+        }
+      },
+      "component:nether_soul_wisp_transforming_into_nether_wisp_uncharged": {
+        "minecraft:transformation": {
+          "into": "ntk:nether_wisp<event:spawn_from_transformation_uncharged>",
+          "begin_transform_sound": "",
+          "transformation_sound": "",
+          "drop_equipment": false,
+          "drop_inventory": false,
+          "keep_level": true,
+          "keep_owner": true,
+          "preserve_equipment": true,
+          "add": {
+            "component_groups": []
+          }
+        }
+      }
+    },
+    "components": {
+      "minecraft:can_fly": {},
+      "minecraft:fire_immune": {},
+      "minecraft:flying_speed": {
+        "value": 0.15
+      },
+      "minecraft:health": {
+        "value": 12,
+        "max": 12
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:loot": {
+        "table": "loot_tables/nm/entities/ntk_nether_soul_wisp.json"
+      },
+      "minecraft:movement": {
+        "value": 0.2
+      },
+      "minecraft:scale": {
+        "value": 1.0
+      },
+      "minecraft:type_family": {
+        "family": [
+          "nether_soul_wisp",
+          "wisp",
+          "fire_elemental",
+          "elemental",
+          "spirit",
+          "aerial",
+          "mob"
+        ]
+      },
+      
+      "minecraft:breathable": {
+        "breathes_air": true,
+        "breathes_lava": true,
+        "breathes_solids": false,
+        "breathes_water": false,
+        "generates_bubbles": false,
+        "inhale_time": 0,
+        "suffocate_time": 0,
+        "total_supply": 15,
+        "breathe_blocks": [],
+        "non_breathe_blocks": []
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 0.6
+      },
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "anvil",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_anvil",
+              "target": "self",
+              "filters": {}
+						}
+          },
+          {
+            "cause": "entity_attack",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_melee_attack",
+              "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "has_equipment_tag",
+                    "subject": "damager",
+                    "operator": "!=",
+                    "domain": "hand",
+                    "value": "ntk:spirit_piercer_effect"
+                  }
+                ]
+              }
+						}
+          },
+          {
+            "cause": "fall",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_fall",
+              "target": "self",
+              "filters": {}
+						}
+          },
+          {
+            "cause": "projectile",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_projectile",
+              "target": "self",
+              "filters": {
+                "any_of": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "has_component",
+                        "subject": "damager",
+                        "operator": "==",
+                        "value": "minecraft:hurt_on_condition"
+                      },
+                      {
+                        "test": "has_component",
+                        "subject": "damager",
+                        "operator": "==",
+                        "value": "minecraft:dimension_bound"
+                      }
+                    ]
+                  },
+                  {
+                    "all_of": [
+                      {
+                        "test": "has_component",
+                        "subject": "damager",
+                        "operator": "!=",
+                        "value": "minecraft:hurt_on_condition"
+                      },
+                      {
+                        "test": "has_component",
+                        "subject": "damager",
+                        "operator": "==",
+                        "value": "minecraft:dimension_bound"
+                      }
+                    ]
+                  }
+                ]
+              }
+						}
+          },
+          {
+            "cause": "suffocation",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_suffocation",
+              "target": "self",
+              "filters": {}
+						}
+          },
+          {
+            "cause": "thorns",
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+						"on_damage": {
+              "event": "event:on_damage_sensor_thorns",
+              "target": "self",
+              "filters": {}
+						}
+          },
+          {
+            "deals_damage": "no",
+						"damage_modifier": 0.0,
+						"damage_multiplier": 1.0,
+						"on_damage_sound_event": "",
+            "on_damage": {
+              "event": "event:on_damage_sensor_sweet_berry_bush",
+              "target": "self",
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_block",
+                    "subject": "block",
+                    "operator": "==",
+                    "value": "minecraft:sweet_berry_bush"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "event:on_environment_sensor_on_fire_block",
+            "target": "self",
+            "filters": {
+              "all_of": [
+                {
+                  "test": "in_block",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "soul_campfire"
+                },
+                {
+                  "test": "in_block",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "soul_fire"
+                },
+                {
+                  "test": "in_block",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "soul_sand"
+                },
+                {
+                  "test": "in_block",
+                  "subject": "self",
+                  "operator": "!=",
+                  "value": "soul_soil"
+                },
+                {
+                  "any_of": [
+                    {
+                      "test": "in_block",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": "campfire"
+                    },
+                    {
+                      "test": "in_block",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": "fire"
+                    },
+                    {
+                      "test": "in_block",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": "flowing_lava"
+                    },
+                    {
+                      "test": "in_block",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": "lava"
+                    },
+                    {
+                      "test": "in_block",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": "magma"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:experience_reward": {
+        "on_bred": "Math.Random(1,7)",
+        "on_death": "query.last_hit_by_player ? Math.Random(3,5) : 0"
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "cause": "drowning",
+            "damage_per_tick": 1,
+            "filters": {
+              "all_of": [
+                {
+                  "test": "in_contact_with_water",
+                  "subject": "self",
+                  "operator": "==",
+                  "value": true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:jump.static": {
+        "jump_power": 0.42
+      },
+      "minecraft:movement.hover": {
+        "max_turn": 30.0
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": true,
+        "always_show": false,
+        "default_trigger": {
+          "event": "event:on_unnamed",
+          "target": "self"
+        },
+        "name_actions": [
+          {
+            "name_filter": "Named",
+            "on_named": {
+              "event": "event:on_named",
+              "target": "self"
+            }
+          }
+        ]
+      },
+      "minecraft:navigation.hover": {
+        "avoid_damage_blocks": false,
+        "avoid_portals": false,
+        "avoid_sun": false,
+        "avoid_water": true,
+        "can_breach": false,
+        "can_break_doors": false,
+        "can_jump": true,
+        "can_open_doors": false,
+        "can_open_iron_doors": false,
+        "can_pass_doors": true,
+        "can_path_from_air": true,
+        "can_path_over_lava": true,
+        "can_path_over_water": false,
+        "can_sink": false,
+        "can_swim": false,
+        "can_walk": true,
+        "can_walk_in_lava": true,
+        "is_amphibious": false,
+        "blocks_to_avoid": [
+          "minecraft:flowing_water",
+          "minecraft:powder_snow",
+          "minecraft:water"
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
+      "minecraft:pushable_by_block": {},
+      "minecraft:pushable_by_entity": {},
+      
+      "minecraft:behavior.float": {
+        "priority": 0,
+        "sink_with_passengers": false,
+        "chance_per_tick_to_float": 0.8,
+        "time_under_water_to_dismount_passengers": 0.0
+      },
+      "minecraft:behavior.panic": {
+        "priority": 1,
+        "force": false,
+        "ignore_mob_damage": false,
+        "prefer_water": false,
+        "speed_multiplier": 1.2,
+        "damage_sources": [
+          "all"
+        ]
+      },
+      "minecraft:behavior.avoid_mob_type": {
+        "priority": 2,
+        "remove_target": false,
+        "avoid_target_xz": 16,
+        "avoid_target_y": 7,
+        "max_dist": 3.0,
+        "max_flee": 10.0,
+        "probability_per_strength": 1.0,
+        "sprint_distance": 7.0,
+        "sprint_speed_multiplier": 1.1,
+        "walk_speed_multiplier": 1.1,
+        "avoid_mob_sound": "retreat",
+        "sound_interval": {
+          "min": 3.0,
+          "max": 8.0
+        },
+        "on_escape_event": {
+          "event": "event:on_escape",
+          "target": "self"
+        },
+        "entity_types": [
+          {
+            "must_see": true,
+            "reevaluate_description": true,
+            "max_dist": 6.0,
+            "walk_speed_multiplier": 1.1,
+            "sprint_speed_multiplier": 1.1,
+            "filters": {
+              "all_of": [
+                {
+                  "test": "is_tamed",
+                   "subject": "other",
+                   "operator": "!=",
+                   "value": false
+                },
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "operator": "!=",
+                  "value": "piglin"
+                },
+                {
+                  "any_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "operator": "==",
+                      "value": "monster"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:behavior.random_hover": {
+        "priority": 5,
+        "hover_height": {
+          "min": 1,
+          "max": 3
+        },
+        "interval": 1,
+        "xz_dist": 8,
+        "y_dist": 7,
+        "y_offset": 0.0,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 6,
+        "probability": 0.02,
+        "angle_of_view_horizontal": 360,
+        "angle_of_view_vertical": 360,
+        "look_distance": 8.0,
+        "look_time": {
+          "min": 2,
+          "max": 4
+        }
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 7,
+        "max_angle_of_view_horizontal": 30,
+        "min_angle_of_view_horizontal": -30,
+        "look_time": {
+          "min": 1,
+          "max": 2
+        }
+      },
+      "minecraft:behavior.look_at_entity": {
+        "priority": 8,
+        "probability": 0.02,
+        "angle_of_view_horizontal": 360,
+        "angle_of_view_vertical": 360,
+        "look_distance": 8.0,
+        "look_time": {
+          "min": 1,
+          "max": 2
+        },
+        "filters": {
+          "all_of": [
+            {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "==",
+              "value": "mob"
+            },
+            {
+              "test": "is_family",
+              "subject": "other",
+              "operator": "!=",
+              "value": "inanimate"
+            }
+          ]
+        }
+      },
+      
+      "minecraft:conditional_bandwidth_optimization": {
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": [
+            "component:nether_soul_wisp_charged",
+            "component:nether_soul_wisp_despawnable"
+          ]
+        },
+        "set_property": {
+          "ntk:charged": true
+        }
+      },
+      "event:spawn_from_transformation_charged": {
+        "add": {
+          "component_groups": [
+            "component:nether_soul_wisp_charged",
+            "component:nether_soul_wisp_despawnable"
+          ]
+        },
+        "set_property": {
+          "ntk:charged": true
+        }
+      },
+      "event:spawn_from_transformation_uncharged": {
+        "add": {
+          "component_groups": [
+            "component:nether_soul_wisp_charging",
+            "component:nether_soul_wisp_despawnable"
+          ]
+        },
+        "set_property": {
+          "ntk:charged": false
+        }
+      },
+      
+      "event:on_environment_sensor_on_fire_block": {
+        "sequence": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "bool_property",
+                  "subject": "self",
+                  "operator": "==",
+                  "domain": "ntk:charged",
+                  "value": true
+                }
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playsound random.fizz @a[r=5] ~ ~ ~ 1.0 1.0 0.0",
+                "particle ntk:fire_bird_fire_changing_particle ~~~"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "component:nether_soul_wisp_transforming_into_nether_wisp_charged"
+              ]
+            }
+          },
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "bool_property",
+                  "subject": "self",
+                  "operator": "==",
+                  "domain": "ntk:charged",
+                  "value": false
+                }
+              ]
+            },
+            "queue_command": {
+              "command": [
+                "playsound random.fizz @a[r=5] ~ ~ ~ 1.0 1.0 0.0",
+                "particle ntk:fire_bird_fire_changing_particle ~~~"
+              ]
+            },
+            "add": {
+              "component_groups": [
+                "component:nether_soul_wisp_transforming_into_nether_wisp_uncharged"
+              ]
+            }
+          }
+        ]
+      },
+      
+      "event:on_interact_with_soul_fire_feather": {
+        "remove": {
+					"component_groups": [
+						"component:nether_soul_wisp_charged"
+					]
+				},
+        "add": {
+					"component_groups": [
+						"component:nether_soul_wisp_charging"
+					]
+				},
+				"set_property": {
+          "ntk:charged": false
+        }
+      },
+      "event:on_interact_with_glass_bottle": {
+        "remove": {
+					"component_groups": [
+						"component:nether_soul_wisp_charged"
+					]
+				},
+        "add": {
+					"component_groups": [
+						"component:nether_soul_wisp_charging"
+					]
+				},
+				"set_property": {
+          "ntk:charged": false
+        }
+      },
+      
+      "event:on_timer_down": {
+        "remove": {
+					"component_groups": [
+						"component:nether_soul_wisp_charging"
+					]
+				},
+        "add": {
+					"component_groups": [
+						"component:nether_soul_wisp_charged"
+					]
+				},
+				"set_property": {
+          "ntk:charged": true
+        }
+      },
+      
+			"event:on_damage_sensor_anvil": {},
+			"event:on_damage_sensor_fall": {},
+			"event:on_damage_sensor_melee_attack": {},
+			"event:on_damage_sensor_projectile": {},
+			"event:on_damage_sensor_suffocation": {},
+			"event:on_damage_sensor_sweet_berry_bush": {},
+			"event:on_damage_sensor_thorns": {},
+			"event:on_escape": {},
+			"event:on_named": {},
+			"event:on_unnamed": {}
+    }
+  }
+}

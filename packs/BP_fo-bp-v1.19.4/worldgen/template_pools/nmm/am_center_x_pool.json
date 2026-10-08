@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:nmm/am_center_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_center_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      }
+    ]
+  }
+}

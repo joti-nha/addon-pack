@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.flagon": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.solar_oven": {
+			"geometry": "geometry.solar_oven",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.solar_oven"
+			]
+		},
+		"controller.render.soul_oven": {
+			"geometry": "geometry.soul_oven",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.soul_oven"
+			]
+		}
+	}
+}

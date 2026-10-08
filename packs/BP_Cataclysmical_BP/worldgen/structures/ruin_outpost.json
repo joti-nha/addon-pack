@@ -1,0 +1,29 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "mnra_cata:ruin_outpost"
+		},
+		"step": "underground_structures",
+		"terrain_adaptation": "beard_box",
+		"start_pool": "mnra_cata:ruin_outpost",
+		"max_depth": 20,
+		"heightmap_projection": "world_surface",
+		"biome_filters": {
+			"any_of": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			]
+		},
+		"start_height": {
+			"type": "constant",
+			"value": {
+				"absolute": -35
+			}
+		},
+		"liquid_settings": "ignore_waterlogging"
+	}
+}

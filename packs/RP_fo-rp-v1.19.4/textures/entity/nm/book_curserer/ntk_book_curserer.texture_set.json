@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_book_curserer",
+    "heightmap": "ntk_book_curserer_height",
+    "metalness_emissive_roughness": "ntk_book_curserer_mer"
+  }
+}

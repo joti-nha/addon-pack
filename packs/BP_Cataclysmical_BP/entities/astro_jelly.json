@@ -1,0 +1,231 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "mnra_cata:astro_jelly",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"blow_up": "animation.astro_jelly.blow_up",
+				"blow_up_controller": "controller.animation.astro_jelly.blow_up_controller"
+			},
+			"scripts": {
+				"animate": [
+					"blow_up_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"blow_up": {
+				"minecraft:skin_id": {
+					"value": 0
+				},
+				"minecraft:is_sheared": {}
+			},
+			"despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": true
+				}
+			},
+			"normal": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"large": {
+				"minecraft:scale": {
+					"value": 1.4
+				}
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 300
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false,
+				"push_towards_closest_space": true
+			},
+			"minecraft:movement": {
+				"value": 0.01
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 1.8
+			},
+			"minecraft:behavior.float": {
+				"priority": 5
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"must_see": true,
+				"entity_types": {
+					"max_dist": 6,
+					"filters": [
+						{
+							"all_of": [
+								{
+									"test": "is_sneaking",
+									"subject": "other",
+									"value": false
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "==",
+									"value": "player"
+								}
+							]
+						}
+					]
+				}
+			},
+			"minecraft:environment_sensor": {
+				"triggers": {
+					"filters": {
+						"all_of": [
+							{
+								"test": "has_target",
+								"value": true
+							}
+						]
+					},
+					"event": "blow_up"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"test": "has_damage",
+								"subject": "self",
+								"value": "attack"
+							},
+							"event": "blow_up"
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"test": "has_damage",
+								"subject": "self",
+								"value": "projectile"
+							},
+							"event": "blow_up_from_projectile"
+						}
+					}
+				]
+			},
+			"minecraft:behavior.move_to_block": {
+				"priority": 3,
+				"speed_multiplier": 0,
+				"tick_interval": 200,
+				"start_chance": 0.4,
+				"search_range": 25,
+				"search_height": 25,
+				"goal_radius": 12,
+				"stay_duration": 20,
+				"target_selection_method": "random",
+				"target_blocks": [
+					"mnra_cata:asteroid",
+					"mnra_cata:asteroid_brick",
+					"mnra_cata:polished_asteroid",
+					"mnra_cata:asteroid_brick_slab",
+					"mnra_cata:astral_ore"
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"astro_jelly",
+					"astral"
+				]
+			},
+			"minecraft:can_fly": {},
+			"minecraft:flying_speed": {
+				"value": 0.18
+			},
+			"minecraft:navigation.hover": {
+				"avoid_powder_snow": true,
+				"can_path_over_water": true,
+				"can_path_over_lava": true,
+				"can_path_from_air": true
+			},
+			"minecraft:behavior.hover": {
+				"priority": 5
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:game_event_movement_tracking": {
+				"emit_flap": true
+			},
+			"minecraft:behavior.random_hover": {
+				"priority": 2,
+				"y_dist": 2,
+				"y_offset": 4,
+				"interval": 120,
+				"hover_height": [
+					4,
+					9
+				]
+			},
+			"minecraft:movement.hover": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"add": {
+							"component_groups": [
+								"normal"
+							]
+						},
+						"weight": 50
+					},
+					{
+						"add": {
+							"component_groups": [
+								"large"
+							]
+						},
+						"weight": 50
+					}
+				]
+			},
+			"blow_up": {
+				"add": {
+					"component_groups": [
+						"blow_up"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"blow_up_from_projectile": {
+				"add": {
+					"component_groups": [
+						"blow_up"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"loot spawn ~~~ loot \"minera/cata/entities/starling.eat\""
+					]
+				}
+			}
+		}
+	}
+}

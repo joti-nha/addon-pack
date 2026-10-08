@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:soul_terror_skull",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/projectile/soul_terror_skull_texture"
+			},
+			"geometry": {
+				"default": "geometry.soul_terror_skull"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_stone_golem_egg"
+			},
+			"animations": {
+				"particle": "animation.soul_terror_skull.particle",
+				"spawn": "animation.soul_terror_skull.spawn"
+			},
+			"scripts": {
+				"animate": [
+					"particle",
+					"spawn"
+				]
+			},
+			"particle_effects": {
+				"plasma_emitter": "mnra_cata:plasma_emitter"
+			}
+		}
+	}
+}

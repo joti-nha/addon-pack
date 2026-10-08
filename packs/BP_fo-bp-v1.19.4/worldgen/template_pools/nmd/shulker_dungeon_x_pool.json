@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:nmd/shulker_dungeon_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "nmd/shulker_dungeon_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmd/shulker_dungeon_x_processor"
+        }
+      }
+    ]
+  }
+}

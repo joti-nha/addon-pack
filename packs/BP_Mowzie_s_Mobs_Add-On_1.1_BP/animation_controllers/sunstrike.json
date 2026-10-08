@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.hf_mzs.sunstrike":{"states":{"default":{"transitions":[{"reg":"(1.0)"}]},"reg":{"transitions":[{"default":"(1.0)"}],"on_entry":["/execute if block ~~-1~ minecraft:air run event entity @s despawn"]}}}}}

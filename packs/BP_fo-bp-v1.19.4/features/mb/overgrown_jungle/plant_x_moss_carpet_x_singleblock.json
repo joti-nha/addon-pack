@@ -1,0 +1,77 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/plant_x_moss_carpet_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:moss_carpet",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      "minecraft:air",
+      "minecraft:flowing_water",
+      "minecraft:water",
+      // Grass:
+      "minecraft:fern",
+      "minecraft:seagrass",
+      "minecraft:short_dry_grass",
+      "minecraft:short_grass",
+      "minecraft:tall_dry_grass",
+      // Flower:
+      "minecraft:wildflowers",
+      // Plants:
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:vine"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+      "bottom": [
+        { "tags": "query.all_tags('ntk:dirt', 'ntk:natural_block', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:moss', 'ntk:natural_block', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:mud', 'ntk:natural_block', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:log', 'ntk:natural_block', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:wood', 'ntk:natural_block', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:roots')" },
+        { "tags": "query.all_tags('ntk:bryumed_blocks')" },
+        { "tags": "query.all_tags('ntk:grassed_blocks')" },
+        { "tags": "query.all_tags('ntk:mossed_blocks')" },
+        { "tags": "query.all_tags('ntk:myceliated_blocks')" },
+        // Stone-types:
+        "minecraft:mossy_cobblestone",
+        // Soil:
+        "minecraft:clay",
+        "minecraft:coarse_dirt",
+        "minecraft:dirt",
+        "minecraft:dirt_with_roots",
+        "minecraft:grass_block",
+        "minecraft:gravel",
+        "minecraft:moss_block",
+        "minecraft:mycelium",
+        "minecraft:pale_moss_block",
+        "minecraft:podzol",
+        "minecraft:sand",
+        // Logs:
+        "minecraft:acacia_log",
+        "minecraft:birch_log",
+        "minecraft:cherry_log",
+        "minecraft:dark_oak_log",
+        "minecraft:jungle_log",
+        "minecraft:mangrove_log",
+        "minecraft:oak_log",
+        "minecraft:pale_oak_log",
+        "minecraft:spruce_log",
+        // Roots:
+        "minecraft:mangrove_roots"
+      ]
+    }
+  }
+}

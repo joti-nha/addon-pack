@@ -1,0 +1,741 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_fishing_rod",
+              "name": "tm_aqc:itemGroup.name.rods"
+            },
+            "items": [
+              "tm_aqc:iron_fishing_rod",
+              "tm_aqc:gold_fishing_rod",
+              "tm_aqc:diamond_fishing_rod",
+              "tm_aqc:netherite_fishing_rod",
+              "tm_aqc:neptunium_fishing_rod"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:cooked_fillet",
+              "name": "tm_aqc:itemGroup.name.food"
+            },
+            "items": [
+              "tm_aqc:cooked_fillet",
+              "tm_aqc:cooked_shrimp",
+              "tm_aqc:cooked_lobster",
+              "tm_aqc:cooked_crayfish",
+              "tm_aqc:cooked_clam",
+              "tm_aqc:raw_fillet",
+              "tm_aqc:raw_shrimp",
+              "tm_aqc:raw_lobster",
+              "tm_aqc:raw_crayfish",
+              "tm_aqc:raw_clam",
+              "tm_aqc:clam_chowder",
+              "tm_aqc:fish_chowder",
+              "tm_aqc:green_juice",
+              "tm_aqc:gumbo",
+              "tm_aqc:lobster_bisque",
+              "tm_aqc:stone_soup",
+              "tm_aqc:super_mushroom_stew",
+              "tm_aqc:garbage_goulash",
+              "tm_aqc:clam_chowder_bucket",
+              "tm_aqc:fish_chowder_bucket",
+              "tm_aqc:green_juice_bucket",
+              "tm_aqc:gumbo_bucket",
+              "tm_aqc:lobster_bisque_bucket",
+              "tm_aqc:stone_soup_bucket",
+              "tm_aqc:super_mushroom_stew_bucket",
+              "tm_aqc:garbage_goulash_bucket"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_scale",
+              "name": "tm_aqc:itemGroup.name.items"
+            },
+            "items": [
+              "tm_aqc:neptunium_scale",
+              "tm_aqc:scale",
+              "tm_aqc:pin_bone",
+              "tm_aqc:shell_piece",
+              "tm_aqc:pearl",
+              "tm_aqc:gold_pearl",
+              "tm_aqc:black_pearl",
+              "tm_aqc:message_in_a_bottle"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:fishing_stool",
+              "name": "tm_aqc:itemGroup.name.functional_blocks"
+            },
+            "items": [
+              "tm_aqc:fishing_stool",
+              "tm_aqc:fish_mount",
+              "tm_aqc:worm_farm",
+              "tm_aqc:modification_station",
+              "tm_aqc:stew_pot",
+              "tm_aqc:catchscale",
+              "tm_aqc:cutting_board",
+              "tm_aqc:anglers_crafting_table"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:fishing_basket",
+              "name": "tm_aqc:itemGroup.name.equipment"
+            },
+            "items": [
+              "tm_aqc:fish_scanner",
+              "tm_aqc:sonar",
+              "tm_aqc:fishing_basket",
+              "tm_aqc:bait_bucket",
+              "tm_aqc:snorkel",
+              "tm_aqc:flippers",
+              "tm_aqc:fishing_net",
+              "tm_aqc:fishing_pot"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:basic_bobber_red",
+              "name": "tm_aqc:itemGroup.name.bobbers"
+            },
+            "items": [
+              "tm_aqc:basic_bobber_black",
+              "tm_aqc:basic_bobber_blue",
+              "tm_aqc:basic_bobber_brown",
+              "tm_aqc:basic_bobber_cyan",
+              "tm_aqc:basic_bobber_gray",
+              "tm_aqc:basic_bobber_green",
+              "tm_aqc:basic_bobber_light_blue",
+              "tm_aqc:basic_bobber_light_gray",
+              "tm_aqc:basic_bobber_lime",
+              "tm_aqc:basic_bobber_magenta",
+              "tm_aqc:basic_bobber_orange",
+              "tm_aqc:basic_bobber_pink",
+              "tm_aqc:basic_bobber_purple",
+              "tm_aqc:basic_bobber_red",
+              "tm_aqc:basic_bobber_white",
+              "tm_aqc:basic_bobber_yellow",
+              "tm_aqc:feathered_bobber_black",
+              "tm_aqc:feathered_bobber_blue",
+              "tm_aqc:feathered_bobber_brown",
+              "tm_aqc:feathered_bobber_cyan",
+              "tm_aqc:feathered_bobber_gray",
+              "tm_aqc:feathered_bobber_green",
+              "tm_aqc:feathered_bobber_light_blue",
+              "tm_aqc:feathered_bobber_light_gray",
+              "tm_aqc:feathered_bobber_lime",
+              "tm_aqc:feathered_bobber_magenta",
+              "tm_aqc:feathered_bobber_orange",
+              "tm_aqc:feathered_bobber_pink",
+              "tm_aqc:feathered_bobber_purple",
+              "tm_aqc:feathered_bobber_red",
+              "tm_aqc:feathered_bobber_white",
+              "tm_aqc:feathered_bobber_yellow",
+              "tm_aqc:winged_bobber_black",
+              "tm_aqc:winged_bobber_blue",
+              "tm_aqc:winged_bobber_brown",
+              "tm_aqc:winged_bobber_cyan",
+              "tm_aqc:winged_bobber_gray",
+              "tm_aqc:winged_bobber_green",
+              "tm_aqc:winged_bobber_light_blue",
+              "tm_aqc:winged_bobber_light_gray",
+              "tm_aqc:winged_bobber_lime",
+              "tm_aqc:winged_bobber_magenta",
+              "tm_aqc:winged_bobber_orange",
+              "tm_aqc:winged_bobber_pink",
+              "tm_aqc:winged_bobber_purple",
+              "tm_aqc:winged_bobber_red",
+              "tm_aqc:winged_bobber_white",
+              "tm_aqc:winged_bobber_yellow",
+              "tm_aqc:creeper_bobber_black",
+              "tm_aqc:creeper_bobber_blue",
+              "tm_aqc:creeper_bobber_brown",
+              "tm_aqc:creeper_bobber_cyan",
+              "tm_aqc:creeper_bobber_gray",
+              "tm_aqc:creeper_bobber_green",
+              "tm_aqc:creeper_bobber_light_blue",
+              "tm_aqc:creeper_bobber_light_gray",
+              "tm_aqc:creeper_bobber_lime",
+              "tm_aqc:creeper_bobber_magenta",
+              "tm_aqc:creeper_bobber_orange",
+              "tm_aqc:creeper_bobber_pink",
+              "tm_aqc:creeper_bobber_purple",
+              "tm_aqc:creeper_bobber_red",
+              "tm_aqc:creeper_bobber_white",
+              "tm_aqc:creeper_bobber_yellow",
+              "tm_aqc:potato_bobber"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_fillet_knife",
+              "name": "tm_aqc:itemGroup.name.fillet_knife"
+            },
+            "items": [
+              "tm_aqc:iron_fillet_knife",
+              "tm_aqc:gold_fillet_knife",
+              "tm_aqc:diamond_fillet_knife",
+              "tm_aqc:netherite_fillet_knife",
+              "tm_aqc:neptunium_fillet_knife"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_chestplate",
+              "name": "tm_aqc:itemGroup.name.armor"
+            },
+            "items": [
+              "tm_aqc:scale_helmet",
+              "tm_aqc:scale_chestplate",
+              "tm_aqc:scale_leggings",
+              "tm_aqc:scale_boots",
+              "tm_aqc:neptunium_helmet",
+              "tm_aqc:neptunium_chestplate",
+              "tm_aqc:neptunium_leggings",
+              "tm_aqc:neptunium_boots"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_pickaxe",
+              "name": "tm_aqc:itemGroup.name.tools"
+            },
+            "items": [
+              "tm_aqc:neptunium_sword",
+              "tm_aqc:neptunium_pickaxe",
+              "tm_aqc:neptunium_axe",
+              "tm_aqc:neptunium_shovel",
+              "tm_aqc:neptunium_hoe"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_harpoon",
+              "name": "tm_aqc:itemGroup.name.harpoons"
+            },
+            "items": [
+              "tm_aqc:iron_harpoon",
+              "tm_aqc:gold_harpoon",
+              "tm_aqc:diamond_harpoon",
+              "tm_aqc:netherite_harpoon",
+              "tm_aqc:neptunium_harpoon"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_fishing_spear",
+              "name": "tm_aqc:itemGroup.name.spears"
+            },
+            "items": [
+              "tm_aqc:iron_fishing_spear",
+              "tm_aqc:gold_fishing_spear",
+              "tm_aqc:diamond_fishing_spear",
+              "tm_aqc:netherite_fishing_spear",
+              "tm_aqc:neptunium_fishing_spear"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "equipment",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_hook",
+              "name": "tm_aqc:itemGroup.name.hooks"
+            },
+            "items": [
+              "tm_aqc:iron_hook",
+              "tm_aqc:gold_hook",
+              "tm_aqc:diamond_hook",
+              "tm_aqc:neptunium_hook",
+              "tm_aqc:light_hook",
+              "tm_aqc:heavy_hook",
+              "tm_aqc:double_hook",
+              "tm_aqc:glow_hook",
+              "tm_aqc:redstone_hook",
+              "tm_aqc:note_hook",
+              "tm_aqc:essence_hook",
+              "tm_aqc:creeper_hook"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:worm",
+              "name": "tm_aqc:itemGroup.name.bait"
+            },
+            "items": [
+              "tm_aqc:leech",
+              "tm_aqc:magnet",
+              "tm_aqc:gold_magnet",
+              "tm_aqc:spinner",
+              "tm_aqc:worm",
+              "tm_aqc:gold_worm",
+              "tm_aqc:slime_worm",
+              "tm_aqc:slime_minnow",
+              "tm_aqc:slime_shad",
+              "tm_aqc:slime_shiner",
+              "tm_aqc:slime_spitter",
+              "tm_aqc:slime_shrimp",
+              "tm_aqc:slime_crayfish"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:arapaima",
+              "name": "tm_aqc:itemGroup.name.fish"
+            },
+            "items": [
+              "tm_aqc:airbreathing_catfish",
+              "tm_aqc:american_pollock",
+              "tm_aqc:arapaima",
+              "tm_aqc:atlantic_cod",
+              "tm_aqc:atlantic_halibut",
+              "tm_aqc:atlantic_herring",
+              "tm_aqc:bamboo_spitter",
+              "tm_aqc:bayad",
+              "tm_aqc:black_crappie",
+              "tm_aqc:black_piranha",
+              "tm_aqc:blind_creeker",
+              "tm_aqc:blue_catfish",
+              "tm_aqc:bluegill",
+              "tm_aqc:brown_bullhead",
+              "tm_aqc:brown_shrooma",
+              "tm_aqc:brown_trout",
+              "tm_aqc:bullhead_catfish",
+              "tm_aqc:chain_pickerel",
+              "tm_aqc:channel_catfish",
+              "tm_aqc:common_bream",
+              "tm_aqc:common_carp",
+              "tm_aqc:common_shiner",
+              "tm_aqc:flathead_catfish",
+              "tm_aqc:florida_gar",
+              "tm_aqc:gizzard_shad",
+              "tm_aqc:golden_shiner",
+              "tm_aqc:goldfish",
+              "tm_aqc:grass_pickerel",
+              "tm_aqc:green_sunfish",
+              "tm_aqc:greenland_halibut",
+              "tm_aqc:largemouth_bass",
+              "tm_aqc:minnow",
+              "tm_aqc:mud_sunfish",
+              "tm_aqc:muskellunge",
+              "tm_aqc:nile_perch",
+              "tm_aqc:nile_tilapia",
+              "tm_aqc:pacific_halibut",
+              "tm_aqc:pink_salmon",
+              "tm_aqc:pumpkinseed",
+              "tm_aqc:rainbow_trout",
+              "tm_aqc:red_grouper",
+              "tm_aqc:red_shrooma",
+              "tm_aqc:redear_sunfish",
+              "tm_aqc:redfin_pickerel",
+              "tm_aqc:sacramento_blackfish",
+              "tm_aqc:sakurafin",
+              "tm_aqc:sharptooth_catfish",
+              "tm_aqc:skipjack_tuna",
+              "tm_aqc:smallmouth_bass",
+              "tm_aqc:spotted_bass",
+              "tm_aqc:striped_bass",
+              "tm_aqc:synodontis",
+              "tm_aqc:tambaqui",
+              "tm_aqc:warmouth",
+              "tm_aqc:white_catfish",
+              "tm_aqc:white_crappie",
+              "tm_aqc:yellow_bullhead",
+              "tm_aqc:yellow_perch",
+              "tm_aqc:yellow_walleye"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:arapaima_monstrous",
+              "name": "tm_aqc:itemGroup.name.fish_monstrous"
+            },
+            "items": [
+    "tm_aqc:airbreathing_catfish_monstrous",
+    "tm_aqc:american_pollock_monstrous",
+    "tm_aqc:arapaima_monstrous",
+    "tm_aqc:atlantic_cod_monstrous",
+    "tm_aqc:atlantic_halibut_monstrous",
+    "tm_aqc:atlantic_herring_monstrous",
+    "tm_aqc:bamboo_spitter_monstrous",
+    "tm_aqc:bayad_monstrous",
+    "tm_aqc:black_crappie_monstrous",
+    "tm_aqc:black_piranha_monstrous",
+    "tm_aqc:blind_creeker_monstrous",
+    "tm_aqc:blue_catfish_monstrous",
+    "tm_aqc:bluegill_monstrous",
+    "tm_aqc:brown_bullhead_monstrous",
+    "tm_aqc:brown_shrooma_monstrous",
+    "tm_aqc:brown_trout_monstrous",
+    "tm_aqc:bullhead_catfish_monstrous",
+    "tm_aqc:chain_pickerel_monstrous",
+    "tm_aqc:channel_catfish_monstrous",
+    "tm_aqc:common_bream_monstrous",
+    "tm_aqc:common_carp_monstrous",
+    "tm_aqc:common_shiner_monstrous",
+    "tm_aqc:flathead_catfish_monstrous",
+    "tm_aqc:florida_gar_monstrous",
+    "tm_aqc:gizzard_shad_monstrous",
+    "tm_aqc:golden_shiner_monstrous",
+    "tm_aqc:goldfish_monstrous",
+    "tm_aqc:grass_pickerel_monstrous",
+    "tm_aqc:green_sunfish_monstrous",
+    "tm_aqc:greenland_halibut_monstrous",
+    "tm_aqc:largemouth_bass_monstrous",
+    "tm_aqc:minnow_monstrous",
+    "tm_aqc:mud_sunfish_monstrous",
+    "tm_aqc:muskellunge_monstrous",
+    "tm_aqc:nile_perch_monstrous",
+    "tm_aqc:nile_tilapia_monstrous",
+    "tm_aqc:pacific_halibut_monstrous",
+    "tm_aqc:pink_salmon_monstrous",
+    "tm_aqc:pumpkinseed_monstrous",
+    "tm_aqc:rainbow_trout_monstrous",
+    "tm_aqc:red_grouper_monstrous",
+    "tm_aqc:red_shrooma_monstrous",
+    "tm_aqc:redear_sunfish_monstrous",
+    "tm_aqc:redfin_pickerel_monstrous",
+    "tm_aqc:sacramento_blackfish_monstrous",
+    "tm_aqc:sakurafin_monstrous",
+    "tm_aqc:sharptooth_catfish_monstrous",
+    "tm_aqc:skipjack_tuna_monstrous",
+    "tm_aqc:smallmouth_bass_monstrous",
+    "tm_aqc:spotted_bass_monstrous",
+    "tm_aqc:striped_bass_monstrous",
+    "tm_aqc:synodontis_monstrous",
+    "tm_aqc:tambaqui_monstrous",
+    "tm_aqc:warmouth_monstrous",
+    "tm_aqc:white_catfish_monstrous",
+    "tm_aqc:white_crappie_monstrous",
+    "tm_aqc:yellow_bullhead_monstrous",
+    "tm_aqc:yellow_perch_monstrous",
+    "tm_aqc:yellow_walleye_monstrous"
+  ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:bucket_arapaima",
+              "name": "tm_aqc:itemGroup.name.bucket"
+            },
+            "items": [
+              "tm_aqc:bucket_airbreathing_catfish",
+              "tm_aqc:bucket_arapaima",
+              "tm_aqc:bucket_atlantic_cod",
+              "tm_aqc:bucket_atlantic_halibut",
+              "tm_aqc:bucket_atlantic_herring",
+              "tm_aqc:bucket_bamboo_spitter",
+              "tm_aqc:bucket_bayad",
+              "tm_aqc:bucket_black_crappie",
+              "tm_aqc:bucket_sacramento_blackfish",
+              "tm_aqc:bucket_blind_creeker",
+              "tm_aqc:bucket_blue_catfish",
+              "tm_aqc:bucket_bluegill",
+              "tm_aqc:bucket_brown_bullhead",
+              "tm_aqc:bucket_brown_shrooma",
+              "tm_aqc:bucket_brown_trout",
+              "tm_aqc:bucket_bullhead_catfish",
+              "tm_aqc:bucket_chain_pickerel",
+              "tm_aqc:bucket_channel_catfish",
+              "tm_aqc:bucket_common_bream",
+              "tm_aqc:bucket_common_carp",
+              "tm_aqc:bucket_common_shiner",
+              "tm_aqc:bucket_flathead_catfish",
+              "tm_aqc:bucket_florida_gar",
+              "tm_aqc:bucket_gizzard_shad",
+              "tm_aqc:bucket_golden_shiner",
+              "tm_aqc:bucket_goldfish",
+              "tm_aqc:bucket_grass_pickerel",
+              "tm_aqc:bucket_green_sunfish",
+              "tm_aqc:bucket_greenland_halibut",
+              "tm_aqc:bucket_largemouth_bass",
+              "tm_aqc:bucket_minnow",
+              "tm_aqc:bucket_mud_sunfish",
+              "tm_aqc:bucket_muskellunge",
+              "tm_aqc:bucket_nile_perch",
+              "tm_aqc:bucket_nile_tilapia",
+              "tm_aqc:bucket_pacific_halibut",
+              "tm_aqc:bucket_pink_salmon",
+              "tm_aqc:bucket_black_piranha",
+              "tm_aqc:bucket_american_pollock",
+              "tm_aqc:bucket_pumpkinseed",
+              "tm_aqc:bucket_rainbow_trout",
+              "tm_aqc:bucket_red_grouper",
+              "tm_aqc:bucket_red_shrooma",
+              "tm_aqc:bucket_redear_sunfish",
+              "tm_aqc:bucket_redfin_pickerel",
+              "tm_aqc:bucket_sakurafin",
+              "tm_aqc:bucket_sharptooth_catfish",
+              "tm_aqc:bucket_skipjack_tuna",
+              "tm_aqc:bucket_smallmouth_bass",
+              "tm_aqc:bucket_spotted_bass",
+              "tm_aqc:bucket_striped_bass",
+              "tm_aqc:bucket_synodontis",
+              "tm_aqc:bucket_tambaqui",
+              "tm_aqc:bucket_warmouth",
+              "tm_aqc:bucket_white_catfish",
+              "tm_aqc:bucket_white_crappie",
+              "tm_aqc:bucket_yellow_bullhead",
+              "tm_aqc:bucket_yellow_perch",
+              "tm_aqc:bucket_yellow_walleye"
+
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:american_lobster",
+              "name": "tm_aqc:itemGroup.name.crustaceans_bivalves"
+            },
+            "items": [
+              "tm_aqc:american_lobster",
+              "tm_aqc:devil_crayfish",
+              "tm_aqc:rusty_crayfish",
+              "tm_aqc:giant_tiger_prawn",
+              "tm_aqc:pink_shrimp",
+              "tm_aqc:hard_clam"
+
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:american_lobster_monstrous",
+              "name": "tm_aqc:itemGroup.name.crustaceans_monstrous"
+            },
+            "items": [
+              "tm_aqc:american_lobster_monstrous",
+              "tm_aqc:devil_crayfish_monstrous",
+              "tm_aqc:rusty_crayfish_monstrous",
+              "tm_aqc:giant_tiger_prawn_monstrous",
+              "tm_aqc:pink_shrimp_monstrous"
+
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "items",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:bucket_american_lobster",
+              "name": "tm_aqc:itemGroup.name.bucket_crustaceans_bivalves"
+            },
+            "items": [
+              "tm_aqc:bucket_american_lobster",
+              "tm_aqc:bucket_devil_crayfish",
+              "tm_aqc:bucket_rusty_crayfish",
+              "tm_aqc:bucket_giant_tiger_prawn",
+              "tm_aqc:bucket_pink_shrimp",
+              "tm_aqc:bucket_hard_clam"
+
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:neptunium_bricks",
+              "name": "tm_aqc:itemGroup.name.neptunium_deco"
+            },
+            "items": [
+              "tm_aqc:neptunium_scale_block",
+              "tm_aqc:smelted_neptunium",
+              "tm_aqc:chiselled_neptunium",
+              "tm_aqc:cut_neptunium",
+              "tm_aqc:neptunium_bricks",
+              "tm_aqc:neptunium_grate",
+              "tm_aqc:neptunium_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:scale_bricks",
+              "name": "tm_aqc:itemGroup.name.scale_deco"
+            },
+            "items": [
+              "tm_aqc:scale_block",
+              "tm_aqc:smelted_scale",
+              "tm_aqc:chiselled_scale",
+              "tm_aqc:cut_scale",
+              "tm_aqc:scale_bricks",
+              "tm_aqc:scale_grate",
+              "tm_aqc:scale_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:shell_bricks",
+              "name": "tm_aqc:itemGroup.name.shell_deco"
+            },
+            "items": [
+              "tm_aqc:shell_block",
+              "tm_aqc:chiselled_shell",
+              "tm_aqc:cut_shell",
+              "tm_aqc:shell_bricks",
+              "tm_aqc:shell_grate",
+              "tm_aqc:shell_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.pearl_deco"
+            },
+            "items": [
+              "tm_aqc:pearl_block",
+              "tm_aqc:chiselled_pearl",
+              "tm_aqc:cut_pearl",
+              "tm_aqc:pearl_bricks",
+              "tm_aqc:pearl_grate",
+              "tm_aqc:pearl_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:gold_pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.gold_pearl_deco"
+            },
+            "items": [
+              "tm_aqc:gold_pearl_block",
+              "tm_aqc:chiselled_gold_pearl",
+              "tm_aqc:cut_gold_pearl",
+              "tm_aqc:gold_pearl_bricks",
+              "tm_aqc:gold_pearl_grate",
+              "tm_aqc:gold_pearl_bulb"
+            ]
+          }
+        ]
+      },
+      {
+        "category_name": "construction",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "tm_aqc:black_pearl_bricks",
+              "name": "tm_aqc:itemGroup.name.black_pearl_deco"
+            },
+            "items": [
+              "tm_aqc:black_pearl_block",
+              "tm_aqc:chiselled_black_pearl",
+              "tm_aqc:cut_black_pearl",
+              "tm_aqc:black_pearl_bricks",
+              "tm_aqc:black_pearl_grate",
+              "tm_aqc:black_pearl_bulb"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mercenary.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"move",
+						{
+							"static": "q.property('dk:weapons')=='sword'||(q.property('dk:weapons')=='hammer'&&q.property('dk:target')=='no_target')"
+						},
+						{
+							"guard": "q.property('dk:weapons')=='hammer'&&q.property('dk:target')=='target'&&q.property('dk:states')=='melee'&&!variable.attack>0"
+						},
+						{
+							"move_arm_right": "q.property('dk:weapons')=='sword'||(q.property('dk:weapons')=='hammer'&&(q.property('dk:target')=='no_target'&&q.property('dk:states')=='melee')||(q.property('dk:states')=='bow'||q.property('dk:states')=='potion'&&(q.property('dk:target')=='no_target'||q.property('dk:target')=='target')))"
+						},
+						{
+							"move_arm_left": "(q.property('dk:weapons')=='sword'&&q.property('dk:shield')=='none')||(q.property('dk:weapons')=='hammer'&&(q.property('dk:target')=='no_target'&&q.property('dk:states')=='melee')||(q.property('dk:states')=='bow'||q.property('dk:states')=='potion'&&(q.property('dk:target')=='no_target'||q.property('dk:target')=='target')))"
+						},
+						{
+							"ride": "query.is_riding"
+						},
+						{
+							"item": "query.is_item_equipped"
+						},
+						{
+							"use_item_food": "query.is_eating||query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						},
+						{
+							"sit": "q.property('dk:modes')=='sit'||query.is_sitting"
+						},
+						{
+							"sit_two": "q.property('dk:modes')=='sit_two'"
+						},
+						{
+							"bow": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')&&query.has_target"
+						},
+						{
+							"shield": "q.property('dk:shield')=='shield'&&q.property('dk:target')=='target'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.mercenary.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "variable.attack>0&&q.property('dk:weapons')=='sword'&&!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						},
+						{
+							"attack_two": "variable.attack>0&&q.property('dk:weapons')=='hammer'&&!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						}
+					]
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				}
+			}
+		},
+		"controller.animation.mercenary.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

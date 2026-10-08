@@ -1,0 +1,38 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossed_pale_oak_log_side"
+    },
+    "priority": 1,
+    "tags": [
+      "crafting_table",
+      "grafting_table"
+    ],
+    "group": "mossed_pale_oak_log_side",
+    "assume_symmetry": true,
+    "pattern": [
+      "GL"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:moss_carpet"
+      },
+      "L": {
+        "item": "minecraft:pale_oak_log"
+      }
+    },
+    "result": {
+      "item": "ntk:mossed_pale_oak_log_side",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:moss_carpet"
+      },
+      {
+        "item": "minecraft:pale_oak_log"
+      }
+    ]
+  }
+}

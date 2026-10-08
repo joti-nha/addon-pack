@@ -1,0 +1,1 @@
+import odygcn from"./qw";import{gcltvd}from"./qx";gcltvd.vxqdcj("oreville_rb:xqgavea",odygcn);

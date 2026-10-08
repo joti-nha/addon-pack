@@ -1,0 +1,52 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:sunknight_paladin",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/sunknight_paladin_texture"
+			},
+			"geometry": {
+				"default": "geometry.sunknight_paladin"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_cosmic_terror_egg"
+			},
+			"animations": {
+				"awaken": "animation.cosmic_terror.awaken",
+				"idle": "animation.sunknight_paladin.idle",
+				"move": "animation.sunknight_paladin.move",
+				"move_controller": "controller.animation.sunknight_paladin.move_controller",
+				"awaken_controller": "controller.animation.cosmic_terror.awaken_controller",
+				"attack_controller": "controller.animation.cosmic_terror.attack_controller",
+				"normal_attack": "animation.sunknight_paladin.normal_attack",
+				"bobbing": "animation.sunknight_paladin.bobbing",
+				"emitter": "animation.sunknight_paladin.emitter"
+			},
+			"scripts": {
+				"animate": [
+					"move_controller",
+					"awaken_controller",
+					"attack_controller",
+					"bobbing",
+					"emitter"
+				]
+			},
+			"particle_effects": {
+				"large_impact": "mnra_cata:massive_impact",
+				"massive_impact": "mnra_cata:massive_impact",
+				"solar_slash": "mnra_cata:solar_slash",
+				"sunknight_paladin_emitter": "mnra_cata:sunknight_paladin_emitter"
+			},
+			"sound_effects": {
+				"large_impact": "mob.large_impact"
+			}
+		}
+	}
+}

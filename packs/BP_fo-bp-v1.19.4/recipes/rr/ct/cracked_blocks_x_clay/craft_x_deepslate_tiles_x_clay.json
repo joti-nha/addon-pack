@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_deepslate_tiles_x_clay"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "group": "deepslate_tiles",
+    "assume_symmetry": true,
+    "pattern": [
+      "SC"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:cracked_deepslate_tiles"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "minecraft:deepslate_tiles",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cracked_deepslate_tiles"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ]
+  }
+}

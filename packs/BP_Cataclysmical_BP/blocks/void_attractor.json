@@ -1,0 +1,50 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mnra_cata:void_attractor",
+			"menu_category": {
+				"category": "items"
+			},
+			"states": {
+				"mnra_cata:void_attractor_wait_tick": [
+					false,
+					true
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"up": {
+					"texture": "mnra_cata_void_attractor_top",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "mnra_cata_void_attractor_bottom",
+					"render_method": "alpha_test"
+				},
+				"*": {
+					"texture": "mnra_cata_void_attractor_side",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_emission": 2,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 1
+			},
+			"minecraft:geometry": {
+				"identifier": "minecraft:geometry.full_block"
+			},
+			"minecraft:custom_components": [
+				"component:void_attractor"
+			],
+			"minecraft:tick": {
+				"interval_range": [
+					1,
+					1
+				],
+				"looping": true
+			}
+		}
+	}
+}

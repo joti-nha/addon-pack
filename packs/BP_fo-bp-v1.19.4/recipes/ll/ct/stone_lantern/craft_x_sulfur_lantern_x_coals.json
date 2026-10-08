@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_sulfur_lantern_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "sulfur_lantern",
+    "assume_symmetry": true,
+    "pattern": [
+      " S ",
+      "COC",
+      " S "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:sulfur"
+      },
+      "O": {
+        "tag": "minecraft:coals"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:sulfur_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:sulfur"
+      },
+      {
+        "tag": "minecraft:coals"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ]
+  }
+}

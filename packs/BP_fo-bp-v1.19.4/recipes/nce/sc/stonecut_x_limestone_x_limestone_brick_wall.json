@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_limestone_x_limestone_brick_wall"
+    },
+    "priority": 0,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:limestone"
+      }
+    ],
+    "result": {
+      "item": "ntk:limestone_brick_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:limestone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:miscellaneous_ground_spikes",
+      "render_controllers": [
+        "controller.render.miscellaneous.ntk_ground_spikes"
+      ],
+      "geometry": {
+        "default": "geometry.miscellaneous.ntk_ground_spikes"
+      },
+      "materials": {
+        "default": "ntk_entity_alpha_animated"
+      },
+      "textures": {
+        "default": "textures/misc/nmd/ntk_ground_spikes"
+      },
+      "animations": {
+        "controller_attack": "controller.animation.miscellaneous.ntk_ground_spikes.attack",
+        "spike_attack": "animation.miscellaneous.ntk_ground_spikes.spike_attack"
+      },
+      "scripts": {
+				"animate": [
+				  "controller_attack"
+				]
+			}
+    }
+  }
+}

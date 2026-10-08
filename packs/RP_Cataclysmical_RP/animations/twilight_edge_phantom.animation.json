@@ -1,0 +1,89 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.twilight_edge_phantom.spawn": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.65,
+			"bones": {
+				"twilight_edge_phantom": {
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								58,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.3333": {
+							"post": [
+								0,
+								58,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5833": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				},
+				"root": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"0.5833": {
+							"post": [
+								0,
+								-210,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						}
+					}
+				}
+			},
+			"particle_effects": {
+				"0.5": {
+					"effect": "twilight_edge_phantom",
+					"locator": "particle"
+				}
+			}
+		},
+		"animation.twilight_edge_phantom.spawn2": {
+			"animation_length": 0.25,
+			"bones": {
+				"twilight_edge_phantom": {
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0833": [
+							1,
+							0,
+							1
+						],
+						"0.25": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		}
+	}
+}

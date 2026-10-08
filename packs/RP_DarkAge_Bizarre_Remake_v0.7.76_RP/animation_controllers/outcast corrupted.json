@@ -1,0 +1,257 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.outcast_corrupted.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"wheel": "q.property('dk:outcast_corrupted')=='wheel'"
+						},
+						{
+							"stage_one": "query.variant==1&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"stage_two": "query.variant==2&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"stage_three": "query.variant==3&&q.property('dk:outcast_corrupted')=='default'"
+						}
+					],
+					"blend_transition": 0
+				},
+				"wheel": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						"static",
+						{
+							"wheel": "q.property('dk:outcast_corrupted')=='wheel'"
+						},
+						{
+							"wheel_move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:outcast_corrupted')=='default'"
+						}
+					]
+				},
+				"stage_one": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						{
+							"static": "query.variant==1"
+						},
+						{
+							"ride": "query.is_riding"
+						},
+						{
+							"move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==2||query.variant==3"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"stage_two": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						{
+							"stage_two": "query.variant==2"
+						},
+						{
+							"stage_two_move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==1||query.variant==3"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"stage_three": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						{
+							"stage_three_spawn": "query.variant==3"
+						},
+						{
+							"stage_three": "query.variant==3"
+						},
+						{
+							"stage_three_move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==1||query.variant==2"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.outcast_corrupted.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==1&&query.is_delayed_attacking&&query.variant==1&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"attack_two": "query.mark_variant==2&&query.is_delayed_attacking&&query.variant==1&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"attack_three": "query.mark_variant==3&&query.is_delayed_attacking&&query.variant==1&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"stage_two_attack": "query.is_delayed_attacking&&query.variant==2&&q.property('dk:outcast_corrupted')=='default'"
+						},
+						{
+							"stage_three_attack": "query.is_delayed_attacking&&query.variant==3&&q.property('dk:outcast_corrupted')=='default'"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				},
+				"attack_three": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_three"
+					]
+				},
+				"stage_two_attack": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"stage_two_attack"
+					]
+				},
+				"stage_three_attack": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"stage_three_attack"
+					]
+				}
+			}
+		},
+		"controller.animation.outcast_corrupted.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.variant==1&&query.is_gliding||query.variant==2&&query.is_gliding"
+						},
+						{
+							"swimming": "query.variant==1&&query.is_swimming||query.variant==2&&query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.variant==1&&query.is_swimming||query.variant==2&&query.is_swimming"
+						},
+						{
+							"default": "query.variant==1&&!query.is_gliding||query.variant==2&&!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.variant==1&&query.is_gliding||query.variant==2"
+						},
+						{
+							"default": "query.variant==1&&!query.is_swimming||query.variant==2&&!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

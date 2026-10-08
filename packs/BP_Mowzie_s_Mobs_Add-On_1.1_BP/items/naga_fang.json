@@ -1,0 +1,1 @@
+{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"hf_mzs:naga_fang","menu_category":{"category":"nature"}},"components":{"minecraft:can_destroy_in_creative":true,"minecraft:icon":"hf_mzs:naga_fang","minecraft:max_stack_size":64,"minecraft:display_name":{"value":"item.hf_mzs:naga_fang.name"}}}}

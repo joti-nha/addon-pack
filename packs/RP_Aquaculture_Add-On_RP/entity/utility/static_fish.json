@@ -1,0 +1,105 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tm_aqc:static_fish",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "arapaima": "textures/tm/aqc/entity/fish/fish_longnose_arapaima",
+        "atlantic_cod": "textures/tm/aqc/entity/fish/fish_medium_atlantic_cod",
+        "atlantic_herring": "textures/tm/aqc/entity/fish/fish_small_atlantic_herring",
+        "bayad": "textures/tm/aqc/entity/fish/fish_cat_bayad",
+        "sacramento_blackfish": "textures/tm/aqc/entity/fish/fish_medium_sacramento_blackfish",
+        "bluegill": "textures/tm/aqc/entity/fish/fish_small_bluegill",
+        "nile_tilapia": "textures/tm/aqc/entity/fish/fish_small_nile_tilapia",
+        "brown_shrooma": "textures/tm/aqc/entity/fish/fish_small_brown_shrooma",
+        "brown_trout": "textures/tm/aqc/entity/fish/fish_medium_brown_trout",
+        "nile_perch": "textures/tm/aqc/entity/fish/fish_medium_nile_perch",
+        "carp": "textures/tm/aqc/entity/fish/fish_large_common_carp",
+        "blue_catfish": "textures/tm/aqc/entity/fish/fish_cat_blue_catfish",
+        "florida_gar": "textures/tm/aqc/entity/fish/fish_longnose_florida_gar",
+        "goldfish": "textures/tm/aqc/entity/fish/fish_tiny_goldfish",
+        "largemouth_bass": "textures/tm/aqc/entity/fish/fish_medium_largemouth_bass",
+        "muskellunge": "textures/tm/aqc/entity/fish/fish_longnose_muskellunge",
+        "yellow_perch": "textures/tm/aqc/entity/fish/fish_small_yellow_perch",
+        "pink_salmon": "textures/tm/aqc/entity/fish/fish_medium_pink_salmon",
+        "black_piranha": "textures/tm/aqc/entity/fish/fish_small_black_piranha",
+        "american_pollock": "textures/tm/aqc/entity/fish/fish_medium_american_pollock",
+        "rainbow_trout": "textures/tm/aqc/entity/fish/fish_medium_rainbow_trout",
+        "red_grouper": "textures/tm/aqc/entity/fish/fish_medium_red_grouper",
+        "red_shrooma": "textures/tm/aqc/entity/fish/fish_small_red_shrooma",
+        "smallmouth_bass": "textures/tm/aqc/entity/fish/fish_medium_smallmouth_bass",
+        "synodontis": "textures/tm/aqc/entity/fish/fish_small_synodontis",
+        "tambaqui": "textures/tm/aqc/entity/fish/fish_large_tambaqui",
+        "skipjack_tuna": "textures/tm/aqc/entity/fish/fish_large_skipjack_tuna",
+        "minnow": "textures/tm/aqc/entity/fish/fish_tiny_minnow",
+        "brown_bullhead": "textures/tm/aqc/entity/fish/fish_cat_brown_bullhead",
+        "white_catfish": "textures/tm/aqc/entity/fish/fish_cat_white_catfish",
+        "flathead_catfish": "textures/tm/aqc/entity/fish/fish_cat_flathead_catfish",
+        "airbreathing_catfish": "textures/tm/aqc/entity/fish/fish_cat_airbreathing_catfish",
+        "channel_catfish": "textures/tm/aqc/entity/fish/fish_cat_channel_catfish",
+        "sharptooth_catfish": "textures/tm/aqc/entity/fish/fish_cat_sharptooth_catfish",
+        "bullhead_catfish": "textures/tm/aqc/entity/fish/fish_cat_bullhead_catfish",
+        "yellow_bullhead": "textures/tm/aqc/entity/fish/fish_cat_yellow_bullhead",
+        "atlantic_halibut": "textures/tm/aqc/entity/fish/fish_flat_atlantic_halibut",
+        "pacific_halibut": "textures/tm/aqc/entity/fish/fish_flat_pacific_halibut",
+        "greenland_halibut": "textures/tm/aqc/entity/fish/fish_flat_greenland_halibut",
+        "gizzard_shad": "textures/tm/aqc/entity/fish/fish_tiny_gizzard_shad",
+        "bamboo_spitter": "textures/tm/aqc/entity/fish/fish_tiny_bamboo_spitter",
+        "white_crappie": "textures/tm/aqc/entity/fish/fish_small_white_crappie",
+        "black_crappie": "textures/tm/aqc/entity/fish/fish_small_black_crappie",
+        "pumpkinseed": "textures/tm/aqc/entity/fish/fish_small_pumpkinseed",
+        "redear_sunfish": "textures/tm/aqc/entity/fish/fish_small_redear_sunfish",
+        "green_sunfish": "textures/tm/aqc/entity/fish/fish_small_green_sunfish",
+        "common_bream": "textures/tm/aqc/entity/fish/fish_large_common_bream",
+        "spotted_bass": "textures/tm/aqc/entity/fish/fish_medium_spotted_bass",
+        "mud_sunfish": "textures/tm/aqc/entity/fish/fish_small_mud_sunfish",
+        "grass_pickerel": "textures/tm/aqc/entity/fish/fish_longnose_grass_pickerel",
+        "chain_pickerel": "textures/tm/aqc/entity/fish/fish_longnose_chain_pickerel",
+        "common_shiner": "textures/tm/aqc/entity/fish/fish_tiny_common_shiner",
+        "golden_shiner": "textures/tm/aqc/entity/fish/fish_tiny_golden_shiner",
+        "warmouth": "textures/tm/aqc/entity/fish/fish_small_warmouth",
+        "redfin_pickerel": "textures/tm/aqc/entity/fish/fish_longnose_redfin_pickerel",
+        "striped_bass": "textures/tm/aqc/entity/fish/fish_medium_striped_bass",
+        "yellow_walleye": "textures/tm/aqc/entity/fish/fish_medium_yellow_walleye",
+        "sakurafin": "textures/tm/aqc/entity/fish/fish_small_sakurafin",
+        "blind_creeker": "textures/tm/aqc/entity/fish/fish_cat_blind_creeker",
+        "pink_shrimp": "textures/tm/aqc/entity/fish/fish_shrimp_pink_shrimp",
+        "rusty_crayfish": "textures/tm/aqc/entity/fish/fish_shrimp_rusty_crayfish",
+        "devil_crayfish": "textures/tm/aqc/entity/fish/fish_shrimp_devil_crayfish",
+        "american_lobster": "textures/tm/aqc/entity/fish/fish_shrimp_american_lobster",
+        "giant_tiger_prawn": "textures/tm/aqc/entity/fish/fish_shrimp_giant_tiger_prawn",
+        "hard_clam": "textures/tm/aqc/entity/fish/bivalve/hard_clam"
+
+      },
+      "geometry": {
+        "fish_tiny": "geometry.tm_aqc.fish_tiny_ui",
+        "fish_small": "geometry.tm_aqc.fish_small_ui",
+        "fish_medium": "geometry.tm_aqc.fish_medium_ui",
+        "fish_large": "geometry.tm_aqc.fish_large_ui",
+        "fish_longnose": "geometry.tm_aqc.fish_longnose_ui",
+        "fish_cat": "geometry.tm_aqc.fish_cat_ui",
+        "fish_flat": "geometry.tm_aqc.fish_flat_ui",
+        "fish_shrimp": "geometry.tm_aqc.fish_shrimp_ui",
+        "fish_clam": "geometry.tm_aqc.fish_bivalve_ui"
+      },
+      "scripts": {
+        "initialize": [
+            "v.rot = 0;"
+        ],
+        "pre_animation": [
+            "v.rot = query.property('tm_aqc:rot');"
+        ],
+        "animate": ["rot"]
+      },
+      "animations": {
+        "rot": "animation.tm_aqc.static_fish.rot"
+      },
+      "render_controllers": [
+        "controller.render.static_fish"
+      ]
+    }
+  }
+}

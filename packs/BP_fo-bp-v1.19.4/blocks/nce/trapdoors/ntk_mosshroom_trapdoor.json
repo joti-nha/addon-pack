@@ -1,0 +1,450 @@
+{
+	"format_version": "1.26.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "ntk:mosshroom_trapdoor",
+			"menu_category": {
+				"category": "none",
+				"group": "minecraft:none",
+				"is_hidden_in_commands": true
+			},
+			"traits": {
+			  "minecraft:placement_direction": {
+					"enabled_states": [
+						"minecraft:cardinal_direction"
+					]
+				},
+				"minecraft:placement_position": {
+					"enabled_states": [
+						"minecraft:vertical_half"
+					]
+				}
+			},
+			"states": {
+				"ntk:open_bit": [ false, true ],
+				"ntk:powered_bit": [ false, true ]
+			}
+		},
+		"components": {
+		  "minecraft:display_name": "%tile.ntk.mosshroom_trapdoor.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_trapdoor"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_mosshroom_trapdoor",
+          "render_method": "alpha_test_single_sided",
+          "tint_method": "none",
+          "ambient_occlusion": 0.1,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+		  "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_trapdoor"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_mosshroom_trapdoor",
+            "render_method": "alpha_test_single_sided",
+            "tint_method": "none",
+            "ambient_occlusion": 0.1,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_mosshroom_trapdoor",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#70922D"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+		  "minecraft:collision_box": [
+        {
+					"origin": [ -8, 0, -8 ],
+					"size": [ 16, 3, 16 ]
+				}
+      ],
+			"minecraft:selection_box": {
+				"origin": [ -8, 0, -8 ],
+				"size": [ 16, 3, 16 ]
+			},
+		  "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20,
+        "lava_flammable": "always"
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 15.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 2.0
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bassattack",
+        "up": "note.bassattack"
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:redstone_consumer": {
+        "min_power": 1,
+        "propagates_power": false
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nce/blocks/ntk_mosshroom_trapdoor.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:axe_diggable",
+        "ntk:interactable_block",
+        "ntk:solid_block",
+        "ntk:woods",
+        "ntk:mosshroom_woods",
+        "ntk:trapdoor",
+        "ntk:wooden_trapdoor",
+        "ntk:mosshroom_trapdoor",
+        
+        "minecraft:is_axe_item_destructible",
+        "minecraft:one_way_collidable"
+      ],
+      "ntk:trapdoor_on_player_interact": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:mosshroom_trapdoor",
+          "block_state": "ntk:open_bit",
+          "state_value": false,
+          "fail_on_sneaking": false,
+          "change_block": "ntk:mosshroom_trapdoor",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:open_bit",
+          "change_state_value": true,
+          "sound_effect": "open.nether_wood_trapdoor",
+          "sound_pitch_min": 0.9,
+          "sound_pitch_max": 1.0,
+          "sound_volume": 0.9
+        },
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:mosshroom_trapdoor",
+          "block_state": "ntk:open_bit",
+          "state_value": true,
+          "fail_on_sneaking": false,
+          "change_block": "ntk:mosshroom_trapdoor",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:open_bit",
+          "change_state_value": false,
+          "sound_effect": "close.nether_wood_trapdoor",
+          "sound_pitch_min": 0.9,
+          "sound_pitch_max": 1.0,
+          "sound_volume": 0.9
+        }
+      ],
+      "ntk:trapdoor_on_redstone_update": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:mosshroom_trapdoor",
+          "block_state": "ntk:open_bit",
+          "state_value": false,
+          "change_block": "ntk:mosshroom_trapdoor",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:open_bit",
+          "change_state_value": true,
+          "sound_effect": "open.nether_wood_trapdoor",
+          "sound_pitch_min": 0.9,
+          "sound_pitch_max": 1.0,
+          "sound_volume": 0.9
+        },
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:mosshroom_trapdoor",
+          "block_state": "ntk:open_bit",
+          "state_value": true,
+          "change_block": "ntk:mosshroom_trapdoor",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:open_bit",
+          "change_state_value": false,
+          "sound_effect": "close.nether_wood_trapdoor",
+          "sound_pitch_min": 0.9,
+          "sound_pitch_max": 1.0,
+          "sound_volume": 0.9
+        }
+      ]
+		},
+		"permutations": [
+		  {
+				"condition": "query.block_state('ntk:powered_bit') == true",
+				"components": {
+					"minecraft:tick": {
+						"looping": true,
+						"interval_range": [ 4, 4 ]
+					},
+					"ntk:trapdoor_on_tick": [
+						{
+							"event_chance": 100.0,
+							"block_name": "ntk:mosshroom_trapdoor",
+							"block_state": "ntk:open_bit",
+							"state_value": false,
+							"change_block": "ntk:mosshroom_trapdoor",
+							"change_block_chance": 100.0,
+							"change_block_state": "ntk:open_bit",
+							"change_state_value": false,
+							"sound_effect": "close.nether_wood_trapdoor",
+							"sound_pitch_min": 0.9,
+							"sound_pitch_max": 1.0,
+							"sound_volume": 0.9
+						},
+						{
+							"event_chance": 100.0,
+							"block_name": "ntk:mosshroom_trapdoor",
+							"block_state": "ntk:open_bit",
+							"state_value": true,
+							"change_block": "ntk:mosshroom_trapdoor",
+							"change_block_chance": 100.0,
+							"change_block_state": "ntk:open_bit",
+							"change_state_value": false,
+							"sound_effect": "close.nether_wood_trapdoor",
+							"sound_pitch_min": 0.9,
+							"sound_pitch_max": 1.0,
+							"sound_volume": 0.9
+						}
+					]
+				}
+			},
+			
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'north' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 0, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'north' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"north"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 90, 0, 180 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'east' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, -90, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'east' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"east"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 90, 90 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'south' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 180, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'south' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"south"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ -90, 0, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'west' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 90, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'bottom' && query.block_state('minecraft:cardinal_direction') == 'west' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"west"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, -90, -90 ]
+					}
+				}
+			},
+			
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'north' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 0, 180 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'north' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"north"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ -270, 0, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'east' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 180, -270, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'east' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"east"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 0, 270, 90 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'south' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 180, 0, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'south' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"south"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 270, 0, -180 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'west' && query.block_state('ntk:open_bit') == false",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "none"
+					},
+					"minecraft:transformation": {
+						"rotation": [ 180, 270, 0 ]
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('minecraft:vertical_half') == 'top' && query.block_state('minecraft:cardinal_direction') == 'west' && query.block_state('ntk:open_bit') == true",
+				"components": {
+					"minecraft:connection_rule": {
+						"accepts_connections_from": "all",
+						"enabled_directions": [
+							"west"
+						]
+					},
+					"minecraft:transformation": {
+						"rotation": [ 180, -270, -270 ]
+					}
+				}
+			}
+		]
+	}
+}

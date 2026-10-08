@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:structure_set": {
+		"description": {
+			"identifier": "mnra_cata:ancient_chamber"
+		},
+		"placement": {
+			"type": "minecraft:random_spread",
+			"salt": 48909782,
+			"separation": 45,
+			"spacing": 100,
+			"spread_type": "linear"
+		},
+		"structures": [
+			{
+				"structure": "mnra_cata:ancient_chamber",
+				"weight": 1
+			}
+		]
+	}
+}

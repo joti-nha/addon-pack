@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_nether_soul_wisp",
+    "heightmap": "ntk_nether_soul_wisp_height",
+    "metalness_emissive_roughness": "ntk_nether_soul_wisp_mer"
+  }
+}

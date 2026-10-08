@@ -1,0 +1,35 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_backpack_upgrade_iron"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "IFI",
+            "ITI",
+            "III"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_ingot"
+            },
+            "F": {
+                "item": "minecraft:furnace"
+            },
+            "T": {
+                "item": "otg:backpack_upgrade_template"
+            }
+        },
+        "result": {
+            "item": "otg:backpack_upgrade_iron"
+        },
+        "unlock": [
+            {
+                "item": "otg:backpack_upgrade_template"
+            }
+        ]
+    }
+}

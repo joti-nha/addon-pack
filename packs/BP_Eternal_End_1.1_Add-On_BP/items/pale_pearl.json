@@ -1,0 +1,1 @@
+{"format_version":"1.21.50","minecraft:item":{"description":{"identifier":"panascais_end:pale_pearl","menu_category":{"category":"items"}},"components":{"minecraft:max_stack_size":16,"minecraft:icon":{"textures":{"default":"panascais_end:pale_pearl"}},"minecraft:custom_components":["panascais_end:pale_pearl"]}}}

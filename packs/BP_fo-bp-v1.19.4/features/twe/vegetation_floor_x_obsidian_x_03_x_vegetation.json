@@ -1,0 +1,39 @@
+// Forsaken Odyssey:
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "ntk:twe/vegetation_floor_x_obsidian_x_03_x_vegetation"
+    },
+    "ground_block": "minecraft:obsidian",
+    "replaceable_blocks": [
+      // Soil-type Blocks:
+      "minecraft:gravel",
+      "minecraft:soul_sand",
+      "minecraft:soul_soil",
+      // Stone-type Blocks:
+      //"ntk:bauxite",
+      //"ntk:mauve_turfed_purpurite",
+      //"ntk:purpurite",
+      "minecraft:blackstone",
+      "minecraft:end_stone",
+      "minecraft:magma",
+      "minecraft:netherrack"
+    ],
+    "vegetation_feature": "ntk:twe/vegetation_floor_x_obsidian_x_02_x_snap",
+    "vegetation_chance": 1.0,
+    "surface": "floor",
+    "vertical_range": 4,
+    "horizontal_radius": {
+      "range_min": 1,
+      "range_max": 2
+    },
+    "depth": {
+      "range_min": 2,
+      "range_max": 4
+    },
+    "extra_deep_block_chance": 1.0,
+    "extra_edge_column_chance": 0.1,
+    "waterlogged": false
+  }
+}

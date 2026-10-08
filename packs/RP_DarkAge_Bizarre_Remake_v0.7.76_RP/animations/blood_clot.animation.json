@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.blood_clot.static": {
+			"loop": true,
+			"animation_length": 0.72,
+			"bones": {
+				"bone": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.72": [
+							360,
+							360,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

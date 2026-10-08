@@ -1,0 +1,62 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "panascais_end_jellyfish_head:entity_alphatest": {
+            "blendSrc": "One",
+            "blendDst": "One"
+        },
+        "panascais_end_portal:entity_beam_additive": {
+            "-defines": [
+                "FANCY",
+                "ALPHA_TEST"
+            ],
+            "+states": ["DisableCulling"]
+        },
+        "panascais_end_companion_outline_base:enderman": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "stencilWriteMask": 2,
+            "stencilRef": 2
+        },
+
+        "panascais_end_companion_outline:entity_alphablend": {
+            "+states": [
+                "EnableStencilTest",
+                "InvertCulling"
+            ],
+            "-states": [
+                "DisableCulling"
+            ],
+            "+defines": [
+                "USE_OVERLAY",
+                "USE_EMISSIVE"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            // "depthFunc": "Always",
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "backFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 2,
+            "stencilReadMask": 2
+        }
+    }
+}

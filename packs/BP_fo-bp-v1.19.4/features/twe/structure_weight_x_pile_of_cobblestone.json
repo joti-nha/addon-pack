@@ -1,0 +1,20 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/structure_weight_x_pile_of_cobblestone"
+    },
+    "features": [
+      [ "ntk:twe/structure_x_pile_of_cobblestone_01", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_02", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_03", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_04", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_05", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_06", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_07", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_08", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_09", 100 ],
+      [ "ntk:twe/structure_x_pile_of_cobblestone_10", 100 ]
+    ]
+  }
+}

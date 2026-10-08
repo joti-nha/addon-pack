@@ -1,0 +1,355 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 15,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:bamboo", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:brown_mushroom", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:red_mushroom", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:tallgrass:1", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:tallgrass:2", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:allium", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:azure_bluet", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:blue_orchid", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cornflower", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:yellow_flower", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:double_plant:1", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:lily_of_the_valley", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:oxeye_daisy", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:double_plant:5", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:pink_petals", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:poppy", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:double_plant:4", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:double_plant:0", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:orange_tulip", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:pink_tulip", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:red_tulip", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:white_tulip", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:glow_lichen", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:vine", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:azalea", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:azalea_leaves", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:azalea_leaves_flowered", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:big_dripleaf", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cactus", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cherry_leaves", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cherry_sapling", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:deadbush", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:flowering_azalea", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:hanging_roots", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves:0", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves:1", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves:2", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves:3", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves2:0", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:leaves2:1", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:mangrove_propagule", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:mangrove_leaves", "quantity": 64 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:moss_carpet", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:pitcher_plant", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:diamond", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:pitcher_pod", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:0", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:1", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:2", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:3", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:4", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sapling:5", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:small_dripleaf_block", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:spore_blossom", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:torchflower", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:diamond", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:torchflower_seeds", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:waterlily", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:wither_rose", "quantity": 4 }],
+              "gives": [{ "item": "minecraft:diamond", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

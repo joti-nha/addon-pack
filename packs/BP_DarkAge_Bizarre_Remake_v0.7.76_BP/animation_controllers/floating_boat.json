@@ -1,0 +1,121 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.floating_boat.test_rider": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"has_rider": "q.has_rider"
+						}
+					]
+				},
+				"has_rider": {
+					"transitions": [
+						{
+							"default": "!q.has_rider"
+						}
+					],
+					"on_entry": [
+						"/tag @s add has_rider"
+					],
+					"on_exit": [
+						"/tag @s remove has_rider"
+					]
+				}
+			}
+		},
+		"controller.animation.base": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"base": "1"
+						}
+					],
+					"on_entry": [
+						"/function floating_boat"
+					]
+				},
+				"base": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/function floating_boat"
+					]
+				}
+			}
+		},
+		"controller.animation.floating_boat.flying": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"jumping_1": "!q.is_on_ground"
+						}
+					]
+				},
+				"jumping_1": {
+					"transitions": [
+						{
+							"transition_to_default": "q.is_on_ground"
+						},
+						{
+							"jumping_2": "true"
+						}
+					]
+				},
+				"jumping_2": {
+					"transitions": [
+						{
+							"transition_to_default": "q.is_on_ground&&!query.is_in_water"
+						},
+						{
+							"jumping_1": "true"
+						}
+					]
+				},
+				"transition_to_default": {
+					"transitions": [
+						{
+							"transition_to_default": "true"
+						},
+						{
+							"default": "!q.is_on_ground||query.is_in_water"
+						}
+					],
+					"on_entry": [
+						"/effect @s clear"
+					]
+				}
+			}
+		},
+		"controller.animation.rider_sentinels": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"base": "1"
+						}
+					]
+				},
+				"base": {
+					"transitions": [
+						{
+							"default": "false"
+						}
+					],
+					"on_entry": [
+						"/ride @s summon_rider dk:sentinel_soldier",
+						"/ride @s summon_rider dk:sentinel_soldier"
+					]
+				}
+			}
+		}
+	}
+}

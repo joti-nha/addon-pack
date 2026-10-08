@@ -1,0 +1,24 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_warthog": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.textures[query.variant]"
+      ],
+      "arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.warthog_red",
+						"Texture.warthog_gray"
+					]
+				}
+			}
+    }
+  }
+}

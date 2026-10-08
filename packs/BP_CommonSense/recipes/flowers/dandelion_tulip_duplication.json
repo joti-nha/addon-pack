@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:dandelion_duplication"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:dandelion"
+			},
+			{
+				"item": "minecraft:bone_meal"
+			}
+		],
+		"result": {
+			"item": "minecraft:dandelion",
+			"count": 2
+		}
+	}
+}

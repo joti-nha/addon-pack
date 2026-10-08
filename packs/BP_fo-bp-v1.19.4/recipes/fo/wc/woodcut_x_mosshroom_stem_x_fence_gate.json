@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_mosshroom_stem_x_fence_gate"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "mosshroom_fence_gate",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:mosshroom_stem"
+      }
+    },
+    "result": {
+      "item": "ntk:mosshroom_fence_gate",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:mosshroom_stem"
+      }
+    ]
+  }
+}

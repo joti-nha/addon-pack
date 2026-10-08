@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.holy_sword.first_person": {
+			"loop": true,
+			"bones": {
+				"sword": {
+					"rotation": [
+						"c.is_first_person?-60.8369:0",
+						"c.is_first_person?-10.719:0",
+						"c.is_first_person?-46.6108:0"
+					],
+					"position": [
+						"c.is_first_person?-1:0",
+						"c.is_first_person?2:0",
+						"c.is_first_person?7:0"
+					],
+					"scale": "c.is_first_person ? 1 : 1"
+				}
+			}
+		},
+		"animation.holy_sword.holy_sword": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

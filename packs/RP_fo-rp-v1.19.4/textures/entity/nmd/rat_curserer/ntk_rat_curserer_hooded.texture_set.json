@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_rat_curserer_hooded",
+		"heightmap": "ntk_rat_curserer_hooded_height",
+		"metalness_emissive_roughness": "ntk_rat_curserer_hooded_mer"
+	}
+}

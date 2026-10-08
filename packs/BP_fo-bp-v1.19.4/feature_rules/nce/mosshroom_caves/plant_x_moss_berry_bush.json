@@ -1,0 +1,58 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:plant_x_moss_berry_bush",
+      "places_feature": "ntk:nce/mosshroom_caves/plant_x_moss_berry_bush_x_02_x_scatter"
+    },
+    "conditions": {
+      "placement_pass": "after_underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mosshroom_caves"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mossy_forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "swamp"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mangrove_swamp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 13.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -54, 8 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

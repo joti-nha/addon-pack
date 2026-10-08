@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/ruins_mercenary_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/ruins_mercenary_one_feature_mcstructure",
+				60
+			],
+			[
+				"dk:structures/ruins_mercenary_three_feature_mcstructure",
+				35
+			]
+		]
+	}
+}

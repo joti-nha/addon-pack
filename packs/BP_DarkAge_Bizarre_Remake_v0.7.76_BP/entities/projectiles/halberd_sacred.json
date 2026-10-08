@@ -1,0 +1,302 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"runtime_identifier": "snowball",
+			"identifier": "dk:halberd_sacred",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"dk:exploding": {
+				"minecraft:explode": {
+					"fuse_length": 0.21,
+					"fuse_lit": true,
+					"power": 6,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"dk:projectile_halberd_sacred_explosion": {
+				"minecraft:scale": {
+					"value": 2
+				},
+				"minecraft:timer": {
+					"time": 20,
+					"looping": true,
+					"time_down_event": {
+						"event": "minecraft:despawn_self",
+						"target": "self"
+					}
+				},
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"damage": 15,
+							"knockback": true,
+							"catch_fire": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"catch_fire": {
+							"fire_affected_by_griefing": true
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						},
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "dk:explode_halberd_sacred",
+								"target": "self"
+							}
+						}
+					},
+					"liquid_inertia": 0.99,
+					"hit_sound": "item.trident.hit",
+					"hit_ground_sound": "item.trident.hit_ground",
+					"power": 4,
+					"gravity": 0.1,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"stop_on_hurt": false,
+					"anchor": 2,
+					"should_bounce": true,
+					"multiple_targets": true,
+					"offset": [
+						0,
+						-0.1,
+						0
+					]
+				}
+			},
+			"dk:projectile_halberd_sacred_explosion_two": {
+				"minecraft:scale": {
+					"value": 3
+				},
+				"minecraft:timer": {
+					"time": 20,
+					"looping": true,
+					"time_down_event": {
+						"event": "minecraft:despawn_self",
+						"target": "self"
+					}
+				},
+				"minecraft:rideable": {
+					"family_types": [
+						"sentinel"
+					],
+					"seat_count": 1,
+					"seats": [
+						{
+							"position": [
+								0,
+								0,
+								0
+							]
+						}
+					]
+				},
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"damage": 15,
+							"knockback": true,
+							"catch_fire": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"catch_fire": {
+							"fire_affected_by_griefing": true
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						},
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "dk:explode_halberd_sacred_two",
+								"target": "self"
+							}
+						}
+					},
+					"liquid_inertia": 0.99,
+					"hit_sound": "item.trident.hit",
+					"hit_ground_sound": "item.trident.hit_ground",
+					"power": 4,
+					"gravity": 0.1,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"stop_on_hurt": false,
+					"anchor": 2,
+					"should_bounce": true,
+					"homing": true,
+					"multiple_targets": true,
+					"offset": [
+						0,
+						-0.1,
+						0
+					]
+				}
+			},
+			"dk:projectile_halberd_sacred_common": {
+				"minecraft:timer": {
+					"time": 5,
+					"looping": true,
+					"time_down_event": {
+						"event": "minecraft:despawn_self",
+						"target": "self"
+					}
+				},
+				"minecraft:projectile": {
+					"on_hit": {
+						"impact_damage": {
+							"damage": 12,
+							"knockback": true,
+							"catch_fire": true,
+							"semi_random_diff_damage": false,
+							"destroy_on_hit": false
+						},
+						"catch_fire": {
+							"fire_affected_by_griefing": true
+						},
+						"stick_in_ground": {
+							"shake_time": 0
+						}
+					},
+					"liquid_inertia": 0.99,
+					"hit_sound": "item.trident.hit",
+					"hit_ground_sound": "item.trident.hit_ground",
+					"power": 4,
+					"gravity": 0.1,
+					"uncertainty_base": 1,
+					"uncertainty_multiplier": 0,
+					"stop_on_hurt": false,
+					"anchor": 2,
+					"should_bounce": true,
+					"multiple_targets": true,
+					"offset": [
+						0,
+						-0.1,
+						0
+					]
+				}
+			},
+			"despawn_self": {
+				"minecraft:despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"sentinel",
+					"spear",
+					"projectile",
+					"dk"
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "unknown"
+						},
+						"add": {
+							"component_groups": [
+								"dk:projectile_halberd_sacred_common"
+							]
+						}
+					}
+				]
+			},
+			"dk:halberd_sacred_common": {
+				"add": {
+					"component_groups": [
+						"dk:projectile_halberd_sacred_common"
+					]
+				}
+			},
+			"dk:halberd_sacred_special": {
+				"add": {
+					"component_groups": [
+						"dk:projectile_halberd_sacred_explosion"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute at @e[family=!sentinel,family=!projectile,type=!tnt,type=!thrown_trident,family=!minecart,type=!boat,type=!painting,type=!dk:halberd_sacred,type=!item,type=!xp_orb,type=!arrow,type=!item,type=!fishing_hook,type=!armor_stand,family=!inanimated,type=!cow,type=!sheep,type=!pig,type=!chicken,type=!zombie,type=!skeleton,type=!spider,type=!squid,type=!wolf,type=!cod,type=!tropicalfish,type=!salmon,type=!pufferfish,c=1] run tp @s ~ ~40 ~ facing @e[c=1]"
+					]
+				}
+			},
+			"dk:halberd_sacred_ally": {
+				"add": {
+					"component_groups": [
+						"dk:projectile_halberd_sacred_explosion"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute at @e[tag=!none_halberd_two,family=!projectile,type=!tnt,type=!thrown_trident,family=!minecart,type=!boat,type=!painting,type=!dk:halberd_sacred,type=!item,type=!xp_orb,type=!arrow,type=!item,type=!fishing_hook,type=!armor_stand,c=1] run tp @s ~ ~40 ~ facing @e[c=1]",
+						"tag @a remove none_halberd_two"
+					]
+				}
+			},
+			"dk:halberd_sacred_special_two": {
+				"add": {
+					"component_groups": [
+						"dk:projectile_halberd_sacred_explosion_two"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"execute at @e[family=!sentinel,family=!projectile,type=!tnt,type=!thrown_trident,family=!minecart,type=!boat,type=!painting,type=!dk:halberd_sacred,type=!item,type=!xp_orb,type=!arrow,type=!item,type=!fishing_hook,type=!armor_stand,family=!inanimated,type=!cow,type=!sheep,type=!pig,type=!chicken,type=!zombie,type=!skeleton,type=!spider,type=!squid,type=!wolf,type=!cod,type=!tropicalfish,type=!salmon,type=!pufferfish,c=1] run tp @s ~ ~55 ~ facing @e[c=1]",
+						"ride @e[type=dk:sentinel,c=1] start_riding @s teleport_rider until_full"
+					]
+				}
+			},
+			"dk:explode_halberd_sacred": {
+				"add": {
+					"component_groups": [
+						"dk:exploding"
+					]
+				}
+			},
+			"dk:explode_halberd_sacred_two": {
+				"add": {
+					"component_groups": [
+						"dk:exploding"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"tp @e[type=dk:sentinel,c=1] @s",
+						"effect @e[type=dk:sentinel,c=1] clear",
+						"playanimation @e[type=dk:sentinel,c=1] animation.sentinel.ground"
+					]
+				}
+			},
+			"minecraft:despawn_self": {
+				"add": {
+					"component_groups": [
+						"despawn_self"
+					]
+				}
+			}
+		}
+	}
+}

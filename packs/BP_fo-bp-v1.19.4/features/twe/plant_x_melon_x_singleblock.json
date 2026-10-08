@@ -1,0 +1,63 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_melon_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:melon_block",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air",
+      // Grass:
+      { "tags": "query.all_tags('ntk:grass')" },
+      "minecraft:bush",
+      "minecraft:fern",
+      "minecraft:short_dry_grass",
+      "minecraft:short_grass",
+      "minecraft:tall_dry_grass",
+      // Sprouts:
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      // Flowers:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Plants:
+      { "tags": "query.all_tags('ntk:hanging_moss')" },
+      "minecraft:glow_lichen",
+      "minecraft:hanging_roots",
+      "minecraft:leaf_litter",
+      "minecraft:pale_hanging_moss",
+      "minecraft:vine",
+      // Environmental Blocks:
+      "minecraft:resin_clump",
+      "minecraft:snow_layer"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        // Soil-type Blocks:
+        { "tags": "query.all_tags('ntk:dirt', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:bryumed_blocks', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:grassed_blocks', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:mauve_turfed_blocks', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:mossed_blocks', 'ntk:full_block')" },
+        { "tags": "query.all_tags('ntk:myceliated_blocks', 'ntk:full_block')" },
+        "minecraft:coarse_dirt",
+			  "minecraft:dirt",
+				"minecraft:dirt_with_roots",
+				"minecraft:grass_block",
+				"minecraft:moss_block",
+        "minecraft:mycelium",
+				"minecraft:pale_moss_block",
+				"minecraft:podzol"
+			]
+		}
+  }
+}

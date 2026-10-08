@@ -1,0 +1,42 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_fisherman_hat"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "fisherman_hat",
+    "assume_symmetry": true,
+    "pattern": [
+      "LSL",
+      "lll"
+    ],
+    "key": {
+      "l": {
+        "item": "ntk:leather_scrap"
+      },
+      "L": {
+        "item": "minecraft:leather"
+      },
+      "S": {
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "ntk:fisherman_hat",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:leather_scrap"
+      },
+      {
+        "item": "minecraft:leather"
+      },
+      {
+        "item": "minecraft:string"
+      }
+    ]
+  }
+}

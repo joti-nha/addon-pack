@@ -1,0 +1,383 @@
+{
+    "format_version": "1.20.20",
+    "sound_definitions": {
+        "otg.ui_record.13": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/13",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.cat": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/cat",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.blocks": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/blocks",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.chirp": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/chirp",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.far": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/far",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.mall": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/mall",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.mellohi": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/mellohi",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.stal": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/stal",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.strad": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/strad",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.ward": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/ward",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.11": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/11",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.wait": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/wait",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.otherside": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/otherside",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.5": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/5",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.pigstep": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/pigstep_master",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.relic": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/relic",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.creator": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/creator",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.creator_music_box": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/creator_music_box",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.precipice": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/precipice",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.tears": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/tears",
+                    "stream": true
+                }
+            ]
+        },
+        "otg.ui_record.lava_chicken": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/lava_chicken",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - 13": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/13",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - cat": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/cat",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - blocks": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/blocks",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - chirp": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/chirp",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - far": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/far",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - mall": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/mall",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - mellohi": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/mellohi",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - stal": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/stal",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - strad": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/strad",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - ward": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/ward",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - 11": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/11",
+                    "stream": true
+                }
+            ]
+        },
+        "C418 - wait": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/wait",
+                    "stream": true
+                }
+            ]
+        },
+        "Lena Raine - otherside": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/otherside",
+                    "stream": true
+                }
+            ]
+        },
+        "Samuel \u00c5berg - 5": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/5",
+                    "stream": true
+                }
+            ]
+        },
+        "Lena Raine - Pigstep": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/pigstep_master",
+                    "stream": true
+                }
+            ]
+        },
+        "Aaron Cherof - Relic": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/relic",
+                    "stream": true
+                }
+            ]
+        },
+        "Lena Raine - Creator": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/creator",
+                    "stream": true
+                }
+            ]
+        },
+        "Lena Raine - Creator (Music Box)": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/creator_music_box",
+                    "stream": true
+                }
+            ]
+        },
+        "Aaron Cherof - Precipice": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/precipice",
+                    "stream": true
+                }
+            ]
+        },
+        "Amos Roddy - Tears": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/tears",
+                    "stream": true
+                }
+            ]
+        },
+        "Hyper Potions - Lava Chicken": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/music/game/records/lava_chicken",
+                    "stream": true
+                }
+            ]
+        }
+    }
+}

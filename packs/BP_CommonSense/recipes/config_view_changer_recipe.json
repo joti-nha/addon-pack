@@ -1,0 +1,27 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:config_view_changer_recipe"
+		},
+		"priority": 1,
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"SPS"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			},
+			"P": {
+				"item": "planks"
+			}
+		},
+		"result": {
+			"item": "bv:view",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,152 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.outcast": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"chest": "query.is_chested"
+				},
+				{
+					"torch": "query.is_illager_captain"
+				},
+				{
+					"bone": "query.is_illager_captain"
+				},
+				{
+					"bone2": "query.is_illager_captain"
+				},
+				{
+					"hide": "q.property('dk:factions') == 'outcast_migrant'"
+				}
+			]
+		},
+		"controller.render.outcast_tunica": {
+			"geometry": "geometry.tunica",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"q.property('dk:factions')=='outcast_faction_sentinel'?texture.tunica_s:texture.tunica"
+			]
+		},
+		"controller.render.outcast_banner": {
+			"geometry": "geometry.banner",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"query.mark_variant==3?texture.banner_u:(query.mark_variant==2?texture.banner_s:texture.banner_e)"
+			]
+		},
+		"controller.render.outcast_corrupted": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"wheel": "q.property('dk:outcast_corrupted') == 'wheel'"
+				},
+				{
+					"centipedeGeneral": "query.variant == 3"
+				},
+				{
+					"pawOne": "query.variant == 3"
+				},
+				{
+					"pawTwo": "query.variant == 3"
+				},
+				{
+					"pawThree": "query.variant == 3"
+				},
+				{
+					"pawFour": "query.variant == 3"
+				},
+				{
+					"pawFive": "query.variant == 3"
+				},
+				{
+					"pawSix": "query.variant == 3"
+				},
+				{
+					"centipedeOne": "query.variant == 3"
+				},
+				{
+					"centipedeTwo": "query.variant == 3"
+				},
+				{
+					"leftClaw": "query.variant == 3"
+				},
+				{
+					"rightClaw": "query.variant == 3"
+				},
+				{
+					"loincloth": "query.variant == 1"
+				},
+				{
+					"rightLeg": "query.variant == 1"
+				},
+				{
+					"legOne": "query.variant == 1"
+				},
+				{
+					"footOne": "query.variant == 1"
+				},
+				{
+					"leftLeg": "query.variant == 1"
+				},
+				{
+					"legTwo": "query.variant == 1"
+				},
+				{
+					"footTwo": "query.variant == 1"
+				},
+				{
+					"body": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"leftArm": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"armTwo": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"clawsleft": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"rightArm": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"armOne": "query.variant == 1 || query.variant == 2"
+				},
+				{
+					"clawsright": "query.variant == 1 || query.variant == 2"
+				}
+			]
+		}
+	}
+}

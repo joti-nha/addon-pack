@@ -1,0 +1,46 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mnra_cata:dungeon_spawner_basic"
+		},
+		"components": {
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 99999
+			},
+			"minecraft:geometry": {
+				"identifier": "minecraft:geometry.full_block"
+			},
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mnra_cata_dungeon_spawner_basic_side",
+					"render_method": "alpha_test"
+				},
+				"up": {
+					"texture": "mnra_cata_dungeon_spawner_basic_top",
+					"render_method": "alpha_test"
+				},
+				"down": {
+					"texture": "mnra_cata_dungeon_spawner_basic_bottom",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:loot": "loot_tables/minera/cata/empty.json",
+			"minecraft:movable": {
+				"movement_type": "immovable",
+				"sticky": "none"
+			},
+			"component:dungeon_spawner_flame": {},
+			"minecraft:light_emission": 5,
+			"minecraft:tick": {
+				"looping": true,
+				"interval_range": [
+					60,
+					60
+				]
+			},
+			"component:is_mob_spawner": {}
+		}
+	}
+}

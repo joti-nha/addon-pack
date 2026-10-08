@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","minecraft:attachable":{"description":{"identifier":"panascais_end:void_dragon_head","materials":{"default":"enderman"},"textures":{"default":"textures/panascais/end/entity/void_dragon"},"geometry":{"default":"geometry.panascais_end.void_dragon_head"},"scripts":{"scale":"3"},"render_controllers":["controller.render.panascais_common.default"]}}}

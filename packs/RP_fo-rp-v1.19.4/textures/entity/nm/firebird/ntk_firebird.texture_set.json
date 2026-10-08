@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_firebird",
+    "heightmap": "ntk_firebird_height",
+    "metalness_emissive_roughness": "ntk_firebird_mer"
+  }
+}

@@ -1,0 +1,56 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.shield_glow",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [0, 1, 0]
+			},
+			"bones": [
+				{
+					"name": "all_shields",
+					"pivot": [0, 21, 0]
+				},
+				{
+					"name": "shield",
+					"parent": "all_shields",
+					"pivot": [0, 21.5, -16],
+					"cubes": [
+						{"origin": [-7, 10.5, -17], "size": [14, 22, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shield2",
+					"parent": "all_shields",
+					"pivot": [0, 21.5, 18],
+					"rotation": [0, 180, 0],
+					"cubes": [
+						{"origin": [-7, 10.5, 17], "size": [14, 22, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shield3",
+					"parent": "all_shields",
+					"pivot": [17, 21.5, 0],
+					"rotation": [0, -90, 0],
+					"cubes": [
+						{"origin": [10, 10.5, -1], "size": [14, 22, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "shield4",
+					"parent": "all_shields",
+					"pivot": [-17, 21.5, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{"origin": [-24, 10.5, -1], "size": [14, 22, 2], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

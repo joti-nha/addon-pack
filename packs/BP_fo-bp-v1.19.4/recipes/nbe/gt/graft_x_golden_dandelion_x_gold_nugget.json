@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_golden_dandelion_x_gold_nugget"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "golden_dandelion",
+    "assume_symmetry": true,
+    "pattern": [
+      " G ",
+      "GDG",
+      " G "
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:dandelion"
+      },
+      "G": {
+        "item": "minecraft:gold_nugget"
+      }
+    },
+    "result": {
+      "item": "minecraft:golden_dandelion",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:dandelion"
+      },
+      {
+        "item": "minecraft:gold_nugget"
+      }
+    ]
+  }
+}

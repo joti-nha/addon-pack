@@ -1,0 +1,28 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_mosshroom_trapdoor"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"PPP",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "ntk:mosshroom_planks"
+			}
+		},
+		"result": {
+			"item": "ntk:mosshroom_trapdoor",
+			"count": 2
+		},
+    "unlock": [
+      {
+        "item": "ntk:mosshroom_planks"
+      }
+    ]
+	}
+}

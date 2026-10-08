@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_golden_piglin_chief_trophy"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "golden_piglin_chief_trophy",
+    "assume_symmetry": false,
+    "pattern": [
+      " T",
+      "TG"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:iron_piglin_chief_trophy"
+      },
+      "G": {
+        "item": "minecraft:gold_block"
+      }
+    },
+    "result": {
+      "item": "ntk:golden_piglin_chief_trophy",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:iron_piglin_chief_trophy"
+      },
+      {
+        "item": "minecraft:gold_block"
+      }
+    ]
+  }
+}

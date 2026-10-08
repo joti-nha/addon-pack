@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_deepslate_brick_wall_x_hanging_moss"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_deepslate_brick_wall",
+    "ingredients": [
+      {
+        "item": "minecraft:deepslate_brick_wall",
+        "count": 1
+      },
+      {
+        "item": "ntk:hanging_moss",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ntk:mossy_deepslate_brick_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:deepslate_brick_wall"
+      },
+      {
+        "item": "ntk:hanging_moss"
+      }
+    ]
+  }
+}

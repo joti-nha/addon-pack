@@ -1,0 +1,132 @@
+{
+	"format_version": "1.10.0",
+	"tm_aqc:worm_farm": {
+		"sound": "wood"
+	},
+	"tm_aqc:fishing_stool": {
+		"sound": "cloth"
+	},
+    "tm_aqc:cutting_board": {
+		"sound": "wood"
+	},
+    "tm_aqc:fish_mount": {
+		"sound": "itemframe"
+	},
+    "tm_aqc:pin_bone_block": {
+		"sound": "bone_block"
+	},
+    "tm_aqc:neptunium_scale_block": {
+		"sound": "copper"
+	},
+    "tm_aqc:smelted_neptunium": {
+		"sound": "copper"
+	},
+    "tm_aqc:chiselled_neptunium": {
+		"sound": "copper"
+	},
+    "tm_aqc:cut_neptunium": {
+		"sound": "copper"
+	},
+    "tm_aqc:neptunium_bulb": {
+		"sound": "copper"
+	},
+    "tm_aqc:neptunium_grate": {
+		"sound": "copper"
+	},
+    "tm_aqc:neptunium_bricks": {
+		"sound": "copper"
+	},
+    "tm_aqc:scale_block": {
+		"sound": "coral"
+	},
+    "tm_aqc:smelted_scale": {
+		"sound": "coral"
+	},
+    "tm_aqc:chiselled_scale": {
+		"sound": "coral"
+	},
+    "tm_aqc:cut_scale": {
+		"sound": "coral"
+	},
+    "tm_aqc:scale_bulb": {
+		"sound": "coral"
+	},
+    "tm_aqc:scale_grate": {
+		"sound": "coral"
+	},
+    "tm_aqc:scale_bricks": {
+		"sound": "coral"
+	},
+    "tm_aqc:shell_block": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:chiselled_shell": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:cut_shell": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:shell_bulb": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:shell_grate": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:shell_bricks": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:pearl_block": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:chiselled_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:cut_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:pearl_bulb": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:pearl_grate": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:pearl_bricks": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:gold_pearl_block": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:chiselled_gold_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:cut_gold_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:gold_pearl_bulb": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:gold_pearl_grate": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:gold_pearl_bricks": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:black_pearl_block": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:chiselled_black_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:cut_black_pearl": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:black_pearl_bulb": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:black_pearl_grate": {
+		"sound": "deepslate_bricks"
+	},
+    "tm_aqc:black_pearl_bricks": {
+		"sound": "deepslate_bricks"
+	}
+}

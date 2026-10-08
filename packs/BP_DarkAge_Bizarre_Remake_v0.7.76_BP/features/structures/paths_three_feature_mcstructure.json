@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:single_block_feature": {
+		"description": {
+			"identifier": "dk:structures/paths_three_feature_mcstructure"
+		},
+		"places_block": {
+			"name": "minecraft:dirt",
+			"states": {
+				"dirt_type": "coarse"
+			}
+		},
+		"enforce_survivability_rules": false,
+		"enforce_placement_rules": false,
+		"may_replace": [
+			"minecraft:grass"
+		]
+	}
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_levitation_staff",
+    "heightmap": "ntk_levitation_staff_height",
+    "metalness_emissive_roughness": "ntk_levitation_staff_mer"
+  }
+}

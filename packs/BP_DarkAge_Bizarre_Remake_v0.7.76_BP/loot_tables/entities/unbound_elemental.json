@@ -1,0 +1,141 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:unbound_arm",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "Part of a forgotten power. The One Punch Man!"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:bone",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:enchanted_golden_apple",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "A help from me. By unknown"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:soul_gem",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:dark_ember",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:corrupted_armor_fragment",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 4
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:key_of_the_death",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "You get power and you die for power."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

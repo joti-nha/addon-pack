@@ -1,0 +1,32 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§a§lImprovised Guns v3.0.5",
+    "description": "Adds some guns to Minecraft\nMade by §6R401/JERA§r\n§aRemember to enable the Behavior Pack as well!",
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ],
+    "uuid": "1d4a303d-68e1-47bc-aa14-56211500e2f3",
+    "version": [
+      3,
+      0,
+      5
+    ]
+  },
+  "capabilities": [
+    "pbr"
+  ],
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "88981087-fa8e-4154-a2d7-1bf727485db9",
+      "version": [
+        3,
+        0,
+        5
+      ]
+    }
+  ]
+}

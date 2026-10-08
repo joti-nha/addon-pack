@@ -1,0 +1,13 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:ars/structure_weight_x_fossil_giant"
+    },
+    "features": [
+      [ "ntk:ars/structure_x_fossil_giant_01", 100 ],
+      [ "ntk:ars/structure_x_fossil_giant_02", 100 ],
+      [ "ntk:ars/structure_x_fossil_giant_03", 100 ]
+    ]
+  }
+}

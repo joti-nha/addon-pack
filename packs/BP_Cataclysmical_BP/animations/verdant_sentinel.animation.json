@@ -1,0 +1,96 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.verdant_sentinel.normal_attack": {
+			"animation_length": 2.5,
+			"loop": false,
+			"timeline": {
+				"1.08": [
+					"/summon mnra_cata:verdant_sentinel_normal_attack ^^1^ facing ^^^90"
+				]
+			}
+		},
+		"animation.verdant_sentinel.double_attack": {
+			"animation_length": 2.25,
+			"loop": false,
+			"timeline": {
+				"0.88": [
+					"/summon mnra_cata:verdant_sentinel_start_double_attack ^^1^ facing ^^^90"
+				],
+				"1.55": [
+					"/summon mnra_cata:verdant_sentinel_double_attack ^^1^ facing ^^^90"
+				]
+			}
+		},
+		"animation.verdant_sentinel.heavy_attack": {
+			"animation_length": 3.5,
+			"loop": false,
+			"timeline": {
+				"1.9": [
+					"/summon mnra_cata:verdant_sentinel_heavy_attack ^^1^ facing ^^^90"
+				]
+			}
+		},
+		"animation.verdant_sentinel.move_attack": {
+			"animation_length": 5.5,
+			"loop": false,
+			"timeline": {
+				"1.01": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"1.58": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"2.18": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"2.76": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"3.32": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"3.89": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"4.51": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				],
+				"5.08": [
+					"/summon mnra_cata:verdant_sentinel_move_attack ^^^ facing ^^^90"
+				]
+			}
+		},
+		"animation.verdant_sentinel.dash_attack": {
+			"animation_length": 4,
+			"loop": false,
+			"timeline": {
+				"0.3": [
+					"/tag @s add is_dashing"
+				],
+				"2.47": [
+					"/summon mnra_cata:verdant_sentinel_dash_attack ^^^ facing ^^^90"
+				],
+				"2.5": [
+					"/tag @s remove is_dashing"
+				]
+			}
+		},
+		"animation.verdant_sentinel.stomp_attack": {
+			"animation_length": 2.75,
+			"loop": false,
+			"timeline": {
+				"0.48": [
+					"/summon mnra_cata:verdant_sentinel_stomp_attack ^^^1 facing ^^^90"
+				],
+				"1.4": [
+					"/summon mnra_cata:verdant_sentinel_stomp_attack ^^^1 facing ^^^90"
+				]
+			}
+		},
+		"animation.verdant_sentinel.death": {
+			"animation_length": 5.75,
+			"loop": "hold_on_last_frame"
+		}
+	}
+}

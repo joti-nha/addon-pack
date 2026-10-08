@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.sentinel": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"Halberd_sacred": "query.mark_variant == 5 || query.mark_variant == 6"
+				}
+			]
+		}
+	}
+}

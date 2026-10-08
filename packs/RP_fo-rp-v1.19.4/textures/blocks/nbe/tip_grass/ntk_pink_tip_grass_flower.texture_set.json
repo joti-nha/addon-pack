@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_pink_tip_grass_flower",
+    "heightmap": "ntk_tip_grass_height",
+    "metalness_emissive_roughness": "ntk_tip_grass_mer"
+  }
+}

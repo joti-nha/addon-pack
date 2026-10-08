@@ -1,0 +1,26 @@
+{
+   "format_version": 2,
+   "header": {
+      "description": "By Raiyon",
+      "name": "Java Combat[§dv2.6.5] Resources Packs",
+      "uuid": "0cb1c037-670a-4e30-a485-ab77fde76b67",
+      "version": [2, 6, 5],
+      "min_engine_version": [1, 17, 0]
+   },
+   "modules": [
+      {
+         "type": "resources",
+         "uuid": "a2b63c21-42eb-434a-b090-388790fba414",
+         "version": [2, 6, 5]
+      }
+   ],
+   "metadata": {
+      "product_type": "addon"
+   },
+   "dependencies": [
+      {
+         "uuid": "9725a2c7-ea2e-49e4-9db6-83f8f4fdcbc4",
+         "version": [2, 6, 5]
+      }
+   ]
+}

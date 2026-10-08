@@ -1,0 +1,27 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_scrollwright": {
+      "geometry": "geometry.default",
+      "part_visibility": [
+        {
+          "arms": "!query.facing_target_to_range_attack"
+        },
+        {
+          "rightArm": "query.facing_target_to_range_attack"
+        },
+        {
+          "leftArm": "query.facing_target_to_range_attack"
+        }
+      ],
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": [
+        "Texture.variant_0_scrollwright"
+      ]
+    }
+  }
+}

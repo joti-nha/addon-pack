@@ -1,0 +1,69 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:flagon_mysthic",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/flagon/flagon_mysthic",
+				"solar_oven": "textures/entity/mobs/flagon/solar_age_oven",
+				"soul_oven": "textures/entity/mobs/flagon/soul_dark_oven"
+			},
+			"geometry": {
+				"default": "geometry.flagon_mysthic",
+				"solar_oven": "geometry.solar_age_oven",
+				"soul_oven": "geometry.soul_dark_oven"
+			},
+			"render_controllers": [
+				{
+					"controller.render.flagon": "q.property('dk:variants')=='flagon_mysthic'"
+				},
+				{
+					"controller.render.solar_oven": "q.property('dk:variants')=='solar_oven'"
+				},
+				{
+					"controller.render.soul_oven": "q.property('dk:variants')=='soul_oven'"
+				}
+			],
+			"animations": {
+				"controller": "controller.animation.flagon_mysthic.controller",
+				"static": "animation.flagon_mysthic.static",
+				"spawn": "animation.flagon_mysthic.spawn_or_sit",
+				"move": "animation.flagon_mysthic.move",
+				"fun": "animation.flagon_mysthic.fun",
+				"controller_solar": "controller.animation.solar_age_oven.controller",
+				"static_solar": "animation.solar_age_oven.static",
+				"start_hidden_solar": "animation.solar_age_oven.start_hidden",
+				"hidden_solar": "animation.solar_age_oven.hidden",
+				"end_hidden_solar": "animation.solar_age_oven.end_hidden",
+				"move_solar": "animation.solar_age_oven.move",
+				"controller_soul": "controller.animation.soul_dark_oven.controller",
+				"static_soul": "animation.soul_dark_oven.static",
+				"start_hidden_soul": "animation.soul_dark_oven.start_hidden",
+				"hidden_soul": "animation.soul_dark_oven.hidden",
+				"end_hidden_soul": "animation.soul_dark_oven.end_hidden",
+				"move_soul": "animation.soul_dark_oven.move"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"controller": "q.property('dk:variants')=='flagon_mysthic'"
+					},
+					{
+						"controller_solar": "q.property('dk:variants')=='solar_oven'"
+					},
+					{
+						"controller_soul": "q.property('dk:variants')=='soul_oven'"
+					}
+				]
+			},
+			"spawn_egg": {
+				"texture": "flagon_spawn"
+			}
+		}
+	}
+}

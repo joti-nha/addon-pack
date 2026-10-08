@@ -1,0 +1,55 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mnra_cata:sanctum_rooms"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room1",
+					"processors": "mnra_cata:flare_stone_replacement"
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room2",
+					"processors": "mnra_cata:flare_stone_replacement"
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room3",
+					"processors": "mnra_cata:flare_stone_replacement"
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room4",
+					"processors": "mnra_cata:flare_stone_replacement"
+				}
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room5",
+					"processors": "mnra_cata:flare_stone_replacement"
+				}
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/sanctum/room6",
+					"processors": "mnra_cata:flare_stone_replacement"
+				}
+			}
+		]
+	}
+}

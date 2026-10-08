@@ -1,0 +1,97 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.feralbloom.attack_controller": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"normal_attack": "query.is_delayed_attacking==1&&query.skin_id==3"
+						},
+						{
+							"roar": "query.is_casting==1&&query.skin_id==4"
+						},
+						{
+							"bloom_poison": "query.is_casting==1&&query.skin_id==5"
+						},
+						{
+							"bloom_beam": "query.is_casting==1&&query.skin_id==6"
+						}
+					]
+				},
+				"normal_attack": {
+					"animations": [
+						"normal_attack"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_entry": [
+						"@s is_attacking",
+						"@s remove_distance_attacks"
+					],
+					"on_exit": [
+						"@s attack_types",
+						"@s finish_attack"
+					]
+				},
+				"roar": {
+					"animations": [
+						"roar"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"on_entry": [
+						"@s is_attacking",
+						"@s remove_distance_attacks"
+					],
+					"on_exit": [
+						"@s finish_attack",
+						"@s attack"
+					]
+				},
+				"bloom_poison": {
+					"animations": [
+						"bloom_poison"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"on_entry": [
+						"@s is_attacking",
+						"@s remove_distance_attacks"
+					],
+					"on_exit": [
+						"@s finish_attack",
+						"@s attack"
+					]
+				},
+				"bloom_beam": {
+					"animations": [
+						"bloom_beam"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"on_entry": [
+						"@s is_attacking",
+						"@s remove_distance_attacks"
+					],
+					"on_exit": [
+						"@s finish_attack",
+						"@s attack"
+					]
+				}
+			}
+		}
+	}
+}

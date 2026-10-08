@@ -1,0 +1,47 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "dk:floating_sowing",
+			"places_feature": "dk:wetland/floating_sowing_determinant"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "ocean"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 500
+			},
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": 62
+		}
+	}
+}

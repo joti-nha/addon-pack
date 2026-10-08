@@ -1,0 +1,26 @@
+{
+  "pools": [
+    // Materials
+    {
+      "rolls": 7,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/materials.json"
+        }
+      ]
+    },
+    // Potion
+    {
+      "rolls": 7,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/potions.json"
+        }
+      ]
+    }
+  ]
+}

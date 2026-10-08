@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_stripped_dark_oak_wood_x_planks"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "dark_oak_planks",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stripped_dark_oak_wood"
+      }
+    },
+    "result": {
+      "item": "minecraft:dark_oak_planks",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:stripped_dark_oak_wood"
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:lurknash",
+      "enable_attachables": false,
+      "hide_armor": false,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_lurknash"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_lurknash"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_lurknash"
+      },
+      "materials": {
+        "default": "ntk_entity_emissive_alpha"
+      },
+      "textures": {
+        "lurknash_wild": "textures/entity/nm/lurknash/ntk_lurknash_wild",
+        "lurknash_tamed": "textures/entity/nm/lurknash/ntk_lurknash_tamed"
+      },
+      "animations": {
+        "controller_attack": "controller.animation.entity.ntk_lurknash.attack",
+        "controller_interested": "controller.animation.entity.ntk_lurknash.interested",
+        "controller_movement": "controller.animation.entity.ntk_lurknash.movement",
+        "baby_remodel": "animation.entity.ntk_lurknash.baby_remodel",
+        "base_pose": "animation.entity.ntk_lurknash.base_pose",
+        "bite_attack": "animation.entity.ntk_lurknash.bite_attack",
+        "interested": "animation.entity.ntk_lurknash.interested",
+        "look_at_target": "animation.entity.ntk_lurknash.look_at_target",
+        "sitting": "animation.entity.ntk_lurknash.sitting",
+        "sprinting": "animation.entity.ntk_lurknash.sprinting",
+        "tamed_remodel": "animation.entity.ntk_lurknash.tamed_remodel",
+        "walking": "animation.entity.ntk_lurknash.walking"
+      },
+      "scripts": {
+        "animate": [
+          "controller_attack",
+          "controller_interested",
+          "controller_movement",
+          {
+            "baby_remodel": "query.is_baby"
+          },
+          {
+						"tamed_remodel": "query.is_tamed"
+					},
+					{
+						"look_at_target": 0.8
+					}
+        ]
+      }
+    }
+  }
+}

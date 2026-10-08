@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:projectile_amethyst_powder_magic_missile",
+      "render_controllers": [
+        "controller.render.projectile.ntk_powder_magic_missile"
+      ],
+      "geometry": {
+        "default": "geometry.projectile.ntk_powder_magic_missile"
+      },
+      "materials": {
+        "default": "ntk_projectile_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/projectiles/nie/ntk_amethyst_powder_magic_missile"
+      },
+      "particle_effects": {
+				"powder_magic_missile_particle": "ntk:amethyst_powder_magic_missile_particle"
+			},
+      "animations": {
+        "controller_travelling": "controller.animation.projectile.ntk_powder_magic_missile.travelling",
+        "travelling": "animation.projectile.ntk_powder_magic_missile.travelling"
+      },
+      "scripts": {
+        "animate": [
+          "controller_travelling"
+        ]
+      }
+    }
+  }
+}

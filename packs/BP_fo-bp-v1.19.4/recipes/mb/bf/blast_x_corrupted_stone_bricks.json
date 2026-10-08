@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_corrupted_stone_bricks"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:corrupted_stone_bricks"
+    },
+    "output": {
+      "item": "ntk:cracked_corrupted_stone_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_stone_bricks"
+      }
+    ]
+  }
+}

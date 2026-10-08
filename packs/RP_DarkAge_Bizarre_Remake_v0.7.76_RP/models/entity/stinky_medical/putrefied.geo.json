@@ -1,0 +1,325 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.putrefied",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [
+					0,
+					1,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [
+						-3,
+						18,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								0,
+								-3
+							],
+							"size": [
+								6,
+								18,
+								6
+							],
+							"uv": [
+								0,
+								40
+							]
+						}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [
+						3,
+						18,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								-3
+							],
+							"size": [
+								6,
+								18,
+								6
+							],
+							"uv": [
+								0,
+								40
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [
+						0,
+						18,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								18,
+								-3
+							],
+							"size": [
+								12,
+								16,
+								6
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						8.5,
+						31.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								6,
+								13,
+								-3
+							],
+							"size": [
+								5,
+								21,
+								6
+							],
+							"uv": [
+								32,
+								16
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-8.5,
+						31.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-11,
+								13,
+								-3
+							],
+							"size": [
+								5,
+								21,
+								6
+							],
+							"uv": [
+								32,
+								16
+							]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						33,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								32,
+								-4
+							],
+							"size": [
+								8,
+								10,
+								8
+							],
+							"uv": [
+								0,
+								22
+							]
+						},
+						{
+							"origin": [
+								9,
+								38,
+								-2
+							],
+							"size": [
+								6,
+								3,
+								4
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-7.5
+							],
+							"uv": [
+								36,
+								0
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-4,
+								40,
+								0
+							],
+							"size": [
+								4,
+								3,
+								0
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								17.5
+							],
+							"uv": [
+								0,
+								22
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-15,
+								38,
+								-2
+							],
+							"size": [
+								6,
+								3,
+								4
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								7.5
+							],
+							"uv": [
+								36,
+								0
+							]
+						},
+						{
+							"origin": [
+								0,
+								40,
+								0
+							],
+							"size": [
+								4,
+								3,
+								0
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-17.5
+							],
+							"uv": [
+								0,
+								22
+							]
+						},
+						{
+							"origin": [
+								0,
+								40,
+								0
+							],
+							"size": [
+								4,
+								3,
+								0
+							],
+							"pivot": [
+								0,
+								0,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-17.5
+							],
+							"uv": [
+								0,
+								22
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_dripstone_stairs_x_polished_dripstone_stairs"
+    },
+    "priority": 2,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:dripstone_stairs"
+      }
+    ],
+    "result": {
+      "item": "ntk:polished_dripstone_stairs",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:dripstone_stairs"
+      }
+    ]
+  }
+}

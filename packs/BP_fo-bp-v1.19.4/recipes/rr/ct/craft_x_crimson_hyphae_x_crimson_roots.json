@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_crimson_hyphae_x_crimson_roots"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "crimson_hyphae",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "ABA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:crimson_roots"
+      },
+      "B": {
+        "item": "minecraft:stripped_crimson_hyphae"
+      }
+    },
+    "result": {
+      "item": "minecraft:crimson_hyphae",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:crimson_roots"
+      },
+      {
+        "item": "minecraft:stripped_crimson_hyphae"
+      }
+    ]
+  }
+}

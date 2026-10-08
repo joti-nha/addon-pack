@@ -1,0 +1,139 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.abomination_duck.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						},
+						{
+							"charged": "query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 2 100 true"
+					],
+					"on_exit": [
+						"@s dk:abomination_duck_mode_attacks"
+					]
+				},
+				"charged": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 2 100 true"
+					],
+					"on_exit": [
+						"@s dk:abomination_duck_mode_attacks"
+					]
+				}
+			}
+		},
+		"controller.animation.abomination_duck_mer.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking&&q.property('dk:modes')=='on_ground'"
+						},
+						{
+							"charged": "query.is_charged&&q.property('dk:modes')=='on_ground'"
+						},
+						{
+							"charged_fly": "query.is_charged&&q.property('dk:modes')=='on_fly_two'"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s dk:abomination_duck_mode_attacks"
+					]
+				},
+				"charged": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"@s dk:abomination_duck_mode_attacks"
+					]
+				},
+				"charged_fly": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"@s dk:abomination_duck_mode_attacks"
+					]
+				}
+			}
+		},
+		"controller.animation.abomination_duck.mode_moves": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"no_target": "!query.has_target"
+						}
+					]
+				},
+				"no_target": {
+					"animations": [
+						{
+							"on_fly": "q.property('dk:modes') == 'on_fly'"
+						},
+						{
+							"on_fly_two": "q.property('dk:modes') == 'on_fly_two'"
+						}
+					],
+					"transitions": [
+						{
+							"target": "query.has_target"
+						}
+					]
+				},
+				"target": {
+					"animations": [
+						{
+							"on_ground": "q.property('dk:modes') == 'on_ground'"
+						},
+						{
+							"on_fly": "q.property('dk:modes') == 'on_fly'"
+						},
+						{
+							"on_fly_two": "q.property('dk:modes') == 'on_fly_two'"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.has_target||q.property('dk:modes')=='fall'"
+						}
+					]
+				}
+			}
+		}
+	}
+}

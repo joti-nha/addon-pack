@@ -1,0 +1,44 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_backpack_upgrade_magnet"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "RLR",
+            "ITI",
+            "CEC"
+        ],
+        "key": {
+            "R": {
+                "item": "minecraft:redstone_block"
+            },
+            "L": {
+                "item": "minecraft:lava_bucket"
+            },
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "T": {
+                "item": "otg:backpack_upgrade_template"
+            },
+            "C": {
+                "item": "minecraft:copper_block"
+            },
+            "E": {
+                "item": "minecraft:ender_pearl"
+            }
+        },
+        "result": {
+            "item": "otg:backpack_upgrade_magnet"
+        },
+        "unlock": [
+            {
+                "item": "otg:backpack_upgrade_template"
+            }
+        ]
+    }
+}

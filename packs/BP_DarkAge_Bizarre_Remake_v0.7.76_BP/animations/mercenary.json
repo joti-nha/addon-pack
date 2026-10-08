@@ -1,0 +1,62 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.mercenary.potion_animation": {
+			"animation_length": 40.5,
+			"loop": true,
+			"timeline": {
+				"40.0": [
+					"@s dk:mercenary_event_mode_potion_default"
+				]
+			}
+		},
+		"animation.mercenary.target": {
+			"animation_length": 0.5,
+			"loop": true,
+			"timeline": {
+				"0.1": [
+					"@s dk:mercenary_event_target"
+				]
+			}
+		},
+		"animation.mercenary.target_shield": {
+			"animation_length": 0.5,
+			"loop": true,
+			"timeline": {
+				"0.1": [
+					"@s dk:mercenary_event_target_shield"
+				]
+			}
+		},
+		"animation.mercenary.no_target": {
+			"animation_length": 6,
+			"loop": true,
+			"timeline": {
+				"4.0": [
+					"/replaceitem entity @s slot.weapon.mainhand 0 air"
+				],
+				"5.5": [
+					"@s dk:mercenary_event_no_target"
+				]
+			}
+		},
+		"animation.mercenary.home": {
+			"animation_length": 18,
+			"loop": true,
+			"timeline": {
+				"17.0": [
+					"/event entity @s dk:mercenary_event_mode_start_go_home"
+				]
+			}
+		},
+		"animation.mercenary.food": {
+			"animation_length": 35,
+			"loop": true,
+			"timeline": {
+				"17.0": [
+					"/event entity @s dk:mercenary_modes_to_be"
+				]
+			}
+		}
+	}
+}

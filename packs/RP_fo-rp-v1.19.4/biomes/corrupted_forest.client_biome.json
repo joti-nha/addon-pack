@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.110",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "ntk:corrupted_forest"
+    },
+    "components": {
+      "minecraft:fog_appearance": {
+        "fog_identifier": "ntk:fog_corrupted_forest"
+      },
+      "minecraft:sky_color": {
+        "sky_color": "#3E3836"
+      },
+      "minecraft:foliage_appearance": {
+        "color": "#71704C"
+      },
+      "minecraft:grass_appearance": {
+        "color": "#565540",
+        "grass_is_shaded": false
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#3E3836",
+        "surface_opacity": 1.0
+      },
+      "minecraft:biome_music": {
+        "volume_multiplier": 0
+      },
+      "minecraft:atmosphere_identifier": {
+        "atmosphere_identifier": "minecraft:pale_garden_atmospherics"
+      },
+      "minecraft:color_grading_identifier": {
+        "color_grading_identifier": "minecraft:coolish_color_grading"
+      },
+      "minecraft:lighting_identifier": {
+        "lighting_identifier": "minecraft:pale_garden_lighting"
+      },
+      "minecraft:water_identifier": {
+        "water_identifier": "minecraft:default_water"
+      }
+    }
+  }
+}

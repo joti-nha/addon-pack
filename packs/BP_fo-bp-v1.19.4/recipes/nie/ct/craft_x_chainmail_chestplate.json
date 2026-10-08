@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_chainmail_chestplate"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "chainmail_chestplate",
+    "assume_symmetry": true,
+    "pattern": [
+      "C C",
+      "CCC",
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "ntk:chain_links"
+      }
+    },
+    "result": {
+      "item": "minecraft:chainmail_chestplate",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:chain_links"
+      }
+    ]
+  }
+}

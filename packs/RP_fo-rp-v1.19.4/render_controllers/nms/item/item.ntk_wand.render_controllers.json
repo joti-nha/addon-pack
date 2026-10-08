@@ -1,0 +1,48 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.item.ntk_wand_uncharged": {
+      "geometry": "array.wand_geometry_frames[v.charge_amount]",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [
+        "array.wand_texture_frames[v.charge_amount]",
+        "texture.enchanted_glint"
+      ],
+      "arrays": {
+        "geometries": {
+          "array.wand_geometry_frames": [
+            "geometry.wand_uncharged",
+            "geometry.wand_charging_0",
+            "geometry.wand_charging_1",
+            "geometry.wand_charging_2",
+            "geometry.wand_charged"
+          ]
+        },
+        "textures": {
+          "array.wand_texture_frames": [
+            "texture.wand_uncharged",
+            "texture.wand_charging_0",
+            "texture.wand_charging_1",
+            "texture.wand_charging_2",
+            "texture.wand_charged"
+          ]
+        }
+      }
+    },
+    "controller.render.item.ntk_wand_charged": {
+      "geometry": "geometry.wand_charged",
+      "materials": [
+        {
+          "*": "variable.is_enchanted ? material.enchanted : material.default"
+        }
+      ],
+      "textures": [
+        "texture.wand_charged"
+      ]
+    }
+  }
+}

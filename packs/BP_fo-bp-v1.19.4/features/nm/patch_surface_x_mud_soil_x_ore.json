@@ -1,0 +1,45 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:nm/patch_surface_x_mud_soil_x_ore"
+    },
+    "count": 25,
+    "replace_rules": [
+      {
+        "places_block": "ntk:mud_soil",
+        "may_replace": [
+          "minecraft:black_terracotta",
+          "minecraft:blue_terracotta",
+          "minecraft:brown_terracotta",
+          "minecraft:clay",
+          "minecraft:coarse_dirt",
+          "minecraft:cyan_terracotta",
+          "minecraft:dirt",
+          "minecraft:grass_block",
+          "minecraft:gravel",
+          "minecraft:gray_terracotta",
+          "minecraft:green_terracotta",
+          "minecraft:hardened_clay",
+          "minecraft:light_blue_terracotta",
+          "minecraft:light_gray_terracotta",
+          "minecraft:lime_terracotta",
+          "minecraft:magenta_terracotta",
+          "minecraft:moss_block",
+          "minecraft:mud",
+          "minecraft:mycelium",
+          "minecraft:orange_terracotta",
+          "minecraft:pale_moss_block",
+          "minecraft:pink_terracotta",
+          "minecraft:podzol",
+          "minecraft:purple_terracotta",
+          "minecraft:red_sand",
+          "minecraft:red_terracotta",
+          "minecraft:sand",
+          "minecraft:white_terracotta",
+          "minecraft:yellow_terracotta"
+        ]
+      }
+    ]
+  }
+}

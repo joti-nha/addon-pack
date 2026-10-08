@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_polished_stone_x_cobblestone"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "polished_stone",
+    "assume_symmetry": true,
+    "pattern": [
+      "SS",
+      "SS"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:cobblestone"
+      }
+    },
+    "result": {
+      "item": "ntk:polished_stone",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cobblestone"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/plant_weight_x_moss_sprouts"
+    },
+    "features": [
+      [ "ntk:mb/mossy_forest/plant_x_short_moss_sprouts_x_02_x_scatter", 50 ],
+      [ "ntk:mb/mossy_forest/plant_x_tall_moss_sprouts_x_02_x_scatter", 50 ]
+    ]
+  }
+}

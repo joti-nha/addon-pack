@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_corrupted_oak_wood_x_crafting_table"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "crafting_table",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    },
+    "result": {
+      "item": "minecraft:crafting_table",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    ]
+  }
+}

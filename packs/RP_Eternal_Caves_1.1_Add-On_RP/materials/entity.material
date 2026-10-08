@@ -1,0 +1,233 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "panascais_caves_overlay_small:entity_alphablend": {
+            "+states": [
+                "EnableStencilTest",
+                "DisableDepthWrite",
+                "InvertCulling"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "depthFunc": "LessEqual",
+            "backFace": {
+                "stencilFunc": "Equal"
+            },
+            "frontFace": {
+                "stencilFunc": "Equal"
+            },
+            "stencilRef": 7
+        },
+        "panascais_caves_overlay_big:entity_alphablend": {
+            "+states": [
+                "DisableCulling",
+                "DisableDepthWrite",
+                "InvertCulling"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "+defines": [
+                "USE_OVERLAY"
+            ],
+            "depthFunc": "Always",
+            "blendSrc": "DestColor",
+            "blendDst": "SourceColor"
+        },
+        "panascais_caves_outline_base:enderman": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "stencilWriteMask": 2,
+            "stencilRef": 2
+        },
+        "panascais_caves_outline:entity_alphablend": {
+            "+states": [
+                "EnableStencilTest",
+                "InvertCulling"
+            ],
+            "-states": [
+                "DisableCulling"
+            ],
+            "+defines": [
+                "USE_OVERLAY",
+                "USE_EMISSIVE",
+                "USE_UV_ANIM"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "backFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 2,
+            "stencilReadMask": 2
+        },
+        "panascais_caves_outline_base_vv:enderman": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Keep",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Keep",
+                "stencilPassOp": "Replace"
+            },
+            "stencilWriteMask": 1,
+            "stencilRef": 1
+        },
+        "panascais_caves_outline_vv:entity_alphatest": {
+            "+states": [
+                "InvertCulling",
+                "EnableStencilTest",
+                "DisableDepthWrite",
+                "Blending"
+            ],
+            "+defines": [
+                "USE_OVERLAY",
+                "USE_EMISSIVE",
+                "USE_UV_ANIM"
+            ],
+            "-states": [
+                "DisableCulling",
+                "StencilWrite"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "backFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 1,
+            "stencilReadMark": 1
+        },
+        "panascais_caves_block_outline_base:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "stencilWriteMask": 2,
+            "stencilRef": 2
+        },
+        "panascais_caves_block_outline:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "InvertCulling"
+            ],
+            "-states": [
+                "DisableCulling"
+            ],
+            "+defines": [
+                "USE_OVERLAY"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "depthFunc": "Always",
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "backFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 2,
+            "stencilReadMask": 2
+        },
+        "panascais_caves_block_outline_base_vv:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "stencilWriteMask": 1,
+            "stencilRef": 1
+        },
+        "panascais_caves_block_outline_vv:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "InvertCulling"
+            ],
+            "-states": [
+                "DisableCulling"
+            ],
+            "+defines": [
+                "USE_OVERLAY"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "depthFunc": "Always",
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "backFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 1,
+            "stencilReadMask": 1
+        },
+        "panascais_caves_lantern_light_invert:entity_beam_additive": {
+            "+states": [
+                "InvertCulling"
+            ],
+            "+defines": [
+                "USE_EMISSIVE"
+            ]
+        },
+        "panascais_caves_lantern_light:entity_beam_additive": {
+            "+defines": [
+                "USE_EMISSIVE"
+            ]
+        }
+    }
+}

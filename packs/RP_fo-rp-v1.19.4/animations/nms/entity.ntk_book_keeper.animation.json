@@ -1,0 +1,185 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+	  "animation.entity.ntk_book_keeper.base_pose": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [-45, 0, 0],
+					"position": [5, 2, 2],
+					"scale": 1
+				},
+				"leftArm": {
+					"rotation": [-45, 0, 0],
+					"position": [-5, 2, 2],
+					"scale": 1
+				}
+			}
+		},
+	  "animation.entity.ntk_book_keeper.attack_range": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"book": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 0, 2.5],
+						"0.25": [0, 0, 0],
+						"0.375": [0, 0, -2.5],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 0, -10],
+						"0.25": [0, 0, 0],
+						"0.375": [0, 0, 10],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-90, -10, 0],
+						"0.125": [-100, -10, 0],
+						"0.25": [-90, -10, 0],
+						"0.375": [-80, -10, 0],
+						"0.5": [-90, -10, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [-90, 10, 0],
+						"0.125": [-80, 10, 0],
+						"0.25": [-90, 10, 0],
+						"0.375": [-100, 10, 0],
+						"0.5": [-90, 10, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.casting": {
+			"loop": true,
+			"bones": {
+				"arms": {
+					"scale": 0
+				},
+				"rightArm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "135.0 - this"],
+					"scale": 1
+				},
+				"leftArm": {
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "-135.0 - this"],
+					"scale": 1
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.get_in_bed": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -22.6, 9]
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.riding": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [0, -8, 0]
+				},
+				"leftArm": {
+					"rotation": [-36, 0, 0]
+				},
+				"rightArm": {
+					"rotation": [-36, 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["-72.0 - this", "-18.0 - this", "-this"]
+				},
+				"rightLeg": {
+					"rotation": ["-72.0 - this", "18.0 - this", "-this"]
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.raise_arm": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+			  "arms": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [-15, 0, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [-10, 0, 0]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [-10, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.scaling": {
+			"loop": true,
+			"bones": {
+				"book": {
+					"position": [0, 0, 0.15],
+					"scale": 0.7
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.walking_base": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				}
+			}
+		},
+		"animation.entity.ntk_book_keeper.walking_targeting": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"rightArm": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["(math.cos(query.modified_distance_moved * 38.17 + 180) * 80.21) * query.modified_move_speed * 0.5", 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_spore_pot"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "spore_pot",
+    "assume_symmetry": true,
+    "pattern": [
+      "VSV",
+      "BQB",
+      "BBB"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:brick"
+      },
+      "S": {
+        "item": "minecraft:spore_blossom"
+      },
+      "V": {
+        "item": "minecraft:vine"
+      },
+      "Q": {
+        "item": "minecraft:quartz"
+      }
+    },
+    "result": {
+      "item": "ntk:spore_pot",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "minecraft:brick"
+      },
+      {
+        "item": "minecraft:spore_blossom"
+      },
+      {
+        "item": "minecraft:vine"
+      },
+      {
+        "item": "minecraft:quartz"
+      }
+    ]
+  }
+}

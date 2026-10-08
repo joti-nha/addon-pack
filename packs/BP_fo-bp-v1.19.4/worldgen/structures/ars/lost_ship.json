@@ -1,0 +1,116 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "ntk:lost_ship"
+		},
+		"biome_filters": [
+			{
+        "all_of": [
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "extreme_hills"
+          },
+          {
+            "any_of": [
+              {
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "corrupted_forest"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "mossy_forest"
+							},
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "overgrown_jungle"
+							},
+							{
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "forest"
+              },
+              {
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "flower_forest"
+							},
+							{
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "pale_garden"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "jungle"
+              },
+							{
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mangrove_swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "savanna"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mesa"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "river"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "beach"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mooshroom_island"
+              }
+            ]
+          }
+        ]
+      }
+		],
+		"start_pool": "ntk:ars/lost_ship_x_pool",
+		"heightmap_projection": "world_surface",
+		"step": "surface_structures",
+		"terrain_adaptation": "none",
+		"liquid_settings": "apply_waterlogging",
+		"start_height": {
+			"type": "uniform",
+			"min": {
+				"absolute": -7
+			},
+			"max": {
+				"absolute": -3
+			}
+		},
+		"max_depth": 1,
+		"max_distance_from_center": {
+			"horizontal": 64,
+			"vertical": 64
+		},
+		"dimension_padding": {
+			"top": 0,
+			"bottom": 0
+		}
+	}
+}

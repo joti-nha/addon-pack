@@ -1,0 +1,26 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_pile_of_bamboo_x_bamboo"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "pile_of_bamboo",
+    "ingredients": [
+      {
+        "item": "minecraft:bamboo",
+        "count": 9
+      }
+    ],
+    "result": {
+      "item": "ntk:pile_of_bamboo",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo"
+      }
+    ]
+  }
+}

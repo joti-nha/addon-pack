@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_warped_planks_x_slabs"
+    },
+    "priority": 5,
+    "tags": [ "crafting_table" ],
+    "group": "warped_planks",
+    "assume_symmetry": true,
+    "pattern": [
+      "A ",
+      " A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:warped_slab"
+      }
+    },
+    "result": {
+      "item": "minecraft:warped_planks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:warped_slab"
+      }
+    ]
+  }
+}

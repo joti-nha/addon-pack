@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/structure_weight_x_fallen_log_mossed_mossy_willow"
+    },
+    "features": [
+      [ "ntk:mb/mossy_forest/structure_x_fallen_log_mossed_mossy_willow_02", 100 ],
+      [ "ntk:mb/mossy_forest/structure_x_fallen_log_mossed_mossy_willow_03", 100 ],
+      [ "ntk:mb/mossy_forest/structure_x_fallen_log_mossed_mossy_willow_04", 80 ],
+      [ "ntk:mb/mossy_forest/structure_x_fallen_log_mossed_mossy_willow_05", 50 ]
+    ]
+  }
+}

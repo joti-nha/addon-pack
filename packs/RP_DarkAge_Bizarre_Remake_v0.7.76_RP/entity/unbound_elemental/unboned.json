@@ -1,0 +1,51 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unboned",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unboned"
+			},
+			"geometry": {
+				"default": "geometry.unboned"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"attacks",
+					"controller"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"look_at_target": "controller.animation.unboned.look_at_target",
+				"controller": "controller.animation.unboned.controller",
+				"attacks": "controller.animation.unboned.attacks",
+				"static": "animation.unboned.static",
+				"move": "animation.unboned.move",
+				"move_arm_right": "animation.unboned.move_arm_right",
+				"move_arm_left": "animation.unboned.move_arm_left",
+				"cape": "animation.unboned.cape",
+				"shield": "animation.unboned.shield",
+				"attack_one": "animation.unboned.attack_one",
+				"attack_two": "animation.unboned.attack_two",
+				"riding": "animation.unboned.ride",
+				"look_at_target_default": "animation.unboned.look_at_target.default",
+				"look_at_target_gliding": "animation.unboned.look_at_target.gliding",
+				"look_at_target_swimming": "animation.unboned.look_at_target.swimming"
+			},
+			"render_controllers": [
+				"controller.render.elemental_knight"
+			],
+			"enable_attachables": true
+		}
+	}
+}

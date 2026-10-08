@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:floating_boat",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/floating_boat/floating_boat"
+			},
+			"geometry": {
+				"default": "geometry.floating_boat"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"move": "animation.floating_boat.paddle"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"move": "query.is_moving"
+					}
+				]
+			},
+			"spawn_egg": {
+				"texture": "floating_boat"
+			}
+		}
+	}
+}

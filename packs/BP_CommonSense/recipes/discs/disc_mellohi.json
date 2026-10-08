@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:disc_mellohi"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:purple_dye"
+			},
+			"P": {
+				"item": "minecraft:polished_deepslate"
+			},
+			"W": {
+				"item": "minecraft:white_dye"
+			}
+		},
+		"pattern": [
+			" # ",
+			"PPP",
+			" W "
+		],
+		"result": {
+			"item": "minecraft:music_disc_mellohi",
+			"count": 1
+		}
+	}
+}

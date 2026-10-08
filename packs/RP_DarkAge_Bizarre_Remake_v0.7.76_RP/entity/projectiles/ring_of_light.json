@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:ring_of_light",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/projectile/ring_of_lights"
+			},
+			"geometry": {
+				"default": "geometry.ring_of_light"
+			},
+			"animations": {
+				"move": "animation.ring_of_light.move"
+			},
+			"scripts": {
+				"animate": [
+					"move"
+				]
+			},
+			"render_controllers": [
+				"controller.render.ring_of_light"
+			]
+		}
+	}
+}

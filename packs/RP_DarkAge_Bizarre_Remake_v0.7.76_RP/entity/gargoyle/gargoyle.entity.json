@@ -1,0 +1,62 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:gargoyle",
+			"materials": {
+				"default": "villager_v2"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/gargoyle/gargoyle"
+			},
+			"geometry": {
+				"default": "geometry.gargoyle"
+			},
+			"spawn_egg": {
+				"texture": "gargoyle_spawn"
+			},
+			"scripts": {
+				"animate": [
+					"static_c",
+					"attack_c",
+					"shoot_c",
+					"flap_wings_c"
+				]
+			},
+			"animations": {
+				"static1": "animation.gargoyle.initial_pose",
+				"static2": "animation.gargoyle.initial_pose2",
+				"static3": "animation.gargoyle.initial_pose3",
+				"fly": "animation.gargoyle.fly",
+				"has_target": "animation.gargoyle.has_target",
+				"attack": "animation.gargoyle.attack",
+				"static_c": "controller.animation.gargoyle.static",
+				"attack_c": "controller.animation.gargoyle.attack",
+				"wing_flap": "animation.gargoyle.wing_flap",
+				"shoot": "animation.gargoyle.shoot",
+				"shoot_wind": "animation.gargoyle.shoot_wind",
+				"shoot_c": "controller.animation.gargoyle.shoot",
+				"spin_attack": "animation.gargoyle.spin_attack",
+				"flap_wings": "animation.gargoyle.flap_wings",
+				"flap_wings_c": "controller.animation.gargoyle.flap_wings",
+				"stunned_falling": "animation.gargoyle.fall",
+				"recover": "animation.gargoyle.recover",
+				"hide_diana": "animation.gargoyle.hide_diana"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"sound_effects": {
+				"flap": "mob.phantom.flap",
+				"swing": "mob.gargoyle.swing",
+				"explosion": "random.explode",
+				"shoot_fire": "mob.blaze.shoot"
+			},
+			"particle_effects": {
+				"fire_charge": "dk:gargoyle_fire_charge",
+				"explosion": "dk:gargoyle_mouth_explosion",
+				"diana": "dk:target_diana"
+			}
+		}
+	}
+}

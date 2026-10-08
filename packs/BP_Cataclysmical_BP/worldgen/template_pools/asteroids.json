@@ -1,0 +1,50 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mnra_cata:asteroids"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_field/asteroid4",
+					"processors": "mnra_cata:astral_ore_replacement"
+				},
+				"weight": 4
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_field/asteroid5",
+					"processors": "mnra_cata:astral_ore_replacement"
+				},
+				"weight": 3
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_field/asteroid6",
+					"processors": "mnra_cata:astral_ore_replacement"
+				},
+				"weight": 2
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_field/asteroid7",
+					"processors": "mnra_cata:astral_ore_replacement"
+				},
+				"weight": 1
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_field/empty",
+					"processors": "mnra_cata:astral_ore_replacement"
+				},
+				"weight": 6
+			}
+		]
+	}
+}

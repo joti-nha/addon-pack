@@ -1,0 +1,173 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:rose_quartz_cluster",
+      "menu_category": {
+				"category": "none",
+				"group": "minecraft:none",
+				"is_hidden_in_commands": true
+			},
+      "traits": {
+        "minecraft:placement_position": {
+          "enabled_states": [ "minecraft:block_face" ]
+        }
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.rose_quartz_cluster.name\n§7%epithet.block§r",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_crystal_cross"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_rose_quartz_cluster",
+          "render_method": "alpha_test_single_sided",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+					"face_dimming": false,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_crystal_cross"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_rose_quartz_cluster",
+            "render_method": "alpha_test_single_sided",
+            "tint_method": "none",
+            "ambient_occlusion": 0.0,
+            "face_dimming": false,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_rose_quartz_cluster",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#DBBED1"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -6, 0, -6 ],
+          "size": [ 12, 8, 12 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -6, 0, -6 ],
+        "size": [ 12, 8, 12 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 6,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 7.5
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.5
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bd",
+        "up": "note.bd"
+      },
+      "minecraft:movable": {
+        "movement_type": "popped"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": false,
+        "redstone_conductor": false
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+			},
+      "minecraft:loot": "loot_tables/nce/blocks/ntk_rose_quartz_cluster.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:pickaxe_diggable",
+        "ntk:natural_block",
+        "ntk:solid_block",
+        "ntk:crystal_cluster",
+        "ntk:rose_quartz_cluster",
+        
+        "minecraft:is_pickaxe_item_destructible",
+        "minecraft:stone_tier_destructible"
+      ]
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'down'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ -180, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'up'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ -90, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 90 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 90, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:block_face') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, -90 ]
+          }
+        }
+      }
+    ]
+  }
+}

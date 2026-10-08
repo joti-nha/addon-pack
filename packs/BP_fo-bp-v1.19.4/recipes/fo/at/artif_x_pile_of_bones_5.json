@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_pile_of_bones_5"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "pile_of_bone_5",
+    "assume_symmetry": true,
+    "pattern": [
+      "BBB",
+      "BB "
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:bone"
+      }
+    },
+    "result": {
+      "item": "ntk:pile_of_bones_5",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bone"
+      }
+    ]
+  }
+}

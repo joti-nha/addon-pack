@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_cave_wolf": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        {
+          "saddle": "query.is_saddled"
+        }
+      ],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+				"Array.textures[query.variant * 2 + query.is_tamed]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.cave_wolf_wild",
+						"Texture.cave_wolf_tamed"
+					]
+				}
+			}
+    }
+  }
+}

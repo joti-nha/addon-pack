@@ -1,0 +1,50 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:plant_x_overgrow_jungle_sapling_x_overworld",
+      "places_feature": "ntk:mb/overgrown_jungle/plant_x_overgrown_jungle_sapling_x_singleblock"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mossy_forest"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "jungle"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mangrove_swamp"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 1.0,
+      "scatter_chance": 0.1,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

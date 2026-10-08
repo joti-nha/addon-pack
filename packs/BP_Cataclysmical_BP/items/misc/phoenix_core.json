@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:phoenix_core",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "mnra_cata_phoenix_core",
+			"minecraft:rarity": {
+				"value": "epic"
+			}
+		}
+	}
+}

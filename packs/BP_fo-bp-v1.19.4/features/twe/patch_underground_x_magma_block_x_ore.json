@@ -1,0 +1,25 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:twe/patch_underground_x_magma_block_x_ore"
+    },
+    "count": 15,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:magma",
+        "may_replace": [
+          // Soil-type Blocks:
+          "minecraft:gravel",
+          "minecraft:moss_block",
+          "minecraft:pale_moss_block",
+          // Stone-type Blocks:
+          "minecraft:cobbled_deepslate",
+          "minecraft:deepslate",
+          "minecraft:dripstone_block",
+          "minecraft:tuff"
+        ]
+      }
+    ]
+  }
+}

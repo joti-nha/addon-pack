@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_bone_x_pile_of_bones_3"
+    },
+    "priority": 7,
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_bones_3"
+      }
+    ],
+    "result": {
+      "item": "minecraft:bone",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_bones_3"
+      }
+    ]
+  }
+}

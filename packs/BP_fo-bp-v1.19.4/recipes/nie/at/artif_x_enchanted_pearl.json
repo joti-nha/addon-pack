@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_enchanted_pearl"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "enchanted_pearl",
+    "assume_symmetry": true,
+    "pattern": [
+      "D",
+      "E"
+    ],
+    "key": {
+      "D": {
+        "item": "ntk:enchanted_dust"
+      },
+      "E": {
+        "item": "ntk:pearl"
+      }
+    },
+    "result": {
+      "item": "ntk:enchanted_pearl",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:enchanted_dust"
+      },
+      {
+        "item": "ntk:pearl"
+      }
+    ]
+  }
+}

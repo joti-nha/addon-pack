@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_pale_oak_sapling"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "oak_sapling",
+    "assume_symmetry": true,
+    "pattern": [
+      "A",
+      "B"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:pale_oak_leaves"
+      },
+      "B": {
+        "item": "minecraft:deadbush"
+      }
+    },
+    "result": {
+      "item": "minecraft:pale_oak_sapling",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:pale_oak_leaves"
+      },
+      {
+        "item": "minecraft:deadbush"
+      }
+    ]
+  }
+}

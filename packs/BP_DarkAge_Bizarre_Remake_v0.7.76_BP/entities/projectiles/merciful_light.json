@@ -1,0 +1,105 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:merciful_light",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"particles"
+				]
+			},
+			"animations": {
+				"particles": "animation.merciful.light"
+			}
+		},
+		"component_groups": {
+			"minecraft:exploding": {
+				"minecraft:explode": {
+					"fuse_length": 0.2,
+					"fuse_lit": true,
+					"power": 3,
+					"causes_fire": false,
+					"fire_affected_by_griefing": false,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"dk:light_exit": {
+				"minecraft:type_family": {
+					"family": [
+						"unbound",
+						"merciful_light_exit"
+					]
+				}
+			},
+			"dk:light_center": {
+				"minecraft:type_family": {
+					"family": [
+						"unbound",
+						"merciful_light_center"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.31,
+				"height": 0.31
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 3.5,
+				"time_down_event": {
+					"event": "minecraft:explode",
+					"filters": {
+						"test": "on_ground"
+					}
+				}
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"dk:light_exit": {
+				"add": {
+					"component_groups": [
+						"dk:light_exit"
+					]
+				}
+			},
+			"dk:light_center": {
+				"add": {
+					"component_groups": [
+						"dk:light_center"
+					]
+				}
+			},
+			"minecraft:explode": {
+				"queue_command": {
+					"command": [
+						"summon lightning_bolt ~~~",
+						"summon lightning_bolt ~~~"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:exploding"
+					]
+				}
+			}
+		}
+	}
+}

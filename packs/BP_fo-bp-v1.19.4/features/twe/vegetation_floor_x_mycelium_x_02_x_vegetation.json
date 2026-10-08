@@ -1,0 +1,40 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:vegetation_patch_feature": {
+    "description": {
+      "identifier": "ntk:twe/vegetation_floor_x_mycelium_x_02_x_vegetation"
+    },
+    "ground_block": "minecraft:mycelium",
+    "replaceable_blocks": [
+      // Soil-type Blocks:
+      "minecraft:clay",
+      "minecraft:coarse_dirt",
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots",
+      "minecraft:gravel",
+      "minecraft:moss_block",
+      "minecraft:mud",
+      "minecraft:pale_moss_block",
+      // Stone-type Blocks:
+      "minecraft:andesite",
+      "minecraft:diorite",
+      "minecraft:granite",
+      "minecraft:stone"
+    ],
+    "vegetation_feature": "ntk:twe/vegetation_floor_x_mycelium_x_01_x_weight",
+    "vegetation_chance": 0.7,
+    "surface": "floor",
+    "vertical_range": 3,
+    "horizontal_radius": {
+      "range_min": 1,
+      "range_max": 2
+    },
+    "depth": {
+      "range_min": 1,
+      "range_max": 2
+    },
+    "extra_deep_block_chance": 0.8,
+    "extra_edge_column_chance": 0.7,
+    "waterlogged": false
+  }
+}

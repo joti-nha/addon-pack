@@ -1,0 +1,232 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:floating_boat",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					{
+						"test_rider": "query.is_tamed"
+					},
+					{
+						"base": "query.is_tamed"
+					},
+					{
+						"flying": "query.is_tamed"
+					},
+					{
+						"rider_sentinels": "query.is_saddled"
+					}
+				]
+			},
+			"animations": {
+				"test_rider": "controller.animation.floating_boat.test_rider",
+				"base": "controller.animation.base",
+				"flying": "controller.animation.floating_boat.flying",
+				"rider_sentinels": "controller.animation.rider_sentinels"
+			}
+		},
+		"component_groups": {
+			"dk:floating_boat_despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"dk:floating_boat_enemy": {
+				"minecraft:is_saddled": {},
+				"minecraft:timer": {
+					"time": 0.15,
+					"time_down_event": {
+						"event": "dk:floating_boat_despawn",
+						"filters": {
+							"test": "rider_count",
+							"subject": "self",
+							"operator": "==",
+							"value": 0
+						}
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.03
+				},
+				"minecraft:navigation.float": {
+					"can_path_over_water": true
+				},
+				"minecraft:health": {
+					"value": 20
+				},
+				"minecraft:behavior.float_wander": {
+					"priority": 2,
+					"must_reach": true
+				},
+				"minecraft:can_fly": {},
+				"minecraft:jump.static": {},
+				"minecraft:behavior.float": {
+					"priority": 0
+				},
+				"minecraft:behavior.mount_pathing": {
+					"priority": 1,
+					"speed_multiplier": 1.5,
+					"target_dist": 0,
+					"track_target": true
+				},
+				"minecraft:rideable": {
+					"seat_count": 2,
+					"crouching_skip_interact": true,
+					"family_types": [
+						"sentinel"
+					],
+					"seats": [
+						{
+							"position": [
+								0,
+								0.1,
+								0.7
+							],
+							"min_rider_count": 0,
+							"max_rider_count": 0,
+							"lock_rider_rotation": 0
+						},
+						{
+							"position": [
+								0,
+								0.1,
+								-0.5
+							],
+							"min_rider_count": 1,
+							"max_rider_count": 2,
+							"lock_rider_rotation": 0
+						}
+					]
+				}
+			},
+			"dk:floating_boat_ally": {
+				"minecraft:movement": {
+					"value": 1
+				},
+				"minecraft:buoyant": {
+					"base_buoyancy": 1,
+					"apply_gravity": true,
+					"simulate_waves": true,
+					"big_wave_probability": 0.03,
+					"big_wave_speed": 20,
+					"liquid_blocks": [
+						"minecraft:water",
+						"minecraft:flowing_water"
+					]
+				},
+				"minecraft:navigation.walk": {
+					"can_path_over_water": true,
+					"avoid_water": true,
+					"avoid_damage_blocks": true
+				},
+				"minecraft:behavior.player_ride_tamed": {},
+				"minecraft:movement.basic": {},
+				"minecraft:jump.static": {},
+				"minecraft:is_tamed": {},
+				"minecraft:input_ground_controlled": {},
+				"minecraft:can_power_jump": {},
+				"minecraft:rideable": {
+					"seat_count": 2,
+					"crouching_skip_interact": true,
+					"family_types": [
+						"player"
+					],
+					"interact_text": "action.interact.ride.horse",
+					"seats": [
+						{
+							"position": [
+								0,
+								0.1,
+								0.7
+							],
+							"min_rider_count": 0,
+							"max_rider_count": 0
+						},
+						{
+							"position": [
+								0,
+								0.1,
+								-0.5
+							],
+							"min_rider_count": 1,
+							"max_rider_count": 2
+						}
+					]
+				},
+				"minecraft:inventory": {
+					"container_type": "chest_boat",
+					"inventory_size": 27,
+					"can_be_siphoned_from": true
+				},
+				"minecraft:is_stackable": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "fall",
+						"deals_damage": false
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2.4
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"dk:floating_boat_ally"
+					]
+				}
+			},
+			"dk:floating_boat_event_enemy": {
+				"randomize": [
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"dk:floating_boat_enemy"
+							]
+						}
+					},
+					{
+						"weight": 999,
+						"add": {
+							"component_groups": [
+								"dk:floating_boat_despawn"
+							]
+						}
+					}
+				]
+			},
+			"dk:floating_boat_despawn": {
+				"add": {
+					"component_groups": [
+						"dk:floating_boat_despawn"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:floating_boat_enemy"
+					]
+				}
+			}
+		}
+	}
+}

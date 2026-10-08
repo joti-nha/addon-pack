@@ -1,0 +1,12 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tm_aqc:harpoon_entity",
+      "materials": { "default": "entity_alphatest" },
+      "geometry": { "default": "geometry.tm_aqc.dummy" },
+      "render_controllers": ["controller.render.default"],
+      "textures": { "default": "textures/tm/aqc/blank" }
+    }
+  }
+}

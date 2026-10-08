@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.elemental_rotate": {
+			"loop": true,
+			"animation_length": 0.24,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [
+							90,
+							0,
+							0
+						],
+						"0.24": [
+							90,
+							0,
+							-360
+						]
+					},
+					"position": [
+						0,
+						19,
+						13
+					]
+				},
+				"head": {
+					"rotation": [
+						-90,
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-125.39102,
+						33.78988,
+						-62.97025
+					],
+					"position": [
+						-1,
+						-1,
+						-2
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-81.70176,
+						4.69304,
+						-84.30135
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						35,
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						-57.5,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_backpack_upgrade_template"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "NNN",
+            "NIN",
+            "NNN"
+        ],
+        "key": {
+            "N": {
+                "item": "minecraft:iron_nugget"
+            },
+            "I": {
+                "item": "minecraft:iron_ingot"
+            }
+        },
+        "result": {
+            "item": "otg:backpack_upgrade_template"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:iron_ingot"
+            }
+        ]
+    }
+}

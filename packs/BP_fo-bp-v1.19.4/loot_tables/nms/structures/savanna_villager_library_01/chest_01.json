@@ -1,0 +1,59 @@
+{
+  "pools": [
+    // Structures 
+    {
+      "rolls": 15,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/structure_libraries.json"
+        }
+      ]
+    },
+    // Enchanted Books
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/random_enchanted_books.json"
+        }
+      ]
+    },
+    // Potions
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/potions.json"
+        }
+      ]
+    },
+    // Tools
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/tools.json"
+        }
+      ]
+    },
+    // Equipments
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/equipments.json"
+        }
+      ]
+    }
+  ]
+}

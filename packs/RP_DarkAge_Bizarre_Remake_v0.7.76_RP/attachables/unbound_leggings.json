@@ -1,0 +1,25 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "dk:unbound_leggings",
+      "item": { "dk:unbound_leggings": "query.owner_identifier == 'minecraft:player'" },
+      "materials": {
+        "default": "armor",
+        "glow": "skeleton",
+        "glow2": "spider_invisible",
+        "glow3": "spider"
+      },
+      "textures": {
+        "default": "textures/armor/unbound_armor"
+      },
+      "geometry": {
+        "default": "geometry.unbound_leggings"
+      },
+      "scripts": {
+        "parent_setup": "variable.leg_layer_visible = 0.0;"
+      },
+      "render_controllers": [ "controller.render.armor_glow" ]
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:scrollwright",
+      "enable_attachables": false,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_scrollwright"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_scrollwright"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_scrollwright"
+      },
+      "materials": {
+        "default": "ntk_entity_emissive_alpha"
+      },
+      "textures": {
+        "variant_0_scrollwright": "textures/entity/nms/scrollwright/ntk_scrollwright"
+      },
+      "particle_effects": {
+        "attack_range_particle": "ntk:scrollwright_attack_range_particle"
+      },
+      "animations": {
+        "controller_combat": "controller.animation.entity.ntk_scrollwright.combat",
+        "controller_movement": "controller.animation.entity.ntk_scrollwright.movement",
+        "controller_trading": "controller.animation.entity.ntk_scrollwright.trading",
+        "attack_range": "animation.entity.ntk_scrollwright.attack_range",
+        "base_pose": "animation.entity.ntk_scrollwright.base_pose",
+        "get_in_bed": "animation.entity.ntk_scrollwright.get_in_bed",
+        "look_at_target": "animation.entity.ntk_scrollwright.look_at_target",
+        "riding": "animation.entity.ntk_scrollwright.riding",
+        "raise_arm": "animation.entity.ntk_scrollwright.raise_arm",
+        "walking_base": "animation.entity.ntk_scrollwright.walking_base",
+        "walking_targeting": "animation.entity.ntk_scrollwright.walking_targeting"
+      },
+      "scripts": {
+        "animate": [
+          "controller_combat",
+          "controller_movement",
+          "controller_trading",
+          {
+            "base_pose": "!query.facing_target_to_range_attack"
+          },
+          {
+            "look_at_target": "!query.is_sleeping"
+          },
+          {
+            "riding": "query.is_riding"
+          }
+        ],
+        "scale": "0.9375"
+      }
+    }
+  }
+}

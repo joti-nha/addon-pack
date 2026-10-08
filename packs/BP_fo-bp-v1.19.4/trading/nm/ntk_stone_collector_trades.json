@@ -1,0 +1,151 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 15,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:blackstone", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:calcite", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cobbled_deepslate", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:cobblestone", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:dripstone_block", "quantity": 48 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:end_bricks", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:hardened_clay", "quantity": 32 }], // Terracotta
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:magma", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:mossy_cobblestone", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:mud_bricks", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:obsidian", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:purpur_block:3", "quantity": 16 }], // Purpur Pillar
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1}],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:red_sandstone:3", "quantity": 24 }], // Smooth Red Sandstone
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:sandstone:3", "quantity": 24 }], // Smooth Sandstone
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:smooth_basalt", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:smooth_stone", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stone:2", "quantity": 32 }], // Polished Granite
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stone:4", "quantity": 32 }], // Polished Diorite
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stone:6", "quantity": 32 }], // Polished Andesite
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stonebrick:0", "quantity": 24 }], // Stone Bricks
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stonebrick:1", "quantity": 24 }], // Mossy Stone Bricks
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:stonebrick:2", "quantity": 24 }], // Cracked Stone Bricks
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:tuff", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

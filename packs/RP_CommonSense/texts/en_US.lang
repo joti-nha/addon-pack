@@ -1,0 +1,37 @@
+pack.name=Common Sense
+pack.description=
+item.bv:cooked_egg=Fried Egg
+item.bv:bread_and_egg=Bread with Egg
+item.bv:scuba_helmet=§3Scuba Helmet\n§9Common Sense
+item.bv:bacon_and_eggs=Bacon and Eggs
+item.bv:sushi=Sushi
+item.bv:netherite_skull=§6Netherite Skull\n§9Trinkets and Gadgets
+item.bv:heart_amulet=§6Creaking Heart Amulet\n§9Trinkets and Gadgets\n§8Interact to instant heal
+item.bv:miner_bless=§6Miners Bless\n§9Trinkets and Gadgets
+item.bv:phantom_wings=Phantom Wings
+item.bv:balloon=§6Balloon\n§9Trinkets and Gadgets
+item.bv:recall_potion=Recall Potion\n§8Teleport to your bed
+item.bv:magic_mirror=§6Magic Mirror\n§9Trinkets and Gadgets\n§8Teleport to your bed
+item.bv:mount_horn=§2Mount Horn\n§9Common Sense Horses\n§8Sneak+Interact in your mount
+item.bv:config=Common Sense Settings
+item.bv:armadillo_fox_armor=Fox Armor\n§9Common Sense
+item.bv:view=View Changer\n§8Sneak+Interact to open menu
+tile.bv:light_source.name=Light Source
+item.bv:guidebook=CommonSense Book
+
+commonsense.guide.title=Common Sense Guide
+commonsense.guide.body=Welcome to the official guide! Choose a category below to learn more about the addon mechanics.
+commonsense.guide.btn.back=Back
+
+commonsense.guide.btn.recipes=Recipes
+commonsense.guide.btn.=Recipes
+
+
+commonsense.guide.btn.functions=New Functions
+commonsense.guide.btn.items=Item Information
+commonsense.guide.btn.about=About JFAddons
+
+commonsense.guide.about.title=About JFAddons
+commonsense.guide.about.body=Common Sense is developed by JFAddons studio.\n\nFollow the updates and new YouTube videos to stay informed about news and tutorials!
+commonsense.guide.btn.back=Back
+commonsense.guide.btn.close=Close

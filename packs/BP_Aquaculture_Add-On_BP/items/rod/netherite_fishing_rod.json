@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tm_aqc:netherite_fishing_rod",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:custom_components": ["tm_aqc:rod"],
+      "minecraft:tags": { "tags": ["tm_aqc:rod"] },
+      "minecraft:repairable": {
+        "repair_items": [
+          {
+            "items": ["minecraft:netherite_ingot"],
+            "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+          }
+        ]
+      },
+      "minecraft:durability": {
+        "max_durability": 2031
+      },
+      "minecraft:enchantable": {
+        "slot": "fishing_rod",
+        "value": 15
+      },
+      "minecraft:icon": "tm_aqc_netherite_fishing_rod"
+    }
+  }
+}

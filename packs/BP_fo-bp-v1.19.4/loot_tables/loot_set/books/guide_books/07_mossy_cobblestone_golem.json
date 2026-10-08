@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_name",
+              "name": "Mossy Cobblestone Golem"
+            },
+            {
+              "function": "set_book_contents",
+              "title": "Guide Book #7",
+              "author": "Forsaken Odyssey",
+              "pages": [
+                "        §7Guide Book #7§r\n§lMossy Cobblestone Golem§r\n§8MOB§r\n \n•§lRarity§r: Uncommon\n \n•§lBehavior§r: Neutral\n \n•§lMob type§r: Golem, Earth-elemental, Magical.",
+                "•§lSpawn in§r: Mossy Forest, Overgrown Jungle, Forest, Flower Forest, Birch Forest, Old Growth Birch Forest, Dark Forest, Taiga, Old Growth Pine Taiga, Old Growth Spruce Taiga, Jungle, Sparse Jungle, Bamboo Jungle, Swamp, Windswept Forest,",
+                "Mosshroom Caves, Lush Caves.\n \n•§lSummonable through§r: Summoning Scroll of Mossy Cobblestone Golem\n \n•§lTransformation of§r: Cobblestone Golem\n \n•§lHealth§r: 50 §o(Wild)§r | 70 §o(Tamed)§r\n \n•§lKnockback resistance§r: 0.5",
+                "•§lImmunities§r: §o(None)§r\n \n•§lWalk speed§r: 0.2\n \n•§lBreathes in§r: Air, Water, Solid Blocks.\n \n•§lTempted by§r: §o(None)§r\n \n•§lHealable§r:\n -Cobblestone §o(10)§r\n -Mossy Cobblestone §o(10)§r",
+                "•§lTameable§r: Enchanted Emerald §o(100%)§r\n \n•§lPossible drops§r: Mossy Cobblestone, Emerald, XP Orbs.\n \n•§lAggressive toward§r:\n -§lWild§r: §o(None)§r\n -§lTamed§r: Monsters, Owner's attackers, Owner's targets.",
+                "•§lMelee Attack§r:\n -§lDamage§r: 7-8\n \n•Transform into a §lCobblestone Golem§r, when a wild mossy cobblestone golem gets exposed for too long to hot-temperature places like Nether, Desert, or Badlands. And if it also surrounded by cobblestone,",
+                "the transformation will be accelerated and become more effective.\n \n•Transform into a §lCobbled Deepslate Golem§r when struck by lightning.\n \n•Wild Mossy Cobblestone Golem can sleep during the night or thunderstorms.",
+                "•Tamed Mossy Cobblestone Golem can be sat down."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

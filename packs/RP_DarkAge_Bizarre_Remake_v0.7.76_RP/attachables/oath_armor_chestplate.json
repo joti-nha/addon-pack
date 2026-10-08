@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "dk:oath_armor_chestplate",
+      "item": {
+        "dk:oath_armor_chestplate": "query.owner_identifier == 'minecraft:player'"
+      },
+      "materials": {
+        "default": "armor",
+        "glow": "skeleton",
+        "glow2": "spider_invisible",
+        "glow3": "spider"
+      },
+      "textures": {
+        "default": "textures/armor/oath_armor",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.oath_armor_chestplate"
+      },
+      "animations": {
+        "static": "animation.oath_armor_chestplate.static",
+        "fly": "animation.oath_armor_chestplate.fly"
+      },
+      "scripts": {
+        "parent_setup": "variable.boot_layer_visible = 0.0;",
+        "animate": [
+          {
+            "static": "query.is_on_ground"
+          },
+          {
+            "fly": "!query.is_on_ground"
+          }
+        ]
+      },
+      "render_controllers": [
+        "controller.render.armor_glow"
+      ]
+    }
+  }
+}

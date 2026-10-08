@@ -1,0 +1,22 @@
+{
+    "format_version": "1.18.10",
+    "minecraft:recipe_smithing_transform": {
+      "description": {
+        "identifier": "tm_aqc:netherite_fillet_knife"
+      },
+      "tags": ["smithing_table"],
+      "template": {
+        "item": "minecraft:netherite_upgrade_smithing_template"
+      },
+      "base": {
+        "item": "tm_aqc:diamond_fillet_knife"
+      },
+      "addition": {
+        "item": "minecraft:netherite_ingot"
+      },
+      "result": {
+        "item": "tm_aqc:netherite_fillet_knife"
+      }
+    }
+  }
+  

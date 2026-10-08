@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_tin_speae"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "  A",
+      " I ",
+      "I  "
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:tin_ingot"
+      },
+      "I": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ntk:tin_spear",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:tin_ingot"
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}
+

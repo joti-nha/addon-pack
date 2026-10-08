@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:artif_x_earthen_quill"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "earthen_quill",
+    "ingredients": [
+      {
+        "item": "ntk:brown_feather"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      },
+      {
+        "item": "ntk:charcoal_powder"
+      }
+    ],
+    "result": {
+      "item": "ntk:earthen_quill"
+    },
+    "unlock": [
+      {
+        "item": "ntk:brown_feather"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      },
+      {
+        "item": "ntk:charcoal_powder"
+      }
+    ]
+  }
+}

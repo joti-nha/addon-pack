@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_zinc_ore"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:zinc_ore"
+    },
+    "output": {
+      "item": "ntk:zinc_ingot",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:zinc_ore"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_pile_of_lily_of_the_valley"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "pile_of_lily_of_the_valley",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:lily_of_the_valley"
+      }
+    },
+    "result": {
+      "item": "ntk:pile_of_lily_of_the_valley",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:lily_of_the_valley"
+      }
+    ]
+  }
+}

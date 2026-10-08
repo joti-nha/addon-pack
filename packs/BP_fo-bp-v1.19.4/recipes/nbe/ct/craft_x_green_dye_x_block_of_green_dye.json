@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_green_dye_x_block_of_green_dye"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "green_dye",
+    "ingredients": [
+      {
+        "item": "ntk:block_of_green_dye"
+      }
+    ],
+    "result": {
+      "item": "minecraft:green_dye",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_green_dye"
+      }
+    ]
+  }
+}

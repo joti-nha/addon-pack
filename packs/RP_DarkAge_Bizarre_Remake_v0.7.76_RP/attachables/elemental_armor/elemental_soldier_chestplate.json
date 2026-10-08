@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "dk:elemental_soldier_chestplate",
+      "item": { "dk:elemental_soldier_chestplate": "query.owner_identifier == 'minecraft:player'" },
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/mobs/unbound_elemental/unboned",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.elemental_soldier_chestplate"
+      },
+      "animations": {
+        "static": "animation.elemental_soldier_chestplate.static",
+        "cape": "animation.elemental_soldier_chestplate.cape"
+      },
+      "scripts": {
+        "parent_setup": "variable.chest_layer_visible = 0.0;",
+        "animate": [
+            "static",
+            "cape"
+        ]
+      },
+      "render_controllers": [ "controller.render.armor" ]
+    }
+  }
+}

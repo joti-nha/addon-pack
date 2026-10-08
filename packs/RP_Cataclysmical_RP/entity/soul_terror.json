@@ -1,0 +1,65 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:soul_terror",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/soul_terror_texture"
+			},
+			"geometry": {
+				"default": "geometry.soul_terror"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_soul_terror_egg"
+			},
+			"animations": {
+				"awaken": "animation.soul_terror.awaken",
+				"idle": "animation.soul_terror.idle",
+				"move": "animation.soul_terror.move",
+				"move_controller": "controller.animation.soul_terror.move_controller",
+				"awaken_controller": "controller.animation.soul_terror.awaken_controller",
+				"attack_controller": "controller.animation.soul_terror.attack_controller",
+				"normal_attack": "animation.soul_terror.normal_attack",
+				"summon": "animation.soul_terror.summon",
+				"roar": "animation.soul_terror.roar",
+				"heads": "animation.soul_terror.heads",
+				"particle": "animation.soul_terror.particle",
+				"normal_summon": "animation.soul_terror.normal_summon",
+				"teleport": "animation.soul_terror.teleport"
+			},
+			"scripts": {
+				"animate": [
+					"move_controller",
+					"awaken_controller",
+					"attack_controller",
+					"idle",
+					"heads",
+					"particle"
+				]
+			},
+			"particle_effects": {
+				"soul_terror_emitter": "mnra_cata:soul_terror_emitter",
+				"large_impact": "mnra_cata:massive_impact",
+				"terror_stage": "mnra_cata:terror_stage",
+				"small_impact": "mnra_cata:small_impact",
+				"soul_terror_heavy_attack": "mnra_cata:soul_terror_heavy_attack",
+				"soul_terror_roar": "mnra_cata:soul_terror_roar",
+				"soul_terror_roar_plasma": "mnra_cata:soul_terror_roar_plasma"
+			},
+			"sound_effects": {
+				"soul_terror_spawn": "sound.soul_terror_spawn",
+				"large_impact": "mob.large_impact",
+				"small_impact": "mob.small_impact",
+				"spirit_scream": "mob.spirit_scream",
+				"large_swing": "mob.large_swing",
+				"soul_terror_summon": "mob.soul_terror_summon"
+			}
+		}
+	}
+}

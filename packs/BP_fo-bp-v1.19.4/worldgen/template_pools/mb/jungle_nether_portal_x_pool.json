@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:mb/jungle_nether_portal_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 50,
+        "element": {
+          "location": "mb/jungle_nether_portal_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/jungle_stone_structures_x_processor"
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "mb/jungle_nether_portal_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/jungle_stone_structures_x_processor"
+        }
+      }
+    ]
+  }
+}

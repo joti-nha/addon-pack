@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:acacia_slabnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:acacia_slab"
+			}
+		},
+		"result": {
+			"item": "minecraft:acacia_planks",
+			"count": 1
+		}
+	}
+}

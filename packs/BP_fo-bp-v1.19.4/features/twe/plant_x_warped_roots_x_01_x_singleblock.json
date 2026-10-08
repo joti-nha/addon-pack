@@ -1,0 +1,51 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_warped_roots_x_01_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:warped_roots",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air",
+      // Sprouts:
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      "minecraft:nether_sprouts",
+      // Flowers:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Plants:
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:vine",
+      // Environmental Blocks:
+      "minecraft:resin_clump"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+				// Soil-type Blocks:
+				{ "tags": "query.all_tags('ntk:soul_sand')" },
+				{ "tags": "query.all_tags('ntk:soul_soil')" },
+				"minecraft:soul_sand",
+				"minecraft:soul_soil",
+        // Nyliums:
+				{ "tags": "query.all_tags('ntk:crimsoned_blocks')" },
+        { "tags": "query.all_tags('ntk:warped_blocks')" },
+        "minecraft:crimson_nylium",
+        "minecraft:warped_nylium",
+				// Stone-type Blocks:
+				{ "tags": "query.all_tags('ntk:netherrack')" },
+				"minecraft:netherrack"
+			]
+		}
+  }
+}

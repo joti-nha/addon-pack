@@ -1,0 +1,33 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:processor_list": {
+		"description": {
+			"identifier": "ntk:fo/item_frame_x_processor"
+		},
+		"processors": [
+      {
+        "processor_type": "minecraft:capped",
+        "limit": 30,
+        "delegate": {
+          "processor_type": "minecraft:rule",
+          "rules": [
+            // Item Frames:
+            {
+              "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/loot_set/item_frame.json"
+              },
+              "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:frame"
+              },
+              "output_state": {
+                "name": "minecraft:frame"
+              }
+            }
+          ]
+        }
+      }
+		]
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "ntk:white_jellyfish_polyp",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

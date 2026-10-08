@@ -1,0 +1,19 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:wetland/column"
+		},
+		"places_feature": "dk:wetland/stone_material",
+		"iterations": "t.height=16+(q.noise(v.originx/16, v.originz/16))*1;return t.height;",
+		"x": 0,
+		"z": 0,
+		"y": {
+			"distribution": "fixed_grid",
+			"extent": [
+				0,
+				"t.height"
+			]
+		}
+	}
+}

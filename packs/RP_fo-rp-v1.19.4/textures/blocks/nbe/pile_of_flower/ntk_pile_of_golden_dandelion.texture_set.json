@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_pile_of_golden_dandelion",
+    "heightmap": "ntk_pile_of_dandelion_height",
+    "metalness_emissive_roughness": "ntk_pile_of_golden_dandelion_mer"
+  }
+}

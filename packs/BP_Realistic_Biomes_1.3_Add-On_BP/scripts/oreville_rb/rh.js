@@ -1,0 +1,1 @@
+import{DimensionTypes,world}from"@minecraft/server";import{nfwkwu}from"oreville_rb/rg";export let overworld;export let mchreg;nfwkwu(()=>{overworld=world.getDimension("minecraft:overworld"),mchreg=DimensionTypes.getAll()});

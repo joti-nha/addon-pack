@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_end_stone_x_polished_end_stone_wall"
+    },
+    "priority": 4,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:end_stone"
+      }
+    ],
+    "result": {
+      "item": "ntk:polished_end_stone_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:end_stone"
+      }
+    ]
+  }
+}

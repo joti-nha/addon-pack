@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:meteorite",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/projectile/meteorite"
+			},
+			"geometry": {
+				"default": "geometry.meteorite"
+			},
+			"animations": {
+				"controller": "controller.animation.meteorite.controller",
+				"fire": "animation.meteorite.fire"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			},
+			"particle_effects": {
+				"fire": "minecraft:lava_particle",
+				"firefire": "minecraft:mobflame_single"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

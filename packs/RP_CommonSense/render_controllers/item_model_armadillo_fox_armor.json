@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.item_model_armadillo_fox_armor": {
+			"geometry": "geometry.fa_item_model",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.fa_item_model"
+			]
+		}
+	}
+}

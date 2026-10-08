@@ -1,0 +1,39 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_name",
+              "name": "Warped Mushlings"
+            },
+            {
+              "function": "set_book_contents",
+              "title": "Guide Book #89",
+              "author": "Forsaken Odyssey",
+              "pages": [
+                "        §7Guide Book #89§r\n§lWarped Mushlings§r\n§8MOB§r\n \n•§lRarity§r: Common\n \n•§lBehavior§r: Passive\n \n•§lMob type§r: Mushling, Myconid, Nature-elemental, Magical.\n \n•§lSpawns in§r: Warped Forest",
+                "•§lHealth§r:\n -§lWild§r: 12\n -§lTamed§r: 22\n \n•§lKnockback resistance§r:\n -§lWild§r: 0.0\n -§lTamed§r: 0.1\n \n•§lImmunities§r: Mushling's released effects.\n \n•§lWalk speed§r: 0.25\n \n•§lBreathes in§r: Air",
+                "•§lTempted by§r: Azalea, Flowering Azalea.\n \n•§lHealable§r:\n -Azalea §o(3)§r\n -Flowering Azalea §o(3)§r\n \n•§lBreed with§r: Warped Mushling\n \n•§lBreed cooldown§r: 5:00\n \n•§lBreed items§r: Azalea\n \n•§lAging duration§r: 1:00:00",
+                "•§lAging items§r:\n -Flowering Azalea §o(3.0%)§r\n -Azalea §o(2.5%)§r.\n \n•§lTameable§r: Flowering Azalea §o(20%)§r\n \n•§lSpawn items§r: Warped Fungus\n -§lWild Adult§r:\n  -§lDuration§r: 10:00-15:00\n  -§lCount§r: 1",
+                " -§lTamed Adult§r:\n  -§lDuration§r: 5:00-10:00\n  -§lCount§r: 1\n \n•§lPossible drops§r: Warped Fungus, XP Orbs.\n \n•§lAvoids§r:\n -§lWild§r: Monsters, Players\n -§lTamed§r: Monsters",
+                "•§lRelease Effect§r:\n -§lWild§r:\n  -§lNause Effect§r:\n   -§lCondition§r: When hurt or damaged.\n   -§lDuration§r: 0:20\n   -§lLevel§r: 1\n   -§lRadius§r: 3 blocks\n   -§lTargets§r: Any nearby non-mushling mobs.\n   -§lCooldown§r: 0:06",
+                " -§lTamed§r:\n  -§lSpeed Effect§r:\n   -§lCondition§r: When nearby hostile mobs are present.\n   -§lDuration§r: 0:20\n   -§lLevel§r: 1\n   -§lRadius§r: 5 blocks\n   -§lTargets§r: Any nearby non-hostile mobs.\n   -§lCooldown§r: 0:10\n§•",
+                "•Wild mushling can randomly sit.\n \n•Tamed Mushling can be sat down."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

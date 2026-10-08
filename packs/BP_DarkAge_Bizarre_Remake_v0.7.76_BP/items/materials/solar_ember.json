@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:solar_ember",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "item.dk:solar_ember.name"
+			},
+			"minecraft:icon": "solar_ember"
+		}
+	}
+}

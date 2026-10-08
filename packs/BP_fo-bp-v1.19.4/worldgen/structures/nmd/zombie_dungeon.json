@@ -1,0 +1,108 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "ntk:zombie_dungeon"
+		},
+		"biome_filters": [
+			{
+        "all_of": [
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "cold"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "extreme_hills"
+          },
+          {
+            "test": "has_biome_tag",
+            "operator": "!=",
+            "value": "river"
+          },
+          {
+            "any_of": [
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "corrupted_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mossy_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "overgrown_jungle"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "plains"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "flower_forest"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "jungle"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "mangrove_swamp"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "savanna"
+              },
+              {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "pale_garden"
+              }
+            ]
+          }
+        ]
+      }
+		],
+		"start_pool": "ntk:nmd/zombie_dungeon_entrance_x_pool",
+		"heightmap_projection": "world_surface",
+		"step": "underground_structures",
+		"terrain_adaptation": "none",
+		"liquid_settings": "ignore_waterlogging",
+		"start_height": {
+			"type": "constant",
+			"value": {
+				"absolute": -6
+			}
+		},
+		"max_depth": 1,
+		"max_distance_from_center": {
+			"horizontal": 128,
+			"vertical": 128
+		},
+		"dimension_padding": {
+			"top": 0,
+			"bottom": 0
+		}
+	}
+}

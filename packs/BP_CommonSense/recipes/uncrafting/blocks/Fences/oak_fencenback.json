@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:oak_fencenback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:oak_fence"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:oak_planks",
+				"count": 3
+			}
+		]
+	}
+}

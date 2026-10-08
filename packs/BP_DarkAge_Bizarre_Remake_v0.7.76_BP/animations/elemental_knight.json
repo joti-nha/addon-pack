@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.elemental_knight.attack_fire": {
+			"animation_length": 1.5,
+			"loop": true,
+			"timeline": {
+				"0.7": [
+					"/particle minecraft:huge_explosion_lab_misc_emitter ~ ~1 ~",
+					"/playsound random.explode @a[r=20] ~~~ 1.0 0.5",
+					"/fill ~1 ~ ~-1 ~-1 ~ ~1 fire [] replace air",
+					"/fill ~2 ~ ~ ~2 ~ ~ fire [] replace air",
+					"/fill ~-2 ~ ~ ~-2 ~ ~ fire [] replace air",
+					"/fill ~ ~ ~2 ~ ~ ~2 fire [] replace air",
+					"/fill ~ ~ ~-2 ~ ~ ~-2 fire [] replace air"
+				]
+			}
+		},
+		"animation.elemental_knight.ranged_fire": {
+			"animation_length": 3.3,
+			"loop": true,
+			"timeline": {
+				"0.76": [
+					"/event entity @s dk:elemental_knight_event_mode_attack_ranged_projectile"
+				]
+			}
+		},
+		"animation.elemental_knight.defense": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"0": [
+					"/event entity @s dk:elemental_knight_event_mode_attack_defense_finish"
+				]
+			}
+		},
+		"animation.elemental_knight.explosion": {
+			"animation_length": 0.92,
+			"loop": true,
+			"timeline": {
+				"0.3": [
+					"/summon dk:elemental_knight_explosion"
+				],
+				"0.85": [
+					"/event entity @s dk:elemental_knight_event_mode_attack_defense_finish"
+				]
+			}
+		},
+		"animation.elemental_knight.kill": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/ride @e[type=dk:elemental_knight,c=1,r=5] start_riding @s"
+				],
+				"1.9": [
+					"/event entity @s despawn"
+				]
+			}
+		},
+		"animation.unboned.home": {
+			"animation_length": 6.5,
+			"loop": true,
+			"timeline": {
+				"6.0": [
+					"@s dk:unboned_event_mode_go_home"
+				]
+			}
+		}
+	}
+}

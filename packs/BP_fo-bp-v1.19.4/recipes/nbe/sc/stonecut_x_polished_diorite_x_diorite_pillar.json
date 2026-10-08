@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_polished_diorite_x_diorite_pillar"
+    },
+    "priority": 0,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:polished_diorite"
+      }
+    ],
+    "result": {
+      "item": "ntk:diorite_pillar",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:polished_diorite"
+      }
+    ]
+  }
+}

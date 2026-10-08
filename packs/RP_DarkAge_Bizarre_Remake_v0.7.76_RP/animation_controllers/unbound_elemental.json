@@ -1,0 +1,239 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.unbound_elemental.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"sleep"
+					],
+					"transitions": [
+						{
+							"wake": "q.property('dk:unbound_elemental')=='mode_wake'"
+						},
+						{
+							"static": "q.property('dk:unbound_elemental')=='mode_start'"
+						},
+						{
+							"death": "q.property('dk:unbound_elemental')=='mode_death'"
+						}
+					]
+				},
+				"wake": {
+					"animations": [
+						"wake"
+					],
+					"transitions": [
+						{
+							"static": "q.property('dk:unbound_elemental')=='mode_start'"
+						},
+						{
+							"death": "q.property('dk:unbound_elemental')=='mode_death'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"static": {
+					"animations": [
+						"static"
+					],
+					"transitions": [
+						{
+							"death": "q.property('dk:unbound_elemental')=='mode_death'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"death": {
+					"animations": [
+						"death"
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.unbound_elemental.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"attack_two": "query.mark_variant==2&&query.is_delayed_attacking"
+						},
+						{
+							"attack_three": "query.mark_variant==3&&query.is_delayed_attacking"
+						},
+						{
+							"attack_four": "query.mark_variant==4"
+						},
+						{
+							"flamethrower": "query.mark_variant==5"
+						},
+						{
+							"summon": "query.is_casting"
+						},
+						{
+							"shoot": "query.mark_variant==7&&query.is_charged&&query.has_target"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				},
+				"attack_three": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_three"
+					]
+				},
+				"attack_four": {
+					"transitions": [
+						{
+							"default": "query.mark_variant!=4"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_four"
+					]
+				},
+				"flamethrower": {
+					"transitions": [
+						{
+							"default": "query.mark_variant!=5"
+						}
+					],
+					"blend_transition": 0.8,
+					"animations": [
+						"flamethrower"
+					],
+					"particle_effects": [
+						{
+							"effect": "soul_flamethrower",
+							"locator": "flamethrower"
+						}
+					]
+				},
+				"summon": {
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"summon"
+					]
+				},
+				"shoot": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"shoot"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_head.charged": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shoot": "query.is_charged&&query.has_target"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"shoot": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"shoot"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

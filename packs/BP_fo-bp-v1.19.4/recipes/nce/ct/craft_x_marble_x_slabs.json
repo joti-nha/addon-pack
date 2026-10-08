@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_marble_x_slabs"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "M ",
+      " M"
+    ],
+    "key": {
+      "M": {
+        "item": "ntk:marble_slab"
+      }
+    },
+    "result": {
+      "item": "ntk:marble",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:marble_slab"
+      }
+    ]
+  }
+}

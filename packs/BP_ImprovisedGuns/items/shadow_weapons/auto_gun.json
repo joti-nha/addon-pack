@@ -1,0 +1,319 @@
+{
+	"format_version": "1.20.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "rev:shadow_auto_gun",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"events": {
+			"rev:shot": {
+				"sequence": [
+					{
+						"condition": "query.remaining_durability>0",
+						"shoot": {
+							"projectile": "rev:auto_bullet",
+							"launch_power": 1
+						},
+						"damage": {
+							"amount": 1,
+							"target": "self",
+							"type": "durability"
+						},
+						"run_command": {
+							"command": [
+								"playsound rev.auto_shot @a ~ ~ ~"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==30",
+						"run_command": {
+							"command": [
+								"title @p actionbar 29/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==29",
+						"run_command": {
+							"command": [
+								"title @p actionbar 28/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==28",
+						"run_command": {
+							"command": [
+								"title @p actionbar 27/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==27",
+						"run_command": {
+							"command": [
+								"title @p actionbar 26/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==26",
+						"run_command": {
+							"command": [
+								"title @p actionbar 25/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==25",
+						"run_command": {
+							"command": [
+								"title @p actionbar 24/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==24",
+						"run_command": {
+							"command": [
+								"title @p actionbar 23/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==23",
+						"run_command": {
+							"command": [
+								"title @p actionbar 22/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==22",
+						"run_command": {
+							"command": [
+								"title @p actionbar 21/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==21",
+						"run_command": {
+							"command": [
+								"title @p actionbar 20/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==20",
+						"run_command": {
+							"command": [
+								"title @p actionbar 19/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==19",
+						"run_command": {
+							"command": [
+								"title @p actionbar 18/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==18",
+						"run_command": {
+							"command": [
+								"title @p actionbar 17/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==17",
+						"run_command": {
+							"command": [
+								"title @p actionbar 16/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==16",
+						"run_command": {
+							"command": [
+								"title @p actionbar 15/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==15",
+						"run_command": {
+							"command": [
+								"title @p actionbar 14/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==14",
+						"run_command": {
+							"command": [
+								"title @p actionbar 13/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==13",
+						"run_command": {
+							"command": [
+								"title @p actionbar 12/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==12",
+						"run_command": {
+							"command": [
+								"title @p actionbar 11/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==11",
+						"run_command": {
+							"command": [
+								"title @p actionbar 10/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==10",
+						"run_command": {
+							"command": [
+								"title @p actionbar 09/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==9",
+						"run_command": {
+							"command": [
+								"title @p actionbar 08/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==8",
+						"run_command": {
+							"command": [
+								"title @p actionbar 07/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==7",
+						"run_command": {
+							"command": [
+								"title @p actionbar 06/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==6",
+						"run_command": {
+							"command": [
+								"title @p actionbar 05/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==5",
+						"run_command": {
+							"command": [
+								"title @p actionbar 04/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==4",
+						"run_command": {
+							"command": [
+								"title @p actionbar 03/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==3",
+						"run_command": {
+							"command": [
+								"title @p actionbar 02/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==2",
+						"run_command": {
+							"command": [
+								"title @p actionbar 01/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability==1",
+						"run_command": {
+							"command": [
+								"title @p actionbar 00/30"
+							]
+						}
+					},
+					{
+						"condition": "query.remaining_durability<=1",
+						"run_command": {
+							"command": [
+								"title @p actionbar 00/30",
+								"replaceitem entity @s slot.weapon.mainhand 0 rev:auto_gun_empty"
+							]
+						}
+					}
+				]
+			}
+		},
+		"components": {
+			"minecraft:tags": {
+				"tags": [
+					"rev:improvised_gun",
+					"rev:hold_animation"
+				]
+			},
+			"minecraft:glint": true,
+			"minecraft:enchantable": {
+				"slot": "bow",
+				"value": 10
+			},
+			"minecraft:cooldown": {
+				"category": "auto_gun",
+				"duration": 0.23
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"iron_ingot"
+						],
+						"repair_amount": 32
+					}
+				]
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "rev_auto_gun"
+			},
+			"minecraft:allow_off_hand": true,
+			"minecraft:durability": {
+				"max_durability": 550
+			}
+		}
+	}
+}

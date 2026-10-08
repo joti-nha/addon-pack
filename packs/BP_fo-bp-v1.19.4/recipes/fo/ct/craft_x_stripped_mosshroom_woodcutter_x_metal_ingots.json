@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_stripped_mosshroom_woodcutter_x_metal_ingots"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "stripped_mosshroom_woodcutter",
+    "assume_symmetry": true,
+    "pattern": [
+      " A ",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "tag": "ntk:metal_ingots"
+      },
+      "B": {
+        "item": "ntk:stripped_mosshroom_hyphae"
+      }
+    },
+    "result": {
+      "item": "ntk:stripped_mosshroom_woodcutter",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "tag": "ntk:metal_ingots"
+      },
+      {
+        "item": "ntk:stripped_mosshroom_hyphae"
+      }
+    ]
+  }
+}

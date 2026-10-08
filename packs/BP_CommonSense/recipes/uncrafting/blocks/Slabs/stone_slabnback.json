@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:stone_slabnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:normal_stone_slab"
+			}
+		},
+		"result": {
+			"item": "minecraft:stone",
+			"count": 1
+		}
+	}
+}

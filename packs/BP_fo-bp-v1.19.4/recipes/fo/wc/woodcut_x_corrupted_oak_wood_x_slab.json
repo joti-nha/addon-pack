@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_corrupted_oak_wood_x_slab"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "corrupted_oak_slab",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_oak_slab",
+      "count": 8
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    ]
+  }
+}

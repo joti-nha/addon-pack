@@ -1,0 +1,54 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:structure_set": {
+		"description": {
+			"identifier": "ntk:overworld_underground_small_structures_x_fo_set"
+		},
+		"placement": {
+			"type": "minecraft:random_spread",
+			"spread_type": "triangular",
+			"salt": 36921073,
+			"spacing": 20,
+			"separation": 9
+		},
+		"structures": [
+			// Abandoned & Ruin Structures:
+			{
+				"structure": "ntk:abandoned_stone_cave_house",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:ancient_tomb",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:copper_vault",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:creeper_head_statue",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:deepslate_cave_dweller_house",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:skeleton_spawner_den",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:stone_cave_dweller_house",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:stone_tomb_underground",
+				"weight": 100
+			},
+			{
+				"structure": "ntk:zombie_spawner_den",
+				"weight": 100
+			}
+		]
+	}
+}

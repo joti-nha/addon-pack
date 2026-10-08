@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:miscellaneous_active_heated_netherrack_explosive",
+      "render_controllers": [
+        "controller.render.miscellaneous.ntk_active_heated_netherrack_explosive"
+      ],
+      "geometry": {
+        "default": "geometry.miscellaneous.ntk_cube_block"
+      },
+      "materials": {
+        "default": "ntk_miscellaneous_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/misc/nce/ntk_active_heated_netherrack_explosive"
+      }
+    }
+  }
+}

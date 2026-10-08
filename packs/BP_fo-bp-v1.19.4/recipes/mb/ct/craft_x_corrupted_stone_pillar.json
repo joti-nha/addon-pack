@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_stone_pillar"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "C",
+      "C"
+    ],
+    "key": {
+      "C": {
+        "item": "ntk:polished_corrupted_stone"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_stone_pillar",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "ntk:polished_corrupted_stone"
+      }
+    ]
+  }
+}

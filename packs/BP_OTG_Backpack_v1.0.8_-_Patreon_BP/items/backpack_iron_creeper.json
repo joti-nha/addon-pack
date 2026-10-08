@@ -1,0 +1,24 @@
+{
+    "format_version": "1.21.110",
+    "minecraft:item": {
+        "description": {
+            "identifier": "otg:backpack_iron_creeper",
+            "menu_category": {
+                "category": "equipment",
+                "group": "otg:itemGroup.name.backpacks"
+            }
+        },
+        "components": {
+            "minecraft:icon": "backpack_creeper_icon",
+            "minecraft:max_stack_size": 1,
+            "minecraft:allow_off_hand": true,
+            "minecraft:wearable": {
+                "slot": "slot.weapon.offhand"
+            },
+            "minecraft:cooldown": {
+                "category": "backpack_use",
+                "duration": 0.1
+            }
+        }
+    }
+}

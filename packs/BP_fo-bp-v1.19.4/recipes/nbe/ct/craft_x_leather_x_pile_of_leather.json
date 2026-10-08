@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_leather_x_pile_of_leather"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "leather",
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_leather"
+      }
+    ],
+    "result": {
+      "item": "minecraft:leather",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_leather"
+      }
+    ]
+  }
+}

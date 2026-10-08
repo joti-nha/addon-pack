@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:purpur_slabnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:purpur_slab"
+			}
+		},
+		"result": {
+			"item": "minecraft:purpur_block",
+			"count": 1
+		}
+	}
+}

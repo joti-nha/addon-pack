@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_leather_x_leather_scrap"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "leather",
+    "assume_symmetry": true,
+    "pattern": [
+      "LL",
+      "LL"
+    ],
+    "key": {
+      "L": {
+        "item": "ntk:leather_scrap"
+      }
+    },
+    "result": {
+      "item": "minecraft:leather",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:leather_scrap"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.unboned.no_shield_by_attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "!query.is_sheared&&query.mark_variant==1&&variable.attack_time"
+						},
+						{
+							"attack_no_defense": "!query.is_saddled&&variable.attack_time&&query.mark_variant==1&&query.is_sheared"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_sheared&&!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"@s dk:unboned_event_mode_no_shield_by_attack"
+					],
+					"on_exit": [
+						"@s dk:unboned_event_mode_shield"
+					]
+				},
+				"attack_no_defense": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time&&!query.is_saddled&&query.is_sheared"
+						}
+					],
+					"on_entry": [
+						"@s dk:unboned_event_mode_no_shield_by_attack"
+					],
+					"on_exit": [
+						"@s dk:unboned_event_mode_no_shield_by_attack"
+					]
+				}
+			}
+		}
+	}
+}

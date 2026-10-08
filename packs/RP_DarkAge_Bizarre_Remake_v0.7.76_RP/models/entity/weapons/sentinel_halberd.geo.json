@@ -1,0 +1,187 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sentinel_halberd",
+				"texture_width": 300,
+				"texture_height": 160,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 22,
+				"visible_bounds_offset": [
+					0,
+					8,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "halberd",
+					"parent": "rightItem",
+					"pivot": [
+						-6,
+						17,
+						-1
+					],
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								-33.58333,
+								-25.41667
+							],
+							"size": [
+								4,
+								72,
+								4
+							],
+							"uv": [
+								149,
+								0
+							]
+						},
+						{
+							"origin": [
+								-7,
+								38.41667,
+								-24.41667
+							],
+							"size": [
+								2,
+								6,
+								2
+							],
+							"uv": [
+								165,
+								0
+							]
+						},
+						{
+							"origin": [
+								-9,
+								21.41667,
+								-26.41667
+							],
+							"size": [
+								6,
+								8,
+								6
+							],
+							"uv": [
+								165,
+								8
+							]
+						},
+						{
+							"origin": [
+								-6.5,
+								24.41667,
+								-32.41667
+							],
+							"size": [
+								1,
+								5,
+								6
+							],
+							"uv": [
+								165,
+								22
+							]
+						},
+						{
+							"origin": [
+								-6,
+								11.41667,
+								-38.41667
+							],
+							"size": [
+								0,
+								30,
+								26
+							],
+							"pivot": [
+								-6,
+								26.41667,
+								-25.41667
+							],
+							"rotation": [
+								0,
+								180,
+								0
+							],
+							"uv": [
+								149,
+								50
+							]
+						},
+						{
+							"origin": [
+								-9,
+								-35.58333,
+								-26.41667
+							],
+							"size": [
+								6,
+								2,
+								6
+							],
+							"uv": [
+								173,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

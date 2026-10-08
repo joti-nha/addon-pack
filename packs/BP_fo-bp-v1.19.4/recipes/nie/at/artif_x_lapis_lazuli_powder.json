@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:artif_x_lapis_lazuli_powder"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "lapis_lazuli_powder",
+    "ingredients": [
+      {
+        "item": "minecraft:lapis_lazuli"
+      }
+    ],
+    "result": {
+      "item": "ntk:lapis_lazuli_powder",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "minecraft:lapis_lazuli"
+      }
+    ]
+  }
+}

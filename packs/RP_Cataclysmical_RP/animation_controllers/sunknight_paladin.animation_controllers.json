@@ -1,0 +1,48 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.sunknight_paladin.move_controller": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"move": "q.ground_speed>0.1&&!query.is_delayed_attacking"
+						},
+						{
+							"idle": "q.ground_speed<0.1&&!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"move": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"idle": "q.ground_speed<0.1&&!query.is_delayed_attacking"
+						},
+						{
+							"default": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"move": "q.ground_speed>0.1&&!query.is_delayed_attacking"
+						},
+						{
+							"default": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_tuff_bricks_x_slabs"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "tuff_bricks",
+    "assume_symmetry": true,
+    "pattern": [
+      "T ",
+      " T"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:tuff_brick_slab"
+      }
+    },
+    "result": {
+      "item": "minecraft:tuff_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:tuff_brick_slab"
+      }
+    ]
+  }
+}

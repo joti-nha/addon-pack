@@ -1,0 +1,618 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:diamond_spellweaver_wand",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ntk:itemGroup.name.spellweaver_wands",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.diamond_spellweaver_wand.name"
+			},
+			"minecraft:rarity": "common",
+      "minecraft:icon": {
+        "textures": {
+          "default": "ntk_diamond_spellweaver_wand_charged"  
+				}
+			},
+      "minecraft:hand_equipped": {
+        "value": true
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 1
+			},
+			"minecraft:use_animation": {
+			  "value": "crossbow"
+			},
+			"minecraft:use_modifiers": {
+			  "emit_vibrations": false,
+			  "use_duration": 1.8,
+			  "movement_modifier": 0.4
+			},
+			"minecraft:shooter": {
+				"ammunition": [
+				  {
+            "item": "ntk:scroll_of_acceleration_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_acceleration_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_acceleration_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_berserk_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_berserk_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_berserk_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_cleansing_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_cleansing_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_cleansing_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_converging_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_converging_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_converging_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_displacement_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_displacement_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_displacement_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_earthquake_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_earthquake_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_earthquake_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_field_levitation_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_field_levitation_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_field_levitation_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_blast_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_blast_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_blast_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_protection_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_protection_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_fire_protection_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flame_burst_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flame_burst_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flame_burst_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flourishing_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flourishing_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_flourishing_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_invisibility_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_invisibility_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_invisibility_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lethargy_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lethargy_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lethargy_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lightning_bolt_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lightning_bolt_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_lightning_bolt_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_poison_cloud_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_poison_cloud_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_poison_cloud_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_protection_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_protection_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_protection_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_purification_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_purification_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_purification_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_regeneration_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_regeneration_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_regeneration_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_resurgence_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_resurgence_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_resurgence_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_slowness_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_slowness_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_slowness_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_strength_1",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_strength_2",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_strength_3",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:scroll_of_weaving_webs",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_bogged",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_cobbled_deepslate_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_cobblestone_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_deepslate_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_iron_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_magma_cube",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_magma_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_mossy_cobblestone_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_mossy_skeleton",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_parched",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_skeleton",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_slime",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_snow_golem",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_stray",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_sulfur_cube",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          },
+          {
+            "item": "ntk:summoning_scroll_of_wither_skeleton",
+            "search_inventory": true,
+            "use_in_creative": false,
+            "use_offhand": true
+          }
+        ],
+				"charge_on_draw": true,
+				"scale_power_by_draw_duration": true,
+				"max_draw_duration": 1.8
+			},
+			"minecraft:durability": {
+				"max_durability": 256,
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+				}
+			},
+			"minecraft:damage": {
+			  "value": 2
+			},
+			"minecraft:enchantable": {
+			  "slot": "shears",
+				"value": 26
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+				  {
+						"items": [ "ntk:diamond_spellweaver_wand" ],
+						"repair_amount": "query.remaining_durability"
+					}
+				]
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:equippable",
+          "ntk:mainhand_equipment",
+          "ntk:range_weapon",
+          "ntk:wand",
+          "ntk:spellweaver_wand",
+          "ntk:diamond_spellweaver_wand"
+        ]
+      },
+      "ntk:wand_on_use": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:diamond_spellweaver_wand",
+          "item_slot": "Mainhand",
+          "ammunition_type": "ntk:magic_scroll",
+          "ammunition_slot": "Inventory",
+          "ammunition_fail_guide": "You don't have any magic scroll in your inventory to cast a magic spell."
+        }
+      ],
+      "ntk:wand_on_complete_use": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:diamond_spellweaver_wand",
+          "item_slot": "Mainhand",
+          "ammunition_type": "ntk:magic_scroll",
+          "ammunition_slot": "Inventory",
+          "ammunition_sound_effect": "block.enchanting_table.use",
+          "ammunition_sound_pitch_mim": 1.2,
+          "ammunition_sound_pitch_max": 1.4,
+          "ammunition_sound_volume": 1.0
+        }
+      ],
+      "ntk:on_hit_entity": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:diamond_spellweaver_wand",
+          "item_slot": "Mainhand",
+          "durability_damage": 1
+        }
+      ],
+			"ntk:on_mine_block": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:diamond_spellweaver_wand",
+          "item_slot": "Mainhand",
+          "durability_damage": 2
+        }
+      ]
+    }
+  }
+}

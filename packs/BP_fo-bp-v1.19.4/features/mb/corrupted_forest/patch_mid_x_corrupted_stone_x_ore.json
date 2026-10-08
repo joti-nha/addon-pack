@@ -1,0 +1,25 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/patch_mid_x_corrupted_stone_x_ore"
+    },
+    "count": 100,
+    "replace_rules": [
+      {
+        "places_block": "ntk:corrupted_stone",
+        "may_replace": [
+          "minecraft:andesite",
+          "minecraft:cobblestone",
+          "minecraft:diorite",
+          "minecraft:granite",
+          "minecraft:hardened_clay",
+          "minecraft:mossy_cobblestone",
+          "minecraft:stained_hardened_clay",
+          "minecraft:stone",
+          "minecraft:tuff"
+        ]
+      }
+    ]
+  }
+}

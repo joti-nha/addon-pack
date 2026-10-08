@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_cracked_stone_brick_lantern_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "cracked_stone_brick_lantern",
+    "assume_symmetry": true,
+    "pattern": [
+      " S ",
+      "COC",
+      " S "
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:cracked_stone_bricks"
+      },
+      "O": {
+        "tag": "minecraft:coals"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:cracked_stone_brick_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cracked_stone_bricks"
+      },
+      {
+        "tag": "minecraft:coals"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ]
+  }
+}

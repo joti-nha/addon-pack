@@ -1,0 +1,318 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tm_aqc:biome_checker",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "is_experimental": false,
+      "properties": {
+        "tm_aqc:wet": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:dry": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:hot": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:cold": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:ocean": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:river": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:beach": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:mooshroom": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:cherry_blossom": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:mangrove": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:pale_garden": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        },
+        "tm_aqc:jungle": {
+          "type": "bool",
+          "default": false,
+          "client_sync": false
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["dummy", "biome_checker"] },
+      "minecraft:damage_sensor": {
+        "triggers": { "on_damage": { "filters": {} }, "deals_damage": "no" }
+      },
+      "minecraft:health": { "value": 1, "max": 1 },
+      "minecraft:knockback_resistance": { "value": 1, "max": 1 },
+      "minecraft:push_through": { "value": 1 },
+      "minecraft:collision_box": { "width": 0.1, "height": 0.1 },
+      "minecraft:physics": { "has_gravity": false, "has_collision": false }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "sequence": [
+          { 
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "jungle"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "lukewarm"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "swamp"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:wet": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "plateau"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "savanna"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:dry": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "desert"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "jungle"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "lukewarm"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "mesa"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "plateau"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "savanna"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "swamp"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "warm"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:hot": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "cold"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "frozen"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ice"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ice_plains"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "taiga"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:cold": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "deep"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "lukewarm"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "ocean"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:ocean": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "river"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:river": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "beach"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "shore"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:beach": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "mooshroom_island"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:mooshroom": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "cherry_grove"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:cherry_blossom": true
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "mangrove_swamp"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:mangrove": true
+            }
+          },
+          {
+            "set_property": {
+              "tm_aqc:pale_garden": false
+            }
+          },
+          {
+            "filters": {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "value": "jungle"
+                },
+                {
+                  "test": "has_biome_tag",
+                  "value": "bamboo"
+                }
+              ]
+            },
+            "set_property": {
+              "tm_aqc:jungle": true
+            }
+          }
+        ]
+      }
+    }
+  }
+}

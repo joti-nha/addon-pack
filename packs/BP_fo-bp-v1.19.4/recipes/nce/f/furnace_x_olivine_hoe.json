@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "ntk:furnace_x_olivine_hoe"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "ntk:olivine_hoe"
+    },
+    "output": {
+      "item": "ntk:olivine_fragment",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:olivine_hoe"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_olivine_shovel"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:olivine_shovel"
+    },
+    "output": {
+      "item": "ntk:olivine_fragment",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:olivine_shovel"
+      }
+    ]
+  }
+}

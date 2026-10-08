@@ -1,0 +1,45 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:exodius_greatsword",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:damage": 15,
+			"minecraft:block_placer": {
+				"block": "mnra_cata:exodius_greatsword",
+				"use_on": [
+					"mnra_cata:exodius_greatsword"
+				],
+				"replace_block_item": true
+			},
+			"minecraft:rarity": {
+				"value": "rare"
+			},
+			"minecraft:cooldown": {
+				"category": "exodius_greatsword",
+				"duration": 2
+			},
+			"minecraft:fire_resistant": {
+				"value": true
+			},
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 15
+			},
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_tool",
+					"minecraft:is_sword",
+					"mnra_cata:is_mob_shield_breakable"
+				]
+			}
+		}
+	}
+}

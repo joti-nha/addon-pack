@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shapeless":{"description":{"identifier":"panascais_caves:sulfur_to_sulfur_dust"},"ingredients":["minecraft:sulfur"],"tags":["crafting_table"],"result":{"item":"panascais_caves:sulfur_dust","count":4}}}

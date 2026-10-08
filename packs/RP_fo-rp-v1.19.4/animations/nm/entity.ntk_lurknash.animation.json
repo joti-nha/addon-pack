@@ -1,0 +1,313 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.ntk_lurknash.baby_remodel": {
+			"override_previous_animation": false,
+      "loop": true,
+      "bones": {
+        "head": {
+          "scale": 1.4
+        }
+      }
+    },
+		"animation.entity.ntk_lurknash.base_pose": {
+			"override_previous_animation": false,
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"mouth_bottom": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"1.0": [15, 0, 0],
+						"2.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.bite_attack": {
+			"override_previous_animation": false,
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-10, 0, 0],
+						"0.5": [0, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 2, -2],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"torso": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-15, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"mouth_bottom": {
+					"rotation": {
+						"0.0": [-2.5, 0, 0],
+						"0.25": [45, 0, 0],
+						"0.5": [-2.5, 0, 0]
+					}
+				},
+				"front_legs": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [30, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"stomach": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-10, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"back_legs": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [10, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.interested": {
+			"override_previous_animation": false,
+			"loop": true,
+			"animation_length": 8,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -20],
+						"3.75": [0, 0, -20],
+						"4.25": [0, 0, 20],
+						"7.75": [0, 0, 20],
+						"8.0": [0, 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -10, 0],
+						"0.75": [0, 10, 0],
+						"1.25": [0, -10, 0],
+						"1.75": [0, 10, 0],
+						"2.25": [0, -10, 0],
+						"2.75": [0, 10, 0],
+						"3.25": [0, -10, 0],
+						"3.75": [0, 10, 0],
+						"4.25": [0, -10, 0],
+						"4.75": [0, 10, 0],
+						"5.25": [0, -10, 0],
+						"5.75": [0, 10, 0],
+						"6.25": [0, -10, 0],
+						"6.75": [0, 10, 0],
+						"7.25": [0, -10, 0],
+						"7.75": [0, 10, 0],
+						"8.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.look_at_target": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+					  "query.target_x_rotation - this",
+					  "query.target_y_rotation - this",
+					  0.0
+					]
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.sitting": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, -2, 0]
+				},
+				"ribs": {
+					"rotation": [-35, 0, 0],
+					"position": [0, -1, -1]
+				},
+				"head": {
+					"position": [0, 1, 1]
+				},
+				"front_legs": {
+					"rotation": [-20, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"front_leg_left": {
+					"rotation": [0, 0, -2.5],
+					"position": [0, 0.5, 0]
+				},
+				"front_leg_right": {
+					"rotation": [0, 0, 2.5],
+					"position": [0, 0.5, 0]
+				},
+				"pelvis": {
+					"rotation": [-45, 0, 0],
+					"position": [0, -4, 0]
+				},
+				"stomach": {
+					"rotation": [7.5, 0, 0]
+				},
+				"tail": {
+					"rotation": [15, 35, 0]
+				},
+				"back_legs": {
+					"rotation": [-45, 0, 0],
+					"position": [0, 0, 3]
+				},
+				"back_leg_left": {
+					"rotation": [-7.5, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"back_leg_right": {
+					"rotation": [-7.5, 0, 0],
+					"position": [0, 0, 0]
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.sprinting": {
+			"override_previous_animation": false,
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"torso": {
+					"rotation": {
+						"0.0": [10, 0, 0],
+						"0.25": [-10, 0, 0],
+						"0.5": [10, 0, 0]
+					}
+				},
+				"front_legs": {
+					"rotation": {
+						"0.0": [20, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [20, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 1, 0],
+						"0.25": [0, 0, 0],
+						"0.5": [0, 1, 0]
+					}
+				},
+				"pelvis": {
+					"rotation": {
+						"0.0": [-10, 0, 0],
+						"0.25": [0, 0, 0],
+						"0.5": [-10, 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"0.0": [15, 0, 0],
+						"0.25": [-15, 0, 0],
+						"0.5": [15, 0, 0]
+					}
+				},
+				"back_legs": {
+					"rotation": {
+						"0.0": [-25, 0, 0],
+						"0.25": [45, 0, 0],
+						"0.5": [-25, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.tamed_remodel": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 1.1
+				}
+			}
+		},
+		"animation.entity.ntk_lurknash.walking": {
+			"override_previous_animation": false,
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"front_leg_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-35, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [35, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"back_leg_left": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"front_leg_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [35, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-35, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"back_leg_right": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"tail": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, -10, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [0, 10, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"ribs": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -5],
+						"0.5": [0, 0, 0],
+						"0.75": [0, 0, 5],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"stomach": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, 2.5],
+						"0.5": [0, 0, 0],
+						"0.75": [0, 0, -2.5],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

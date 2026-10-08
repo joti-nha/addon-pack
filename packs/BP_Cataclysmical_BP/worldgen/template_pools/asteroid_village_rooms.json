@@ -1,0 +1,42 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mnra_cata:asteroid_village_rooms"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_village/lobby1",
+					"processors": "mnra_cata:asteroid_village_replacement"
+				},
+				"weight": 2
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_village/room1",
+					"processors": "mnra_cata:asteroid_village_replacement"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_village/room2",
+					"processors": "mnra_cata:asteroid_village_replacement"
+				},
+				"weight": 5
+			},
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/asteroid_village/room3",
+					"processors": "mnra_cata:asteroid_village_replacement"
+				},
+				"weight": 3
+			}
+		]
+	}
+}

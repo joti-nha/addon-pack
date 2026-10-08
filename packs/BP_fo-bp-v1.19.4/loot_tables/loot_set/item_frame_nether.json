@@ -1,0 +1,63 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        // Foods & Crops:
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/food_crops_nether.json"
+        },
+        // Equipments:
+        {
+          "weight": 25,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/equipments_nether.json"
+        },
+        // Foods & Crops:
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/food_crops_nether.json"
+        },
+        // Materials:
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/materials_nether.json"
+        },
+        // Minerals:
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/minerals_nether.json"
+        },
+        // Plants:
+        {
+          "weight": 75,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/plants_nether.json"
+        },
+        // Potions:
+        {
+          "weight": 25,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/potions.json"
+        },
+        // Tools:
+        {
+          "weight": 25,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/tools_nether.json"
+        },
+        // Random Armor Trims:
+        {
+          "weight": 5,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/random_armor_trims_nether.json"
+        }
+      ]
+    }
+  ]
+}

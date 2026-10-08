@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:furnace_x_stripped_overgrown_jungle_wood"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "ntk:stripped_overgrown_jungle_wood"
+    },
+    "output": {
+      "item": "minecraft:charcoal",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:stripped_overgrown_jungle_wood"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.plasma.attack_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking&&query.variant==1"
+						},
+						{
+							"weapon_attack": "query.is_delayed_attacking&&query.variant==2"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.4
+				},
+				"weapon_attack": {
+					"animations": [
+						"weapon_attack"
+					],
+					"blend_transition": 0.4,
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		}
+	}
+}

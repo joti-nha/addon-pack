@@ -1,0 +1,222 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.flagon_mysthic.controller": {
+			"initial_state": "spawn_or_sit",
+			"states": {
+				"spawn_or_sit": {
+					"animations": [
+						{
+							"spawn": "!query.is_saddled"
+						},
+						{
+							"fun": "query.is_saddled&&query.ground_speed==0"
+						},
+						{
+							"static": "query.is_saddled&&query.ground_speed==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:flagon_mysthic')=='tamed'&&!query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"default": {
+					"animations": [
+						"static",
+						{
+							"fun": "query.is_saddled&&query.ground_speed==0"
+						}
+					],
+					"transitions": [
+						{
+							"move": "query.ground_speed>0"
+						},
+						{
+							"spawn_or_sit": "query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"move": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						"static",
+						{
+							"move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed==0"
+						},
+						{
+							"spawn_or_sit": "query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				}
+			}
+		},
+		"controller.animation.solar_age_oven.controller": {
+			"initial_state": "static",
+			"states": {
+				"static": {
+					"animations": [
+						"static_solar"
+					],
+					"transitions": [
+						{
+							"start_hidden": "query.is_sitting"
+						},
+						{
+							"move": "query.ground_speed>0.4"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"move": {
+					"animations": [
+						"move_solar"
+					],
+					"transitions": [
+						{
+							"static": "query.ground_speed<0.3"
+						},
+						{
+							"start_hidden": "query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"start_hidden": {
+					"animations": [
+						"start_hidden_solar"
+					],
+					"transitions": [
+						{
+							"hidden": "query.all_animations_finished"
+						},
+						{
+							"end_hidden": "!query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"hidden": {
+					"animations": [
+						"hidden_solar"
+					],
+					"transitions": [
+						{
+							"end_hidden": "!query.is_sitting"
+						},
+						{
+							"move": "query.ground_speed>0.4"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"end_hidden": {
+					"animations": [
+						"end_hidden_solar"
+					],
+					"transitions": [
+						{
+							"start_hidden": "query.is_sitting"
+						},
+						{
+							"static": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.8
+				}
+			}
+		},
+		"controller.animation.soul_dark_oven.controller": {
+			"initial_state": "static",
+			"states": {
+				"static": {
+					"animations": [
+						"static_soul"
+					],
+					"transitions": [
+						{
+							"start_hidden": "query.is_sitting"
+						},
+						{
+							"move": "query.ground_speed>0.4"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"move": {
+					"animations": [
+						"move_soul"
+					],
+					"transitions": [
+						{
+							"static": "query.ground_speed<0.3"
+						},
+						{
+							"start_hidden": "query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"start_hidden": {
+					"animations": [
+						"start_hidden_soul"
+					],
+					"transitions": [
+						{
+							"hidden": "query.all_animations_finished"
+						},
+						{
+							"end_hidden": "!query.is_sitting"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"hidden": {
+					"animations": [
+						"hidden_soul"
+					],
+					"transitions": [
+						{
+							"end_hidden": "!query.is_sitting"
+						},
+						{
+							"move": "query.ground_speed>0.4"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"end_hidden": {
+					"animations": [
+						"end_hidden_soul"
+					],
+					"transitions": [
+						{
+							"start_hidden": "query.is_sitting"
+						},
+						{
+							"static": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.8
+				}
+			}
+		}
+	}
+}

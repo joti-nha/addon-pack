@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_lily_of_the_valley_x_pile_of_lily_of_the_valley"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "lily_of_the_valley",
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_lily_of_the_valley"
+      }
+    ],
+    "result": {
+      "item": "minecraft:lily_of_the_valley",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_lily_of_the_valley"
+      }
+    ]
+  }
+}

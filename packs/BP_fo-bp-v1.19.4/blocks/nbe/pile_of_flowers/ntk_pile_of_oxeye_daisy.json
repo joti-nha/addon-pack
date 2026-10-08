@@ -1,0 +1,132 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:pile_of_oxeye_daisy",
+      "menu_category": {
+				"category": "none",
+				"group": "minecraft:none",
+				"is_hidden_in_commands": true
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.pile_of_oxeye_daisy.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_unit_cube_foliage",
+        "bone_visibility": {
+          "base": "true",
+          "foliage": "false"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_pile_of_oxeye_daisy",
+          "render_method": "alpha_test_single_sided_to_opaque",
+          "tint_method": "none",
+          "ambient_occlusion": 1.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_unit_cube_foliage",
+          "bone_visibility": {
+            "base": "true",
+            "foliage": "false"
+          }
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_pile_of_oxeye_daisy",
+            "render_method": "alpha_test_single_sided",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_pile_of_oxeye_daisy",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#58881e"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 1,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20,
+        "lava_flammable": "always"
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.harp",
+        "up": "note.harp"
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+			"minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_pile_of_oxeye_daisy.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:hoe_diggable",
+        "ntk:sword_diggable",
+        "ntk:shears_diggable",
+        "ntk:full_block",
+        "ntk:solid_block",
+        "ntk:compacted_block",
+        "ntk:pile_of_flowers",
+        "ntk:pile_of_oxeye_daisy",
+        
+        "minecraft:is_hoe_item_destructible"
+      ]
+    }
+  }
+}

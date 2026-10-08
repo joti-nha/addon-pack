@@ -1,0 +1,70 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "dk:catacomb_feature_rule",
+            "places_feature": "dk:structures/catacomb_feature_mcstructure"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": [
+                {
+                    "all_of": [
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "!=",
+                            "value": "ocean"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "!=",
+                            "value": "river"
+                        },
+                        {
+                            "test": "has_biome_tag",
+                            "operator": "!=",
+                            "value": "mountains"
+                        },
+                        {
+                            "any_of": [
+                                {
+                                    "test": "has_biome_tag",
+                                    "operator": "==",
+                                    "value": "overworld"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "distribution": {
+            "iterations": 1,
+            "scatter_chance": {
+                "numerator": 1,
+                "denominator": 900
+            },
+            "x": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            },
+            "y": {
+                "distribution": "uniform",
+                "extent": [
+                    63,
+                    72
+                ]
+            },
+            "z": {
+                "distribution": "uniform",
+                "extent": [
+                    0,
+                    16
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:fo/structure_x_pile_of_lush_bush_bale_03"
+    },
+    "structure_name": "mystructure:fo/pile_of_lush_bush_bale_03",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {}
+    }
+  }
+}

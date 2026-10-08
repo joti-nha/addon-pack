@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossed_mossy_willow_log_top"
+    },
+    "priority": 1,
+    "tags": [
+      "crafting_table",
+      "grafting_table"
+    ],
+    "pattern": [
+      "G",
+      "L"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:moss_carpet"
+      },
+      "L": {
+        "item": "ntk:mossy_willow_log"
+      }
+    },
+    "result": {
+      "item": "ntk:mossed_mossy_willow_log_top",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:moss_carpet"
+      },
+      {
+        "item": "ntk:mossy_willow_log"
+      }
+    ]
+  }
+}

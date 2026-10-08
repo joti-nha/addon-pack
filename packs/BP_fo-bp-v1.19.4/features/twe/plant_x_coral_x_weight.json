@@ -1,0 +1,30 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_coral_x_weight"
+    },
+    "features": [
+      [ "ntk:twe/plant_x_coral_x_brain_coral_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_bubble_coral_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_fire_coral_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_horn_coral_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_tube_coral_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_dead_brain_coral_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_bubble_coral_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_fire_coral_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_horn_coral_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_tube_coral_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_brain_coral_fan_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_bubble_coral_fan_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_fire_coral_fan_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_horn_coral_fan_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_tube_coral_fan_x_singleblock", 100 ],
+      [ "ntk:twe/plant_x_coral_x_dead_brain_coral_fan_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_bubble_coral_fan_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_fire_coral_fan_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_horn_coral_fan_x_singleblock", 75 ],
+      [ "ntk:twe/plant_x_coral_x_dead_tube_coral_fan_x_singleblock", 75 ]
+    ]
+  }
+}

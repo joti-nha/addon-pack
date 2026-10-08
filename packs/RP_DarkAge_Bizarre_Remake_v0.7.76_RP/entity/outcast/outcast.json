@@ -1,0 +1,74 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:outcast",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/outcast/outcast",
+				"tunica": "textures/armor/tunica",
+				"tunica_s": "textures/armor/tunica_sentinel",
+				"banner_e": "textures/entity/mobs/banners/banner_dk_elian",
+				"banner_s": "textures/entity/mobs/banners/banner_dk_sentinel",
+				"banner_u": "textures/entity/mobs/banners/banner_dk_unbound"
+			},
+			"geometry": {
+				"default": "geometry.outcast",
+				"tunica": "geometry.tunica",
+				"banner": "geometry.outcast_banners"
+			},
+			"animations": {
+				"controller": "controller.animation.outcast.controller",
+				"attacks": "controller.animation.sentinel_soldier.attack",
+				"look_at_target": "controller.animation.outcast.look_at_target",
+				"fe_one": "animation.outcast.fe_one",
+				"fe_two": "animation.outcast.fe_two",
+				"scary": "animation.outcast.scary",
+				"move": "animation.outcast.move",
+				"static": "animation.outcast.static",
+				"ride": "animation.outcast.ride",
+				"chest": "animation.outcast.chest",
+				"torch": "animation.outcast.torch",
+				"torch_particle": "animation.outcast.torch_particle",
+				"attack": "animation.sentinel_soldier.attack",
+				"sleep": "animation.outcast.sleep",
+				"banner": "animation.outcast.banner",
+				"look_at_target_default": "animation.outcast.look_at_target.default",
+				"look_at_target_gliding": "animation.outcast.look_at_target.gliding",
+				"look_at_target_swimming": "animation.outcast.look_at_target.swimming"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"controller",
+					"attacks",
+					"look_at_target"
+				]
+			},
+			"particle_effects": {
+				"torch_flames_particles": "dk:torch_flames_particles",
+				"torch_smokes_particles": "dk:torch_smoke_particles"
+			},
+			"spawn_egg": {
+				"texture": "outcast_spawn"
+			},
+			"render_controllers": [
+				"controller.render.outcast",
+				{
+					"controller.render.outcast_banner": "query.mark_variant==1||query.mark_variant==2||query.mark_variant==3"
+				},
+				{
+					"controller.render.outcast_tunica": "q.property('dk:factions')=='outcast_faction_unbound'||q.property('dk:factions')=='outcast_faction_sentinel'"
+				}
+			],
+			"enable_attachables": true
+		}
+	}
+}

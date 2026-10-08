@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_end:whispering_fence_gate"},"key":{"#":"panascais_end:whispering_planks","S":"minecraft:stick"},"pattern":["S#S","S#S"],"tags":["crafting_table"],"result":{"item":"panascais_end:whispering_fence_gate"}}}

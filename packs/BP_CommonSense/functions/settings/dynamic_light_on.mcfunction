@@ -1,0 +1,1 @@
+execute as @a[tag=!bv:dlighton] at @s run tag @s add bv:dlighton

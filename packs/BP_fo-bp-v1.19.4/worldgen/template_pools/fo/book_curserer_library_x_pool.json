@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:fo/book_curserer_library_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "fo/book_curserer_library_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/stone_structures_x_processor"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_cave_wolf_armor": {
+      "rebuild_animation_matrices": true,
+      "geometry": "Geometry.armor",
+      "part_visibility": [
+        { "body": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "head": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "ear_left": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "ear_right": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "lower_mouth": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "upper_mouth": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "left_front_leg": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "left_hind_leg": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "right_front_leg": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "right_hind_leg": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "tail": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" },
+        { "saddle": "query.is_item_name_any('slot.armor.body', 0, 'minecraft:wolf_armor')" }
+      ],
+      "materials": [
+        {
+          "*": "Material.armor"
+        }
+      ],
+      "textures": [
+        "Texture.cave_wolf_armor"
+      ]
+    }
+  }
+}

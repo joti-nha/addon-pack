@@ -1,0 +1,192 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.sentinel_soldier.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"relaxation": "query.variant==2"
+						}
+					],
+					"transitions": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"guard": "query.variant==1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"guard": {
+					"animations": [
+						{
+							"guard": "query.variant==1"
+						}
+					],
+					"transitions": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"default": "query.variant==2"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"static": {
+					"animations": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"riding": "query.is_riding"
+						},
+						{
+							"move": "query.variant==3&&!query.is_delayed_attacking"
+						},
+						{
+							"move_arm_right": "(query.mark_variant==2&&(query.variant==3&&query.is_illager_captain))||(query.variant==3&&!query.is_illager_captain)"
+						},
+						{
+							"move_arm_left": "(query.mark_variant==2&&query.is_sheared)||(query.mark_variant==2&&query.is_saddled&&!query.is_illager_captain)||(query.variant==3&&!query.is_illager_captain)"
+						},
+						{
+							"bow": "query.mark_variant==1&&query.is_illager_captain"
+						},
+						{
+							"no_arrow": "!query.is_charged||query.variant==2||query.variant==1"
+						},
+						{
+							"attack_three": "query.mark_variant==3&&query.is_illager_captain"
+						},
+						{
+							"shield": "query.is_saddled&&query.is_illager_captain"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==2"
+						},
+						{
+							"guard": "query.variant==1"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.sentinel_soldier.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==2&&variable.attack>0"
+						},
+						{
+							"attack_three": "query.mark_variant==3&&variable.attack>0"
+						},
+						{
+							"attack_three_jump": "query.mark_variant==3&&query.is_delayed_attacking"
+						},
+						{
+							"bow": "query.is_charged&&query.mark_variant==1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack"
+					]
+				},
+				"attack_three": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_three_animation"
+					]
+				},
+				"attack_three_jump": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_three_jump"
+					]
+				},
+				"bow": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"bow_charged"
+					]
+				}
+			}
+		},
+		"controller.animation.sentinel_soldier.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

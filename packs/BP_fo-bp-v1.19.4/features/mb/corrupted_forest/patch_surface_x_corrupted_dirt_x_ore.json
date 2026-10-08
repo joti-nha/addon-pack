@@ -1,0 +1,33 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/patch_surface_x_corrupted_dirt_x_ore"
+    },
+    "count": 25,
+    "replace_rules": [
+      {
+        "places_block": "ntk:corrupted_dirt",
+        "may_replace": [
+          // Stone-types:
+          "minecraft:hardened_clay",
+          "minecraft:stained_hardened_clay",
+          // Soil:
+          "minecraft:clay",
+          "minecraft:coarse_dirt",
+          "minecraft:dirt",
+          "minecraft:dirt_with_roots",
+          "minecraft:grass_block",
+          "minecraft:gravel",
+          "minecraft:moss_block",
+          "minecraft:mud",
+          "minecraft:mycelium",
+          "minecraft:pale_moss_block",
+          "minecraft:podzol",
+          "minecraft:red_sand",
+          "minecraft:sand"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sword_of_fatality.first_person": {
+			"loop": true,
+			"bones": {
+				"Sword": {
+					"rotation": [
+						"c.is_first_person?-5:0",
+						"c.is_first_person?60:0",
+						"c.is_first_person?-46.6108:0"
+					],
+					"position": [
+						"c.is_first_person?-10:0",
+						"c.is_first_person?7:0",
+						"c.is_first_person?-7.5:0"
+					],
+					"scale": "c.is_first_person ? 0.25 : 1"
+				}
+			}
+		},
+		"animation.sword_of_fatality.sword_of_fatality": {
+			"loop": true
+		},
+		"animation.sword_of_fatality.sickle": {
+			"loop": true,
+			"bones": {
+				"bone3": {
+					"rotation": [
+						22.5,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"bone4": {
+					"rotation": [
+						62.5,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"bone5": {
+					"rotation": [
+						85,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

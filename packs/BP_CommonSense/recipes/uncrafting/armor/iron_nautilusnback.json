@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:iron_nautilusnback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:iron_nautilus_armor"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:iron_ingot",
+				"count": 4
+			}
+		]
+	}
+}

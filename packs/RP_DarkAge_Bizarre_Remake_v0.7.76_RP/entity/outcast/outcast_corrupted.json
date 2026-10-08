@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:outcast_corrupted",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/outcast/outcast_corrupted"
+			},
+			"geometry": {
+				"default": "geometry.outcast_corrupted"
+			},
+			"animations": {
+				"controller": "controller.animation.outcast_corrupted.controller",
+				"attacks": "controller.animation.outcast_corrupted.attack",
+				"look_at_target": "controller.animation.outcast_corrupted.look_at_target",
+				"stage_two": "animation.outcast_corrupted.stage_two",
+				"stage_two_move": "animation.outcast_corrupted.stage_two_move",
+				"stage_two_attack": "animation.outcast_corrupted.stage_two_attack",
+				"stage_three_spawn": "animation.outcast_corrupted.stage_three_spawn",
+				"stage_three": "animation.outcast_corrupted.stage_three",
+				"stage_three_move": "animation.outcast_corrupted.stage_three_move",
+				"stage_three_attack": "animation.outcast_corrupted.stage_three_attack",
+				"move": "animation.outcast_corrupted.move",
+				"static": "animation.outcast_corrupted.static",
+				"ride": "animation.outcast.ride",
+				"attack_one": "animation.outcast_corrupted.attack_one",
+				"attack_two": "animation.outcast_corrupted.attack_two",
+				"attack_three": "animation.outcast_corrupted.attack_three",
+				"wheel": "animation.outcast_corrupted.wheel",
+				"wheel_move": "animation.outcast_corrupted.wheel_move",
+				"look_at_target_default": "animation.outcast_corrupted.look_at_target.default",
+				"look_at_target_gliding": "animation.outcast_corrupted.look_at_target.gliding",
+				"look_at_target_swimming": "animation.outcast_corrupted.look_at_target.swimming"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				],
+				"animate": [
+					"controller",
+					"attacks",
+					"look_at_target"
+				]
+			},
+			"spawn_egg": {
+				"texture": "outcast_corrupted_spawn"
+			},
+			"render_controllers": [
+				"controller.render.outcast_corrupted"
+			],
+			"enable_attachables": true
+		}
+	}
+}

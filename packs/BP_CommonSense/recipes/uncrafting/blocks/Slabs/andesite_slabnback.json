@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:andesite_slabnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:andesite_slab"
+			}
+		},
+		"result": {
+			"item": "minecraft:andesite",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,423 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gargoyle.static": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"static1": "query.is_chested"
+						},
+						{
+							"main": "!query.is_chested"
+						}
+					]
+				},
+				"static1": {
+					"transitions": [
+						{
+							"main": "!query.is_chested"
+						}
+					],
+					"blend_transition": 0.5,
+					"animations": [
+						"static1"
+					]
+				},
+				"main": {
+					"transitions": [
+						{
+							"static1": "query.is_chested"
+						},
+						{
+							"stunned_falling": "query.is_stunned"
+						}
+					],
+					"blend_transition": 0.5,
+					"animations": [
+						"fly"
+					]
+				},
+				"stunned_falling": {
+					"blend_transition": 0.5,
+					"animations": [
+						"stunned_falling",
+						"fly"
+					],
+					"transitions": [
+						{
+							"stunned": "query.is_on_ground"
+						}
+					]
+				},
+				"stunned": {
+					"blend_transition": 0.5,
+					"animations": [
+						"recover",
+						"fly"
+					],
+					"transitions": [
+						{
+							"main": "query.all_animations_finished&&!query.is_stunned"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gargoyle.attack": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						},
+						{
+							"spin_attack": "query.is_roaring"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						},
+						{
+							"spin_attack": "query.is_roaring"
+						}
+					],
+					"blend_transition": 0.5,
+					"animations": [
+						"attack",
+						"has_target"
+					]
+				},
+				"spin_attack": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished&&!query.is_roaring"
+						}
+					],
+					"animations": [
+						"spin_attack"
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.gargoyle.shoot": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"shoot_fireball": "query.is_charged&&query.skin_id==1"
+						},
+						{
+							"shoot_wind": "query.is_charged&&query.skin_id==2"
+						}
+					],
+					"blend_transition": 0.5,
+					"animations": [
+						"hide_diana"
+					]
+				},
+				"shoot_wind": {
+					"animations": [
+						"shoot_wind"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"shoot_fireball": {
+					"animations": [
+						"shoot"
+					],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished||query.is_stunned"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.gargoyle.fireball": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "fireball",
+							"locator": "locator"
+						},
+						{
+							"effect": "fireball_trail",
+							"locator": "locator"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gargoyle.flap_wings": {
+			"states": {
+				"flap": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"no_flap": "query.is_charged&&query.skin_id==2"
+						},
+						{
+							"stunned": "query.is_stunned||query.is_chested"
+						}
+					],
+					"animations": [
+						"wing_flap",
+						"flap_wings"
+					]
+				},
+				"no_flap": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"flap": "!(query.is_charged&&query.skin_id==2)"
+						}
+					]
+				},
+				"stunned": {
+					"transitions": [
+						{
+							"flap": "!query.is_stunned&&!query.is_chested"
+						}
+					]
+				}
+			},
+			"initial_state": "flap"
+		},
+		"controller.animation.gargoyle.wind_slash": {
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "particle",
+							"locator": "locator"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.base_pose": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"base_pose": "!query.is_sheared"
+						},
+						{
+							"transition": "query.is_sheared"
+						}
+					]
+				},
+				"base_pose": {
+					"animations": [
+						"base_pose"
+					],
+					"blend_transition": 0.5
+				},
+				"transition": {
+					"transitions": [
+						{
+							"base_pose": "query.all_animations_finished"
+						}
+					],
+					"animations": [
+						"transition",
+						"fly"
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.idle": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"idle": "!query.is_sheared&&!query.is_chested"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"idle": {
+					"animations": [
+						"idle",
+						"tail_idle"
+					],
+					"transitions": [
+						{
+							"default": "query.is_sheared||query.is_chested"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.shield": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"shielding": "query.has_target"
+						}
+					]
+				},
+				"shielding": {
+					"blend_transition": 0.3,
+					"animations": [
+						"shielding"
+					],
+					"transitions": [
+						{
+							"melee": "query.is_delayed_attacking"
+						},
+						{
+							"default": "!query.has_target"
+						}
+					]
+				},
+				"melee": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.melee": {
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"shield": "query.skin_id==0&&query.is_delayed_attacking"
+						},
+						{
+							"bite": "query.skin_id==1&&query.is_delayed_attacking"
+						},
+						{
+							"medium": "query.skin_id==2&&query.is_delayed_attacking"
+						},
+						{
+							"heavy": "query.skin_id==3&&query.is_delayed_attacking"
+						},
+						{
+							"spin": "query.is_roaring"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					]
+				},
+				"shield": {
+					"blend_transition": 0.3,
+					"animations": [
+						"melee_shield"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					]
+				},
+				"bite": {
+					"blend_transition": 0.3,
+					"animations": [
+						"melee_bite"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					]
+				},
+				"medium": {
+					"blend_transition": 0.3,
+					"animations": [
+						"melee_medium"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					]
+				},
+				"heavy": {
+					"blend_transition": 0.3,
+					"animations": [
+						"melee_heavy"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					]
+				},
+				"spin": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						},
+						{
+							"die": "query.is_chested"
+						}
+					],
+					"animations": [
+						"melee_spin"
+					]
+				},
+				"die": {
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.walk": {
+			"states": {
+				"default": {
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+							"walk": "1"
+						}
+					]
+				},
+				"walk": {
+					"blend_transition": 0.5,
+					"animations": [
+						{
+							"walk": "query.modified_move_speed"
+						}
+					]
+				}
+			}
+		}
+	}
+}

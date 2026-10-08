@@ -1,0 +1,14 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "name": "tm_aqc:black_pearl"
+          }
+        ]
+      }
+    ]
+  }
+  

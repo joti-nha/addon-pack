@@ -1,0 +1,68 @@
+{
+	"format_version": "1.19.50",
+	"animations": {
+		"animation.unbound_elemental.die": {
+			"animation_length": 4.5,
+			"loop": false,
+			"timeline": {
+				"1.9": [
+					"/particle minecraft:death_explosion_emitter ~~~",
+					"/event entity @s despawn"
+				]
+			}
+		},
+		"animation.unbound_head.particles": {
+			"animation_length": 3,
+			"loop": true,
+			"timeline": {
+				"0.5": [
+					"/particle dk:flames_souls ~~~"
+				],
+				"1.25": [
+					"/particle dk:flames_souls ~~~"
+				],
+				"2.0": [
+					"/particle dk:flames_souls ~~~"
+				],
+				"2.75": [
+					"/particle dk:flames_souls ~~~"
+				]
+			}
+		},
+		"animation.unbound_head.cooldown": {
+			"animation_length": 0.3,
+			"loop": true,
+			"timeline": {
+				"0.29": [
+					"@s dk:cooldown_event_mode"
+				]
+			}
+		},
+		"animation.unbound_head.cooldown_two": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"1.95": [
+					"@s dk:return_event_mode"
+				]
+			}
+		},
+		"animation.unboned.despawn_tame": {
+			"animation_length": 45.1,
+			"loop": true,
+			"timeline": {
+				"44.9": [
+					"/title @a[r=30] actionbar Invocation Time Has Ended",
+					"/playsound random.fizz @a[r=30] ~~~ 1 1",
+					"/particle minecraft:death_explosion_emitter ~0.5~0.5~0.5",
+					"/particle minecraft:death_explosion_emitter ~-0.5~0.5~0.5",
+					"/particle minecraft:death_explosion_emitter ~0.5~0.5~-0.5",
+					"/particle minecraft:death_explosion_emitter ~-0.5~0.5~-0.5"
+				],
+				"45.0": [
+					"@s dk:all_event_mode_despawn"
+				]
+			}
+		}
+	}
+}

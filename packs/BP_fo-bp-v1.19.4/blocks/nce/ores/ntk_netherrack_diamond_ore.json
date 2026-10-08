@@ -1,0 +1,148 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:netherrack_diamond_ore",
+      "menu_category": {
+				"category": "nature",
+				"group": "minecraft:itemGroup.name.ore",
+				"is_hidden_in_commands": false
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.netherrack_diamond_ore.name",
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_netherrack_diamond_ore",
+          "render_method": "opaque",
+          "tint_method": "none",
+          "ambient_occlusion": 1.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_netherrack_diamond_ore",
+            "render_method": "opaque",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_netherrack_diamond_ore",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#723232"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 0,
+        "lava_flammable": "always"
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 15.0
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 3.0
+			},
+			"minecraft:chest_obstruction": {
+        "obstruction_rule": "shape"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bd",
+        "up": "note.bd"
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+			"minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+			},
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:pickaxe_diggable",
+        "ntk:full_block",
+        "ntk:natural_block",
+        "ntk:solid_block",
+        "ntk:smeltable",
+        "ntk:ore",
+        "ntk:diamond_ore",
+        "ntk:stones",
+        "ntk:netherrack_blocks",
+        "ntk:netherrack",
+        "ntk:netherrack_diamond_ore",
+        
+        "minecraft:is_pickaxe_item_destructible",
+        "minecraft:iron_tier_destructible"
+      ],
+      "ntk:ore_on_player_break": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:netherrack_diamond_ore",
+          "block_state": "",
+          "state_value": "",
+          "item_tool_type": "minecraft:is_pickaxe",
+          "item_slot": "Mainhand",
+          "ore_drop": "minecraft:diamond",
+          "ore_drop_chance": 100.0,
+          "ore_drop_count_min": 1,
+          "ore_drop_count_max": 1,
+          "ore_drop_fortune_i_chance": 33.5,
+          "ore_drop_fortune_ii_chance": 75.0,
+          "ore_drop_fortune_iii_chance": 120.0,
+          "xp_drop": true,
+          "xp_drop_count_min": 1,
+          "xp_drop_count_max": 1
+        }
+      ]
+    }
+  }
+}

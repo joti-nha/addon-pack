@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_active_heated_netherrack_explosive",
+    "heightmap": "ntk_active_heated_netherrack_explosive_height",
+    "metalness_emissive_roughness": "ntk_active_heated_netherrack_explosive_mer"
+  }
+}

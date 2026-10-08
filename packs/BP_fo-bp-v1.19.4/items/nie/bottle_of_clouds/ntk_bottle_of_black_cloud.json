@@ -1,0 +1,81 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:bottle_of_black_cloud",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ntk:itemGroup.name.bottle_of_clouds",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.bottle_of_black_cloud.name"
+			},
+			"minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_bottle_of_black_cloud"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 16
+			},
+			"minecraft:swing_duration": {
+        "value": 0.3
+			},
+      "minecraft:cooldown": {
+        "category": "bottle_of_cloud",
+        "type": "use",
+				"duration": 0.3
+			},
+      "minecraft:throwable": {
+				"do_swing_animation": true,
+				"scale_power_by_draw_duration": false,
+				"launch_power_scale": 1.0,
+				"max_launch_power": 1.0,
+				"min_draw_duration": 0.0,
+				"max_draw_duration": 0.0
+			},
+      "minecraft:projectile": {
+				"projectile_entity": "ntk:projectile_bottle_of_black_cloud",
+				"minimum_critical_power": 1.25
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:throwable",
+          "ntk:utility",
+          "ntk:bottle",
+          "ntk:bottle_of_cloud",
+          "ntk:bottle_of_black_cloud"
+        ]
+      }
+    }
+  }
+}

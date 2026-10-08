@@ -1,0 +1,66 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_voidlet.interested": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"interested": "query.is_interested"
+						}
+					]
+				},
+				"interested": {
+					"animations": [ "interested" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"default": "!query.is_interested"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_voidlet.movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"sitting": "query.is_sitting"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [ "sitting" ],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+						  "default": "!query.is_sitting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_voidlet.particles": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "particle_effects": [
+            {
+              "effect": "voidlet_particle"
+            }
+          ]
+        }
+      }
+    }
+	}
+}

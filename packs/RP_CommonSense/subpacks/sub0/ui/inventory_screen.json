@@ -1,0 +1,304 @@
+{
+  "item_input_slot": {
+    "type": "panel",
+    "size": [
+      18,
+      18
+    ],
+    "$slot_name|default": "",
+    "$overlay_texture|default": "",
+    "controls": [
+      {
+        "image": {
+          "type": "image",
+          "size": [
+            16,
+            16
+          ],
+          "layer": 4,
+          "texture": "$overlay_texture"
+        }
+      },
+      {
+        "slot_collection": {
+          "type": "stack_panel",
+          "orientation": "none",
+          "layer": 1,
+          "collection_name": "crafting_input_items",
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            {
+              "$slot_name@crafting.crafting_input_grid_item": {
+                "collection_index": "$slot_index"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  // --- WOODCUTTER UI (Estilo Stonecutter) ---
+  "woodcutter_ui": {
+    "type": "panel",
+    "controls": [
+      // Título "Woodcutter"
+      {
+        "label": {
+          "type": "label",
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            5
+          ],
+          "color": "$title_text_color",
+          "text": "Woodcutter"
+        }
+      },
+      // O Painel Principal (Entrada -> Seta -> Saída)
+      {
+        "woodcutter_content": {
+          "type": "stack_panel",
+          "orientation": "horizontal",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [
+            0,
+            "25%"
+          ], // Ajuste vertical para alinhar com o inventário
+          "size": [
+            "100%c",
+            "100%c"
+          ],
+          "controls": [
+            // SLOT DE ENTRADA
+            {
+              "input_holder": {
+                "type": "panel",
+                "size": [
+                  26,
+                  26
+                ], // Tamanho do quadrado de fundo do stonecutter
+                "controls": [
+                  {
+                    "input_slot@crafting.item_input_slot": {
+                      // Usamos o slot 4 (meio da grade 3x3)
+                      "$slot_index": 4,
+                      "$slot_name": "wood_input",
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            // ESPAÇAMENTO E SETA
+            {
+              "padding_arrow": {
+                "type": "panel",
+                "size": [
+                  30,
+                  26
+                ], // Espaço para a seta
+                "controls": [
+                  {
+                    "arrow_icon": {
+                      "type": "image",
+                      "texture": "textures/ui/arrow_large", // Textura original do Stonecutter
+                      "size": [
+                        18,
+                        12
+                      ],
+                      "anchor_from": "center",
+                      "anchor_to": "center"
+                    }
+                  }
+                ]
+              }
+            },
+            // SLOT DE SAÍDA
+            {
+              "output_holder": {
+                "type": "panel",
+                "size": [
+                  26,
+                  26
+                ],
+                "controls": [
+                  {
+                    // A saída da crafting table é um pouco chata de alinhar,
+                    // este offset costuma funcionar bem para centralizar o item.
+                    "output_grid@crafting.output_grid_3x3": {
+                      "offset": [
+                        0,
+                        "-17.5%"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#crafting_label_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_type": "view",
+        // Só mostra se o nome tiver a chave secreta do Woodcutter
+        "source_property_name": "(not ((#text - $woodcutter) = #text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  // --- FLETCHING TABLE UI (Mantida como estava) ---
+  "fletching_table_ui": {
+    "type": "panel",
+    "controls": [
+      {
+        "crafting_label@crafting.crafting_label": {
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "offset": [
+            0,
+            5
+          ]
+        }
+      },
+      {
+        "fletching_content": {
+          "type": "panel",
+          "offset": [
+            0,
+            "37.5% + 18.75%"
+          ],
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "controls": [
+            {
+              "fletching_inputs": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [
+                  "100%c",
+                  "100%c"
+                ],
+                "controls": [
+                  {
+                    "0@crafting.item_input_slot": {
+                      "$slot_index": 0,
+                      "$slot_name": "top_left",
+                      "$overlay_texture": "textures/ui/flint_overlay"
+                    }
+                  },
+                  {
+                    "3@crafting.item_input_slot": {
+                      "$slot_index": 3,
+                      "$slot_name": "left_middle",
+                      "$overlay_texture": "textures/ui/stick_overlay"
+                    }
+                  },
+                  {
+                    "6@crafting.item_input_slot": {
+                      "$slot_index": 6,
+                      "$slot_name": "bottom_left",
+                      "$overlay_texture": "textures/ui/feather_overlay"
+                    }
+                  },
+                  {
+                    "_@common.empty_panel": {
+                      "size": [
+                        6,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "crafting_arrow_large@crafting.crafting_arrow_large": {}
+                  },
+                  {
+                    "__@common.empty_panel": {
+                      "size": [
+                        10,
+                        0
+                      ]
+                    }
+                  },
+                  {
+                    "output": {
+                      "type": "panel",
+                      "size": [
+                        26,
+                        26
+                      ],
+                      "controls": [
+                        {
+                          "output_grid_3x3@crafting.output_grid_3x3": {
+                            "offset": [
+                              0,
+                              "-17.5%"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#crafting_label_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#text - $fletching_table) = #text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+  // --- INJEÇÃO NO PAINEL PADRÃO ---
+  "crafting_panel_top_half": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "fletching_table_ui@crafting.fletching_table_ui": {}
+          },
+          {
+            "woodcutter_ui@crafting.woodcutter_ui": {}
+          }
+        ]
+      }
+    ]
+  },
+  // --- LÓGICA PARA ESCONDER A UI PADRÃO ---
+  "work_bench_panel_3x3": {
+    "bindings": [
+      {
+        "binding_name": "#crafting_label_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_type": "view",
+        // Esconde se for Fletching Table OU Woodcutter
+        "source_property_name": "(((#text - $fletching_table) = #text) and ((#text - $woodcutter) = #text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}

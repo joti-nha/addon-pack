@@ -1,0 +1,42 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_birch_wood_lantern_x_log_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "birch_wood_lantern",
+    "assume_symmetry": true,
+    "pattern": [
+      "GCG",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:birch_log"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "C": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:birch_wood_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:birch_log"
+      },
+      {
+        "item": "minecraft:glass_pane"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

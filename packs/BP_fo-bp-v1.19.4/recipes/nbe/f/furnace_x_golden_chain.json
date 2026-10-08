@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:furnace_x_golden_chain"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "ntk:golden_chain"
+    },
+    "output": {
+      "item": "minecraft:gold_nugget",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:golden_chain"
+      }
+    ]
+  }
+}

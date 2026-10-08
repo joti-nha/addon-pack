@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_pink_dye_x_block_of_pink_dye"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "pink_dye",
+    "ingredients": [
+      {
+        "item": "ntk:block_of_pink_dye"
+      }
+    ],
+    "result": {
+      "item": "minecraft:pink_dye",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_pink_dye"
+      }
+    ]
+  }
+}

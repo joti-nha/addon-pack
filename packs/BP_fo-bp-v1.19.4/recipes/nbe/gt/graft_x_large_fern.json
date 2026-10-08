@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_large_fern"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "large_fern",
+    "assume_symmetry": true,
+    "pattern": [
+      "G",
+      "G"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:fern"
+      }
+    },
+    "result": {
+      "item": "minecraft:large_fern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:fern"
+      }
+    ]
+  }
+}

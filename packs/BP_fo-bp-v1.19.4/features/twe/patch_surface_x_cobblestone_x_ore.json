@@ -1,0 +1,29 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:twe/patch_surface_x_cobblestone_x_ore"
+    },
+    "count": 15,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:cobblestone",
+        "may_replace": [
+          // Soil-type Blocks:
+          "minecraft:coarse_dirt",
+          "minecraft:clay",
+          "minecraft:dirt",
+          "minecraft:grass_block",
+          "minecraft:gravel",
+          "minecraft:moss_block",
+          "minecraft:mud",
+          "minecraft:mycelium",
+          "minecraft:pale_moss_block",
+          "minecraft:podzol",
+          "minecraft:red_sand",
+          "minecraft:sand"
+        ]
+      }
+    ]
+  }
+}

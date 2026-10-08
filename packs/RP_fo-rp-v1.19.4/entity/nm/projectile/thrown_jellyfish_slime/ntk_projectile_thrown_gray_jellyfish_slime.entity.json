@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:projectile_thrown_gray_jellyfish_slime",
+      "render_controllers": [
+        "controller.render.projectile.ntk_thrown_jellyfish_slime"
+      ],
+      "geometry": {
+        "default": "geometry.projectile.ntk_thrown_jellyfish_slime"
+      },
+      "materials": {
+        "default": "ntk_projectile_blend"
+      },
+      "textures": {
+        "default": "textures/projectiles/nm/thrown_jellyfish_slime/ntk_thrown_gray_jellyfish_slime"
+      },
+      "animations": {
+        "controller_travelling": "controller.animation.projectile.ntk_thrown_jellyfish_slime.travelling",
+        "travelling": "animation.projectile.ntk_thrown_jellyfish_slime.travelling"
+      },
+      "scripts": {
+        "animate": [
+          "controller_travelling"
+        ]
+      }
+    }
+  }
+}

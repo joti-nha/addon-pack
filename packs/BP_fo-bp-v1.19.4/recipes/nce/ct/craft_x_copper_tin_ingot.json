@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_copper_tin_ingot"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "CT"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:tin_ingot"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:copper_tin_ingot",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:tin_ingot"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"product_type": "addon",
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Common Sense 1.7.1 BE",
+		"description": "Qol and others Fun Features",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "7b17371f-b60d-4800-950b-9e910301203e",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "84473873-9ef1-4198-b999-2979a234c3ae",
+			"description": "1.6.2",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "1bb6a9ca-dabb-4679-92df-a1b41aa6cc6a",
+			"entry": "scripts/index.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.5.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		},
+		{
+			"uuid": "cb355f71-36ce-46da-a135-92db99634f8d",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"subpacks": [
+		{
+			"folder_name": "disabled",
+			"name": "Trinkets Disabled",
+			"memory_tier": 0
+		},
+		{
+			"folder_name": "enabled",
+			"name": "Trinkets Enabled",
+			"memory_tier": 0
+		}
+	]
+}

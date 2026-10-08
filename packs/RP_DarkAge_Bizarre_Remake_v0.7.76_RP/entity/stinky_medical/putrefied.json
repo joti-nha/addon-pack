@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:putrefied",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/stinky_medical/putrefied"
+			},
+			"geometry": {
+				"default": "geometry.putrefied"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"controller",
+					"attacks",
+					"spawns"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"look_at_target": "controller.animation.stinky_medical.look_at_target",
+				"controller": "controller.animation.putrefied.controller",
+				"attacks": "controller.animation.putrefied.attacks",
+				"spawns": "controller.animation.putrefied.spawns",
+				"look_at_target_default": "animation.putrefied.look_at_target.default",
+				"look_at_target_gliding": "animation.putrefied.look_at_target.gliding",
+				"look_at_target_swimming": "animation.putrefied.look_at_target.swimming",
+				"static": "animation.putrefied.static",
+				"move": "animation.putrefied.move",
+				"spawn": "animation.putrefied.spawn",
+				"attack": "animation.putrefied.attack"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

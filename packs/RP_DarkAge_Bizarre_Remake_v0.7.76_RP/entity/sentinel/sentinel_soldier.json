@@ -1,0 +1,59 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:sentinel_soldier",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/sentinel/sentinel_soldier"
+			},
+			"geometry": {
+				"default": "geometry.sentinel_soldier"
+			},
+			"spawn_egg": {
+				"texture": "sentinel_soldier_spawn"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"attacks",
+					"controller"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"look_at_target": "controller.animation.sentinel_soldier.look_at_target",
+				"controller": "controller.animation.sentinel_soldier.controller",
+				"attacks": "controller.animation.sentinel_soldier.attack",
+				"look_at_target_default": "animation.sentinel_soldier.look_at_target.default",
+				"look_at_target_gliding": "animation.sentinel_soldier.look_at_target.gliding",
+				"look_at_target_swimming": "animation.sentinel_soldier.look_at_target.swimming",
+				"relaxation": "animation.sentinel_soldier.relaxation",
+				"guard": "animation.sentinel_soldier.guard",
+				"static": "animation.sentinel_soldier.static",
+				"move": "animation.sentinel_soldier.move",
+				"move_arm_right": "animation.sentinel_soldier.move_arm_right",
+				"move_arm_left": "animation.sentinel_soldier.move_arm_left",
+				"bow": "animation.sentinel_soldier.bow",
+				"no_arrow": "animation.sentinel_soldier.no_arrow",
+				"attack_three": "animation.sentinel_soldier.attack_three",
+				"shield": "animation.sentinel_soldier.shield",
+				"attack": "animation.sentinel_soldier.attack",
+				"attack_three_animation": "animation.sentinel_soldier.attack_three_animation",
+				"attack_three_jump": "animation.sentinel_soldier.attack_three_jump",
+				"bow_charged": "animation.sentinel_soldier.bow_charged",
+				"riding": "animation.sentinel_soldier.ride"
+			},
+			"render_controllers": [
+				"controller.render.sentinel_soldier"
+			],
+			"enable_attachables": true,
+			"hide_armor": true
+		}
+	}
+}

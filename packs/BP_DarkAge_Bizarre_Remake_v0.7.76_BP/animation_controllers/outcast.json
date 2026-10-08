@@ -1,0 +1,144 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.outcast.torch": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"torch": "query.is_illager_captain&&query.health>1&&!query.is_sheared"
+						},
+						{
+							"death": "query.is_illager_captain&&query.is_alive==0"
+						}
+					]
+				},
+				"torch": {
+					"transitions": [
+						{
+							"default": "query.is_illager_captain"
+						},
+						{
+							"death": "query.is_illager_captain&&query.is_alive==0"
+						}
+					],
+					"on_entry": [
+						"/fill ~ ~1 ~ ~ ~1 ~ light_block [\"block_light_level\"=13] replace air",
+						"/fill ~1 ~-2 ~ ~1 ~10 ~ air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~ ~-2 ~1 ~ ~10 ~1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~-1 ~-2 ~ ~-1 ~10 ~ air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~ ~-2 ~-1 ~ ~10 ~-1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~-1 ~-2 ~-1 ~-1 ~10 ~-1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~1 ~-2 ~-1 ~1 ~10 ~-1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~-1 ~-2 ~1 ~-1 ~10 ~1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~1 ~-2 ~1 ~1 ~10 ~1 air [] replace light_block [\"block_light_level\"=13]",
+						"/fill ~-1 ~-2 ~-1 ~-1 ~10 ~-1 air [] replace light_block [\"block_light_level\"=13]"
+					]
+				},
+				"death": {
+					"transitions": [
+						{
+							"default": "query.is_alive==0"
+						}
+					],
+					"on_entry": [
+						"/fill ~8 ~5 ~8 ~-8 ~-4 ~-8 air [] replace light_block [\"block_light_level\"=13]"
+					]
+				}
+			}
+		},
+		"controller.animation.outcast_corrupted.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacks": "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attacks": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s dk:outcast_corrupted_event_mode_attacks"
+					]
+				}
+			}
+		},
+		"controller.animation.outcast_corrupted.resistance": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"resistance_one": "query.variant==2"
+						},
+						{
+							"resistance_two": "query.variant==3"
+						}
+					]
+				},
+				"resistance_one": {
+					"transitions": [
+						{
+							"default": "query.variant==2"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 2 true"
+					]
+				},
+				"resistance_two": {
+					"transitions": [
+						{
+							"default": "query.variant==3"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 2 true"
+					]
+				}
+			}
+		},
+		"controller.animation.outcast_corrupted.transforms": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"transform_two": "query.variant==1&&query.is_saddled&&query.health<=14"
+						},
+						{
+							"transform_three": "query.variant==2&&query.is_sheared&&query.health<=5"
+						}
+					]
+				},
+				"transform_two": {
+					"transitions": [
+						{
+							"default": "!query.is_saddled"
+						}
+					],
+					"on_entry": [
+						"@s dk:outcast_corrupted_event_mode_transform_two"
+					]
+				},
+				"transform_three": {
+					"transitions": [
+						{
+							"default": "!query.is_sheared"
+						}
+					],
+					"on_entry": [
+						"@s dk:outcast_corrupted_event_mode_transform_three"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.oath_armor_leggings.static": {
+			"loop": true,
+			"bones": {
+				"SideTarpL": {
+					"rotation": [
+						15,
+						0,
+						15
+					]
+				},
+				"SideTarpR": {
+					"rotation": [
+						15,
+						0,
+						-15
+					]
+				},
+				"FrontTarp": {
+					"rotation": [
+						-15,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

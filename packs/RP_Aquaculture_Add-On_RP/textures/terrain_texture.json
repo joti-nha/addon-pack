@@ -1,0 +1,501 @@
+{
+	"resource_pack_name": "Aquaculture",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"tm_aqc_fishing_stool": {
+			"textures": "textures/tm/aqc/blocks/fishing_stool"
+		},
+		"tm_aqc_chiselled_shell": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/chiselled_shell"
+		},
+		"tm_aqc_cut_shell": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/cut_shell"
+		},
+		"tm_aqc_shell_block": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/shell_block"
+		},
+		"tm_aqc_shell_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/shell_bricks"
+		},
+		"tm_aqc_shell_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/shell_bulb_off"
+		},
+		"tm_aqc_shell_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/shell_bulb_on"
+		},
+		"tm_aqc_shell_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/shell/shell_grate"
+		},
+		"tm_aqc_chiselled_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/chiselled_pearl"
+		},
+		"tm_aqc_cut_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/cut_pearl"
+		},
+		"tm_aqc_pearl_block": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/pearl_block"
+		},
+		"tm_aqc_pearl_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/pearl_bricks"
+		},
+		"tm_aqc_pearl_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/pearl_bulb_off"
+		},
+		"tm_aqc_pearl_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/pearl_bulb_on"
+		},
+		"tm_aqc_pearl_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/pearl/pearl_grate"
+		},
+		"tm_aqc_chiselled_black_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/chiselled_black_pearl"
+		},
+		"tm_aqc_cut_black_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/cut_black_pearl"
+		},
+		"tm_aqc_black_pearl_block": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/black_pearl_block"
+		},
+		"tm_aqc_black_pearl_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/black_pearl_bricks"
+		},
+		"tm_aqc_black_pearl_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/black_pearl_bulb_off"
+		},
+		"tm_aqc_black_pearl_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/black_pearl_bulb_on"
+		},
+		"tm_aqc_black_pearl_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/black_pearl/black_pearl_grate"
+		},
+		"tm_aqc_chiselled_gold_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/chiselled_gold_pearl"
+		},
+		"tm_aqc_cut_gold_pearl": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/cut_gold_pearl"
+		},
+		"tm_aqc_gold_pearl_block": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/gold_pearl_block"
+		},
+		"tm_aqc_gold_pearl_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/gold_pearl_bricks"
+		},
+		"tm_aqc_gold_pearl_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/gold_pearl_bulb_off"
+		},
+		"tm_aqc_gold_pearl_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/gold_pearl_bulb_on"
+		},
+		"tm_aqc_gold_pearl_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/gold_pearl/gold_pearl_grate"
+		},
+		"tm_aqc_chiselled_scale": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/chiselled_scale"
+		},
+		"tm_aqc_cut_scale": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/cut_scale"
+		},
+		"tm_aqc_scale_block": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/scale_block"
+		},
+		"tm_aqc_scale_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/scale_bricks"
+		},
+		"tm_aqc_scale_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/scale_bulb_off"
+		},
+		"tm_aqc_scale_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/scale_bulb_on"
+		},
+		"tm_aqc_scale_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/scale_grate"
+		},
+		"tm_aqc_smelted_scale": {
+			"textures": "textures/tm/aqc/blocks/deco/scale/smelted_scale"
+		},
+		"tm_aqc_chiselled_neptunium": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/chiselled_neptunium"
+		},
+		"tm_aqc_cut_neptunium": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/cut_neptunium"
+		},
+		"tm_aqc_neptunium_scale_block": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/neptunium_scale_block"
+		},
+		"tm_aqc_neptunium_bricks": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/neptunium_bricks"
+		},
+		"tm_aqc_neptunium_bulb_off": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/neptunium_bulb_off"
+		},
+		"tm_aqc_neptunium_bulb_on": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/neptunium_bulb_on"
+		},
+		"tm_aqc_neptunium_grate": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/neptunium_grate"
+		},
+		"tm_aqc_smelted_neptunium": {
+			"textures": "textures/tm/aqc/blocks/deco/neptunium/smelted_neptunium"
+		},
+		"tm_aqc_pin_bone_block": {
+			"textures": "textures/tm/aqc/blocks/pin_bone_block"
+		},
+		"tm_aqc_pin_bone_block_side": {
+			"textures": "textures/tm/aqc/blocks/pin_bone_block_side"
+		},
+		"tm_aqc_stew_pot_lid": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/lid"
+		},
+		"tm_aqc_stew_pot_lid_static": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/lid_static"
+		},
+		"tm_aqc_stew_pot_stew1": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew1"
+		},
+		"tm_aqc_stew_pot_stew2": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew2"
+		},
+		"tm_aqc_stew_pot_stew3": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew3"
+		},
+		"tm_aqc_stew_pot_stew4": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew4"
+		},
+		"tm_aqc_stew_pot_stew5": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew5"
+		},
+		"tm_aqc_stew_pot_stew6": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew6"
+		},
+		"tm_aqc_stew_pot_stew7": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew7"
+		},
+		"tm_aqc_stew_pot_stew8": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/stew8"
+		},
+		"tm_aqc_stew_pot_milk": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/milk"
+		},
+		"tm_aqc_stew_pot_water": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/water"
+		},
+		"tm_aqc_stew_pot_lava": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/lava"
+		},
+		"tm_aqc_stew_pot_ingredients1": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/ingredients1"
+		},
+		"tm_aqc_stew_pot_ingredients2": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/liquid/ingredients2"
+		},
+		"tm_aqc_stew_pot_empty": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/empty"
+		},
+		"tm_aqc_stew_pot_base": {
+			"textures": "textures/tm/aqc/blocks/stew_pot/base"
+		},
+
+		"tm_aqc_cutting_board": {
+			"textures": "textures/tm/aqc/blocks/cutting_board"
+		},
+		"tm_aqc_modification_station": {
+			"textures": "textures/tm/aqc/blocks/modification_station"
+		},
+		"tm_aqc_anglers_crafting_table_north": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/north"
+		},
+		"tm_aqc_anglers_crafting_table_east": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/east"
+		},
+		"tm_aqc_anglers_crafting_table_south": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/south"
+		},
+		"tm_aqc_anglers_crafting_table_west": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/west"
+		},
+		"tm_aqc_anglers_crafting_table_up": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/up"
+		},
+		"tm_aqc_anglers_crafting_table_down": {
+			"textures": "textures/tm/aqc/blocks/anglers_crafting_table/down"
+		},
+		"tm_aqc_mount_back": {
+			"textures": "textures/tm/aqc/blocks/mount_back"
+		},
+		"tm_aqc_mount_back_monstrous": {
+			"textures": "textures/tm/aqc/blocks/mount_back_purple"
+		},
+		"tm_aqc_gold_plate": {
+			"textures": "textures/tm/aqc/blocks/gold_plate"
+		},
+		"tm_aqc_diamond_plate": {
+			"textures": "textures/tm/aqc/blocks/diamond_plate"
+		},
+		"tm_aqc_arapaima": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_arapaima"
+		},
+		"tm_aqc_atlantic_cod": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_atlantic_cod"
+		},
+		"tm_aqc_atlantic_herring": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_atlantic_herring"
+		},
+		"tm_aqc_bayad": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_bayad"
+		},
+		"tm_aqc_sacramento_blackfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_sacramento_blackfish"
+		},
+		"tm_aqc_bluegill": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_bluegill"
+		},
+		"tm_aqc_nile_tilapia": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_nile_tilapia"
+		},
+		"tm_aqc_brown_shrooma": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_brown_shrooma"
+		},
+		"tm_aqc_brown_trout": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_brown_trout"
+		},
+		"tm_aqc_nile_perch": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_nile_perch"
+		},
+		"tm_aqc_common_carp": {
+			"textures": "textures/tm/aqc/entity/fish/fish_large_common_carp"
+		},
+		"tm_aqc_blue_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_blue_catfish"
+		},
+		"tm_aqc_florida_gar": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_florida_gar"
+		},
+		"tm_aqc_goldfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_goldfish"
+		},
+		"tm_aqc_largemouth_bass": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_largemouth_bass"
+		},
+		"tm_aqc_muskellunge": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_muskellunge"
+		},
+		"tm_aqc_yellow_perch": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_yellow_perch"
+		},
+		"tm_aqc_pink_salmon": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_pink_salmon"
+		},
+		"tm_aqc_black_piranha": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_black_piranha"
+		},
+		"tm_aqc_american_pollock": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_american_pollock"
+		},
+		"tm_aqc_rainbow_trout": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_rainbow_trout"
+		},
+		"tm_aqc_red_grouper": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_red_grouper"
+		},
+		"tm_aqc_red_shrooma": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_red_shrooma"
+		},
+		"tm_aqc_smallmouth_bass": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_smallmouth_bass"
+		},
+		"tm_aqc_synodontis": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_synodontis"
+		},
+		"tm_aqc_tambaqui": {
+			"textures": "textures/tm/aqc/entity/fish/fish_large_tambaqui"
+		},
+		"tm_aqc_skipjack_tuna": {
+			"textures": "textures/tm/aqc/entity/fish/fish_large_skipjack_tuna"
+		},
+		"tm_aqc_minnow": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_minnow"
+		},
+		"tm_aqc_brown_bullhead": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_brown_bullhead"
+		},
+		"tm_aqc_white_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_white_catfish"
+		},
+		"tm_aqc_flathead_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_flathead_catfish"
+		},
+		"tm_aqc_airbreathing_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_airbreathing_catfish"
+		},
+		"tm_aqc_channel_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_channel_catfish"
+		},
+		"tm_aqc_sharptooth_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_sharptooth_catfish"
+		},
+		"tm_aqc_bullhead_catfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_bullhead_catfish"
+		},
+		"tm_aqc_yellow_bullhead": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_yellow_bullhead"
+		},
+		"tm_aqc_atlantic_halibut": {
+			"textures": "textures/tm/aqc/entity/fish/fish_flat_atlantic_halibut"
+		},
+		"tm_aqc_pacific_halibut": {
+			"textures": "textures/tm/aqc/entity/fish/fish_flat_pacific_halibut"
+		},
+		"tm_aqc_greenland_halibut": {
+			"textures": "textures/tm/aqc/entity/fish/fish_flat_greenland_halibut"
+		},
+		"tm_aqc_gizzard_shad": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_gizzard_shad"
+		},
+		"tm_aqc_bamboo_spitter": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_bamboo_spitter"
+		},
+		"tm_aqc_white_crappie": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_white_crappie"
+		},
+		"tm_aqc_black_crappie": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_black_crappie"
+		},
+		"tm_aqc_pumpkinseed": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_pumpkinseed"
+		},
+		"tm_aqc_redear_sunfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_redear_sunfish"
+		},
+		"tm_aqc_green_sunfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_green_sunfish"
+		},
+		"tm_aqc_common_bream": {
+			"textures": "textures/tm/aqc/entity/fish/fish_large_common_bream"
+		},
+		"tm_aqc_spotted_bass": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_spotted_bass"
+		},
+		"tm_aqc_mud_sunfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_mud_sunfish"
+		},
+		"tm_aqc_grass_pickerel": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_grass_pickerel"
+		},
+		"tm_aqc_chain_pickerel": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_chain_pickerel"
+		},
+		"tm_aqc_common_shiner": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_common_shiner"
+		},
+		"tm_aqc_golden_shiner": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_golden_shiner"
+		},
+		"tm_aqc_warmouth": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_warmouth"
+		},
+		"tm_aqc_redfin_pickerel": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_redfin_pickerel"
+		},
+		"tm_aqc_striped_bass": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_striped_bass"
+		},
+		"tm_aqc_yellow_walleye": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_yellow_walleye"
+		},
+		"tm_aqc_sakurafin": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_sakurafin"
+		},
+		"tm_aqc_blind_creeker": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_blind_creeker"
+		},
+		"tm_aqc_pink_shrimp": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_pink_shrimp"
+		},
+		"tm_aqc_rusty_crayfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_rusty_crayfish"
+		},
+		"tm_aqc_devil_crayfish": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_devil_crayfish"
+		},
+		"tm_aqc_giant_tiger_prawn": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_giant_tiger_prawn"
+		},
+		"tm_aqc_american_lobster": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_american_lobster"
+		},
+		"tm_aqc_hard_clam": {
+			"textures": "textures/tm/aqc/entity/fish/bivalve/hard_clam"
+		},
+		"tm_aqc_tiny_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_tiny_bone"
+		},
+		"tm_aqc_small_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_small_bone"
+		},
+		"tm_aqc_medium_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_medium_bone"
+		},
+		"tm_aqc_large_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_large_bone"
+		},
+		"tm_aqc_longnose_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_longnose_bone"
+		},
+		"tm_aqc_cat_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_cat_bone"
+		},
+		"tm_aqc_flat_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_flat_bone"
+		},
+		"tm_aqc_shrimp_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_shrimp_bone"
+		},
+		"tm_aqc_clam_bones": {
+			"textures": "textures/tm/aqc/entity/fish/fish_bivalve_bone"
+		},
+		"tm_aqc_worm_farm_top": {
+			"textures": "textures/tm/aqc/blocks/wormfarm_top"
+		},
+		"tm_aqc_worm_farm_side": {
+			"textures": "textures/tm/aqc/blocks/wormfarm_side"
+		},
+		"tm_aqc_worm_farm_bottom": {
+			"textures": "textures/tm/aqc/blocks/wormfarm_bottom"
+		},
+		"tm_aqc_worm_farm_compost": {
+			"textures": "textures/tm/aqc/blocks/wormfarm_compost"
+		},
+		"tm_aqc_worm_farm_ready": {
+			"textures": "textures/tm/aqc/blocks/wormfarm_ready"
+		},
+		"tm_aqc_catchscale": {
+			"textures": "textures/tm/aqc/blocks/catchscale/catchscale"
+		},
+		"tm_aqc_catchscale_side_0": {
+			"textures": "textures/tm/aqc/blocks/catchscale/0"
+		},
+		"tm_aqc_catchscale_side_1": {
+			"textures": "textures/tm/aqc/blocks/catchscale/1"
+		},
+		"tm_aqc_catchscale_side_2": {
+			"textures": "textures/tm/aqc/blocks/catchscale/2"
+		},
+		"tm_aqc_catchscale_side_3": {
+			"textures": "textures/tm/aqc/blocks/catchscale/3"
+		},
+		"tm_aqc_catchscale_side_4": {
+			"textures": "textures/tm/aqc/blocks/catchscale/4"
+		},
+		"tm_aqc_catchscale_side_5": {
+			"textures": "textures/tm/aqc/blocks/catchscale/5"
+		},
+		"tm_aqc_catchscale_side_6": {
+			"textures": "textures/tm/aqc/blocks/catchscale/6"
+		},
+		"tm_aqc_catchscale_side_7": {
+			"textures": "textures/tm/aqc/blocks/catchscale/7"
+		}
+	}
+}

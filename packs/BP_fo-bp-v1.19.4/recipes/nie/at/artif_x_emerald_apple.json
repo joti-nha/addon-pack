@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_emerald_apple"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "emerald_apple",
+    "assume_symmetry": true,
+    "pattern": [
+      "EEE",
+      "EAE",
+      "EEE"
+    ],
+    "key": {
+      "E": {
+        "item": "ntk:emerald_powder"
+      },
+      "A": {
+        "item": "minecraft:apple"
+      }
+    },
+    "result": {
+      "item": "ntk:emerald_apple",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:emerald_powder"
+      },
+      {
+        "item": "minecraft:apple"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_sculk_block"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "sculk",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:sculk_vein"
+      }
+    },
+    "result": {
+      "item": "minecraft:sculk",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:sculk_vein"
+      }
+    ]
+  }
+}

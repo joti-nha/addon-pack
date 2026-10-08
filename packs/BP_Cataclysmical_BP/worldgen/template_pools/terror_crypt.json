@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:template_pool": {
+		"description": {
+			"identifier": "mnra_cata:terror_crypt"
+		},
+		"elements": [
+			{
+				"element": {
+					"element_type": "minecraft:single_pool_element",
+					"location": "minera/cata/terror_crypt",
+					"processors": "mnra_cata:terrorite_replacement"
+				},
+				"weight": 1
+			}
+		]
+	}
+}

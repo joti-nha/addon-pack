@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_stone_pillar_x_clay"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "group": "stone_pillar",
+    "assume_symmetry": true,
+    "pattern": [
+      "SC"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:cracked_stone_pillar"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:stone_pillar",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:cracked_stone_pillar"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ]
+  }
+}

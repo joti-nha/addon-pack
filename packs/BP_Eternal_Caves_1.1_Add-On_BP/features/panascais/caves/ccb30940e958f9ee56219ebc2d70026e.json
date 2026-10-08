@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/ccb30940e958f9ee56219ebc2d70026e"},"places_block":{"name":"minecraft:pointed_dripstone","states":{"dripstone_thickness":"frustum","hanging":false}},"enforce_placement_rules":false,"enforce_survivability_rules":false}}

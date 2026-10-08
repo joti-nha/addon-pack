@@ -1,0 +1,486 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:flagon_mysthic",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"dk:flagon_mysthic": {
+					"type": "enum",
+					"values": [
+						"flagon",
+						"tamed"
+					],
+					"default": "flagon",
+					"client_sync": true
+				},
+				"dk:variants": {
+					"type": "enum",
+					"values": [
+						"flagon_mysthic",
+						"solar_oven",
+						"soul_oven"
+					],
+					"default": "flagon_mysthic",
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {
+			"dk:flagon_mysthic_inanimated": {
+				"minecraft:type_family": {
+					"family": [
+						"inanimate"
+					]
+				},
+				"minecraft:health": {
+					"value": 5,
+					"max": 5
+				},
+				"minecraft:tameable": {
+					"probability": 1,
+					"tame_items": "dk:soul_gem",
+					"tame_event": {
+						"event": "dk:on_tame",
+						"target": "self"
+					}
+				}
+			},
+			"dk:flagon_mysthic_activated": {
+				"minecraft:type_family": {
+					"family": [
+						"flagon",
+						"mob"
+					]
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:dark_ember"
+										}
+									]
+								},
+								"event": "dk:flagon_transform_dark",
+								"target": "self"
+							},
+							"use_item": true,
+							"interact_text": "action.interact.mode_forge"
+						},
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:solar_ember"
+										}
+									]
+								},
+								"event": "dk:flagon_transform_sun",
+								"target": "self"
+							},
+							"use_item": true,
+							"interact_text": "action.interact.mode_forge"
+						}
+					]
+				},
+				"minecraft:health": {
+					"value": 20,
+					"max": 20
+				},
+				"minecraft:behavior.follow_owner": {
+					"can_teleport": true,
+					"priority": 6,
+					"speed_multiplier": 1.2,
+					"start_distance": 5,
+					"stop_distance": 2
+				},
+				"minecraft:sittable": {},
+				"minecraft:behavior.stay_while_sitting": {
+					"priority": 3
+				}
+			},
+			"dk:flagon_mysthic_timer": {
+				"minecraft:timer": {
+					"time": 30,
+					"looping": true,
+					"time_down_event": {
+						"event": "dk:flagon_fun",
+						"filters": {
+							"test": "is_moving",
+							"value": false
+						}
+					}
+				}
+			},
+			"dk:flagon_mysthic_fun": {
+				"minecraft:timer": {
+					"time": 2.39,
+					"looping": true,
+					"time_down_event": {
+						"event": "dk:flagon_reset"
+					}
+				},
+				"minecraft:is_saddled": {}
+			},
+			"dk:sun_age_forge_activated": {
+				"minecraft:type_family": {
+					"family": [
+						"solar_age_oven",
+						"mob"
+					]
+				},
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				}
+			},
+			"dk:sun_age_forge_sit": {
+				"minecraft:sittable": {},
+				"minecraft:behavior.follow_owner": {
+					"can_teleport": true,
+					"priority": 6,
+					"speed_multiplier": 1.2,
+					"start_distance": 5,
+					"stop_distance": 2
+				},
+				"minecraft:behavior.stay_while_sitting": {
+					"priority": 3
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:sunshard"
+										}
+									]
+								},
+								"event": "dk:sun_age_event_trades",
+								"target": "self"
+							},
+							"use_item": false,
+							"interact_text": "action.interact.smith"
+						}
+					]
+				}
+			},
+			"dk:sun_age_forge_trades": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.solar_oven.trade",
+					"table": "trading/economy_trades/solar_oven.json",
+					"new_screen": true,
+					"persist_trades": true
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"all_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:sunshard"
+										}
+									]
+								},
+								"event": "dk:sun_age_event_sit",
+								"target": "self"
+							},
+							"use_item": false,
+							"interact_text": "action.interact.default"
+						}
+					]
+				}
+			},
+			"dk:dark_soul_forge_activated": {
+				"minecraft:type_family": {
+					"family": [
+						"dark_souls_oven",
+						"mob"
+					]
+				},
+				"minecraft:health": {
+					"value": 50,
+					"max": 50
+				}
+			},
+			"dk:dark_soul_forge_sit": {
+				"minecraft:sittable": {},
+				"minecraft:behavior.follow_owner": {
+					"priority": 6,
+					"can_teleport": true,
+					"speed_multiplier": 1.2,
+					"start_distance": 5,
+					"stop_distance": 2
+				},
+				"minecraft:behavior.stay_while_sitting": {
+					"priority": 3
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"any_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:corrupted_armor_fragment"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:soul_gem"
+										}
+									]
+								},
+								"event": "dk:dark_soul_event_trades",
+								"target": "self"
+							},
+							"use_item": false,
+							"interact_text": "action.interact.smith"
+						}
+					]
+				}
+			},
+			"dk:dark_soul_forge_trades": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.dark_oven.trade",
+					"table": "trading/economy_trades/dark_oven.json",
+					"new_screen": true,
+					"persist_trades": true
+				},
+				"minecraft:interact": {
+					"interactions": [
+						{
+							"on_interact": {
+								"filters": {
+									"any_of": [
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:corrupted_armor_fragment"
+										},
+										{
+											"test": "has_equipment",
+											"domain": "hand",
+											"subject": "other",
+											"value": "dk:soul_gem"
+										}
+									]
+								},
+								"event": "dk:dark_soul_event_sit",
+								"target": "self"
+							},
+							"use_item": false,
+							"interact_text": "action.interact.default"
+						}
+					]
+				}
+			},
+			"dk:flagon_sun_age_forge": {},
+			"dk:flagon_dark_soul_forge": {}
+		},
+		"components": {
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:collision_box": {
+				"width": 0.8,
+				"height": 1.3
+			},
+			"minecraft:movement": {
+				"value": 0.4
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"avoid_damage_blocks": true
+			},
+			"minecraft:healable": {
+				"items": [
+					{
+						"item": "clay",
+						"heal_amount": 30
+					},
+					{
+						"item": "rotten_flesh",
+						"heal_amount": 10
+					},
+					{
+						"item": "dk:centipede_of_the_death",
+						"heal_amount": 100
+					}
+				]
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"dk:flagon_mysthic_inanimated"
+					]
+				}
+			},
+			"dk:on_tame": {
+				"add": {
+					"component_groups": [
+						"dk:flagon_mysthic_activated",
+						"dk:flagon_mysthic_timer"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:flagon_mysthic_inanimated"
+					]
+				},
+				"set_property": {
+					"dk:flagon_mysthic": "tamed"
+				}
+			},
+			"dk:flagon_transform_dark": {
+				"add": {
+					"component_groups": [
+						"dk:dark_soul_forge_activated",
+						"dk:dark_soul_forge_sit"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:flagon_mysthic_timer",
+						"dk:flagon_mysthic_fun"
+					]
+				},
+				"set_property": {
+					"dk:variants": "soul_oven"
+				}
+			},
+			"dk:dark_soul_event_trades": {
+				"add": {
+					"component_groups": [
+						"dk:dark_soul_forge_trades"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:dark_soul_forge_sit"
+					]
+				}
+			},
+			"dk:dark_soul_event_sit": {
+				"add": {
+					"component_groups": [
+						"dk:dark_soul_forge_sit"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:dark_soul_forge_trades"
+					]
+				}
+			},
+			"dk:flagon_transform_sun": {
+				"add": {
+					"component_groups": [
+						"dk:sun_age_forge_activated",
+						"dk:sun_age_forge_sit"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:flagon_mysthic_timer",
+						"dk:flagon_mysthic_fun"
+					]
+				},
+				"set_property": {
+					"dk:variants": "solar_oven"
+				}
+			},
+			"dk:sun_age_event_trades": {
+				"add": {
+					"component_groups": [
+						"dk:sun_age_forge_trades"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sun_age_forge_sit"
+					]
+				}
+			},
+			"dk:sun_age_event_sit": {
+				"add": {
+					"component_groups": [
+						"dk:sun_age_forge_sit"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sun_age_forge_trades"
+					]
+				}
+			},
+			"dk:flagon_fun": {
+				"randomize": [
+					{
+						"weight": 10,
+						"add": {
+							"component_groups": [
+								"dk:flagon_mysthic_fun"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:flagon_mysthic_timer"
+							]
+						}
+					},
+					{
+						"weight": 90
+					}
+				]
+			},
+			"dk:flagon_reset": {
+				"add": {
+					"component_groups": [
+						"dk:flagon_mysthic_timer"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:flagon_mysthic_fun"
+					]
+				}
+			}
+		}
+	}
+}

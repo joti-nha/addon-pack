@@ -1,0 +1,24 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/patch_mid_x_corrupted_dirt_x_ore"
+    },
+    "count": 100,
+    "replace_rules": [
+      {
+        "places_block": "ntk:corrupted_dirt",
+        "may_replace": [
+          "minecraft:coarse_dirt",
+          "minecraft:dirt",
+          "minecraft:dirt_with_roots",
+          "minecraft:grass_block",
+          "minecraft:moss_block",
+          "minecraft:mycelium",
+          "minecraft:pale_moss_block",
+          "minecraft:podzol"
+        ]
+      }
+    ]
+  }
+}

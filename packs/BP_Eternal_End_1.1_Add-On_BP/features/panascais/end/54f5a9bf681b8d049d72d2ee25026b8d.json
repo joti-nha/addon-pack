@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_end:panascais/end/54f5a9bf681b8d049d72d2ee25026b8d"},"places_block":"panascais_end:verdant_spike_islands_biome_marker","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air","minecraft:obsidian"]}}

@@ -1,0 +1,175 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sentinel_general.static": {
+			"loop": true,
+			"bones": {
+				"leftArm": {
+					"rotation": [-7.5, 0, -20]
+				},
+				"book": {
+					"rotation": [90, 0, 20],
+					"position": [-3, 6, 3]
+				},
+				"capeCloth": {
+					"rotation": ["25+Math.sin(query.anim_time*150 - 300)*25", 0, 0]
+				}
+			}
+		},
+		"animation.sentinel_general.start_target": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.72,
+			"bones": {
+				"leftArm": {
+					"rotation": {
+						"0.0": [-7.5, 0, -20],
+						"0.72": [-82.68227, -24.60004, 0.02109]
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, -1, 0]
+					}
+				},
+				"book": {
+					"rotation": {
+						"0.0": [90, 0, 20],
+						"0.72": [-52.5, 5, -7.5]
+					},
+					"position": {
+						"0.0": [-3, 6, 3],
+						"0.72": [-1, -5, -5]
+					}
+				},
+				"root": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, 2.5]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, -5]
+					}
+				},
+				"waist": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"leftPage": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [0, 0, 0],
+						"0.72": [0, -72.5, 0]
+					}
+				},
+				"rightPage": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.24": [0, 0, 0],
+						"0.72": [0, 72.5, 0]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 27.5, 15]
+					}
+				},
+				"sword": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [17.15993, 3.21132, -12.08681]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, 0]
+					}
+				},
+				"capeCloth": {
+					"rotation": ["25+Math.sin(query.anim_time*150 - 300)*25", 0, 0]
+				},
+				"cloth": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [-5, 0, 0]
+					}
+				},
+				"leftThighArmor": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, -20]
+					}
+				},
+				"rightThighArmor": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, 0, 20]
+					}
+				}
+			}
+		},
+		"animation.sentinel_general.target": {
+			"loop": true,
+			"bones": {
+				"leftLeg": {
+					"rotation": [0, 0, -5]
+				},
+				"rightLeg": {
+					"rotation": [0, 0, 2.5]
+				},
+				"waist": {
+					"rotation": [0, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-82.68227, -24.60004, 0.02109],
+					"position": [0, -1, 0]
+				},
+				"rightArm": {
+					"rotation": [0, 27.5, 15]
+				},
+				"book": {
+					"rotation": [-52.5, 5, -7.5],
+					"position": [-1, -5, -5]
+				},
+				"sword": {
+					"rotation": [17.15993, 3.21132, -12.08681]
+				},
+				"rightPage": {
+					"rotation": [0, 72.5, 0]
+				},
+				"leftPage": {
+					"rotation": [0, -72.5, 0]
+				},
+				"capeCloth": {
+					"rotation": [24.81197, 3.1622, -6.80423]
+				},
+				"leftThighArmor": {
+					"rotation": [0, 0, -20]
+				},
+				"rightThighArmor": {
+					"rotation": [0, 0, 20]
+				},
+				"cloth": {
+					"rotation": [-5, 0, 0]
+				},
+				"head": {
+					"rotation": [0, 0, 0]
+				},
+				"root": {
+					"rotation": [0, 0, 0]
+				}
+			}
+		}
+	}
+}

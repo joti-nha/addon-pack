@@ -1,0 +1,225 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.volcano_sword",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [
+					0,
+					2,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						15,
+						-1
+					],
+					"locators": {
+						"lead_hold": [
+							-6,
+							15,
+							0
+						]
+					}
+				},
+				{
+					"name": "Right_sword0",
+					"parent": "rightItem",
+					"pivot": [
+						-6,
+						14,
+						-1
+					]
+				},
+				{
+					"name": "Right_blade",
+					"parent": "Right_sword0",
+					"pivot": [
+						-6,
+						14,
+						-1
+					],
+					"rotation": [
+						90,
+						0,
+						-90
+					],
+					"cubes": [
+						{
+							"origin": [
+								-9,
+								20,
+								-1.5
+							],
+							"size": [
+								6,
+								28,
+								1
+							],
+							"uv": [
+								41,
+								0
+							]
+						},
+						{
+							"origin": [
+								-13,
+								20,
+								-1
+							],
+							"size": [
+								14,
+								41,
+								0
+							],
+							"uv": [
+								41,
+								29
+							]
+						},
+						{
+							"origin": [
+								-11,
+								18,
+								-2
+							],
+							"size": [
+								10,
+								2,
+								2
+							],
+							"uv": [
+								55,
+								0
+							]
+						},
+						{
+							"origin": [
+								-8,
+								16,
+								-2.5
+							],
+							"size": [
+								4,
+								2,
+								3
+							],
+							"uv": [
+								55,
+								9
+							]
+						},
+						{
+							"origin": [
+								-7,
+								9,
+								-2
+							],
+							"size": [
+								2,
+								7,
+								2
+							],
+							"uv": [
+								55,
+								14
+							]
+						},
+						{
+							"origin": [
+								-8,
+								7,
+								-2.5
+							],
+							"size": [
+								4,
+								2,
+								3
+							],
+							"uv": [
+								55,
+								4
+							]
+						},
+						{
+							"origin": [
+								-11,
+								3,
+								-1
+							],
+							"size": [
+								10,
+								4,
+								0
+							],
+							"uv": [
+								55,
+								23
+							]
+						},
+						{
+							"origin": [
+								-7,
+								2,
+								-2
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								24,
+								16
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_smithing_transform": {
+		"description": {
+			"identifier": "mnra_cata:netherite_greatsword"
+		},
+		"tags": [
+			"smithing_table"
+		],
+		"template": "minecraft:netherite_upgrade_smithing_template",
+		"base": "mnra_cata:diamond_greatsword",
+		"addition": "minecraft:netherite_ingot",
+		"result": {
+			"item": "mnra_cata:netherite_greatsword"
+		}
+	}
+}

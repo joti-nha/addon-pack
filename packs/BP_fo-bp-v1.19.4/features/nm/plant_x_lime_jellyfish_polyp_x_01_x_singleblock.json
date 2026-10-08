@@ -1,0 +1,274 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:nm/plant_x_lime_jellyfish_polyp_x_01_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": {
+          "name": "ntk:lime_jellyfish_polyp_1_block",
+          "states": {
+            "ntk:hatchable": false
+          }
+        },
+        "weight": 25
+      },
+      {
+        "block": {
+          "name": "ntk:lime_jellyfish_polyp_2_block",
+          "states": {
+            "ntk:hatchable": false
+          }
+        },
+        "weight": 50
+      },
+      {
+        "block": {
+          "name": "ntk:lime_jellyfish_polyp_3_block",
+          "states": {
+            "ntk:hatchable": false
+          }
+        },
+        "weight": 75
+      },
+      {
+        "block": {
+          "name": "ntk:lime_jellyfish_polyp_4_block",
+          "states": {
+            "ntk:hatchable": false
+          }
+        },
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": true,
+    "randomize_rotation": true,
+    "may_replace": [
+      "minecraft:flowing_water",
+      "minecraft:water",
+      // Grasses:
+      {
+        "name": "minecraft:seagrass",
+        "states": {
+          "sea_grass_type": "default"
+        }
+      },
+      // Plants:
+      "minecraft:glow_lichen"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        { "tags": "query.all_tags('ntk:wood_crate')" },
+        // Logs:
+        { "tags": "query.all_tags('ntk:log', 'ntk:full_block')" },
+        "minecraft:acacia_log",
+        "minecraft:birch_log",
+        "minecraft:cherry_log",
+        "minecraft:dark_oak_log",
+        "minecraft:jungle_log",
+        "minecraft:mangrove_log",
+        "minecraft:oak_log",
+        "minecraft:pale_oak_log",
+        "minecraft:stripped_acacia_log",
+        "minecraft:stripped_birch_log",
+        "minecraft:stripped_cherry_log",
+        "minecraft:stripped_dark_oak_log",
+        "minecraft:stripped_jungle_log",
+        "minecraft:stripped_mangrove_log",
+        "minecraft:stripped_oak_log",
+        "minecraft:stripped_pale_oak_log",
+        "minecraft:stripped_spruce_log",
+        "minecraft:spruce_log",
+        // Stems:
+        { "tags": "query.all_tags('ntk:stem', 'ntk:full_block')" },
+        "minecraft:crimson_stem",
+        "minecraft:stripped_crimson_stem",
+        "minecraft:stripped_warped_stem",
+        "minecraft:warped_stem",
+        // Woods:
+        { "tags": "query.all_tags('ntk:wood', 'ntk:full_block')" },
+        "minecraft:acacia_wood",
+        "minecraft:bamboo_block",
+        "minecraft:birch_wood",
+        "minecraft:cherry_wood",
+        "minecraft:dark_oak_wood",
+        "minecraft:jungle_wood",
+        "minecraft:mangrove_wood",
+        "minecraft:oak_wood",
+        "minecraft:pale_oak_wood",
+        "minecraft:stripped_acacia_wood",
+        "minecraft:stripped_bamboo_block",
+        "minecraft:stripped_birch_wood",
+        "minecraft:stripped_cherry_wood",
+        "minecraft:stripped_dark_oak_wood",
+        "minecraft:stripped_jungle_wood",
+        "minecraft:stripped_mangrove_wood",
+        "minecraft:stripped_oak_wood",
+        "minecraft:stripped_pale_oak_wood",
+        "minecraft:stripped_spruce_wood",
+        "minecraft:spruce_wood",
+        // Hyphaes:
+        { "tags": "query.all_tags('ntk:hyphae', 'ntk:full_block')" },
+        "minecraft:crimson_hyphae",
+        "minecraft:stripped_crimson_hyphae",
+        "minecraft:stripped_warped_hyphae",
+        "minecraft:warped_hyphae",
+        // Roots:
+        { "tags": "query.all_tags('ntk:roots', 'ntk:woods')" },
+        "minecraft:mangrove_roots",
+        // Coral Blocks:
+        "minecraft:brain_coral_block",
+        "minecraft:bubble_coral_block",
+        "minecraft:dead_brain_coral_block",
+        "minecraft:dead_bubble_coral_block",
+        "minecraft:dead_fire_coral_block",
+        "minecraft:dead_horn_coral_block",
+        "minecraft:dead_tube_coral_block",
+        "minecraft:fire_coral_block",
+        "minecraft:horn_coral_block",
+        "minecraft:tube_coral_block",
+        // Environmental Blocks:
+        "minecraft:bone_block",
+        "minecraft:sponge",
+        "minecraft:wet_sponge",
+        // Soil-type Blocks:
+        { "tags": "query.all_tags('ntk:soil', 'ntk:full_block')" },
+        "minecraft:clay",
+        "minecraft:coarse_dirt",
+        "minecraft:dirt",
+        "minecraft:dirt_with_roots",
+        "minecraft:grass_block",
+        "minecraft:gravel",
+        "minecraft:moss_block",
+        "minecraft:mud",
+        "minecraft:mycelium",
+        "minecraft:pale_moss_block",
+        "minecraft:podzol",
+        "minecraft:red_sand",
+        "minecraft:sand",
+        // Stone-type Blocks:
+        { "tags": "query.all_tags('ntk:stones', 'ntk:full_block')" },
+        "minecraft:andesite",
+        "minecraft:basalt",
+        "minecraft:blackstone",
+        "minecraft:brick_block",
+        "minecraft:calcite",
+        "minecraft:chiseled_deepslate",
+        "minecraft:chiseled_nether_bricks",
+        "minecraft:chiseled_quartz_block",
+        "minecraft:chiseled_red_sandstone",
+        "minecraft:chiseled_resin_bricks",
+        "minecraft:chiseled_sandstone",
+        "minecraft:chiseled_stone_bricks",
+        "minecraft:chiseled_tuff",
+        "minecraft:chiseled_tuff_bricks",
+				"minecraft:cinnabar",
+				"minecraft:cinnabar_bricks",
+        "minecraft:cobbled_deepslate",
+				"minecraft:cobblestone",
+				"minecraft:cracked_deepslate_bricks",
+				"minecraft:cracked_deepslate_tiles",
+				"minecraft:cracked_nether_bricks",
+				"minecraft:cracked_polished_blackstone_bricks",
+				"minecraft:cracked_stone_bricks",
+				"minecraft:crying_obsidian",
+				"minecraft:cut_red_sandstone",
+				"minecraft:cut_sandstone",
+				"minecraft:dark_prismarine",
+				"minecraft:deepslate",
+				"minecraft:deepslate_bricks",
+				"minecraft:deepslate_tiles",
+				"minecraft:diorite",
+				"minecraft:dripstone_block",
+				"minecraft:end_bricks",
+				"minecraft:end_stone",
+				"minecraft:gilded_blackstone",
+				"minecraft:granite",
+				"minecraft:hardened_clay",
+				"minecraft:mossy_cobblestone",
+				"minecraft:mossy_stone_bricks",
+				"minecraft:mud_bricks",
+				"minecraft:nether_brick",
+				"minecraft:netherrack",
+				"minecraft:obsidian",
+				"minecraft:packed_mud",
+				"minecraft:polished_blackstone_bricks",
+				"minecraft:prismarine",
+				"minecraft:prismarine_bricks",
+				"minecraft:purpur_block",
+				"minecraft:purpur_pillar",
+				"minecraft:quartz_block",
+				"minecraft:quartz_bricks",
+				"minecraft:quartz_pillar",
+				"minecraft:red_nether_brick",
+				"minecraft:red_sandstone",
+				"minecraft:resin_block",
+				"minecraft:resin_bricks",
+				"minecraft:sandstone",
+				"minecraft:smooth_basalt",
+				"minecraft:smooth_red_sandstone",
+				"minecraft:smooth_quartz",
+				"minecraft:smooth_sandstone",
+				"minecraft:stone",
+				"minecraft:stone_bricks",
+				"minecraft:sulfur",
+				"minecraft:sulfur_bricks",
+				"minecraft:tuff",
+				"minecraft:tuff_bricks",
+				// Ores:
+        { "tags": "query.all_tags('ntk:fossiliferous')" },
+        { "tags": "query.all_tags('ntk:ore')" },
+        "minecraft:coal_ore",
+        "minecraft:copper_ore",
+        "minecraft:diamond_ore",
+        "minecraft:deepslate_coal_ore",
+        "minecraft:deepslate_copper_ore",
+        "minecraft:deepslate_diamond_ore",
+        "minecraft:deepslate_emerald_ore",
+        "minecraft:deepslate_gold_ore",
+        "minecraft:deepslate_iron_ore",
+        "minecraft:deepslate_lapis_ore",
+        "minecraft:deepslate_redstone_ore",
+        "minecraft:emerald_ore",
+        "minecraft:gold_ore",
+        "minecraft:iron_ore",
+        "minecraft:lapis_ore",
+        "minecraft:lit_deepslate_redstone_ore",
+        "minecraft:lit_redstone_ore",
+        "minecraft:nether_gold_ore",
+        "minecraft:quartz_ore",
+        "minecraft:redstone_ore",
+        // Infested Blocks:
+        "minecraft:infested_chiseled_stone_bricks",
+        "minecraft:infested_cobblestone",
+        "minecraft:infested_cracked_stone_bricks",
+        "minecraft:infested_deepslate",
+        "minecraft:infested_mossy_stone_bricks",
+        "minecraft:infested_stone",
+        "minecraft:infested_stone_bricks",
+        // Planks:
+        { "tags": "query.all_tags('ntk:planks', 'ntk:full_block')" },
+        "minecraft:acacia_planks",
+        "minecraft:bamboo_mosaic",
+        "minecraft:bamboo_planks",
+        "minecraft:birch_planks",
+        "minecraft:cherry_planks",
+        "minecraft:crimson_planks",
+        "minecraft:dark_oak_planks",
+        "minecraft:jungle_planks",
+        "minecraft:mangrove_planks",
+        "minecraft:pale_oak_planks",
+        "minecraft:oak_planks",
+        "minecraft:spruce_planks",
+        "minecraft:warped_planks",
+        // Compacted:
+        "minecraft:amethyst_block",
+        "minecraft:dried_kelp_block"
+			]
+		}
+  }
+}

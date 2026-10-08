@@ -1,0 +1,1 @@
+{"format_version":"1.21.90","minecraft:item":{"description":{"identifier":"panascais_caves:salt","menu_category":{"category":"items"}},"components":{"minecraft:icon":{"textures":{"default":"panascais_caves:salt"}},"minecraft:display_name":{"value":"item.panascais_caves:salt.title"}}}}

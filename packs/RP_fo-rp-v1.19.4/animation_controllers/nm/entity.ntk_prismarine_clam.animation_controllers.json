@@ -1,0 +1,27 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.entity.ntk_prismarine_clam.general": {
+      "initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 1.0,
+					"transitions": [
+						{
+							"clam_opening": "query.property('ntk:open') == true"
+						}
+					]
+				},
+				"clam_opening": {
+					"animations": [ "clam_opening" ],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "query.property('ntk:open') == false"
+						}
+					]
+				}
+			}
+    }
+  }
+}

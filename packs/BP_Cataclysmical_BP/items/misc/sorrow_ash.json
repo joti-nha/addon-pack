@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:sorrow_ash",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:rarity": {
+				"value": "common"
+			},
+			"minecraft:icon": "mnra_cata_sorrow_ash"
+		}
+	}
+}

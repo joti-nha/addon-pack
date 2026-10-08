@@ -1,0 +1,65 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_squirrel.interested": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"interested": "query.is_interested"
+						}
+					]
+				},
+				"interested": {
+					"animations": [ "interested" ],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.is_interested"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_squirrel.movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"grazing": "query.is_grazing"
+						},
+						{
+							"sitting": "query.is_sitting"
+						}
+					]
+				},
+				"grazing": {
+					"animations": [ "grazing" ],
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [ "sitting" ],
+					"blend_transition": 0.5,
+					"transitions": [
+						{
+						  "default": "!query.is_sitting"
+						}
+					]
+				}
+			}
+		}
+	}
+}

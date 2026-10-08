@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_oak_wood_lantern_x_log_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GCG",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "ntk:corrupted_oak_log"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "C": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_oak_wood_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_oak_log"
+      },
+      {
+        "item": "minecraft:glass_pane"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

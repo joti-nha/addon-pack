@@ -1,0 +1,130 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.elemental_knight.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attacks_normal": "query.health>60&&query.is_delayed_attacking"
+						},
+						{
+							"attacks_hard": "query.health<=60&&(query.is_delayed_attacking||query.is_charged||query.mark_variant==4)"
+						}
+					]
+				},
+				"attacks_normal": {
+					"transitions": [
+						{
+							"default": "query.health>60&&!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s dk:elemental_knight_event_mode_attacks"
+					]
+				},
+				"attacks_hard": {
+					"transitions": [
+						{
+							"default": "query.health<=60&&!(query.is_delayed_attacking||query.is_charged||query.mark_variant==4)"
+						}
+					],
+					"on_exit": [
+						"@s dk:elemental_knight_event_mode_attacks_hard"
+					]
+				}
+			}
+		},
+		"controller.animation.elemental_knight.resistance": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"resistance": "query.health<=60"
+						}
+					]
+				},
+				"resistance": {
+					"transitions": [
+						{
+							"default": "query.health<=60"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1 2 true"
+					]
+				}
+			}
+		},
+		"controller.animation.elemental_knight.fire": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fire": "query.is_riding"
+						}
+					]
+				},
+				"fire": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/kill @e[type=boat,r=1,c=1]",
+						"/fill ~ ~ ~ ~ ~ ~ fire [] replace air",
+						"/fill ~ ~-1 ~ ~ ~-1 ~ fire [] replace air"
+					]
+				}
+			}
+		},
+		"controller.animation.player.elemental_storm": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"elemental_storm": "1"
+						}
+					]
+				},
+				"elemental_storm": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/playanimation @e[type=player,c=1,r=1] animation.player.elemental_rotate"
+					]
+				}
+			}
+		},
+		"controller.animation.player.ride_storm": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ride_storm": "1"
+						}
+					]
+				},
+				"ride_storm": {
+					"transitions": [
+						{
+							"default": "false"
+						}
+					],
+					"on_entry": [
+						"/ride @e[type=player,c=1,r=15] start_riding @s"
+					]
+				}
+			}
+		}
+	}
+}

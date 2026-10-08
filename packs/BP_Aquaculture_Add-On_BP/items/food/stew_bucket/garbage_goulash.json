@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tm_aqc:garbage_goulash_bucket",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "tm_aqc_garbage_goulash_bucket",
+      "minecraft:max_damage": 0,
+      "minecraft:stacked_by_data": true,
+			"minecraft:food": {
+				"nutrition": 0,
+				"saturation_modifier": 0,
+        "using_converts_to": "minecraft:bucket",
+        "can_always_eat": true
+			},
+			"minecraft:use_modifiers": {
+				"movement_modifier": 0.32,
+				"use_duration": 1.6
+			},
+			"minecraft:use_animation": "eat"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ntk:teleportation_staff",
+      "item": {
+				"ntk:teleportation_staff": "query.get_equipped_item_name('main_hand') == 'teleportation_staff'"
+			},
+			"render_controllers": [
+        "controller.render.item.ntk_teleportation_staff"
+      ],
+      "geometry": {
+        "default": "geometry.item.ntk_teleportation_staff"
+      },
+      "materials": {
+        "default": "ntk_item_emissive_nocull_alpha",
+        "enchanted": "ntk_item_emissive_nocull_alpha"
+      },
+      "textures": {
+        "default": "textures/models/nie/ntk_teleportation_staff",
+        "enchanted": "textures/models/nie/ntk_teleportation_staff"
+      },
+      "animations": {
+        "controller_wield": "controller.animation.item.ntk_teleportation_staff.wield",
+        "1st_person_wield": "animation.item.ntk_teleportation_staff.1st_person_wield",
+        "3rd_person_wield": "animation.item.ntk_teleportation_staff.3rd_person_wield",
+        "staff_animation": "animation.item.ntk_teleportation_staff.staff_animation"
+      },
+      "scripts": {
+        "should_update_bones_and_effects_offscreen": true,
+        "animate": [
+          "controller_wield",
+          "staff_animation"
+        ]
+      }
+    }
+  }
+}

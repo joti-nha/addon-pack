@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.merciful_ride_duck": {
+			"geometry": "geometry.merciful",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.merciful"
+			]
+		}
+	}
+}

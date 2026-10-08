@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:plague_sickle",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/plague/plague"
+			},
+			"geometry": {
+				"default": "geometry.plague_sickle"
+			},
+			"animations": {
+				"throw": "animation.plague_sickle.throw",
+				"static": "animation.plague_sickle.static"
+			},
+			"scripts": {
+				"scale": "1.0",
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				],
+				"animate": [
+					"throw",
+					"static"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

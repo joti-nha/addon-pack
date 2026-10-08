@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_bamboo_mosaic_x_stairs"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "bamboo_mosaic_stairs",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:bamboo_mosaic"
+      }
+    },
+    "result": {
+      "item": "minecraft:bamboo_mosaic_stairs",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo_mosaic"
+      }
+    ]
+  }
+}

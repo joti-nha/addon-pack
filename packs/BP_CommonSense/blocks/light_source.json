@@ -1,0 +1,153 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bv:light_source",
+			"states": {
+				"bv:level": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					9,
+					10,
+					11,
+					12,
+					13,
+					14,
+					15
+				]
+			}
+		},
+		"components": {
+			"minecraft:collision_box": false,
+			"minecraft:selection_box": false,
+			"minecraft:geometry": "minecraft:geometry.full_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "bv_light_source",
+					"render_method": "blend",
+					"ambient_occlusion": false,
+					"face_dimming": false
+				}
+			},
+			"minecraft:loot": "loot_tables/empty.json",
+			"minecraft:light_dampening": 0,
+			"minecraft:placement_filter": {
+				"conditions": [
+					{
+						"allowed_faces": [
+							"up"
+						],
+						"block_filter": [
+							"minecraft:air"
+						]
+					}
+				]
+			}
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('bv:level') == 0",
+				"components": {
+					"minecraft:light_emission": 0
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 1",
+				"components": {
+					"minecraft:light_emission": 1
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 2",
+				"components": {
+					"minecraft:light_emission": 2
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 3",
+				"components": {
+					"minecraft:light_emission": 3
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 4",
+				"components": {
+					"minecraft:light_emission": 4
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 5",
+				"components": {
+					"minecraft:light_emission": 5
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 6",
+				"components": {
+					"minecraft:light_emission": 6
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 7",
+				"components": {
+					"minecraft:light_emission": 7
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 8",
+				"components": {
+					"minecraft:light_emission": 8
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 9",
+				"components": {
+					"minecraft:light_emission": 9
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 10",
+				"components": {
+					"minecraft:light_emission": 10
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 11",
+				"components": {
+					"minecraft:light_emission": 11
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 12",
+				"components": {
+					"minecraft:light_emission": 12
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 13",
+				"components": {
+					"minecraft:light_emission": 13
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 14",
+				"components": {
+					"minecraft:light_emission": 14
+				}
+			},
+			{
+				"condition": "query.block_state('bv:level') == 15",
+				"components": {
+					"minecraft:light_emission": 15
+				}
+			}
+		]
+	}
+}

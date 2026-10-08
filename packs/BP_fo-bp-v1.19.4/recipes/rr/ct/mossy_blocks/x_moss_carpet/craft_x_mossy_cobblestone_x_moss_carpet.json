@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_cobblestone_x_moss_carpet"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_cobblestone",
+    "ingredients": [
+      {
+        "item": "minecraft:cobblestone",
+        "count": 1
+      },
+      {
+        "item": "minecraft:moss_carpet",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "minecraft:mossy_cobblestone",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cobblestone"
+      },
+      {
+        "item": "minecraft:moss_carpet"
+      }
+    ]
+  }
+}

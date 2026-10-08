@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:void_attractor"
+		},
+		"pattern": [
+			"121",
+			"232",
+			"444"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:twilight_crystal"
+			},
+			"2": {
+				"item": "mnra_cata:ecliptic_alloy"
+			},
+			"3": {
+				"item": "mnra_cata:lunar_element"
+			},
+			"4": {
+				"item": "mnra_cata:abyssal_stone"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:void_attractor",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

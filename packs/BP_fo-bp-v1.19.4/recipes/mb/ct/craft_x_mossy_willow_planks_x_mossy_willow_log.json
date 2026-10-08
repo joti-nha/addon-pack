@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_willow_planks_x_mossy_willow_log"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "L"
+    ],
+    "key": {
+      "L": {
+        "item": "ntk:mossy_willow_log"
+      }
+    },
+    "result": {
+      "item": "ntk:mossy_willow_planks",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:mossy_willow_log"
+      }
+    ]
+  }
+}

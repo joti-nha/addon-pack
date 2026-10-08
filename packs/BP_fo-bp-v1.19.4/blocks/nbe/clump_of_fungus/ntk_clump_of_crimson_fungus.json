@@ -1,0 +1,224 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:clump_of_crimson_fungus",
+      "menu_category": {
+				"category": "nature",
+        "group": "minecraft:itemGroup.name.mushroom",
+				"is_hidden_in_commands": false
+			},
+			"traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [ "minecraft:cardinal_direction" ],
+          "y_rotation_offset": 180
+        }
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.clump_of_crimson_fungus.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_clump_of_crimson_fungus",
+        "bone_visibility": {
+          "fungus_1": "true",
+          "fungus_2": "true",
+          "fungus_3": "true",
+          "fungus_4": "true",
+          "luminous_1": "true",
+          "luminous_2": "true",
+          "luminous_3": "true",
+          "luminous_4": "true"
+        }
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_clump_of_crimson_fungus_alpha",
+          "render_method": "alpha_test",
+          "tint_method": "none",
+          "ambient_occlusion": 1.0,
+          "face_dimming": true,
+          "isotropic": false
+        },
+        "emissive": {
+          "texture": "ntk_clump_of_crimson_fungus_emissive",
+          "render_method": "alpha_test",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+          "face_dimming": false,
+          "isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_clump_of_crimson_fungus",
+          "bone_visibility": {
+            "fungus_1": "true",
+            "fungus_2": "true",
+            "fungus_3": "true",
+            "fungus_4": "true",
+            "luminous_1": "true",
+            "luminous_2": "true",
+            "luminous_3": "true",
+            "luminous_4": "true"
+          }
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_clump_of_crimson_fungus_alpha",
+            "render_method": "alpha_test",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          },
+          "emissive": {
+            "texture": "ntk_clump_of_crimson_fungus_emissive",
+            "render_method": "alpha_test",
+            "tint_method": "none",
+            "ambient_occlusion": 0.0,
+            "face_dimming": false,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_clump_of_crimson_fungus",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#A42429"
+      },
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": [ "up" ],
+            "block_filter": [
+              { "tags": "query.all_tags('ntk:netherrack')" },
+              { "tags": "query.all_tags('ntk:crimsoned_blocks')" },
+              { "tags": "query.all_tags('ntk:warped_blocks')" },
+              
+              "minecraft:nether_wart_block",
+              "minecraft:shroomlight",
+              "minecraft:warped_wart_block",
+              
+              "minecraft:crimson_hyphae",
+              "minecraft:crimson_stem",
+              "minecraft:stripped_crimson_hyphae",
+              "minecraft:stripped_crimson_stem",
+              "minecraft:stripped_warped_hyphae",
+              "minecraft:stripped_warped_stem",
+              "minecraft:warped_hyphae",
+              "minecraft:warped_stem",
+              
+              "minecraft:crimson_nylium",
+              "minecraft:netherrack",
+              "minecraft:warped_nylium"
+            ]
+          }
+        ]
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "popped",
+            "stops_liquid_flowing_from_direction": []
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -7, 0, -7 ],
+          "size": [ 14, 12, 14 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -7, 0, -7 ],
+        "size": [ 14, 12, 14 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 0.5
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.2
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bassattack",
+        "up": "note.bassattack"
+      },
+      "minecraft:movable": {
+        "movement_type": "popped"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": false,
+        "redstone_conductor": false
+      },
+      "minecraft:transformation": {
+			  "rotation": [ 0, 0, 0 ]
+			},
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_clump_of_crimson_fungus.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:hoe_diggable",
+        "ntk:shears_diggable",
+        "ntk:natural_block",
+        "ntk:solid_block",
+        "ntk:plant",
+        "ntk:fungus",
+        "ntk:clump_of_fungus",
+        "ntk:clump_of_crimson_fungus",
+        
+        "minecraft:is_hoe_item_destructible",
+        "minecraft:is_shears_item_destructible"
+      ]
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 90, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 180, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, -90, 0 ]
+          }
+        }
+      }
+    ]
+  }
+}

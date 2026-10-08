@@ -1,0 +1,46 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "ntk:end_pyramid"
+		},
+		"biome_filters": [
+			{
+        "all_of": [
+          {
+            "any_of": [
+              {
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+            ]
+          }
+        ]
+      }
+		],
+		"start_pool": "ntk:ars/end_pyramid_x_pool",
+		"heightmap_projection": "none",
+		"step": "surface_structures",
+		"terrain_adaptation": "none",
+		"liquid_settings": "ignore_waterlogging",
+		"start_height": {
+			"type": "uniform",
+			"min": {
+				"absolute": 32
+			},
+			"max": {
+				"absolute": 192
+			}
+		},
+		"max_depth": 1,
+		"max_distance_from_center": {
+			"horizontal": 64,
+			"vertical": 64
+		},
+		"dimension_padding": {
+			"top": 0,
+			"bottom": 0
+		}
+	}
+}

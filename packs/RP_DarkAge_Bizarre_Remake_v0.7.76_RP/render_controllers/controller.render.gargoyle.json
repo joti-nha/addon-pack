@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.gargoyle_grounded": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"overlay_color": {
+				"r": 1,
+				"g": 0,
+				"b": 0,
+				"a": "query.is_chested*0.5"
+			}
+		}
+	}
+}

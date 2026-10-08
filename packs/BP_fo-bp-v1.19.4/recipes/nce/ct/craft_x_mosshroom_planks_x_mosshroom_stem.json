@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mosshroom_planks_x_mosshroom_stem"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "L"
+    ],
+    "key": {
+      "L": {
+        "item": "ntk:mosshroom_stem"
+      }
+    },
+    "result": {
+      "item": "ntk:mosshroom_planks",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:mosshroom_stem"
+      }
+    ]
+  }
+}

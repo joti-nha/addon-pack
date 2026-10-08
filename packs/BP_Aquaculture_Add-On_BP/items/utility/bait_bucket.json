@@ -1,0 +1,59 @@
+{
+  "format_version": "1.21.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tm_aqc:bait_bucket",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": {
+        "value": 1
+      },
+      "minecraft:bundle_interaction": {
+        "num_viewable_slots": 12
+      },
+      "minecraft:storage_item": {
+        "max_slots": 64,
+        "max_weight_limit": 64,
+        "weight_in_storage_item": 4,
+        "allow_nested_storage_items": false,
+        "allowed_items": [
+          "tm_aqc:gold_magnet",
+          "tm_aqc:gold_worm",
+          "tm_aqc:leech",
+          "tm_aqc:magnet",
+          "tm_aqc:spinner",
+          "tm_aqc:worm",
+          "tm_aqc:slime_worm",
+          "tm_aqc:minnow",
+          "tm_aqc:gizzard_shad",
+          "tm_aqc:common_shiner",
+          "tm_aqc:golden_shiner",
+          "tm_aqc:bamboo_spitter",
+          "tm_aqc:rusty_crayfish",
+          "tm_aqc:devil_crayfish",
+          "tm_aqc:pink_shrimp",
+          "tm_aqc:giant_tiger_prawn",
+          "tm_aqc:minnow_monstrous",
+          "tm_aqc:gizzard_shad_monstrous",
+          "tm_aqc:common_shiner_monstrous",
+          "tm_aqc:golden_shiner_monstrous",
+          "tm_aqc:bamboo_spitter_monstrous",
+          "tm_aqc:rusty_crayfish_monstrous",
+          "tm_aqc:devil_crayfish_monstrous",
+          "tm_aqc:pink_shrimp_monstrous",
+          "tm_aqc:giant_tiger_prawn_monstrous",
+          "tm_aqc:slime_minnow",
+          "tm_aqc:slime_shad",
+          "tm_aqc:slime_shiner",
+          "tm_aqc:slime_spitter",
+          "tm_aqc:slime_crayfish",
+          "tm_aqc:slime_shrimp"
+        ]
+      },
+      "minecraft:icon": "tm_aqc_bait_bucket"
+    }
+  }
+}

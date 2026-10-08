@@ -1,0 +1,155 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.holy_sword",
+				"texture_width": 100,
+				"texture_height": 90,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [
+					0,
+					1.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [
+						0,
+						11.81026,
+						-0.38082
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						23.81026,
+						-0.38082
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "sword",
+					"parent": "rightItem",
+					"pivot": [
+						-5,
+						14,
+						0.3
+					],
+					"rotation": [
+						90,
+						0,
+						-90
+					],
+					"cubes": [
+						{
+							"origin": [
+								-7,
+								19,
+								0
+							],
+							"size": [
+								2,
+								17,
+								1
+							],
+							"uv": [
+								32,
+								35
+							]
+						},
+						{
+							"origin": [
+								-7,
+								10,
+								-0.5
+							],
+							"size": [
+								2,
+								9,
+								2
+							],
+							"uv": [
+								32,
+								53
+							]
+						},
+						{
+							"origin": [
+								-11,
+								18,
+								0.5
+							],
+							"size": [
+								10,
+								17,
+								0
+							],
+							"uv": [
+								38,
+								35
+							]
+						},
+						{
+							"origin": [
+								-10,
+								31.5,
+								0.5
+							],
+							"size": [
+								6,
+								6,
+								0
+							],
+							"pivot": [
+								-5,
+								34,
+								0.5
+							],
+							"rotation": [
+								0,
+								0,
+								45
+							],
+							"uv": [
+								40,
+								52
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

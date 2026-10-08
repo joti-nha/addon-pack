@@ -1,0 +1,15 @@
+{
+  "pools": [
+    // Materials
+    {
+      "rolls": 8,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/materials.json"
+        }
+      ]
+    }
+  ]
+}

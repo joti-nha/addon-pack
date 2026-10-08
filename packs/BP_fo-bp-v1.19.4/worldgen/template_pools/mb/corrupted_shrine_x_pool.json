@@ -1,0 +1,19 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_shrine_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "mb/corrupted_shrine_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:mb/corrupted_stone_structures_x_processor"
+        }
+      }
+    ]
+  }
+}

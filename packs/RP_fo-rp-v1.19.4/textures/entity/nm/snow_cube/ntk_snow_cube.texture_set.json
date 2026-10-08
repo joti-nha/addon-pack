@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_snow_cube",
+    "heightmap": "ntk_snow_cube_height",
+    "metalness_emissive_roughness": "ntk_snow_cube_mer"
+  }
+}

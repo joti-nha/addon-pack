@@ -1,0 +1,9 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mnra_cata:grim_stone"
+		},
+		"components": {}
+	}
+}

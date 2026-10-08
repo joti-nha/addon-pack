@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_rose_quartz"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "RR",
+      "RR"
+    ],
+    "key": {
+      "R": {
+        "item": "ntk:rose_quartz_shard"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_rose_quartz",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:rose_quartz_shard"
+      }
+    ]
+  }
+}

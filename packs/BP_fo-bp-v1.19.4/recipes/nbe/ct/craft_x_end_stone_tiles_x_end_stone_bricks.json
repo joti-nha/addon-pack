@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_end_stone_tiles_x_end_stone_bricks"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "end_stone_tiles",
+    "assume_symmetry": true,
+    "pattern": [
+      "EE",
+      "EE"
+    ],
+    "key": {
+      "E": {
+        "item": "minecraft:end_bricks"
+      }
+    },
+    "result": {
+      "item": "ntk:end_stone_tiles",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:end_bricks"
+      }
+    ]
+  }
+}

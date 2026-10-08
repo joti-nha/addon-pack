@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:bacon_eggs_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:cooked_porkchop",
+				"count": 1
+			},
+			{
+				"item": "bv:cooked_egg",
+				"count": 1
+			}
+		],
+		"result": {
+			"item": "bv:bacon_and_eggs",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "bv:armadillo_fox_armor",
+			"render_controllers": [
+				{
+					"controller.render.armadillo_fox_armor": "query.owner_identifier == 'minecraft:fox'"
+				},
+				{
+					"controller.render.item_model_armadillo_fox_armor": "query.owner_identifier == 'minecraft:player'"
+				}
+			],
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "armor_enchanted"
+			},
+			"textures": {
+				"default": "textures/entity/armor/fox_armor_texture",
+				"fa_item_model": "textures/items/fox_armor",
+				"dmg1": "textures/entity/armor/fox_armor_texture_dm1",
+				"dmg2": "textures/entity/armor/fox_armor_texture_dm2",
+				"dmg3": "textures/entity/armor/fox_armor_texture_dm3",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.armadillo_fox_armor",
+				"fa_item_model": "geometry.fa_item_model"
+			},
+			"animations": {
+				"actionandstuff": "animation.armadillo_fox_armor.actionandstuff",
+				"vision1": "animation.bv.item_fpp",
+				"vision2": "animation.bv.item_tpp"
+			},
+			"scripts": {
+				"pre_animation": [
+					"v.actions_and_stuff = c.owning_entity -> v.actions_and_stuff;"
+				],
+				"animate": [
+					{
+						"actionandstuff": "v.actions_and_stuff == 1"
+					},
+					{
+						"vision1": "c.is_first_person"
+					},
+					{
+						"vision2": "!c.is_first_person"
+					}
+				]
+			}
+		}
+	}
+}

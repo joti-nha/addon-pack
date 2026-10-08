@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_stripped_cherry_log_x_shelf"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "cherry_shelf",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stripped_cherry_log"
+      }
+    },
+    "result": {
+      "item": "minecraft:cherry_shelf",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:stripped_cherry_log"
+      }
+    ]
+  }
+}

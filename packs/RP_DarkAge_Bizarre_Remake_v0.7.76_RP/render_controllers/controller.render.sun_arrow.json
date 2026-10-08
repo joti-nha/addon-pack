@@ -1,0 +1,38 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.sun_arrow": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.sentinel_bow": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"arrow": "query.main_hand_item_use_duration"
+				}
+			]
+		}
+	}
+}

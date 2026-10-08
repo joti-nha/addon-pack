@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_short_grass_x_grass_bale"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "short_grass",
+    "ingredients": [
+      {
+        "item": "ntk:grass_bale"
+      }
+    ],
+    "result": {
+      "item": "minecraft:short_grass",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:grass_bale"
+      }
+    ]
+  }
+}

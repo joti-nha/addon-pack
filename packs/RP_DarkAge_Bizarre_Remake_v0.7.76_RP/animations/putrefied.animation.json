@@ -1,0 +1,355 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.putrefied.spawn": {
+			"animation_length": 1.72,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [
+							0,
+							-38,
+							0
+						],
+						"0.44": [
+							0,
+							-38,
+							0
+						],
+						"0.88": [
+							0,
+							-25,
+							0
+						],
+						"0.96": [
+							0,
+							-25,
+							0
+						],
+						"1.72": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.44": [
+							-167.5,
+							0,
+							0
+						],
+						"0.8": [
+							-90,
+							0,
+							0
+						],
+						"0.96": [
+							-90,
+							0,
+							0
+						],
+						"1.72": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.44": [
+							-167.5,
+							0,
+							0
+						],
+						"0.8": [
+							-90,
+							0,
+							0
+						],
+						"0.96": [
+							-90,
+							0,
+							0
+						],
+						"1.72": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"head": {
+					"rotation": {
+						"0.8": [
+							0,
+							0,
+							0
+						],
+						"1.4": [
+							87.5,
+							0,
+							0
+						],
+						"1.72": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.putrefied.static": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						-25,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"-1-math.cos(query.anim_time*100)*0.5",
+						-2
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						-25,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"math.cos(query.anim_time*100)*-0.5",
+						-1
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-25,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"math.cos(query.anim_time*100)*-0.5",
+						-1
+					]
+				},
+				"body": {
+					"rotation": [
+						25,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"-0.5+math.cos(query.anim_time*100)*-0.5",
+						0
+					]
+				}
+			}
+		},
+		"animation.putrefied.move": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [
+						"-variable.tcos0",
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						"variable.tcos0",
+						0,
+						0
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						"variable.tcos0*1.4",
+						0,
+						0
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						"variable.tcos0*-1.4",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.putrefied.attack": {
+			"animation_length": 0.76,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.2": [
+							-162,
+							-10,
+							-30
+						],
+						"0.28": [
+							-162,
+							-10,
+							-30
+						],
+						"0.44": [
+							-42,
+							-10,
+							-30
+						],
+						"0.64": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.2": [
+							-162,
+							-10,
+							30
+						],
+						"0.28": [
+							-162,
+							-10,
+							30
+						],
+						"0.44": [
+							-42,
+							-10,
+							30
+						],
+						"0.64": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"body": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.2": [
+							0,
+							0,
+							0
+						],
+						"0.36": [
+							20,
+							0,
+							0
+						],
+						"0.52": [
+							20,
+							0,
+							0
+						],
+						"0.64": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.putrefied.look_at_target.default": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.putrefied.look_at_target.gliding": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						-45,
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.putrefied.look_at_target.swimming": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						"math.lerp(query.target_x_rotation,-45,variable.swim_amount)",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/plant_x_large_fern_x_02_up_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": {
+          "name": "minecraft:large_fern",
+          "states": {
+            "upper_block_bit": true
+          }
+        },
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      "minecraft:air",
+      // Flower:
+      "minecraft:wildflowers",
+      // Plants:
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:vine",
+      // Other:
+      "minecraft:snow_layer"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        {
+          "name": "minecraft:large_fern",
+          "states": {
+            "upper_block_bit": false
+          }
+        }
+			]
+		}
+  }
+}

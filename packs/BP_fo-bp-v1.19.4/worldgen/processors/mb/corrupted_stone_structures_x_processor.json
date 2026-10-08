@@ -1,0 +1,102 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:processor_list": {
+		"description": {
+			"identifier": "ntk:mb/corrupted_stone_structures_x_processor"
+		},
+		"processors": [
+      {
+        "processor_type": "minecraft:capped",
+        "limit": 30,
+        "delegate": {
+          "processor_type": "minecraft:rule",
+          "rules": [
+            // Decorated Pots:
+            {
+              "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/loot_set/decorated_pot.json"
+              },
+              "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:decorated_pot"
+              },
+              "output_state": {
+                "name": "minecraft:decorated_pot"
+              }
+            },
+            // Suspicious Soil:
+            {
+              "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/loot_set/brushable_blocks.json"
+              },
+              "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:suspicious_gravel"
+              },
+              "output_state": {
+                "name": "minecraft:suspicious_gravel"
+              }
+            },
+            {
+              "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/loot_set/brushable_blocks.json"
+              },
+              "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:suspicious_sand"
+              },
+              "output_state": {
+                "name": "minecraft:suspicious_sand"
+              }
+            }
+          ]
+        }
+      },
+      // Corrupted Dirt:
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "ntk:corrupted_dirt",
+              "probability": 0.1
+            },
+            "output_state": {
+              "name": "ntk:fossiliferous_corrupted_dirt"
+            }
+          },
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "ntk:corrupted_stone",
+              "probability": 0.1
+            },
+            "output_state": {
+              "name": "ntk:fossiliferous_corrupted_stone"
+            }
+          }
+        ]
+      },
+      // Corrupted Stone Bricks:
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "ntk:corrupted_stone_bricks",
+              "probability": 0.2
+            },
+            "output_state": {
+              "name": "ntk:cracked_corrupted_stone_bricks"
+            }
+          }
+        ] 
+      }
+		]
+	}
+}

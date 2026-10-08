@@ -1,0 +1,49 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_powder_staff"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "powder_staff",
+    "assume_symmetry": true,
+    "pattern": [
+      "NPN",
+      "NMN",
+      "CMC"
+    ],
+    "key": {
+      "P": {
+        "item": "ntk:enchanted_pearl"
+      },
+      "M": {
+        "item": "ntk:metal_rod"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "N": {
+        "item": "minecraft:copper_nugget"
+      }
+    },
+    "result": {
+      "item": "ntk:powder_staff",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:enchanted_pearl"
+      },
+      {
+        "item": "ntk:metal_rod"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "item": "minecraft:copper_nugget"
+      }
+    ]
+  }
+}

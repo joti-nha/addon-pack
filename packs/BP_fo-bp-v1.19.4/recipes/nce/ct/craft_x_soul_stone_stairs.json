@@ -1,0 +1,29 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_soul_stone_stairs"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"S  ",
+			"SS ",
+			"SSS"
+		],
+		"key": {
+			"S": {
+				"item": "ntk:soul_stone"
+			}
+		},
+		"result": {
+			"item": "ntk:soul_stone_stairs",
+			"count": 4
+		},
+    "unlock": [
+      {
+        "item": "ntk:soul_stone"
+      }
+    ]
+	}
+}

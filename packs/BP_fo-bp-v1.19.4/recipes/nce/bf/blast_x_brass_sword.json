@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_brass_sword"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:brass_sword"
+    },
+    "output": {
+      "item": "ntk:brass_nugget",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:brass_sword"
+      }
+    ]
+  }
+}

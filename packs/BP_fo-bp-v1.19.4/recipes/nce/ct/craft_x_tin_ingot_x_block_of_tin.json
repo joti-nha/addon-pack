@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_tin_ingot_x_block_of_tin"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "ntk:block_of_tin"
+      }
+    ],
+    "result": {
+      "item": "ntk:tin_ingot",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_tin"
+      }
+    ]
+  }
+}

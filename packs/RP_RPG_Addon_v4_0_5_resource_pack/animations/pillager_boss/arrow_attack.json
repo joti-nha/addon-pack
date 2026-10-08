@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.arrow_potition": {
+			"loop": true,
+			"animation_length": 1.5,
+			"bones": {
+				"right_shoulder": {
+					"rotation": {
+						"0.0": [-52.5, 0, 0],
+						"1.4583": [-52.5, 0, 0]
+					}
+				},
+				"forearm_right": {
+					"rotation": {
+						"0.0": [-32.5, 0, 0],
+						"1.4583": [-32.5, 0, 0]
+					},
+					"position": {
+						"0.0": [0, 3, 1],
+						"0.25": [0, 4, 2],
+						"0.5": [0, 4, 1],
+						"0.75": [0, 3, 1],
+						"1.2083": [0, 4, 0],
+						"1.4583": [0, 3, 1]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "magic_particle",
+						"locator": "forearm_right"
+					}
+				],
+				"0.75": [
+					{
+						"effect": "magic_particle",
+						"locator": "forearm_right"
+					}
+				]
+			}
+		}
+	}
+}

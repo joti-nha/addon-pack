@@ -1,0 +1,52 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.skeleton_paladin.attack_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.skeleton_paladin.move_controller": {
+			"states": {
+				"idle": {
+					"transitions": [
+						{
+							"move": "q.ground_speed>1"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"move": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"idle": "q.ground_speed<0.5"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

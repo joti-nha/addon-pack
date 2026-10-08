@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/structure_x_overgrown_jungle_tree_02"
+    },
+    "structure_name": "mystructure:mb/overgrown_jungle_tree_02",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {}
+    }
+  }
+}

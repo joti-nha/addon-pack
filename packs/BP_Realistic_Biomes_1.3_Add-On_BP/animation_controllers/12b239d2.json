@@ -1,0 +1,1 @@
+{"format_version":"1.19.60","animation_controllers":{"controller.animation.oreville_rb.yfgxwh":{"initial_state":"pscrtho","states":{"pscrtho":{"transitions":[{"cwleqdq":"q.is_in_water"}]},"cwleqdq":{"transitions":[{"pscrtho":"!q.is_in_water"},{"gddltqk":"q.state_time>5"}]},"gddltqk":{"on_entry":["@s e:pdcoauk_gddltqk"]}}}}}

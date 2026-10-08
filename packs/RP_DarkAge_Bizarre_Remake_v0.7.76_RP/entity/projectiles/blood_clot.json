@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:blood_clot",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/projectile/blood_clot"
+			},
+			"geometry": {
+				"default": "geometry.blood_clot"
+			},
+			"animations": {
+				"static": "animation.blood_clot.static"
+			},
+			"scripts": {
+				"animate": [
+					"static"
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

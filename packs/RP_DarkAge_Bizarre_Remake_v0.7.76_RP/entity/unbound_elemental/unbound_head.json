@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unbound_head",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unbound_head"
+			},
+			"geometry": {
+				"default": "geometry.unbound_head"
+			},
+			"scripts": {
+				"animate": [
+					"spawn",
+					"charged",
+					"static"
+				]
+			},
+			"animations": {
+				"charged": "controller.animation.unbound_head.charged",
+				"spawn": "animation.unbound_head.spawn",
+				"static": "animation.unbound_head.static",
+				"shoot": "animation.unbound_head.shoot"
+			},
+			"render_controllers": [
+				"controller.render.sun_arrow"
+			]
+		}
+	}
+}

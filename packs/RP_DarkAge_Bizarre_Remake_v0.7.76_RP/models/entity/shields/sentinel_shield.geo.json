@@ -1,0 +1,26 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sentinel_shield",
+				"texture_width": 100,
+				"texture_height": 90,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [0, 2, 0]
+			},
+			"bones": [
+				{
+					"name": "shield",
+					"pivot": [1, 15.5, 2.5],
+					"binding": "q.item_slot_to_bone_name(c.item_slot)",
+					"cubes": [
+						{"origin": [-6, 16.5, -2], "size": [14, 22, 2], "uv": [0, 66]},
+						{"origin": [-1.5, 25.5, 1.5], "size": [5, 5, 2], "pivot": [1, 28, 2.5], "rotation": [0, -90, 0], "uv": [32, 66]}
+					]
+				}
+			]
+		}
+	]
+}

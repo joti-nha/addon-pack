@@ -1,0 +1,42 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_cherry_wood_lantern_x_wood_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "cherry_wood_lantern",
+    "assume_symmetry": true,
+    "pattern": [
+      "GCG",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:cherry_wood"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "C": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:cherry_wood_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cherry_wood"
+      },
+      {
+        "item": "minecraft:glass_pane"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

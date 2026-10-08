@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:structure_template_feature":{"description":{"identifier":"panascais_end:panascais/end/3b0f18ec425b466358b2cbf183248ecd"},"structure_name":"panascais_end:sporelight.spore_island.5","constraints":{"block_intersection":{"block_allowlist":["minecraft:air","minecraft:end_stone"]}},"facing_direction":"south"}}

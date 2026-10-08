@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unknown_portal",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"unknown_portal_one": "textures/entity/projectile/unknown_portal/unknown_portal_two_1",
+				"unknown_portal_two": "textures/entity/projectile/unknown_portal/unknown_portal_two_2",
+				"unknown_portal_three": "textures/entity/projectile/unknown_portal/unknown_portal_two_3",
+				"unknown_portal_four": "textures/entity/projectile/unknown_portal/unknown_portal_two_4",
+				"unknown_portal_five": "textures/entity/projectile/unknown_portal/unknown_portal_two_5",
+				"unknown_portal_six": "textures/entity/projectile/unknown_portal/unknown_portal_two_6",
+				"unknown_portal_seven": "textures/entity/projectile/unknown_portal/unknown_portal_two_7",
+				"unknown_portal_eight": "textures/entity/projectile/unknown_portal/unknown_portal_two_8"
+			},
+			"geometry": {
+				"default": "geometry.unknown_portal"
+			},
+			"animations": {
+				"look_at_target": "controller.animation.sentinel.look_at_target",
+				"look_at_target_default": "animation.unknown_portal.look_at_target.default",
+				"look_at_target_gliding": "animation.unknown_portal.look_at_target.gliding",
+				"look_at_target_swimming": "animation.unknown_portal.look_at_target.swimming",
+				"spawn": "animation.unknown_portal.spawn"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"spawn"
+				]
+			},
+			"render_controllers": [
+				"controller.render.unknown_portal"
+			]
+		}
+	}
+}

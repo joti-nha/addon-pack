@@ -1,0 +1,52 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:plague_dog",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/plague_dog/plague_dog"
+			},
+			"geometry": {
+				"default": "geometry.plague_dog",
+				"food": "geometry.outcast_food"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"head"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.plague_dog.controller",
+				"head": "animation.plague_dog.head",
+				"static": "animation.plague_dog.static",
+				"static_two": "animation.plague_dog.static_two",
+				"move": "animation.plague_dog.move",
+				"eating": "animation.plague_dog.eating",
+				"scale_one": "animation.plague_dog.outcast_scale_one",
+				"scale_two": "animation.plague_dog.outcast_scale_two",
+				"spawn": "animation.plague_dog.spawn",
+				"attack": "animation.plague_dog.attack"
+			},
+			"particle_effects": {
+				"blood_hit": "dk:blood_hit_drip_particle"
+			},
+			"render_controllers": [
+				"controller.render.plague_dog",
+				{
+					"controller.render.outcast_food": "q.property('dk:plague_dog')=='eating'"
+				}
+			],
+			"spawn_egg": {
+				"texture": "plague_dog_spawn"
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/structure_x_fallen_log_mossed_mossy_willow_05"
+    },
+    "structure_name": "mystructure:mb/fallen_log_mossed_mossy_willow_05",
+    "adjustment_radius": 8,
+    "facing_direction": "south",
+    "constraints": {
+      "grounded": {}
+    }
+  }
+}

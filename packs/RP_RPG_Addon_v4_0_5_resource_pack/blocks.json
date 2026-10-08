@@ -1,0 +1,7 @@
+{
+  "format_version": "1.1.0",
+  "test:vibranium_ore": {
+    "textures": "vibranium_ore",
+    "sound": "stone"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:magic_x_scroll_of_earthquake_1"
+    },
+    "priority": 1,
+    "tags": [ "magic_spells_table" ],
+    "group": "scroll_of_earthquake_1",
+    "assume_symmetry": false,
+    "pattern": [
+      "#EQ",
+      "AG "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:empty_scroll"
+      },
+      "Q": {
+        "item": "ntk:earthen_quill"
+      },
+      "E": {
+        "item": "minecraft:echo_shard"
+      },
+      "G": {
+        "item": "minecraft:grass_block"
+      },
+      "A": {
+        "item": "minecraft:quartz"
+      }
+    },
+    "result": {
+      "item": "ntk:scroll_of_earthquake_1",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:magic_spells_table"
+      },
+      {
+        "item": "ntk:empty_scroll"
+      },
+      {
+        "item": "ntk:earthen_quill"
+      },
+      {
+        "item": "minecraft:echo_shard"
+      },
+      {
+        "item": "minecraft:grass_block"
+      },
+      {
+        "item": "minecraft:quartz"
+      }
+    ]
+  }
+}

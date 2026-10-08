@@ -1,0 +1,34 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.projectile.ntk_scrollwright_magic_missile",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 8, 0]
+				},
+				{
+					"name": "scroll",
+					"parent": "root",
+					"pivot": [0, 8, 0],
+					"cubes": [
+						{"origin": [-4, 8, -4], "size": [8, 0, 8], "uv": [0, 0]},
+						{"origin": [-4, 8, 4], "size": [8, 1, 1], "uv": [0, 8]},
+						{"origin": [-4, 7, -5], "size": [8, 1, 1], "uv": [0, 10]}
+					],
+					"locators": {
+						"projectile_particle_locator": [0, 8, 0]
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animation_controllers":{"controller.animation.hf_mzs.sand_rake":{"initial_state":"idle","states":{"idle":{"animations":["wield"],"transitions":[{"using":"q.is_using_item"}]},"using":{"animations":["use"],"transitions":[{"idle":"q.all_animations_finished"}]}}}}}

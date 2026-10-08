@@ -1,0 +1,131 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:tin_shovel",
+      "menu_category": {
+        "category": "equipment",
+        "group": "minecraft:itemGroup.name.shovel",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.tin_shovel.name"
+			},
+      "minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_tin_shovel"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": true
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 1
+			},
+      "minecraft:durability": {
+				"max_durability": 146,
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+				}
+			},
+			"minecraft:damage": {
+			  "value": 3
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": { "tags": "query.all_tags('ntk:shovel_diggable')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('ntk:any_tool_diggable')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_shovel_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_digger_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.all_tags('minecraft:is_tool_item_destructible')" },
+						"speed": 5
+					},
+					{
+						"block": { "tags": "query.any_tag( 'dirt', 'gravel', 'sand', 'soil', 'snow' )" },
+						"speed": 5
+					}
+				]
+			},
+			"minecraft:enchantable": {
+				"slot": "shovel",
+				"value": 23
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [ "ntk:tin_shovel" ],
+						"repair_amount": "query.remaining_durability"
+					},
+					{
+						"items": [ "ntk:tin_ingot" ],
+						"repair_amount": 136
+					}
+				]
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:equippable",
+          "ntk:smeltable",
+          "ntk:mainhand_equipment",
+          "ntk:tool",
+          "ntk:shovel",
+          "ntk:tin_shovel",
+          
+          "minecraft:is_shovel",
+          "minecraft:is_tool",
+          "minecraft:iron_tier",
+          "minecraft:digger"
+        ]
+      },
+			"ntk:on_mine_block": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:tin_shovel",
+          "item_slot": "Mainhand",
+          "durability_damage": 1,
+          "durability_damage_chance": 100.0
+        }
+      ]
+    }
+  }
+}

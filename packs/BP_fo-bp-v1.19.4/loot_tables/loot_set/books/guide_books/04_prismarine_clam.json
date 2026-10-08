@@ -1,0 +1,35 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_name",
+              "name": "Prismarine Clam"
+            },
+            {
+              "function": "set_book_contents",
+              "title": "Guide Book #4",
+              "author": "Forsaken Odyssey",
+              "pages": [
+                "        §7Guide Book #4§r\n§lPrismarine Clam§r\n§8MOB§r\n \n•§lRarity§r: Common\n \n•§lBehavior§r: Passive\n \n•§lMob type§r: Clam, Mollusk, Animal, Aquatic.\n \n•§lSpawn in§r: All ocean floors.\n \n•§lHealth§r: 12",
+                "•§lKnockback resistance§r: 0.0\n \n•§lImmunities§r: §o(None)§r\n \n•§lSwim speed§r: 0.0\n \n•§lBreathes in§r: Water\n \n•§lCapturable using§r: Water Bucket\n \n•§lProduce§r: Pearl\n -§lCondition§r: When its shell is open.",
+                " -§lUsing§r: Shears\n -§lDuration§r: 2:00-5:00\n -§lUsing§r: Shears\n \n•§lPossible drops§r: Prismarine Shard, Pearl §o(when shell is open)§r, XP Orbs.\n \n•It will open its shell after 2-5 minutes, containing a pearl inside.",
+                "•It will close its shell when it gets hurt."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

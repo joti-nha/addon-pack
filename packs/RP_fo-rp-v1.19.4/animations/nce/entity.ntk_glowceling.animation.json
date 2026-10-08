@@ -1,0 +1,213 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.ntk_glowceling.bite_attack": {
+			"loop": true,
+			"animation_length": 0.5,
+			"bones": {
+				"body": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -1],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 0, -10],
+						"0.25": [0, 0, 0],
+						"0.375": [0, 0, 10],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"upper_mouth": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-5, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				},
+				"lower_mouth": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [35, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_glowceling.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+					  "query.target_x_rotation - this",
+					  "query.target_y_rotation - this",
+					  0.0
+					]
+				}
+			}
+		},
+		"animation.entity.ntk_glowceling.sitting": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [ -10, 0, 0 ],
+					"position": [ 0, -3, 0 ]
+				},
+				"head": {
+					"rotation": [7.5, 0, 0]
+				},
+				"right_front_leg": {
+					"rotation": [-10, 0, 0]
+				},
+				"left_front_leg": {
+					"rotation": [-10, 0, 0]
+				},
+				"right_hind_leg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 0]
+				},
+				"left_hind_leg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 0]
+				}
+			}
+		},
+		"animation.entity.ntk_glowceling.sleeping": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [5, 0, 0],
+					"position": [0, -4, 0]
+				},
+				"right_front_leg": {
+					"rotation": [-90, 10, 0],
+					"position": [0, -6, 0]
+				},
+				"left_front_leg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -6, 0]
+				},
+				"right_hind_leg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 1]
+				},
+				"left_hind_leg": {
+					"rotation": [-90, 0, 0],
+					"position": [0, -7, 1]
+				}
+			}
+		},
+		"animation.entity.ntk_glowceling.swimming": {
+			"loop": true,
+			"animation_length": 1.0,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [10, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-10, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"right_front_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-45, 0, 0],
+						"0.5": [45, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"left_front_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-45, 0, 0],
+						"0.5": [45, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"right_hind_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [45, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"left_hind_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [45, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_glowceling.walking": {
+			"loop": true,
+			"animation_length": 1.0,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": [12.5, 0, 0],
+						"0.25": [12.5, -5, 0],
+						"0.5": [12.5, 0, 0],
+						"0.75": [12.5, 5, 0],
+						"1.0": [12.5, 0, 0]
+					}
+				},
+				"head": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"right_front_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"left_front_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"right_hind_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [-30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"left_hind_leg": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-30, 0, 0],
+						"0.5": [0, 0, 0],
+						"0.75": [30, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

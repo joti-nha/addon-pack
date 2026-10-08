@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_tall_dry_grass_x_dry_grass_bale"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "dry_grass",
+    "ingredients": [
+      {
+        "item": "ntk:dry_grass_bale"
+      }
+    ],
+    "result": {
+      "item": "minecraft:tall_dry_grass",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:dry_grass_bale"
+      }
+    ]
+  }
+}

@@ -1,0 +1,478 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.ntk_skeleton.admire": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [ 320.0, 25.0, 0.0 ]
+				},
+				"head": {
+					"rotation": [ 30.0, 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.base_pose": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [ 0.0, 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.base_pose.bow": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [ 0.0, 0.0, 0.0 ]
+				},
+				"rightItem": {
+					"position": [-1, 0, 0]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.base_pose.crossbow": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [ 0.0, 0.0, 0.0 ]
+				},
+				"rightItem": {
+					"position": [-1, 0, 2]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.bob": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ 0.0, 0.0, "((math.cos(query.life_time * 103.2) * 2.865) + 2.865) *-1.0" ]
+        },
+        "rightarm": {
+          "rotation": [ 0.0, 0.0, "(math.cos(query.life_time * 103.2) * 2.865) + 2.865" ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.bow_attack": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ "query.target_x_rotation - 90.0 - math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation + 28.65", "-(math.cos(query.life_time * 103.2) * 2.865) - 2.865" ]
+        },
+        "rightarm": {
+          "rotation": [ "query.target_x_rotation - 90.0 + math.sin(query.life_time * 76.8) * 2.865 - this", "query.target_y_rotation - 5.73", "(math.cos(query.life_time * 103.2) * 2.865) + 2.865" ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.brandish_spear": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [ "this * -0.5 - 183.5 - 22.5 * variable.charge_amount", "-this", "-10.0-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)" ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.charging": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [ "22.5 * variable.charge_amount - this", "-this", 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.crossbow.charge": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [ "math.lerp(-90.0 + 34.38, -90.0, variable.crossbow_charge)  -this", "math.lerp(22.92, 48.70, variable.crossbow_charge) -this", 0.0 ]
+				},
+				"rightarm": {
+					"rotation": [ "-90.0 + 34.38 -this", "-45.84 -this", 0.0 ]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.crossbow.hold": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [ "-85.94 + query.target_x_rotation -this", "34.38 + math.clamp(query.target_y_rotation, -45, 25) -this", 0.0 ]
+				},
+				"rightarm": {
+					"rotation": [ "-90.0 + 5.73 + query.target_x_rotation -this", "-17.19 + math.clamp(query.target_y_rotation, -25, 45) -this", 0.0 ]
+				}
+			}
+		},
+    "animation.entity.ntk_skeleton.damage_nearby_mobs": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ "-45.0-this", "-this", "-this" ]
+        },
+        "leftleg": {
+          "rotation": [ "45.0-this", "-0.1-this", "-0.1-this" ]
+        },
+        "rightarm": {
+          "rotation": [ "45.0-this", "-this", "-this" ]
+        },
+        "rightleg": {
+          "rotation": [ "-45.0-this", "0.1-this", "0.1-this" ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.hand_attack": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [ "-1.0 - ((math.sin(variable.attack_time * 180.0) * 57.3) * 1.2 - (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3) * 0.4) + (math.sin(query.life_time * 76.776372) * 2.865) - this", "(math.sin(variable.attack_time * 180.0) * 57.3) * 0.6 - 5.73 - this", "math.cos(query.life_time * 103.13244) * 2.865 + 2.865 - this" ]
+				},
+				"leftarm": {
+					"rotation": [ "-1.0 - ((math.sin(variable.attack_time * 180.0) * 57.3) * 1.2 - (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3) * 0.4) - (math.sin(query.life_time * 76.776372) * 2.865) - this", "5.73 - ((math.sin(variable.attack_time * 180.0) * 57.3) * 0.6) - this", "math.cos(query.life_time * 103.13244) * -2.865 - 2.865 - this" ]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.holding": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ "variable.is_holding_left ? (-this * 0.5 - 18.0) : 0.0", 0.0, 0.0 ]
+        },
+        "rightarm": {
+          "rotation": [ "variable.is_holding_right ? (-this * 0.5 - 18.0) : 0.0", 0.0, 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.look_at_target.default": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "head": {
+          "relative_to": {
+            "rotation": "entity"
+          },
+          "rotation": [ "query.target_x_rotation", "query.target_y_rotation", 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.look_at_target.gliding": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "head": {
+          "rotation": [ -45.0, "query.target_y_rotation", 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.look_at_target.swimming": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "head": {
+          "rotation": [ "math.lerp(query.target_x_rotation, -45.0, variable.swim_amount)", "query.target_y_rotation", 0.0 ]
+        }
+      }
+    },
+		"animation.entity.ntk_skeleton.magic_staff_attack": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [-61.51876, -9.84655, 17.49524]
+				},
+				"leftarm": {
+					"rotation": [-90, 0, 0]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.melee_attack": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"leftarm": {
+          "rotation": [ "(math.cos(query.life_time * 20.0 * 10.89) * 28.65) + (math.sin(variable.attack_time * 180.0) * 68.76 - (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0)) * 22.92)", 0.0, 0.0 ]
+				},
+				"rightarm": {
+          "rotation": [
+            "-100 + (variable.attack2 * 2.2 - variable.attack * 0.4) + variable.x_bob - this",
+            "10-variable.attack2 * 0.6 - 5.73 - this",
+            "-5+variable.z_bob - this"
+          ]
+				}
+			}
+		},
+    "animation.entity.ntk_skeleton.melee_spear_hold": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "rightarm": {
+          "rotation": [
+            "v.tp_melee_spear_base_arm_rotation_x + q.target_x_rotation - q.is_sneaking * 27.0 - this",
+            "math.clamp(q.target_y_rotation, -60.0, 45.0) - this",
+            0.0
+          ]
+        },
+        "rightitem": {
+          "position": [ 0.0, -1.5, -1.5 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.melee_spear_use": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "rightarm": {
+        "rotation": [
+          "v.tp_melee_spear_base_arm_rotation_x + q.target_x_rotation - q.is_sneaking * 27.0 - this + v.tp_melee_spear_use_arm_rotation_x",
+          "math.clamp(q.target_y_rotation, -60.0, 45.0) - this + v.tp_melee_spear_use_arm_rotation_y",
+          "v.tp_melee_spear_use_arm_rotation_z"
+        ]
+      },
+      "rightitem": {
+          "position": [ 0.0, -1.5, -1.5 ],
+          "rotation": [ "v.tp_melee_spear_use_item_rotation_x", 0.0, 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.riding": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [ 0, -8, 0 ]
+				},
+				"leftArm": {
+					"rotation": [ -36.0, 0.0, 0.0 ]
+				},
+				"rightArm": {
+					"rotation": [ -36.0, 0.0, 0.0 ]
+				},
+				"leftLeg": {
+					"rotation": [ "-81.0 - this", "-18.0 - this", "-this" ]
+				},
+				"rightLeg": {
+					"rotation": [ "-81.0 - this", "18.0 - this", "-this" ]
+				}
+			}
+		},
+    "animation.entity.ntk_skeleton.riding.arms": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ -36.0, 0.0, 0.0 ]
+        },
+        "rightarm": {
+          "rotation": [ -36.0, 0.0, 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.riding.body": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "body": {
+          "position": [ 0.0, "variable.riding_y_offset ?? 0.0", 0.0 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.riding.legs": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "leftleg": {
+          "rotation": [ "-81.0 - this", "-18.0 - this", "-this" ]
+        },
+        "rightleg": {
+          "rotation": [ "-81.0 - this", "18.0 - this", "-this" ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.sitting": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"waist": {
+					"position": [0, -11, 4]
+				},
+				"head": {
+					"position": [0, -11, 4]
+				},
+				"rightarm": {
+					"rotation": [15, 0, 10],
+					"position": [0, -11, 4]
+				},
+				"leftarm": {
+					"rotation": [15, 0, -10],
+					"position": [0, -11, 4]
+				},
+				"rightleg": {
+					"rotation": [-90, 15, 0],
+					"position": [0, -11, 4]
+				},
+				"leftleg": {
+					"rotation": [-90, -10, 0],
+					"position": [0, -11, 4]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.sleeping": {
+			"override_previous_animation": false,
+			"loop": true,
+			"bones": {
+				"waist": {
+					"position": [0, -11, 4]
+				},
+				"head": {
+					"rotation": [35, 0, 0],
+					"position": [0, -11, 4]
+				},
+				"rightarm": {
+					"rotation": [15, 0, 10],
+					"position": [0, -11, 4]
+				},
+				"leftarm": {
+					"rotation": [-10, 0, -10],
+					"position": [0, -11, 4]
+				},
+				"rightleg": {
+					"rotation": [-90, 15, 0],
+					"position": [0, -11, 4]
+				},
+				"leftleg": {
+					"rotation": [-90, -10, 0],
+					"position": [0, -11, 4]
+				}
+			}
+		},
+    "animation.entity.ntk_skeleton.sneaking": {
+      "override_previous_animation": false,
+			"loop": true,
+      "bones": {
+        "body": {
+          "rotation": [ "0.5 - this", 0.0, 0.0 ]
+        },
+        "head": {
+          "position": [ 0.0, 1.0, 0.0 ]
+        },
+        "leftarm": {
+          "rotation": [ 72.0, 0.0, 0.0 ]
+        },
+        "leftleg": {
+          "position": [ 0.0, -3.1, 3.9 ]
+        },
+        "rightarm": {
+          "rotation": [ 72.0, 0.0, 0.0 ]
+        },
+        "rightleg": {
+          "position": [ 0.0, -2.9, 4.1 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.swimming": {
+      "override_previous_animation": false,
+      "loop": true,
+			"animation_length": 1.3,
+      "bones": {
+        "leftarm": {
+          "rotation": {
+            "0.7": {
+              "post": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)" ],
+              "pre": [ "math.lerp(this, 0.0, variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)", "math.lerp(this, 180.0 - 0.01877 * (-65.0 * math.mod(query.modified_distance_moved, 26.0) + math.mod(query.modified_distance_moved, 26.0) * math.mod(query.modified_distance_moved, 26.0)), variable.leftarmswim_amount)" ]
+            },
+            "1.1": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)" ],
+            "1.3": {
+              "post": [ "math.lerp(this, 90.0 - (22.5 * math.mod(query.modified_distance_moved, 26.0)), variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)" ],
+              "pre": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)", "math.lerp(this, 180.0, variable.leftarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.leftarmswim_amount)" ]
+            }
+          }
+        },
+        "leftleg": {
+          "rotation": [ "math.lerp(this, math.cos(query.modified_distance_moved * 19.5 + 180.0) * 17.2, variable.leftarmswim_amount) - this", -0.1, -0.1 ]
+        },
+        "rightarm": {
+          "rotation": {
+            "0.7": {
+              "post": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)" ],
+              "pre": [ "math.lerp(this, 0.0, variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)", "math.lerp(this, -0.1019 * (-65.0 * math.mod(query.modified_distance_moved, 26.0) + math.mod(query.modified_distance_moved, 26.0) * math.mod(query.modified_distance_moved, 26.0)), variable.rightarmswim_amount)" ]
+            },
+            "1.1": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)" ],
+            "1.3": {
+              "post": [ "math.lerp(this, 90.0 - (22.5 * math.mod(query.modified_distance_moved, 26.0)), variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)" ],
+              "pre": [ "math.lerp(this, 11.25 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)", "math.lerp(this, 180.0, variable.rightarmswim_amount)", "math.lerp(this, 72.77 + 13.4 * math.mod(query.modified_distance_moved, 26.0), variable.rightarmswim_amount)" ]
+            }
+          }
+        },
+        "rightleg": {
+          "rotation": [ "math.lerp(this, math.cos(query.modified_distance_moved * 19.5) * 17.2, variable.leftarmswim_amount) - this", 0.1, 0.1 ]
+        }
+      }
+    },
+    "animation.entity.ntk_skeleton.trident_attack": {
+			"override_previous_animation": false,
+      "loop": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [
+						"this * -0.5 - 180.0 - 22.5 * variable.charge_amount",
+						"-this",
+						"-((math.cos(query.life_time * 103.2) * 2.865) + 2.865)"
+					]
+				}
+			}
+		},
+		"animation.entity.ntk_skeleton.trident_attack.rotations": {
+      "override_previous_animation": false,
+      "loop": true,
+      "bones": {
+				"body": {
+					"rotation": [ 0.0, "math.sin(math.sqrt(variable.attack_time) * 360.0) * 11.46", 0.0 ]
+				},
+				"leftArm": {
+					"rotation": [ "-(math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) + math.sin(variable.attack_time * 180.0)) * 5.73", "math.sin(math.sqrt(variable.attack_time) * 360.0) * 11.46", 0.0 ]
+				},
+				"rightArm": {
+					"rotation": [ "-(math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * -2.5 + math.sin(variable.attack_time * 180.0) * 28.65) * (variable.is_brandishing_spear ? -2.5 : 1.0 )", "variable.is_brandishing_spear ? 0.0 : math.sin(math.sqrt(variable.attack_time) * 360.0) * 22.92", 0.0 ]
+				}
+			}
+    },
+    "animation.entity.ntk_skeleton.use_item_progress": {
+      "override_previous_animation": false,
+      "loop": true,
+      "bones": {
+        "rightarm": {
+					"rotation": [ "variable.use_item_startup_progress * -60.0 + variable.use_item_interval_progress * 11.25", "variable.use_item_startup_progress * -22.5 + variable.use_item_interval_progress * 11.25", "variable.use_item_startup_progress * -5.625 + variable.use_item_interval_progress * 11.25" ]
+				}
+      }
+    },
+    "animation.entity.ntk_skeleton.walking": {
+      "override_previous_animation": false,
+      "loop": true,
+      "bones": {
+        "leftarm": {
+          "rotation": [ "variable.tcos0", 0.0, 0.0 ]
+        },
+        "leftleg": {
+          "rotation": [ "variable.tcos0 * -1.4", -0.1, -0.1 ]
+        },
+        "rightarm": {
+          "rotation": [ "-variable.tcos0", 0.0, 0.0 ]
+        },
+        "rightleg": {
+          "rotation": [ "variable.tcos0 * 1.4", 0.1, 0.1 ]
+        }
+      }
+    }
+	}
+}

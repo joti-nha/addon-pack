@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_enchanted_powder_magic_missile",
+		"heightmap": "ntk_powder_magic_missile_height",
+		"metalness_emissive_roughness": "ntk_powder_magic_missile_mer"
+	}
+}

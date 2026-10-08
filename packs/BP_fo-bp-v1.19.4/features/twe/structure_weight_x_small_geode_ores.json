@@ -1,0 +1,26 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/structure_weight_x_small_geode_ores"
+    },
+    "features": [
+      [ "ntk:twe/structure_x_small_geode_coal_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_coal_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_copper_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_copper_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_diamond_01", 10 ],
+      [ "ntk:twe/structure_x_small_geode_diamond_02", 30 ],
+      [ "ntk:twe/structure_x_small_geode_emerald_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_emerald_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_gold_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_gold_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_iron_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_iron_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_lapis_lazuli_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_lapis_lazuli_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_redstone_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_redstone_02", 100 ]
+    ]
+  }
+}

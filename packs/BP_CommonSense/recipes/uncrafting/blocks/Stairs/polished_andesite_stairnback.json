@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:polished_andesite_stairnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"P": {
+				"item": "minecraft:polished_andesite_stairs"
+			}
+		},
+		"pattern": [
+			"PP",
+			"PP"
+		],
+		"result": {
+			"item": "minecraft:polished_andesite",
+			"count": 3
+		}
+	}
+}

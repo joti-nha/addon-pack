@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_netherite_apple"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "netherite_apple",
+    "assume_symmetry": true,
+    "pattern": [
+      "NNN",
+      "NAN",
+      "NNN"
+    ],
+    "key": {
+      "N": {
+        "item": "ntk:netherite_powder"
+      },
+      "A": {
+        "item": "minecraft:apple"
+      }
+    },
+    "result": {
+      "item": "ntk:netherite_apple",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:netherite_powder"
+      },
+      {
+        "item": "minecraft:apple"
+      }
+    ]
+  }
+}

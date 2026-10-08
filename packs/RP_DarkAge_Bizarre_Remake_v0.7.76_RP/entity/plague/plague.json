@@ -1,0 +1,60 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:plague",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/plague/plague"
+			},
+			"geometry": {
+				"default": "geometry.plague"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"moves",
+					"attacks",
+					"look_at_target"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.plague.controller",
+				"look_at_target": "controller.animation.plague.look_at_target",
+				"look_at_target_default": "animation.plague.look_at_target.default",
+				"look_at_target_gliding": "animation.plague.look_at_target.gliding",
+				"look_at_target_swimming": "animation.plague.look_at_target.swimming",
+				"moves": "controller.animation.plague.moves",
+				"attacks": "controller.animation.plague.attacks",
+				"static": "animation.plague.static",
+				"move": "animation.plague.move",
+				"run": "animation.plague.run",
+				"spawn": "animation.plague.spawn",
+				"attack_one": "animation.plague.attack_one",
+				"attack_two": "animation.plague.attack_two",
+				"attack_three": "animation.plague.attack_three",
+				"attack_four": "animation.plague.attack_four",
+				"ranged": "animation.plague.ranged",
+				"roar": "animation.plague.roar",
+				"death": "animation.plague.death"
+			},
+			"sound_effects": {
+				"roar": "mob.plague.roar"
+			},
+			"spawn_egg": {
+				"texture": "plague_spawn"
+			},
+			"render_controllers": [
+				"controller.render.plague"
+			]
+		}
+	}
+}

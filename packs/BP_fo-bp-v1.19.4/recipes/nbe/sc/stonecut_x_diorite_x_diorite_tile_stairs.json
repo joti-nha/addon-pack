@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_diorite_x_diorite_tile_stairs"
+    },
+    "priority": 4,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:diorite"
+      }
+    ],
+    "result": {
+      "item": "ntk:diorite_tile_stairs",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diorite"
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+item.tm_aqc:basic_bobber_gray=Grey Basic Bobber~LINEBREAK~§b§o[Aquaculture]§r
+item.tm_aqc:basic_bobber_light_gray=Light Grey Basic Bobber~LINEBREAK~§b§o[Aquaculture]§r
+
+item.tm_aqc:feathered_bobber_gray=Grey Feathered Bobber~LINEBREAK~§b§o[Aquaculture]§r
+item.tm_aqc:feathered_bobber_light_gray=Light Grey Feathered Bobber~LINEBREAK~§b§o[Aquaculture]§r
+
+item.tm_aqc:winged_bobber_gray=Grey Winged Bobber~LINEBREAK~§b§o[Aquaculture]§r
+item.tm_aqc:winged_bobber_light_gray=Light Grey Winged Bobber~LINEBREAK~§b§o[Aquaculture]§r
+
+item.tm_aqc:creeper_bobber_gray=Grey Creeper Bobber~LINEBREAK~§b§o[Aquaculture]§r
+item.tm_aqc:creeper_bobber_light_gray=Light Grey Creeper Bobber~LINEBREAK~§b§o[Aquaculture]§r
+
+
+
+
+item.tm_aqc:garbage_goulash=Rubbish Ramen~LINEBREAK~§b§o[Aquaculture]§r
+item.tm_aqc:garbage_goulash_bucket=Bucket of Rubbish Ramen~LINEBREAK~§b§o[Aquaculture]§r
+
+
+tm_aqc.form.stew_pot.body=The Stew Pot is a special cooking block that when placed on top of a campfire, you can make a series of new stews from your catches and other ingredients. It requires a liquid and three ingredients to make a stew. First add a bucket of liquid by interacting with the pot, and then add your three ingredients by interacting. Once your stew is done you can use a bowl to scoop out stew (up to three servings) or a bucket to scoop it all out at once. You can then eat your stew out of those bowls or buckets.~LINEBREAK~~LINEBREAK~There are eight unique stews.~LINEBREAK~~LINEBREAK~Rubbish Ramen - Created when any combination of liquid and ingredients doesn't make a stew recipe. It tastes awful.~LINEBREAK~Stone Soup - A cheap and effective stew made from Water, Cobblestone, Carrot, and Potato.~LINEBREAK~Fish Chowder - A warm stew made from Milk, Raw Fillet, Carrot, and Potato.~LINEBREAK~Clam Chowder - A thick and hearty stew made from Milk, Raw Clam, Carrot, and Potato.~LINEBREAK~Green Juice - A healthy drink made from Water and three Algae.~LINEBREAK~Gumbo - A thick and meaty stew made from Water, Raw Shrimp, Pork Chop, and Wheat.~LINEBREAK~Super Mushroom Stew - A tastier version of Mushroom Stew. Made from Water, Red Mushroom, Brown Mushroom, and Mushroom Stem.~LINEBREAK~Lobster Bisque - A very rich and creamy stew. Made from Milk, Raw Lobster, and two Carrots.~LINEBREAK~

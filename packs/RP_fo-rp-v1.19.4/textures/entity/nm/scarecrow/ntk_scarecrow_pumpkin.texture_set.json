@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_scarecrow_pumpkin",
+    "heightmap": "ntk_scarecrow_pumpkin_height",
+    "metalness_emissive_roughness": "ntk_scarecrow_pumpkin_mer"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_mossy_willow_log_bottom",
+    "heightmap": "ntk_pbr_height",
+    "metalness_emissive_roughness": "ntk_pbr_roughness_mer"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diorite_tile_slab"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "diorite_tile_slab",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:diorite_tiles"
+      }
+    },
+    "result": {
+      "item": "ntk:diorite_tile_slab",
+      "count": 6
+    },
+    "unlock": [
+      {
+        "item": "ntk:diorite_tiles"
+      }
+    ]
+  }
+}

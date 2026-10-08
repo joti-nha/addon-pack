@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/cf7d760ccfcd9b1e72f8e8ff38f5cfdf"},"places_block":"minecraft:reeds","enforce_placement_rules":false,"enforce_survivability_rules":true,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]}}}

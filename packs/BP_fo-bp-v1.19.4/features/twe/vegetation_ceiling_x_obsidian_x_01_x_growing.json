@@ -1,0 +1,29 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "ntk:twe/vegetation_ceiling_x_obsidian_x_01_x_growing"
+    },
+    "growth_direction": "DOWN",
+    "body_blocks": [
+      [
+        "minecraft:obsidian", 100
+      ],
+      [
+        "minecraft:crying_obsidian", 10
+      ]
+    ],
+    "head_blocks": [
+      [
+        "minecraft:obsidian", 25
+      ],
+      [
+        "minecraft:crying_obsidian", 100
+      ]
+    ],
+    "height_distribution": [
+      [ { "range_min": 1, "range_max": 2 }, 100 ],
+      [ { "range_min": 3, "range_max": 7 }, 50 ]
+    ]
+  }
+}

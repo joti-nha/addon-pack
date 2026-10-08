@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shapeless":{"description":{"identifier":"panascais_end:enderite.leggings"},"ingredients":[{"item":"panascais_end:enderite_upgrade"},{"item":"minecraft:diamond_leggings"},{"item":"panascais_end:enderite_ingot"}],"tags":["crafting_table"],"result":"panascais_end:enderite_leggings"}}

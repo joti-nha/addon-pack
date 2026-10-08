@@ -1,0 +1,70 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:stellar_mace",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:damage": 18,
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 1400
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:interact_button": true,
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"mnra_cata:astral_alloy"
+						],
+						"repair_amount": "query.max_durability*0.5"
+					},
+					{
+						"items": [
+							"mnra_cata:stellar_mace"
+						],
+						"repair_amount": "context.other->query.remaining_durability+0.12*context.other->query.max_durability"
+					}
+				]
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": "minecraft:web",
+						"speed": 14
+					}
+				]
+			},
+			"minecraft:block_placer": {
+				"block": "mnra_cata:stellar_mace",
+				"use_on": [
+					"mnra_cata:stellar_mace"
+				],
+				"replace_block_item": true
+			},
+			"minecraft:tags": {
+				"tags": [
+					"minecraft:is_tool",
+					"minecraft:is_axe",
+					"mnra_cata:is_mob_shield_breakable"
+				]
+			},
+			"minecraft:cooldown": {
+				"category": "stellar_mace",
+				"duration": 2
+			},
+			"minecraft:enchantable": {
+				"slot": "elytra",
+				"value": 2
+			},
+			"minecraft:rarity": {
+				"value": "rare"
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_tall_lush_bush_x_lush_bush_bale"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "tall_lush_bush",
+    "ingredients": [
+      {
+        "item": "ntk:lush_bush_bale"
+      }
+    ],
+    "result": {
+      "item": "ntk:tall_lush_bush",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:lush_bush_bale"
+      }
+    ]
+  }
+}

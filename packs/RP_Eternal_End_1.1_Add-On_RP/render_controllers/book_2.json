@@ -1,0 +1,1 @@
+{"format_version":"1.8.0","render_controllers":{"controller.render.panascais_end.book_2":{"arrays":{},"geometry":"Geometry.pages","materials":[{"*":"Material.pages"}],"part_visibility":[{"*":0},{"page_right_*":1}],"textures":["Texture.page_2"]}}}

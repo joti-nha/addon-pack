@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_pile_of_allium"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "pile_of_allium",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:allium"
+      }
+    },
+    "result": {
+      "item": "ntk:pile_of_allium",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:allium"
+      }
+    ]
+  }
+}

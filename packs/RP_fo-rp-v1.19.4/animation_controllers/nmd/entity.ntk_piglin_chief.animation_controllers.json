@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+	  "controller.animation.entity.ntk_piglin_chief.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"smash_attack": "query.is_delayed_attacking == 1"
+						},
+						{
+							"magic_staff_attack": "query.facing_target_to_range_attack"
+						}
+					]
+				},
+				"smash_attack": {
+					"animations": [ "smash_attack" ],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					]
+				},
+				"magic_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.1,
+					"particle_effects": [
+						{
+							"effect": "piglin_chief_fire_staff_charging_particle",
+							"locator": "staff_point"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.facing_target_to_range_attack"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_piglin_chief.movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "piglin_chief_fire_staff_particle",
+							"locator": "staff_point"
+						}
+					]
+				}
+			}
+		}
+	}
+}

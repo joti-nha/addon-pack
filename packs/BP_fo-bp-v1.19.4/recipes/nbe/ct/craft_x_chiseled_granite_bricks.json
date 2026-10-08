@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_chiseled_granite_bricks"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "chiseled_granite_bricks",
+    "assume_symmetry": true,
+    "pattern": [
+      "S",
+      "S"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:granite_brick_slab"
+      }
+    },
+    "result": {
+      "item": "ntk:chiseled_granite_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:granite_brick_slab"
+      }
+    ]
+  }
+}

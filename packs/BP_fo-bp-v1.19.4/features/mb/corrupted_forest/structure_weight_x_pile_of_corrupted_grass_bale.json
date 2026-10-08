@@ -1,0 +1,13 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/structure_weight_x_pile_of_corrupted_grass_bale"
+    },
+    "features": [
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_grass_bale_01", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_grass_bale_02", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_grass_bale_03", 100 ]
+    ]
+  }
+}

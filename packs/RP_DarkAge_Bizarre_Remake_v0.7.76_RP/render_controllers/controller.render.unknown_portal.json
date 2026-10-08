@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.unknown_portal": {
+			"arrays": {
+				"textures": {
+					"array.item_frames": [
+						"texture.unknown_portal_one",
+						"texture.unknown_portal_two",
+						"texture.unknown_portal_three",
+						"texture.unknown_portal_four",
+						"texture.unknown_portal_five",
+						"texture.unknown_portal_six",
+						"texture.unknown_portal_seven",
+						"texture.unknown_portal_eight"
+					]
+				}
+			},
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"temp.life_time=query.life_time*13;return array.item_frames[temp.life_time];"
+			]
+		}
+	}
+}

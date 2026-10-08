@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_raw_zinc"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "TTT",
+      "TTT",
+      "TTT"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:raw_zinc"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_raw_zinc",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:raw_zinc"
+      }
+    ]
+  }
+}

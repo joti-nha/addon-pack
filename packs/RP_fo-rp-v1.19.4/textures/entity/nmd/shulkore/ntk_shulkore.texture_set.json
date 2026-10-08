@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_shulkore",
+		"heightmap": "ntk_shulkore_height",
+		"metalness_emissive_roughness": "ntk_shulkore_mer"
+	}
+}

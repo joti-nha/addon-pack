@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_farmer_hat"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "farmer_hat",
+    "assume_symmetry": true,
+    "pattern": [
+      " W ",
+      "SWS",
+      "WWW"
+    ],
+    "key": {
+      "W": {
+        "item": "minecraft:wheat"
+      },
+      "S": {
+        "item": "minecraft:string"
+      }
+    },
+    "result": {
+      "item": "ntk:farmer_hat",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:wheat"
+      },
+      {
+        "item": "minecraft:string"
+      }
+    ]
+  }
+}

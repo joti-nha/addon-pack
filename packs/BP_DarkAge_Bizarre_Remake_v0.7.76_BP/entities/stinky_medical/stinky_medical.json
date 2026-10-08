@@ -1,0 +1,541 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:stinky_medical",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"dk:stinky_medical_state_move": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:behavior.random_stroll": {
+					"priority": 4,
+					"speed_multiplier": 0.7
+				},
+				"minecraft:pushable": {
+					"is_pushable": true,
+					"is_pushable_by_piston": true
+				}
+			},
+			"dk:stinky_medical_state_sit": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:pushable": {
+					"is_pushable": false,
+					"is_pushable_by_piston": true
+				}
+			},
+			"dk:stinky_medical_state_book": {
+				"minecraft:is_sheared": {}
+			},
+			"dk:stinky_medical_timer": {
+				"minecraft:interact": {
+					"interactions": {
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "dk:syringe_with_suspicious_blood"
+									}
+								]
+							},
+							"event": "dk:stinky_medical_event_mode_transform",
+							"target": "self"
+						},
+						"use_item": true,
+						"interact_text": "action.interact.syringe"
+					}
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 15,
+					"time_down_event": {
+						"event": "dk:stinky_medical_event_mode_states"
+					}
+				}
+			},
+			"dk:stinky_medical_mode_transform": {
+				"minecraft:is_shaking": {},
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"effect": "strength",
+							"duration": 10,
+							"amplifier": 2
+						}
+					]
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 5,
+					"time_down_event": {
+						"event": "dk:stinky_medical_event_mode_welcome_plague"
+					}
+				}
+			},
+			"dk:stinky_medical_mode_damage": {
+				"minecraft:entity_sensor": {
+					"sensor_range": 5,
+					"maximum_count": 999,
+					"minimum_count": 1,
+					"event_filters": {
+						"all_of": [
+							{
+								"test": "has_mob_effect",
+								"subject": "other",
+								"operator": "!=",
+								"value": "invisibility"
+							},
+							{
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "==",
+										"value": "sentinel"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "==",
+										"value": "unbound"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "==",
+										"value": "assassin"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "==",
+										"value": "gargoyle"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "==",
+										"value": "plague"
+									}
+								]
+							}
+						]
+					},
+					"event": "dk:stinky_medical_event_mode_enemy"
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "entity_attack",
+							"on_damage": {
+								"event": "dk:stinky_medical_event_mode_enemy"
+							},
+							"deals_damage": true
+						},
+						{
+							"cause": "projectile",
+							"on_damage": {
+								"event": "dk:stinky_medical_event_mode_enemy"
+							},
+							"deals_damage": true
+						}
+					]
+				}
+			},
+			"dk:stinky_medical_mode_enemy": {
+				"minecraft:is_illager_captain": {},
+				"minecraft:behavior.find_mount": {
+					"priority": 1,
+					"within_radius": 16,
+					"start_delay": 15,
+					"max_failed_attempts": 20
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"all_of": [
+										{
+											"with_damage_fatal": true
+										},
+										{
+											"test": "is_riding",
+											"subject": "self",
+											"operator": "equals",
+											"value": true
+										}
+									]
+								},
+								"event": "dk:stinky_medical_event_mode_death"
+							},
+							"deals_damage": true
+						}
+					]
+				}
+			},
+			"dk:stinky_medical_mode_trade": {
+				"minecraft:behavior.look_at_trading_player": {
+					"priority": 7
+				},
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.stinky_medical.trade",
+					"table": "trading/economy_trades/stinky_trades.json",
+					"new_screen": true,
+					"persist_trades": true
+				}
+			},
+			"dk:stinky_medical_mode_summon": {
+				"minecraft:is_saddled": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.72,
+					"time_down_event": {
+						"event": "dk:stinky_medical_event_mode_spawn_putrefied"
+					}
+				}
+			},
+			"dk:stinky_medical_mode_curse": {
+				"minecraft:is_tamed": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.44,
+					"time_down_event": {
+						"event": "dk:stinky_medical_event_mode_curse"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"monster",
+					"stinky",
+					"stinky_medical",
+					"dk"
+				]
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?4+(query.equipment_count*math.random(2,4)):0"
+			},
+			"minecraft:health": {
+				"value": 25,
+				"max": 25
+			},
+			"minecraft:follow_range": {
+				"value": 16,
+				"max": 16
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1,
+				"alert_same_type": true,
+				"entity_types": {
+					"filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "stinky"
+							}
+						]
+					},
+					"max_dist": 32
+				}
+			},
+			"minecraft:behavior.avoid_mob_type": {
+				"priority": 4,
+				"entity_types": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "sentinel"
+						},
+						"max_dist": 32,
+						"walk_speed_multiplier": 1,
+						"sprint_speed_multiplier": 1.6
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "unbound"
+						},
+						"max_dist": 32,
+						"walk_speed_multiplier": 1,
+						"sprint_speed_multiplier": 1.6
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "assassin"
+						},
+						"max_dist": 32,
+						"walk_speed_multiplier": 1,
+						"sprint_speed_multiplier": 1.6
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "gargoyle"
+						},
+						"max_dist": 32,
+						"walk_speed_multiplier": 1,
+						"sprint_speed_multiplier": 1.6
+					}
+				],
+				"probability_per_strength": 0.3
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 2.6
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": true
+			},
+			"minecraft:movement": {
+				"value": 0.19
+			},
+			"minecraft:can_climb": {},
+			"minecraft:jump.static": {},
+			"minecraft:behavior.float": {
+				"priority": 20
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_float": true,
+				"avoid_water": false,
+				"avoid_damage_blocks": false
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7
+			},
+			"minecraft:behavior.look_at_entity": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7,
+				"filters": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "mob"
+				}
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/outcast_corrupted.json"
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 100,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"dk:stinky_medical_state_move",
+								"dk:stinky_medical_timer",
+								"dk:stinky_medical_mode_damage",
+								"dk:stinky_medical_mode_trade"
+							]
+						}
+					}
+				]
+			},
+			"dk:stinky_medical_event_mode_add_curse": {
+				"add": {
+					"component_groups": [
+						"dk:stinky_medical_mode_curse"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_states": {
+				"randomize": [
+					{
+						"weight": 80,
+						"add": {
+							"component_groups": [
+								"dk:stinky_medical_state_move"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:stinky_medical_state_sit",
+								"dk:stinky_medical_state_book"
+							]
+						}
+					},
+					{
+						"weight": 60,
+						"add": {
+							"component_groups": [
+								"dk:stinky_medical_state_book"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:stinky_medical_state_sit",
+								"dk:stinky_medical_state_move"
+							]
+						}
+					},
+					{
+						"weight": 40,
+						"add": {
+							"component_groups": [
+								"dk:stinky_medical_state_sit"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:stinky_medical_state_move",
+								"dk:stinky_medical_state_book"
+							]
+						}
+					},
+					{
+						"weight": 20,
+						"add": {
+							"component_groups": [
+								"dk:stinky_medical_state_sit",
+								"dk:stinky_medical_state_book"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:stinky_medical_state_move"
+							]
+						}
+					}
+				]
+			},
+			"dk:stinky_medical_event_mode_transform": {
+				"add": {
+					"component_groups": [
+						"dk:stinky_medical_state_move",
+						"dk:stinky_medical_mode_enemy",
+						"dk:stinky_medical_mode_transform"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:stinky_medical_timer",
+						"dk:stinky_medical_mode_summon",
+						"dk:stinky_medical_mode_damage",
+						"dk:stinky_medical_mode_trade",
+						"dk:stinky_medical_state_sit",
+						"dk:stinky_medical_state_book"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_enemy": {
+				"add": {
+					"component_groups": [
+						"dk:stinky_medical_mode_summon",
+						"dk:stinky_medical_state_move",
+						"dk:stinky_medical_mode_enemy"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:stinky_medical_mode_damage",
+						"dk:stinky_medical_mode_trade",
+						"dk:stinky_medical_state_sit",
+						"dk:stinky_medical_state_book"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_pacifist": {
+				"filters": {
+					"test": "has_component",
+					"subject": "self",
+					"operator": "==",
+					"value": "minecraft:is_illager_captain"
+				},
+				"add": {
+					"component_groups": [
+						"dk:stinky_medical_mode_damage",
+						"dk:stinky_medical_timer",
+						"dk:stinky_medical_mode_trade",
+						"dk:stinky_medical_state_move"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:stinky_medical_mode_summon",
+						"dk:stinky_medical_mode_enemy"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_spawn_putrefied": {
+				"remove": {
+					"component_groups": [
+						"dk:stinky_medical_mode_summon"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"summon dk:putrefied ~~~ ~~ dk:putrefied_event_mode_enemy"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_death": {
+				"queue_command": {
+					"command": [
+						"kill @e[family=putrefied,c=1,r=4]"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_curse": {
+				"add": {
+					"component_groups": [
+						"dk:stinky_medical_mode_damage",
+						"dk:stinky_medical_timer",
+						"dk:stinky_medical_mode_trade",
+						"dk:stinky_medical_state_move"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:stinky_medical_mode_curse",
+						"dk:stinky_medical_mode_summon",
+						"dk:stinky_medical_mode_enemy"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"effect @e[type=!dk:stinky_medical,r=15,c=1] bad_omen 300 10"
+					]
+				}
+			},
+			"dk:stinky_medical_event_mode_welcome_plague": {
+				"queue_command": {
+					"command": [
+						"summon dk:plague",
+						"particle minecraft:huge_explosion_lab_misc_emitter ~ ~1 ~",
+						"playsound random.explode @a[r=20]",
+						"kill @s"
+					]
+				}
+			}
+		}
+	}
+}

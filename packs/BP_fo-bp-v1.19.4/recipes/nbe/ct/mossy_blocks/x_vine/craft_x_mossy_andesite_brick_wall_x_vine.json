@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_andesite_brick_wall_x_vine"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_andesite_brick_wall",
+    "ingredients": [
+      {
+        "item": "ntk:andesite_brick_wall",
+        "count": 1
+      },
+      {
+        "item": "minecraft:vine",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ntk:mossy_andesite_brick_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:andesite_brick_wall"
+      },
+      {
+        "item": "minecraft:vine"
+      }
+    ]
+  }
+}

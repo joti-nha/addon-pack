@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_polished_tuff_x_slabs"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "polished_tuff",
+    "assume_symmetry": true,
+    "pattern": [
+      "T ",
+      " T"
+    ],
+    "key": {
+      "T": {
+        "item": "minecraft:polished_tuff_slab"
+      }
+    },
+    "result": {
+      "item": "minecraft:polished_tuff",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:polished_tuff_slab"
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_curserer_staff"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "curserer_staff",
+    "assume_symmetry": true,
+    "pattern": [
+      "FCF",
+      "BMB",
+      "SMS"
+    ],
+    "key": {
+      "F": {
+        "item": "ntk:black_feather"
+      },
+      "C": {
+        "item": "ntk:cursed_eye"
+      },
+      "M": {
+        "item": "ntk:metal_rod"
+      },
+      "B": {
+        "item": "minecraft:bone"
+      },
+      "S": {
+        "item": "minecraft:copper_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:curserer_staff",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:black_feather"
+      },
+      {
+        "item": "ntk:cursed_eye"
+      },
+      {
+        "item": "ntk:metal_rod"
+      },
+      {
+        "item": "minecraft:bone"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      }
+    ]
+  }
+}

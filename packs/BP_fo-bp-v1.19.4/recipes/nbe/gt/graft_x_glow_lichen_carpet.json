@@ -1,0 +1,32 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_glow_lichen_carpet"
+    },
+    "priority": 1,
+    "tags": [ "grafting_table" ],
+    "group": "glow_lichen_carpet",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:glow_lichen"
+      }
+    },
+    "result": {
+      "item": "ntk:glow_lichen_carpet",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:glow_lichen"
+      }
+    ]
+  }
+}

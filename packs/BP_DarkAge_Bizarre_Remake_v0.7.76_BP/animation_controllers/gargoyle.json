@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.gargoyle.shoot_sensor": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"/tag @s remove dk_charging_fireball",
+						"@s stare_at_target"
+					],
+					"animations": [
+						{
+							"charging_fireball": "query.skin_id == 1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.gargoyle_grounded.delayed_attack_sensor": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s reset_melee_attack",
+						"/tag @s remove dattacking"
+					],
+					"on_entry": [
+						"/tag @s add dattacking"
+					]
+				}
+			}
+		}
+	}
+}

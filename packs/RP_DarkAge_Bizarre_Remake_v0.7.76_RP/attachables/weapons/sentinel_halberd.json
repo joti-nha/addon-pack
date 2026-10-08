@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "dk:sentinel_halberd",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/sentinel/sentinel",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.sentinel_halberd"
+			},
+			"animations": {
+				"first_person": "animation.sentinel_halberd.first_person",
+				"3ra": "animation.sentinel_halberd.sentinel_halberd"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sentinel_halberd'"
+					},
+					{
+						"3ra": "!c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sentinel_halberd'"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

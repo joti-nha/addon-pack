@@ -1,0 +1,50 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:warthog",
+      "enable_attachables": false,
+      "hide_armor": false,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_warthog"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_warthog"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_warthog"
+      },
+      "materials": {
+        "default": "ntk_entity_alpha"
+      },
+      "textures": {
+        "warthog_red": "textures/entity/nm/warthog/ntk_warthog_00",
+        "warthog_gray": "textures/entity/nm/warthog/ntk_warthog_01"
+      },
+      "animations": {
+        "controller_attack": "controller.animation.entity.ntk_warthog.attack",
+        "controller_movement": "controller.animation.entity.ntk_warthog.movement",
+        "baby_remodel": "animation.entity.ntk_warthog.baby_remodel",
+        "melee_attack": "animation.entity.ntk_warthog.melee_attack",
+        "look_at_target": "animation.entity.ntk_warthog.look_at_target",
+        "walking": "animation.entity.ntk_warthog.walking"
+      },
+      "scripts": {
+        "animate": [
+          "controller_attack",
+          "controller_movement",
+          "look_at_target",
+          {
+            "baby_remodel": "query.is_baby"
+          }
+        ],
+        "pre_animation": [
+          "variable.tcos_tail = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 28.65;",
+          "variable.tcos_right_side = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos_left_side = -variable.tcos_right_side;",
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      }
+    }
+  }
+}

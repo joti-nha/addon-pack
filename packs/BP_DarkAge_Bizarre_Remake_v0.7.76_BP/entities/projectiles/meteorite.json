@@ -1,0 +1,235 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:meteorite",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:exploding_one": {
+				"minecraft:explode": {
+					"fuse_length": 0.1,
+					"fuse_lit": true,
+					"power": 8,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"minecraft:exploding_two": {
+				"minecraft:explode": {
+					"fuse_length": 0.12,
+					"fuse_lit": true,
+					"power": 10,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"minecraft:exploding_three": {
+				"minecraft:explode": {
+					"fuse_length": 0.12,
+					"fuse_lit": true,
+					"power": 12,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"minecraft:exploding_four": {
+				"minecraft:explode": {
+					"fuse_length": 0.12,
+					"fuse_lit": true,
+					"power": 14,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"minecraft:meteorite_one": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "minecraft:explode_one",
+								"target": "self"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": true,
+					"catch_fire": true
+				},
+				"minecraft:scale": {
+					"value": 1.75
+				}
+			},
+			"minecraft:meteorite_two": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "minecraft:explode_two",
+								"target": "self"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": true,
+					"catch_fire": true
+				},
+				"minecraft:scale": {
+					"value": 2
+				}
+			},
+			"minecraft:meteorite_three": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "minecraft:explode_three",
+								"target": "self"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": true,
+					"catch_fire": true
+				},
+				"minecraft:scale": {
+					"value": 2.5
+				}
+			},
+			"minecraft:meteorite_four": {
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "minecraft:explode_four",
+								"target": "self"
+							}
+						}
+					},
+					"power": 1,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						-0.1,
+						0
+					],
+					"reflect_on_hurt": true,
+					"catch_fire": true
+				},
+				"minecraft:scale": {
+					"value": 3
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"projectile"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1.2,
+				"height": 1.2
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 100,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"minecraft:meteorite_one"
+							]
+						}
+					},
+					{
+						"weight": 100,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"minecraft:meteorite_two"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:explode_one": {
+				"add": {
+					"component_groups": [
+						"minecraft:exploding_one"
+					]
+				}
+			},
+			"minecraft:explode_two": {
+				"add": {
+					"component_groups": [
+						"minecraft:exploding_two"
+					]
+				}
+			}
+		}
+	}
+}

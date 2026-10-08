@@ -1,0 +1,211 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:honey_bottle",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 7,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 5,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 6,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:iron_ingot",
+                  "quantity": 30,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 6,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:poisonous_potato",
+                  "quantity": 5,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 6,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 60,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:stinky_medical_mask",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:suspicious_weed",
+                  "quantity": 16
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 7,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 410,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:sinners_rod",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:clay",
+                  "quantity": 42
+                },
+                {
+                  "item": "dk:centipede_of_the_death",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:spawn_egg",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "set_actor_id",
+                      "id": "dk:flagon_mysthic"
+                    },
+                    {
+                      "function": "set_lore",
+                      "lore": [
+                        "Do you really want this?."
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 1,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 32
+                },
+                {
+                  "item": "minecraft:rotten_flesh",
+                  "quantity": 64
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:syringe_with_suspicious_blood",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 30,
+              "max_uses": 1,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.abomination_duck_mer.on_ground": {
+			"animation_length": 11,
+			"loop": true,
+			"timeline": {
+				"10.0": [
+					"@s dk:abomination_duck_mode_on_ground"
+				]
+			}
+		},
+		"animation.abomination_duck_mer.on_fly": {
+			"animation_length": 13,
+			"loop": true,
+			"timeline": {
+				"12.0": [
+					"@s dk:abomination_duck_mode_on_fly"
+				]
+			}
+		},
+		"animation.abomination_duck_mer.on_fly_two": {
+			"animation_length": 21,
+			"loop": true,
+			"timeline": {
+				"20.0": [
+					"@s dk:abomination_duck_mode_on_fly_two"
+				]
+			}
+		},
+		"animation.abomination_duck_mer.kill": {
+			"animation_length": 2.5,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/ride @e[type=dk:abomination_duck_mer,c=1,r=5] start_riding @s"
+				],
+				"2.4": [
+					"/event entity @s despawn"
+				]
+			}
+		}
+	}
+}

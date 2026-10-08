@@ -1,0 +1,60 @@
+{
+	"resource_pack_name": "Jerry's Better Vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bv_cooked_egg": {
+			"textures": "textures/items/cooked_egg_texture"
+		},
+		"bv_bread_and_egg": {
+			"textures": "textures/items/bread_and_egg_texture"
+		},
+		"bv_scuba_helmet": {
+			"textures": "textures/items/scuba_helmet"
+		},
+		"bv_bacon_and_eggs": {
+			"textures": "textures/items/foods/bacon_and_eggs"
+		},
+		"bv_sushi": {
+			"textures": "textures/items/foods/sushi"
+		},
+		"bv_netherite_skull": {
+			"textures": "textures/items/netherite_skull"
+		},
+		"bv_heart_amulet": {
+			"textures": "textures/items/heart_amulet"
+		},
+		"bv_miner_bless": {
+			"textures": "textures/items/miner_bless"
+		},
+		"bv_phantom_wings": {
+			"textures": "textures/items/material/phantom_wings"
+		},
+		"bv_ballon": {
+			"textures": "textures/items/ballon"
+		},
+		"bv_recall_potion": {
+			"textures": "textures/items/potions/recall_potion"
+		},
+		"bv_magic_mirror": {
+			"textures": "textures/items/magic_mirror"
+		},
+		"bv_mount_horn": {
+			"textures": "textures/items/mount_horn"
+		},
+		"bv_soul_lantern_offhand": {
+			"textures": "textures/items/soul_lantern"
+		},
+		"bv_config": {
+			"textures": "textures/items/config"
+		},
+		"bv_armadilo_fox_armor": {
+			"textures": "textures/items/fox_armor"
+		},
+		"bv_view": {
+			"textures": "textures/items/view"
+		},
+		"bv_guidebook": {
+			"textures": "textures/items/guidebook"
+		}
+	}
+}

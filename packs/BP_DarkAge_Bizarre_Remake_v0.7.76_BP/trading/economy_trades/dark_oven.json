@@ -1,0 +1,113 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": -1,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "dk:elemental_soldier_helmet",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:soul_gem",
+                  "quantity": 5
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:unbound_helmet",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:elemental_soldier_chestplate",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:soul_gem",
+                  "quantity": 5
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:unbound_chestplate",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:elemental_soldier_leggings",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:soul_gem",
+                  "quantity": 5
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:unbound_leggings",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:elemental_soldier_boots",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:soul_gem",
+                  "quantity": 5
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:unbound_boots",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:elemental_blade",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:corrupted_armor_fragment",
+                  "quantity": 15
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:volcano_sword",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

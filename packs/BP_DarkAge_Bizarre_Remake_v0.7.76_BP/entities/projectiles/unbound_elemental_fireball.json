@@ -1,0 +1,117 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:unbound_elemental_fireball",
+			"runtime_identifier": "minecraft:snowball",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					{
+						"destroys": "query.mark_variant==1"
+					}
+				]
+			},
+			"animations": {
+				"destroys": "controller.animation.unbound_elemental_fireball.destroys"
+			}
+		},
+		"component_groups": {
+			"dk:exploding_elemental": {
+				"minecraft:explode": {
+					"fuse_length": 0,
+					"fuse_lit": true,
+					"power": 10,
+					"causes_fire": true,
+					"fire_affected_by_griefing": true,
+					"destroy_affected_by_griefing": true
+				}
+			},
+			"dk:unbound_elemental_shoot": {
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:scale": {
+					"value": 2
+				},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				},
+				"minecraft:projectile": {
+					"on_hit": {
+						"definition_event": {
+							"affect_projectile": false,
+							"event_trigger": {
+								"event": "dk:explode_elemental",
+								"target": "self"
+							}
+						}
+					},
+					"power": 2.5,
+					"gravity": 0,
+					"inertia": 1,
+					"liquid_inertia": 1,
+					"uncertainty_base": 0,
+					"uncertainty_multiplier": 0,
+					"anchor": 1,
+					"offset": [
+						0,
+						2.25,
+						0
+					],
+					"catch_fire": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:fire_immune": true,
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"width": 0.31,
+				"height": 0.31
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "unbound_elemental_mob"
+						},
+						"add": {
+							"component_groups": [
+								"dk:unbound_elemental_shoot"
+							]
+						}
+					}
+				]
+			},
+			"dk:explode_elemental": {
+				"add": {
+					"component_groups": [
+						"dk:exploding_elemental"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"event entity @e[type=dk:sentinel,c=1,r=45] dk:sentinel_event_mode_shieldless"
+					]
+				}
+			}
+		}
+	}
+}

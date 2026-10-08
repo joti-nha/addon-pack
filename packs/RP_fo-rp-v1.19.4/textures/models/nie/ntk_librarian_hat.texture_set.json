@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_librarian_hat",
+    "heightmap": "ntk_librarian_hat_height",
+    "metalness_emissive_roughness": "ntk_librarian_hat_mer"
+  }
+}

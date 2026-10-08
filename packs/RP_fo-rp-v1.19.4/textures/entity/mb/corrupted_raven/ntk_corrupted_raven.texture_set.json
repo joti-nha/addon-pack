@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_corrupted_raven",
+    "heightmap": "ntk_corrupted_raven_height",
+    "metalness_emissive_roughness": "ntk_corrupted_raven_mer"
+  }
+}

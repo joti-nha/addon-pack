@@ -1,0 +1,86 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.merciful.mode_attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"twilight_wheel": "query.mark_variant==1"
+						},
+						{
+							"twilight_cut": "query.mark_variant==2"
+						},
+						{
+							"summon_unknown": "query.mark_variant==3"
+						},
+						{
+							"summon_lightning": "query.mark_variant==4"
+						}
+					]
+				},
+				"twilight_wheel": {
+					"animations": [
+						{
+							"twilight_wheel": "query.mark_variant == 1"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant==0"
+						}
+					],
+					"on_exit": [
+						"@s dk:no_attacks"
+					]
+				},
+				"twilight_cut": {
+					"animations": [
+						{
+							"twilight_cut": "query.mark_variant == 2"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant==0"
+						}
+					],
+					"on_exit": [
+						"@s dk:no_attacks"
+					]
+				},
+				"summon_unknown": {
+					"animations": [
+						{
+							"summon_unknown": "query.mark_variant == 3"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant==0"
+						}
+					],
+					"on_exit": [
+						"@s dk:no_attacks"
+					]
+				},
+				"summon_lightning": {
+					"animations": [
+						{
+							"summon_lightning": "query.mark_variant == 4"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant==0"
+						}
+					],
+					"on_exit": [
+						"@s dk:no_attacks"
+					]
+				}
+			}
+		}
+	}
+}

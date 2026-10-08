@@ -1,0 +1,145 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:fossiliferous_heated_netherrack",
+      "menu_category": {
+				"category": "nature",
+				"group": "ntk:itemGroup.name.fossiliferous_blocks",
+				"is_hidden_in_commands": false
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.fossiliferous_heated_netherrack.name",
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_fossiliferous_heated_netherrack",
+          "render_method": "opaque",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_fossiliferous_heated_netherrack",
+            "render_method": "opaque",
+            "tint_method": "none",
+            "ambient_occlusion": 0.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_fossiliferous_heated_netherrack",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#502A05"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 20.0
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 4.0
+			},
+			"minecraft:chest_obstruction": {
+        "obstruction_rule": "shape"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bd",
+        "up": "note.bd"
+      },
+			"minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+			"minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+			},
+      "minecraft:loot": "loot_tables/empty.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:pickaxe_diggable",
+        "ntk:full_block",
+        "ntk:natural_block",
+        "ntk:solid_block",
+        "ntk:smeltable",
+        "ntk:ore",
+        "ntk:fossiliferous",
+        "ntk:stones",
+        "ntk:netherrack_blocks",
+        "ntk:netherrack",
+        "ntk:heated_netherrack",
+        "ntk:fossiliferous_heated_netherrack",
+        
+        "minecraft:is_pickaxe_item_destructible",
+        "minecraft:stone_tier_destructible"
+      ],
+      "ntk:fossil_on_player_break": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:fossiliferous_heated_netherrack",
+          "block_state": "",
+          "state_value": "",
+          "item_tool_type": "minecraft:is_pickaxe",
+          "item_slot": "Mainhand",
+          "fossil_drop": "minecraft:bone",
+          "fossil_drop_chance": 100.0,
+          "fossil_drop_count_min": 1,
+          "fossil_drop_count_max": 1,
+          "fossil_drop_fortune_i_chance": 33.5,
+          "fossil_drop_fortune_ii_chance": 75.0,
+          "fossil_drop_fortune_iii_chance": 120.0,
+          "xp_drop": true,
+          "xp_drop_count_min": 1,
+          "xp_drop_count_max": 1
+        }
+      ]
+    }
+  }
+}

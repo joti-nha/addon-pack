@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_waxed_oxidized_copper_lamp_x_waxed_oxidized_copper_x_coals"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "waxed_oxidized_copper_lamp",
+    "assume_symmetry": true,
+    "pattern": [
+      "A",
+      "B",
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:waxed_oxidized_copper"
+      },
+      "B": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:waxed_oxidized_copper_lamp",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:waxed_oxidized_copper"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

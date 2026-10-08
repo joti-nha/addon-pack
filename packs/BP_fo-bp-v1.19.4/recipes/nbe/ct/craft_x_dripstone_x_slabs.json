@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_dripstone_x_slabs"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "dripstone_block",
+    "assume_symmetry": true,
+    "pattern": [
+      "D ",
+      " D"
+    ],
+    "key": {
+      "D": {
+        "item": "ntk:dripstone_slab"
+      }
+    },
+    "result": {
+      "item": "minecraft:dripstone_block",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:dripstone_slab"
+      }
+    ]
+  }
+}

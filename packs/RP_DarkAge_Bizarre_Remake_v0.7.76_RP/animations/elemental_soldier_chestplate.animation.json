@@ -1,0 +1,104 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.elemental_soldier_chestplate.static": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"scale": 1.2
+				},
+				"body2": {
+					"rotation": [
+						"math.lerp(0,120,query.cape_flap_amount)-6",
+						0,
+						0
+					]
+				},
+				"rightArm": {
+					"position": [
+						0.5,
+						0,
+						0
+					],
+					"scale": [
+						1.275,
+						1.15,
+						1.275
+					]
+				},
+				"leftArm": {
+					"position": [
+						-0.5,
+						0,
+						0
+					],
+					"scale": [
+						1.275,
+						1.15,
+						1.275
+					]
+				},
+				"bone3": {
+					"position": [
+						0,
+						2,
+						0
+					],
+					"scale": [
+						1.3,
+						1,
+						1.28
+					]
+				},
+				"bone4": {
+					"position": [
+						0,
+						1,
+						0
+					],
+					"scale": [
+						1.25,
+						0.9,
+						1.2
+					]
+				},
+				"bone5": {
+					"position": [
+						0,
+						2,
+						0
+					],
+					"scale": [
+						1.3,
+						1,
+						1.28
+					]
+				},
+				"bone6": {
+					"position": [
+						0,
+						1,
+						0
+					],
+					"scale": [
+						1.25,
+						0.9,
+						1.2
+					]
+				}
+			}
+		},
+		"animation.elemental_soldier_chestplate.cape": {
+			"loop": true,
+			"bones": {
+				"body2": {
+					"rotation": [
+						"math.max(-90,math.min(90,query.yaw_speed*0.05))",
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

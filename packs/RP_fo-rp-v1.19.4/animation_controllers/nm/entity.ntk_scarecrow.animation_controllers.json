@@ -1,0 +1,331 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_scarecrow.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"hand_attack": "!query.is_item_equipped && variable.has_target && variable.attack_time >= 0.0 && !query.is_admiring"
+						},
+						{
+							"melee_attack": "query.is_item_equipped && query.get_equipped_item_name('main_hand') != 'crossbow' && !query.facing_target_to_range_attack && variable.has_target && variable.attack_time >= 0.0 && !query.is_admiring"
+						},
+						{
+							"bow_attack": "query.get_equipped_item_name('main_hand') == 'bow' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"crossbow.charge": "query.get_equipped_item_name('main_hand') == 'crossbow' && query.is_charging && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"crossbow.hold": "query.get_equipped_item_name('main_hand') == 'crossbow' && query.is_charged && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"trident_attack": "query.is_item_equipped('main_hand') == 'trident' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"arcane_staff_attack": "query.get_equipped_item_name('main_hand') == 'arcane_staff' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"blazing_staff_attack": "query.get_equipped_item_name('main_hand') == 'blazing_staff' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"curserer_staff_attack": "query.get_equipped_item_name('main_hand') == 'curserer_staff' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"piglin_fire_staff_attack": "query.get_equipped_item_name('main_hand') == 'piglin_fire_staff' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						},
+						{
+							"powder_staff_attack": "query.get_equipped_item_name('main_hand') == 'powder_staff' && query.has_target && query.facing_target_to_range_attack && !query.is_admiring"
+						}
+					]
+				},
+				"hand_attack": {
+					"animations": [ "hand_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.is_item_equipped || !variable.has_target || variable.attack_time < 0.0 || query.is_admiring"
+						}
+					]
+				},
+				"melee_attack": {
+					"animations": [ "melee_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "!query.is_item_equipped || query.get_equipped_item_name('main_hand') == 'crossbow' || query.facing_target_to_range_attack || !variable.has_target || variable.attack_time < 0.0 || query.is_admiring"
+						}
+					]
+				},
+				"bow_attack": {
+					"animations": [ "bow_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'bow' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				},
+				"crossbow.charge": {
+					"animations": [ "crossbow.charge" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'crossbow' || !query.is_charging || !query.facing_target_to_range_attack || query.is_admiring"
+						},
+						{
+							"crossbow.hold": "query.is_charged"
+						}
+					]
+				},
+				"crossbow.hold": {
+					"animations": [ "crossbow.hold" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'crossbow' || !query.is_charged || !query.facing_target_to_range_attack || query.is_admiring"
+						},
+						{
+							"crossbow.charge": "query.is_charging"
+						}
+					]
+				},
+				"trident_attack": {
+					"animations": [ "trident_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.is_item_equipped('main_hand') != 'trident' || !query.has_target || !query.facing_target_to_range_attack || !variable.is_brandishing_spear || query.is_admiring"
+						}
+					]
+				},
+				"arcane_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'arcane_staff' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				},
+				"blazing_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'blazing_staff' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				},
+				"curserer_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'curserer_staff' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				},
+				"piglin_fire_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'piglin_fire_staff' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				},
+				"powder_staff_attack": {
+					"animations": [ "magic_staff_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'powder_staff' || !query.has_target || !query.facing_target_to_range_attack || query.is_admiring"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_scarecrow.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "base_pose" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"base_pose.bow": "query.get_equipped_item_name('main_hand') == 'bow'"
+						},
+						{
+							"base_pose.crossbow": "query.get_equipped_item_name('main_hand') == 'crossbow'"
+						}
+					]
+				},
+				"base_pose.bow": {
+					"animations": [ "base_pose.bow" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'bow'"
+						}
+					]
+				},
+				"base_pose.crossbow": {
+					"animations": [ "base_pose.crossbow" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "query.get_equipped_item_name('main_hand') != 'crossbow'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_scarecrow.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "look_at_target.default" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming || query.is_crawling"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [ "look_at_target.gliding" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"swimming": "query.is_swimming || query.is_crawling"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [ "look_at_target.swimming" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming || query.is_crawling"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_scarecrow.melee_spear": {
+      "initial_state": "hold",
+      "states": {
+        "hold": {
+          "animations": [ "melee_spear_hold" ],
+					"blend_transition": 0.0,
+          "transitions": [
+            {
+              "use": "variable.item_use_normalized > 0.0"
+            }
+          ]
+        },
+        "use": {
+          "animations": [ "melee_spear_use" ],
+          "blend_transition": 1.0,
+          "transitions": [
+            {
+              "hold": "variable.item_use_normalized == 0.0"
+            }
+          ]
+        }
+      }
+    },
+		"controller.animation.entity.ntk_scarecrow.movement": {
+			"initial_state": "walking",
+			"states": {
+				"walking": {
+					"animations": [ "walking" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sleeping": "query.is_sleeping && !query.has_target && !query.is_riding && !query.is_admiring"
+						},
+						{
+							"sitting": "query.is_sitting && !query.is_riding && !query.is_admiring"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [ "sitting" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"walking": "!query.is_sitting || query.is_riding || query.is_admiring"
+						}
+					]
+				},
+				"sleeping": {
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"sleeping_1": "Math.round(Math.random(0,1)) == 0"
+						},
+						{
+							"sleeping_2": "Math.round(Math.random(0,1)) == 1"
+						}
+					]
+				},
+				"sleeping_1": {
+					"animations": [ "sleeping" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"walking": "!query.is_sleeping || query.has_target || query.is_riding || query.is_admiring"
+						}
+					]
+				},
+				"sleeping_2": {
+					"animations": [ "sitting" ],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"walking": "!query.is_sleeping || query.has_target || query.is_riding || query.is_admiring"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_scarecrow.riding": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+					"blend_transition": 0.0,
+          "transitions": [
+            {
+              "riding": "query.is_riding"
+            }
+          ]
+        },
+        "riding": {
+          "animations": [
+            "riding"
+          ],
+					"blend_transition": 0.0,
+          "transitions": [
+            {
+              "default": "!query.is_riding"
+            }
+          ]
+        }
+      }
+    }
+	}
+}

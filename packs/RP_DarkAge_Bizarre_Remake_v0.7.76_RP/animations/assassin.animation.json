@@ -1,0 +1,43 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.assassin.hide": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"Rightitem": {
+					"position": [
+						0,
+						9999,
+						0
+					]
+				},
+				"root": {
+					"position": [
+						0,
+						9999,
+						0
+					]
+				}
+			}
+		},
+		"animation.assassin.not_hide": {
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"Rightitem": {
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

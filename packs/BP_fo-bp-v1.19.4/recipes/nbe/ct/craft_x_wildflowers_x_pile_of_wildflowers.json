@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_wildflowers_x_pile_of_wildflowers"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "wildflowers",
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_wildflowers"
+      }
+    ],
+    "result": {
+      "item": "minecraft:wildflowers",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_wildflowers"
+      }
+    ]
+  }
+}

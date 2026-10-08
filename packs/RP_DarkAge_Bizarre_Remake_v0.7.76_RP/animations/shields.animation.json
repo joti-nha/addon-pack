@@ -1,0 +1,139 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.first_person.sentinel_shield_block": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"position": [
+						0,
+						"v.is_first_person?-10:0",
+						0
+					]
+				},
+				"rightarm": {
+					"position": [
+						0,
+						"(v.is_first_person&&!query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?-10:0",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.sentinel_shield_block_main_hand": {
+			"loop": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-30:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-25:0"
+					]
+				},
+				"rightitem": {
+					"rotation": [
+						0,
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-60:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-45:0"
+					],
+					"position": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-1:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:sentinel_shield'))?-3:0",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.sentinel_shield_block_off_hand": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?-20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?20:0"
+					]
+				},
+				"leftitem": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?(query.item_is_charged*30):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?(70-query.item_is_charged*60):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?(65-query.item_is_charged*15):0"
+					],
+					"position": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?(1+query.item_is_charged*1.5):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:sentinel_shield'))?(-3+query.item_is_charged):0",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.first_person.unboned_shield_block": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"position": [
+						0,
+						"v.is_first_person?-10:0",
+						0
+					]
+				},
+				"rightarm": {
+					"position": [
+						0,
+						"(v.is_first_person&&!query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?-10:0",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.unboned_shield_block_main_hand": {
+			"loop": true,
+			"bones": {
+				"rightarm": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-30:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-25:0"
+					]
+				},
+				"rightitem": {
+					"rotation": [
+						0,
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-60:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-45:0"
+					],
+					"position": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-1:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.mainhand',0,'dk:unboned_shield'))?-3:0",
+						0
+					]
+				}
+			}
+		},
+		"animation.player.unboned_shield_block_off_hand": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?-20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?20:0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?20:0"
+					]
+				},
+				"leftitem": {
+					"rotation": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?(query.item_is_charged*30):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?(70-query.item_is_charged*60):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?(65-query.item_is_charged*15):0"
+					],
+					"position": [
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?(1+query.item_is_charged*1.5):0",
+						"(!v.is_first_person&&query.is_item_name_any('slot.weapon.offhand',0,'dk:unboned_shield'))?(-3+query.item_is_charged):0",
+						0
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:cmgraft_x_peony_x_pile_of_peony"
+    },
+    "priority": 2,
+    "tags": [ "grafting_table" ],
+    "group": "peony",
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_peony"
+      }
+    ],
+    "result": {
+      "item": "minecraft:peony",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_peony"
+      }
+    ]
+  }
+}

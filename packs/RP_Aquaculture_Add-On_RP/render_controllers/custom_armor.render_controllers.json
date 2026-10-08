@@ -1,0 +1,13 @@
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+      "controller.render.tm_aqc.custom_armor": {
+        "geometry": "Geometry.default",
+        "materials": [ { "*": "variable.is_dyed ? Material.dyed : Material.default" }
+  ],
+        "textures": [
+          "variable.is_dyed ? Texture.dyed : Texture.default"
+        ]
+      }
+    }
+  }

@@ -1,0 +1,1797 @@
+{
+  "resource_pack_name": "vanilla",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "ntk_jar_of_forest_wisp_charged": {
+      "textures": "textures/items/fo/ntk_jar_of_forest_wisp_charged"
+    },
+    "ntk_jar_of_forest_wisp_uncharged": {
+      "textures": "textures/items/fo/ntk_jar_of_forest_wisp_uncharged"
+    },
+    "ntk_jar_of_moss_berry_cookies_1": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_1"
+    },
+    "ntk_jar_of_moss_berry_cookies_2": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_2"
+    },
+    "ntk_jar_of_moss_berry_cookies_3": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_3"
+    },
+    "ntk_jar_of_moss_berry_cookies_4": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_4"
+    },
+    "ntk_jar_of_moss_berry_cookies_5": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_5"
+    },
+    "ntk_jar_of_moss_berry_cookies_6": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_6"
+    },
+    "ntk_jar_of_moss_berry_cookies_7": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_7"
+    },
+    "ntk_jar_of_moss_berry_cookies_8": {
+      "textures": "textures/items/fo/ntk_jar_of_moss_berry_cookies_8"
+    },
+    "ntk_learning_book_of_villaging": {
+      "textures": "textures/items/fo/ntk_learning_book_of_villaging"
+    },
+    "ntk_short_lush_bush": {
+      "textures": "textures/items/fo/ntk_short_lush_bush"
+    },
+    "ntk_summoning_scroll_of_cobbled_deepslate_golem": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_cobbled_deepslate_golem"
+    },
+    "ntk_summoning_scroll_of_cobblestone_golem": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_cobblestone_golem"
+    },
+    "ntk_summoning_scroll_of_deepslate_golem": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_deepslate_golem"
+    },
+    "ntk_summoning_scroll_of_magma_golem": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_magma_golem"
+    },
+    "ntk_summoning_scroll_of_mossy_cobblestone_golem": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_mossy_cobblestone_golem"
+    },
+    "ntk_summoning_scroll_of_mossy_skeleton": {
+      "textures": "textures/items/fo/ntk_summoning_scroll_of_mossy_skeleton"
+    },
+    "ntk_tall_lush_bush": {
+      "textures": "textures/items/fo/ntk_tall_lush_bush"
+    },
+    
+    "ntk_copper_crate_key": {
+      "textures": "textures/items/kc/ntk_copper_crate_key"
+    },
+    "ntk_diamond_crate_key": {
+      "textures": "textures/items/kc/ntk_diamond_crate_key"
+    },
+    "ntk_flint_axe": {
+      "textures": "textures/items/kc/ntk_flint_axe"
+    },
+    "ntk_golden_crate_key": {
+      "textures": "textures/items/kc/ntk_golden_crate_key"
+    },
+    "ntk_iron_crate_key": {
+      "textures": "textures/items/kc/ntk_iron_crate_key"
+    },
+    "ntk_learning_book_of_crates_trading": {
+      "textures": "textures/items/kc/ntk_learning_book_of_crates_trading"
+    },
+    "ntk_nether_star_fragment": {
+      "textures": "textures/items/kc/ntk_nether_star_fragment"
+    },
+    "ntk_piglin_crate_key": {
+      "textures": "textures/items/kc/ntk_piglin_crate_key"
+    },
+    "ntk_spawn_egg_crates_trader": {
+      "textures": "textures/items/kc/ntk_spawn_egg_crates_trader"
+    },
+    "ntk_spawn_egg_piglin_crates_trader": {
+      "textures": "textures/items/kc/ntk_spawn_egg_piglin_crates_trader"
+    },
+    
+    "ntk_amphibian_gills": {
+      "textures": "textures/items/mb/ntk_amphibian_gills"
+    },
+    "ntk_blooming_corrupted_oak_sapling": {
+      "textures": "textures/items/mb/ntk_blooming_corrupted_oak_sapling"
+    },
+    "ntk_corrupted_grass": {
+      "textures": "textures/items/mb/ntk_corrupted_grass"
+    },
+    "ntk_corrupted_oak_door": {
+      "textures": "textures/items/mb/ntk_corrupted_oak_door"
+    },
+    "ntk_corrupted_oak_sapling": {
+      "textures": "textures/items/mb/ntk_corrupted_oak_sapling"
+    },
+    "ntk_deopard_fur": {
+      "textures": "textures/items/mb/ntk_deopard_fur"
+    },
+    "ntk_hanging_moss": {
+      "textures": "textures/items/mb/ntk_hanging_moss"
+    },
+    "ntk_mossy_willow_door": {
+      "textures": "textures/items/mb/ntk_mossy_willow_door"
+    },
+    "ntk_overgrown_jungle_door": {
+      "textures": "textures/items/mb/ntk_overgrown_jungle_door"
+    },
+    "ntk_short_moss_sprouts": {
+      "textures": "textures/items/mb/ntk_short_moss_sprouts"
+    },
+    "ntk_spawn_egg_corpse_wood": {
+      "textures": "textures/items/mb/ntk_spawn_egg_corpse_wood"
+    },
+    "ntk_spawn_egg_corrupted_oak_troot": {
+      "textures": "textures/items/mb/ntk_spawn_egg_corrupted_oak_troot"
+    },
+    "ntk_spawn_egg_corrupted_raven": {
+      "textures": "textures/items/mb/ntk_spawn_egg_corrupted_raven"
+    },
+    "ntk_spawn_egg_deopard": {
+      "textures": "textures/items/mb/ntk_spawn_egg_deopard"
+    },
+    "ntk_spawn_egg_mossheep": {
+      "textures": "textures/items/mb/ntk_spawn_egg_mossheep"
+    },
+    "ntk_spawn_egg_mossman": {
+      "textures": "textures/items/mb/ntk_spawn_egg_mossman"
+    },
+    "ntk_spawn_egg_mossy_willow_troot": {
+      "textures": "textures/items/mb/ntk_spawn_egg_mossy_willow_troot"
+    },
+    "ntk_spawn_egg_overgrown_jungle_troot": {
+      "textures": "textures/items/mb/ntk_spawn_egg_overgrown_jungle_troot"
+    },
+    "ntk_spawn_egg_pale_mossheep": {
+      "textures": "textures/items/mb/ntk_spawn_egg_pale_mossheep"
+    },
+    "ntk_spawn_egg_selvander": {
+      "textures": "textures/items/mb/ntk_spawn_egg_selvander"
+    },
+    "ntk_tall_moss_sprouts": {
+      "textures": "textures/items/mb/ntk_tall_moss_sprouts"
+    },
+    
+    "ntk_blue_tip_grass": {
+      "textures": "textures/items/nbe/ntk_blue_tip_grass"
+    },
+    "ntk_golden_chain": {
+      "textures": "textures/items/nbe/ntk_golden_chain"
+    },
+    "ntk_light_blue_tip_grass": {
+      "textures": "textures/items/nbe/ntk_light_blue_tip_grass"
+    },
+    "ntk_magenta_tip_grass": {
+      "textures": "textures/items/nbe/ntk_magenta_tip_grass"
+    },
+    "ntk_orange_tip_grass": {
+      "textures": "textures/items/nbe/ntk_orange_tip_grass"
+    },
+    "ntk_pink_tip_grass": {
+      "textures": "textures/items/nbe/ntk_pink_tip_grass"
+    },
+    "ntk_red_tip_grass": {
+      "textures": "textures/items/nbe/ntk_red_tip_grass"
+    },
+    "ntk_white_tip_grass": {
+      "textures": "textures/items/nbe/ntk_white_tip_grass"
+    },
+    "ntk_yellow_tip_grass": {
+      "textures": "textures/items/nbe/ntk_yellow_tip_grass"
+    },
+    
+    "ntk_blue_feather": {
+      "textures": "textures/items/nce/ntk_blue_feather"
+    },
+    "ntk_brass_axe": {
+      "textures": "textures/items/nce/ntk_brass_axe"
+    },
+    "ntk_brass_boots": {
+      "textures": "textures/items/nce/ntk_brass_boots"
+    },
+    "ntk_brass_chestplate": {
+      "textures": "textures/items/nce/ntk_brass_chestplate"
+    },
+    "ntk_brass_helmet": {
+      "textures": "textures/items/nce/ntk_brass_helmet"
+    },
+    "ntk_brass_hoe": {
+      "textures": "textures/items/nce/ntk_brass_hoe"
+    },
+    "ntk_brass_ingot": {
+      "textures": "textures/items/nce/ntk_brass_ingot"
+    },
+    "ntk_brass_leggings": {
+      "textures": "textures/items/nce/ntk_brass_leggings"
+    },
+    "ntk_brass_nugget": {
+      "textures": "textures/items/nce/ntk_brass_nugget"
+    },
+    "ntk_brass_pickaxe": {
+      "textures": "textures/items/nce/ntk_brass_pickaxe"
+    },
+    "ntk_brass_shovel": {
+      "textures": "textures/items/nce/ntk_brass_shovel"
+    },
+    "ntk_brass_spear": {
+      "textures": "textures/items/nce/ntk_brass_spear"
+    },
+    "ntk_brass_sword": {
+      "textures": "textures/items/nce/ntk_brass_sword"
+    },
+    "ntk_bronze_axe": {
+      "textures": "textures/items/nce/ntk_bronze_axe"
+    },
+    "ntk_bronze_boots": {
+      "textures": "textures/items/nce/ntk_bronze_boots"
+    },
+    "ntk_bronze_chestplate": {
+      "textures": "textures/items/nce/ntk_bronze_chestplate"
+    },
+    "ntk_bronze_helmet": {
+      "textures": "textures/items/nce/ntk_bronze_helmet"
+    },
+    "ntk_bronze_hoe": {
+      "textures": "textures/items/nce/ntk_bronze_hoe"
+    },
+    "ntk_bronze_ingot": {
+      "textures": "textures/items/nce/ntk_bronze_ingot"
+    },
+    "ntk_bronze_leggings": {
+      "textures": "textures/items/nce/ntk_bronze_leggings"
+    },
+    "ntk_bronze_nugget": {
+      "textures": "textures/items/nce/ntk_bronze_nugget"
+    },
+    "ntk_bronze_pickaxe": {
+      "textures": "textures/items/nce/ntk_bronze_pickaxe"
+    },
+    "ntk_bronze_shovel": {
+      "textures": "textures/items/nce/ntk_bronze_shovel"
+    },
+    "ntk_bronze_spear": {
+      "textures": "textures/items/nce/ntk_bronze_spear"
+    },
+    "ntk_bronze_sword": {
+      "textures": "textures/items/nce/ntk_bronze_sword"
+    },
+    "ntk_copper_tin_ingot": {
+      "textures": "textures/items/nce/ntk_copper_tin_ingot"
+    },
+    "ntk_copper_zinc_ingot": {
+      "textures": "textures/items/nce/ntk_copper_zinc_ingot"
+    },
+    "ntk_glowbird_egg": {
+      "textures": "textures/items/nce/ntk_glowbird_egg"
+    },
+    "ntk_glowceling_egg": {
+      "textures": "textures/items/nce/ntk_glowceling_egg"
+    },
+    "ntk_glowcelium_bone_meal": {
+      "textures": "textures/items/nce/ntk_glowcelium_bone_meal"
+    },
+    "ntk_metal_rod": {
+      "textures": "textures/items/nce/ntk_metal_rod"
+    },
+    "ntk_metal_scrap": {
+      "textures": "textures/items/nce/ntk_metal_scrap"
+    },
+    "ntk_moss_berries": {
+      "textures": "textures/items/nce/ntk_moss_berries"
+    },
+    "ntk_moss_berry_cookie": {
+      "textures": "textures/items/nce/ntk_moss_berry_cookie"
+    },
+    "ntk_moss_berry_pie": {
+      "textures": "textures/items/nce/ntk_moss_berry_pie"
+    },
+    "ntk_mosshroom_door": {
+      "textures": "textures/items/nce/ntk_mosshroom_door"
+    },
+    "ntk_mosshroom_fungus": {
+      "textures": "textures/items/nce/ntk_mosshroom_fungus"
+    },
+    "ntk_mosshroom_stew": {
+      "textures": "textures/items/nce/ntk_mosshroom_stew"
+    },
+    "ntk_myceling_egg": {
+      "textures": "textures/items/nce/ntk_myceling_egg"
+    },
+    "ntk_olivine": {
+      "textures": "textures/items/nce/ntk_olivine"
+    },
+    "ntk_olivine_axe": {
+      "textures": "textures/items/nce/ntk_olivine_axe"
+    },
+    "ntk_olivine_boots": {
+      "textures": "textures/items/nce/ntk_olivine_boots"
+    },
+    "ntk_olivine_chestplate": {
+      "textures": "textures/items/nce/ntk_olivine_chestplate"
+    },
+    "ntk_olivine_fragment": {
+      "textures": "textures/items/nce/ntk_olivine_fragment"
+    },
+    "ntk_olivine_helmet": {
+      "textures": "textures/items/nce/ntk_olivine_helmet"
+    },
+    "ntk_olivine_hoe": {
+      "textures": "textures/items/nce/ntk_olivine_hoe"
+    },
+    "ntk_olivine_leggings": {
+      "textures": "textures/items/nce/ntk_olivine_leggings"
+    },
+    "ntk_olivine_pickaxe": {
+      "textures": "textures/items/nce/ntk_olivine_pickaxe"
+    },
+    "ntk_olivine_shovel": {
+      "textures": "textures/items/nce/ntk_olivine_shovel"
+    },
+    "ntk_olivine_spear": {
+      "textures": "textures/items/nce/ntk_olivine_spear"
+    },
+    "ntk_olivine_sword": {
+      "textures": "textures/items/nce/ntk_olivine_sword"
+    },
+    "ntk_quartz_cluster": {
+      "textures": "textures/items/nce/ntk_quartz_cluster"
+    },
+    "ntk_raw_tin": {
+      "textures": "textures/items/nce/ntk_raw_tin"
+    },
+    "ntk_raw_zinc": {
+      "textures": "textures/items/nce/ntk_raw_zinc"
+    },
+    "ntk_rose_quartz_cluster": {
+      "textures": "textures/items/nce/ntk_rose_quartz_cluster"
+    },
+    "ntk_rose_quartz_shard": {
+      "textures": "textures/items/nce/ntk_rose_quartz_shard"
+    },
+    "ntk_short_glowcelium_sprouts": {
+      "textures": "textures/items/nce/ntk_short_glowcelium_sprouts"
+    },
+    "ntk_short_mycelium_sprouts": {
+      "textures": "textures/items/nce/ntk_short_mycelium_sprouts"
+    },
+    "ntk_spawn_egg_crystalmite": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_crystalmite"
+    },
+    "ntk_spawn_egg_glowbird": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_glowbird"
+    },
+    "ntk_spawn_egg_glowceling": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_glowceling"
+    },
+    "ntk_spawn_egg_moss_mushling": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_moss_mushling"
+    },
+    "ntk_spawn_egg_mossy_skeleton": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_mossy_skeleton"
+    },
+    "ntk_spawn_egg_myceling": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_myceling"
+    },
+    "ntk_spawn_egg_nethermite": {
+      "textures": "textures/items/nce/spawn_egg/ntk_spawn_egg_nethermite"
+    },
+    "ntk_sprouted_bone": {
+      "textures": "textures/items/nce/ntk_sprouted_bone"
+    },
+    "ntk_tall_glowcelium_sprouts": {
+      "textures": "textures/items/nce/ntk_tall_glowcelium_sprouts"
+    },
+    "ntk_tall_mycelium_sprouts": {
+      "textures": "textures/items/nce/ntk_tall_mycelium_sprouts"
+    },
+    "ntk_tin_axe": {
+      "textures": "textures/items/nce/ntk_tin_axe"
+    },
+    "ntk_tin_boots": {
+      "textures": "textures/items/nce/ntk_tin_boots"
+    },
+    "ntk_tin_chestplate": {
+      "textures": "textures/items/nce/ntk_tin_chestplate"
+    },
+    "ntk_tin_helmet": {
+      "textures": "textures/items/nce/ntk_tin_helmet"
+    },
+    "ntk_tin_hoe": {
+      "textures": "textures/items/nce/ntk_tin_hoe"
+    },
+    "ntk_tin_ingot": {
+      "textures": "textures/items/nce/ntk_tin_ingot"
+    },
+    "ntk_tin_leggings": {
+      "textures": "textures/items/nce/ntk_tin_leggings"
+    },
+    "ntk_tin_nugget": {
+      "textures": "textures/items/nce/ntk_tin_nugget"
+    },
+    "ntk_tin_pickaxe": {
+      "textures": "textures/items/nce/ntk_tin_pickaxe"
+    },
+    "ntk_tin_shovel": {
+      "textures": "textures/items/nce/ntk_tin_shovel"
+    },
+    "ntk_tin_spear": {
+      "textures": "textures/items/nce/ntk_tin_spear"
+    },
+    "ntk_tin_sword": {
+      "textures": "textures/items/nce/ntk_tin_sword"
+    },
+    "ntk_zinc_axe": {
+      "textures": "textures/items/nce/ntk_zinc_axe"
+    },
+    "ntk_zinc_boots": {
+      "textures": "textures/items/nce/ntk_zinc_boots"
+    },
+    "ntk_zinc_chestplate": {
+      "textures": "textures/items/nce/ntk_zinc_chestplate"
+    },
+    "ntk_zinc_helmet": {
+      "textures": "textures/items/nce/ntk_zinc_helmet"
+    },
+    "ntk_zinc_hoe": {
+      "textures": "textures/items/nce/ntk_zinc_hoe"
+    },
+    "ntk_zinc_ingot": {
+      "textures": "textures/items/nce/ntk_zinc_ingot"
+    },
+    "ntk_zinc_leggings": {
+      "textures": "textures/items/nce/ntk_zinc_leggings"
+    },
+    "ntk_zinc_nugget": {
+      "textures": "textures/items/nce/ntk_zinc_nugget"
+    },
+    "ntk_zinc_pickaxe": {
+      "textures": "textures/items/nce/ntk_zinc_pickaxe"
+    },
+    "ntk_zinc_shovel": {
+      "textures": "textures/items/nce/ntk_zinc_shovel"
+    },
+    "ntk_zinc_spear": {
+      "textures": "textures/items/nce/ntk_zinc_spear"
+    },
+    "ntk_zinc_sword": {
+      "textures": "textures/items/nce/ntk_zinc_sword"
+    },
+    
+    "ntk_amethyst_apple": {
+      "textures": "textures/items/nie/ntk_amethyst_apple"
+    },
+    "ntk_amethyst_powder": {
+      "textures": "textures/items/nie/ntk_amethyst_powder"
+    },
+    "ntk_apple_pie": {
+      "textures": "textures/items/nie/ntk_apple_pie"
+    },
+    "ntk_arcane_staff": {
+      "textures": "textures/items/nie/ntk_arcane_staff"
+    },
+    "ntk_arcazure_pearl": {
+      "textures": "textures/items/nie/ntk_arcazure_pearl"
+    },
+    "ntk_bamboo_cup_with_chocolate": {
+      "textures": "textures/items/nie/ntk_bamboo_cup_with_chocolate"
+    },
+    "ntk_bamboo_cup_with_glow_berry_juice": {
+      "textures": "textures/items/nie/ntk_bamboo_cup_with_glow_berry_juice"
+    },
+    "ntk_bamboo_cup_with_milk": {
+      "textures": "textures/items/nie/ntk_bamboo_cup_with_milk"
+    },
+    "ntk_bamboo_cup_with_sweet_berry_juice": {
+      "textures": "textures/items/nie/ntk_bamboo_cup_with_sweet_berry_juice"
+    },
+    "ntk_bamboo_cup_with_water": {
+      "textures": "textures/items/nie/ntk_bamboo_cup_with_water"
+    },
+    "ntk_beetroot_pie": {
+      "textures": "textures/items/nie/ntk_beetroot_pie"
+    },
+    "ntk_blazing_apple": {
+      "textures": "textures/items/nie/ntk_blazing_apple"
+    },
+    "ntk_blazing_pearl": {
+      "textures": "textures/items/nie/ntk_blazing_pearl"
+    },
+    "ntk_blazing_staff": {
+      "textures": "textures/items/nie/ntk_blazing_staff"
+    },
+    "ntk_book_of_biomes": {
+      "textures": "textures/items/nie/ntk_book_of_biomes"
+    },
+    "ntk_bottle_of_black_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_black_cloud"
+    },
+    "ntk_bottle_of_blue_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_blue_cloud"
+    },
+    "ntk_bottle_of_brown_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_brown_cloud"
+    },
+    "ntk_bottle_of_cyan_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_cyan_cloud"
+    },
+    "ntk_bottle_of_gray_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_gray_cloud"
+    },
+    "ntk_bottle_of_green_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_green_cloud"
+    },
+    "ntk_bottle_of_light_blue_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_light_blue_cloud"
+    },
+    "ntk_bottle_of_light_gray_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_light_gray_cloud"
+    },
+    "ntk_bottle_of_lime_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_lime_cloud"
+    },
+    "ntk_bottle_of_magenta_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_magenta_cloud"
+    },
+    "ntk_bottle_of_orange_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_orange_cloud"
+    },
+    "ntk_bottle_of_pink_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_pink_cloud"
+    },
+    "ntk_bottle_of_purple_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_purple_cloud"
+    },
+    "ntk_bottle_of_red_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_red_cloud"
+    },
+    "ntk_bottle_of_white_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_white_cloud"
+    },
+    "ntk_bottle_of_yellow_cloud": {
+      "textures": "textures/items/nie/ntk_bottle_of_yellow_cloud"
+    },
+    "ntk_cactus_stew": {
+      "textures": "textures/items/nie/ntk_cactus_stew"
+    },
+    "ntk_calcite_chunk": {
+      "textures": "textures/items/nie/ntk_calcite_chunk"
+    },
+    "ntk_carrot_soup": {
+      "textures": "textures/items/nie/ntk_carrot_soup"
+    },
+    "ntk_chain_links": {
+      "textures": "textures/items/nie/ntk_chain_links"
+    },
+    "ntk_charcoal_powder": {
+      "textures": "textures/items/nie/ntk_charcoal_powder"
+    },
+    "ntk_cheese": {
+      "textures": "textures/items/nie/ntk_cheese"
+    },
+    "ntk_cheese_bread": {
+      "textures": "textures/items/nie/ntk_cheese_bread"
+    },
+    "ntk_chocolate_bar": {
+      "textures": "textures/items/nie/ntk_chocolate_bar"
+    },
+    "ntk_chorus_stew": {
+      "textures": "textures/items/nie/ntk_chorus_stew"
+    },
+    "ntk_cooked_pufferfish": {
+      "textures": "textures/items/nie/ntk_cooked_pufferfish"
+    },
+    "ntk_cooked_tropical_fish": {
+      "textures": "textures/items/nie/ntk_cooked_tropical_fish"
+    },
+    "ntk_copper_apple": {
+      "textures": "textures/items/nie/ntk_copper_apple"
+    },
+    "ntk_copper_powder": {
+      "textures": "textures/items/nie/ntk_copper_powder"
+    },
+    "ntk_crimson_stew": {
+      "textures": "textures/items/nie/ntk_crimson_stew"
+    },
+    "ntk_diamond_apple": {
+      "textures": "textures/items/nie/ntk_diamond_apple"
+    },
+    "ntk_diamond_powder": {
+      "textures": "textures/items/nie/ntk_diamond_powder"
+    },
+    "ntk_dripstone_club": {
+      "textures": "textures/items/nie/ntk_dripstone_club"
+    },
+    "ntk_egg_sandwich": {
+      "textures": "textures/items/nie/ntk_egg_sandwich"
+    },
+    "ntk_elytra_scrap": {
+      "textures": "textures/items/nie/ntk_elytra_scrap"
+    },
+    "ntk_emerald_apple": {
+      "textures": "textures/items/nie/ntk_emerald_apple"
+    },
+    "ntk_emerald_powder": {
+      "textures": "textures/items/nie/ntk_emerald_powder"
+    },
+    "ntk_empty_bamboo_cup": {
+      "textures": "textures/items/nie/ntk_empty_bamboo_cup"
+    },
+    "ntk_empty_jar": {
+      "textures": "textures/items/nie/ntk_empty_jar"
+    },
+    "ntk_enchanted_dust": {
+      "textures": "textures/items/nie/ntk_enchanted_dust"
+    },
+    "ntk_enchanted_emerald": {
+      "textures": "textures/items/nie/ntk_enchanted_emerald"
+    },
+    "ntk_enchanted_pearl": {
+      "textures": "textures/items/nie/ntk_enchanted_pearl"
+    },
+    "ntk_farmer_hat": {
+      "textures": "textures/items/nie/ntk_farmer_hat"
+    },
+    "ntk_fisherman_hat": {
+      "textures": "textures/items/nie/ntk_fisherman_hat"
+    },
+    "ntk_fletcher_hat": {
+      "textures": "textures/items/nie/ntk_fletcher_hat"
+    },
+    "ntk_fried_egg": {
+      "textures": "textures/items/nie/ntk_fried_egg"
+    },
+    "ntk_glow_berry_cookie": {
+      "textures": "textures/items/nie/ntk_glow_berry_cookie"
+    },
+    "ntk_glow_berry_pie": {
+      "textures": "textures/items/nie/ntk_glow_berry_pie"
+    },
+    "ntk_glow_lichen_stew": {
+      "textures": "textures/items/nie/ntk_glow_lichen_stew"
+    },
+    "ntk_gold_powder": {
+      "textures": "textures/items/nie/ntk_gold_powder"
+    },
+    "ntk_iron_apple": {
+      "textures": "textures/items/nie/ntk_iron_apple"
+    },
+    "ntk_iron_powder": {
+      "textures": "textures/items/nie/ntk_iron_powder"
+    },
+    "ntk_jar_of_chocolate_full": {
+      "textures": "textures/items/nie/ntk_jar_of_chocolate_full"
+    },
+    "ntk_jar_of_chocolate_half": {
+      "textures": "textures/items/nie/ntk_jar_of_chocolate_half"
+    },
+    "ntk_jar_of_cookies_1": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_1"
+    },
+    "ntk_jar_of_cookies_2": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_2"
+    },
+    "ntk_jar_of_cookies_3": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_3"
+    },
+    "ntk_jar_of_cookies_4": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_4"
+    },
+    "ntk_jar_of_cookies_5": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_5"
+    },
+    "ntk_jar_of_cookies_6": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_6"
+    },
+    "ntk_jar_of_cookies_7": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_7"
+    },
+    "ntk_jar_of_cookies_8": {
+      "textures": "textures/items/nie/ntk_jar_of_cookies_8"
+    },
+    "ntk_jar_of_glow_berry_cookies_1": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_1"
+    },
+    "ntk_jar_of_glow_berry_cookies_2": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_2"
+    },
+    "ntk_jar_of_glow_berry_cookies_3": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_3"
+    },
+    "ntk_jar_of_glow_berry_cookies_4": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_4"
+    },
+    "ntk_jar_of_glow_berry_cookies_5": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_5"
+    },
+    "ntk_jar_of_glow_berry_cookies_6": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_6"
+    },
+    "ntk_jar_of_glow_berry_cookies_7": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_7"
+    },
+    "ntk_jar_of_glow_berry_cookies_8": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_cookies_8"
+    },
+    "ntk_jar_of_glow_berry_juice_full": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_juice_full"
+    },
+    "ntk_jar_of_glow_berry_juice_half": {
+      "textures": "textures/items/nie/ntk_jar_of_glow_berry_juice_half"
+    },
+    "ntk_jar_of_honey_full": {
+      "textures": "textures/items/nie/ntk_jar_of_honey_full"
+    },
+    "ntk_jar_of_honey_half": {
+      "textures": "textures/items/nie/ntk_jar_of_honey_half"
+    },
+    "ntk_jar_of_milk_full": {
+      "textures": "textures/items/nie/ntk_jar_of_milk_full"
+    },
+    "ntk_jar_of_milk_half": {
+      "textures": "textures/items/nie/ntk_jar_of_milk_half"
+    },
+    "ntk_jar_opener": {
+      "textures": "textures/items/nie/ntk_jar_opener"
+    },
+    "ntk_jar_of_sweet_berry_cookies_1": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_1"
+    },
+    "ntk_jar_of_sweet_berry_cookies_2": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_2"
+    },
+    "ntk_jar_of_sweet_berry_cookies_3": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_3"
+    },
+    "ntk_jar_of_sweet_berry_cookies_4": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_4"
+    },
+    "ntk_jar_of_sweet_berry_cookies_5": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_5"
+    },
+    "ntk_jar_of_sweet_berry_cookies_6": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_6"
+    },
+    "ntk_jar_of_sweet_berry_cookies_7": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_7"
+    },
+    "ntk_jar_of_sweet_berry_cookies_8": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_cookies_8"
+    },
+    "ntk_jar_of_sweet_berry_juice_full": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_juice_full"
+    },
+    "ntk_jar_of_sweet_berry_juice_half": {
+      "textures": "textures/items/nie/ntk_jar_of_sweet_berry_juice_half"
+    },
+    "ntk_jar_of_water_full": {
+      "textures": "textures/items/nie/ntk_jar_of_water_full"
+    },
+    "ntk_jar_of_water_half": {
+      "textures": "textures/items/nie/ntk_jar_of_water_half"
+    },
+    "ntk_lapis_lazuli_apple": {
+      "textures": "textures/items/nie/ntk_lapis_lazuli_apple"
+    },
+    "ntk_lapis_lazuli_powder": {
+      "textures": "textures/items/nie/ntk_lapis_lazuli_powder"
+    },
+    "ntk_leather_scrap": {
+      "textures": "textures/items/nie/ntk_leather_scrap"
+    },
+    "ntk_levitation_staff": {
+      "textures": "textures/items/nie/ntk_levitation_staff"
+    },
+    "ntk_librarian_hat": {
+      "textures": "textures/items/nie/ntk_librarian_hat"
+    },
+    "ntk_magma_club": {
+      "textures": "textures/items/nie/ntk_magma_club"
+    },
+    "ntk_netherite_apple": {
+      "textures": "textures/items/nie/ntk_netherite_apple"
+    },
+    "ntk_netherite_powder": {
+      "textures": "textures/items/nie/ntk_netherite_powder"
+    },
+    "ntk_pea_stew": {
+      "textures": "textures/items/nie/ntk_pea_stew"
+    },
+    "ntk_pearl": {
+      "textures": "textures/items/nie/ntk_pearl"
+    },
+    "ntk_potato_soup": {
+      "textures": "textures/items/nie/ntk_potato_soup"
+    },
+    "ntk_powder_staff": {
+      "textures": "textures/items/nie/ntk_powder_staff"
+    },
+    "ntk_prismarine_rod": {
+      "textures": "textures/items/nie/ntk_prismarine_rod"
+    },
+    "ntk_pumpkin_slice": {
+      "textures": "textures/items/nie/ntk_pumpkin_slice"
+    },
+    "ntk_pumpkin_stew": {
+      "textures": "textures/items/nie/ntk_pumpkin_stew"
+    },
+    "ntk_roasted_melon_seeds": {
+      "textures": "textures/items/nie/ntk_roasted_melon_seeds"
+    },
+    "ntk_roasted_pumpkin_seeds": {
+      "textures": "textures/items/nie/ntk_roasted_pumpkin_seeds"
+    },
+    "ntk_salt": {
+      "textures": "textures/items/nie/ntk_salt"
+    },
+    "ntk_seagrass_stew": {
+      "textures": "textures/items/nie/ntk_seagrass_stew"
+    },
+    "ntk_shepherd_hat": {
+      "textures": "textures/items/nie/ntk_shepherd_hat"
+    },
+    "ntk_soup": {
+      "textures": "textures/items/nie/ntk_soup"
+    },
+    "ntk_staff_of_the_sea": {
+      "textures": "textures/items/nie/ntk_staff_of_the_sea"
+    },
+    "ntk_sweet_berry_cookie": {
+      "textures": "textures/items/nie/ntk_sweet_berry_cookie"
+    },
+    "ntk_sweet_berry_pie": {
+      "textures": "textures/items/nie/ntk_sweet_berry_pie"
+    },
+    "ntk_teleportation_staff": {
+      "textures": "textures/items/nie/ntk_teleportation_staff"
+    },
+    "ntk_totem_of_health_seer": {
+      "textures": "textures/items/nie/ntk_totem_of_health_seer"
+    },
+    "ntk_witch_hat": {
+      "textures": "textures/items/nie/ntk_witch_hat"
+    },
+    "ntk_warped_stew": {
+      "textures": "textures/items/nie/ntk_warped_stew"
+    },
+    "ntk_wooden_club": {
+      "textures": "textures/items/nie/ntk_wooden_club"
+    },
+    
+    "ntk_amethyst_spellweaver_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charged"
+    },
+    "ntk_amethyst_spellweaver_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_uncharged",
+        "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_0",
+        "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_1",
+        "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_2",
+        "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charged"
+      ]
+    },
+    "ntk_amethyst_spellweaver_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_0"
+    },
+    "ntk_amethyst_spellweaver_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_1"
+    },
+    "ntk_amethyst_spellweaver_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_charging_2"
+    },
+    "ntk_amethyst_spellweaver_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_spellweaver_wand_uncharged"
+    },
+    "ntk_amethyst_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_wand_charged"
+    },
+    "ntk_amethyst_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_amethyst_wand_uncharged",
+        "textures/items/nms/wand/ntk_amethyst_wand_charging_0",
+        "textures/items/nms/wand/ntk_amethyst_wand_charging_1",
+        "textures/items/nms/wand/ntk_amethyst_wand_charging_2",
+        "textures/items/nms/wand/ntk_amethyst_wand_charged"
+      ]
+    },
+    "ntk_amethyst_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_wand_charging_0"
+    },
+    "ntk_amethyst_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_wand_charging_1"
+    },
+    "ntk_amethyst_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_wand_charging_2"
+    },
+    "ntk_amethyst_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_amethyst_wand_uncharged"
+    },
+    "ntk_arcane_quill": {
+      "textures": "textures/items/nms/quill/ntk_arcane_quill"
+    },
+    "ntk_diamond_spellweaver_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charged"
+    },
+    "ntk_diamond_spellweaver_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_diamond_spellweaver_wand_uncharged",
+        "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_0",
+        "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_1",
+        "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_2",
+        "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charged"
+      ]
+    },
+    "ntk_diamond_spellweaver_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_0"
+    },
+    "ntk_diamond_spellweaver_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_1"
+    },
+    "ntk_diamond_spellweaver_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_diamond_spellweaver_wand_charging_2"
+    },
+    "ntk_diamond_spellweaver_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_diamond_spellweaver_wand_uncharged"
+    },
+    "ntk_diamond_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_diamond_wand_charged"
+    },
+    "ntk_diamond_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_diamond_wand_uncharged",
+        "textures/items/nms/wand/ntk_diamond_wand_charging_0",
+        "textures/items/nms/wand/ntk_diamond_wand_charging_1",
+        "textures/items/nms/wand/ntk_diamond_wand_charging_2",
+        "textures/items/nms/wand/ntk_diamond_wand_charged"
+      ]
+    },
+    "ntk_diamond_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_diamond_wand_charging_0"
+    },
+    "ntk_diamond_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_diamond_wand_charging_1"
+    },
+    "ntk_diamond_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_diamond_wand_charging_2"
+    },
+    "ntk_diamond_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_diamond_wand_uncharged"
+    },
+    "ntk_earthen_quill": {
+      "textures": "textures/items/nms/quill/ntk_earthen_quill"
+    },
+    "ntk_empty_scroll": {
+      "textures": "textures/items/nms/ntk_empty_scroll"
+    },
+    "ntk_ember_quill": {
+      "textures": "textures/items/nms/quill/ntk_ember_quill"
+    },
+    "ntk_gale_quill": {
+      "textures": "textures/items/nms/quill/ntk_gale_quill"
+    },
+    "ntk_golden_spellweaver_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_golden_spellweaver_wand_charged"
+    },
+    "ntk_golden_spellweaver_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_golden_spellweaver_wand_uncharged",
+        "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_0",
+        "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_1",
+        "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_2",
+        "textures/items/nms/wand/ntk_golden_spellweaver_wand_charged"
+      ]
+    },
+    "ntk_golden_spellweaver_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_0"
+    },
+    "ntk_golden_spellweaver_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_1"
+    },
+    "ntk_golden_spellweaver_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_golden_spellweaver_wand_charging_2"
+    },
+    "ntk_golden_spellweaver_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_golden_spellweaver_wand_uncharged"
+    },
+    "ntk_golden_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_golden_wand_charged"
+    },
+    "ntk_golden_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_golden_wand_uncharged",
+        "textures/items/nms/wand/ntk_golden_wand_charging_0",
+        "textures/items/nms/wand/ntk_golden_wand_charging_1",
+        "textures/items/nms/wand/ntk_golden_wand_charging_2",
+        "textures/items/nms/wand/ntk_golden_wand_charged"
+      ]
+    },
+    "ntk_golden_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_golden_wand_charging_0"
+    },
+    "ntk_golden_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_golden_wand_charging_1"
+    },
+    "ntk_golden_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_golden_wand_charging_2"
+    },
+    "ntk_golden_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_golden_wand_uncharged"
+    },
+    "ntk_guide_book": {
+      "textures": "textures/items/nms/ntk_guide_book"
+    },
+    "ntk_learning_book_of_book_keeping": {
+      "textures": "textures/items/nms/ntk_learning_book_of_book_keeping"
+    },
+    "ntk_learning_book_of_scrollwright": {
+      "textures": "textures/items/nms/ntk_learning_book_of_scrollwright"
+    },
+    "ntk_lush_quill": {
+      "textures": "textures/items/nms/quill/ntk_lush_quill"
+    },
+    "ntk_ominous_quill": {
+      "textures": "textures/items/nms/quill/ntk_ominous_quill"
+    },
+    "ntk_quartz_spellweaver_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charged"
+    },
+    "ntk_quartz_spellweaver_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_quartz_spellweaver_wand_uncharged",
+        "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_0",
+        "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_1",
+        "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_2",
+        "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charged"
+      ]
+    },
+    "ntk_quartz_spellweaver_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_0"
+    },
+    "ntk_quartz_spellweaver_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_1"
+    },
+    "ntk_quartz_spellweaver_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_quartz_spellweaver_wand_charging_2"
+    },
+    "ntk_quartz_spellweaver_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_quartz_spellweaver_wand_uncharged"
+    },
+    "ntk_quartz_wand_charged": {
+      "textures": "textures/items/nms/wand/ntk_quartz_wand_charged"
+    },
+    "ntk_quartz_wand_charging": {
+      "textures": [
+        "textures/items/nms/wand/ntk_quartz_wand_uncharged",
+        "textures/items/nms/wand/ntk_quartz_wand_charging_0",
+        "textures/items/nms/wand/ntk_quartz_wand_charging_1",
+        "textures/items/nms/wand/ntk_quartz_wand_charging_2",
+        "textures/items/nms/wand/ntk_quartz_wand_charged"
+      ]
+    },
+    "ntk_quartz_wand_charging_0": {
+      "textures": "textures/items/nms/wand/ntk_quartz_wand_charging_0"
+    },
+    "ntk_quartz_wand_charging_1": {
+      "textures": "textures/items/nms/wand/ntk_quartz_wand_charging_1"
+    },
+    "ntk_quartz_wand_charging_2": {
+      "textures": "textures/items/nms/wand/ntk_quartz_wand_charging_2"
+    },
+    "ntk_quartz_wand_uncharged": {
+      "textures": "textures/items/nms/wand/ntk_quartz_wand_uncharged"
+    },
+    "ntk_radiant_quill": {
+      "textures": "textures/items/nms/quill/ntk_radiant_quill"
+    },
+    "ntk_scroll_of_acceleration_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_acceleration_1"
+    },
+    "ntk_scroll_of_acceleration_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_acceleration_2"
+    },
+    "ntk_scroll_of_acceleration_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_acceleration_3"
+    },
+    "ntk_scroll_of_berserk_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_berserk_1"
+    },
+    "ntk_scroll_of_berserk_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_berserk_2"
+    },
+    "ntk_scroll_of_berserk_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_berserk_3"
+    },
+    "ntk_scroll_of_cleansing_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_cleansing_1"
+    },
+    "ntk_scroll_of_cleansing_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_cleansing_2"
+    },
+    "ntk_scroll_of_cleansing_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_cleansing_3"
+    },
+    "ntk_scroll_of_clear_sky": {
+      "textures": "textures/items/nms/ntk_scroll_of_clear_sky"
+    },
+    "ntk_scroll_of_converging_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_converging_1"
+    },
+    "ntk_scroll_of_converging_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_converging_2"
+    },
+    "ntk_scroll_of_converging_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_converging_3"
+    },
+    "ntk_scroll_of_displacement_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_displacement_1"
+    },
+    "ntk_scroll_of_displacement_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_displacement_2"
+    },
+    "ntk_scroll_of_displacement_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_displacement_3"
+    },
+    "ntk_scroll_of_earthquake_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_earthquake_1"
+    },
+    "ntk_scroll_of_earthquake_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_earthquake_2"
+    },
+    "ntk_scroll_of_earthquake_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_earthquake_3"
+    },
+    "ntk_scroll_of_field_levitation_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_field_levitation_1"
+    },
+    "ntk_scroll_of_field_levitation_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_field_levitation_2"
+    },
+    "ntk_scroll_of_field_levitation_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_field_levitation_3"
+    },
+    "ntk_scroll_of_fire_blast_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_blast_1"
+    },
+    "ntk_scroll_of_fire_blast_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_blast_2"
+    },
+    "ntk_scroll_of_fire_blast_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_blast_3"
+    },
+    "ntk_scroll_of_fire_protection_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_protection_1"
+    },
+    "ntk_scroll_of_fire_protection_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_protection_2"
+    },
+    "ntk_scroll_of_fire_protection_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_fire_protection_3"
+    },
+    "ntk_scroll_of_flame_burst_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_flame_burst_1"
+    },
+    "ntk_scroll_of_flame_burst_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_flame_burst_2"
+    },
+    "ntk_scroll_of_flame_burst_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_flame_burst_3"
+    },
+    "ntk_scroll_of_flourishing_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_flourishing_1"
+    },
+    "ntk_scroll_of_flourishing_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_flourishing_2"
+    },
+    "ntk_scroll_of_flourishing_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_flourishing_3"
+    },
+    "ntk_scroll_of_hoarding_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_hoarding_1"
+    },
+    "ntk_scroll_of_hoarding_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_hoarding_2"
+    },
+    "ntk_scroll_of_hoarding_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_hoarding_3"
+    },
+    "ntk_scroll_of_homeward_bound": {
+      "textures": "textures/items/nms/ntk_scroll_of_homeward_bound"
+    },
+    "ntk_scroll_of_invisibility_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_invisibility_1"
+    },
+    "ntk_scroll_of_invisibility_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_invisibility_2"
+    },
+    "ntk_scroll_of_invisibility_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_invisibility_3"
+    },
+    "ntk_scroll_of_lethargy_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_lethargy_1"
+    },
+    "ntk_scroll_of_lethargy_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_lethargy_2"
+    },
+    "ntk_scroll_of_lethargy_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_lethargy_3"
+    },
+    "ntk_scroll_of_poison_cloud_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_poison_cloud_1"
+    },
+    "ntk_scroll_of_lightning_bolt_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_lightning_bolt_1"
+    },
+    "ntk_scroll_of_lightning_bolt_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_lightning_bolt_2"
+    },
+    "ntk_scroll_of_lightning_bolt_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_lightning_bolt_3"
+    },
+    "ntk_scroll_of_poison_cloud_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_poison_cloud_2"
+    },
+    "ntk_scroll_of_poison_cloud_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_poison_cloud_3"
+    },
+    "ntk_scroll_of_protection_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_protection_1"
+    },
+    "ntk_scroll_of_protection_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_protection_2"
+    },
+    "ntk_scroll_of_protection_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_protection_3"
+    },
+    "ntk_scroll_of_purification_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_purification_1"
+    },
+    "ntk_scroll_of_purification_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_purification_2"
+    },
+    "ntk_scroll_of_purification_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_purification_3"
+    },
+    "ntk_scroll_of_rain": {
+      "textures": "textures/items/nms/ntk_scroll_of_rain"
+    },
+    "ntk_scroll_of_regeneration_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_regeneration_1"
+    },
+    "ntk_scroll_of_regeneration_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_regeneration_2"
+    },
+    "ntk_scroll_of_regeneration_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_regeneration_3"
+    },
+    "ntk_scroll_of_resurgence_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_resurgence_1"
+    },
+    "ntk_scroll_of_resurgence_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_resurgence_2"
+    },
+    "ntk_scroll_of_resurgence_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_resurgence_3"
+    },
+    "ntk_scroll_of_slowness_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_slowness_1"
+    },
+    "ntk_scroll_of_slowness_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_slowness_2"
+    },
+    "ntk_scroll_of_slowness_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_slowness_3"
+    },
+    "ntk_scroll_of_strength_1": {
+      "textures": "textures/items/nms/ntk_scroll_of_strength_1"
+    },
+    "ntk_scroll_of_strength_2": {
+      "textures": "textures/items/nms/ntk_scroll_of_strength_2"
+    },
+    "ntk_scroll_of_strength_3": {
+      "textures": "textures/items/nms/ntk_scroll_of_strength_3"
+    },
+    "ntk_scroll_of_thunderstorm": {
+      "textures": "textures/items/nms/ntk_scroll_of_thunderstorm"
+    },
+    "ntk_scroll_of_weaving_webs": {
+      "textures": "textures/items/nms/ntk_scroll_of_weaving_webs"
+    },
+    "ntk_sealed_virtuous_flying_book": {
+      "textures": "textures/items/nms/ntk_sealed_virtuous_flying_book"
+    },
+    "ntk_soul_quill": {
+      "textures": "textures/items/nms/quill/ntk_soul_quill"
+    },
+    "ntk_spawn_egg_book_keeper": {
+      "textures": "textures/items/nms/spawn_egg/ntk_spawn_egg_book_keeper"
+    },
+    "ntk_spawn_egg_scrollwright": {
+      "textures": "textures/items/nms/spawn_egg/ntk_spawn_egg_scrollwright"
+    },
+    "ntk_spawn_egg_virtuous_flying_book": {
+      "textures": "textures/items/nms/spawn_egg/ntk_spawn_egg_virtuous_flying_book"
+    },
+    "ntk_summoning_scroll_of_bogged": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_bogged"
+    },
+    "ntk_summoning_scroll_of_iron_golem": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_iron_golem"
+    },
+    "ntk_summoning_scroll_of_magma_cube": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_magma_cube"
+    },
+    "ntk_summoning_scroll_of_parched": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_parched"
+    },
+    "ntk_summoning_scroll_of_skeleton": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_skeleton"
+    },
+    "ntk_summoning_scroll_of_slime": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_slime"
+    },
+    "ntk_summoning_scroll_of_snow_golem": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_snow_golem"
+    },
+    "ntk_summoning_scroll_of_stray": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_stray"
+    },
+    "ntk_summoning_scroll_of_sulfur_cube": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_sulfur_cube"
+    },
+    "ntk_summoning_scroll_of_wither_skeleton": {
+      "textures": "textures/items/nms/ntk_summoning_scroll_of_wither_skeleton"
+    },
+    "ntk_unknown_scroll": {
+      "textures": "textures/items/nms/ntk_unknown_scroll"
+    },
+    "ntk_void_quill": {
+      "textures": "textures/items/nms/quill/ntk_void_quill"
+    },
+    "ntk_wild_quill": {
+      "textures": "textures/items/nms/quill/ntk_wild_quill"
+    },
+    
+    "ntk_bat_wing": {
+      "textures": "textures/items/nm/ntk_bat_wing"
+    },
+    "ntk_black_feather": {
+      "textures": "textures/items/nm/ntk_black_feather"
+    },
+    "ntk_black_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_black_jellyfish_polyp"
+    },
+    "ntk_black_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_black_jellyfish_slime"
+    },
+    "ntk_blue_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_blue_jellyfish_polyp"
+    },
+    "ntk_blue_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_blue_jellyfish_slime"
+    },
+    "ntk_bone_dagger": {
+      "textures": "textures/items/nm/ntk_bone_dagger"
+    },
+    "ntk_book_of_curses": {
+      "textures": "textures/items/nm/ntk_book_of_curses"
+    },
+    "ntk_bottle_of_plankton": {
+      "textures": "textures/items/nm/ntk_bottle_of_plankton"
+    },
+    "ntk_brown_feather": {
+      "textures": "textures/items/nm/ntk_brown_feather"
+    },
+    "ntk_brown_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_brown_jellyfish_polyp"
+    },
+    "ntk_brown_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_brown_jellyfish_slime"
+    },
+    "ntk_bucket_of_jellyfish": {
+      "textures": "textures/items/nm/ntk_bucket_of_jellyfish"
+    },
+    "ntk_bucket_of_prismarine_clam": {
+      "textures": "textures/items/nm/ntk_bucket_of_prismarine_clam"
+    },
+    "ntk_chorus_jelly": {
+      "textures": "textures/items/nm/ntk_chorus_jelly"
+    },
+    "ntk_cooked_arthropod_meat": {
+      "textures": "textures/items/nm/ntk_cooked_arthropod_meat"
+    },
+    "ntk_cooked_clurve_meat": {
+      "textures": "textures/items/nm/ntk_cooked_clurve_meat"
+    },
+    "ntk_cooked_lurknash_meat": {
+      "textures": "textures/items/nm/ntk_cooked_lurknash_meat"
+    },
+    "ntk_cooked_moa": {
+      "textures": "textures/items/nm/ntk_cooked_moa"
+    },
+    "ntk_cooked_squirrel": {
+      "textures": "textures/items/nm/ntk_cooked_squirrel"
+    },
+    "ntk_cursed_eye": {
+      "textures": "textures/items/nm/ntk_cursed_eye"
+    },
+    "ntk_cyan_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_cyan_jellyfish_polyp"
+    },
+    "ntk_cyan_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_cyan_jellyfish_slime"
+    },
+    "ntk_fang": {
+      "textures": "textures/items/nm/ntk_fang"
+    },
+    "ntk_fire_feather": {
+      "textures": "textures/items/nm/ntk_fire_feather"
+    },
+    "ntk_firebird_egg": {
+      "textures": "textures/items/nm/ntk_firebird_egg"
+    },
+    "ntk_golden_feather": {
+      "textures": "textures/items/nm/ntk_golden_feather"
+    },
+    "ntk_gray_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_gray_jellyfish_polyp"
+    },
+    "ntk_gray_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_gray_jellyfish_slime"
+    },
+    "ntk_green_feather": {
+      "textures": "textures/items/nm/ntk_green_feather"
+    },
+    "ntk_green_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_green_jellyfish_polyp"
+    },
+    "ntk_green_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_green_jellyfish_slime"
+    },
+    "ntk_hummingbird_egg": {
+      "textures": "textures/items/nm/ntk_hummingbird_egg"
+    },
+    "ntk_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_jellyfish_polyp"
+    },
+    "ntk_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_jellyfish_slime"
+    },
+    "ntk_large_fried_egg": {
+      "textures": "textures/items/nm/ntk_large_fried_egg"
+    },
+    "ntk_light_blue_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_light_blue_jellyfish_polyp"
+    },
+    "ntk_light_blue_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_light_blue_jellyfish_slime"
+    },
+    "ntk_light_gray_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_light_gray_jellyfish_polyp"
+    },
+    "ntk_light_gray_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_light_gray_jellyfish_slime"
+    },
+    "ntk_lime_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_lime_jellyfish_polyp"
+    },
+    "ntk_lime_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_lime_jellyfish_slime"
+    },
+    "ntk_magenta_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_magenta_jellyfish_polyp"
+    },
+    "ntk_magenta_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_magenta_jellyfish_slime"
+    },
+    "ntk_moa_egg": {
+      "textures": "textures/items/nm/ntk_moa_egg"
+    },
+    "ntk_mud_ball": {
+      "textures": "textures/items/nm/ntk_mud_ball"
+    },
+    "ntk_mud_brick": {
+      "textures": "textures/items/nm/ntk_mud_brick"
+    },
+    "ntk_orange_feather": {
+      "textures": "textures/items/nm/ntk_orange_feather"
+    },
+    "ntk_orange_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_orange_jellyfish_polyp"
+    },
+    "ntk_orange_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_orange_jellyfish_slime"
+    },
+    "ntk_pink_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_pink_jellyfish_polyp"
+    },
+    "ntk_pink_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_pink_jellyfish_slime"
+    },
+    "ntk_purple_feather": {
+      "textures": "textures/items/nm/ntk_purple_feather"
+    },
+    "ntk_purple_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_purple_jellyfish_polyp"
+    },
+    "ntk_purple_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_purple_jellyfish_slime"
+    },
+    "ntk_raven_egg": {
+      "textures": "textures/items/nm/ntk_raven_egg"
+    },
+    "ntk_raw_arthropod_meat": {
+      "textures": "textures/items/nm/ntk_raw_arthropod_meat"
+    },
+    "ntk_raw_clurve_meat": {
+      "textures": "textures/items/nm/ntk_raw_clurve_meat"
+    },
+    "ntk_raw_lurknash_meat": {
+      "textures": "textures/items/nm/ntk_raw_lurknash_meat"
+    },
+    "ntk_raw_moa": {
+      "textures": "textures/items/nm/ntk_raw_moa"
+    },
+    "ntk_raw_squirrel": {
+      "textures": "textures/items/nm/ntk_raw_squirrel"
+    },
+    "ntk_red_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_red_jellyfish_polyp"
+    },
+    "ntk_red_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_red_jellyfish_slime"
+    },
+    "ntk_scorpion_gauntlet": {
+      "textures": "textures/items/nm/ntk_scorpion_gauntlet"
+    },
+    "ntk_scorpion_telson": {
+      "textures": "textures/items/nm/ntk_scorpion_telson"
+    },
+    "ntk_sealed_cursed_flying_book": {
+      "textures": "textures/items/nm/ntk_sealed_cursed_flying_book"
+    },
+    "ntk_sealed_enchanted_flying_book": {
+      "textures": "textures/items/nm/ntk_sealed_enchanted_flying_book"
+    },
+    "ntk_sealed_flying_book": {
+      "textures": "textures/items/nm/ntk_sealed_flying_book"
+    },
+    "ntk_sealing_bookmark": {
+      "textures": "textures/items/nm/ntk_sealing_bookmark"
+    },
+    "ntk_soul_fire_feather": {
+      "textures": "textures/items/nm/ntk_soul_fire_feather"
+    },
+    "ntk_soul_firebird_egg": {
+      "textures": "textures/items/nm/ntk_soul_firebird_egg"
+    },
+    "ntk_sparrow_egg": {
+      "textures": "textures/items/nm/ntk_sparrow_egg"
+    },
+    "ntk_spawn_egg_book_curserer": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_book_curserer"
+    },
+    "ntk_spawn_egg_brown_mushling": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_brown_mushling"
+    },
+    "ntk_spawn_egg_cave_dweller": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cave_dweller"
+    },
+    "ntk_spawn_egg_cave_wolf": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cave_wolf"
+    },
+    "ntk_spawn_egg_clurve": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_clurve"
+    },
+    "ntk_spawn_egg_cobblestone_golem": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cobblestone_golem"
+    },
+    "ntk_spawn_egg_crimson_mushling": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_crimson_mushling"
+    },
+    "ntk_spawn_egg_cursed_dire_bat": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cursed_dire_bat"
+    },
+    "ntk_spawn_egg_cursed_flying_book": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cursed_flying_book"
+    },
+    "ntk_spawn_egg_cursed_scarecrow": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_cursed_scarecrow"
+    },
+    "ntk_spawn_egg_deepslate_golem": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_deepslate_golem"
+    },
+    "ntk_spawn_egg_dire_bat": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_dire_bat"
+    },
+    "ntk_spawn_egg_enchanted_flying_book": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_enchanted_flying_book"
+    },
+    "ntk_spawn_egg_firebird": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_firebird"
+    },
+    "ntk_spawn_egg_firefly": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_firefly"
+    },
+    "ntk_spawn_egg_flying_book": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_flying_book"
+    },
+    "ntk_spawn_egg_forest_wisp": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_forest_wisp"
+    },
+    "ntk_spawn_egg_giant_moa": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_giant_moa"
+    },
+    "ntk_spawn_egg_hummingbird": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_hummingbird"
+    },
+    "ntk_spawn_egg_jellyfish": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_jellyfish"
+    },
+    "ntk_spawn_egg_lurknash": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_lurknash"
+    },
+    "ntk_spawn_egg_magma_golem": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_magma_golem"
+    },
+    "ntk_spawn_egg_mossy_cobblestone_golem": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_mossy_cobblestone_golem"
+    },
+    "ntk_spawn_egg_mud_soil_cube": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_mud_soil_cube"
+    },
+    "ntk_spawn_egg_nether_soul_wisp": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_nether_soul_wisp"
+    },
+    "ntk_spawn_egg_nether_wisp": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_nether_wisp"
+    },
+    "ntk_spawn_egg_oak_tree_guardian": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_oak_tree_guardian"
+    },
+    "ntk_spawn_egg_opossum": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_opossum"
+    },
+    "ntk_spawn_egg_pale_oak_troot": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_pale_oak_troot"
+    },
+    "ntk_spawn_egg_prismarine_clam": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_prismarine_clam"
+    },
+    "ntk_spawn_egg_raven": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_raven"
+    },
+    "ntk_spawn_egg_red_mushling": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_red_mushling"
+    },
+    "ntk_spawn_egg_sand_cube": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_sand_cube"
+    },
+    "ntk_spawn_egg_scarecrow": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_scarecrow"
+    },
+    "ntk_spawn_egg_scorpion_badland": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_scorpion_badland"
+    },
+    "ntk_spawn_egg_scorpion_cave": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_scorpion_cave"
+    },
+    "ntk_spawn_egg_scorpion_desert": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_scorpion_desert"
+    },
+    "ntk_spawn_egg_scorpion": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_scorpion"
+    },
+    "ntk_spawn_egg_sculk_walker": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_sculk_walker"
+    },
+    "ntk_spawn_egg_skeleton_footman": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_skeleton_footman"
+    },
+    "ntk_spawn_egg_skeleton_golden_swordman": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_skeleton_golden_swordman"
+    },
+    "ntk_spawn_egg_skeleton_guard": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_skeleton_guard"
+    },
+    "ntk_spawn_egg_skeleton_swordman": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_skeleton_swordman"
+    },
+    "ntk_spawn_egg_snow_cube": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_snow_cube"
+    },
+    "ntk_spawn_egg_soul_firebird": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_soul_firebird"
+    },
+    "ntk_spawn_egg_sparrow": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_sparrow"
+    },
+    "ntk_spawn_egg_squirrel": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_squirrel"
+    },
+    "ntk_spawn_egg_voidlet": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_voidlet"
+    },
+    "ntk_spawn_egg_wandering_collector": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_wandering_collector"
+    },
+    "ntk_spawn_egg_warped_mushling": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_warped_mushling"
+    },
+    "ntk_spawn_egg_warthog": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_warthog"
+    },
+    "ntk_spawn_egg_wraith": {
+      "textures": "textures/items/nm/spawn_eggs/ntk_spawn_egg_wraith"
+    },
+    "ntk_squirrel_hide": {
+      "textures": "textures/items/nm/ntk_squirrel_hide"
+    },
+    "ntk_white_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_white_jellyfish_polyp"
+    },
+    "ntk_white_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_white_jellyfish_slime"
+    },
+    "ntk_yellow_jellyfish_polyp": {
+      "textures": "textures/items/nm/jellyfish_polyp/ntk_yellow_jellyfish_polyp"
+    },
+    "ntk_yellow_jellyfish_slime": {
+      "textures": "textures/items/nm/jellyfish_slime/ntk_yellow_jellyfish_slime"
+    },
+    
+    "ntk_cooked_rat": {
+      "textures": "textures/items/nmd/ntk_cooked_rat"
+    },
+    "ntk_curserer_staff": {
+      "textures": "textures/items/nmd/ntk_curserer_staff"
+    },
+    "ntk_piglin_fire_staff": {
+      "textures": "textures/items/nmd/ntk_piglin_fire_staff"
+    },
+    "ntk_piglin_war_hammer": {
+      "textures": "textures/items/nmd/ntk_piglin_war_hammer"
+    },
+    "ntk_potion_of_brute": {
+      "textures": "textures/items/nmd/ntk_potion_of_brute"
+    },
+    "ntk_raw_rat": {
+      "textures": "textures/items/nmd/ntk_raw_rat"
+    },
+    "ntk_rotten_brute_flesh": {
+      "textures": "textures/items/nmd/ntk_rotten_brute_flesh"
+    },
+    "ntk_spawn_egg_brute_zombie": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_brute_zombie"
+    },
+    "ntk_spawn_egg_cobbled_deepslate_golem": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_cobbled_deepslate_golem"
+    },
+    "ntk_spawn_egg_cursed_rat": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_cursed_rat"
+    },
+    "ntk_spawn_egg_elder_golem": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_elder_golem"
+    },
+    "ntk_spawn_egg_giant_rat": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_giant_rat"
+    },
+    "ntk_spawn_egg_piglin_chief": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_piglin_chief"
+    },
+    "ntk_spawn_egg_rat": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_rat"
+    },
+    "ntk_spawn_egg_rat_curserer": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_rat_curserer"
+    },
+    "ntk_spawn_egg_shulkore": {
+      "textures": "textures/items/nmd/spawn_egg/ntk_spawn_egg_shulkore"
+    },
+    
+    "ntk_spawn_egg_skeleton_miner": {
+      "textures": "textures/items/nmm/ntk_spawn_egg_skeleton_miner"
+    }
+  }
+}

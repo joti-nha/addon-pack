@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.unbound_arm.projectile": {
+			"loop": true,
+			"bones": {
+				"gauntletR": {
+					"position": [
+						0,
+						"1+math.cos(query.anim_time*200)*2",
+						0
+					]
+				},
+				"indexR": {
+					"rotation": [
+						0,
+						0,
+						-75
+					]
+				},
+				"fingersR": {
+					"rotation": [
+						0,
+						0,
+						-75
+					]
+				},
+				"thumbR": {
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"position": [
+						0.5,
+						0,
+						-1
+					]
+				}
+			}
+		},
+		"animation.unbound_arm_projectile.throw": {
+			"loop": true,
+			"bones": {
+				"projectile": {
+					"rotation": [
+						"variable.shake_power-query.target_x_rotation",
+						"-query.body_y_rotation+query.target_y_rotation",
+						0
+					]
+				}
+			}
+		}
+	}
+}

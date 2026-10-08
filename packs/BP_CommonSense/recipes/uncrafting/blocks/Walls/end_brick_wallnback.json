@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:end_brick_wallnback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:end_stone_brick_wall"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:end_bricks",
+				"count": 1
+			}
+		]
+	}
+}

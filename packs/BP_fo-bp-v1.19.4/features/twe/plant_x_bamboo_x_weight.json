@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_bamboo_x_weight"
+    },
+    "features": [
+      [ "minecraft:bamboo_feature", 100 ],
+      [ "minecraft:bamboo_feature", 100 ]
+    ]
+  }
+}

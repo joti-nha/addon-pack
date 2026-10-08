@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_stone_tiles_x_stone_tile_slab"
+    },
+    "priority": 4,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:stone_tiles"
+      }
+    ],
+    "result": {
+      "item": "ntk:stone_tile_slab",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "ntk:stone_tiles"
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:block": {
+        "description": {
+            "identifier": "otg:placed_backpack_iron_creeper",
+            "menu_category": {
+                "category": "none"
+            },
+            "states": {
+                "otg:facing": [
+                    "north",
+                    "east",
+                    "south",
+                    "west"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:display_name": "tile.otg:placed_backpack.name",
+            "minecraft:geometry": "geometry.otg_placed_backpack_creeper_north",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "placed_backpack_iron_creeper",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:collision_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    12,
+                    12
+                ]
+            },
+            "minecraft:selection_box": {
+                "origin": [
+                    -6,
+                    0,
+                    -6
+                ],
+                "size": [
+                    12,
+                    12,
+                    12
+                ]
+            },
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 0.6
+            },
+            "minecraft:destructible_by_explosion": false,
+            "minecraft:map_color": "#6b4a2f"
+        },
+        "permutations": [
+            {
+                "condition": "query.block_state('otg:facing') == 'north'",
+                "components": {
+                    "minecraft:geometry": "geometry.otg_placed_backpack_creeper_north"
+                }
+            },
+            {
+                "condition": "query.block_state('otg:facing') == 'east'",
+                "components": {
+                    "minecraft:geometry": "geometry.otg_placed_backpack_creeper_east"
+                }
+            },
+            {
+                "condition": "query.block_state('otg:facing') == 'south'",
+                "components": {
+                    "minecraft:geometry": "geometry.otg_placed_backpack_creeper_south"
+                }
+            },
+            {
+                "condition": "query.block_state('otg:facing') == 'west'",
+                "components": {
+                    "minecraft:geometry": "geometry.otg_placed_backpack_creeper_west"
+                }
+            }
+        ]
+    }
+}

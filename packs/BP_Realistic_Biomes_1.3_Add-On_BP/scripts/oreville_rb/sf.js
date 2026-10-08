@@ -1,0 +1,1 @@
+export function luiety(t){return{rawtext:[{translate:t}]}}

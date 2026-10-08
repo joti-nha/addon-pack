@@ -1,0 +1,37 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:plant_x_wither_rose",
+      "places_feature": "ntk:twe/plant_x_wither_rose_x_singleblock"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "soulsand_valley"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 15.0,
+      "scatter_chance": 100.0,
+      "x": 0,
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 0, 120 ]
+      },
+      "z": 0
+    }
+  }
+}

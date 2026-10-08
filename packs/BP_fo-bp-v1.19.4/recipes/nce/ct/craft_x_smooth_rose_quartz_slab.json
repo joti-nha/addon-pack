@@ -1,0 +1,27 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_smooth_rose_quartz_slab"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"SSS"
+		],
+		"key": {
+			"S": {
+				"item": "ntk:smooth_rose_quartz_block"
+			}
+		},
+		"result": {
+			"item": "ntk:smooth_rose_quartz_slab",
+			"count": 6
+		},
+    "unlock": [
+      {
+        "item": "ntk:smooth_rose_quartz_block"
+      }
+    ]
+	}
+}

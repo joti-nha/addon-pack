@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_charcoal"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "block_of_charcoal",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:charcoal"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_charcoal",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_piglin_crate_key",
+		"normal": "ntk_piglin_crate_key_height",
+		"metalness_emissive_roughness": "ntk_piglin_crate_key_mer"
+	}
+}

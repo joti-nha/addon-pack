@@ -1,0 +1,331 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:putrefied",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"destroys",
+					"tamed"
+				]
+			},
+			"animations": {
+				"destroys": "controller.animation.plague.destroys",
+				"tamed": "animation.unboned.despawn_tame"
+			}
+		},
+		"component_groups": {
+			"dk:putrefied_mode_spawn_enemy": {
+				"minecraft:is_sheared": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.72,
+					"time_down_event": {
+						"event": "dk:putrefied_event_mode_start_enemy"
+					}
+				}
+			},
+			"dk:putrefied_mode_spawn_ally": {
+				"minecraft:is_sheared": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.72,
+					"time_down_event": {
+						"event": "dk:putrefied_event_mode_start_ally"
+					}
+				}
+			},
+			"dk:putrefied_mode_enemy": {
+				"minecraft:loot": {
+					"table": "loot_tables/entities/outcast_corrupted.json"
+				},
+				"minecraft:type_family": {
+					"family": [
+						"monster",
+						"stinky",
+						"putrefied",
+						"dk"
+					]
+				},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"family_types": [
+						"stinky"
+					],
+					"seats": [
+						{
+							"position": [
+								0,
+								1.85,
+								0.15
+							]
+						}
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 6,
+					"reselect_targets": true,
+					"must_see": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "stinky",
+								"operator": "!="
+							}
+						}
+					],
+					"within_radius": 40
+				},
+				"minecraft:behavior.mount_pathing": {
+					"priority": 1,
+					"speed_multiplier": 1.5,
+					"target_dist": 0,
+					"track_target": true
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"with_damage_fatal": true
+								},
+								"event": "dk:putrefied_event_mode_death"
+							},
+							"deals_damage": true
+						}
+					]
+				}
+			},
+			"dk:putrefied_mode_ally": {
+				"minecraft:is_tamed": {},
+				"minecraft:is_saddled": {},
+				"minecraft:type_family": {
+					"family": [
+						"monster",
+						"player",
+						"dk"
+					]
+				},
+				"minecraft:behavior.tempt": {
+					"priority": 1,
+					"speed_multiplier": 1.25,
+					"items": [
+						"dk:sinners_rod"
+					]
+				},
+				"minecraft:input_ground_controlled": {},
+				"minecraft:can_power_jump": {},
+				"minecraft:behavior.player_ride_tamed": {},
+				"minecraft:horse.jump_strength": {
+					"value": 1
+				},
+				"minecraft:rideable": {
+					"seat_count": 1,
+					"family_types": [
+						"player"
+					],
+					"seats": [
+						{
+							"position": [
+								0,
+								1.85,
+								0.2
+							]
+						}
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"reselect_targets": true,
+					"must_see": true,
+					"entity_types": [
+						{
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player",
+								"operator": "!="
+							}
+						}
+					],
+					"within_radius": 40
+				}
+			},
+			"dk:putrefied_mode_despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:scale": {
+				"value": 1.5
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?8+(query.equipment_count*math.random(6,8)):0"
+			},
+			"minecraft:health": {
+				"value": 80,
+				"max": 80
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1
+			},
+			"minecraft:attack": {
+				"damage": 7,
+				"effect_name": "wither",
+				"effect_duration": 15
+			},
+			"minecraft:behavior.melee_attack": {
+				"priority": 6,
+				"reach_multiplier": 2.5,
+				"cooldown_time": 0.5,
+				"track_target": true
+			},
+			"minecraft:follow_range": {
+				"value": 40,
+				"max": 40
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 7,
+				"speed_multiplier": 1.2
+			},
+			"minecraft:collision_box": {
+				"width": 0.7,
+				"height": 2.4
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": true
+			},
+			"minecraft:movement": {
+				"value": 0.3
+			},
+			"minecraft:can_climb": {},
+			"minecraft:jump.static": {},
+			"minecraft:behavior.float": {
+				"priority": 20
+			},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_float": true,
+				"avoid_water": false,
+				"avoid_damage_blocks": false
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 10
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7
+			},
+			"minecraft:behavior.look_at_entity": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7,
+				"filters": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "mob"
+				}
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			}
+		},
+		"events": {
+			"dk:putrefied_event_mode_ally": {
+				"add": {
+					"component_groups": [
+						"dk:putrefied_mode_spawn_ally"
+					]
+				}
+			},
+			"dk:putrefied_event_mode_enemy": {
+				"add": {
+					"component_groups": [
+						"dk:putrefied_mode_spawn_enemy"
+					]
+				}
+			},
+			"dk:putrefied_event_mode_start_ally": {
+				"add": {
+					"component_groups": [
+						"dk:putrefied_mode_ally"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:putrefied_mode_spawn_ally"
+					]
+				}
+			},
+			"dk:putrefied_event_mode_start_enemy": {
+				"add": {
+					"component_groups": [
+						"dk:putrefied_mode_enemy"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:putrefied_mode_spawn_enemy"
+					]
+				}
+			},
+			"dk:putrefied_event_mode_death": {
+				"queue_command": {
+					"command": [
+						"event entity @e[type=dk:stinky_medical,c=1,r=3] dk:stinky_medical_event_mode_add_curse"
+					]
+				}
+			},
+			"dk:all_event_mode_despawn": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "self",
+							"operator": "==",
+							"value": "putrefied"
+						},
+						"add": {
+							"component_groups": [
+								"dk:putrefied_mode_despawn"
+							]
+						},
+						"queue_command": {
+							"command": [
+								"event entity @e[type=dk:stinky_medical,c=1,r=7.5] dk:stinky_medical_event_mode_pacifist"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "is_family",
+							"subject": "self",
+							"operator": "==",
+							"value": "player"
+						},
+						"add": {
+							"component_groups": [
+								"dk:putrefied_mode_despawn"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

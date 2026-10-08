@@ -1,0 +1,42 @@
+{
+  "format_version": "1.21.110",
+  "minecraft:client_biome": {
+    "description": {
+      "identifier": "ntk:mossy_forest"
+    },
+    "components": {
+      "minecraft:fog_appearance": {
+        "fog_identifier": "ntk:fog_mossy_forest"
+      },
+      "minecraft:sky_color": {
+        "sky_color": "#8ca62f"
+      },
+      "minecraft:dry_foliage_color": {
+        "color": "#7B5334"
+      },
+      "minecraft:foliage_appearance": {
+        "color": "#5E7818"
+      },
+      "minecraft:grass_appearance": {
+        "color": "#5E7818",
+        "grass_is_shaded": false
+      },
+      "minecraft:water_appearance": {
+        "surface_color": "#5E7818",
+        "surface_opacity": 0.9
+      },
+      "minecraft:atmosphere_identifier": {
+        "atmosphere_identifier": "minecraft:swampland_atmospherics"
+      },
+      "minecraft:color_grading_identifier": {
+        "color_grading_identifier": "minecraft:swampland_color_grading"
+      },
+      "minecraft:lighting_identifier": {
+        "lighting_identifier": "minecraft:swampland_lighting"
+      },
+      "minecraft:water_identifier": {
+        "water_identifier": "minecraft:default_water"
+      }
+    }
+  }
+}

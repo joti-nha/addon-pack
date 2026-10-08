@@ -1,0 +1,63 @@
+{
+	"format_version": "1.16.200",
+	"minecraft:block": {
+		"description": {
+			"identifier": "dk:meteorite"
+		},
+		"components": {
+			"minecraft:destroy_time": 5,
+			"minecraft:loot": "loot_tables/blocks/meteorite.json",
+			"minecraft:block_light_absorption": 0,
+			"minecraft:block_light_emission": 0.8,
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 10000
+			},
+			"minecraft:on_step_on": {
+				"target": "self",
+				"event": "dk:damage_block"
+			},
+			"minecraft:on_step_off": {
+				"target": "self",
+				"event": "dk:damage_block"
+			},
+			"minecraft:on_player_destroyed": {
+				"target": "self",
+				"event": "dk:block_destroyed"
+			},
+			"minecraft:map_color": "#292626"
+		},
+		"events": {
+			"dk:damage_block": {
+				"queue_command": {
+					"command": "/damage @e[r=2,c=1] 1 fire_tick"
+				}
+			},
+			"dk:block_destroyed": {
+				"randomize": [
+					{
+						"weight": 20,
+						"queue_command": {
+							"command": "fill ~~~ ~~~ minecraft:lava"
+						}
+					},
+					{
+						"weight": 80,
+						"queue_command": {
+							"command": [
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb",
+								"summon xp_orb"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

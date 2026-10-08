@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_stone_tiles"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:stone_tiles"
+    },
+    "output": {
+      "item": "ntk:cracked_stone_tiles",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:stone_tiles"
+      }
+    ]
+  }
+}

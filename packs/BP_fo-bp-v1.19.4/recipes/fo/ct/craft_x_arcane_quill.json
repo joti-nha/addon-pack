@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_arcane_quill"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "arcane_quill",
+    "ingredients": [
+      {
+        "item": "ntk:blue_feather"
+      },
+      {
+        "item": "ntk:lapis_lazuli_powder"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      }
+    ],
+    "result": {
+      "item": "ntk:arcane_quill"
+    },
+    "unlock": [
+      {
+        "item": "ntk:blue_feather"
+      },
+      {
+        "item": "ntk:lapis_lazuli_powder"
+      },
+      {
+        "item": "minecraft:glow_ink_sac"
+      }
+    ]
+  }
+}

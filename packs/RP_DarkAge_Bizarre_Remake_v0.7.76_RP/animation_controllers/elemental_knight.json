@@ -1,0 +1,210 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.elemental_knight.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"storm": "query.health<=60"
+						},
+						{
+							"guard": "query.variant==1"
+						}
+					],
+					"transitions": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"agony": "query.variant==2"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"agony": {
+					"animations": [
+						{
+							"storm": "query.health<=60"
+						},
+						{
+							"agony": "query.variant==2"
+						}
+					],
+					"transitions": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"default": "query.variant==1"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"static": {
+					"animations": [
+						{
+							"static": "query.variant==3"
+						},
+						{
+							"storm": "query.health<=60"
+						},
+						{
+							"move": "!(query.is_delayed_attacking&&query.is_charged&&query.mark_variant==3&&query.mark_variant==4)"
+						},
+						{
+							"move_arms": "!(query.is_delayed_attacking&&query.is_charged&&query.mark_variant==3&&query.mark_variant==4)"
+						},
+						{
+							"ride": "query.is_riding&&query.health>=60"
+						},
+						{
+							"defense": "query.mark_variant==3"
+						},
+						{
+							"defense_attack": "query.mark_variant==4"
+						},
+						{
+							"attack_storm": "query.is_riding&&query.health<=60"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==1"
+						},
+						{
+							"agony": "query.variant==2"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.elemental_knight.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"attack_two": "query.mark_variant==2&&query.is_delayed_attacking"
+						},
+						{
+							"rings_of_light": "query.is_charged&&query.mark_variant==6"
+						},
+						{
+							"storm": "query.is_charged&&query.mark_variant==5"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						},
+						{
+							"rings_of_light": "query.is_charged&&query.mark_variant==6"
+						},
+						{
+							"storm": "query.is_charged&&query.mark_variant==5"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						},
+						{
+							"rings_of_light": "query.is_charged&&query.mark_variant==6"
+						},
+						{
+							"storm": "query.is_charged&&query.mark_variant==5"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				},
+				"rings_of_light": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						},
+						{
+							"storm": "query.is_charged&&query.mark_variant==5"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"rings_of_light"
+					]
+				},
+				"storm": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"animations": [
+						"prepare_storm"
+					]
+				}
+			}
+		},
+		"controller.animation.elemental_knight.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "mnra_cata:plasm_dagger",
+					"weight": 1
+				}
+			]
+		}
+	]
+}

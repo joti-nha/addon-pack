@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_witch_hat",
+    "heightmap": "ntk_witch_hat_height",
+    "metalness_emissive_roughness": "ntk_witch_hat_mer"
+  }
+}

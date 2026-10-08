@@ -1,0 +1,1 @@
+execute as @a run tag @s add autototem

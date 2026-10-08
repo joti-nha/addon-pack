@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.ntk_pale_mossheep.baby_remodel": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [ 0.0, 4.0, 4.0 ],
+					"scale": 2.0
+				}
+			}
+		},
+		"animation.entity.ntk_pale_mossheep.grazing": {
+			"animation_length": 2.0,
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": {
+						"0": [ 0.0, 0.0, 0.0 ],
+						"0.2": [ 0.0, -9.0, 0.0 ],
+						"1.8": [ 0.0, -9.0, 0.0 ],
+						"2": [ 0.0, 0.0, 0.0 ]
+					},
+					"rotation": {
+						"0.2": {
+							"post": [ "180.0 * (0.2 + 0.07 * math.sin(query.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ],
+							"pre": [ 36.0, 0.0, 0.0 ]
+						},
+						"1.8": {
+							"post": [ 36.0, 0.0, 0.0 ],
+							"pre": [ "180.0 * (0.2 + 0.07 * math.sin(query.key_frame_lerp_time * 1644.39))", 0.0, 0.0 ]
+						}
+					}
+				}
+			}
+		},
+		"animation.entity.ntk_pale_mossheep.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+					  "query.target_x_rotation - this",
+					  "query.target_y_rotation - this",
+					  0.0
+					]
+				}
+			}
+		},
+		"animation.entity.ntk_pale_mossheep.walking": {
+			"anim_time_update": "query.modified_distance_moved",
+			"loop": true,
+			"bones": {
+				"leg_back_right": {
+					"rotation": [ "math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ]
+				},
+				"leg_back_left": {
+					"rotation": [ "math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ]
+				},
+				"leg_front_right": {
+					"rotation": [ "math.cos(query.anim_time * 38.17) * -80.0", 0.0, 0.0 ]
+				},
+				"leg_front_left": {
+					"rotation": [ "math.cos(query.anim_time * 38.17) *  80.0", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

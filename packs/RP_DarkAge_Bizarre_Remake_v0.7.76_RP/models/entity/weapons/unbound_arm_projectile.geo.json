@@ -1,0 +1,500 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unbound_arm_projectile",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "projectile",
+					"parent": "root",
+					"pivot": [
+						0,
+						8,
+						-6
+					]
+				},
+				{
+					"name": "waist",
+					"parent": "projectile",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						15,
+						1
+					],
+					"locators": {
+						"lead_hold": [
+							-6,
+							15,
+							1
+						]
+					}
+				},
+				{
+					"name": "gauntletR",
+					"parent": "rightItem",
+					"pivot": [
+						0,
+						6,
+						2
+					],
+					"rotation": [
+						-90,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3.08,
+								4.115,
+								-1.08
+							],
+							"size": [
+								6.16,
+								4.62,
+								6.16
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										89,
+										86
+									],
+									"uv_size": [
+										-8,
+										6
+									]
+								},
+								"east": {
+									"uv": [
+										97,
+										86
+									],
+									"uv_size": [
+										-8,
+										6
+									]
+								},
+								"south": {
+									"uv": [
+										105,
+										86
+									],
+									"uv_size": [
+										-8,
+										6
+									]
+								},
+								"west": {
+									"uv": [
+										81,
+										86
+									],
+									"uv_size": [
+										-8,
+										6
+									]
+								},
+								"up": {
+									"uv": [
+										89,
+										78
+									],
+									"uv_size": [
+										-8,
+										8
+									]
+								},
+								"down": {
+									"uv": [
+										97,
+										86
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						},
+						{
+							"origin": [
+								-2.31,
+								1.035,
+								-0.31
+							],
+							"size": [
+								4.62,
+								3.08,
+								4.62
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										85,
+										98
+									],
+									"uv_size": [
+										-6,
+										4
+									]
+								},
+								"east": {
+									"uv": [
+										91,
+										98
+									],
+									"uv_size": [
+										-6,
+										4
+									]
+								},
+								"south": {
+									"uv": [
+										97,
+										98
+									],
+									"uv_size": [
+										-6,
+										4
+									]
+								},
+								"west": {
+									"uv": [
+										79,
+										98
+									],
+									"uv_size": [
+										-6,
+										4
+									]
+								},
+								"up": {
+									"uv": [
+										85,
+										92
+									],
+									"uv_size": [
+										-6,
+										6
+									]
+								},
+								"down": {
+									"uv": [
+										91,
+										98
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "indexR",
+					"parent": "gauntletR",
+					"pivot": [
+						-1.6,
+						0.3,
+						-0.3
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.31,
+								-4.355,
+								-1.08
+							],
+							"size": [
+								1.54,
+								4.62,
+								1.54
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										89,
+										104
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"east": {
+									"uv": [
+										91,
+										104
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"south": {
+									"uv": [
+										93,
+										104
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"west": {
+									"uv": [
+										87,
+										104
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"up": {
+									"uv": [
+										89,
+										102
+									],
+									"uv_size": [
+										-2,
+										2
+									]
+								},
+								"down": {
+									"uv": [
+										91,
+										104
+									],
+									"uv_size": [
+										-2,
+										-2
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "fingersR",
+					"parent": "gauntletR",
+					"pivot": [
+						-1.5,
+						0.3,
+						2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.31,
+								-4.355,
+								1.23
+							],
+							"size": [
+								1.54,
+								4.62,
+								3.08
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										79,
+										106
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"east": {
+									"uv": [
+										83,
+										106
+									],
+									"uv_size": [
+										-4,
+										6
+									]
+								},
+								"south": {
+									"uv": [
+										85,
+										106
+									],
+									"uv_size": [
+										-2,
+										6
+									]
+								},
+								"west": {
+									"uv": [
+										77,
+										106
+									],
+									"uv_size": [
+										-4,
+										6
+									]
+								},
+								"up": {
+									"uv": [
+										79,
+										102
+									],
+									"uv_size": [
+										-2,
+										4
+									]
+								},
+								"down": {
+									"uv": [
+										81,
+										106
+									],
+									"uv_size": [
+										-2,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "thumbR",
+					"parent": "gauntletR",
+					"pivot": [
+						1.5,
+						0.3,
+						0.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								0.77,
+								-3.585,
+								-0.31
+							],
+							"size": [
+								1.54,
+								3.85,
+								1.54
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										97,
+										104
+									],
+									"uv_size": [
+										-2,
+										5
+									]
+								},
+								"east": {
+									"uv": [
+										99,
+										104
+									],
+									"uv_size": [
+										-2,
+										5
+									]
+								},
+								"south": {
+									"uv": [
+										101,
+										104
+									],
+									"uv_size": [
+										-2,
+										5
+									]
+								},
+								"west": {
+									"uv": [
+										95,
+										104
+									],
+									"uv_size": [
+										-2,
+										5
+									]
+								},
+								"up": {
+									"uv": [
+										97,
+										102
+									],
+									"uv_size": [
+										-2,
+										2
+									]
+								},
+								"down": {
+									"uv": [
+										99,
+										104
+									],
+									"uv_size": [
+										-2,
+										-2
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

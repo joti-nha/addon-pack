@@ -1,0 +1,29 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:sun_ring"
+		},
+		"pattern": [
+			"121"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:sun_fragment"
+			},
+			"2": {
+				"item": "mnra_cata:ancient_ring"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:sun_ring",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

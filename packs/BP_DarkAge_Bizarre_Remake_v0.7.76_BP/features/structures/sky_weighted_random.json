@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/sky_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/flying_farm_feature_mcstructure",
+				60
+			],
+			[
+				"dk:structures/barracks_sen_feature_mcstructure",
+				55
+			],
+			[
+				"dk:structures/catedral_feature_mcstructure",
+				45
+			]
+		]
+	}
+}

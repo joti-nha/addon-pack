@@ -1,0 +1,37 @@
+{
+  "format_version": "1.21.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "tm_aqc:diamond_fishing_spear",
+      "menu_category": {
+        "category": "equipment"
+      }
+    },
+    "components": {
+      "minecraft:repairable": {
+        "repair_items": [
+            {
+                "items": ["minecraft:diamond"],
+                "repair_amount": "context.other->q.remaining_durability + 0.05 * context.other->q.max_durability"
+            }
+        ]
+    },
+      "minecraft:tags": {
+          "tags": ["minecraft:is_trident", "tm_aqc:fishing_spear", "tm_aqc:fish_loot", "tm_aqc:break_block_durability",
+          "minecraft:transformable_items"]
+      },
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "tm_aqc_diamond_fishing_spear",
+      "minecraft:hand_equipped": true,
+      "minecraft:use_animation":"spear",
+      "minecraft:durability": {
+        "max_durability": 1561
+      },
+      "minecraft:damage": 7,
+      "minecraft:enchantable": {
+        "value": 10,
+        "slot": "sword"
+      }
+    }
+  }
+}

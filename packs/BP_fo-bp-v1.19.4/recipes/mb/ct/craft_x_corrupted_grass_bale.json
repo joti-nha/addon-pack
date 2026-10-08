@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_grass_bale"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GGG",
+      "GGG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "ntk:corrupted_grass"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_grass_bale",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_grass"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": -1,
+      "groups": [
+        {
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "dk:sentinel_soldier_helmet",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:sunshard",
+                  "quantity": 10
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:oath_armor_helmet",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:sentinel_soldier_chestplate",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:sunshard",
+                  "quantity": 10
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:oath_armor_chestplate",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:sentinel_soldier_leggings",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:sunshard",
+                  "quantity": 10
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:oath_armor_leggings",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            },
+            {
+              "wants": [
+                {
+                  "item": "dk:sentinel_soldier_boots",
+                  "quantity": 1
+                },
+                {
+                  "item": "dk:sunshard",
+                  "quantity": 10
+                }
+              ],
+              "gives": [
+                {
+                  "item": "dk:oath_armor_boots",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

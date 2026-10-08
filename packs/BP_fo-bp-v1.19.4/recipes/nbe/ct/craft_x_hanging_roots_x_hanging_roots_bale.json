@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_hanging_roots_x_hanging_roots_bale"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "hanging_roots",
+    "ingredients": [
+      {
+        "item": "ntk:hanging_roots_bale"
+      }
+    ],
+    "result": {
+      "item": "minecraft:hanging_roots",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:hanging_roots_bale"
+      }
+    ]
+  }
+}

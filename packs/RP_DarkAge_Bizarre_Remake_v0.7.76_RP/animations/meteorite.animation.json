@@ -1,0 +1,79 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meteorite.fire": {
+			"loop": true,
+			"animation_length": 0.8,
+			"bones": {
+				"Body": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.8": [
+							360,
+							360,
+							0
+						]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire",
+						"locator": "fire_up"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_one"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_two"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_three"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_four"
+					},
+					{
+						"effect": "firefire",
+						"locator": "fire_five"
+					}
+				],
+				"0.8": [
+					{
+						"effect": "fire",
+						"locator": "fire_up"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_one"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_two"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_three"
+					},
+					{
+						"effect": "firefire",
+						"locator": "firefire_four"
+					},
+					{
+						"effect": "firefire",
+						"locator": "fire_five"
+					}
+				]
+			}
+		}
+	}
+}

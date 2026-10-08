@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_glowcelium_bone_meal"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "BG"
+    ],
+    "key": {
+      "G": {
+        "item": "ntk:tall_glowcelium_sprouts"
+      },
+      "B": {
+        "item": "minecraft:bone_meal"
+      }
+    },
+    "result": {
+      "item": "ntk:glowcelium_bone_meal",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "ntk:tall_glowcelium_sprouts"
+      },
+      {
+        "item": "minecraft:bone_meal"
+      }
+    ]
+  }
+}

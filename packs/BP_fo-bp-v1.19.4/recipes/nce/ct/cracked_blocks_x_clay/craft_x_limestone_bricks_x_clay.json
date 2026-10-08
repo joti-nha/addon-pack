@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_limestone_bricks_x_clay"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "group": "limestone_bricks",
+    "assume_symmetry": true,
+    "pattern": [
+      "SC"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:cracked_limestone_bricks"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:limestone_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:cracked_limestone_bricks"
+      },
+      {
+        "item": "minecraft:clay_ball"
+      }
+    ]
+  }
+}

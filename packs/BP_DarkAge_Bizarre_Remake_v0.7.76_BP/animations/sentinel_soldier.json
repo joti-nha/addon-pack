@@ -1,0 +1,59 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.sentinel_soldier.attacks": {
+			"animation_length": 10,
+			"loop": true,
+			"timeline": {
+				"10.0": [
+					"/event entity @s dk:sentinel_soldier_event_mode_attacks"
+				]
+			}
+		},
+		"animation.sentinel_soldier.attack_two": {
+			"animation_length": 0.2,
+			"loop": true,
+			"timeline": {
+				"0.2": [
+					"/event entity @s dk:sentinel_soldier_event_mode_attack_two"
+				]
+			}
+		},
+		"animation.sentinel_soldier.target": {
+			"animation_length": 0.5,
+			"loop": true,
+			"timeline": {
+				"0.1": [
+					"/event entity @s dk:sentinel_soldier_event_mode_target"
+				]
+			}
+		},
+		"animation.sentinel_soldier.target_shield": {
+			"animation_length": 0.5,
+			"loop": true,
+			"timeline": {
+				"0.1": [
+					"@s dk:sentinel_soldier_event_mode_target_shield"
+				]
+			}
+		},
+		"animation.sentinel_soldier.no_target": {
+			"animation_length": 6,
+			"loop": true,
+			"timeline": {
+				"5.5": [
+					"@s dk:sentinel_soldier_event_mode_no_target"
+				]
+			}
+		},
+		"animation.sentinel_soldier.home": {
+			"animation_length": 18,
+			"loop": true,
+			"timeline": {
+				"17.0": [
+					"/event entity @s dk:sentinel_soldier_event_mode_go_home"
+				]
+			}
+		}
+	}
+}

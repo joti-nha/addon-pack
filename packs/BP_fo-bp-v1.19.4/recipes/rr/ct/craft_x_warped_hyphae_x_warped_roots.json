@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_warped_hyphae_x_warped_roots"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "warped_hyphae",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "ABA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:warped_roots"
+      },
+      "B": {
+        "item": "minecraft:stripped_warped_hyphae"
+      }
+    },
+    "result": {
+      "item": "minecraft:warped_hyphae",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:warped_roots"
+      },
+      {
+        "item": "minecraft:stripped_warped_hyphae"
+      }
+    ]
+  }
+}

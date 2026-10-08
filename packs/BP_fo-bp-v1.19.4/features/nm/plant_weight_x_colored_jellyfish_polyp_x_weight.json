@@ -1,0 +1,27 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:nm/plant_weight_x_colored_jellyfish_polyp_x_weight"
+    },
+    "features": [
+      [ "ntk:nm/plant_x_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_black_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_blue_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_brown_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_cyan_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_gray_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_green_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_light_blue_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_light_gray_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_lime_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_magenta_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_orange_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_pink_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_purple_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_red_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_white_jellyfish_polyp_x_02_x_scatter", 100 ],
+      [ "ntk:nm/plant_x_yellow_jellyfish_polyp_x_02_x_scatter", 100 ]
+    ]
+  }
+}

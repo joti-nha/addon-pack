@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_pumpkin_stew"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "pumpkin_stew",
+    "assume_symmetry": true,
+    "pattern": [
+      "PP",
+      "B"
+    ],
+    "key": {
+      "P": {
+        "item": "ntk:pumpkin_slice"
+      },
+      "B": {
+        "item": "minecraft:bowl"
+      }
+    },
+    "result": {
+      "item": "ntk:pumpkin_stew",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:pumpkin_slice"
+      },
+      {
+        "item": "minecraft:bowl"
+      }
+    ]
+  }
+}

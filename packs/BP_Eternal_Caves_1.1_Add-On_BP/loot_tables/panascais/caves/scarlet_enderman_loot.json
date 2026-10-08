@@ -1,0 +1,1 @@
+{"pools":[{"rolls":1,"entries":[{"type":"loot_table","name":"loot_tables/entities/enderman.json"}]},{"rolls":1,"entries":[{"type":"item","name":"panascais_caves:sulfur_dust","weight":1},{"type":"empty","weight":2}]},{"rolls":1,"entries":[{"type":"item","name":"panascais_caves:cinnabar_dust","weight":1},{"type":"empty","weight":2}]}]}

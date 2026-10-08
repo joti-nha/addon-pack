@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "ntk:furnace_x_brass_pickaxe"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "ntk:brass_pickaxe"
+    },
+    "output": {
+      "item": "ntk:brass_nugget",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:brass_pickaxe"
+      }
+    ]
+  }
+}

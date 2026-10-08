@@ -1,0 +1,75 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "dk:feather_light",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/feather_light"
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 1
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [
+					"0.5+math.random(-0.2,0.2)",
+					0,
+					"0.5+math.random(-0.2,0.2)"
+				],
+				"direction": [
+					"math.random(-1,1)",
+					5,
+					"math.random(-1,1)"
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 3
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-360,360)",
+				"rotation_rate": 360
+			},
+			"minecraft:particle_initial_speed": "math.random(2,2.5)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					"math.random(-20,20)",
+					-2,
+					"math.random(-20,20)"
+				],
+				"linear_drag_coefficient": 1,
+				"rotation_acceleration": 5,
+				"rotation_drag_coefficient": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.2,
+					0.2
+				],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 10,
+				"coefficient_of_restitution": 0.1,
+				"collision_radius": 0.01,
+				"expire_on_contact": true
+			}
+		}
+	}
+}

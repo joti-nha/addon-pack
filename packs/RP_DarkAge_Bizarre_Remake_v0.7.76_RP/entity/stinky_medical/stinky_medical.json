@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:stinky_medical",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/stinky_medical/stinky_medical"
+			},
+			"geometry": {
+				"default": "geometry.stinky_medical"
+			},
+			"spawn_egg": {
+				"texture": "stinky_medical_spawn"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"controller"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"look_at_target": "controller.animation.stinky_medical.look_at_target",
+				"controller": "controller.animation.stinky_medical.controller",
+				"look_at_target_default": "animation.stinky_medical.look_at_target.default",
+				"look_at_target_gliding": "animation.stinky_medical.look_at_target.gliding",
+				"look_at_target_swimming": "animation.stinky_medical.look_at_target.swimming",
+				"static": "animation.stinky_medical.static",
+				"move": "animation.stinky_medical.move",
+				"summon": "animation.stinky_medical.summon",
+				"curse": "animation.stinky_medical.curse",
+				"ride": "animation.stinky_medical.ride",
+				"sit": "animation.stinky_medical.sit",
+				"book": "animation.stinky_medical.book"
+			},
+			"render_controllers": [
+				"controller.render.stinky_medical"
+			]
+		}
+	}
+}

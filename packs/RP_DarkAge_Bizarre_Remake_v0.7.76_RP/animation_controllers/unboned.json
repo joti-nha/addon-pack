@@ -1,0 +1,113 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.unboned.controller": {
+			"initial_state": "static",
+			"states": {
+				"static": {
+					"animations": [
+						"static",
+						"cape",
+						{
+							"riding": "query.is_riding"
+						},
+						{
+							"move": "!query.is_delayed_attacking"
+						},
+						{
+							"move_arm_right": "!query.is_delayed_attacking"
+						},
+						{
+							"move_arm_left": "!query.is_saddled&&!query.is_delayed_attacking"
+						},
+						{
+							"shield": "query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.unboned.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==1&&variable.attack>0"
+						},
+						{
+							"attack_two": "query.mark_variant==2&&variable.attack>0"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				}
+			}
+		},
+		"controller.animation.unboned.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

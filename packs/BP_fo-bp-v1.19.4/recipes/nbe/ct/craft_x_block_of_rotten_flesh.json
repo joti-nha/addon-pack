@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_rotten_flesh"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "block_of_rotten_flesh",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:rotten_flesh"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_rotten_flesh",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:rotten_flesh"
+      }
+    ]
+  }
+}

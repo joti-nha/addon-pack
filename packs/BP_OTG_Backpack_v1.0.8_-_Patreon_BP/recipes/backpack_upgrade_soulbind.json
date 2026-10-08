@@ -1,0 +1,41 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_backpack_upgrade_soulbind"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "EAE",
+            "GTG",
+            "BBB"
+        ],
+        "key": {
+            "E": {
+                "item": "minecraft:emerald"
+            },
+            "A": {
+                "item": "minecraft:totem_of_undying"
+            },
+            "G": {
+                "item": "minecraft:gold_ingot"
+            },
+            "T": {
+                "item": "otg:backpack_upgrade_template"
+            },
+            "B": {
+                "item": "minecraft:gold_block"
+            }
+        },
+        "result": {
+            "item": "otg:backpack_upgrade_soulbind"
+        },
+        "unlock": [
+            {
+                "item": "otg:backpack_upgrade_template"
+            }
+        ]
+    }
+}

@@ -1,0 +1,128 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.outcast_banners",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 9,
+				"visible_bounds_offset": [
+					0,
+					1.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "root",
+					"parent": "waist",
+					"pivot": [
+						0,
+						12,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"mirror": true
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					],
+					"mirror": true
+				},
+				{
+					"name": "banner",
+					"parent": "rightArm",
+					"pivot": [
+						-3,
+						10,
+						-8
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								10,
+								-9
+							],
+							"size": [
+								2,
+								62,
+								2
+							],
+							"uv": [
+								52,
+								0
+							]
+						},
+						{
+							"origin": [
+								-13,
+								72,
+								-9
+							],
+							"size": [
+								20,
+								2,
+								2
+							],
+							"uv": [
+								0,
+								42
+							]
+						}
+					]
+				},
+				{
+					"name": "flag",
+					"parent": "banner",
+					"pivot": [
+						-3,
+						74,
+						-9
+					],
+					"cubes": [
+						{
+							"origin": [
+								-13,
+								34,
+								-10
+							],
+							"size": [
+								20,
+								40,
+								1
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_jar_of_milk_half_x_bamboo_cup_with_milk"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "jar_of_milk_half",
+    "assume_symmetry": true,
+    "pattern": [
+      "JM"
+    ],
+    "key": {
+      "J": {
+        "item": "ntk:empty_jar"
+      },
+      "M": {
+        "item": "ntk:bamboo_cup_with_milk"
+      }
+    },
+    "result": [
+      {
+        "item": "ntk:jar_of_milk_half",
+        "count": 1
+      },
+      {
+        "item": "ntk:empty_bamboo_cup",
+        "count": 1
+      }
+    ],
+    "unlock": [
+      {
+        "item": "ntk:bamboo_cup_with_milk"
+      },
+      {
+        "item": "ntk:empty_jar"
+      }
+    ]
+  }
+}

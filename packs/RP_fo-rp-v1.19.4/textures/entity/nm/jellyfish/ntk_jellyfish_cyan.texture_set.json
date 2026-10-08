@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_jellyfish_cyan",
+    "heightmap": "ntk_jellyfish_height",
+    "metalness_emissive_roughness": "ntk_jellyfish_mer"
+  }
+}

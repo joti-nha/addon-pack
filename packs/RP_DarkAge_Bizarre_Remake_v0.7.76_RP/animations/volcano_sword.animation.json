@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.volcano_sword.first_person": {
+			"loop": true,
+			"bones": {
+				"Right_sword0": {
+					"rotation": [
+						"c.is_first_person?-5:0",
+						"c.is_first_person?60:0",
+						"c.is_first_person?-46.6108:0"
+					],
+					"position": [
+						"c.is_first_person?-10:0",
+						"c.is_first_person?7:0",
+						"c.is_first_person?-7.5:0"
+					],
+					"scale": "c.is_first_person ? 0.25 : 1"
+				}
+			}
+		},
+		"animation.volcano_sword.volcano_sword": {
+			"loop": true
+		}
+	}
+}

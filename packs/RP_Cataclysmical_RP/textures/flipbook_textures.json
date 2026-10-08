@@ -1,0 +1,312 @@
+[
+	{
+		"flipbook_texture": "textures/minera/cata/blocks/astral_dust",
+		"atlas_tile": "mnra_cata_astral_dust",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 20,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/blocks/emberglow",
+		"atlas_tile": "mnra_cata_emberglow",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 20,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/blooming_heart",
+		"atlas_tile": "mnra_cata_blooming_heart",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 3,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/ectoplasm",
+		"atlas_tile": "mnra_cata_ectoplasm",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 40,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/terror_detector",
+		"atlas_tile": "mnra_cata_terror_detector",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 40,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/blocks/terror_stabilizer_side",
+		"atlas_tile": "mnra_cata_terror_stabilizer_side",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 40,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/terror_guide",
+		"atlas_tile": "mnra_cata_terror_guide",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11
+		],
+		"ticks_per_frame": 10,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/overloaded_solar_core",
+		"atlas_tile": "mnra_cata_overloaded_solar_core",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/blazing_excalibur",
+		"atlas_tile": "mnra_cata_blazing_excalibur",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8,
+			9,
+			10,
+			11,
+			12,
+			13,
+			14
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/calamity",
+		"atlas_tile": "mnra_cata_calamity",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/item_trinkets/calamity_ring",
+		"atlas_tile": "mnra_cata_calamity_ring",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/shard_of_cataclysm",
+		"atlas_tile": "mnra_cata_shard_of_cataclysm",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/shard_of_calamity",
+		"atlas_tile": "mnra_cata_shard_of_calamity",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/sun_fragment",
+		"atlas_tile": "mnra_cata_sun_fragment",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/chaosspec_ingot",
+		"atlas_tile": "mnra_cata_chaosspec_ingot",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/sunflare_pickaxe",
+		"atlas_tile": "mnra_cata_sunflare_pickaxe",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"ticks_per_frame": 2.5,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/crescent_carver",
+		"atlas_tile": "mnra_cata_crescent_carver",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5,
+			6,
+			7,
+			8
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/ecliptic_alloy",
+		"atlas_tile": "mnra_cata_ecliptic_alloy",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/ecliptic_greatsword",
+		"atlas_tile": "mnra_cata_ecliptic_greatsword",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": true
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/infernal_ash",
+		"atlas_tile": "mnra_cata_infernal_ash",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/phantasma_matter",
+		"atlas_tile": "mnra_cata_phantasma_matter",
+		"frames": [
+			0,
+			1,
+			2,
+			3,
+			4,
+			5
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/weapons/underlight",
+		"atlas_tile": "mnra_cata_underlight",
+		"frames": [
+			0,
+			1,
+			2,
+			3
+		],
+		"ticks_per_frame": 2.4,
+		"blend_frames": false
+	},
+	{
+		"flipbook_texture": "textures/minera/cata/items/annihilation_bottle",
+		"atlas_tile": "mnra_cata_annihilation_bottle",
+		"frames": [
+			0,
+			1
+		],
+		"ticks_per_frame": 15,
+		"blend_frames": true
+	}
+]

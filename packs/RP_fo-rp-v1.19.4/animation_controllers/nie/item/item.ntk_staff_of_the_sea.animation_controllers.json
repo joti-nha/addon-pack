@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+	  "controller.animation.item.ntk_staff_of_the_sea.wield": {
+			"initial_state": "default",
+			"states": {
+			  "default": {
+					"transitions": [
+						{
+							"1st_person_wield": "c.is_first_person"
+						},
+						{
+							"3rd_person_wield": "!c.is_first_person"
+						}
+					]
+				},
+				"1st_person_wield": {
+					"animations": [ "1st_person_wield" ],
+					"transitions": [
+						{
+							"default": "!c.is_first_person"
+						}
+					]
+				},
+				"3rd_person_wield": {
+					"animations": [ "3rd_person_wield" ],
+					"transitions": [
+						{
+							"default": "c.is_first_person"
+						}
+					]
+				}
+			}
+		}
+	}
+}

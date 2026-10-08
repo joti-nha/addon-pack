@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_crimson_roots_x_crimson_roots_bale"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "crimson_roots",
+    "ingredients": [
+      {
+        "item": "ntk:crimson_roots_bale"
+      }
+    ],
+    "result": {
+      "item": "minecraft:crimson_roots",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:crimson_roots_bale"
+      }
+    ]
+  }
+}

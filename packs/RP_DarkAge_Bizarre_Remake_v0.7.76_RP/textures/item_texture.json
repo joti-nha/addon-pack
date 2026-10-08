@@ -1,0 +1,346 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"flagon_spawn": {
+			"textures": [
+				"textures/items/spawn/flagon_mysthic"
+			]
+		},
+		"plague_dog_spawn": {
+			"textures": [
+				"textures/items/spawn/plague_dog_spawn_egg"
+			]
+		},
+		"assassin_spawn": {
+			"textures": [
+				"textures/items/spawn/assassin_spawn_egg"
+			]
+		},
+		"elemental_knight_spawn": {
+			"textures": [
+				"textures/items/spawn/elemental_knight_spawn_egg"
+			]
+		},
+		"unbound_elemental_spawn": {
+			"textures": [
+				"textures/items/spawn/unbound_elemental_spawn_egg"
+			]
+		},
+		"gargoyle_spawn": {
+			"textures": [
+				"textures/items/spawn/gargoyle_spawn_egg"
+			]
+		},
+		"sentinel_soldier_spawn": {
+			"textures": [
+				"textures/items/spawn/sentinel_soldier_spawn_egg"
+			]
+		},
+		"sentinel_spawn": {
+			"textures": [
+				"textures/items/spawn/sentinel_spawn_egg"
+			]
+		},
+		"stinky_medical_spawn": {
+			"textures": [
+				"textures/items/spawn/stinky_medical_spawn_egg"
+			]
+		},
+		"outcast_spawn": {
+			"textures": [
+				"textures/items/spawn/outcast_spawn_egg"
+			]
+		},
+		"outcast_corrupted_spawn": {
+			"textures": [
+				"textures/items/spawn/outcast_corrupted_spawn_egg"
+			]
+		},
+		"plague_spawn": {
+			"textures": [
+				"textures/items/spawn/plague_spawn_egg"
+			]
+		},
+		"mercenary_spawn": {
+			"textures": [
+				"textures/items/spawn/mercenary_spawn_egg"
+			]
+		},
+		"duck_spawn": {
+			"textures": [
+				"textures/items/spawn/duck_spawn_egg"
+			]
+		},
+		"abomination_duck_spawn": {
+			"textures": [
+				"textures/items/spawn/abomination_duck_spawn_egg"
+			]
+		},
+		"floating_boat": {
+			"textures": [
+				"textures/items/spawn/floating_boat"
+			]
+		},
+		"duck_egg": {
+			"textures": [
+				"textures/items/duck_egg"
+			]
+		},
+		"abomination_duck_egg": {
+			"textures": [
+				"textures/items/abomination_duck_egg"
+			]
+		},
+		"sunshard": {
+			"textures": [
+				"textures/items/sunshard"
+			]
+		},
+		"darkalita_ingot": {
+			"textures": [
+				"textures/items/darkalita_ingot"
+			]
+		},
+		"corrupted_armor_fragment": {
+			"textures": [
+				"textures/items/corrupted_armor_fragment"
+			]
+		},
+		"contract": {
+			"textures": [
+				"textures/items/contract_g"
+			]
+		},
+		"soul_gem": {
+			"textures": [
+				"textures/items/soul_gem"
+			]
+		},
+		"key_of_the_plague": {
+			"textures": [
+				"textures/items/key_of_the_plague"
+			]
+		},
+		"key_of_the_war": {
+			"textures": [
+				"textures/items/key_of_the_war"
+			]
+		},
+		"key_of_the_death": {
+			"textures": [
+				"textures/items/key_of_the_death"
+			]
+		},
+		"centipede_of_the_death": {
+			"textures": [
+				"textures/items/centipede_of_the_death"
+			]
+		},
+		"syringe_with_suspicious_blood": {
+			"textures": [
+				"textures/items/syringe_with_suspicious_blood"
+			]
+		},
+		"suspicious_weed": {
+			"textures": [
+				"textures/items/suspicious_weed"
+			]
+		},
+		"halberd": {
+			"textures": [
+				"textures/items/halberd/halberd"
+			]
+		},
+		"sentinel_halberd": {
+			"textures": [
+				"textures/items/halberd/sentinel_halberd"
+			]
+		},
+		"unbound_arm": {
+			"textures": [
+				"textures/items/weapons/unbound_arm"
+			]
+		},
+		"unbound_arm_punch": {
+			"textures": [
+				"textures/items/weapons/unbound_arm_punch"
+			]
+		},
+		"vendaga": {
+			"textures": [
+				"textures/items/weapons/vendaga"
+			]
+		},
+		"holy_sword": {
+			"textures": [
+				"textures/items/weapons/holy_sword"
+			]
+		},
+		"volcano_sword": {
+			"textures": [
+				"textures/items/weapons/volcano_sword"
+			]
+		},
+		"elemental_blade": {
+			"textures": [
+				"textures/items/weapons/elemental_blade"
+			]
+		},
+		"sword_of_fatality": {
+			"textures": [
+				"textures/items/weapons/sword_of_fatality"
+			]
+		},
+		"sickle_of_fatality": {
+			"textures": [
+				"textures/items/weapons/sword_of_fatality_two"
+			]
+		},
+		"sinners_rod": {
+			"textures": [
+				"textures/items/sinners_rod"
+			]
+		},
+		"stinky_medical_mask": {
+			"textures": [
+				"textures/items/stinky_mask"
+			]
+		},
+		"sentinel_soldier_helmet": {
+			"textures": [
+				"textures/items/armors/sentinel_soldier_helmet"
+			]
+		},
+		"sentinel_soldier_chestplate": {
+			"textures": [
+				"textures/items/armors/sentinel_soldier_chestplate"
+			]
+		},
+		"sentinel_soldier_leggings": {
+			"textures": [
+				"textures/items/armors/sentinel_soldier_leggings"
+			]
+		},
+		"sentinel_soldier_boots": {
+			"textures": [
+				"textures/items/armors/sentinel_soldier_boots"
+			]
+		},
+		"oath_armor_helmet": {
+			"textures": [
+				"textures/items/armors/oath_armor_helmet"
+			]
+		},
+		"oath_armor_chestplate": {
+			"textures": [
+				"textures/items/armors/oath_armor_chestplate"
+			]
+		},
+		"oath_armor_leggings": {
+			"textures": [
+				"textures/items/armors/oath_armor_leggings"
+			]
+		},
+		"oath_armor_boots": {
+			"textures": [
+				"textures/items/armors/oath_armor_boots"
+			]
+		},
+		"elemental_soldier_helmet": {
+			"textures": [
+				"textures/items/armors/elemental_soldier_helmet"
+			]
+		},
+		"elemental_soldier_chestplate": {
+			"textures": [
+				"textures/items/armors/elemental_soldier_chestplate"
+			]
+		},
+		"elemental_soldier_leggings": {
+			"textures": [
+				"textures/items/armors/elemental_soldier_leggings"
+			]
+		},
+		"elemental_soldier_boots": {
+			"textures": [
+				"textures/items/armors/elemental_soldier_boots"
+			]
+		},
+		"unbound_helmet": {
+			"textures": [
+				"textures/items/armors/unbound_helmet"
+			]
+		},
+		"unbound_chestplate": {
+			"textures": [
+				"textures/items/armors/unbound_chestplate"
+			]
+		},
+		"unbound_leggings": {
+			"textures": [
+				"textures/items/armors/unbound_leggings"
+			]
+		},
+		"unbound_boots": {
+			"textures": [
+				"textures/items/armors/unbound_boots"
+			]
+		},
+		"plague_head": {
+			"textures": [
+				"textures/items/armors/plague_head"
+			]
+		},
+		"human_flesh": {
+			"textures": [
+				"textures/items/food/human_flesh"
+			]
+		},
+		"human_flesh_cook": {
+			"textures": [
+				"textures/items/food/human_flesh_cook"
+			]
+		},
+		"duck_raw": {
+			"textures": [
+				"textures/items/food/duck_raw"
+			]
+		},
+		"duck_cooked": {
+			"textures": [
+				"textures/items/food/duck_cooked"
+			]
+		},
+		"smoke_bomb": {
+			"textures": [
+				"textures/items/smoke_bomb"
+			]
+		},
+		"solar_ember": {
+			"textures": [
+				"textures/items/solar_ember"
+			]
+		},
+		"dark_ember": {
+			"textures": [
+				"textures/items/dark_ember"
+			]
+		},
+		"sentinel_shield": {
+			"textures": [
+				"textures/items/shields/sentinel_shield"
+			]
+		},
+		"unboned_shield": {
+			"textures": [
+				"textures/items/shields/unboned_shield"
+			]
+		},
+		"demon_punished_bow": {
+			"textures": [
+				"textures/items/weapons/demon_punished_bow"
+			]
+		}
+	}
+}

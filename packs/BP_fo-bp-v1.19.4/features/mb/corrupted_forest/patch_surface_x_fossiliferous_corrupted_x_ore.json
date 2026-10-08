@@ -1,0 +1,23 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/patch_surface_x_fossiliferous_corrupted_x_ore"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "ntk:fossiliferous_corrupted_dirt",
+        "may_replace": [
+          "ntk:corrupted_dirt"
+        ]
+      },
+      {
+        "places_block": "ntk:fossiliferous_corrupted_stone",
+        "may_replace": [
+          "ntk:corrupted_stone"
+        ]
+      }
+    ]
+  }
+}

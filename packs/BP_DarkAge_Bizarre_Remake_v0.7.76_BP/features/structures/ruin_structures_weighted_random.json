@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/ruin_structures_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/ruin_tower_feature_mcstructure",
+				25
+			],
+			[
+				"dk:structures/ruin_house_two_feature_mcstructure",
+				60
+			],
+			[
+				"dk:structures/ruin_house_feature_mcstructure",
+				50
+			]
+		]
+	}
+}

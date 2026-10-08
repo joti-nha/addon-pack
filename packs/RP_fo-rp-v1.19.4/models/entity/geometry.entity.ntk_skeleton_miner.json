@@ -1,0 +1,269 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.entity.ntk_skeleton_miner",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 16, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "body",
+					"pivot": [0, 12, 0],
+					"cubes": [
+						{"origin": [-4, 12, -2], "size": [8, 12, 4], "uv": [28, 28]}
+					],
+					"locators": {
+						"lead": [0, 19, 2]
+					}
+				},
+				{
+					"name": "body_ore",
+					"parent": "waist",
+					"pivot": [0, 18, 0]
+				},
+				{
+					"name": "body_ore_3",
+					"parent": "body_ore",
+					"pivot": [0, 18, 2],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-1, 18, 1.25], "size": [2, 2, 1], "uv": [0, 5]}
+					]
+				},
+				{
+					"name": "body_ore_2",
+					"parent": "body_ore",
+					"pivot": [-2.5, 13, -1.5],
+					"rotation": [45, 0, -5],
+					"cubes": [
+						{"origin": [-2.5, 11, -2], "size": [1, 3, 1], "uv": [40, 0]}
+					]
+				},
+				{
+					"name": "body_ore_1",
+					"parent": "body_ore",
+					"pivot": [2, 22, -1],
+					"rotation": [42.5, 0, 20],
+					"cubes": [
+						{"origin": [1, 22, -2.5], "size": [1, 1, 1], "uv": [24, 21]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "head_ore",
+					"parent": "head",
+					"pivot": [0, 32, 0]
+				},
+				{
+					"name": "head_ore_01",
+					"parent": "head_ore",
+					"pivot": [0, 31, 0],
+					"rotation": [0, 0, 5],
+					"cubes": [
+						{"origin": [-1, 30, -2], "size": [3, 4, 3], "uv": [16, 32]}
+					]
+				},
+				{
+					"name": "head_ore_02",
+					"parent": "head_ore",
+					"pivot": [-2, 31, -2],
+					"rotation": [14.78217, 2.57594, -9.6658],
+					"cubes": [
+						{"origin": [-3, 30, -3], "size": [2, 3, 2], "uv": [24, 16]}
+					]
+				},
+				{
+					"name": "head_ore_03",
+					"parent": "head_ore",
+					"pivot": [-1, 31, 2],
+					"rotation": [-9.85108, -1.72794, -9.85108],
+					"cubes": [
+						{"origin": [-2, 30, 1], "size": [2, 3, 2], "uv": [24, 0]}
+					]
+				},
+				{
+					"name": "head_ore_04",
+					"parent": "head_ore",
+					"pivot": [1, 31, 1],
+					"rotation": [-15, 0, 17.5],
+					"cubes": [
+						{"origin": [1, 28.57738, 1.09369], "size": [1, 5, 1], "uv": [16, 39]}
+					]
+				},
+				{
+					"name": "head_ore_05",
+					"parent": "head_ore",
+					"pivot": [2, 31, -2],
+					"rotation": [30, 0, 20],
+					"cubes": [
+						{"origin": [2, 29, -2], "size": [1, 4, 1], "uv": [24, 39]}
+					]
+				},
+				{
+					"name": "head_ore_06",
+					"parent": "head_ore",
+					"pivot": [-2, 31, 0],
+					"rotation": [10, 0, -25],
+					"cubes": [
+						{"origin": [-2.5, 29, 0], "size": [1, 4, 1], "uv": [20, 39]}
+					]
+				},
+				{
+					"name": "head_ore_07",
+					"parent": "head_ore",
+					"pivot": [1, 28, 2],
+					"rotation": [-14.65993, 3.21132, 12.08681],
+					"cubes": [
+						{"origin": [0, 28, 2.5], "size": [2, 2, 2], "uv": [38, 12]}
+					]
+				},
+				{
+					"name": "head_ore_09",
+					"parent": "head_ore",
+					"pivot": [-3, 30, 1],
+					"rotation": [-15, 0, -52.5],
+					"cubes": [
+						{"origin": [-5.5, 28.5, 0], "size": [2, 3, 2], "uv": [0, 16]}
+					]
+				},
+				{
+					"name": "head_ore_08",
+					"parent": "head_ore",
+					"pivot": [-2, 26, 3],
+					"rotation": [-35, -2.5, 0],
+					"cubes": [
+						{"origin": [-2.95543, 26, 3.04267], "size": [1, 2, 1], "uv": [24, 5]}
+					]
+				},
+				{
+					"name": "head_ore_10",
+					"parent": "head_ore",
+					"pivot": [3, 27, -1],
+					"rotation": [12.5, 0, 32.5],
+					"cubes": [
+						{"origin": [2.3, 26, -2], "size": [2, 3, 2], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0],
+					"cubes": [
+						{"origin": [-4, 24, -4], "size": [8, 8, 8], "inflate": 0.5, "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0],
+					"cubes": [
+						{"origin": [-6, 12, -1], "size": [2, 12, 2], "uv": [32, 14]}
+					]
+				},
+				{
+					"name": "rightArm_ore_1",
+					"parent": "rightArm",
+					"pivot": [-5.5, 23, -0.5],
+					"rotation": [13.06431, 7.43547, -29.14743],
+					"cubes": [
+						{"origin": [-6, 22.5, -1], "size": [1, 2, 1], "uv": [4, 21]}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [-5, 15, 1],
+					"locators": {
+						"rightitem": [-5, 13, 0],
+						"held_item": [-5, 13, 0],
+						"right_hand": [-5, 13, 0]
+					}
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [4, 12, -1], "size": [2, 12, 2], "uv": [8, 32], "mirror": false}
+					]
+				},
+				{
+					"name": "leftArm_ore_1",
+					"parent": "leftArm",
+					"pivot": [5.5, 18, 0.5],
+					"rotation": [-17.43745, 1.50179, 39.76968],
+					"cubes": [
+						{"origin": [5, 17.5, 0], "size": [1, 2, 1], "uv": [0, 21]}
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [6, 15, 1],
+					"locators": {
+						"leftitem": [5, 13, 0],
+						"left_hand": [5, 13, 0]
+					}
+				},
+				{
+					"name": "rightLeg",
+					"parent": "body",
+					"pivot": [-2, 12, 0],
+					"cubes": [
+						{"origin": [-3, 0, -1], "size": [2, 12, 2], "uv": [32, 0]}
+					]
+				},
+				{
+					"name": "rightLeg_ore_1",
+					"parent": "rightLeg",
+					"pivot": [-2.5, 8, 0.5],
+					"rotation": [-30, 0, -20],
+					"cubes": [
+						{"origin": [-3, 6.5, 0], "size": [1, 3, 1], "uv": [40, 8]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "body",
+					"pivot": [2, 12, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [1, 0, -1], "size": [2, 12, 2], "uv": [0, 32], "mirror": false}
+					]
+				},
+				{
+					"name": "leftLeg_ore_1",
+					"parent": "leftLeg",
+					"pivot": [2.5, 4, -0.5],
+					"rotation": [37.5, 0, 15],
+					"cubes": [
+						{"origin": [2, 2.5, -1], "size": [1, 3, 1], "uv": [40, 4]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:gargoyle_fireball",
+			"scripts": {
+				"animate": [
+					"fireball"
+				]
+			},
+			"particle_effects": {
+				"fireball": "dk:gargoyle_fireball",
+				"fireball_trail": "dk:gargoyle_fireball_trail"
+			},
+			"animations": {
+				"fireball": "controller.animation.gargoyle.fireball"
+			},
+			"geometry": {
+				"default": "geometry.none"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/gargoyle/gargoyle"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"materials": {
+				"default": "villager_v2"
+			}
+		}
+	}
+}

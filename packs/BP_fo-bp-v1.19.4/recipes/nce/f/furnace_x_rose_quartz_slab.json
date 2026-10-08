@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+    "identifier": "ntk:furnace_x_rose_quartz_slab"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "ntk:rose_quartz_slab"
+    },
+    "output": {
+      "item": "ntk:smooth_rose_quartz_slab",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:rose_quartz_slab"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_zinc_chestplate"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "Z Z",
+      "ZZZ",
+      "ZZZ"
+    ],
+    "key": {
+      "Z": {
+        "item": "ntk:zinc_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:zinc_chestplate",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:zinc_ingot"
+      }
+    ]
+  }
+}

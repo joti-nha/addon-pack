@@ -1,0 +1,98 @@
+item.rev:flintlock=§aHand Cannon
+item.rev:mauler=§eMauler
+item.rev:musket=§eMusket
+item.rev:shotgun_normal=§eBlunderbuss
+item.rev:hunting_musket=§bHunting Musket
+item.rev:repeater_crossbow=§eRepeating Crossbow
+item.rev:repeater_crossbow_c_1=§eRepeating Crossbow
+item.rev:repeater_crossbow_c_2=§eRepeating Crossbow
+item.rev:repeater_crossbow_c_3=§eRepeating Crossbow
+item.rev:shotgun_s=§bDouble Barrel Shotgun
+item.rev:hand_mortar=§bHand Mortar
+item.rev:crooked_mortar=§bCrooked Mortar
+item.rev:auto_gun=§bAuto Gun
+item.rev:auto_gun_empty=§bAuto Gun (Empty)
+item.rev:despoiler=§bDespoiler
+
+rev:guns_name=Guns
+rev:shadow_guns_name=Shadow Guns
+rev:bullets_name=Bullets
+
+item.spawn_egg.entity.rev:offshoot.name=Spawn Offshoot
+entity.rev:offshoot.name=Offshoot
+
+item.rev:shadow_flintlock=§5Hand Cannon
+item.rev:shadow_musket=§5Musket
+item.rev:shadow_shotgun_normal=§5Blunderbuss
+item.rev:shadow_shotgun_s=§5Double Barrel Shotgun
+item.rev:shadow_hand_mortar=§5Hand Mortar
+item.rev:shadow_mauler=§5Mauler
+item.rev:shadow_auto_gun=§5Auto Gun
+item.rev:shadow_hunting_musket=§5Hunting Musket
+item.rev:shadow_despoiler=§5Despoiler
+item.rev:shadow_crooked_mortar=§5Crooked Mortar
+
+
+item.rev:flintlock_bullets=Light Bullets
+item.rev:musket_bullets=Heavy Bullets
+item.rev:shotgun_shells=Pellet Shells
+item.rev:shotgun_s_shells=Tied Shells
+item.rev:mortar_bullet=Mortar Bullet
+
+tile.rev:firearm_forger.name=Firearm Forger
+item.rev:light_bullets=Light Bullets
+
+rev.ui.config.title=§g§lPreferences
+rev.ui.do_holding_animations.improvised=§iEnable holding animations
+rev.ui.do_disable_camerashake=§iEnable camera shake
+rev.ui.do_hit_sound=§iPlay "Ding!" sound on hit
+rev.ui.do_fast_particles=§iUse fancy particles
+rev.ui.do_offhand_sneak_restriction=§i§c[!]§r§iRestrict offhand use while sneaking
+rev.ui.do_offhand_item_restriction=§i§c[!]§r§iRestrict offhand use with certain items
+rev.ui.do_pseudo_infinity=§i§c[!]§a [Admin] §r§iEnable Pseudo-Infinity (Disable for bow-like infinity enchantment) §4[This setting is global]
+rev.ui.remove_offshoot=§i§c[!]§a [Admin] §r§iEnable Offshoot spawning §4[This setting is global]
+rev.tip.settings_command=§6Tip: §r§iUse the command §a/improvisedgunsmenu§r§i To access additional features such as preferences, trail customization, and your advancements.§r
+rev.tip.dual_wielding=§6Tip: §r§iYou can put any gun from the Fiream Forger into your §aoffhand§i in order to use §btwo guns at the same time!§r
+rev.tip.bloom_reduction=§6Tip: §r§iGuns are more accurate the less you're moving when shooting them. Sneak for maximum accuracy!§r
+
+rev.ui.config.saved=§a[Improvised Guns] Configuration Saved.
+
+rev.ui.hub.title=§n§lImprovised Guns Settings
+rev.ui.hub.config=§8§lPreferences
+rev.ui.hub.colors=§8§lCustomization
+rev.ui.hub.advancements=§8§lAdvancements
+rev.ui.hub.desc=§6Preferences: §r§iAdjust and change some visual and audible behaviors.\n§6Customization: §r§iCustomize the color of the bullets shot by each gun.\n§6Advancements: §r§iReview and see the status your advancements in this Add-On.
+
+rev.ui.color.title=§6§lCustomization
+rev.ui.color.r=§4Red (0-255)
+rev.ui.color.g=§2Green (0-255)
+rev.ui.color.b=§9Blue (0-255)
+rev.ui.reset_color=§gReset Colors?
+rev.ui.accept_and_back=§8§lAccept and Return
+rev.ui.color_changed=§a[Improvised Guns] Colors changed for 
+rev.ui.color_reset=§a[Improvised Guns] Colors reset for 
+
+rev.ui.advancement.ibetz.name=Improv' Betsy
+rev.ui.advancement.ibetz.desc=Craft and use a weapon from the Firearm Forger
+
+rev.ui.advancement.shdwn.name=Showdown
+rev.ui.advancement.shdwn.desc=Use a weapon from the Firearm Forger to defeat an Offshoot
+
+rev.ui.advancement.vdstr.name=Valid Strategy
+rev.ui.advancement.vdstr.desc=Defeat a mob with a weapon from the Firearm Forger from 50 or more blocks away
+
+rev.ui.advancement.dntai.name=Don't Take Aim
+rev.ui.advancement.dntai.desc=Defeat a mob using the Hunting Musket from 70 or more blocks away without using the scope
+
+rev.ui.advancement.drage.name=And Its Consequences...
+rev.ui.advancement.drage.desc=Obtain and use a Shadow Gun
+
+rev.ui.advancement.cldmg.name=Collateral Damage
+rev.ui.advancement.cldmg.desc=Use a piercing weapon from the Firearm Forger to kill 5 enemies with a single shot
+
+rev.ui.advancement.nocha.name=No Chance
+rev.ui.advancement.nocha.desc=Use weapons from the Firearm Forger to kill an Iron Golem in less than a second.
+
+rev.ui.achievement.hasma.name= has made the advancement
+rev.ui.advancement.status.completed=Completed
+rev.ui.advancement.status.not_completed=Not Completed

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_tin_hoe"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "TT",
+      " S",
+      " S"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:tin_ingot"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ntk:tin_hoe",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:tin_ingot"
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}

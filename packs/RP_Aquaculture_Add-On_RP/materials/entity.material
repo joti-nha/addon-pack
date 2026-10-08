@@ -1,0 +1,22 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "tm_aqc_outline:entity_alphatest": {
+      "+states": [
+				"EnableStencilTest",
+				"InvertCulling"
+			],
+			"-states": ["DisableCulling"],
+			
+			"-defines": ["FANCY"],
+			
+			"depthFunc": "Always",
+			
+			"frontFace": {
+				"stencilFunc": "NotEqual"
+			},
+
+			"stencilRef": 3
+    }
+  }
+}

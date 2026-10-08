@@ -1,0 +1,51 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:plasma",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/plasma_texture"
+			},
+			"geometry": {
+				"default": "geometry.plasma"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_plasma_egg"
+			},
+			"animations": {
+				"bobbing": "animation.plasma.bobbing",
+				"particle": "animation.plasma.particle",
+				"shake": "animation.plasma.shake",
+				"idle": "animation.plasma.idle",
+				"move": "animation.plasma.move",
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"has_target": "animation.plasma.has_target",
+				"summon": "animation.plasma.summon",
+				"attack": "animation.plasma.attack",
+				"move_controller": "controller.animation.solarium.move_controller",
+				"attack_controller": "controller.animation.plasma.attack_controller",
+				"weapon_attack": "animation.plasma.weapon_attack"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target_default",
+					"move_controller",
+					"attack_controller",
+					"bobbing",
+					"particle",
+					"shake",
+					"idle"
+				]
+			},
+			"particle_effects": {
+				"plasma_emitter": "mnra_cata:plasma_emitter"
+			}
+		}
+	}
+}

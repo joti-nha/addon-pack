@@ -1,0 +1,1 @@
+{"pools":[{"rolls":{"min":0,"max":2},"entries":[{"type":"empty","weight":3},{"type":"item","name":"minecraft:book","weight":3,"functions":[{"function":"enchant_randomly"}]}]}]}

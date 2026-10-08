@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:suspicious_weed",
+			"menu_category": {
+				"category": "nature",
+				"group": "itemGroup.name.nature"
+			}
+		},
+		"components": {
+			"minecraft:use_modifiers": {
+				"use_duration": 1.6,
+				"movement_modifier": 0.35
+			},
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": 0.3,
+				"can_always_eat": true
+			},
+			"minecraft:icon": "suspicious_weed",
+			"minecraft:display_name": {
+				"value": "item.dk:suspicious_weed.name"
+			},
+			"minecraft:cooldown": {
+				"category": "suspicious_weed",
+				"duration": 10
+			},
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

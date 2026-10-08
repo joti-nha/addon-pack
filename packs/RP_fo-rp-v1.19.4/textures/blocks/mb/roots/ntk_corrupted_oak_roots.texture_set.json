@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_corrupted_oak_roots",
+    "heightmap": "ntk_roots_height",
+    "metalness_emissive_roughness": "ntk_roots_mer"
+  }
+}

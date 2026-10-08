@@ -1,0 +1,9 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "hf_mzs_particles_blend:particles_base": {
+      "+defines": ["ENABLE_FOG"],
+      "+states": ["Blending", "DisableCulling", "DisableDepthWrite", "DisableAlphaWrite"]
+    }
+  }
+}

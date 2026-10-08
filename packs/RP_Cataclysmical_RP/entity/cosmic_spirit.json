@@ -1,0 +1,51 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:cosmic_spirit",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/cosmic_spirit_texture"
+			},
+			"geometry": {
+				"default": "geometry.cosmic_spirit"
+			},
+			"render_controllers": [
+				"controller.render.allay"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_cosmic_spirit"
+			},
+			"animations": {
+				"look_at_target_default": "animation.humanoid.look_at_target.default",
+				"move_controller": "controller.animation.verdant_skeleton.move",
+				"idle": "animation.cosmic_spirit.idle",
+				"move": "animation.cosmic_spirit.move",
+				"wings": "animation.cosmic_spirit.wings",
+				"bobbing": "animation.cosmic_spirit.bobbing",
+				"particle": "animation.cosmic_spirit.particle",
+				"holding": "animation.cosmic_spirit.holding",
+				"trade_controller": "controller.animation.cosmic_spirit.trade_controller",
+				"item_controller": "controller.animation.cosmic_spirit.item_controller",
+				"has_nothing": "animation.cosmic_spirit.has_nothing"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target_default",
+					"move_controller",
+					"trade_controller",
+					"item_controller",
+					"wings",
+					"bobbing",
+					"particle"
+				]
+			},
+			"particle_effects": {
+				"cosmic_spirit_move_emitter": "mnra_cata:cosmic_spirit_move_emitter",
+				"cosmic_spirit_emitter": "mnra_cata:cosmic_spirit_emitter"
+			}
+		}
+	}
+}

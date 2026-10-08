@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_stone_bricks_x_slabs"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "C ",
+      " C"
+    ],
+    "key": {
+      "C": {
+        "item": "ntk:corrupted_stone_brick_slab"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_stone_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_stone_brick_slab"
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.tm_aqc.fish_tiny_ui",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "ui_root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "base",
+					"parent": "ui_root",
+					"pivot": [0, 0, -2]
+				},
+				{
+					"name": "ui_body",
+					"parent": "base",
+					"pivot": [0, 0, -2],
+					"cubes": [
+						{
+							"origin": [-1, 0, -4],
+							"size": [2, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 0], "uv_size": [2, 2]},
+								"east": {"uv": [0, 0], "uv_size": [6, 2]},
+								"south": {"uv": [6, 2], "uv_size": [2, 2]},
+								"west": {"uv": [6, 0], "uv_size": [-6, 2]},
+								"up": {"uv": [8, 0], "uv_size": [2, 6]},
+								"down": {"uv": [10, 6], "uv_size": [2, -6]}
+							}
+						},
+						{
+							"origin": [0, 2, -4],
+							"size": [0, 5, 6],
+							"uv": {
+								"west": {"uv": [0, 2], "uv_size": [6, 5]}
+							}
+						},
+						{
+							"origin": [0, -5, -4],
+							"size": [0, 5, 6],
+							"uv": {
+								"west": {"uv": [0, 7], "uv_size": [6, 5]}
+							}
+						}
+					]
+				},
+				{
+					"name": "left_fin",
+					"parent": "ui_body",
+					"pivot": [1, 0, -1],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [1, 0, -1],
+							"size": [2, 2, 2],
+							"uv": {
+								"north": {"uv": [8, 6], "uv_size": [2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "right_fin",
+					"parent": "ui_body",
+					"pivot": [-1, 0, -1],
+					"rotation": [0, -45, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [2, 2, 2],
+							"uv": {
+								"east": {"uv": [10, 6], "uv_size": [-2, 2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "tail_fin",
+					"parent": "ui_body",
+					"pivot": [0, 0, 2],
+					"cubes": [
+						{
+							"origin": [0, -2.5, 2],
+							"size": [0, 6, 4],
+							"uv": {
+								"north": {"uv": [14, 0], "uv_size": [0, 1.5]},
+								"east": {"uv": [12, 0], "uv_size": [2, 1.5]},
+								"south": {"uv": [16, 0], "uv_size": [0, 1.5]},
+								"west": {"uv": [8, 8], "uv_size": [4, 6]},
+								"up": {"uv": [14, -2], "uv_size": [0, 2]},
+								"down": {"uv": [14, 0], "uv_size": [0, -2]}
+							}
+						}
+					]
+				},
+				{
+					"name": "background",
+					"pivot": [0, 0, 0]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_enchanted_emerald"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "enchanted_emerald",
+    "assume_symmetry": true,
+    "pattern": [
+      "D",
+      "E"
+    ],
+    "key": {
+      "D": {
+        "item": "ntk:enchanted_dust"
+      },
+      "E": {
+        "item": "minecraft:emerald"
+      }
+    },
+    "result": {
+      "item": "ntk:enchanted_emerald",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:enchanted_dust"
+      },
+      {
+        "item": "minecraft:emerald"
+      }
+    ]
+  }
+}

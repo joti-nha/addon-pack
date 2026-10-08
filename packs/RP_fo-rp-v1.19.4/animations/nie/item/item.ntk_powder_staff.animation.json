@@ -1,0 +1,81 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.item.ntk_powder_staff.1st_person_wield": {
+      "loop": true,
+      "bones": {
+        "rightItem": {
+          "position": [ -7.0, -3.0, -2.0 ],
+          "rotation": [ 152.0, -9.0, 25.0 ]
+        }
+      }
+    },
+    "animation.item.ntk_powder_staff.1st_person_wield_charging": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [107, -9, 25],
+					"position": [-4, 0, -10]
+				}
+			},
+			"sound_effects": {
+        "0.0": {
+          "effect": "charging"
+        }
+      }
+		},
+    "animation.item.ntk_powder_staff.1st_person_wield_charged": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [166.01049, -26.00792, -19.00226],
+					"position": [-5, -6, -2]
+				}
+			}
+		},
+    "animation.item.ntk_powder_staff.3rd_person_wield": {
+      "loop": true,
+      "bones": {
+        "rightItem": {
+          "position": [ 1.5, -2.5, -10.5 ],
+          "rotation": [ 97.0, -1.5, -49.0 ]
+        }
+      }
+    },
+    "animation.item.ntk_powder_staff.3rd_person_wield_charging": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [97.51571, -21.34315, -51.56489],
+					"position": [1.5, -2.5, -10.5]
+				}
+			},
+			"sound_effects": {
+        "0.0": {
+          "effect": "charging"
+        }
+      }
+		},
+		"animation.item.ntk_powder_staff.3rd_person_wield_charged": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"rotation": [97, -1.5, -49],
+					"position": [1.5, -2.5, -12.5]
+				}
+			}
+		},
+    "animation.item.ntk_powder_staff.staff_animation": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"staff_head": {
+					"scale": {
+						"0.0": [0.8, 0.8, 0.8],
+						"1.0": [0.8, 0.8, 0.8]
+					}
+				}
+			}
+		}
+	}
+}

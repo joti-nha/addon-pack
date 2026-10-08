@@ -1,0 +1,1 @@
+{"format_version":"1.21.90","minecraft:item":{"description":{"identifier":"panascais_caves:raw_pyronite","menu_category":{"category":"items","group":"panascais_common:raw_ores"}},"components":{"minecraft:icon":{"textures":{"default":"panascais_caves:raw_pyronite"}},"minecraft:display_name":{"value":"item.panascais_caves:raw_pyronite.title"}}}}

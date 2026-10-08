@@ -1,0 +1,59 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:sentinel",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/sentinel/sentinel"
+			},
+			"geometry": {
+				"default": "geometry.sentinel"
+			},
+			"spawn_egg": {
+				"texture": "sentinel_spawn"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"look_at_target",
+					"move",
+					"attacks"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.sentinel.controller",
+				"look_at_target": "controller.animation.sentinel.look_at_target",
+				"attacks": "controller.animation.sentinel.attacks",
+				"move": "controller.animation.sentinel.move",
+				"look_at_target_default": "animation.sentinel.look_at_target.default",
+				"look_at_target_gliding": "animation.sentinel.look_at_target.gliding",
+				"look_at_target_swimming": "animation.sentinel.look_at_target.swimming",
+				"explode": "animation.sentinel.explode",
+				"static": "animation.sentinel.static",
+				"guard": "animation.sentinel.shield",
+				"moving": "animation.sentinel.move",
+				"attack_one": "animation.sentinel.attack_one",
+				"attack_two": "animation.sentinel.attack_two",
+				"attack_three": "animation.sentinel.attack_three",
+				"attack_four": "animation.sentinel.attack_four",
+				"spears": "animation.sentinel.spears",
+				"spears_shoot": "animation.sentinel.spears_shoot",
+				"ground": "animation.sentinel.ground",
+				"knockback": "animation.sentinel.knockback",
+				"death": "animation.sentinel.death"
+			},
+			"render_controllers": [
+				"controller.render.sentinel"
+			]
+		}
+	}
+}

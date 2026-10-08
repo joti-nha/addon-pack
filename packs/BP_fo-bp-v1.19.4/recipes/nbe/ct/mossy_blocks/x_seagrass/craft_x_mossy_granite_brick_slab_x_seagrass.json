@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_granite_brick_slab_x_seagrass"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_granite_brick_slab",
+    "ingredients": [
+      {
+        "item": "ntk:granite_brick_slab",
+        "count": 1
+      },
+      {
+        "item": "minecraft:seagrass",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ntk:mossy_granite_brick_slab",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:granite_brick_slab"
+      },
+      {
+        "item": "minecraft:seagrass"
+      }
+    ]
+  }
+}

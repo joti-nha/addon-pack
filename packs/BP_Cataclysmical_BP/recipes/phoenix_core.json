@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:phoenix_core"
+		},
+		"pattern": [
+			"121",
+			"232",
+			"444"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:starfall"
+			},
+			"2": {
+				"item": "mnra_cata:sun_fragment"
+			},
+			"3": {
+				"item": "mnra_cata:cosmic_fragment"
+			},
+			"4": {
+				"item": "mnra_cata:infernal_ash"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:phoenix_core",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

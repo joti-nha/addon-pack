@@ -1,0 +1,32 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.entity.ntk_giant_moa": {
+      "geometry": "Geometry.default",
+      "part_visibility": [
+        {
+          "saddle": "query.is_saddled"
+        },
+        {
+          "chest": "query.is_chested"
+        }
+      ],
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+				"Array.textures[query.variant * 2 + query.is_sleeping]"
+			],
+      "arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.giant_moa_awake",
+						"Texture.giant_moa_sleep"
+					]
+				}
+			}
+    }
+  }
+}

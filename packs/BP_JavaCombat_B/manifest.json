@@ -1,0 +1,38 @@
+{
+   "format_version": 2,
+   "header": {
+      "description": "By Raiyon",
+      "name": "Java Combat[§dv2.6.5] Beharviors Packs",
+      "uuid": "9725a2c7-ea2e-49e4-9db6-83f8f4fdcbc4",
+      "version": [2, 6, 5],
+      "min_engine_version": [1, 21, 0]
+   },
+   "modules": [
+      {
+         "description": "TakeCareItsADesertOutThere",
+         "type": "script",
+         "language": "javascript",
+         "uuid": "36b5b1d8-a9bb-4566-80c7-e253ee82d82f",
+         "version": [2, 6, 5],
+         "entry": "scripts/main.js"
+      },
+      {
+         "type": "data",
+         "uuid": "7d80eeb7-75fb-488b-bfd0-0278f77d9793",
+         "version": [2, 6, 5]
+      }
+   ],
+   "dependencies": [
+      {
+         "module_name": "@minecraft/server",
+         "version": "1.16.0"
+      },
+      {
+         "uuid": "0cb1c037-670a-4e30-a485-ab77fde76b67",
+         "version": [2, 6, 5]
+      }
+   ],
+   "metadata": {
+      "product_type": "addon"
+   }
+}

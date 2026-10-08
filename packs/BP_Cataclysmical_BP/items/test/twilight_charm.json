@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:twilight_charm"
+		},
+		"components": {
+			"minecraft:icon": "mnra_cata_twilight_charm",
+			"minecraft:max_stack_size": 1,
+			"minecraft:cooldown": {
+				"category": "twilight_charm",
+				"duration": 1
+			},
+			"minecraft:rarity": {
+				"value": "uncommon"
+			},
+			"minecraft:tags": {
+				"tags": [
+					"mnra_cata:trinkets_slot_3",
+					"mnra_cata:trinkets_slot_4"
+				]
+			}
+		}
+	}
+}

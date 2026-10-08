@@ -1,0 +1,24 @@
+{
+  "format_version": "1.20.80",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_polished_andesite_x_andesite_tile_stairs"
+    },
+    "priority": 4,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:polished_andesite"
+      }
+    ],
+    "result": {
+      "item": "ntk:andesite_tile_stairs",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:polished_andesite"
+      }
+    ]
+  }
+}

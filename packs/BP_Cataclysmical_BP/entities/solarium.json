@@ -1,0 +1,386 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "mnra_cata:solarium",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"attack": "animation.solarium.attack",
+				"summon": "animation.solarium.summon",
+				"attack_controller": "controller.animation.solarium.attack_controller",
+				"heavy_attack": "animation.solarium.heavy_attack",
+				"charge": "animation.solarium.charge"
+			},
+			"scripts": {
+				"animate": [
+					"attack_controller"
+				]
+			}
+		},
+		"component_groups": {
+			"attack": {
+				"minecraft:skin_id": {
+					"value": 0
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 2,
+					"speed_multiplier": 1,
+					"attack_once": false,
+					"require_complete_path": true,
+					"attack_duration": 2,
+					"reach_multiplier": 4,
+					"track_target": false,
+					"hit_delay_pct": 0.43
+				},
+				"minecraft:attack": {
+					"damage": 12
+				}
+			},
+			"summon": {
+				"minecraft:skin_id": {
+					"value": 1
+				},
+				"minecraft:behavior.summon_entity": {
+					"priority": 1,
+					"summon_choices": [
+						{
+							"do_casting": true,
+							"weight": 1,
+							"cast_duration": 1.5,
+							"sequence": [
+								{
+									"shape": "line",
+									"target": "target",
+									"base_delay": 0,
+									"delay_per_summon": 0,
+									"num_entities_spawned": 1,
+									"entity_lifespan": -1,
+									"summon_cap": 1,
+									"summon_cap_radius": 1,
+									"entity_type": "mnra_cata:flare_stone_meteor"
+								},
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 0,
+									"delay_per_summon": 0.1,
+									"num_entities_spawned": 4,
+									"entity_type": "mnra_cata:flare_stone_meteor",
+									"size": 5,
+									"entity_lifespan": -1,
+									"summon_cap": 4,
+									"summon_cap_radius": 1
+								}
+							]
+						}
+					]
+				},
+				"minecraft:attack": {
+					"damage": 0
+				}
+			},
+			"heavy_attack": {
+				"minecraft:skin_id": {
+					"value": 2
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 2,
+					"speed_multiplier": 1,
+					"attack_once": false,
+					"require_complete_path": true,
+					"attack_duration": 2.75,
+					"reach_multiplier": 4.2,
+					"track_target": false,
+					"hit_delay_pct": 0.42
+				},
+				"minecraft:attack": {
+					"damage": 18
+				}
+			},
+			"charge": {
+				"minecraft:skin_id": {
+					"value": 3
+				},
+				"minecraft:behavior.summon_entity": {
+					"priority": 1,
+					"summon_choices": [
+						{
+							"do_casting": true,
+							"weight": 1,
+							"cast_duration": 3,
+							"sequence": [
+								{
+									"shape": "circle",
+									"target": "target",
+									"base_delay": 0,
+									"delay_per_summon": 0,
+									"num_entities_spawned": 0,
+									"size": 0,
+									"entity_lifespan": 0,
+									"summon_cap": 0,
+									"summon_cap_radius": 0
+								}
+							]
+						}
+					]
+				},
+				"minecraft:attack": {
+					"damage": 0
+				}
+			},
+			"can_move": {
+				"minecraft:movement": {
+					"value": 0.22
+				},
+				"minecraft:movement.basic": {}
+			},
+			"is_attacking": {
+				"minecraft:movement": {
+					"value": 0.01
+				},
+				"minecraft:movement.basic": {
+					"max_turn": 0
+				}
+			},
+			"distance_attacks": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 6,
+					"outside_range": 6,
+					"on_outside_range": {
+						"event": "distance_attack_types"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:behavior.look_at_player": {
+				"priority": 7,
+				"look_distance": 8,
+				"probability": 0.02
+			},
+			"minecraft:follow_range": {
+				"value": 32
+			},
+			"minecraft:collision_box": {
+				"width": 0.9,
+				"height": 2.7
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"entity_types": [
+					{
+						"max_dist": 32,
+						"must_see": true,
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "==",
+									"value": "player"
+								}
+							]
+						}
+					}
+				],
+				"reselect_targets": true,
+				"must_see": false
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 7
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "magic",
+						"deals_damage": "no"
+					},
+					{
+						"cause": "projectile",
+						"deals_damage": "yes",
+						"damage_multiplier": 0.2
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:health": {
+				"value": 115,
+				"max": 115
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?60:0"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"mob",
+					"monster",
+					"solar",
+					"debuff_immunity",
+					"elemental",
+					"solarium"
+				]
+			},
+			"minecraft:navigation.walk": {
+				"avoid_powder_snow": true,
+				"avoid_portals": true,
+				"can_path_over_water": true,
+				"can_path_over_lava": true
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1,
+				"alert_same_type": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 0.8
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/minera/cata/entities/solarium.json"
+			},
+			"minecraft:fire_immune": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"can_move"
+					]
+				},
+				"trigger": {
+					"event": "attack_types"
+				}
+			},
+			"attack_types": {
+				"randomize": [
+					{
+						"weight": 3,
+						"add": {
+							"component_groups": [
+								"attack",
+								"distance_attacks"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"summon",
+								"heavy_attack"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"heavy_attack",
+								"distance_attacks"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"summon",
+								"attack"
+							]
+						},
+						"weight": 2
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"summon"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"attack",
+								"heavy_attack"
+							]
+						}
+					}
+				]
+			},
+			"is_attacking": {
+				"add": {
+					"component_groups": [
+						"is_attacking"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"can_move"
+					]
+				}
+			},
+			"finish_attack": {
+				"add": {
+					"component_groups": [
+						"can_move"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"is_attacking"
+					]
+				}
+			},
+			"remove_distance_attacks": {
+				"remove": {
+					"component_groups": [
+						"distance_attacks"
+					]
+				}
+			},
+			"distance_attack_types": {
+				"add": {
+					"component_groups": [
+						"charge"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"attack",
+						"heavy_attack",
+						"summon",
+						"distance_attacks"
+					]
+				}
+			},
+			"attack": {
+				"add": {
+					"component_groups": [
+						"attack"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"heavy_attack",
+						"summon"
+					]
+				}
+			},
+			"start_charge": {
+				"queue_command": {
+					"command": [
+						"tag @s add is_charging"
+					]
+				}
+			},
+			"stop_charge": {
+				"queue_command": {
+					"command": [
+						"tag @s remove is_charging"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mnra_cata:meowclysm"
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "mnra_cata_meowclysm",
+					"render_method": "alpha_test",
+					"face_dimming": false,
+					"ambient_occlusion": false
+				}
+			},
+			"minecraft:geometry": "geometry.meowclysm"
+		}
+	}
+}

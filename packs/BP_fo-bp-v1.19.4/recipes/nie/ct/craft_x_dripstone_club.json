@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_dripstone_club"
+    },
+    "priority": 0,
+    "tags": [ "crafting_table" ],
+    "group": "dripstone_club",
+    "assume_symmetry": true,
+    "pattern": [
+      "DPD",
+      "DPD",
+      " P "
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:pointed_dripstone"
+      },
+      "P": {
+        "tag": "minecraft:planks"
+      }
+    },
+    "result": {
+      "item": "ntk:dripstone_club",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:pointed_dripstone"
+      },
+      {
+        "tag": "minecraft:planks"
+      }
+    ]
+  }
+}

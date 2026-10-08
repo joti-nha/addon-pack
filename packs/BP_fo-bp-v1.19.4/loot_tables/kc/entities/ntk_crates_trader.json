@@ -1,0 +1,37 @@
+// Forsaken Odyssey:
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 90,
+          "type": "empty"
+        },
+        {
+          "weight": 10,
+          "type": "item",
+          "name": "ntk:learning_book_of_crates_trading",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "furnace_smelt",
+              "conditions": [
+                {
+                  "condition": "entity_properties",
+                  "entity": "this",
+                  "properties": {
+                    "on_fire": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_zinc_leggings"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ZZZ",
+      "Z Z",
+      "Z Z"
+    ],
+    "key": {
+      "Z": {
+        "item": "ntk:zinc_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:zinc_leggings",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:zinc_ingot"
+      }
+    ]
+  }
+}

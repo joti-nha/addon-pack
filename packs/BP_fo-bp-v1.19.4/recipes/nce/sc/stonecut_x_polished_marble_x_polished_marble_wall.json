@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_polished_marble_x_polished_marble_wall"
+    },
+    "priority": 0,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:polished_marble"
+      }
+    ],
+    "result": {
+      "item": "ntk:polished_marble_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:polished_marble"
+      }
+    ]
+  }
+}

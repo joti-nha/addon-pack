@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:polished_deepslate_slabnback"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"AA"
+		],
+		"key": {
+			"A": {
+				"item": "minecraft:polished_deepslate_slab"
+			}
+		},
+		"result": {
+			"item": "minecraft:polished_deepslate",
+			"count": 1
+		}
+	}
+}

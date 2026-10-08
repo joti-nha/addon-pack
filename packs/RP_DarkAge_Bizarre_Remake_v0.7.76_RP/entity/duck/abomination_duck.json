@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:abomination_duck",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/duck/abomination_duck"
+			},
+			"geometry": {
+				"default": "geometry.abomination_duck"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"attacks",
+					"bump",
+					{
+						"moves": "!query.is_delayed_attacking&&!query.is_charged"
+					},
+					{
+						"head": "query.is_baby"
+					}
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.abomination_duck.controller",
+				"moves": "controller.animation.abomination_duck.moves",
+				"attacks": "controller.animation.abomination_duck.attacks",
+				"wait": "animation.abomination_duck.wait",
+				"static": "animation.abomination_duck.target",
+				"move": "animation.abomination_duck.move",
+				"move_angry": "animation.abomination_duck.run",
+				"bite": "animation.abomination_duck.bite",
+				"peck": "animation.abomination_duck.peck",
+				"squash_one": "animation.abomination_duck.squash_one",
+				"squash_two": "animation.abomination_duck.squash_two",
+				"squash_three": "animation.abomination_duck.squash_three",
+				"shoot": "animation.abomination_duck.shoot",
+				"bump": "animation.abomination_duck.bump",
+				"head": "animation.abomination_duck.head"
+			},
+			"render_controllers": [
+				"controller.render.plague"
+			],
+			"spawn_egg": {
+				"texture": "abomination_duck_spawn"
+			}
+		}
+	}
+}

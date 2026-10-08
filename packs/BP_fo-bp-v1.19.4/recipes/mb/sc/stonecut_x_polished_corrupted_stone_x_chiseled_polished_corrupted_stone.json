@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_polished_corrupted_stone_x_chiseled_polished_corrupted_stone"
+    },
+    "priority": 0,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:polished_corrupted_stone"
+      }
+    ],
+    "result": {
+      "item": "ntk:chiseled_polished_corrupted_stone",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:polished_corrupted_stone"
+      }
+    ]
+  }
+}

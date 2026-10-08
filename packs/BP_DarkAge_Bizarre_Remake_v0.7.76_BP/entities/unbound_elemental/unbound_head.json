@@ -1,0 +1,291 @@
+{
+	"format_version": "1.19.20",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:unbound_head",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"particle",
+					{
+						"cooldown": "query.is_charged"
+					},
+					{
+						"cooldown_two": "!query.is_charged&&query.has_target&&!query.is_saddled"
+					}
+				]
+			},
+			"animations": {
+				"particle": "animation.unbound_head.particles",
+				"cooldown": "animation.unbound_head.cooldown",
+				"cooldown_two": "animation.unbound_head.cooldown_two"
+			}
+		},
+		"component_groups": {
+			"dk:unbound_head_shooter": {
+				"minecraft:scale": {
+					"value": 1
+				},
+				"minecraft:is_saddled": {},
+				"minecraft:shooter": {
+					"def": "dk:unbound_elemental_fireball_two"
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 1,
+					"attack_radius": 64,
+					"charge_shoot_trigger": 0.28,
+					"charge_charged_trigger": 0
+				}
+			},
+			"dk:unbound_head_enemy": {
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 30,
+					"broadcast_targets": [
+						"unbound"
+					]
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 1,
+					"alert_same_type": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"operator": "!=",
+										"value": "unbound"
+									}
+								]
+							}
+						}
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 1,
+					"scan_interval": 20,
+					"within_radius": 64,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "snowgolem"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "irongolem"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "soulless_knight"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "gargoyle"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "sentinel"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "stinky"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "assassin"
+									},
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "!=",
+												"value": "unbound"
+											},
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "==",
+												"value": "outcast"
+											}
+										]
+									}
+								]
+							},
+							"max_dist": 64
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "!=",
+												"value": "unbound"
+											},
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "==",
+												"value": "villager"
+											}
+										]
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "wandering_trader"
+									}
+								]
+							},
+							"max_dist": 64,
+							"must_see": false
+						}
+					],
+					"must_see": false,
+					"must_see_forget_duration": 0.5
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.2,
+					"time_down_event": {
+						"event": "dk:despawn_enemy",
+						"filters": {
+							"test": "is_riding",
+							"subject": "self",
+							"value": false
+						}
+					}
+				}
+			},
+			"dk:unbound_despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"unbound_head",
+					"unbound",
+					"projectile",
+					"inanimate"
+				]
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:behavior.look_at_player": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7
+			},
+			"minecraft:behavior.look_at_entity": {
+				"priority": 9,
+				"look_distance": 6,
+				"probability": 7,
+				"filters": {
+					"test": "is_family",
+					"subject": "other",
+					"value": "mob"
+				}
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:follow_range": {
+				"value": 64,
+				"max": 64
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:can_fly": {},
+			"minecraft:behavior.float_wander": {
+				"priority": 2,
+				"must_reach": true
+			},
+			"minecraft:navigation.float": {
+				"can_path_over_water": true
+			},
+			"minecraft:movement": {
+				"value": 0.03
+			},
+			"minecraft:jump.static": {},
+			"minecraft:can_climb": {},
+			"minecraft:behavior.float": {
+				"priority": 0
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"dk:unbound_head_enemy",
+						"dk:unbound_head_shooter"
+					]
+				}
+			},
+			"dk:despawn_enemy": {
+				"add": {
+					"component_groups": [
+						"dk:unbound_despawn"
+					]
+				}
+			},
+			"dk:cooldown_event_mode": {
+				"remove": {
+					"component_groups": [
+						"dk:unbound_head_shooter"
+					]
+				}
+			},
+			"dk:return_event_mode": {
+				"add": {
+					"component_groups": [
+						"dk:unbound_head_shooter"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_soul_stone_x_polished_soul_stone"
+    },
+    "priority": 1,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:soul_stone"
+      }
+    ],
+    "result": {
+      "item": "ntk:polished_soul_stone",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:soul_stone"
+      }
+    ]
+  }
+}

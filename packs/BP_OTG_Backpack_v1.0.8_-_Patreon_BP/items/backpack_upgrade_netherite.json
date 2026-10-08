@@ -1,0 +1,19 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:item": {
+        "description": {
+            "identifier": "otg:backpack_upgrade_netherite",
+            "menu_category": {
+                "category": "items",
+                "group": "otg:itemGroup.name.upgrades"
+            }
+        },
+        "components": {
+            "minecraft:icon": "backpack_upgrade_netherite",
+            "minecraft:max_stack_size": 1,
+            "minecraft:display_name": {
+                "value": "item.otg:backpack_upgrade_netherite.name"
+            }
+        }
+    }
+}

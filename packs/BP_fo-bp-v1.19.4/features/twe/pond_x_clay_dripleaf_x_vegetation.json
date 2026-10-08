@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/pond_x_clay_dripleaf_x_vegetation"
+    },
+    "features": [
+      [ "minecraft:random_clay_with_dripleaves_snap_to_floor_feature", 100 ],
+      [ "minecraft:random_clay_with_dripleaves_snap_to_floor_feature", 100 ]
+    ]
+  }
+}

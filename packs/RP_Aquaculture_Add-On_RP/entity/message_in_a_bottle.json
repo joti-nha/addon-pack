@@ -1,0 +1,28 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tm_aqc:message_in_a_bottle",
+      "materials": {
+        "default": "snowball"
+      },
+      "textures": {
+        "default": "textures/tm/aqc/items/fishing_loot/message_in_a_bottle"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "render_controllers": [
+        "controller.render.item_sprite"
+      ],
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      }
+    }
+  }
+}

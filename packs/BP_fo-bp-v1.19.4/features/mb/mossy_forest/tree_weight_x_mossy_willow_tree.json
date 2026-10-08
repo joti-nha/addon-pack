@@ -1,0 +1,26 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/tree_weight_x_mossy_willow_tree"
+    },
+    "features": [
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_tree_01", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_tree_02", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_branched_tree_01", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_branched_tree_02", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_branched_tree_03", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_lean_branched_tree_01", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_mega_lean_branched_tree_01", 50 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_mega_branched_tree_01", 50 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_willow_mega_branched_tree_02", 25 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_swamp_tree_01", 10 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_swamp_branched_vines_tree_01", 25 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_swamp_mega_fancy_branched_tree_01", 25 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_swamp_mega_branched_vines_tree_01", 25 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_grove_rooted_tree_01", 75 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_grove_rooted_tree_02", 100 ],
+      [ "ntk:mb/mossy_forest/tree_x_mossy_willow_x_sprouting_lean_tree_01", 25 ]
+    ]
+  }
+}

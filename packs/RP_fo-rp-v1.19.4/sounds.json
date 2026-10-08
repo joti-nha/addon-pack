@@ -1,0 +1,2888 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "ntk:crates_trader": {
+        "events": {
+          "ambient": "mob.villager.idle",
+          "cast.spell": "mob.evocation_illager.cast_spell",
+          "death": "mob.villager.death",
+          "death.to.zombie": "mob.villager.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "haggle": "mob.villager.haggle",
+          "haggle.no": "mob.villager.no",
+          "haggle.yes": "mob.villager.yes",
+          "hurt": "mob.villager.hit",
+          "prepare.attack": "mob.evocation_illager.prepare_attack",
+          "prepare.summon": "mob.evocation_illager.prepare_summon",
+          "prepare.wololo": "mob.evocation_illager.prepare_wololo",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:piglin_crates_trader": {
+        "events": {
+          "admire": "mob.piglin.admiring_item",
+          "ambient": "mob.piglin.ambient",
+          "angry": "mob.piglin.angry",
+          "attack": "mob.piglin.attack",
+          "celebrate": "mob.piglin.celebrate",
+          "death": "mob.piglin.death",
+          "hurt": "mob.piglin.hurt",
+          "retreat": "mob.piglin.retreat",
+          "step": {
+            "sound": "mob.piglin.step",
+            "volume": 0.35
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      
+      "ntk:corpse_wood": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 1.0, 1.2 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.creaking.unfreeze",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:corrupted_oak_troot": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.armadillo.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:corrupted_raven": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ntk_corrupted_raven.ambient",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_corrupted_raven.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_corrupted_raven.hurt",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:deopard": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ocelot.idle",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 2.0
+          },
+          "attack": {
+            "sound": "mob.cat.eat",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ocelot.death",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.cat.hit",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mossheep": {
+        "events": {
+          "ambient": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.sheep.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.4
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mossman": {
+        "events": {
+          "ambient": {
+            "sound": "mob.drowned.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "ambient.in.water": {
+            "sound": "mob.drowned.say_water",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.drowned.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "death.in.water": {
+            "sound": "mob.drowned.death_water",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.drowned.hurt",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "hurt.in.water": {
+            "sound": "mob.drowned.hurt_water",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.drowned.step",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mossy_willow_troot": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.armadillo.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:overgrown_jungle_troot": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.armadillo.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:pale_mossheep": {
+        "events": {
+          "ambient": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.sheep.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.sheep.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.4
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:selvander": {
+        "events": {
+          "ambient": {
+            "sound": "mob.axolotl.idle",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.5
+          },
+          "ambient.in.water": {
+            "sound": "mob.axolotl.idle_water",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "angry": {
+            "sound": "mob.axolotl.attack",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.axolotl.attack",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.axolotl.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.axolotl.hurt",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.pig.step",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      
+      "ntk:crystalmite": {
+        "events": {
+          "ambient": {
+            "sound": "mob.endermite.say",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.endermite.kill",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.endermite.hit",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.endermite.step",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:glowbird": {
+        "events": {
+          "ambient": {
+            "sound": "mob.parrot.idle",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.parrot.death",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.parrot.eat",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 1.0
+          },
+          "fly": {
+            "sound": "mob.parrot.fly",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.parrot.hurt",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.parrot.step",
+            "pitch": [ 2.0, 2.2 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:glowceling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.turtle.ambient",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.turtle.death",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.turtle.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:moss_mushling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.strider.idle",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.panda.idle.worried",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mossy_skeleton": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:myceling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.turtle.ambient",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.turtle.death",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.turtle.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:nethermite": {
+        "events": {
+          "ambient": {
+            "sound": "mob.endermite.say",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.endermite.kill",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.endermite.hit",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.endermite.step",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:block_active_heated_netherrack_explosion": {
+        "events": {
+          "ambient": "",
+          "death": {
+            "sound": "firework.blast",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": ""
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      
+      "ntk:miscellaneous_biome_checker": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": "",
+          "step": ""
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.1
+      },
+      
+      "ntk:book_keeper": {
+        "events": {
+          "ambient": "mob.villager.idle",
+          "cast.spell": "mob.evocation_illager.cast_spell",
+          "death": "mob.villager.death",
+          "death.to.zombie": "mob.villager.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "haggle": "mob.villager.haggle",
+          "haggle.no": "mob.villager.no",
+          "haggle.yes": "mob.villager.yes",
+          "hurt": "mob.villager.hit",
+          "prepare.attack": "mob.evocation_illager.prepare_attack",
+          "prepare.summon": "mob.evocation_illager.prepare_summon",
+          "prepare.wololo": "mob.evocation_illager.prepare_wololo",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scrollwright": {
+        "events": {
+          "ambient": "mob.villager.idle",
+          "cast.spell": "mob.evocation_illager.cast_spell",
+          "death": "mob.villager.death",
+          "death.to.zombie": "mob.villager.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "haggle": "mob.villager.haggle",
+          "haggle.no": "mob.villager.no",
+          "haggle.yes": "mob.villager.yes",
+          "hurt": "mob.villager.hit",
+          "prepare.attack": "mob.evocation_illager.prepare_attack",
+          "prepare.summon": "mob.evocation_illager.prepare_summon",
+          "prepare.wololo": "mob.evocation_illager.prepare_wololo",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:virtuous_flying_book": {
+        "events": {
+          "ambient": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "block.loom.use",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "dig.wood",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "takeoff": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      
+      "ntk:book_curserer": {
+        "events": {
+          "ambient": {
+            "sound": "mob.evocation_illager.ambient",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "ambient.in.raid": {
+            "sound": "mob.evocation_illager.ambient",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 3.0
+          },
+          "cast.spell": {
+            "sound": "mob.evocation_illager.cast.spell",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "celebrate": {
+            "sound": "mob.evocation_illager.celebrate",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.evocation_illager.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.evocation_illager.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "prepare.attack": {
+            "sound": "mob.evocation_illager.prepare_attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "prepare.summon": {
+            "sound": "mob.evocation_illager.prepare_summon",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "prepare.wololo": {
+            "sound": "mob.evocation_illager.prepare_wololo",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:brown_mushling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.strider.idle",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.panda.idle.worried",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:cave_dweller": {
+        "events": {
+          "ambient": {
+            "sound": "mob.vindicator.idle",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "ambient.in.raid": {
+            "sound": "mob.vindicator.idle",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 3.0
+          },
+          "celebrate": {
+            "sound": "mob.vindicator.celebrate",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.vindicator.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.vindicator.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:cave_wolf": {
+        "events": {
+          "ambient": {
+            "sound": "mob.wolf.big.bark",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.wolf.big.death",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "eat": "",
+          "growl": {
+            "sound": "mob.wolf.big.growl",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.wolf.big.hurt",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "hurt.reduced": {
+            "sound": "armor.damage_wolf",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "pant": {
+            "sound": "mob.wolf.big.panting",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "shake": {
+            "sound": "mob.wolf.shake",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.wolf.step",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          },
+          "whine": {
+            "sound": "mob.wolf.big.whine",
+            "pitch": [ 0.7, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "variants": {
+          "key": "query.is_baby ? 'baby' : query.property('ntk:sound_variant')",
+          "map": {
+            "adult": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "baby": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.baby_wolf.bark",
+                  "pitch": [ 0.4, 0.5 ],
+                  "volume": 1.0
+                },
+                "ambient.baby" : {
+                  "sound": "mob.baby_wolf.bark",
+                  "pitch": [ 0.4, 0.5 ],
+                  "volume": 1.0
+                },
+                "death": {
+                  "sound": "mob.baby_wolf.death",
+                  "pitch": [ 0.4, 0.5 ],
+                  "volume": 1.0
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.baby_wolf.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 1.0
+                },
+                "hurt": {
+                  "sound": "mob.wolf.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 1.0
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.baby_wolf.panting",
+                  "pitch": [ 0.4, 0.5 ],
+                  "volume": 1.0
+                },
+                "shake": {
+                  "sound": "mob.baby_wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.baby_wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.baby_wolf.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "big": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.big.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.big.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.big.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.big.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.big.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.big.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "cute": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.cute.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.cute.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.cute.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.cute.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.cute.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.cute.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "grumpy": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.grumpy.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.grumpy.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.grumpy.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.grumpy.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.grumpy.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.grumpy.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "mad": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.mad.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.mad.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.mad.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.mad.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.mad.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.mad.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "puglin": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.puglin.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.puglin.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.puglin.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.puglin.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.puglin.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.puglin.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            },
+            "sad": {
+              "events": {
+                "ambient": {
+                  "sound": "mob.wolf.sad.bark",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "death": {
+                  "sound": "mob.wolf.sad.death",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "eat": "",
+                "growl": {
+                  "sound": "mob.wolf.sad.growl",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt": {
+                  "sound": "mob.wolf.sad.hurt",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "hurt.reduced": {
+                  "sound": "armor.damage_wolf",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "pant": {
+                  "sound": "mob.wolf.sad.panting",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "shake": {
+                  "sound": "mob.wolf.shake",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "step": {
+                  "sound": "mob.wolf.step",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                },
+                "whine": {
+                  "sound": "mob.wolf.sad.whine",
+                  "pitch": [ 0.7, 0.8 ],
+                  "volume": 0.8
+                }
+              },
+              "pitch": [ 0.8, 1.2 ],
+              "volume": 1.0
+            }
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:clurve": {
+        "events": {
+          "ambient": {
+            "sound": "mob.axolotl.idle",
+            "pitch": [ 0.05, 0.1 ],
+            "volume": 1.5
+          },
+          "angry": {
+            "sound": "mob.warden.roar",
+            "pitch": [ 1.5, 1.6 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 1.9, 2.0 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.axolotl.hurt",
+            "pitch": [ 0.1, 0.2 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.pig.step",
+            "pitch": [ 1.6, 1.7 ],
+            "volume": 0.6
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:cobblestone_golem": {
+        "events": {
+          "ambient": {
+            "sound": "mob.polarbear.idle",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.6
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:crimson_mushling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.strider.idle",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.panda.idle.worried",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:cursed_dire_bat": {
+        "events": {
+          "ambient": {
+            "sound": "mob.bat.idle",
+            "pitch": [ 0.1, 0.3 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.bat.death",
+            "pitch": [ 0.1, 0.3 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.bat.hurt",
+            "pitch": [ 0.1, 0.3 ],
+            "volume": 0.1
+          },
+          "takeoff": {
+            "sound": "mob.bat.takeoff",
+            "pitch": [ 0.1, 0.3 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.1, 0.3 ],
+        "volume": 0.35
+      },
+      "ntk:cursed_flying_book": {
+        "events": {
+          "ambient": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "block.loom.use",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "dig.wood",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "takeoff": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:cursed_scarecrow": {
+        "events": {
+          "ambient": {
+            "sound": "step.vines",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "dig.grass",
+            "pitch": [ 0.8, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "block.bamboo.hit",
+            "pitch": [ 0.3, 0.5 ],
+            "volume": 0.5
+          },
+          "step": {
+            "sound": "step.moss",
+            "pitch": [ 0.8, 1.1 ],
+            "volume": 1.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:deepslate_golem": {
+        "events": {
+          "ambient": {
+            "sound": "block.grindstone.use",
+            "pitch": [ 0.3, 0.4 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.5, 0.65 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.5, 0.6 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:dire_bat": {
+        "events": {
+          "ambient": {
+            "sound": "mob.bat.idle",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.bat.death",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.bat.hurt",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.1
+          },
+          "takeoff": {
+            "sound": "mob.bat.takeoff",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.2, 0.4 ],
+        "volume": 0.35
+      },
+      "ntk:enchanted_flying_book": {
+        "events": {
+          "ambient": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "block.loom.use",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "dig.wood",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "takeoff": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:firebird": {
+        "events": {
+          "ambient": {
+            "sound": "mob.parrot.idle",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.parrot.death",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.parrot.eat",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "fly": {
+            "sound": "mob.parrot.fly",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.parrot.hurt",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.parrot.step",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:flying_book": {
+        "events": {
+          "ambient": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "block.loom.use",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "dig.wood",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "takeoff": {
+            "sound": "item.book.put",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:forest_wisp": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ntk_forest_wisp.ambient",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_forest_wisp.death",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_forest_wisp.hurt",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:giant_moa": {
+        "events": {
+          "add.chest": {
+            "sound": "mob.horse.armor",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "ambient": {
+            "sound": "mob.ntk_giant_moa.ambient",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.ntk_giant_moa.attack",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_giant_moa.death",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_giant_moa.hurt",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.cow.step",
+            "pitch": [ 1.4, 1.6 ],
+            "volume": 0.6
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:hummingbird": {
+        "events": {
+          "ambient": {
+            "sound": "mob.parrot.idle",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.parrot.death",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.5
+          },
+          "eat": {
+            "sound": "mob.parrot.eat",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.5
+          },
+          "fly": {
+            "sound": "mob.parrot.fly",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.2
+          },
+          "hurt": {
+            "sound": "mob.parrot.hurt",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.5
+          },
+          "step": {
+            "sound": "mob.parrot.step",
+            "pitch": [ 2.8, 3.2 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:jellyfish": {
+        "events": {
+          "flop": {
+            "sound": "mob.fish.flop",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.fish.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt.in.water": {
+            "sound": "mob.fish.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.fish.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:lurknash": {
+        "events": {
+          "ambient": {
+            "sound": "mob.camel.ambient",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.camel.death",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.camel.eat",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 1.0
+          },
+          "growl": {
+            "sound": "mob.camel.stand",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.camel.hurt",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 1.0
+          },
+          "hurt.reduced": {
+            "sound": "armor.damage_wolf",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "pant": "",
+          "saddle": {
+            "sound": "mob.horse.leather",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.camel.step",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 1.0
+          },
+          "whine": ""
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "variants": {
+          "key": null
+        },
+        "volume": 1.0
+      },
+      "ntk:magma_golem": {
+        "events": {
+          "ambient": {
+            "sound": "mob.polarbear.idle",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.6
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mossy_cobblestone_golem": {
+        "events": {
+          "ambient": {
+            "sound": "mob.polarbear.idle",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.6
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:mud_soil_cube": {
+        "events": {
+          "ambient": "",
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.magmacube.small",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.magmacube.small",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "squish.big": {
+            "sound": "mob.magmacube.big",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          },
+          "squish.small": {
+            "sound": "mob.magmacube.small",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:nether_soul_wisp": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ntk_forest_wisp.ambient",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_forest_wisp.death",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_forest_wisp.hurt",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:nether_wisp": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ntk_forest_wisp.ambient",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_forest_wisp.death",
+            "pitch": [ 0.9, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_forest_wisp.hurt",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:oak_tree_guardian": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.creaking.unfreeze",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:opossum": {
+        "events": {
+          "ambient": {
+            "sound": "mob.fox.ambient",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.fox.bite",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.fox.death",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.fox.eat",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.fox.hurt",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "mad": {
+            "sound": "mob.fox.aggro",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "screech": {
+            "sound": "mob.fox.screech",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:pale_oak_troot": {
+        "events": {
+          "ambient": {
+            "sound": "mob.creaking.ambient",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.creaking.attack",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.creaking.death",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.armadillo.hurt",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.creaking.step",
+            "pitch": [ 1.0, 1.4 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:prismarine_clam": {
+        "events": {
+          "ambient": {
+            "sound": "mob.glow_squid.ambient",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 0.6
+          },
+          "death": {
+            "sound": "mob.glow_squid.death",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.glow_squid.hurt",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 0.6
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:raven": {
+        "events": {
+          "ambient": {
+            "sound": "mob.ntk_raven.ambient",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.ntk_raven.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.ntk_raven.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:red_mushling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.strider.idle",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.panda.idle.worried",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:sand_cube": {
+        "events": {
+          "ambient": "",
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "dig.sand",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "hit.sand",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "squish.big": {
+            "sound": "use.sand",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          },
+          "squish.small": {
+            "sound": "use.sand",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scarecrow": {
+        "events": {
+          "ambient": {
+            "sound": "step.vines",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "dig.grass",
+            "pitch": [ 0.8, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "block.bamboo.hit",
+            "pitch": [ 0.3, 0.5 ],
+            "volume": 0.5
+          },
+          "step": {
+            "sound": "step.moss",
+            "pitch": [ 0.8, 1.1 ],
+            "volume": 1.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scorpion": {
+        "events": {
+          "ambient": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.spider.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scorpion_badland": {
+        "events": {
+          "ambient": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.spider.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scorpion_cave": {
+        "events": {
+          "ambient": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.spider.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:scorpion_desert": {
+        "events": {
+          "ambient": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "death": {
+            "sound": "mob.spider.death",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          },
+          "hurt": {
+            "sound": "mob.spider.say",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:sculk_walker": {
+        "events": {
+          "ambient": {
+            "sound": "mob.warden.agitated",
+            "pitch": [ 1.5, 1.6 ],
+            "volume": 0.8
+          },
+          "angry": {
+            "sound": "nearby_close.warden",
+            "pitch": [ 1.6, 1.7 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "shriek.sculk_shrieker",
+            "pitch": [ 1.25, 1.3 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.warden.hurt",
+            "pitch": [ 1.4, 1.5 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.warden.step",
+            "pitch": [ 1.4, 1.5 ],
+            "volume": 0.6
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },      
+      "ntk:skeleton_footman": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:skeleton_guard": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:skeleton_swordman": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:skeleton_golden_swordman": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:snow_cube": {
+        "events": {
+          "ambient": "",
+          "attack": {
+            "sound": "mob.attack",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "dig.powder_snow",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "hit.powder_snow",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "squish.big": {
+            "sound": "use.powder_snow",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          },
+          "squish.small": {
+            "sound": "use.powder_snow",
+            "pitch": [ 0.64, 0.96 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:soul_firebird": {
+        "events": {
+          "ambient": {
+            "sound": "mob.parrot.idle",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.parrot.death",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.parrot.eat",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "fly": {
+            "sound": "mob.parrot.fly",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.parrot.hurt",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.parrot.step",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:sparrow": {
+        "events": {
+          "ambient": {
+            "sound": "mob.parrot.idle",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.parrot.death",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "eat": {
+            "sound": "mob.parrot.eat",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "fly": {
+            "sound": "mob.parrot.fly",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          },
+          "hurt": {
+            "sound": "mob.parrot.hurt",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.parrot.step",
+            "pitch": [ 1.8, 2.0 ],
+            "volume": 0.1
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:squirrel": {
+        "events": {
+          "ambient": {
+            "sound": "mob.rabbit.idle",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.4, 1.0 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:voidlet": {
+        "events": {
+          "ambient": {
+            "sound": "mob.axolotl.idle",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.axolotl.death",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.axolotl.hurt",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:wandering_collector": {
+        "events": {
+          "ambient": "mob.wanderingtrader.idle",
+          "cast.spell": "mob.evocation_illager.cast_spell",
+          "celebrate": "mob.evocation_illager.celebrate",
+          "death": "mob.wanderingtrader.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "haggle": "mob.wanderingtrader.haggle",
+          "haggle.no": "mob.wanderingtrader.no",
+          "haggle.yes": "mob.wanderingtrader.yes",
+          "hurt": "mob.wanderingtrader.hurt",
+          "prepare.attack": "mob.evocation_illager.prepare_attack",
+          "prepare.summon": "mob.evocation_illager.prepare_summon",
+          "prepare.wololo": "mob.evocation_illager.prepare_wololo",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:warped_mushling": {
+        "events": {
+          "ambient": {
+            "sound": "mob.strider.idle",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "attack": {
+            "sound": "mob.panda.idle.worried",
+            "pitch": [ 1.8, 2.2 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 0.2, 0.5 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:warthog": {
+        "events": {
+          "ambient": {
+            "sound": "mob.hoglin.ambient",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "angry": {
+            "angry": "mob.hoglin.angry",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "attack": {
+            "sound": "mob.hoglin.attack",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.hoglin.death",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.hoglin.hurt",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "retreat": {
+            "sound": "mob.hoglin.retreat",
+            "pitch": [ 1.4, 1.8 ],
+            "volume": 1.0
+          },
+          "step": {
+            "sound": "mob.pig.step",
+            "pitch": [ 1.4, 1.6 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:wraith": {
+        "events": {
+          "ambient": {
+            "sound": "mob.vex.ambient",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.vex.death",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.vex.hurt",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      
+      "ntk:brute_zombie": {
+        "events": {
+          "ambient": {
+            "sound": "mob.husk.ambient",
+            "pitch": [ 0.4, 0.6 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "mob.husk.death",
+            "pitch": [ 0.4, 0.6 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "mob.husk.hurt",
+            "pitch": [ 0.4, 0.6 ],
+            "volume": 0.8
+          },
+          "step": {
+            "sound": "mob.husk.step",
+            "pitch": [ 0.4, 0.6 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.2
+      },
+      "ntk:cobbled_deepslate_golem": {
+        "events": {
+          "ambient": {
+            "sound": "mob.polarbear.idle",
+            "pitch": [ 0.6, 0.8 ],
+            "volume": 0.6
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:cursed_rat": {
+        "events": {
+          "ambient": {
+            "sound": "mob.rabbit.idle",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:elder_golem": {
+        "events": {
+          "ambient": {
+            "sound": "block.grindstone.use",
+            "pitch": [ 0.1, 0.2 ],
+            "volume": 0.8
+          },
+          "cast.spell": {
+            "sound": "step.deepslate",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 1.2
+          },
+          "death": {
+            "sound": "mob.polarbear.warning",
+            "pitch": [ 0.3, 0.4 ],
+            "volume": 0.6
+          },
+          "hurt": {
+            "sound": "mob.irongolem.hit",
+            "pitch": [ 0.3, 0.4 ],
+            "volume": 0.6
+          },
+          "step": {
+            "sound": "mob.irongolem.walk",
+            "pitch": [ 0.3, 0.7 ],
+            "volume": 1.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.2
+      },
+      "ntk:giant_rat": {
+        "events": {
+          "ambient": {
+            "sound": "mob.rabbit.idle",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 1.5, 1.8 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:piglin_chief": {
+        "events": {
+          "admire": {
+            "sound": "mob.piglin.admiring_item",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "ambient": {
+            "sound": "mob.piglin_brute.ambient",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "angry": {
+            "sound": "mob.piglin_brute.angry",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.2
+          },
+          "attack": {
+            "sound": "mob.piglin.attack",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "celebrate": {
+            "sound": "mob.piglin.celebrate",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.piglin_brute.death",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.piglin_brute.hurt",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "retreat": {
+            "sound": "mob.piglin.retreat",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          },
+          "shoot": {
+            "sound": "mob.ghast.fireball",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.5
+          },
+          "step": {
+            "sound": "mob.piglin_brute.step",
+            "pitch": [ 0.6, 1.0 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      },
+      "ntk:rat": {
+        "events": {
+          "ambient": {
+            "sound": "mob.rabbit.idle",
+            "pitch": [ 1.5, 2.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.rabbit.death",
+            "pitch": [ 1.5, 2.0 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.rabbit.hurt",
+            "pitch": [ 1.5, 2.0 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:rat_curserer": {
+        "events": {
+          "ambient": {
+            "sound": "mob.hoglin.ambient",
+            "pitch": [ 5.2, 5.6 ],
+            "volume": 1.0
+          },
+          "angry": {
+            "sound": "mob.hoglin.angry",
+            "pitch": [ 5.2, 5.6 ],
+            "volume": 0.75
+          },
+          "cast.spell": {
+            "sound": "mob.evocation_illager.cast_spell",
+            "pitch": [ 1.4, 2.0 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.evocation_illager.death",
+            "pitch": [ 0.1, 0.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.polarbear.hurt",
+            "pitch": [ 3.2, 3.6 ],
+            "volume": 1.0
+          },
+          "prepare.attack": {
+            "sound": "mob.evocation_illager.prepare_attack",
+            "pitch": [ 1.2, 1.6 ],
+            "volume": 1.0
+          },
+          "prepare.summon": {
+            "sound": "mob.evocation_illager.prepare_summon",
+            "pitch": [ 1.2, 1.6 ],
+            "volume": 1.0
+          },
+          "prepare.wololo": {
+            "sound": "mob.evocation_illager.prepare_wololo",
+            "pitch": [ 1.2, 1.6 ],
+            "volume": 1.0
+          },
+          "shoot": {
+            "sound": "mob.shulker.shoot",
+            "pitch": [ 1.3, 1.5 ],
+            "volume": 0.5
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:shulkore": {
+        "events": {
+          "ambient": {
+            "sound": "mob.shulker.ambient",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.shulker.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.shulker.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "shoot": {
+            "sound": "mob.shulker.shoot",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "shulker.close": {
+            "sound": "mob.shulker.close",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "shulker.open": {
+            "sound": "mob.shulker.open",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.2
+      },
+      "ntk:miscellaneous_ground_spikes": {
+        "events": {
+          "ambient": {
+            "sound": "step.deepslate",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.8
+          },
+          "death": {
+            "sound": "dig.deepslate",
+            "pitch": [ 0.2, 0.4 ],
+            "volume": 0.8
+          },
+          "hurt": {
+            "sound": "dig.deepslate",
+            "pitch": [ 0.4, 0.8 ],
+            "volume": 0.8
+          },
+          "takeoff": {
+            "sound": "fall.deepslate",
+            "pitch": [ 0.1, 0.2 ],
+            "volume": 0.8
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      "ntk:projectile_rat_curserer_missile": {
+        "events": {
+          "ambient": "",
+          "death": "",
+          "hurt": {
+            "sound": "firework.blast",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 0.8
+      },
+      
+      "ntk:skeleton_miner": {
+        "events": {
+          "ambient": {
+            "sound": "mob.skeleton.say",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "death": {
+            "sound": "mob.skeleton.death",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          },
+          "hurt": {
+            "sound": "mob.skeleton.hurt",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 0.7
+          },
+          "step": {
+            "sound": "mob.skeleton.step",
+            "pitch": [ 0.8, 1.2 ],
+            "volume": 1.0
+          }
+        },
+        "pitch": [ 0.8, 1.2 ],
+        "volume": 1.0
+      }
+    }
+  },
+  "individual_event_sounds": {},
+  "interactive_sounds": {}
+}

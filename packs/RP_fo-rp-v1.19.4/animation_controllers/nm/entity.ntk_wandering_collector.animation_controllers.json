@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_wandering_collector.general": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [ "base_pose" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"targeting": "query.has_target"
+						}
+					]
+				},
+				"targeting": {
+					"animations": [ "targeting" ],
+					"blend_transition": 0.0,
+					"particle_effects": [
+						{
+							"effect": "collector_spell_particle",
+							"locator": "left_hand"
+						},
+						{
+							"effect": "collector_spell_particle",
+							"locator": "right_hand"
+						}
+					],
+					"transitions": [
+						{
+							"default": "!query.has_target"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_wandering_collector.movement": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					]
+				}
+			}
+		}
+  }
+}

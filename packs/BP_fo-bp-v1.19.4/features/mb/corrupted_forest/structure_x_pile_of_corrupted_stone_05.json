@@ -1,0 +1,14 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_05"
+    },
+    "structure_name": "mystructure:mb/pile_of_corrupted_stone_05",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {}
+    }
+  }
+}

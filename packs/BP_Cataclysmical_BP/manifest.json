@@ -1,0 +1,67 @@
+{
+	"format_version": 3,
+	"header": {
+		"name": "Cataclysmical",
+		"description": "Cataclysmical Add-On by Minera Studios",
+		"min_engine_version": "1.26.30",
+		"uuid": "65e68ae0-db3f-4813-9452-8b5ca5b90e27",
+		"version": "1.7.2"
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "b9f459bd-b96b-4bfa-ae7a-249b3546a1bd",
+			"version": "1.0.0"
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "607af946-8fbf-4e95-a4ec-8d59e0386ff3",
+			"entry": "scripts/minera/cata/main.js",
+			"version": "1.0.0"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "946a13c1-3f86-43c4-a514-cc8f1bef18de",
+			"version": "1.7.2"
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.9.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.1.0"
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Minera Studios"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"settings": [
+		{
+			"type": "label",
+			"text": "§dCataclysmical Settings §8Can be changed at any time.\n"
+		},
+		{
+			"type": "toggle",
+			"text": "Activate §cMalevolence Mode §8A challenge for the worthy",
+			"name": "mnra_cata:malevolence_mode",
+			"default": false
+		},
+		{
+			"type": "label",
+			"text": "§c(IS WORK IN PROGRESS, TOGGLES DO NOTHING)"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+item.rpg:mage_staff.name=Mage Staff
+tile.test:vibranium_ore.name=Vibranium Ore
+item.test:vibranium_ingot.name=Vibranium Ingot
+item.test:vibranium_sword.name=Vibranium Sword
+item.test:sword_1.name=Sword 1
+item.test:dragon_fruit.name=Dragon Fruit
+entity.rpg:pillager_boss.name=Pillager Warlord
+entity.rpg:pillager_boss_clone.name=Warlord Illusion
+item.spawn_egg.entity.rpg:pillager_boss.name=Spawn Pillager Warlord
+item.spawn_egg.entity.rpg:pillager_boss_clone.name=Spawn Warlord Illusion

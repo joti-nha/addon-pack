@@ -1,0 +1,26 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:processor_list": {
+		"description": {
+			"identifier": "ntk:fo/nether_bricks_x_processor"
+		},
+		"processors": [
+      {
+        "processor_type": "minecraft:rule",
+        "rules": [
+          // Nether Bricks:
+          {
+            "input_predicate": {
+              "predicate_type": "minecraft:random_block_match",
+              "block": "minecraft:nether_brick",
+              "probability": 0.1
+            },
+            "output_state": {
+              "name": "minecraft:cracked_nether_bricks"
+            }
+          }
+        ]
+      }
+		]
+	}
+}

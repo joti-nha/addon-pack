@@ -1,0 +1,42 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_bamboo_cup_with_chocolate"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "bamboo_cup_with_chocolate",
+    "assume_symmetry": true,
+    "pattern": [
+      "CS",
+      "B "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:cocoa_beans"
+      },
+      "S": {
+        "item": "minecraft:sugar"
+      },
+      "B": {
+        "item": "ntk:bamboo_cup_with_water"
+      }
+    },
+    "result": {
+      "item": "ntk:bamboo_cup_with_chocolate",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cocoa_beans"
+      },
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "ntk:bamboo_cup_with_water"
+      }
+    ]
+  }
+}

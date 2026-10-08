@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:scatter_feature":{"description":{"identifier":"panascais_end:panascais/end/266889b781b9ffd4a17530be054239e9"},"places_feature":"panascais_end:panascais/end/fc2a771e5ecfb943049cfe9df00642fe","distribution":{"iterations":1,"scatter_chance":0.0009765625,"x":0,"y":"(v.worldy <= 70 ? 9 : (v.worldy <= 155 ? 134 : 213)) - v.worldy","z":0}}}

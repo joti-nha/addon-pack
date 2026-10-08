@@ -1,0 +1,36 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "otg:slot9_visual_backpack_iron_snowfox",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/attachable/backpack_snowfox"
+            },
+            "geometry": {
+                "default": "geometry.snowfox_backpack",
+                "offhand": "geometry.snowfox_backpack",
+                "mainhand": "geometry.snowfox_backpack"
+            },
+            "render_controllers": [
+                "controller.render.backpack_dynamic"
+            ],
+            "animations": {
+                "offhand_first": "animation.snowfox_backpack.first_person_hold",
+                "offhand_third": "animation.snowfox_backpack.third_person_hold"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "offhand_first": "c.item_slot == 'off_hand' && c.is_first_person"
+                    },
+                    {
+                        "offhand_third": "c.item_slot == 'off_hand' && !c.is_first_person"
+                    }
+                ]
+            }
+        }
+    }
+}

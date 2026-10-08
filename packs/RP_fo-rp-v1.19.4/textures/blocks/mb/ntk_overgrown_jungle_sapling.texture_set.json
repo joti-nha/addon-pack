@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_overgrown_jungle_sapling",
+    "heightmap": "ntk_overgrown_jungle_sapling_height",
+    "metalness_emissive_roughness": "ntk_overgrown_jungle_sapling_mer"
+  }
+}

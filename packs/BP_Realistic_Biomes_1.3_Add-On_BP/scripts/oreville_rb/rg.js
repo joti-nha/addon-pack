@@ -1,0 +1,1 @@
+import{world}from"@minecraft/server";let logimfj=!1;world.afterEvents.worldLoad.subscribe(()=>logimfj=!0);export function nfwkwu(r){return logimfj?Promise.resolve(r()):new Promise(o=>{const e=world.afterEvents.worldLoad.subscribe(()=>{world.afterEvents.worldLoad.unsubscribe(e),o(r())})})}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.21.110",
+  "minecraft:recipe_brewing_mix": {
+    "description": {
+      "identifier": "ntk:brew_x_rotten_brute_flesh"
+    },
+    "tags": [ "brewing_stand" ],
+    "input": "minecraft:potion_type:water",
+    "reagent": "ntk:rotten_brute_flesh",
+    "output": "ntk:potion_of_brute"
+  }
+}

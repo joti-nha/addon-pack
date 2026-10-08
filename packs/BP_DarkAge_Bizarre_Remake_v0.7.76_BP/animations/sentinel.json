@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.sentinel.unshield": {
+			"animation_length": 5.2,
+			"loop": true,
+			"timeline": {
+				"5.0": [
+					"@s dk:sentinel_event_mode_shield"
+				]
+			}
+		},
+		"animation.sentinel.death": {
+			"animation_length": 1.5,
+			"loop": true,
+			"timeline": {
+				"1.35": [
+					"/effect @s invisibility 10 1 true"
+				],
+				"1.45": [
+					"@s dk:despawn_event"
+				]
+			}
+		},
+		"animation.sentinel.attack_ranged": {
+			"animation_length": 1.2,
+			"loop": true,
+			"timeline": {
+				"0.35": [
+					"/summon dk:unknown_portal ~6~8~6 ~~ dk:unknown_portal_one",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.40": [
+					"/summon dk:unknown_portal ~3~10~3 ~~ dk:unknown_portal_three",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.45": [
+					"/summon dk:unknown_portal ~-6~8~6 ~~ dk:unknown_portal_one",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.50": [
+					"/summon dk:unknown_portal ~~14~ ~~ dk:unknown_portal_two",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.55": [
+					"/summon dk:unknown_portal ~6~8~-6 ~~ dk:unknown_portal_one",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.6": [
+					"/summon dk:unknown_portal ~-3~10~-3 ~~ dk:unknown_portal_three",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"0.65": [
+					"/summon dk:unknown_portal ~-6~8~-6 ~~ dk:unknown_portal_one",
+					"/playsound item.trident.throw @a[r=30]"
+				],
+				"1.18": [
+					"@s dk:sentinel_event_mode_attacks"
+				]
+			}
+		}
+	}
+}

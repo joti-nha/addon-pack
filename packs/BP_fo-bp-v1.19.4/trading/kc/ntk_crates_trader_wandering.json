@@ -1,0 +1,226 @@
+{
+  "tiers": [
+    { // Level 1 - Novice:
+      "total_exp_required": 0,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 48 }],
+              "gives": [{ "item": "ntk:diamond_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 20 }],
+              "gives": [{ "item": "ntk:golden_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 20 }],
+              "gives": [{ "item": "ntk:iron_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 12 }],
+              "gives": [{ "item": "ntk:copper_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:oak_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:spruce_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:birch_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:jungle_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:acacia_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:dark_oak_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:mangrove_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:cherry_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:bamboo_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6 }],
+              "gives": [{ "item": "ntk:pale_oak_wood_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 20,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 2 - Initiate:
+      "total_exp_required": 5,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 8 }],
+              "gives": [{ "item": "ntk:trial_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 12 }],
+              "gives": [{ "item": "ntk:ominous_trial_crate", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 3 - Apprentice:
+      "total_exp_required": 15,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald", "quantity": 16, "price_multiplier": 0.05 },
+                { "item": "ntk:copper_crate_key", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:learning_book_of_crates_trading", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

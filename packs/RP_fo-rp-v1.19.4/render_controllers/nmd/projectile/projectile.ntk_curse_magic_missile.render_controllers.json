@@ -1,0 +1,16 @@
+{
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.projectile.ntk_curse_magic_missile": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.default"
+      ]
+    }
+  }
+}

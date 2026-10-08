@@ -1,0 +1,13 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/structure_weight_x_small_geode_prismarine"
+    },
+    "features": [
+      [ "ntk:twe/structure_x_small_geode_prismarine_01", 100 ],
+      [ "ntk:twe/structure_x_small_geode_prismarine_02", 100 ],
+      [ "ntk:twe/structure_x_small_geode_prismarine_03", 100 ]
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unbound_boots",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [
+					0,
+					1.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [
+						1.9,
+						12,
+						0
+					]
+				},
+				{
+					"name": "legL",
+					"parent": "leftLeg",
+					"pivot": [
+						1.9,
+						12,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-0.0325,
+								-0.8125,
+								-2.2925
+							],
+							"size": [
+								4.585,
+								13.625,
+								4.585
+							],
+							"inflate": 0.25,
+							"uv": [
+								16,
+								48
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [
+						-1.9,
+						12,
+						0
+					]
+				},
+				{
+					"name": "legR",
+					"parent": "rightLeg",
+					"pivot": [
+						-2.26,
+						12.78,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.5525,
+								-0.8125,
+								-2.2925
+							],
+							"size": [
+								4.585,
+								13.625,
+								4.585
+							],
+							"inflate": 0.25,
+							"uv": [
+								16,
+								48
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_yellow_jellyfish_slime"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "yellow_jellyfish_slime",
+    "ingredients": [
+      {
+        "item": "ntk:yellow_jellyfish_slime_block"
+      }
+    ],
+    "result": {
+      "item": "ntk:yellow_jellyfish_slime",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:yellow_jellyfish_slime_block"
+      }
+    ]
+  }
+}

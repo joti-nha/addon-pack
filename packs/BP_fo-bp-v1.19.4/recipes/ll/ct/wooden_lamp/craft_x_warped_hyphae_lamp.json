@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_warped_hyphae_lamp"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "warped_hyphae_lamp",
+    "assume_symmetry": true,
+    "pattern": [
+      " A ",
+      "BCB",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:warped_slab"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      },
+      "C": {
+        "item": "minecraft:torch"
+      }
+    },
+    "result": {
+      "item": "ntk:warped_hyphae_lamp",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:warped_slab"
+      },
+      {
+        "item": "minecraft:stick"
+      },
+      {
+        "item": "minecraft:torch"
+      }
+    ]
+  }
+}

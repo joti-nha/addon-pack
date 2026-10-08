@@ -1,0 +1,12 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "dk:structures/catedral_feature_mcstructure"
+		},
+		"structure_name": "mystructure:spawn_catedral",
+		"adjustment_radius": 8,
+		"facing_direction": "south",
+		"constraints": {}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_tall_mycelium_sprouts_x_mycelium_sprouts_bale"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "ntk:mycelium_sprouts_bale"
+      }
+    ],
+    "result": {
+      "item": "ntk:tall_mycelium_sprouts",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:mycelium_sprouts_bale"
+      }
+    ]
+  }
+}

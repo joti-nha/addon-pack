@@ -1,0 +1,46 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:patch_surface_x_fossiliferous_corrupted",
+      "places_feature": "ntk:mb/corrupted_forest/patch_surface_x_fossiliferous_corrupted_x_ore"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "corrupted_forest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 25.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [
+          "query.heightmap(variable.worldx, variable.worldz) + -2",
+          "query.heightmap(variable.worldx, variable.worldz) + 2"
+        ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1230 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:local_light_settings": {
+    "ntk:jar_of_forest_wisp_charged": {
+      "light_color": "#CFE359",
+      "light_type": "static_light"
+    },
+    
+    "ntk:acacia_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:acacia_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:amethyst_lamp": {
+      "light_color": "#B966E8",
+      "light_type": "static_light"
+    },
+    "ntk:andesite_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:andesite_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:bamboo_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:bamboo_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:basalt_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:basalt_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:birch_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:birch_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:blackstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:blackstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:calcite_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:calcite_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cherry_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:cherry_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:cinnabar_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cinnabar_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cinnabar_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cinnabar_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cobbled_deepslate_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cobbled_deepslate_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cobblestone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cobblestone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_deepslate_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_deepslate_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_polished_blackstone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_polished_blackstone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:crimson_hyphae_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:crimson_hyphae_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:dark_oak_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:dark_oak_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:deepslate_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:deepslate_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:deepslate_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:deepslate_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:diorite_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:diorite_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:dripstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:dripstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:end_stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:end_stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:end_stone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:end_stone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:exposed_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:exposed_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:granite_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:granite_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:jack_o_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:jungle_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:jungle_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:mangrove_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:mangrove_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_cobblestone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_cobblestone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:mud_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:mud_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:nether_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:nether_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:oak_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:oak_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:oxidized_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:oxidized_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:packed_mud_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:packed_mud_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:pale_oak_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:pale_oak_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:polished_blackstone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:polished_blackstone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:purpur_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:purpur_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:quartz_lamp": {
+      "light_color": "#F2F1EC",
+      "light_type": "static_light"
+    },
+    "ntk:red_nether_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:red_nether_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:red_sandstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:red_sandstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:resin_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:resin_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:sandstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:sandstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_basalt_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_basalt_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_red_sandstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_red_sandstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_sandstone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_sandstone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:spruce_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:spruce_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:stone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:stone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:sulfur_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:sulfur_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:sulfur_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:sulfur_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:tuff_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:tuff_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:tuff_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:tuff_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:warped_hyphae_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:warped_hyphae_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_exposed_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_exposed_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_oxidized_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_oxidized_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_weathered_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:waxed_weathered_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:weathered_copper_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:weathered_large_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    
+    
+    "ntk:corrupted_oak_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:corrupted_oak_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:corrupted_stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:corrupted_stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:corrupted_stone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:corrupted_stone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_corrupted_stone_brick_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:cracked_corrupted_stone_brick_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_willow_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:mossy_willow_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:overgrown_jungle_wood_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:overgrown_jungle_wood_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_corrupted_stone_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:smooth_corrupted_stone_soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    
+    "ntk:block_of_blaze_powder": {
+      "light_color": "#FFA300",
+      "light_type": "static_light"
+    },
+    "ntk:block_of_glow_ink_sac": {
+      "light_color": "#64D9CC",
+      "light_type": "static_light"
+    },
+    "ntk:firefly_bush_bale": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "ntk:glow_lichen_block": {
+      "light_color": "#B7F1BC",
+      "light_type": "static_light"
+    },
+    "ntk:glow_lichen_carpet": {
+      "light_color": "#B7F1BC",
+      "light_type": "static_light"
+    },
+    "ntk:grafting_table": {
+      "light_color": "#84552F",
+      "light_type": "static_light"
+    },
+    
+    "ntk:active_heated_netherrack": {
+      "light_color": "#F43600",
+      "light_type": "static_light"
+    },
+    "ntk:clump_of_mosshroom_fungus": {
+      "light_color": "#E0ED4E",
+      "light_type": "static_light"
+    },
+    "ntk:glowbird_egg_1_block": {
+      "light_color": "#A3CCEB",
+      "light_type": "static_light"
+    },
+    "ntk:glowbird_egg_2_block": {
+      "light_color": "#A3CCEB",
+      "light_type": "static_light"
+    },
+    "ntk:glowbird_egg_3_block": {
+      "light_color": "#A3CCEB",
+      "light_type": "static_light"
+    },
+    "ntk:glowbird_egg_4_block": {
+      "light_color": "#A3CCEB",
+      "light_type": "static_light"
+    },
+    "ntk:glowceling_egg_block": {
+      "light_color": "#A3AAA7",
+      "light_type": "static_light"
+    },
+    "ntk:glowcelium_sprouts_bale": {
+      "light_color": "#739285",
+      "light_type": "static_light"
+    },
+    "ntk:moss_berry_bush": {
+      "light_color": "#D8F84B",
+      "light_type": "static_light"
+    },
+    "ntk:mosshroom_fungus": {
+      "light_color": "#84A83C",
+      "light_type": "static_light"
+    },
+    "ntk:mosshroom_hyphae_lamp": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:mosshroom_hyphae_lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "ntk:mosshroom_light": {
+      "light_color": "#BDF550",
+      "light_type": "static_light"
+    },
+    "ntk:potted_glowcelium_sprouts": {
+      "light_color": "#739285",
+      "light_type": "static_light"
+    },
+    "ntk:potted_mosshroom_fungus": {
+      "light_color": "#84A83C",
+      "light_type": "static_light"
+    },
+    "ntk:quartz_cluster": {
+      "light_color": "#EAE5DE",
+      "light_type": "static_light"
+    },
+    "ntk:rose_quartz_cluster": {
+      "light_color": "#DBBED1",
+      "light_type": "static_light"
+    },
+    "ntk:rose_quartz_lamp": {
+      "light_color": "#DBBED1",
+      "light_type": "static_light"
+    },
+    "ntk:short_glowcelium_sprouts": {
+      "light_color": "#739285",
+      "light_type": "static_light"
+    },
+    "ntk:tall_glowcelium_sprouts": {
+      "light_color": "#739285",
+      "light_type": "static_light"
+    },
+    
+    "ntk:amethyst_spore_pot": {
+      "light_color": "#FECBE6",
+      "light_type": "static_light"
+    },
+    "ntk:artifacture_table": {
+      "light_color": "#D499FF",
+      "light_type": "static_light"
+    },
+    "ntk:bamboo_cup_with_glow_berry_juice": {
+      "light_color": "#FFDA4E",
+      "light_type": "static_light"
+    },
+    "ntk:blaze_spore_pot": {
+      "light_color": "#FFA300",
+      "light_type": "static_light"
+    },
+    "ntk:charcoal_spore_pot": {
+      "light_color": "#CD6500",
+      "light_type": "static_light"
+    },
+    "ntk:copper_spore_pot": {
+      "light_color": "#FC9982",
+      "light_type": "static_light"
+    },
+    "ntk:copper_evaporator_with_crying_obsidian": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "ntk:copper_evaporator_with_lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "ntk:copper_evaporator_with_tearing_lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "ntk:diamond_spore_pot": {
+      "light_color": "#A1FBE8",
+      "light_type": "static_light"
+    },
+    "ntk:emerald_spore_pot": {
+      "light_color": "#41F384",
+      "light_type": "static_light"
+    },
+    "ntk:enchanted_spore_pot": {
+      "light_color": "#F5FF8F",
+      "light_type": "static_light"
+    },
+    "ntk:glowstone_spore_pot": {
+      "light_color": "#FFC573",
+      "light_type": "static_light"
+    },
+    "ntk:gold_spore_pot": {
+      "light_color": "#FAD64A",
+      "light_type": "static_light"
+    },
+    "ntk:gunpowder_spore_pot": {
+      "light_color": "#727272",
+      "light_type": "static_light"
+    },
+    "ntk:iron_spore_pot": {
+      "light_color": "#A8A8A8",
+      "light_type": "static_light"
+    },
+    "ntk:jar_of_glow_berry_juice_full": {
+      "light_color": "#FFDA4E",
+      "light_type": "static_light"
+    },
+    "ntk:jar_of_glow_berry_juice_half": {
+      "light_color": "#FFDA4E",
+      "light_type": "static_light"
+    },
+    "ntk:lapis_lazuli_spore_pot": {
+      "light_color": "#5A82E2",
+      "light_type": "static_light"
+    },
+    "ntk:metal_evaporator_with_crying_obsidian": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "ntk:metal_evaporator_with_lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "ntk:metal_evaporator_with_tearing_lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "ntk:netherite_spore_pot": {
+      "light_color": "#5D565D",
+      "light_type": "static_light"
+    },
+    "ntk:redstone_spore_pot": {
+      "light_color": "#D91402",
+      "light_type": "static_light"
+    },
+    "ntk:sugar_spore_pot": {
+      "light_color": "#D8D8D8",
+      "light_type": "static_light"
+    },
+    
+    "ntk:black_jellyfish_slime_block": {
+      "light_color": "#2d2d2d",
+      "light_type": "static_light"
+    },
+    "ntk:blue_jellyfish_slime_block": {
+      "light_color": "#90aeda",
+      "light_type": "static_light"
+    },
+    "ntk:brown_jellyfish_slime_block": {
+      "light_color": "#a47545",
+      "light_type": "static_light"
+    },
+    "ntk:cyan_jellyfish_slime_block": {
+      "light_color": "#67f2f2",
+      "light_type": "static_light"
+    },
+    "ntk:firebird_egg_1_block": {
+      "light_color": "#F0CE55",
+      "light_type": "static_light"
+    },
+    "ntk:firebird_egg_2_block": {
+      "light_color": "#F0CE55",
+      "light_type": "static_light"
+    },
+    "ntk:firebird_egg_3_block": {
+      "light_color": "#F0CE55",
+      "light_type": "static_light"
+    },
+    "ntk:firebird_egg_4_block": {
+      "light_color": "#F0CE55",
+      "light_type": "static_light"
+    },
+    "ntk:gray_jellyfish_slime_block": {
+      "light_color": "#6f7b80",
+      "light_type": "static_light"
+    },
+    "ntk:green_jellyfish_slime_block": {
+      "light_color": "#57c445",
+      "light_type": "static_light"
+    },
+    "ntk:jellyfish_slime_block": {
+      "light_color": "#dabfce",
+      "light_type": "static_light"
+    },
+    "ntk:light_blue_jellyfish_slime_block": {
+      "light_color": "#96d7ff",
+      "light_type": "static_light"
+    },
+    "ntk:light_gray_jellyfish_slime_block": {
+      "light_color": "#b4b4ae",
+      "light_type": "static_light"
+    },
+    "ntk:lime_jellyfish_slime_block": {
+      "light_color": "#bede65",
+      "light_type": "static_light"
+    },
+    "ntk:magenta_jellyfish_slime_block": {
+      "light_color": "#ff7fff",
+      "light_type": "static_light"
+    },
+    "ntk:orange_jellyfish_slime_block": {
+      "light_color": "#e2a879",
+      "light_type": "static_light"
+    },
+    "ntk:pink_jellyfish_slime_block": {
+      "light_color": "#ff8cbb",
+      "light_type": "static_light"
+    },
+    "ntk:purple_jellyfish_slime_block": {
+      "light_color": "#c368ff",
+      "light_type": "static_light"
+    },
+    "ntk:red_jellyfish_slime_block": {
+      "light_color": "#d86868",
+      "light_type": "static_light"
+    },
+    "ntk:soul_firebird_egg_1_block": {
+      "light_color": "#7DF3F5",
+      "light_type": "static_light"
+    },
+    "ntk:soul_firebird_egg_2_block": {
+      "light_color": "#7DF3F5",
+      "light_type": "static_light"
+    },
+    "ntk:soul_firebird_egg_3_block": {
+      "light_color": "#7DF3F5",
+      "light_type": "static_light"
+    },
+    "ntk:soul_firebird_egg_4_block": {
+      "light_color": "#7DF3F5",
+      "light_type": "static_light"
+    },
+    "ntk:white_jellyfish_slime_block": {
+      "light_color": "#f0f0f0",
+      "light_type": "static_light"
+    },
+    "ntk:yellow_jellyfish_slime_block": {
+      "light_color": "#e8cb57",
+      "light_type": "static_light"
+    },
+    
+    "ntk:magic_spells_table": {
+      "light_color": "#FECBE6",
+      "light_type": "static_light"
+    },
+    
+    "minecraft:amethyst_cluster": {
+      "light_color": "#B966E8",
+      "light_type": "static_light"
+    },
+    "minecraft:black_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:black_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:blue_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:blue_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:brown_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:brown_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:campfire": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "minecraft:candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:cave_vines_body_with_berries": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:cave_vines_head_with_berries": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:copper_lantern": {
+      "light_color": "#86CA59",
+      "light_type": "static_light"
+    },
+    "minecraft:copper_torch": {
+      "light_color": "#86CA59",
+      "light_type": "static_light"
+    },
+    "minecraft:crying_obsidian": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "minecraft:cyan_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:cyan_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:enchanting_table": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "minecraft:end_portal": {
+      "light_color": "#6C70B2",
+      "light_type": "static_light"
+    },
+    "minecraft:end_rod": {
+      "light_color": "#DA73DE",
+      "light_type": "static_light"
+    },
+    "minecraft:exposed_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:exposed_copper_lantern": {
+      "light_color": "#86CA59",
+      "light_type": "static_light"
+    },
+    "minecraft:fire": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "minecraft:firefly_bush": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:flowing_lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:glow_lichen": {
+      "light_color": "#B7F1BC",
+      "light_type": "static_light"
+    },
+    "minecraft:gray_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:gray_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:green_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:green_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:lantern": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "minecraft:large_amethyst_bud": {
+      "light_color": "#B966E8",
+      "light_type": "static_light"
+    },
+    "minecraft:lava": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:light_blue_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:light_blue_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:light_gray_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:light_gray_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:lit_pumpkin": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:lime_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:lime_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:lit_deepslate_redstone_ore": {
+      "light_color": "#C32C1F",
+      "light_type": "static_light"
+    },
+    "minecraft:lit_redstone_lamp": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:lit_redstone_ore": {
+      "light_color": "#C32C1F",
+      "light_type": "static_light"
+    },
+    "minecraft:magenta_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:magenta_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:magma": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:medium_amethyst_bud": {
+      "light_color": "#B966E8",
+      "light_type": "static_light"
+    },
+    "minecraft:orange_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:orange_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:ochre_froglight": {
+      "light_color": "#F9EFA5",
+      "light_type": "static_light"
+    },
+    "minecraft:oxidized_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:oxidized_copper_lantern": {
+      "light_color": "#86CA59",
+      "light_type": "static_light"
+    },
+    "minecraft:pearlescent_froglight": {
+      "light_color": "#DA73DE",
+      "light_type": "static_light"
+    },
+    "minecraft:pink_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:pink_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:portal": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "minecraft:purple_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:purple_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:red_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:red_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:redstone_torch": {
+      "light_color": "#C32C1F",
+      "light_type": "static_light"
+    },
+    "minecraft:respawn_anchor": {
+      "light_color": "#A233EB",
+      "light_type": "static_light"
+    },
+    "minecraft:sculk_catalyst": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:sculk_sensor": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:sea_lantern": {
+      "light_color": "#B0DAD3",
+      "light_type": "static_light"
+    },
+    "minecraft:sea_pickle": {
+      "light_color": "#B0DAD3",
+      "light_type": "static_light"
+    },
+    "minecraft:shroomlight": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:small_amethyst_bud": {
+      "light_color": "#B966E8",
+      "light_type": "static_light"
+    },
+    "minecraft:soul_campfire": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:soul_fire": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:soul_lantern": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:soul_torch": {
+      "light_color": "#36D9E6",
+      "light_type": "static_light"
+    },
+    "minecraft:torch": {
+      "light_color": "#F39A5E",
+      "light_type": "static_light"
+    },
+    "minecraft:trial_spawner": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:vault": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:verdant_froglight": {
+      "light_color": "#B7F1BC",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_exposed_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_oxidized_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:waxed_weathered_copper_lantern": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:weathered_copper_bulb": {
+      "light_color": "#E8C398",
+      "light_type": "static_light"
+    },
+    "minecraft:weathered_copper_lantern": {
+      "light_color": "#86CA59",
+      "light_type": "static_light"
+    },
+    "minecraft:white_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:white_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:yellow_candle": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    },
+    "minecraft:yellow_candle_cake": {
+      "light_color": "#D3852B",
+      "light_type": "static_light"
+    }
+  }
+}

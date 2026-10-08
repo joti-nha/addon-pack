@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_brush_x_feathers"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "brush",
+    "assume_symmetry": false,
+    "pattern": [
+      "W",
+      "T",
+      "I"
+    ],
+    "key": {
+      "W": {
+        "tag": "ntk:feather"
+      },
+      "T": {
+        "item": "minecraft:copper_ingot"
+      },
+      "I": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "minecraft:brush",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "tag": "ntk:feather"
+      },
+      {
+        "item": "minecraft:copper_ingot"
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}

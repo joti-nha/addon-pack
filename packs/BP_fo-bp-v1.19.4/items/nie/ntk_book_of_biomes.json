@@ -1,0 +1,90 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:book_of_biomes",
+      "menu_category": {
+        "category": "equipment",
+        "group": "ntk:itemGroup.name.magic_books",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.book_of_biomes.name"
+			},
+			"minecraft:rarity": "uncommon",
+			"minecraft:icon": {
+				"textures": {
+          "default": "ntk_book_of_biomes"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": true
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 1
+			},
+			"minecraft:durability": {
+				"max_durability": 256,
+				"damage_chance": {
+					"min": 0,
+					"max": 100
+				}
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:utility",
+          "ntk:book",
+          "ntk:magic_book",
+          "ntk:book_of_biomes",
+          
+          "minecraft:bookshelf_books"
+        ]
+      },
+			"ntk:spawn_mob_on_use": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:book_of_biomes",
+          "item_slot": "Mainhand",
+          "durability_damage": 1,
+          "durability_damage_chance": 100.0,
+          "spawn_mob": "ntk:miscellaneous_biome_checker",
+          "spawn_mob_chance": 100.0,
+          "spawn_mob_event": "",
+          "spawn_mob_count_min": 1,
+          "spawn_mob_count_max": 1,
+          "spawn_mob_offset_x": 0.5,
+          "spawn_mob_offset_y": 0.5,
+          "spawn_mob_offset_z": 0.5,
+          "sound_effect": "item.book.page_turn",
+          "sound_pitch_min": 0.8,
+          "sound_pitch_max": 1.2,
+          "sound_volume": 1.0
+        }
+      ]
+    }
+  }
+}

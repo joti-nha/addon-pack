@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:copper_rail_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"C C",
+			"CSC",
+			"C C"
+		],
+		"key": {
+			"C": {
+				"item": "minecraft:copper_ingot"
+			},
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"result": {
+			"item": "minecraft:rail",
+			"count": 16
+		}
+	}
+}

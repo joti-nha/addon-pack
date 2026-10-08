@@ -1,0 +1,101 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.sentinel.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking&&!query.is_illager_captain&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s dk:sentinel_event_mode_attacks"
+					]
+				}
+			}
+		},
+		"controller.animation.sentinel.berserk": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"strenght": "query.health<=200&&!query.is_illager_captain&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'"
+						}
+					]
+				},
+				"strenght": {
+					"transitions": [
+						{
+							"default": "!query.health<=200"
+						}
+					],
+					"on_entry": [
+						"/effect @s jump_boost 1 4",
+						"/effect @s strength 1 1",
+						"/effect @s regeneration 1 3",
+						"/playsound mob.zombie.unfect @a[r=20] ~~~ 60 0.8"
+					]
+				}
+			}
+		},
+		"controller.animation.sentinel.destroys": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "query.variant==2&&query.has_target&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'&&!query.is_tamed&&!query.is_illager_captain"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "query.variant==2&&query.has_target&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'&&!query.is_tamed"
+						}
+					],
+					"on_entry": [
+						"/execute unless block ~ ~ ~ bedrock run execute unless block ~ ~ ~ water run fill ~-3 ~ ~2 ~2 ~9 ~-3 air [] destroy",
+						"/execute unless block ~ ~ ~ bedrock run execute unless block ~ ~ ~ water run fill ~-2 ~ ~3 ~3 ~9 ~-2 air [] destroy",
+						"/kill @e[type=item,r=6]"
+					]
+				}
+			}
+		},
+		"controller.animation.sentinel.guard": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"guard": "query.variant==2&&!query.has_target&&!query.is_sheared&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'&&!query.is_tamed&&!query.is_illager_captain"
+						}
+					]
+				},
+				"guard": {
+					"transitions": [
+						{
+							"default": "query.variant==2&&query.has_target&&!query.is_sheared"
+						}
+					],
+					"on_entry": [
+						"@s dk:sentinel_event_mode_no_guard"
+					],
+					"on_exit": [
+						"@s dk:sentinel_event_mode_guard"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,214 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.unbound_elemental.attacks": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						},
+						{
+							"ranged": "query.is_charged&&query.mark_variant==7"
+						},
+						{
+							"casting": "query.is_casting"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"on_exit": [
+						"@s dk:unbound_elemental_event_mode_attacks"
+					]
+				},
+				"ranged": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"@s dk:unbound_elemental_event_mode_attacks"
+					]
+				},
+				"casting": {
+					"transitions": [
+						{
+							"default": "!query.is_casting"
+						}
+					],
+					"on_exit": [
+						"@s dk:unbound_elemental_event_mode_attacks"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental.lower_health": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"lower_health": "query.health<=200"
+						}
+					]
+				},
+				"lower_health": {
+					"transitions": [
+						{
+							"start_rider": "1"
+						}
+					],
+					"on_entry": [
+						"@s dk:unbound_elemental_event_mode_lower_health",
+						"/particle dk:unbound_break_drip_particle ~~4~",
+						"/particle dk:unbound_break_drip_particle ~~3.8~",
+						"/particle dk:elemental_break_drip_particle ~~4~",
+						"/particle dk:elemental_break_drip_particle ~~4.2~",
+						"/playsound random.break @a[r=45] ~~~ 10 0.5"
+					]
+				},
+				"start_rider": {
+					"transitions": [
+						{
+							"default": "false"
+						}
+					],
+					"on_entry": [
+						"/effect @s resistance 1000 0 true",
+						"/ride @s summon_rider dk:unbound_head",
+						"/ride @s summon_rider dk:unbound_head",
+						"/playsound beacon.activate @a[r=45] ~~~ 10 0.5"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental.destroys": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "query.has_target"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "query.has_target"
+						}
+					],
+					"on_entry": [
+						"/execute unless block ~ ~ ~ bedrock run fill ~-3 ~ ~2 ~2 ~9 ~-3 air [] destroy",
+						"/execute unless block ~ ~ ~ bedrock run fill ~-2 ~ ~3 ~3 ~9 ~-2 air [] destroy",
+						"/kill @e[type=item,r=7]"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental.lava_and_water": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"lava_and_water": "1"
+						}
+					]
+				},
+				"lava_and_water": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/fill ~4 ~-2 ~-4 ~-4 ~4 ~4 air 0 replace water",
+						"/fill ~4 ~-2 ~-4 ~-4 ~4 ~4 air 0 replace fire",
+						"/fill ~4 ~-2 ~-4 ~-4 ~4 ~4 air 0 replace lava"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental_fireball.destroys": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "1"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/execute unless block ~ ~-4 ~ bedrock run fill ~-5 ~-4 ~5 ~5 ~11 ~-6 air [] destroy",
+						"/execute unless block ~ ~-4 ~ bedrock run fill ~-4 ~-4 ~5 ~5 ~11 ~-4 air [] destroy",
+						"/fill ~4 ~-2 ~-4 ~-4 ~9 ~4 air 0 replace fire",
+						"/fill ~4 ~-2 ~-4 ~-4 ~9 ~4 air 0 replace lava",
+						"/kill @e[type=item,r=8]"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_arm_projectile.destroys": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "1"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/execute unless block ~ ~-4 ~ bedrock run fill ~-3 ~-2 ~3 ~3 ~4 ~-3 air [] destroy",
+						"/execute unless block ~ ~-4 ~ bedrock run fill ~-2 ~-2 ~3 ~3 ~4 ~-2 air [] destroy",
+						"/fill ~-3 ~-2 ~3 ~3 ~4 ~-3 air 0 replace fire",
+						"/fill ~-3 ~-2 ~3 ~3 ~4 ~-3 air 0 replace lava",
+						"/kill @e[type=item,r=8]"
+					]
+				}
+			}
+		},
+		"controller.animation.unbound_elemental_fireball.flames": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "1"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"/particle dk:flames_souls ~~~"
+					]
+				}
+			}
+		}
+	}
+}

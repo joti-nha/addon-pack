@@ -1,0 +1,44 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:plant_x_jellyfish_polyp_x_warm_ocean",
+      "places_feature": "ntk:nm/plant_weight_x_colored_jellyfish_polyp_x_weight"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "ocean"
+            },
+            {
+              "test": "has_biome_tag",
+              "operator": "==",
+              "value": "warm"
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 15.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 30, 60 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

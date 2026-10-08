@@ -1,0 +1,28 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:sickle_of_fatality"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:damage": 14,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:icon": "sickle_of_fatality",
+			"minecraft:display_name": {
+				"value": "item.dk:sickle_of_fatality.name"
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 1,
+				"movement_modifier": 0.35
+			},
+			"minecraft:custom_components": [
+				"dk:on_use"
+			],
+			"minecraft:cooldown": {
+				"category": "sword_of_fatality",
+				"duration": 3
+			}
+		}
+	}
+}

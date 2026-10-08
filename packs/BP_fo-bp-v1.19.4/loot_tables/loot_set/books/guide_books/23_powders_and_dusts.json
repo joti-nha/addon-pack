@@ -1,0 +1,82 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_name",
+              "name": "Powders & Dusts"
+            },
+            {
+              "function": "set_book_contents",
+              "title": "Guide Book #23",
+              "author": "Forsaken Odyssey",
+              "pages": [
+                "        §7Guide Book #23§r\n§lPowders & Dusts§r\n \n•Charcoal Powder\n•Copper Powder\n•Iron Powder\n•Gold Powder\n•Lapis Lazuli Powder\n•Amethyst Powder\n•Emerald Powder\n•Diamond Powder\n•Netherite Powder\n•Enchanted Dust",
+                
+                "§lCharcoal Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§lFurnace§r: -Bow, Crossbow, Fishing Rod, Sheild, Wooden Club, Wooden Tools.\n -§lBlast Furnace§r: Double Pile of Bamboo, Double Pile of Sticks, Wood Crates.",
+                "•§lCraftable on§r:\n -§lCrafting Table§r: Charcoal\n•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff",
+                "•§lProjectile§r: Chacoal Powder Magic Missile\n -§lHit Damage§r: 7\n -§lArea Damage§r: 2\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.",
+                "•§lCrafting Ingredients For§r:\n -Bottle of Cloulds\n -Earthen Quill\n -Charcoal\n•Can activates Spore Pot into Charcoal Spore Pot.",
+                
+                "§lCopper Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§lBlast Furnace§r: Copper Crate Key, Copper Bars, Copper Chain, Copper Ingot, Copper Lantern, Copper Nugget, Copper Trapdoor, Lightning Rod, Spyglass.",
+                "•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Copper Ingot\n  -Copper Nugget\n•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff",
+                "•§lProjectile§r: Copper Powder Magic Missile\n -§lHit Damage§r: 7\n -§lArea Damage§r: 3\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.",
+                "•§lCrafting Ingredients For§r:\n -Copper Apple\n -Copper Nugget\n•Can activates Spore Pot into Copper Spore Pot.",
+                
+                "§lIron Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lDropped by§r: Skeleton Swordman\n•§lSmelted on§r:\n -§lBlast Furnace§r: Activator Rail, Chain, Chain Links, Compass, Detector Rail, Flint and Steel, Iron Crate Key, Iron Bars, Iron Doors,",
+                "Iron Ingot, Iron Nugget, Iron Trapdoor, Lantern, Minecart, Rail, Shears, Soul Lantern.\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Iron Ingot\n  -Iron Nugget\n•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES",
+                "•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Iron Powder Magic Missile\n -§lHit Damage§r: 8\n -§lArea Damage§r: 3\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I,",
+                " Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Enchanted Dust\n -Iron Apple\n -Iron Nugget\n -Scroll of Fire Protection\n - Scroll of Protection\n•Can activates Spore Pot into Iron Spore Pot.",
+                
+                "§lGold Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lDropped by§r: Skeleton Golden Swordman\n•§lSmelted on§r:\n -§lBlast Furnace§r: Bell, Clock, Gold Ingot, Gold Ingot, Gold Nugget, Golden Chain, Golden Crate Key, Golden Dandelion, Golden Rail,",
+                "Pile of Golden Dandelion.\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Gold Ingot\n  -Gold Nugget\n•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES",
+                "•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Gold Powder Magic Missile\n -§lHit Damage§r: 8\n -§lArea Damage§r: 3\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks",
+                "  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Enchanted Dust\n -Gold Nugget\n -Golden Dandelion\n -Radiant Quill\n•Can activates Spore Pot into Gold Spore Pot.",
+                
+                "§lLapis Lazuli Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§lBlast Furnace§r: Lapis Lazuli\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Lapis Lazuli\n•§lStackable§r: 64\n•§lBurn on fire§r: YES",
+                "•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Lapis Lazuli Powder Magic Missile\n -§lHit Damage§r: 8\n -§lArea Damage§r: 3\n -§lArea Radius§r: 3 blocks",
+                " -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Arcane Quill\n -Arcazure Pearl\n -Enchanted Dust\n -Lapis Lazuli\n -Lapis Lazuli Apple",
+                " -Radiant Quill\n•Can activates Spore Pot into Lapis Lazuli Spore Pot.",
+                
+                "§lAmethyst Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§lBlast Furnace§r: Amethyst Buds, Amethyst Cluster, Amethyst Shard, Block of Amethyst, Tinted Glass.\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Amethyst Shard",
+                "•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Amethyst Powder Magic Missile\n -§lHit Damage§r: 8",
+                " -§lArea Damage§r: 3\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Amethyst Apple\n -Amethyst Shard",
+                " -Enchanted Dust\n -Elytra Scrap\n -Scroll of Purification\n -Void Quill\n•Can activates Spore Pot into Amethyst Spore Pot.",
+                
+                "§lEmerald Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lDropped by§r: Cave Dweller, Wandering Collector.\n•§lSmelted on§r:\n -§lBlast Furnace§r: Emerald\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Emerald\n•§lStackable§r: 64",
+                "•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Emerald Powder Magic Missile\n -§lHit Damage§r: 9\n -§lArea Damage§r: 3",
+                " -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Emerald\n -Emerald Apple\n -Enchanted Dust\n -Scroll of Hoarding",
+                " -Scroll of Resurgence\n -Wild Quill\n•Can activates Spore Pot into Emerald Spore Pot.",
+                
+                "§lDiamond Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§Furnace§r: Diamond Key\n -§lBlast Furnace§r: Diamond, Diamond Armors, Diamond Crate Key, Diamond Horse Armor, Diamond Nautilus Armor, Diamond Tools.",
+                "•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Diamond\n•§lStackable§r: 64\n•§lBurn on fire§r: YES\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff",
+                "•§lProjectile§r: Diamond Powder Magic Missile\n -§lHit Damage§r: 12\n -§lArea Damage§r: 6\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.",
+                "•§lCrafting Ingredients For§r:\n -Arcazure Pearl\n -Diamond\n -Diamond Apple\n -Enchanted Dust\n -Levitation Staff\n -Soul Quill\n•Can activates Spore Pot into Diamond Spore Pot.",
+                
+                "§lNetherite Powder§r\n§8ITEM§r\n \n•§lRarity§r: Common\n•§lSmelted on§r:\n -§lBlast Furnace§r: Netherite Armors, Netherite Tools.\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Netherite Ingot\n  -Netherite Scrap",
+                "•§lStackable§r: 64\n•§lBurn on fire§r: NO\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES\n•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Netherite Powder Magic Missile\n -§lHit Damage§r: 20",
+                " -§lArea Damage§r: 10\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks\n  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Enchanted Dust\n -Netherite Apple",
+                " -Netherite Scrap\n•Can activates Spore Pot into Diamond Spore Pot.",
+                
+                "§lEnchanted Dust§r\n§8ITEM§r\n \n•§lRarity§r: Uncommon\n•§lDropped by§r: Forest Wisp\n•§lTrade by§r: Cleric Villager §o(Grandmaster)§r\n•§lCraftable on§r:\n -§lArtifacture Table§r:\n  -Amethyst Powder, Diamond Powder, Emerald Powder,",
+                "Glowstone Dust, Gold Powder, Iron Powder, Lapis Lazuli Powder, Redstone, Netherite Powder.\n•§lStackable§r: 64\n•§lBurn on fire§r: NO\n•§lDispensable§r: YES\n•§lThrowable§r: NO\n•§lOffhand Equippable§r: YES",
+                "•§lAmmunation Of§r: Powder Staff\n•§lProjectile§r: Enchanted Dust Magic Missile\n -§lHit Damage§r: 16\n -§lArea Damage§r: 8\n -§lArea Radius§r: 3 blocks\n -§lImpact Effect§r: Magical Scourge I, Spirit Piercer.\n  -§lRadius§r: 1 blocks",
+                "  -§lTargets§r: All mobs.\n•§lCrafting Ingredients For§r:\n -Bottle o'Enchanting\n -Enchanted Emerald\n -Enchanted Golden Apple\n -Enchanted Pearl\n•Can activates Spore Pot into Enchanted Spore Pot."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

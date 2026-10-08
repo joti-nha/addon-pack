@@ -1,0 +1,636 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.outcast",
+				"texture_width": 128,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 9,
+				"visible_bounds_offset": [
+					0,
+					1.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "hide",
+					"parent": "waist",
+					"pivot": [
+						0,
+						11,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								7,
+								-2
+							],
+							"size": [
+								8,
+								4,
+								4
+							],
+							"uv": [
+								32,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "root",
+					"parent": "waist",
+					"pivot": [
+						0,
+						12,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								11,
+								-2
+							],
+							"size": [
+								8,
+								4,
+								4
+							],
+							"uv": [
+								20,
+								21
+							]
+						}
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								18,
+								-2
+							],
+							"size": [
+								8,
+								5,
+								4
+							],
+							"uv": [
+								0,
+								16
+							],
+							"mirror": false
+						},
+						{
+							"origin": [
+								-3,
+								14,
+								-1
+							],
+							"size": [
+								6,
+								5,
+								2
+							],
+							"uv": [
+								24,
+								0
+							],
+							"mirror": false
+						},
+						{
+							"origin": [
+								-3,
+								18,
+								-1
+							],
+							"size": [
+								6,
+								5,
+								2
+							],
+							"inflate": -0.1,
+							"uv": [
+								24,
+								0
+							],
+							"mirror": false
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-5,
+						22,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								11,
+								-1
+							],
+							"size": [
+								2,
+								12,
+								2
+							],
+							"uv": [
+								24,
+								29
+							],
+							"mirror": false
+						}
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "torch",
+					"parent": "rightArm",
+					"pivot": [
+						-4,
+						12,
+						2
+					],
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5,
+								12,
+								2
+							],
+							"size": [
+								1,
+								4,
+								1
+							],
+							"uv": [
+								12,
+								45
+							]
+						},
+						{
+							"origin": [
+								-6,
+								15,
+								1
+							],
+							"size": [
+								3,
+								4,
+								3
+							],
+							"uv": [
+								0,
+								50
+							]
+						},
+						{
+							"origin": [
+								-10,
+								13,
+								2
+							],
+							"size": [
+								2,
+								1,
+								1
+							],
+							"pivot": [
+								-4,
+								12,
+								2
+							],
+							"rotation": [
+								78.47771,
+								21.33835,
+								78.24595
+							],
+							"uv": [
+								12,
+								52
+							]
+						},
+						{
+							"origin": [
+								-9,
+								9,
+								2
+							],
+							"size": [
+								2,
+								1,
+								1
+							],
+							"pivot": [
+								-4,
+								12,
+								2
+							],
+							"rotation": [
+								0,
+								0,
+								112.5
+							],
+							"uv": [
+								9,
+								50
+							]
+						},
+						{
+							"origin": [
+								-5,
+								15.2,
+								3.2
+							],
+							"size": [
+								1,
+								1,
+								2
+							],
+							"pivot": [
+								-4,
+								12,
+								2
+							],
+							"rotation": [
+								-140.77909,
+								24.45721,
+								175.67066
+							],
+							"uv": [
+								9,
+								42
+							]
+						},
+						{
+							"origin": [
+								-3,
+								15,
+								5
+							],
+							"size": [
+								1,
+								1,
+								2
+							],
+							"pivot": [
+								-4,
+								12,
+								2
+							],
+							"rotation": [
+								48.83914,
+								-24.94169,
+								-17.23442
+							],
+							"uv": [
+								9,
+								42
+							]
+						}
+					]
+				},
+				{
+					"name": "bone2",
+					"parent": "torch",
+					"pivot": [
+						-4.5,
+						18.75,
+						2.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								19,
+								1
+							],
+							"size": [
+								3,
+								5,
+								3
+							],
+							"uv": [
+								0,
+								42
+							]
+						}
+					],
+					"locators": {
+						"flames": {
+							"offset": [
+								-4.5,
+								21,
+								2.5
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							]
+						}
+					}
+				},
+				{
+					"name": "bone",
+					"parent": "torch",
+					"pivot": [
+						-4.5,
+						18.75,
+						2.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								19,
+								2
+							],
+							"size": [
+								3,
+								6,
+								1
+							],
+							"inflate": -0.1,
+							"uv": [
+								24,
+								43
+							]
+						}
+					],
+					"locators": {
+						"smokes": {
+							"offset": [
+								-4.5,
+								21,
+								2.5
+							],
+							"rotation": [
+								90,
+								0,
+								0
+							]
+						}
+					}
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						5,
+						22,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								4,
+								11,
+								-1
+							],
+							"size": [
+								2,
+								12,
+								2
+							],
+							"uv": [
+								16,
+								29
+							],
+							"mirror": false
+						}
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [
+						6,
+						15,
+						1
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								23,
+								-4
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"inflate": -0.1,
+							"uv": [
+								0,
+								0
+							],
+							"mirror": false
+						}
+					]
+				},
+				{
+					"name": "chest",
+					"parent": "body",
+					"pivot": [
+						0,
+						19.69858,
+						-6.84166
+					],
+					"rotation": [
+						-7.5,
+						180,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3.5,
+								21.69858,
+								-10.34166
+							],
+							"size": [
+								7,
+								1,
+								5
+							],
+							"uv": [
+								56,
+								20
+							]
+						},
+						{
+							"origin": [
+								-3.5,
+								18.69858,
+								-11.34166
+							],
+							"size": [
+								7,
+								3,
+								7
+							],
+							"uv": [
+								56,
+								10
+							]
+						},
+						{
+							"origin": [
+								-0.5,
+								21.19858,
+								-1.34166
+							],
+							"size": [
+								1,
+								1,
+								2
+							],
+							"pivot": [
+								-0.5,
+								22.19858,
+								-3.34166
+							],
+							"rotation": [
+								-90,
+								0,
+								0
+							],
+							"uv": [
+								56,
+								0
+							]
+						},
+						{
+							"origin": [
+								-3.5,
+								15.69858,
+								-11.34166
+							],
+							"size": [
+								7,
+								3,
+								7
+							],
+							"uv": [
+								56,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "waist",
+					"pivot": [
+						-2.1,
+						12,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								-2.9,
+								0,
+								-1
+							],
+							"size": [
+								2,
+								12,
+								2
+							],
+							"uv": [
+								0,
+								25
+							],
+							"mirror": false
+						}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "waist",
+					"pivot": [
+						2.1,
+						12,
+						0
+					],
+					"mirror": true,
+					"cubes": [
+						{
+							"origin": [
+								1.1,
+								0,
+								-1
+							],
+							"size": [
+								2,
+								12,
+								2
+							],
+							"uv": [
+								8,
+								25
+							],
+							"mirror": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

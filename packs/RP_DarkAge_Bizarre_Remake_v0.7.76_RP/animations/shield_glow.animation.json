@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.shield_glow.spin": {
+			"loop": true,
+			"animation_length": 0.72,
+			"bones": {
+				"all_shields": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.72": [0, -360, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,102 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:sword_of_fatality",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "You are a monster hunter."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:rotten_flesh",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 4,
+                                "max": 9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:enchanted_golden_apple",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_count",
+                            "count": {
+                                "min": 1,
+                                "max": 2
+                            }
+                        },
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "A help from me. By unknown"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:plague_head",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "What a creepy head."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "dk:key_of_the_plague",
+                    "weight": 100,
+                    "functions": [
+                        {
+                            "function": "set_lore",
+                            "lore": [
+                                "Heal wounds and then get sick"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

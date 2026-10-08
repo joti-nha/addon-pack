@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_glow_lichen_stew"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "glow_lichen_stew",
+    "assume_symmetry": true,
+    "pattern": [
+      "GGG",
+      " B "
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glow_lichen"
+      },
+      "B": {
+        "item": "minecraft:bowl"
+      }
+    },
+    "result": {
+      "item": "ntk:glow_lichen_stew",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:glow_lichen"
+      },
+      {
+        "item": "minecraft:bowl"
+      }
+    ]
+  }
+}

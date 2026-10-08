@@ -1,0 +1,46 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:patch_surface_x_mossy_cobblestone_x_mossy_forest",
+      "places_feature": "ntk:twe/patch_surface_x_mossy_cobblestone_x_ore"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "mossy_forest"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 3.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [
+          "query.heightmap(variable.worldx, variable.worldz) + -2",
+          "query.heightmap(variable.worldx, variable.worldz) + -1"
+        ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ 0, 16 ]
+      }
+    }
+  }
+}

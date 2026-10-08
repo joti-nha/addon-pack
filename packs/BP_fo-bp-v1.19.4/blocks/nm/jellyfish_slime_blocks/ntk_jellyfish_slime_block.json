@@ -1,0 +1,184 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:jellyfish_slime_block",
+      "menu_category": {
+				"category": "construction",
+        "group": "ntk:itemGroup.name.jellyfish_slime_blocks",
+				"is_hidden_in_commands": false
+			},
+      "states": {
+        "ntk:lighten": [ false, true ]
+      }
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.jellyfish_slime_block.name",
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_jellyfish_slime_block",
+          "render_method": "blend",
+          "tint_method": "none",
+          "ambient_occlusion": 1.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_jellyfish_slime_block",
+            "render_method": "blend",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_jellyfish_slime_block",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#dabfce"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.5,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 30.0
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.0
+			},
+			"minecraft:chest_obstruction": {
+        "obstruction_rule": "shape"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.flute",
+        "up": "note.flute"
+      },
+			"minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nm/blocks/ntk_jellyfish_slime_block.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:shovel_diggable",
+        "ntk:full_block",
+        "ntk:solid_block",
+        "ntk:compacted_block",
+        "ntk:jellyfish_slime_block",
+        
+        "minecraft:is_shovel_item_destructible"
+      ],
+      "ntk:on_step_on": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:jellyfish_slime_block",
+          "block_state": "ntk:lighten",
+          "state_value": false,
+          "change_block": "ntk:jellyfish_slime_block",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:lighten",
+          "change_state_value": true,
+          "copy_all_block_state": false,
+          "copy_cardinal_state": false,
+          "no_block_state": false
+        }
+      ],
+      "ntk:on_step_off": [
+        {
+          "event_chance": 100.0,
+          "block_name": "ntk:jellyfish_slime_block",
+          "block_state": "ntk:lighten",
+          "state_value": true,
+          "change_block": "ntk:jellyfish_slime_block",
+          "change_block_chance": 100.0,
+          "change_block_state": "ntk:lighten",
+          "change_state_value": false,
+          "copy_all_block_state": false,
+          "copy_cardinal_state": false,
+          "no_block_state": false
+        }
+      ]
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('ntk:lighten') == false",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ntk_jellyfish_slime_block",
+              "render_method": "blend",
+              "tint_method": "none",
+              "ambient_occlusion": 1.0,
+              "face_dimming": true,
+              "isotropic": false
+            }
+          },
+          "minecraft:light_emission": 0
+        }
+      },
+      {
+        "condition": "query.block_state('ntk:lighten') == true",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "ntk_jellyfish_slime_block_lighten",
+              "render_method": "blend",
+              "tint_method": "none",
+              "ambient_occlusion": 0.0,
+              "face_dimming": false,
+              "isotropic": false
+            }
+          },
+          "minecraft:light_emission": 5
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"runtime_identifier": "snowball",
+			"identifier": "dk:ring_of_light",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn_self": {
+				"minecraft:despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"ring_of_light",
+					"arrow",
+					"dk",
+					"projectile"
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:timer": {
+				"time": 6,
+				"looping": true,
+				"time_down_event": {
+					"event": "minecraft:despawn_self",
+					"target": "self"
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"impact_damage": {
+						"damage": 8,
+						"knockback": true,
+						"catch_fire": true,
+						"semi_random_diff_damage": false,
+						"destroy_on_hit": false
+					},
+					"catch_fire": {
+						"fire_affected_by_griefing": true
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"liquid_inertia": 0.99,
+				"hit_sound": "item.trident.hit",
+				"hit_ground_sound": "item.trident.hit_ground",
+				"power": 4,
+				"gravity": 0,
+				"uncertainty_base": 1,
+				"uncertainty_multiplier": 0,
+				"stop_on_hurt": false,
+				"anchor": 2,
+				"should_bounce": true,
+				"multiple_targets": true,
+				"offset": [
+					0,
+					-0.1,
+					0
+				]
+			}
+		},
+		"events": {
+			"minecraft:despawn_self": {
+				"add": {
+					"component_groups": [
+						"despawn_self"
+					]
+				}
+			}
+		}
+	}
+}

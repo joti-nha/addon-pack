@@ -1,0 +1,19 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/patch_surface_x_mud_x_ore"
+    },
+    "count": 25,
+    "replace_rules": [
+      {
+        "places_block": "minecraft:mud",
+        "may_replace": [
+          "ntk:corrupted_dirt",
+          "minecraft:coarse_dirt",
+          "minecraft:dirt"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_teleportation_staff"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "teleportation_staff",
+    "assume_symmetry": true,
+    "pattern": [
+      "APA",
+      "EOE",
+      "FMF"
+    ],
+    "key": {
+      "M": {
+        "item": "ntk:metal_rod"
+      },
+      "F": {
+        "item": "ntk:purple_feather"
+      },
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "E": {
+        "item": "minecraft:echo_shard"
+      },
+      "P": {
+        "item": "minecraft:ender_pearl"
+      },
+      "O": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "ntk:teleportation_staff",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:metal_rod"
+      },
+      {
+        "item": "ntk:purple_feather"
+      },
+      {
+        "item": "minecraft:amethyst_shard"
+      },
+      {
+        "item": "minecraft:echo_shard"
+      },
+      {
+        "item": "minecraft:ender_pearl"
+      },
+      {
+        "item": "minecraft:obsidian"
+      }
+    ]
+  }
+}

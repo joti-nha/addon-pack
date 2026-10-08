@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:phantasma_matter",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "mnra_cata:phantasma_matter",
+				"use_on": [
+					"mnra_cata:phantasma_matter"
+				],
+				"replace_block_item": true
+			},
+			"minecraft:rarity": {
+				"value": "common"
+			}
+		}
+	}
+}

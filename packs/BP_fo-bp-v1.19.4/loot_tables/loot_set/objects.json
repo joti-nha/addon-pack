@@ -1,0 +1,25 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/random_candles.json"
+        },
+        {
+          "weight": 50,
+          "type": "item",
+          "name": "minecraft:flower_pot",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

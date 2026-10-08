@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_zinc_ingot_x_block_of_zinc"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "ingredients": [
+      {
+        "item": "ntk:block_of_zinc"
+      }
+    ],
+    "result": {
+      "item": "ntk:zinc_ingot",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_zinc"
+      }
+    ]
+  }
+}

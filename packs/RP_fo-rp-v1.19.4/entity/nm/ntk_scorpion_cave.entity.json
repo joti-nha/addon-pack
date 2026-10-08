@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:scorpion_cave",
+      "enable_attachables": false,
+      "hide_armor": false,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_scorpion_cave"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_scorpion"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_scorpion"
+      },
+      "materials": {
+        "default": "ntk_entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/nm/scorpion/ntk_scorpion_cave"
+      },
+      "animations": {
+        "controller_general": "controller.animation.entity.ntk_scorpion.general",
+        "base_pose": "animation.entity.ntk_scorpion.base_pose",
+        "look_at_target": "animation.entity.ntk_scorpion.look_at_target",
+        "walking": "animation.entity.ntk_scorpion.walking"
+      },
+      "scripts": {
+				"animate": [
+					"controller_general"
+				]
+			}
+    }
+  }
+}

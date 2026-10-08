@@ -1,0 +1,140 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:halberd_item",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"pickup_active_sensor": {
+				"minecraft:environment_sensor": {
+					"triggers": {
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"value": 3,
+							"operator": ">"
+						},
+						"event": "active_pickup"
+					}
+				},
+				"minecraft:timer": {
+					"time": 5,
+					"time_down_event": {
+						"event": "active_pickup"
+					}
+				}
+			},
+			"pickup_sensor": {
+				"minecraft:entity_sensor": {
+					"sensor_range": 1,
+					"event_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "player"
+					},
+					"event": "pickup"
+				},
+				"minecraft:timer": {
+					"time": 300,
+					"time_down_event": {
+						"event": "despawn"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"value": 3,
+							"operator": "<="
+						},
+						"add": {
+							"component_groups": [
+								"pickup_active_sensor"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"value": 3,
+							"operator": ">"
+						},
+						"add": {
+							"component_groups": [
+								"pickup_sensor"
+							]
+						}
+					}
+				]
+			},
+			"pickup": {
+				"sequence": [
+					{
+						"queue_command": {
+							"command": [
+								"give @p dk:halberd",
+								"playsound random.pop @a ~~~"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"despawn"
+							]
+						}
+					}
+				]
+			},
+			"active_pickup": {
+				"add": {
+					"component_groups": [
+						"pickup_sensor"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"pickup_active_sensor"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

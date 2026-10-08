@@ -1,0 +1,44 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:brute_zombie",
+      "enable_attachables": false,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_brute_zombie"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_brute_zombie"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_brute_zombie"
+      },
+      "materials": {
+        "default": "ntk_entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/nmd/brute_zombie/ntk_brute_zombie"
+      },
+      "animations": {
+        "controller_attack": "controller.animation.entity.ntk_brute_zombie.attack",
+        "controller_movement": "controller.animation.entity.ntk_brute_zombie.movement",
+        "broadcast_angry": "animation.entity.ntk_brute_zombie.broadcast_angry",
+        "hand_attack": "animation.entity.ntk_brute_zombie.hand_attack",
+        "look_at_target": "animation.entity.ntk_brute_zombie.look_at_target",
+        "walking": "animation.entity.ntk_brute_zombie.walking"
+      },
+      "scripts": {
+				"animate": [
+					"controller_attack",
+					"controller_movement",
+					{
+						"broadcast_angry": "query.property('ntk:angry_state') == 'broadcast_anger' ? 1.0 : 0.0"
+					},
+					{
+						"look_at_target": 0.8
+					}
+				]
+			}
+    }
+  }
+}

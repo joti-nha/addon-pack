@@ -1,0 +1,1 @@
+{"format_version":"1.10.0","animations":{"animation.panascais_end.dragon.spawn":{"loop":true,"animation_length":12.6,"timeline":{"6.5":["/effect @s regeneration 6 135 true"],"11.5":["/effect @s instant_health 1 255 true","/event entity @s panascais_end:spawn_done"]}}}}

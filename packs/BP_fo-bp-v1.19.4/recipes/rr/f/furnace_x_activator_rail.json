@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:furnace_x_activator_rail"
+    },
+    "tags": [ "furnace" ],
+    "input": {
+      "item": "minecraft:activator_rail"
+    },
+    "output": {
+      "item": "minecraft:iron_nugget",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "minecraft:activator_rail"
+      }
+    ]
+  }
+}

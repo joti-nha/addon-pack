@@ -1,0 +1,52 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:nce/plant_x_short_grass_x_01_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "minecraft:short_grass",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air",
+      // Flower:
+      "minecraft:wildflowers",
+      // Plants:
+      "minecraft:leaf_litter",
+      "minecraft:vine",
+      // Other:
+      "minecraft:snow_layer"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        { "tags": "query.all_tags('ntk:dirt')" },
+        { "tags": "query.all_tags('ntk:moss')" },
+        { "tags": "query.all_tags('ntk:mud')" },
+        { "tags": "query.all_tags('ntk:bryumed_blocks')" },
+        { "tags": "query.all_tags('ntk:grassed_blocks')" },
+        { "tags": "query.all_tags('ntk:mossed_blocks')" },
+        { "tags": "query.all_tags('ntk:myceliated_blocks')" },
+        // Soil:
+        "minecraft:coarse_dirt",
+        "minecraft:dirt",
+        "minecraft:dirt_with_roots",
+        "minecraft:farmland",
+        "minecraft:grass_block",
+        "minecraft:moss_block",
+        "minecraft:mud",
+        "minecraft:muddy_mangrove_roots",
+        "minecraft:mycelium",
+        "minecraft:pale_moss_block",
+        "minecraft:podzol"
+			]
+		}
+  }
+}

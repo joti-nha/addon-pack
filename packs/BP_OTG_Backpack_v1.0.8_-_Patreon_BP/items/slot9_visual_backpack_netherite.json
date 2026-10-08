@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.110",
+    "minecraft:item": {
+        "description": {
+            "identifier": "otg:slot9_visual_backpack_netherite"
+        },
+        "components": {
+            "minecraft:icon": "backpack_netherite",
+            "minecraft:display_name": {
+                "value": "item.otg:backpack_netherite.name"
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:allow_off_hand": true,
+            "minecraft:wearable": {
+                "slot": "slot.weapon.offhand"
+            },
+            "minecraft:fire_resistant": {
+                "value": true
+            }
+        }
+    }
+}

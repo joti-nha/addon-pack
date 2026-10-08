@@ -1,0 +1,27 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_overgrown_jungle_slab"
+		},
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "ntk:overgrown_jungle_planks"
+			}
+		},
+		"result": {
+			"item": "ntk:overgrown_jungle_slab",
+			"count": 6
+		},
+    "unlock": [
+      {
+        "item": "ntk:overgrown_jungle_planks"
+      }
+    ]
+	}
+}

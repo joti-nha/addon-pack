@@ -1,0 +1,46 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+      "controller.render.modification_station_entity.hook": {
+        "arrays": {
+            "textures": {
+                "Array.skins":[
+                    "texture.hook_iron",
+                    "texture.hook_gold",
+                    "texture.hook_diamond",
+                    "texture.hook_neptunium",
+                    "texture.hook_redstone",
+                    "texture.hook_heavy",
+                    "texture.hook_light",
+                    "texture.hook_double",
+                    "texture.hook_note",
+                    "texture.hook_glow",
+                    "texture.hook_creeper",
+                    "texture.hook_essence",
+                    "texture.hook_glowstone"
+                ]
+            }
+        },
+        "geometry": "geometry.hook",
+        "materials": [ { "*": "material.default" } ],
+        "textures": [ "Array.skins[q.property('tm_aqc:hook') - 1]" ]
+      },
+      "controller.render.modification_station_entity.default": {
+        "arrays": {
+            "textures": {
+                "Array.skins":[
+                    "texture.iron_rod",
+                    "texture.gold_rod",
+                    "texture.diamond_rod",
+                    "texture.netherite_rod",
+                    "texture.neptunium_rod"
+                ]
+            }
+        },
+        "geometry": "geometry.default",
+        "materials": [ { "*": "material.default" } ],
+        "textures": [ "Array.skins[q.property('tm_aqc:rod')]" ]
+      }
+    }
+  }
+  

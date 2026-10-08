@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:twe/patch_void_weight_x_end_stone"
+    },
+    "features": [
+      [ "ntk:twe/patch_void_x_end_stone_x_large_x_scatter", 50 ],
+      [ "ntk:twe/patch_void_x_end_stone_x_med_cluster_x_scatter", 100 ],
+      [ "ntk:twe/patch_void_x_end_stone_x_medium_x_scatter", 100 ],
+      [ "ntk:twe/patch_void_x_end_stone_x_small_x_scatter", 100 ]
+    ]
+  }
+}

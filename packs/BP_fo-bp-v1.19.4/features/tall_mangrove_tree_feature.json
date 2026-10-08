@@ -1,0 +1,14 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "minecraft:tall_mangrove_tree_feature"
+    },
+    "features": [
+      [ "ntk:mtv/tree_v_mangrove_x_tall_mangrove_tree", 100 ],
+      [ "ntk:mtv/tree_x_mangrove_x_grove_mega_rooted_tree_01", 25 ],
+      [ "ntk:mtv/tree_x_mangrove_x_grove_tall_rooted_tree_01", 25 ],
+      [ "ntk:mtv/tree_x_mangrove_x_grove_tall_rooted_tree_02", 25 ]
+    ]
+  }
+}

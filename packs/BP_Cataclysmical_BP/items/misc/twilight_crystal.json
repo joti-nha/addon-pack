@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.40",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:twilight_crystal",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:rarity": {
+				"value": "common"
+			},
+			"minecraft:icon": "mnra_cata_twilight_crystal"
+		}
+	}
+}

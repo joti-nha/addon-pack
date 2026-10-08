@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.netherite_skull.first_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [
+						7.20364,
+						-21.66054,
+						-159.22017
+					],
+					"position": [
+						-1.41421,
+						24.20874,
+						-3.68584
+					]
+				}
+			}
+		},
+		"animation.netherite_skull.third_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [
+						0,
+						-25,
+						0
+					],
+					"position": [
+						0,
+						19.80328,
+						-1.89846
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.miner_emblem.first_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [
+						85.69991,
+						-43.68895,
+						-155.42412
+					],
+					"position": [
+						4,
+						16,
+						0
+					],
+					"scale": 0.7
+				}
+			}
+		},
+		"animation.miner_emblem.third_person_hold": {
+			"loop": true,
+			"bones": {
+				"root_item": {
+					"rotation": [
+						37.5,
+						0,
+						0
+					],
+					"position": [
+						2,
+						21,
+						-4
+					],
+					"scale": 0.3
+				}
+			}
+		}
+	}
+}

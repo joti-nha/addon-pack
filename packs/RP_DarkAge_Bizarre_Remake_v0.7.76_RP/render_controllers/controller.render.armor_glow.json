@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.armor_glow": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				},
+				{
+					"*": "material.glow3"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		}
+	}
+}

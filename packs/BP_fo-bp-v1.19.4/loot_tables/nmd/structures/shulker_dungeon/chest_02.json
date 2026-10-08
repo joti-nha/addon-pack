@@ -1,0 +1,92 @@
+{
+  "pools": [
+    // End Rarity
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/rarity_items_end.json"
+        }
+      ]
+    },
+    // Enchanted Books
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/random_enchanted_books.json"
+        }
+      ]
+    },
+    // End Materials
+    {
+      "rolls": 6,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/materials_end.json"
+        }
+      ]
+    },
+    // End Foods & Crops
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/foods_crops_end.json"
+        }
+      ]
+    },
+    // End Plants 
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/plants_end.json"
+        }
+      ]
+    },
+    // Potions
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/potions.json"
+        }
+      ]
+    },
+    // End Tools
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/tools_end.json"
+        }
+      ]
+    },
+    // End Equipments
+    {
+      "rolls": 3,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/equipments_end.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+      "controller.render.tm_aqc.clam.pearl": {
+        "arrays": {
+            "textures": {
+                "Array.skins":[
+                    "texture.white",
+                    "texture.gold",
+                    "texture.black"
+                ]
+            }
+        },
+        "geometry": "geometry.pearl",
+        "materials": [ { "*": "material.default" } ],
+        "textures": [ "Array.skins[q.property('tm_aqc:pearl') - 1]" ],
+        "ignore_lighting": true
+      },
+      "controller.render.tm_aqc.clam": {
+        "geometry": "geometry.base",
+        "materials": [ { "*": "material.default" } ],
+        "textures": [ "texture.base" ]
+      }
+    }
+  }
+  

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_copper_nugget_x_copper_powder"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "copper_nugget",
+    "assume_symmetry": true,
+    "pattern": [
+      " I ",
+      "ICI",
+      " I "
+    ],
+    "key": {
+      "I": {
+        "item": "ntk:copper_powder"
+      },
+      "C": {
+        "item": "ntk:calcite_chunk"
+      }
+    },
+    "result": {
+      "item": "minecraft:copper_nugget",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:copper_powder"
+      },
+      {
+        "item": "ntk:calcite_chunk"
+      }
+    ]
+  }
+}

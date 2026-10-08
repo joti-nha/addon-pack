@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_soul_stone_brick_slab"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:soul_stone_bricks"
+      }
+    },
+    "result": {
+      "item": "ntk:soul_stone_brick_slab",
+      "count": 6
+    },
+    "unlock": [
+      {
+        "item": "ntk:soul_stone_bricks"
+      }
+    ]
+  }
+}

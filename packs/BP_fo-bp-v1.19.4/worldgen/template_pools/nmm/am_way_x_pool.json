@@ -1,0 +1,163 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:nmm/am_way_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_straight_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_straight_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_straight_minecart_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_left_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_right_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 25,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_junction_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 25,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_way_junction_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_cave_spider_room_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_cave_spider_room_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_skeleton_miner_room_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_skeleton_miner_room_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_03",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_04",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_05",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      },
+      {
+        "weight": 10,
+        "element": {
+          "location": "nmm/ancient_mineshaft/am_room_06",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:nmm/ancient_mineshaft_x_processor"
+        }
+      }
+    ]
+  }
+}

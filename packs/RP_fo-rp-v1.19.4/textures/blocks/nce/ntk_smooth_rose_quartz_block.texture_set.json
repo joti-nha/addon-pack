@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_smooth_rose_quartz_block",
+    "heightmap": "ntk_pbr_height",
+    "metalness_emissive_roughness": "ntk_quartz_crystal_block_mer"
+  }
+}

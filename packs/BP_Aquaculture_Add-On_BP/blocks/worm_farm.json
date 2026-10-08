@@ -1,0 +1,279 @@
+{
+  "format_version": "1.21.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "tm_aqc:worm_farm",
+      "menu_category": {
+        "category": "items"
+      },
+      "states": {
+        "tm_aqc:fill_level": {
+          "values": { "min": 0, "max": 8 }
+        }
+      }
+    },
+    "components": {
+      "minecraft:collision_box": true,
+      "minecraft:selection_box": true,
+	  "minecraft:custom_components": ["tm_aqc:worm_farm"],
+	  "minecraft:tick": {
+		"interval_range": [8,8],
+		"looping": true
+	  },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.9,
+        "item_specific_speeds": [
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:wooden_tier')"
+            },
+            "destroy_speed": 0.45
+          },
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:stone_tier')"
+            },
+            "destroy_speed": 0.25
+          },
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:iron_tier')"
+            },
+            "destroy_speed": 0.15
+          },
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:golden_tier')"
+            },
+            "destroy_speed": 0.15
+          },
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:diamond_tier')"
+            },
+            "destroy_speed": 0.1
+          },
+          {
+            "item": {
+              "tags": "q.all_tags('minecraft:is_axe', 'minecraft:netherite_tier')"
+            },
+            "destroy_speed": 0.1
+          }
+        ]
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 15
+      },
+      "minecraft:geometry": "geometry.tm_aqc.worm_farm",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "tm_aqc_worm_farm_side",
+          "render_method": "alpha_test"
+        },
+        "top": {
+          "texture": "tm_aqc_worm_farm_top",
+          "render_method": "alpha_test"
+        },
+        "bottom": {
+          "texture": "tm_aqc_worm_farm_bottom",
+          "render_method": "alpha_test"
+        }
+      },
+      "minecraft:map_color": "#63846A"
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('tm_aqc:fill_level') == 1",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_1",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 2",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_2",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 3",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_3",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 4",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_4",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 5",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_5",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 6",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_6",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 7",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_7",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_compost",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      },
+	  {
+        "condition": "query.block_state('tm_aqc:fill_level') == 8",
+        "components": {
+          "minecraft:geometry": "geometry.tm_aqc.worm_farm_7",
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "tm_aqc_worm_farm_side",
+              "render_method": "alpha_test"
+            },
+            "top": {
+              "texture": "tm_aqc_worm_farm_top",
+              "render_method": "alpha_test"
+            },
+            "bottom": {
+              "texture": "tm_aqc_worm_farm_bottom",
+              "render_method": "alpha_test"
+            },
+            "middle": {
+              "texture": "tm_aqc_worm_farm_ready",
+              "render_method": "alpha_test"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

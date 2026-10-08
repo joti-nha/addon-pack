@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_weathered_copper_lamp_x_weathered_copper_x_coals"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "group": "weathered_copper_lamp",
+    "assume_symmetry": true,
+    "pattern": [
+      "A",
+      "B",
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:weathered_copper"
+      },
+      "B": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:weathered_copper_lamp",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:weathered_copper"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"block_sounds": {
+		"bv_light_source_sounds": {
+			"volume": 1,
+			"pitch": 1,
+			"events": {
+				"break": "bv.silence",
+				"hit": "bv.silence",
+				"place": "bv.silence"
+			}
+		}
+	},
+	"interactive_sounds": {
+		"block_sounds": {
+			"bv:light_source": {
+				"pitch": 1,
+				"volume": 1,
+				"events": {
+					"fall": "bv.silence",
+					"jump": "bv.silence",
+					"step": "bv.silence",
+					"land": "bv.silence"
+				}
+			}
+		}
+	},
+	"entity_sounds": {
+		"entities": {}
+	}
+}

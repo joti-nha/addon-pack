@@ -1,0 +1,136 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+	  "controller.animation.entity.ntk_cursed_rat.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+					  {
+							"bite_attack": "variable.attack_time > 0.0"
+						}
+					]
+				},
+				"bite_attack": {
+					"animations": [ "bite_attack" ],
+					"transitions": [
+						{
+							"default": "variable.attack_time <= 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_cursed_rat.interested": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"interested": "query.is_interested"
+						}
+					]
+				},
+				"interested": {
+					"animations": [ "interested" ],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"default": "!query.is_interested"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_cursed_rat.movement": {
+			"initial_state": "walking",
+			"states": {
+				"walking": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed * 1.6"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"sitting": "query.is_sitting"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [ "sitting" ],
+					"blend_transition": 0.4,
+					"transitions": [
+					  {
+					    "walking": "!query.is_sitting"
+					  }
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_cursed_rat.particles": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "cursed_rat_particle": "(query.property('ntk:spawn_type') == 'wild' || query.property('ntk:spawn_type') == 'transformation') && query.life_span == 0.0"
+            }
+          ]
+        },
+        "cursed_rat_particle": {
+          "particle_effects": [
+            {
+              "effect": "cursed_rat_particle",
+							"locator": "particle"
+            }
+          ],
+          "transitions": [
+            {
+              "default": "query.property('ntk:spawn_type') == 'summoned'"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.entity.ntk_cursed_rat.summoning_particles": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+					  {
+							"summoning_effect": "query.life_span != 0.0"
+						}
+					]
+				},
+				"summoning_effect": {
+					"particle_effects": [
+            {
+              "effect": "summoning_particle",
+							"locator": "particle"
+            },
+            {
+              "effect": "summoned_particle",
+							"locator": "particle"
+            }
+          ],
+          "transitions": [
+					  {
+							"desummoning_effect": "query.life_span == 10.0 || !query.is_alive"
+						}
+					]
+				},
+				"desummoning_effect": {
+					"particle_effects": [
+            {
+              "effect": "desummoning_particle",
+							"locator": "particle"
+            }
+          ]
+				}
+			}
+		}
+	}
+}

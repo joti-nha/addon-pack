@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_copper_brute_zombie_trophy"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "copper_brute_zombie_trophy",
+    "assume_symmetry": false,
+    "pattern": [
+      "TT",
+      "TC"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:stone_brute_zombie_trophy"
+      },
+      "C": {
+        "item": "minecraft:copper_block"
+      }
+    },
+    "result": {
+      "item": "ntk:copper_brute_zombie_trophy",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:stone_brute_zombie_trophy"
+      },
+      {
+        "item": "minecraft:copper_block"
+      }
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"runtime_identifier": "snowball",
+			"identifier": "dk:elemental_knight_storm_player",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"kill",
+					"elemental_storm",
+					"ride"
+				]
+			},
+			"animations": {
+				"kill": "animation.elemental_knight.kill",
+				"elemental_storm": "controller.animation.player.elemental_storm",
+				"ride": "controller.animation.player.ride_storm"
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:type_family": {
+				"family": [
+					"zombie"
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "tp"
+						}
+					},
+					"stick_in_ground": {},
+					"impact_damage": {
+						"damage": 20,
+						"knockback": true,
+						"catch_fire": true
+					}
+				},
+				"power": 2,
+				"gravity": 0,
+				"offset": [
+					0,
+					0.75,
+					0
+				],
+				"shoot_target": false,
+				"stop_on_hurt": false,
+				"anchor": 2,
+				"uncertainty_base": 1,
+				"uncertainty_multiplier": 0,
+				"multiple_targets": true,
+				"liquid_inertia": 0.99
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:rideable": {
+				"family_types": [
+					"player"
+				],
+				"seat_count": 1,
+				"seats": [
+					{
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:physics": {}
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": [
+						"ride @e[type=player,c=1,r=15] start_riding @s"
+					]
+				}
+			},
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			},
+			"tp": {
+				"sequence": [
+					{
+						"queue_command": {
+							"command": [
+								"tp @e[c=1,type=player,r=5] @s"
+							]
+						}
+					},
+					{
+						"trigger": "despawn"
+					}
+				]
+			}
+		}
+	}
+}

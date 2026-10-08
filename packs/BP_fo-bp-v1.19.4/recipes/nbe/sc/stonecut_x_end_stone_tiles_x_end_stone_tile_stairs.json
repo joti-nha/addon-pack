@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_end_stone_tiles_x_end_stone_tile_stairs"
+    },
+    "priority": 0,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "ntk:end_stone_tiles"
+      }
+    ],
+    "result": {
+      "item": "ntk:end_stone_tile_stairs",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:end_stone_tiles"
+      }
+    ]
+  }
+}

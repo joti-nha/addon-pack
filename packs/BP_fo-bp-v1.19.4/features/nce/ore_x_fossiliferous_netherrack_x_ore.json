@@ -1,0 +1,35 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:nce/ore_x_fossiliferous_netherrack_x_ore"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "ntk:fossiliferous_heated_netherrack",
+        "may_replace": [
+          "ntk:heated_netherrack"
+        ]
+      },
+      {
+        "places_block": "ntk:fossiliferous_netherrack",
+        "may_replace": [
+          "minecraft:netherrack"
+        ]
+      },
+      {
+        "places_block": "ntk:fossiliferous_soul_sand",
+        "may_replace": [
+          "minecraft:soul_sand"
+        ]
+      },
+      {
+        "places_block": "ntk:fossiliferous_soul_soil",
+        "may_replace": [
+          "minecraft:soul_soil"
+        ]
+      }
+    ]
+  }
+}

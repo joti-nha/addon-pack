@@ -1,0 +1,103 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 15,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:flint", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:amethyst_cluster", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:amethyst_shard", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:coal", "quantity": 36 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:copper_ingot", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:diamond", "quantity": 1 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:glowstone", "quantity": 8 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:gold_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:iron_ingot", "quantity": 16 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:lapis_lazuli", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:quartz", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:raw_copper", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:raw_gold", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:raw_iron", "quantity": 24 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            },
+            {
+              "wants": [{ "item": "minecraft:raw_iron", "quantity": 32 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "max_uses": 16,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

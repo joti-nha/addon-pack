@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/ca158d75308e68bab619c1f80f44359e"},"places_block":[{"block":"minecraft:short_dry_grass","weight":1},{"block":"minecraft:tall_dry_grass","weight":2}],"enforce_placement_rules":false,"enforce_survivability_rules":true,"may_replace":["minecraft:air"]}}

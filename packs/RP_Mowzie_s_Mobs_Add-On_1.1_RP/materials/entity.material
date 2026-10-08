@@ -1,0 +1,51 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "hf_mzs_lantern:entity_alphablend": {
+      "+states": [
+        "DisableDepthWrite"
+      ]
+    },
+    "hf_mzs_lantern_balls:entity_alphatest": {
+      "+states": [
+        "DisableDepthWrite"
+      ]
+    },
+    "hf_mzs_sculptor_animated:entity_alphablend": {
+      "+defines": [
+        "USE_UV_ANIM"
+      ]
+    },
+    "hf_mzs_entity_glint:entity_static": {
+      "+defines": [
+        "USE_UV_ANIM",
+        "USE_EMISSIVE",
+        "USE_COLOR_MASK"
+      ],
+      "+states": [
+        "Blending",
+        "DisableCulling"
+      ],
+      "blendSrc": "One",
+      "blendDst": "One",
+      "depthFunc": "Equal",
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureWrap": "Repeat"
+        }
+      ]
+    },
+    "hf_mzs_entity_outline:entity": {
+      "+defines": [
+        "BLEND",
+        "ALPHA_TEST"
+      ],
+      "+states": [
+        "InvertCulling",
+        "Blending"
+      ],
+      "-defines": ["FANCY"]
+    }
+  }
+}

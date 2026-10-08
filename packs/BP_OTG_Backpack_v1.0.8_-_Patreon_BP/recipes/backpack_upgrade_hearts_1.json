@@ -1,0 +1,32 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_backpack_upgrade_hearts_1"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            " A ",
+            "ATA",
+            " A "
+        ],
+        "key": {
+            "A": {
+                "item": "minecraft:golden_apple"
+            },
+            "T": {
+                "item": "otg:backpack_upgrade_template"
+            }
+        },
+        "result": {
+            "item": "otg:backpack_upgrade_hearts_1"
+        },
+        "unlock": [
+            {
+                "item": "otg:backpack_upgrade_template"
+            }
+        ]
+    }
+}

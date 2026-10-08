@@ -1,0 +1,132 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:grass_carpet",
+      "menu_category": {
+				"category": "nature",
+        "group": "minecraft:nature",
+				"is_hidden_in_commands": false
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.grass_carpet.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_carpet"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_grass_carpet_foliage",
+          "render_method": "alpha_test",
+          "tint_method": "grass",
+          "ambient_occlusion": 1.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_carpet"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_grass_carpet",
+            "render_method": "alpha_test",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_grass_carpet_foliage",
+        "tint_method": "grass",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#50792B"
+      },
+      "minecraft:replaceable": {},
+      "minecraft:placement_filter": {
+        "conditions": [
+          {
+            "allowed_faces": [
+              "up",
+              "down"
+            ]
+          }
+        ]
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "popped",
+            "stops_liquid_flowing_from_direction": []
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 1, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 1, 16 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20,
+        "lava_flammable": "always"
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 5.0
+      },
+      "minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.harp",
+        "up": "note.harp"
+      },
+			"minecraft:movable": {
+        "movement_type": "popped"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_grass_carpet.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:hoe_diggable",
+        "ntk:natural_block",
+        "ntk:replaceable_block",
+        "ntk:solid_block",
+        "ntk:plant",
+        "ntk:foliage_carpet",
+        "ntk:grass_carpet",
+        
+        "minecraft:is_hoe_item_destructible"
+      ]
+    }
+  }
+}

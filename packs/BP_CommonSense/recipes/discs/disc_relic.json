@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:disc_relic"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:light_blue_dye"
+			},
+			"N": {
+				"item": "minecraft:netherrack"
+			}
+		},
+		"pattern": [
+			" # ",
+			"NNN",
+			" # "
+		],
+		"result": {
+			"item": "minecraft:music_disc_relic",
+			"count": 1
+		}
+	}
+}

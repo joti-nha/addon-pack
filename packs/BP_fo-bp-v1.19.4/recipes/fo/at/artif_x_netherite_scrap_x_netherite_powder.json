@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_netherite_scrap_x_netherite_powder"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "netherite_scrap",
+    "assume_symmetry": true,
+    "pattern": [
+      " N ",
+      "NSN",
+      " N "
+    ],
+    "key": {
+      "N": {
+        "item": "ntk:netherite_powder"
+      },
+      "S": {
+        "item": "ntk:metal_scrap"
+      }
+    },
+    "result": {
+      "item": "minecraft:netherite_scrap",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:netherite_powder"
+      },
+      {
+        "item": "ntk:metal_scrap"
+      }
+    ]
+  }
+}

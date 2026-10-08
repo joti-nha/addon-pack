@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:artif_x_nether_star_fragment"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "nether_star_fragment",
+    "ingredients": [
+      {
+        "item": "minecraft:nether_star"
+      }
+    ],
+    "result": {
+      "item": "ntk:nether_star_fragment",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:nether_star"
+      }
+    ]
+  }
+}

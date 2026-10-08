@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_clump_of_warped_fungus_emissive",
+    "heightmap": "ntk_clump_of_warped_fungus_height",
+    "metalness_emissive_roughness": "ntk_clump_of_warped_fungus_mer"
+  }
+}

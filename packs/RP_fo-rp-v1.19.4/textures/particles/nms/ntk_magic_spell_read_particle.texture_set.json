@@ -1,0 +1,7 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_magic_spell_read_particle",
+		"metalness_emissive_roughness": "ntk_magic_spell_read_particle_mer"
+	}
+}

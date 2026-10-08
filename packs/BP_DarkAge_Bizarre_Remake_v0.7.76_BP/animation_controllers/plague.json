@@ -1,0 +1,123 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.plague.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack": "query.is_delayed_attacking"
+						},
+						{
+							"charged": "query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking&&!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"@s dk:plague_event_mode_attacks"
+					]
+				},
+				"charged": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"on_exit": [
+						"@s dk:plague_event_mode_attack_ranged",
+						"/tag @s add tp_plague"
+					]
+				}
+			}
+		},
+		"controller.animation.plague.detect": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"detect_position": "query.has_target&&query.ground_speed<=0.1&&query.mark_variant!=4&&query.mark_variant!=3&&query.mark_variant!=5&&!query.is_saddled"
+						},
+						{
+							"cooldown": "query.mark_variant==4||query.mark_variant==3||query.mark_variant==5||query.is_saddled"
+						}
+					]
+				},
+				"detect_position": {
+					"transitions": [
+						{
+							"default": "!query.has_target||query.mark_variant==4||query.mark_variant==3||query.mark_variant==5"
+						},
+						{
+							"loop": "(query.ground_speed<=0.2)?((q.position(0)-v.x_pos)<-2||(q.position(0)-v.x_pos)>2)||((q.position(2)-v.z_pos)<-2||(q.position(2)-v.z_pos)>2):0"
+						},
+						{
+							"explosion_attack": "(((q.position(0)-v.x_pos)>-2||(q.position(0)-v.x_pos)<2)||((q.position(2)-v.z_pos)>-2||(q.position(2)-v.z_pos)<2))&&(q.life_time-v.delay)>=4"
+						}
+					],
+					"on_entry": [
+						"variable.x_pos=query.position(0);",
+						"variable.z_pos=query.position(2);",
+						"variable.delay=query.life_time;"
+					]
+				},
+				"loop": {
+					"transitions": [
+						{
+							"detect_position": "1"
+						}
+					]
+				},
+				"explosion_attack": {
+					"transitions": [
+						{
+							"default": "query.mark_variant!=4"
+						}
+					],
+					"on_entry": [
+						"@s dk:plague_event_mode_attack_four"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "query.mark_variant!=4&&query.mark_variant!=3&&query.mark_variant!=5"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.plague.destroys": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"destroys": "query.has_target&&!query.is_baby"
+						}
+					]
+				},
+				"destroys": {
+					"transitions": [
+						{
+							"default": "query.has_target&&!query.is_baby"
+						}
+					],
+					"on_entry": [
+						"/effect @s jump_boost 10 5 true",
+						"/execute unless block ~ ~ ~ bedrock run execute unless block ~ ~ ~ water run fill ~-3 ~ ~2 ~2 ~9 ~-3 air [] destroy",
+						"/execute unless block ~ ~ ~ bedrock run execute unless block ~ ~ ~ water run fill ~-2 ~ ~3 ~3 ~9 ~-2 air [] destroy",
+						"/kill @e[type=item,r=6]"
+					]
+				}
+			}
+		}
+	}
+}

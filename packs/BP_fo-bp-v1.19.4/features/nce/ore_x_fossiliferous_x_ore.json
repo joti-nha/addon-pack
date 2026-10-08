@@ -1,0 +1,33 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:nce/ore_x_fossiliferous_x_ore"
+    },
+    "count": 4,
+    "replace_rules": [
+      {
+        "places_block": "ntk:fossiliferous_stone",
+        "may_replace": [
+          "ntk:limestone",
+          "ntk:marble",
+          "minecraft:andesite",
+          "minecraft:cobblestone",
+          "minecraft:diorite",
+          "minecraft:granite",
+          "minecraft:mossy_cobblestone",
+          "minecraft:stone"
+        ]
+      },
+      {
+        "places_block": "ntk:fossiliferous_deepslate",
+        "may_replace": [
+          "ntk:myceliated_deepslate",
+          "minecraft:cobbled_deepslate",
+          "minecraft:deepslate",
+          "minecraft:tuff"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_end:panascais/end/6e973f729bd0ad427c94105a23079065"},"count":4,"discard_chance_on_air_exposure":0.8,"replace_rules":[{"places_block":"panascais_end:eternal_debris","may_replace":["minecraft:end_stone"]}]}}

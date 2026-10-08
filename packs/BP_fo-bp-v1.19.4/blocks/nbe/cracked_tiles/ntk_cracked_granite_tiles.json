@@ -1,0 +1,120 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:cracked_granite_tiles",
+      "menu_category": {
+				"category": "construction",
+				"group": "ntk:itemGroup.name.tiles",
+				"is_hidden_in_commands": false
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.cracked_granite_tiles.name",
+      "minecraft:geometry": {
+        "identifier": "minecraft:geometry.full_block"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_cracked_granite_tiles",
+          "render_method": "opaque",
+          "tint_method": "none",
+          "ambient_occlusion": 1.0,
+					"face_dimming": true,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_cracked_granite_tiles",
+            "render_method": "opaque",
+            "tint_method": "none",
+            "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_cracked_granite_tiles",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#9E6A57"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 30.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.5
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "shape"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bd",
+        "up": "note.bd"
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_cracked_granite_tiles.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:pickaxe_diggable",
+        "ntk:full_block",
+        "ntk:solid_block",
+        "ntk:stones",
+        "ntk:granite_blocks",
+        "ntk:cracked_block",
+        "ntk:tiles_block",
+        "ntk:cracked_granite_tiles",
+        
+        "minecraft:is_pickaxe_item_destructible"
+      ]
+    }
+  }
+}

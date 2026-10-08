@@ -1,0 +1,234 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.plague.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"spawn",
+						"static",
+						{
+							"death": "query.is_saddled"
+						}
+					],
+					"transitions": [
+						{
+							"static": "q.property('dk:plague')=='dk_plague_mode_static'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"static": {
+					"animations": [
+						"static",
+						{
+							"death": "query.is_saddled"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.plague.moves": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.5,
+					"animations": [
+						{
+							"move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"move_angry": "query.modified_move_speed>=0.4"
+						},
+						{
+							"death": "query.is_saddled"
+						}
+					]
+				},
+				"move_angry": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.5,
+					"animations": [
+						{
+							"run": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed<0.4"
+						},
+						{
+							"death": "query.is_saddled"
+						}
+					]
+				},
+				"death": {
+					"transitions": [
+						{
+							"default": "!query.is_saddled"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.plague.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"attack_one": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"attack_two": "query.mark_variant==2&&query.is_delayed_attacking"
+						},
+						{
+							"attack_three": "query.mark_variant==3"
+						},
+						{
+							"attack_four": "query.mark_variant==4"
+						},
+						{
+							"ranged": "query.mark_variant==5&&query.is_charged"
+						},
+						{
+							"roar": "query.mark_variant==6&&query.is_roaring"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"attack_one": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_one"
+					]
+				},
+				"attack_two": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_two"
+					]
+				},
+				"attack_three": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_three"
+					]
+				},
+				"attack_four": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"attack_four"
+					]
+				},
+				"ranged": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"ranged"
+					]
+				},
+				"roar": {
+					"transitions": [
+						{
+							"default": "query.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"roar"
+					]
+				}
+			}
+		},
+		"controller.animation.plague.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

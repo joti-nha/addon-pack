@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_pile_of_open_eyeblossom"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "pile_of_open_eyeblossom",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:open_eyeblossom"
+      }
+    },
+    "result": {
+      "item": "ntk:pile_of_open_eyeblossom",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:open_eyeblossom"
+      }
+    ]
+  }
+}

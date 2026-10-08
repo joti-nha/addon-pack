@@ -1,0 +1,55 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "rev:repeater_crossbow_c_2",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/repeating_crossbow",
+				"enchanted": "textures/models/rev_glint"
+			},
+			"geometry": {
+				"default": "geometry.repeating_crossbow"
+			},
+			"animations": {
+				"first_person": "animation.player.ajolote.first_person",
+				"empty": "animation.player.ajolote.aim",
+				"repeater_fix": "animation.player.ajolote.repeater_fix",
+				"default": "animation.player.ajolote.third2",
+				"start": "animation.musket.start",
+				"repeater_fix_off": "animation.player.ajolote.repeater_fix_off",
+				"fire_controller": "controller.animation.musket.fire",
+				"fire_controller_empty": "controller.animation.empty.fire",
+				"fire": "animation.repeating_crossbow.fire_c2",
+				"fire_off": "animation.repeating_crossbow.fire_c2",
+				"first_person_spear": "animation.player.ajolote.first_person_spear"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person"
+					},
+					
+					{
+						"repeater_fix": "c.is_first_person && c.item_slot == 'main_hand'"
+					},
+					{
+						"repeater_fix_off": "c.is_first_person && c.item_slot != 'main_hand'"
+					},
+					{
+						"fire_controller": "c.is_first_person"
+					},
+					{
+						"default": "!c.is_first_person"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.item_default"
+			]
+		}
+	}
+}

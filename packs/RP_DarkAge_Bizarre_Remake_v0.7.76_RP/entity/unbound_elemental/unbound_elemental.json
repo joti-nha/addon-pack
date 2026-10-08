@@ -1,0 +1,62 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unbound_elemental",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unbound_elemental"
+			},
+			"geometry": {
+				"default": "geometry.unbound_elemental"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"attacks",
+					"look_at_target"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 35.0);"
+				]
+			},
+			"particle_effects": {
+				"soul_flamethrower": "dk:soul_flamethrower"
+			},
+			"sound_effects": {
+				"roar_one": "mob.unbound_elemental.roar",
+				"soul_flamethrower": "mob.unbound_elemental.flamethrower",
+				"death_one": "mob.unbound_elemental.death"
+			},
+			"animations": {
+				"controller": "controller.animation.unbound_elemental.controller",
+				"look_at_target": "controller.animation.unbound_elemental.look_at_target",
+				"attacks": "controller.animation.unbound_elemental.attacks",
+				"sleep": "animation.unbound_elemental.sleep",
+				"wake": "animation.unbound_elemental.wake",
+				"static": "animation.unbound_elemental.static",
+				"attack_one": "animation.unbound_elemental.attack_one",
+				"attack_two": "animation.unbound_elemental.attack_two",
+				"attack_three": "animation.unbound_elemental.attack_three",
+				"attack_four": "animation.unbound_elemental.attack_four",
+				"flamethrower": "animation.unbound_elemental.flamethrower",
+				"summon": "animation.unbound_elemental.summon",
+				"shoot": "animation.unbound_elemental.shoot",
+				"look_at_target_default": "animation.unbound_elemental.look_at_target.default",
+				"look_at_target_gliding": "animation.unbound_elemental.look_at_target.gliding",
+				"look_at_target_swimming": "animation.unbound_elemental.look_at_target.swimming",
+				"death": "animation.unbound_elemental.death"
+			},
+			"render_controllers": [
+				"controller.render.unbound_elemental"
+			],
+			"spawn_egg": {
+				"texture": "unbound_elemental_spawn"
+			}
+		}
+	}
+}

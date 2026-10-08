@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_stripped_acacia_wood_x_fence"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "acacia_fence",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stripped_acacia_wood"
+      }
+    },
+    "result": {
+      "item": "minecraft:acacia_fence",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "minecraft:stripped_acacia_wood"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/floating_sowing_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/floating_sowing_one_feature_mcstructure",
+				35
+			],
+			[
+				"dk:structures/floating_sowing_two_feature_mcstructure",
+				25
+			],
+			[
+				"dk:structures/canoe_one_feature_mcstructure",
+				45
+			],
+			[
+				"dk:structures/ruin_house_three_feature_mcstructure",
+				60
+			],
+			[
+				"dk:structures/ruin_house_four_feature_mcstructure",
+				50
+			]
+		]
+	}
+}

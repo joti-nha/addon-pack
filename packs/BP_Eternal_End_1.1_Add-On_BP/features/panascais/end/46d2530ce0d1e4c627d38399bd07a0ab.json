@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:structure_template_feature":{"description":{"identifier":"panascais_end:panascais/end/46d2530ce0d1e4c627d38399bd07a0ab"},"structure_name":"panascais_end:sporelight.fungal_island.1","constraints":{"block_intersection":{"block_allowlist":["minecraft:air","minecraft:end_stone"]}},"facing_direction":"south"}}

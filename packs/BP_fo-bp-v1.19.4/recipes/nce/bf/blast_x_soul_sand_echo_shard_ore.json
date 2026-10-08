@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_soul_sand_echo_shard_ore"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "ntk:soul_sand_echo_shard_ore"
+    },
+    "output": {
+      "item": "minecraft:echo_shard",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:soul_sand_echo_shard_ore"
+      }
+    ]
+  }
+}

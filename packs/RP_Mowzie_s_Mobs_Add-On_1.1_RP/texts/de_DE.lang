@@ -1,0 +1,286 @@
+pack.name=Mowzie's Mobs - V 1.1.0
+pack.description=Basierend auf dem ursprünglichen Java-Mod von §l§mBob Mowzie§f | Erstellt von §l§6Honeyfrost§r§f
+
+## ENTITIES
+item.spawn_egg.entity.hf_mzs:frostmaw.name=Frostmaw Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:frostmaw.name=Frostmaw
+entity.hf_mzs:frostmaw<>.name=Frostmaw
+entity.hf_mzs:frostmaw_projectile.name=Frostmaw
+item.spawn_egg.entity.hf_mzs:wroughtnaut.name=Ferrous Wroughtnaut Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:wroughtnaut.name=Ferrous Wroughtnaut
+entity.hf_mzs:wroughtnaut<>.name=Ferrous Wroughtnaut
+entity.hf_mzs:laser_projectile.name=Ferrous Wroughtnaut
+item.spawn_egg.entity.hf_mzs:umvuthana.name=Umvuthana Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana.name=Umvuthana
+interact.hf_mzs.umvuthana_sol_visage=Zurück zur Maske
+item.spawn_egg.entity.hf_mzs:umvuthana_crane.name=Umvuthana-Kranich Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana_crane.name=Umvuthana-Kranich
+item.spawn_egg.entity.hf_mzs:umvuthana_raptor.name=Umvuthana-Raptor Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthana_raptor.name=Umvuthana-Raptor
+item.spawn_egg.entity.hf_mzs:umvuthi.name=Umvuthi, der Sonnenvogel Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:umvuthi.name=Umvuthi, der Sonnenvogel
+
+item.spawn_egg.entity.hf_mzs:lantern.name=Laterne Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:lantern.name=Laterne
+item.spawn_egg.entity.hf_mzs:grottol.name=Grottol Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:grottol.name=Grottol
+item.spawn_egg.entity.hf_mzs:naga.name=Naga Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:naga.name=Naga
+item.spawn_egg.entity.hf_mzs:foliaath.name=Foliaath Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:foliaath.name=Foliaath
+interact.hf_mzs.foliaath_feed=Füttern
+item.spawn_egg.entity.hf_mzs:sculptor.name=Tongbi, der Sculptor Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:sculptor.name=Tongbi, der Sculptor
+entity.hf_mzs:timer.name=Verbleibende Zeit
+item.spawn_egg.entity.hf_mzs:bluff.name=Bluff Spawn-Ei §f(§c Mowzie's Mobs §f)
+entity.hf_mzs:bluff.name=Bluff
+
+entity.boss.hf_mzs:frostmaw.name=§bFrostmaw§r
+entity.boss.hf_mzs:wroughtnaut.name=§cFerrous Wroughtnaut§r
+entity.boss.hf_mzs:umvuthi.name=§6Umvuthi, der Sonnenvogel§r
+entity.boss.hf_mzs:sculptor.name=§2Tongbi, der Sculptor§r
+## ITEMS
+item.hf_mzs:debugging_tool.name=Debug-Stab §f(§c Mowzie's Mobs §f)
+item.hf_mzs:guidebook.name=Handbuch §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:ice_crystal.name=Eiskristall §f(§c Mowzie's Mobs §f)
+item.hf_mzs:wroughtnaut_axe.name=Axt der Tausend Metalle §f(§c Mowzie's Mobs §f)
+item.hf_mzs:wroughtnaut_helmet.name=Wrought-Helm §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:mask_bliss.name=Maske der Glückseligkeit §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_faith.name=Maske des Glaubens §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_fear.name=Maske der Angst §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_fury.name=Maske des Zorns §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_rage.name=Maske der Wut §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mask_misery.name=Maske des Elends §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sol_visage.name=Sol Visage §f(§c Mowzie's Mobs §f)
+item.hf_mzs:suns_blessing.name=Segen der Sonne §f(§c Mowzie's Mobs §f)
+item.hf_mzs:luminous_jelly.name=Leuchtende Qualle §f(§c Mowzie's Mobs §f)
+item.hf_mzs:foliaath_seed.name=Foliaath-Samen §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol.name=Gefangener Grottol §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol_pink.name=Gefangener Rosa Grottol §f(§c Mowzie's Mobs §f)
+item.hf_mzs:captured_grottol_mixed.name=Gefangener Gemischter Grottol §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:earthrend_gauntlet.name=Erdriss-Handschuh §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sculptor_staff.name=Stab des Sculptor §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:geomancer_sandals.name=Geomanten-Sandalen §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_beads.name=Geomanten-Perlen §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_belt.name=Geomanten-Gürtel §f(§c Mowzie's Mobs §f)
+item.hf_mzs:geomancer_robe.name=Geomanten-Robe §f(§c Mowzie's Mobs §f)
+item.hf_mzs:sand_rake.name=Sandharke §f(§c Mowzie's Mobs §f)
+item.hf_mzs:gong.name=Gong §f(§c Mowzie's Mobs §f)
+item.hf_mzs:mob_remover.name=Mob-Entferner §f(§c Mowzie's Mobs §f)
+
+item.hf_mzs:blowgun.name=Blasrohr §f(§c Mowzie's Mobs §f)
+item.hf_mzs:dart.name=Pfeil §f(§c Mowzie's Mobs §f)
+item.hf_mzs:naga_fang.name=Naga-Zahn §f(§c Mowzie's Mobs §f)
+item.hf_mzs:naga_fang_dagger.name=Naga-Zahn Dolch §f(§c Mowzie's Mobs §f)
+item.hf_mzs:spear.name=Speer §f(§c Mowzie's Mobs §f)
+item.hf_mzs:potion_poison_resistance.name=Trank der Giftresistenz §f(§c Mowzie's Mobs §f)
+item.hf_mzs:bluff_rod.name=Bluff-Stab §f(§c Mowzie's Mobs §f)
+
+## INTERACTIONS
+action.hf_mzs.take_ice_crystal=Eiskristall stehlen
+action.hf_mzs.sculptor.interact=Interagieren
+
+## DIALOGUE & TELLRAW
+action.hf_mzs.umvuthi.trade=Handeln
+menu.hf_mzs.umvuthi_trade_name=Umvuthi, der Sonnenvogel
+menu.hf_mzs.umvuthi_trade_content_buy=Der Preis für den §l§6Segen der Sonne§r beträgt §l§g7 Goldblöcke§r
+menu.hf_mzs.umvuthi_trade_button_buy=Erhalte §l§nSegen der Sonne§r
+menu.hf_mzs.umvuthi_trade_content_cant=Der Preis für den §l§nSegen der Sonne§r beträgt §l§g7 Goldblöcke§r, aber es scheint, als könntest du es dir nicht leisten
+menu.hf_mzs.umvuthi_trade_button_cant=Abbrechen
+menu.hf_mzs.umvuthi_trade_content_refill=Das Wiederherstellen des §l§6Segens der Sonne§r ist kostenlos
+menu.hf_mzs.umvuthi_trade_button_refill=§l§nSegen der Sonne§r wiederherstellen
+
+message.hf_mzs.suns_blessing_dublicate=§m[Du kannst nur eine Instanz des Segens der Sonne besitzen]
+message.hf_mzs.sol_visage_limit=§m[Du kannst nur 10 Abavuthana gleichzeitig haben]
+
+dialogue.hf_mzs.sculptor_test.name=Tongbi, der Sculptor
+dialogue.hf_mzs.sculptor_test.text_sculptor_1=Test starten?
+dialogue.hf_mzs.sculptor_test.text_sculptor_2=Kosten: §l1x Bluff-Stab§r
+dialogue.hf_mzs.sculptor_test.text_sculptor_3=Belohnung: §l1x Erdriss-Handschuh§r
+dialogue.hf_mzs.sculptor_test.text_sculptor_4=§r[§9Tipp§r]§r: Du wirst nicht hoch genug springen können – finde eine Möglichkeit, deine Sprunghöhe und Geschwindigkeit zu erhöhen!
+
+dialogue.hf_mzs.sculptor_creative_message=§r[§aInfo§r] §aWechsle in den Überlebens- oder Abenteuermodus, um den Test zu starten§r
+dialogue.hf_mzs.sculptor_no_interact_message=§r[§aInfo§r] §aDer Sculptor kann derzeit nicht interagiert werden§r
+dialogue.hf_mzs.sculptor_test_obstructed_message=§r[§aInfo§r] §aTestbereich blockiert; entferne alle Hindernisse, um den Test zu starten§r
+
+dialogue.hf_mzs.sculptor_obstructed.name=Tongbi, der Sculptor
+dialogue.hf_mzs.sculptor_obstructed.text_sculptor_1=Testbereich ist blockiert
+dialogue.hf_mzs.sculptor_obstructed.text_sculptor_2=Entferne alle markierten Blöcke, um den Test zu starten
+
+dialogue.hf_mzs.sculptor_descending.name=Tongbi, der Sculptor
+dialogue.hf_mzs.sculptor_descending.text_sculptor_1=Warte, bis der Sculptor hinabgestiegen ist, bevor du es erneut versuchst
+
+dialogue.hf_mzs.sculptor_dead.name=Tongbi, der Sculptor
+dialogue.hf_mzs.sculptor_dead.text_sculptor_1=Möchtest du dich noch einmal herausfordern?
+
+dialogue.hf_mzs.sculptor_test.missing_item=§r[§aInfo§r] §aDu benötigst 1 Bluff-Stab, um den Test zu starten§r
+
+dialogue.hf_mzs.sculptor_test.start=Starten
+dialogue.hf_mzs.sculptor_test.cancel=Abbrechen
+
+dialogue.hf_mzs.earthrend_gauntlet.boulder_hint=Ziele auf den Boden, um einen Felsbrocken zu beschwören
+dialogue.hf_mzs.earthrend_gauntlet.boulder_ground_hint=Du kannst Felsen nur aus irdischen Blöcken beschwören
+dialogue.hf_mzs.earthrend_gauntlet.boulder_no_space=Nicht genug Platz, um einen Felsbrocken zu beschwören
+
+actionbar.hf_mzs.suns_blessing_solar_flare=[Nutze §l§nSonnenflare§r]
+actionbar.hf_mzs.suns_blessing_solar_beam=[Nutze §l§nSonnenstrahl§r]
+actionbar.hf_mzs.suns_blessing_supernova=[Nutze §l§nSupernova§r]
+actionbar.hf_mzs.suns_blessing_supernova_ready=[§l§nSupernova§r bereit]\n      Verwenden zum Auslösen\n    Springen zum Abbrechen
+actionbar.hf_mzs.suns_blessing_supernova_cancel=[§l§nSupernova§r abgebrochen]
+actionbar.hf_mzs.suns_blessing_supernova_count1=[1/3 Hocken, um §l§nSupernova§r vorzubereiten]
+actionbar.hf_mzs.suns_blessing_supernova_count2=[2/3 Hocken, um §l§nSupernova§r vorzubereiten]
+actionbar.hf_mzs.suns_blessing_supernova_fail=[Dein Segen der Sonne hat nicht genug Energie, um §l§nSupernova§r zu wirken!]
+actionbar.hf_mzs.frozen=[§bEingefroren§r]
+
+message.hf_mzs.poison_resistance_10=§m[10 Sekunden bis der Giftresistenz-Effekt abläuft]
+message.hf_mzs.poison_resistance_expired=§m[Dein Giftresistenz-Effekt ist abgelaufen]
+
+message.hf_mzs.gauntlet_durability=§2Handschuh-Haltbarkeit: §r
+
+## BLOCKS
+tile.hf_mzs:generator.name=Generator §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:painted_acacia_wood.name=Bemalte Akazienholzbretter §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:painted_acacia_slab.name=Bemalte Akazienholzstufe §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:thatch.name=Stroh §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:clawed_log.name=Gekrallter Stamm §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:invisible_slab.name=Unsichtbare Stufe §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:invisible_quarter.name=Unsichtbares Viertel §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:invisible_block.name=Unsichtbarer Block §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:frostmaw_gen_trigger.name=Frostmaw-Struktur-Generator §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:monastery_gen_trigger.name=Kloster-Struktur-Generator §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:umvuthi_gen_trigger.name=Umvuthi-Struktur-Generator §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:wroughtnaut_gen_trigger.name=Wroughtnaut-Struktur-Generator §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:raked_sand.name=Geharkter Sand §f(§c Mowzie's Mobs §f)
+tile.hf_mzs:red_raked_sand.name=Roter geharkter Sand §f(§c Mowzie's Mobs §f)
+
+tile.hf_mzs:custom_jigsaw.name=Benutzerdefiniertes Jigsaw §f(§c Mowzie's Mobs §f)
+
+## GUIDEBOOK
+action.hf_mzs.open_guidebook=Öffnen
+## TITLES
+guidebook.hf_mzs.title_start=§lStartseite§r
+guidebook.hf_mzs.title_entities=§lMobs§r
+guidebook.hf_mzs.title_frostmaw=§lFrostmaw§r
+guidebook.hf_mzs.title_wroughtnaut=§lFerrous Wroughtnaut§r
+guidebook.hf_mzs.title_umvuthana=§lUmvuthana§r
+guidebook.hf_mzs.title_umvuthi=§lUmvuthi, der Sonnenvogel§r
+guidebook.hf_mzs.title_naga=§lNaga§r
+guidebook.hf_mzs.title_foliaath=§lFoliaath§r
+guidebook.hf_mzs.title_grottol=§lGrottol§r
+guidebook.hf_mzs.title_lantern=§lLaterne§r
+guidebook.hf_mzs.title_sculptor=§lTongbi, der Sculptor§r
+guidebook.hf_mzs.title_bluff=§lBluff§r
+guidebook.hf_mzs.title_travellers=§lReisende§r
+
+guidebook.hf_mzs.title_items=§lGegenstände§r
+guidebook.hf_mzs.title_ice_crystal=§lEiskristall§r
+guidebook.hf_mzs.title_wroughtnaut_helmet=§lWrought-Helm§r
+guidebook.hf_mzs.title_wroughtnaut_axe=§lAxt der Tausend Metalle§r
+guidebook.hf_mzs.title_umvuthana_masks=§lUmvuthana-Masken§r
+guidebook.hf_mzs.title_sol_visage=§lSol Visage§r
+guidebook.hf_mzs.title_suns_blessing=§lSegen der Sonne§r
+guidebook.hf_mzs.title_naga_fang=§lNaga-Zahn§r
+guidebook.hf_mzs.title_naga_fang_dagger=§lNaga-Zahn Dolch§r
+guidebook.hf_mzs.title_blowgun=§lBlasrohr§r
+guidebook.hf_mzs.title_foliaath_seed=§lFoliaath-Samen§r
+guidebook.hf_mzs.title_spear=§lSpeer§r
+guidebook.hf_mzs.title_earthrend_gauntlet=§lErdriss-Handschuh§r
+guidebook.hf_mzs.title_sculptor_staff=§lStab des Sculptor§r
+guidebook.hf_mzs.title_geomancy_armor=§lGeomantie-Rüstung§r
+guidebook.hf_mzs.title_rake=§lSandharke§r
+
+guidebook.hf_mzs.title_structures=§lStrukturen§r
+guidebook.hf_mzs.title_monastery=§lDas Kloster§r
+guidebook.hf_mzs.title_umvuthana_grove=§lUmvuthana-Hain§r
+guidebook.hf_mzs.title_wroughtnaut_chamber=§lWroughtnauts Kammer§r
+
+guidebook.hf_mzs.title_discord=§lUnsere sozialen Medien§r
+guidebook.hf_mzs.title_credits=§lGutschriften§r
+## BUTTONS
+
+guidebook.hf_mzs.button_start=§l§8Startseite§r
+guidebook.hf_mzs.button_entities=§l§8Mobs§r
+guidebook.hf_mzs.button_frostmaw=§l§3Frostmaw§r
+guidebook.hf_mzs.button_wroughtnaut=§l§4Ferrous Wroughtnaut§r
+guidebook.hf_mzs.button_umvuthana=§l§eUmvuthana§r
+guidebook.hf_mzs.button_umvuthi=§l§6Umvuthi, der Sonnenvogel§r
+guidebook.hf_mzs.button_naga=§l§qNaga§r
+guidebook.hf_mzs.button_foliaath=§l§uFoliaath§r
+guidebook.hf_mzs.button_grottol=§l§sGrottol§r
+guidebook.hf_mzs.button_lantern=§l§aLaterne§r
+guidebook.hf_mzs.button_sculptor=§l§2Tongbi, der Sculptor§r
+guidebook.hf_mzs.button_bluff=§l§nBluff§r
+guidebook.hf_mzs.button_travellers=§lReisende§r
+
+guidebook.hf_mzs.button_items=§l§8Gegenstände§r
+guidebook.hf_mzs.button_ice_crystal=§l§3Eiskristall§r
+guidebook.hf_mzs.button_wroughtnaut_helmet=§l§4Wrought-Helm§r
+guidebook.hf_mzs.button_wroughtnaut_axe=§l§4Axt der Tausend Metalle§r
+guidebook.hf_mzs.button_umvuthana_masks=§l§eUmvuthana-Masken§r
+guidebook.hf_mzs.button_sol_visage=§l§6Sol Visage§r
+guidebook.hf_mzs.button_suns_blessing=§l§6Segen der Sonne§r
+guidebook.hf_mzs.button_naga_fang=§l§qNaga-Zahn§r
+guidebook.hf_mzs.button_naga_fang_dagger=§l§aNaga-Zahn Dolch§r
+guidebook.hf_mzs.button_blowgun=§l§2Blasrohr§r
+guidebook.hf_mzs.button_foliaath_seed=§l§uFoliaath-Samen§r
+guidebook.hf_mzs.button_spear=§l§8Speer§r
+guidebook.hf_mzs.button_earthrend_gauntlet=§l§qErdriss-Handschuh§r
+guidebook.hf_mzs.button_sculptor_staff=§l§qStab des Sculptor§r
+guidebook.hf_mzs.button_geomancy_armor=§l§qGeomantie-Rüstung§r
+guidebook.hf_mzs.button_rake=§l§eSandharke§r
+
+guidebook.hf_mzs.button_structures=§l§8Strukturen§r
+guidebook.hf_mzs.button_monastery=§l§2Das Kloster§r
+guidebook.hf_mzs.button_umvuthana_grove=§l§6Umvuthana-Hain§r
+guidebook.hf_mzs.button_wroughtnaut_chamber=§l§4Wroughtnauts Kammer§r
+
+guidebook.hf_mzs.button_discord=§lUnsere sozialen Medien§r
+guidebook.hf_mzs.button_credits=§lGutschriften§r
+
+## ENTRY CONTENTS
+guidebook.hf_mzs.body_start=Willkommen bei §l§cMowzie's Mobs§r! Dieses Add-On bringt eine Vielzahl fiktiver Kreaturen in Minecraft, mit einzigartiger KI, einer atmosphärischen Welt und flüssigen Animationen.%s%sEntwickelt von Honeyfrost; unter Lizenz von Mowzie's Studios LLC.
+
+guidebook.hf_mzs.body_entities=§r
+guidebook.hf_mzs.body_frostmaw=§bFrostmaws§r sind gefährliche Bestien, die in verschneiten Regionen zu finden sind. Ihre enorme Größe, beeindruckende Geschwindigkeit und mächtiger Eisatem machen sie nahezu unbesiegbar. Falls du auf deiner Reise einem schlafenden Frostmaw begegnest, ist es am besten, einen anderen Weg zu wählen.%s%sDas Biest bewacht einen wertvollen §bEiskristall§r, der, wenn er geführt wird, eine eisige Explosion reiner Winterenergie entfesselt.
+guidebook.hf_mzs.body_wroughtnaut=Vor vielen Jahren tief unter der Erde verloren gegangen, sind diese schwer gepanzerten Ritter weder Menschen noch Statuen.%s%sBewachen sie etwas? Sie haben es vergessen. Warten sie auf etwas? Sie haben es vergessen. Trauern sie um jemanden? Sie haben es vergessen. Alles, was sie wissen, ist, dass sie jeden niederstrecken, der ihre Kammern betritt.%s%sEs gibt nur eine Möglichkeit, einen §cFerrous Wroughtnaut§r zu verletzen – seine Schwachstelle befindet sich am Rücken.
+guidebook.hf_mzs.body_wroughtnaut_april_fools=Vor vielen Jahren tief unter der Erde verloren... Sind sie Roboter aus dem Weltraum? Vielleicht. Warten sie auf etwas? Möglicherweise. Sind sie einfach nur extrem entschlossen, dramatisch in dunklen Räumen zu stehen? Absolut. Können sie Laser aus ihren Augen schießen? Definitiv.%s%sEs gibt nur eine Möglichkeit, einen §cFerrous Wroughtnaut§r zu verletzen: Seine Schwachstelle befindet sich auf seinem Rücken.
+guidebook.hf_mzs.body_umvuthana=§eAbavuthana§r (Plural von §eUmvuthana§r) sind die Geißel der Savanne. Diese vogelähnlichen Kreaturen verbrennen den Boden, auf dem sie gehen, und jagen Tiere ohne Gnade.%s%s§eAbavuthana§r machen das Durchqueren der Savanne gefährlich, da sie ihre Beute schnell einkreisen und gnadenlos verfolgen.%s%s§eAbavuthana§r lassen manchmal ihre Masken fallen, die der Spieler tragen kann. Jede Maske verleiht dem Träger einen kleinen Bonus.%s%sIm Kampf attackieren §eAbavuthana§r ihre Feinde abwechselnd mit ihren Klauen. Jede Jagdgruppe wird von einem §eUmvuthana-Raptor§r angeführt, der mit seinen besonders langen Krallen Angriffe blockieren kann.
+guidebook.hf_mzs.body_umvuthi=§6Umvuthi§r, der Schöpfer der §eAbavuthana§r, sitzt auf einem Thron innerhalb des §6Umvuthana-Hains§r und zieht Kraft aus der Sonne, um Sonnenstöße, Solareruptionen und gewaltige Sonnenstrahlen zu entfesseln.%s%sEr kann §eUmvuthana§r-Anhänger – darunter heilende §eUmvuthana-Krane§r – aus Masken beschwören, um ihn im Kampf zu verteidigen. Seine maskierten Kinder verehren ihn als Gott.%s%sUnvorbereitete Reisende sollten Abstand halten, sonst fallen sie seiner Heliomantie zum Opfer. Diejenigen, die stark genug sind, um §6Umvuthi§r zu besiegen, werden mit seiner Maske, dem §gSol Visage§r, belohnt.
+guidebook.hf_mzs.body_naga=Küstenklippen sind gefährliche Orte. Abenteurer erzählen von geflügelten Schlangen, den §qNagas§r, die in diesen Regionen leben.%s%sMit ihrer hohen Geschwindigkeit und ihrem tödlichen Säuregift sind diese Kreaturen schwer zu treffen, aber ein gut gezielter Pfeil kann eine §qNaga§r direkt aus der Luft holen. Wenn du deine Schüsse richtig timst, während die §qNaga§r angreift, kannst du sie mit Leichtigkeit besiegen.%s%sNach ihrem Tod lassen §qNagas§r ihre §qZähne§r fallen, die zur Herstellung von Giftresistenztränken, Pfeilen und dem §aNaga-Zahn Dolch§r verwendet werden können.%s%sSie erscheinen nur in der Dunkelheit.
+guidebook.hf_mzs.body_foliaath=§uFoliaaths§r sind pflanzenartige Monster, die im Dschungel lauern und nichts anderes wollen, als alles zu fressen, was sich bewegt! §uFoliaaths§r mögen wie gewöhnliche Farne aussehen, aber wenn du ihnen zu nahe kommst, tauchen sie plötzlich auf.%s%sEinem §uFoliaath§r so nahe zu kommen, dass man ihn treffen kann, ist fast unmöglich. Überlege dir andere Wege, um mit diesen blättrigen Kreaturen fertig zu werden.%s%sSie lassen §uFoliaath-Samen§r fallen.%s%sSie erscheinen nur in der Dunkelheit.
+guidebook.hf_mzs.body_grottol=Diese niedlichen, kristallartigen Krebstiere leben tief in Höhlen und Schluchten. Bekannt als lebendes Erz, sind §sGrottols§r eine seltene Diamantquelle.%s%s§sGrottols§r sind schnell und überraschend schlau – nur die flinksten Abenteurer können sie fangen, bevor sie sich eingraben.%s%sNur Spitzhacken aus Eisen oder stärker können ihre harten Diamantschalen durchbrechen.%s%sSie erscheinen nur in der Dunkelheit.
+guidebook.hf_mzs.body_lantern=§aLaternen§r schweben durch dichte Wälder und leuchten wie Quallen. Manche Kulturen glauben, dass diese Kreaturen die Seelen der Verstorbenen tragen, während andere sich wünschen, sie wie Sterne zu sehen.%s%sDie §aLeuchtende Qualle§r im Inneren ist perfekt, um für kurze Zeit die dunkelste Nacht zu erhellen und beim Verzehr Nachtsicht zu gewähren.%s%sSie erscheinen nur in der Dunkelheit.
+guidebook.hf_mzs.body_sculptor=Ein Meister der Geomantie, der §2Sculptor§r, wartet in einem §2Kloster§r hoch oben in den Bergen und fordert Besucher zu einer schwierigen Parkour-Herausforderung heraus.%s%sNoch nie zuvor hat ein Schüler die Spitze dieses anspruchsvollen Aufstiegs erreicht, doch wer es schafft, wird würdig sein, die Macht der §2Erdriss-Mönche§r zu erlangen. §2Der Sculptor§r wird ihm ein mächtiges Artefakt überreichen – den §qErdriss-Handschuh§r, der seinem Träger Kontrolle über Erdmagie verleiht.%s%sSprich mit §2dem Sculptor§r und tausche einen §nBluff-Stab§r ein, um die Herausforderung zu beginnen. Erreiche die Spitze und interagiere mit §2dem Sculptor§r innerhalb des Zeitlimits, um zu gewinnen. Du wirst nicht hoch genug springen können – finde eine Möglichkeit, deine Sprunghöhe und Geschwindigkeit zu erhöhen!
+guidebook.hf_mzs.body_bluff=Jahrhunderte sind vergangen, seit die §2Erdriss-Mönche§r verschwunden sind. Ihre §2Klöster§r stehen heute verlassen und verfallen da. Elementare Kreaturen, genannt §nBluffs§r, streifen durch die Hallen, angezogen von der hinterlassenen Magie.%s%sSie lassen §nBluff-Stäbe§r fallen, die zur Reparatur der §2Geomantie-Rüstung§r verwendet werden können oder um den §2Sculptor-Test§r zu starten.
+
+guidebook.hf_mzs.body_items=§r
+guidebook.hf_mzs.body_ice_crystal=Der §bEiskristall§r, bewacht vom schlafenden §bFrostmaw§r, verleiht seinem Benutzer die Fähigkeit, Feinde mit eisigem Atem zu erstarren. Er benötigt Zeit, um sich nach jeder Nutzung wieder aufzuladen.%s%sEr kann durch das Besiegen des §bFrostmaw§r erlangt werden. Vielleicht gibt es jedoch einen einfacheren Weg...?
+guidebook.hf_mzs.body_wroughtnaut_helmet=Unzerstörbarer Helm des §cFerrous Wroughtnaut§r, kann durch das Besiegen des Wroughtnaut erhalten werden.
+guidebook.hf_mzs.body_wroughtnaut_axe=§cDie Axt der Tausend Metalle§r ist die unzerstörbare Waffe des §cFerrous Wroughtnaut§r. Durch Interaktion kann der Spieler einen Schwungangriff aktivieren, der Gegner vor ihm trifft. Durch Schleichen & Interaktion kann eine Bodenschlag-Fähigkeit ausgelöst werden, die Feinde näher zieht.%s%sSie kann durch das Besiegen des §cFerrous Wroughtnaut§r erhalten werden.
+guidebook.hf_mzs.body_umvuthana_masks=Erhältlich durch das Besiegen von §eAbavuthana§r. Versuche, eine dieser Masken im §6Umvuthana-Hain§r zu tragen – vielleicht passiert etwas Besonderes.%s%sVerschiedene Masken verleihen unterschiedliche Effekte:%sDie §eMaske der Glückseligkeit§r verleiht einen Sprungkraft-Bonus.%sDie §eMaske des Glaubens§r erhöht die maximale Gesundheit.%sDie §eMaske der Angst§r gewährt einen Geschwindigkeitsbonus.%sDie §eMaske des Zorns§r erhöht die Angriffsstärke.%sDie §eMaske der Wut§r verleiht erhöhte Abbaugeschwindigkeit.%sDie §eMaske des Elends§r gibt Widerstandskraft.
+guidebook.hf_mzs.body_sol_visage=Die unzerstörbare Maske von §6Umvuthi, dem Sonnenvogel§r. Sie erlaubt es dem Träger, freundliche §eAbavuthana§r zur Unterstützung im Kampf zu beschwören. Allerdings verleiht sie nicht die Heliomantie-Kräfte von §6Umvuthi§r, da diese mit ihm vergingen. Oder gibt es doch noch einen anderen Weg...?%s%sKann durch das Besiegen von §6Umvuthi§r erhalten werden.
+guidebook.hf_mzs.body_suns_blessing=Kann durch Handel mit §6Umvuthi§r für 7 Goldblöcke erworben werden. Verleiht mächtige Sonnenfähigkeiten:%s- Klicke auf einen Block, um einen Sonnenstoß zu entfesseln.%s- Interagiere, um eine Sonnenflare auszulösen, die Gegner wegstößt.%s- Schleichen & Interaktion feuert einen konzentrierten Sonnenstrahl.%s- Schleiche 3-mal, um die Supernova aufzuladen. Sobald geladen, interagiere, um sie zu aktivieren, oder springe, um sie abzubrechen.%s%sEs kann von §6Umvuthi§r wiederhergestellt werden, aber du musst in guten Beziehungen stehen.
+guidebook.hf_mzs.body_naga_fang=§qNaga-Zähne§r können zur Herstellung von Giftresistenztränken, Pfeilen (für das §2Blasrohr§r) und dem §aNaga-Zahn Dolch§r verwendet werden.%s%sKann durch das Besiegen von §qNagas§r erhalten werden.
+guidebook.hf_mzs.body_naga_fang_dagger=Der §aNaga-Zahn Dolch§r ist eine Nahkampfwaffe, die das Ziel beim Treffer vergiftet und doppelten Schaden verursacht, wenn von hinten angegriffen wird.%s%sKann mit einem §qNaga-Zahn§r und einem Stock hergestellt werden.
+guidebook.hf_mzs.body_blowgun=Wird verwendet, um giftige Pfeile abzufeuern. Diese Waffe hat eine relativ kurze Reichweite, kann aber schnell hintereinander abgefeuert werden.%s%sKann mit drei Bambus und zwei Fäden hergestellt werden.
+guidebook.hf_mzs.body_foliaath_seed=Um einen §uFoliaath§r zu züchten, pflanze einen Samen auf Gras oder Erde. Alle halben Tage für zwei Tage muss das Baby-§uFoliaath§r mit Fleisch gefüttert werden. Danach wird es zu einem ausgewachsenen §uFoliaath§r heranwachsen.%s%sVorsicht: Ein erwachsenes §uFoliaath§r ist nicht gezähmt und wird dich immer noch angreifen!
+guidebook.hf_mzs.body_spear=Der §lSpeer§r ist eine Nahkampfwaffe, verursacht 5 Schaden und hat eine 33%ige Chance, ein Tier sofort zu töten.%s%sKann mit zwei Stöcken, Feuerstein und einer Feder hergestellt werden.
+guidebook.hf_mzs.body_earthrend_gauntlet=Der §qEarthrend Gauntlet§r, ein mächtiges Artefakt, geschaffen von §2The Sculptor§r, verleiht dem Träger die Kontrolle über Geomantie.%s%sDamit können Spieler riesige Felsbrocken anheben und mühelos auf Gegner schleudern. Felsbrocken können nur aus Erdblöcken erzeugt werden. Wenn aufgeladen, ermöglicht der §qEarthrend Gauntlet§r außerdem eine nahezu mühelose, schwimmähnliche Bewegung durch den Boden; aber Vorsicht bei der Verwendung in der Nähe von Gegenständen auf dem Boden.%sDu kannst auch hohe §2Erdpfeiler§r erschaffen, um dich vor Feinden zu schützen; diese Pfeiler ändern ihre Größe, wenn sie über einem Felsbrocken beschworen werden.%s%sMan erhält ihn, indem man die §2Prüfung des Bildhauers§r abschließt.
+guidebook.hf_mzs.body_sculptor_staff=Die bevorzugte Waffe des §2Sculptor§r. Mit diesem Stab kann der Benutzer drei kleine Felsbrocken herbeirufen, die nach einer kurzen Verzögerung nach vorne geschleudert werden.%s%sKann durch das Besiegen des §2Sculptor§r oder in Truhen im §2Kloster§r gefunden werden.
+guidebook.hf_mzs.body_geomancy_armor=Diese mächtigen Ausrüstungsgegenstände können im §2Kloster§r gefunden werden, und jeder gewährt seinem Benutzer einen einzigartigen Bonus:%s%s- Die §qGeomancer-Perlen§r verleihen +3 Angriffsschaden im unbewaffneten Kampf, was auch den §2Earthrend Gauntlet§r einschließt%s- Die §qGeomancer-Robe§r bietet eine geringe Chance, dass jedes Mal, wenn der Träger Schaden verursacht oder erleidet, ein Felsbrocken in der Nähe ausbricht. Felsen können ohne einen Earthrend Gauntlet nicht geschleudert werden. Felsen können nur aus irdischen Blöcken erzeugt werden.%s- Der §qGeomancer-Gürtel§r verleiht seinem Träger Schadensresistenz, während er unter der Wirkung von Verlangsamung steht%s- Die §qGeomancer-Sandalen§r verleihen dem Spieler einen kurzen Geschwindigkeitsschub, wenn er aus moderater Höhe fällt.%s%s§2Geomantie-Rüstung§r kann mit §nBluff-Stäben§r repariert werden.
+guidebook.hf_mzs.body_rake=Die §eSandharke§r kann verwendet werden, um normalen Sand in §eGeharkten Sand§r zu verwandeln.%s%s- Interagiere mit einem Sand- oder Rot-Sandblock, um ihn zu harken.%s- Schleichen & Interagieren mit einem §eGeharkten Sand§r-Block, um seine Ausrichtung zu ändern.%s%sKann im §2Kloster§r gefunden und mit jeder Holzart repariert werden.
+
+guidebook.hf_mzs.body_structures=§r
+guidebook.hf_mzs.body_monastery=Hoch oben in den gefrorenen Gipfeln ist §2Das Kloster§r ein ruhiger Zufluchtsort, Heimat der §nBluffs§r und des letzten §2Erdriss-Mönchs§r – §2Tongbi, der Sculptor§r.
+guidebook.hf_mzs.body_umvuthana_grove=In der sonnenverwöhnten Savanne thront §6Umvuthi§r vor einer brennenden Feuerstelle.
+guidebook.hf_mzs.body_wroughtnaut_chamber=Tief unter der Erde liegt die §cWroughtnaut-Kammer§r.
+
+guidebook.hf_mzs.body_discord=Folge uns auf Instagram, X oder TikTok unter: honeyfrostmc%s%sTritt unserem Discord bei: honeyfrost.net/discord
+guidebook.hf_mzs.body_credits=§l§mDas Mowzie's Mobs Team§r%s%s- Bob Mowzie%s- Wadoo%s- VakyPanda%s- Noonyez%s- pau101%s%s§lMitwirkende§r%s%s- Sculptor-Textur von Probleyes%s- Foliaath-Texturen von Monky%s- Ferrous Wroughtnaut von Frenderman%s- Laternen-Texturen von ron0mc%s- Naga-Texturen mit freundlicher Genehmigung von Lk_%s- Umvuthi- und Umvuthana-Klänge von MrCompost%s- Sculptors Theme komponiert von Nicholas Escobar%s- Umvuthana Grove und Monastery gebaut von TheMaximusJk%s%s§l§6Das Honeyfrost Team§r%s%s- Alan Capellino%s- Alexander Shimarov%s- Amman%s- Artem Baklin%s- Arsalan Nikouseresht%s- Benjamin Deconihout%s- Benjamin Goicoechea%s- Dennis Wonneberger%s- Ivan Perminov%s- Kirill Vorontsov%s- Mathieu Laveissiere%s- Maxim Kharin%s- Mikhail Kuznetsov%s- Oleh Batozhskyi%s- Petar Mijailovic%s- Vladimir Gavrilov%s- Zahari Stoyanov%s- Kirill (snakki)%s- Vladimir Savelev

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "ntk:ars/structure_x_ocean_ship_01_x_d"
+    },
+    "features": [
+      "ntk:ars/structure_x_ocean_ship_01_x_a",
+      "ntk:ars/structure_x_ocean_ship_01_x_c"
+    ]
+  }
+}

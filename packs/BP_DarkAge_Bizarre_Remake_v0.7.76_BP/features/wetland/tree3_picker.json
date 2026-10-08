@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:wetland/tree3_picker"
+		},
+		"places_feature": "dk:wetland/mutated_tree_two_proxy",
+		"iterations": "t.biome_idx == 0 && (math.abs(v.originx) > 200 || math.abs(v.originz) > 200)",
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

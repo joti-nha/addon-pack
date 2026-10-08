@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:ore_feature":{"description":{"identifier":"panascais_caves:panascais/caves/6f78b589de664b4f38a90a8e50989d5e"},"count":3,"replace_rules":[{"places_block":"panascais_caves:sphalerite_ore","may_replace":["minecraft:stone"]},{"places_block":"panascais_caves:deepslate_sphalerite_ore","may_replace":["minecraft:deepslate"]}]}}

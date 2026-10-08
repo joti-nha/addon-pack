@@ -1,0 +1,197 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:meteorite_spawn",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"minecraft:despawning": {
+				"minecraft:despawn": {}
+			},
+			"minecraft:despawn_component": {
+				"minecraft:timer": {
+					"time": 0.1,
+					"time_down_event": {
+						"event": "minecraft:generate_five"
+					}
+				}
+			},
+			"minecraft:wait_component_one": {
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "minecraft:generate_three"
+					}
+				}
+			},
+			"minecraft:wait_component_two": {
+				"minecraft:timer": {
+					"time": 10,
+					"time_down_event": {
+						"event": "minecraft:generate_four"
+					}
+				}
+			},
+			"minecraft:generate": {
+				"minecraft:timer": {
+					"time": 0.1,
+					"time_down_event": {
+						"event": "minecraft:generate_two"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"block",
+					"chest",
+					"zooglin"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:physics": {},
+			"minecraft:collision_box": {
+				"width": 0.1,
+				"height": 0.1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"on_damage": {},
+					"deals_damage": false
+				}
+			}
+		},
+		"events": {
+			"minecraft:generate_two": {
+				"randomize": [
+					{
+						"weight": 1,
+						"queue_command": {
+							"command": [
+								"tellraw @a {\"rawtext\":[{\"translate\":\"dk.meteorite.notice\"}]}"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:wait_component_one"
+							]
+						}
+					},
+					{
+						"weight": 2,
+						"add": {
+							"component_groups": [
+								"minecraft:despawning"
+							]
+						}
+					},
+					{
+						"weight": 997,
+						"add": {
+							"component_groups": [
+								"minecraft:despawning"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:generate_three": {
+				"randomize": [
+					{
+						"weight": 90,
+						"add": {
+							"component_groups": [
+								"minecraft:wait_component_two"
+							]
+						}
+					},
+					{
+						"weight": 10,
+						"queue_command": {
+							"command": [
+								"tellraw @a {\"rawtext\":[{\"translate\":\"dk.meteorite.false\"}]}"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:despawning"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:generate_four": {
+				"randomize": [
+					{
+						"weight": 80,
+						"queue_command": {
+							"command": [
+								"tellraw @a {\"rawtext\":[{\"translate\":\"dk.meteorite.fall\"}]}",
+								"summon dk:meteorite ~ ~1000 ~"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:despawn_component"
+							]
+						}
+					},
+					{
+						"weight": 20,
+						"queue_command": {
+							"command": [
+								"tellraw @a {\"rawtext\":[{\"translate\":\"dk.meteorite.fall\"}]}",
+								"summon dk:meteorite ~ ~1000 ~",
+								"summon dk:meteorite ~25 ~1200 ~25"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:despawn_component"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:generate_five": {
+				"add": {
+					"component_groups": [
+						"minecraft:despawning"
+					]
+				}
+			},
+			"minecraft:meteorite.divert": {
+				"queue_command": {
+					"command": [
+						"tellraw @a {\"rawtext\":[{\"translate\":\"dk.meteorite.divert\"}]}"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"minecraft:despawning"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 100,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"minecraft:generate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

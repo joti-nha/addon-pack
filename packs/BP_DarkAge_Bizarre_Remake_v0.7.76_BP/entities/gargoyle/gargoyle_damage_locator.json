@@ -1,0 +1,41 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:gargoyle_damage_locator",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:health": {
+				"value": 200,
+				"max": 200
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "is_riding",
+					"value": false
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"dummy"
+				]
+			}
+		},
+		"component_groups": {},
+		"events": {}
+	}
+}

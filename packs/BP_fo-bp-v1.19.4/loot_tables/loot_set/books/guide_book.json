@@ -1,0 +1,640 @@
+// Forsaken Odyssey:
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/00_unknown_guide_books.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/01_guide_books.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/02_brown_mushlings.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/03_red_mushlings.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/04_prismarine_clam.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/05_jellyfish.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/06_cobblestone_golem.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/07_mossy_cobblestone_golem.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/08_wandering_collectors.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/09_warthog.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/10_dire_bat.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/11_mud_cube.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/12_snow_cube.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/13_sand_cube.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/14_scarecrow.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/15_scorpion.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/16_desert_scorpion.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/17_badlands_scorpion.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/18_cave_scorpion.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/19_flying_book.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/20_cursed_flying_book.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/21_enchanted_flying_book.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/22_book_curserer.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/23_powders_and_dusts.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/24_apples.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/25_soups_and_stews.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/26_cookies.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/27_pies.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/28_bamboo_tumblers.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/29_artifacture_table.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/30_copper_evaporator.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/31_iron_evaporator.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/32_spore_pot.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/33_enchanted_emerald.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/34_scraps.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/35_rods.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/36_pearls_and_eyes.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/37_scorpion_gauntlet.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/38_clubs.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/39_blazing_staff.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/40_staff_of_the_sea.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/41_giant_moa.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/42_forest_wisp.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/43_skeleton_footman.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/44_skeleton_guard.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/45_skeleton_swordman.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/46_skeleton_golden_swordman.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/47_grafting_table.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/48_squirrel.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/49_sparrow.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/50_oak_tree_guardian.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/51_mossheep.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/52_wood_corpse.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/53_overgrown_jungle_troot.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/54_crates_trader.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/55_wood_crates.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/56_crate_keys.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/57_locked_crates.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/58_cave_dweller.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/59_magma_golem.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/60_cave_wolf.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/61_clurve.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/62_deepslate_golem.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/63_sculk_walker.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/64_moss_mushlings.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/65_mossy_skeleton.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/66_myceling.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/67_glowceling.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/68_skeleton_miner.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/69_crystalmite.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/70_glow_bird.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/71_rat_curserer.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/72_brute_zombie.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/73_elder_golem.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/74_rat.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/75_cursed_rat.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/76_cobbled_deepslate_golem.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/77_curserer_staff.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/78_corrupted_oak_troot.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/79_mossman.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/80_raven.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/81_corrupted_raven.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/82_mossy_willow_troot.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/83_selvander.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/84_deopard.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/85_nethermite.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/86_fire_bird.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/87_soul_fire_bird.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/88_crimson_mushling.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/89_warped_mushling.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/90_nether_wisp.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/91_nether_soul_wisp.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/92_piglin_chief.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/93_piglin_fire_staff.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/94_piglin_war_hammer.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/95_powder_staff.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/96_piglin_crates_trader.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/97_opossum.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/98_pale_oak_troot.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/99_pale_mossheep.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/100_hummingbird.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/101_scrollwright.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/102_book_keeper.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/103_virtuous_flying_book.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/104_wraith.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/105_learning_books.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/106_magic_spells_table.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/107_feathers.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/108_quills.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/109_wands.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/110_effect_scrolls_1.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/111_effect_scrolls_2.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/112_teleportation_scrolls.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/113_summoning_scrolls.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/114_abjuration_scrolls.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/115_destruction_scrolls.json"
+        },
+        {
+          "weight": 2,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/116_environmental_scrolls.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/117_weather_scrolls.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/118_equipment_effects.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/119_arcane_staff.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/120_teleportation_staff.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/121_hats.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/122_shulkore.json"
+        },
+        {
+          "weight": 3,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/123_levitation_staff.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/124_voidlet.json"
+        },
+        {
+          "weight": 1,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/books/guide_books/125_lurknash.json"
+        }
+      ]
+    }
+  ]
+}

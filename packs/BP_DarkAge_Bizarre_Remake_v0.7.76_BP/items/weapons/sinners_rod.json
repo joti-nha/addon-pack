@@ -1,0 +1,33 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:sinners_rod",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": "sinners_rod",
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:durability": {
+				"max_durability": 550
+			},
+			"minecraft:display_name": {
+				"value": "item.dk:sinners_rod.name"
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 1,
+				"movement_modifier": 0.35
+			},
+			"minecraft:custom_components": [
+				"dk:on_use"
+			],
+			"minecraft:cooldown": {
+				"category": "sinners_rod",
+				"duration": 120
+			}
+		}
+	}
+}

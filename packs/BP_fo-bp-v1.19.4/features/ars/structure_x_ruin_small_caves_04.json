@@ -1,0 +1,61 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:ars/structure_x_ruin_small_caves_04"
+    },
+    "structure_name": "mystructure:ars/ruin_small_caves_04",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {},
+      "block_intersection": {
+        "block_allowlist": [
+          // Elemental:
+          "minecraft:air",
+          "minecraft:flowing_lava",
+          "minecraft:flowing_water",
+          "minecraft:lava",
+          "minecraft:water",
+          // Grasses:
+          "minecraft:bush",
+          "minecraft:fern",
+          "minecraft:firefly_bush",
+          "minecraft:large_fern",
+          "minecraft:seagrass",
+          "minecraft:short_dry_grass",
+          "minecraft:short_grass",
+          "minecraft:tall_dry_grass",
+          "minecraft:tall_grass",
+          // Flowers:
+          "minecraft:pink_petals",
+          "minecraft:wildflowers",
+          // Fungus:
+          "minecraft:brown_mushroom",
+          "minecraft:red_mushroom",
+          // Saplings:
+          "minecraft:azalea",
+          "minecraft:flowering_azalea",
+          // Plants:
+          { "tags": "query.all_tags('ntk:plant')" },
+          "minecraft:big_dripleaf",
+          "minecraft:deadbush",
+          "minecraft:glow_lichen",
+          "minecraft:hanging_roots",
+          "minecraft:kelp",
+          "minecraft:leaf_litter",
+          "minecraft:moss_carpet",
+          "minecraft:pale_hanging_moss",
+          "minecraft:pale_moss_carpet",
+          "minecraft:small_dripleaf_block",
+          "minecraft:vine",
+          // Environmental Blocks:
+          { "tags": "query.all_tags('ntk:pile_of_bones')" },
+          "minecraft:resin_clump",
+          "minecraft:sculk_vein",
+          "minecraft:web"
+        ]
+      }
+    }
+  }
+}

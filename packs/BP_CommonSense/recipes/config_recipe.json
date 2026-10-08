@@ -1,0 +1,25 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:config_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"S": {
+				"item": "minecraft:stick"
+			}
+		},
+		"pattern": [
+			" S ",
+			"SSS",
+			" S "
+		],
+		"result": {
+			"item": "bv:config",
+			"count": 1
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_carrot_soup"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "carrot_soup",
+    "ingredients": [
+      {
+        "item": "minecraft:carrot",
+        "count": 2
+      },
+      {
+        "item": "ntk:salt"
+      },
+      {
+        "item": "minecraft:bowl"
+      }
+    ],
+    "result": {
+      "item": "ntk:carrot_soup",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:carrot"
+      },
+      {
+        "item": "ntk:salt"
+      },
+      {
+        "item": "minecraft:bowl"
+      }
+    ]
+  }
+}

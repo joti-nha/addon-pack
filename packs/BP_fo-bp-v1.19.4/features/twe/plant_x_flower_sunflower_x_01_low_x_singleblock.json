@@ -1,0 +1,68 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:twe/plant_x_flower_sunflower_x_01_low_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": {
+          "name": "minecraft:sunflower",
+          "states": {
+            "upper_block_bit": false
+          }
+        },
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": false,
+    "enforce_placement_rules": true,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air",
+      // Grasses:
+      { "tags": "query.all_tags('ntk:grass')" },
+      "minecraft:bush",
+      "minecraft:fern",
+      "minecraft:short_dry_grass",
+      "minecraft:short_grass",
+      "minecraft:tall_dry_grass",
+      // Sprouts:
+      { "tags": "query.all_tags('ntk:sprouts')" },
+      "minecraft:crimson_roots",
+      "minecraft:nether_sprouts",
+      "minecraft:warped_roots",
+      // Flowers:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Plants:
+      { "tags": "query.all_tags('ntk:hanging_moss')" },
+      "minecraft:glow_lichen",
+      "minecraft:hanging_roots",
+      "minecraft:leaf_litter",
+      "minecraft:pale_hanging_moss",
+      "minecraft:vine",
+      // Environmental Blocks:
+      "minecraft:resin_clump",
+      "minecraft:snow_layer"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        // Soil-type Blocks:
+        "minecraft:coarse_dirt",
+				"minecraft:dirt",
+				"minecraft:dirt_with_roots",
+        "minecraft:farmland",
+				"minecraft:grass_block",
+				"minecraft:moss_block",
+        "minecraft:mud",
+        "minecraft:muddy_mangrove_roots",
+				"minecraft:pale_moss_block",
+        "minecraft:mycelium",
+				"minecraft:podzol"
+			]
+		}
+  }
+}

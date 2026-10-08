@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_magma_golem.attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"hand_attack": "variable.attack_time > 0.0"
+						}
+					]
+				},
+				"hand_attack": {
+					"animations": [ "hand_attack" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"default": "variable.attack_time <= 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.entity.ntk_magma_golem.movement": {
+			"initial_state": "walking",
+			"states": {
+				"walking": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					]
+				}
+			}
+		}
+	}
+}

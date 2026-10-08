@@ -1,0 +1,47 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.horse.dk": {
+			"geometry": "geometry.default",
+			"part_visibility": [
+				{
+					"saddle": "query.is_saddled"
+				},
+				{
+					"headsaddle": "query.is_saddled"
+				},
+				{
+					"saddlemouth": "query.is_saddled"
+				},
+				{
+					"saddlemouth2": "query.is_saddled"
+				},
+				{
+					"saddlemouthline": "query.is_saddled && query.has_rider"
+				},
+				{
+					"saddlemouthline2": "query.is_saddled && query.has_rider"
+				}
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.horse_armor.dk": {
+			"geometry": "geometry.armor",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.armor_gold"
+			]
+		}
+	}
+}

@@ -1,0 +1,75 @@
+{
+  "pools": [
+    // Ender Bonus
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/bonus_rarity_items_end.json"
+        }
+      ]
+    },
+    // Ender Materials 
+    {
+      "rolls": 8,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/materials_end.json"
+        }
+      ]
+    },
+    // Nether Foods & Crops
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/foods_crops_end.json"
+        }
+      ]
+    },
+    // End Plants
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/plants_end.json"
+        }
+      ]
+    },
+    // Potions
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/potions.json"
+        }
+      ]
+    },
+    // End Tools & Equipments
+    {
+      "rolls": 2,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/tools_end.json"
+        },
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/equipments_end.json"
+        }
+      ]
+    }
+  ]
+}

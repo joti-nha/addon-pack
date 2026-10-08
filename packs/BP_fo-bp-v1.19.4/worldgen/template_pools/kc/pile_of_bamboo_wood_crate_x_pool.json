@@ -1,0 +1,91 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:kc/pile_of_bamboo_wood_crate_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_03",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_04",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_05",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 50,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_06",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 5,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_07",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 5,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_08",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      },
+      {
+        "weight": 5,
+        "element": {
+          "location": "kc/pile_of_bamboo_wood_crate_09",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid"
+          //"processors": ""
+        }
+      }
+    ]
+  }
+}

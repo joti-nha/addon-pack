@@ -1,0 +1,51 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:magic_x_scroll_of_acceleration_1"
+    },
+    "priority": 1,
+    "tags": [ "magic_spells_table" ],
+    "group": "scroll_of_acceleration_1",
+    "assume_symmetry": false,
+    "pattern": [
+      "#Q",
+      "DR"
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:empty_scroll"
+      },
+      "Q": {
+        "item": "ntk:wild_quill"
+      },
+      "R": {
+        "item": "minecraft:rabbit_foot"
+      },
+      "D": {
+        "item": "ntk:deopard_fur"
+      }
+    },
+    "result": {
+      "item": "ntk:scroll_of_acceleration_1",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:magic_spells_table"
+      },
+      {
+        "item": "ntk:empty_scroll"
+      },
+      {
+        "item": "ntk:wild_quill"
+      },
+      {
+        "item": "minecraft:rabbit_foot"
+      },
+      {
+        "item": "ntk:deopard_fur"
+      }
+    ]
+  }
+}

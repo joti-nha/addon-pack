@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.plague_dog": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"necklace": "q.property('dk:plague_dog_states') == 'wild_plague'"
+				}
+			]
+		},
+		"controller.render.outcast_food": {
+			"geometry": "geometry.food",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		}
+	}
+}

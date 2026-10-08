@@ -1,0 +1,297 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"mob.gargoyle.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/gargoyle/hurt1",
+				"sounds/mob/gargoyle/hurt2",
+				"sounds/mob/gargoyle/hurt3",
+				"sounds/mob/gargoyle/hurt4"
+			]
+		},
+		"mob.gargoyle.attack_m": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/gargoyle/attack_m1",
+				"sounds/mob/gargoyle/attack_m2"
+			]
+		},
+		"mob.gargoyle.die": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/gargoyle/die",
+				"sounds/mob/gargoyle/die",
+				"sounds/mob/gargoyle/die"
+			]
+		},
+		"mob.gargoyle.attack_h": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/gargoyle/attack_h"
+			]
+		},
+		"mob.gargoyle.swing": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/gargoyle/swing"
+			]
+		},
+		"mob.sentinel.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/sentinel/hurt"
+			]
+		},
+		"mob.sentinel.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/sentinel/death"
+			]
+		},
+		"mob.sentinel_soldier.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/sentinel/death2"
+			]
+		},
+		"mob.duck.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/duck/duck_say_one",
+				"sounds/mob/duck/duck_say_two"
+			]
+		},
+		"mob.duck.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/duck/duck_hurt"
+			]
+		},
+		"mob.duck.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/duck/duck_death"
+			]
+		},
+		"mob.abomination_duck.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/abomination_duck/abomination_say",
+				"sounds/mob/abomination_duck/abomination_say_two"
+			]
+		},
+		"mob.abomination_duck.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/abomination_duck/abomination_hurt",
+				"sounds/mob/abomination_duck/abomination_hurt_two"
+			]
+		},
+		"mob.abomination_duck.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/abomination_duck/abomination_death"
+			]
+		},
+		"mob.abomination_duck.step": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/abomination_duck/step"
+			]
+		},
+		"mob.plague_dog.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague_dog/say",
+				"sounds/mob/plague_dog/say2",
+				"sounds/mob/plague_dog/say3"
+			]
+		},
+		"mob.plague_dog.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague_dog/hurt"
+			]
+		},
+		"mob.plague_dog.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague_dog/dead"
+			]
+		},
+		"mob.plague.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague/say",
+				"sounds/mob/plague/say1"
+			]
+		},
+		"mob.plague.roar": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague/roar"
+			]
+		},
+		"mob.plague.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague/hurt"
+			]
+		},
+		"mob.plague.death": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/plague/death"
+			]
+		},
+		"mob.unbound_elemental.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/unbound_elemental/say_one",
+				"sounds/mob/unbound_elemental/say_two"
+			]
+		},
+		"mob.unbound_elemental.roar": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/unbound_elemental/roar_one",
+					"volume": 5
+				},
+				{
+					"name": "sounds/mob/unbound_elemental/roar_two",
+					"volume": 5
+				}
+			]
+		},
+		"mob.unbound_elemental.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/unbound_elemental/hurt_one",
+				"sounds/mob/unbound_elemental/hurt_two",
+				"sounds/mob/unbound_elemental/hurt_three"
+			]
+		},
+		"mob.unbound_elemental.death": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/unbound_elemental/death_one",
+					"volume": 2.5
+				}
+			]
+		},
+		"mob.unbound_elemental.flamethrower": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/unbound_elemental/soul_flamethrower",
+					"volume": 3.5
+				}
+			]
+		},
+		"mob.elemental_knight.say": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/elemental_knight/say",
+				"sounds/mob/elemental_knight/say2"
+			]
+		},
+		"mob.elemental_knight.hurt": {
+			"category": "hostile",
+			"sounds": [
+				"sounds/mob/elemental_knight/hurt",
+				"sounds/mob/elemental_knight/hurt2"
+			]
+		},
+		"mob.elemental_knight.death": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/elemental_knight/death",
+					"volume": 2.5
+				},
+				{
+					"name": "sounds/mob/elemental_knight/death2",
+					"volume": 2.5
+				}
+			]
+		},
+		"mob.elemental_knight.attack": {
+			"category": "hostile",
+			"sounds": [
+				{
+					"name": "sounds/mob/elemental_knight/attack",
+					"volume": 1.0
+				}
+			]
+		},
+		"mob.outcast.say": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/outcast/say",
+				"sounds/mob/outcast/say2",
+				"sounds/mob/outcast/say3",
+				"sounds/mob/outcast/say4"
+			]
+		},
+		"mob.outcast.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/outcast/hurt",
+				"sounds/mob/outcast/hurt2",
+				"sounds/mob/outcast/hurt3",
+				"sounds/mob/outcast/hurt4"
+			]
+		},
+		"mob.outcast.death": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/mob/outcast/death",
+					"volume": 2.5
+				},
+				{
+					"name": "sounds/mob/outcast/death2",
+					"volume": 2.5
+				}
+			]
+		},
+		"mob.outcast.transform": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/outcast/transform"
+			]
+		},
+		"mob.outcast_corrupted.say": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/outcast_corrupted/say",
+				"sounds/mob/outcast_corrupted/say2",
+				"sounds/mob/outcast_corrupted/say3"
+			]
+		},
+		"mob.outcast_corrupted.hurt": {
+			"category": "neutral",
+			"sounds": [
+				"sounds/mob/outcast_corrupted/hurt",
+				"sounds/mob/outcast_corrupted/hurt2",
+				"sounds/mob/outcast_corrupted/hurt3"
+			]
+		},
+		"mob.outcast_corrupted.death": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/mob/outcast_corrupted/death",
+					"volume": 2.5
+				},
+				{
+					"name": "sounds/mob/outcast_corrupted/death2",
+					"volume": 2.5
+				}
+			]
+		}
+	}
+}

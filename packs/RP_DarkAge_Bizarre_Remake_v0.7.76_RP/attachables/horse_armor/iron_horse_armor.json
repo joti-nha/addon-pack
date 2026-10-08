@@ -1,0 +1,21 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "dk:horse_armor_dk_two",
+      "item": { "minecraft:iron_horse_armor": "query.owner_identifier == 'dk:horse'"},
+      "materials": {
+        "default": "armor",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/entity/vanilla_mobs/horse/armor/horse_armor_iron",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.horse_armor_dk"
+      },
+      "render_controllers": [ "controller.render.default" ]
+    }
+  }
+}

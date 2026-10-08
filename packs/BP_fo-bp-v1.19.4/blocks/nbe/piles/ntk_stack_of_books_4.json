@@ -1,0 +1,157 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:stack_of_books_4",
+      "menu_category": {
+				"category": "construction",
+				"group": "minecraft:construction",
+				"is_hidden_in_commands": false
+			},
+			"traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [ "minecraft:cardinal_direction" ],
+          "y_rotation_offset": 180
+        }
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.stack_of_books_4.name §7(4)§r",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_stack_of_books_4"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_stack_of_books_4",
+          "render_method": "alpha_test_to_opaque",
+          "tint_method": "none",
+         "ambient_occlusion": 1.0,
+          "face_dimming": true,
+          "isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_stack_of_books_4"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_stack_of_books_4",
+            "render_method": "alpha_test",
+            "tint_method": "none",
+           "ambient_occlusion": 1.0,
+            "face_dimming": true,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_stack_of_books_4",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#745a27"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": true,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "popped",
+            "stops_liquid_flowing_from_direction": []
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -5, 0, -5 ],
+          "size": [ 10, 9, 10 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -6, 0, -6 ],
+        "size": [ 12, 9, 12 ]
+      },
+      "minecraft:light_dampening": 0,
+      "minecraft:light_emission": 0,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": {
+        "catch_chance_modifier": 5,
+        "destroy_chance_modifier": 20,
+        "lava_flammable": "always"
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 0.1
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "never"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.guitar",
+        "up": "note.guitar"
+      },
+      "minecraft:movable": {
+        "movement_type": "popped"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "none"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": false,
+        "redstone_conductor": false
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/nbe/blocks/ntk_stack_of_books_4.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:instant_diggable",
+        "ntk:solid_block",
+        "ntk:pile_block",
+        "ntk:stack_of_boooks",
+        "ntk:stack_of_boooks_4"
+      ]
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 90, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 180, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, -90, 0 ]
+          }
+        }
+      }
+    ]
+  }
+}

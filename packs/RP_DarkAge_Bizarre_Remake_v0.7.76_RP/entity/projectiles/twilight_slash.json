@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:twilight_slash",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/projectile/twilight_wheel"
+			},
+			"geometry": {
+				"default": "geometry.twilight_wheel"
+			},
+			"animations": {
+				"static": "animation.twilight_wheel.static",
+				"two": "animation.twilight_wheel.two",
+				"twoo": "animation.twilight_wheel.two2",
+				"black_hole": "animation.twilight_wheel.black_hole",
+				"throw": "animation.twilight_wheel.throw"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"static": "query.mark_variant==1"
+					},
+					{
+						"two": "query.mark_variant==2"
+					},
+					{
+						"twoo": "query.mark_variant==2"
+					},
+					{
+						"black_hole": "query.mark_variant==3"
+					},
+					{
+						"throw": "query.mark_variant==1||query.mark_variant==2"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.ring_of_light"
+			]
+		}
+	}
+}

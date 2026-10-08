@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_bamboo_block_x_mosaic"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "bamboo_mosaic",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:bamboo_block"
+      }
+    },
+    "result": {
+      "item": "minecraft:bamboo_mosaic",
+      "count": 2
+    },
+    "unlock": [
+      {
+        "item": "minecraft:bamboo_block"
+      }
+    ]
+  }
+}

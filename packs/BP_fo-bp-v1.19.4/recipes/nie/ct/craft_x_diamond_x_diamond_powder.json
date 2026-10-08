@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diamond_x_diamond_powder"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "diamond",
+    "assume_symmetry": true,
+    "pattern": [
+      " D ",
+      "DQD",
+      " D "
+    ],
+    "key": {
+      "D": {
+        "item": "ntk:diamond_powder"
+      },
+      "Q": {
+        "item": "minecraft:quartz"
+      }
+    },
+    "result": {
+      "item": "minecraft:diamond",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:diamond_powder"
+      },
+      {
+        "item": "minecraft:quartz"
+      }
+    ]
+  }
+}

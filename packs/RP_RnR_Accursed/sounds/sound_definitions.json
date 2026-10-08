@@ -1,0 +1,26 @@
+{
+  "format_version": "1.20.20",
+  "sound_definitions": {
+    "dnd.sirens_lure": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/dnd/sirens_lure",
+          "volume": 1.0,
+          "is3D": false,
+          "stream": true
+        }
+      ]
+    },
+    "dnd.sirens_song": {
+      "category": "neutral",
+      "sounds": [
+        {
+          "name": "sounds/dnd/sirens_song",
+          "volume": 1.0,
+          "is3D": false
+        }
+      ]
+    }
+  }
+}

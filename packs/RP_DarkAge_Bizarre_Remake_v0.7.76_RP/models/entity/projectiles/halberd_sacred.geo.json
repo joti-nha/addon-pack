@@ -1,0 +1,151 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.halberd_sacred",
+				"texture_width": 300,
+				"texture_height": 160,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 19.5,
+				"visible_bounds_offset": [
+					0,
+					9.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						15,
+						-22
+					]
+				},
+				{
+					"name": "halberd_sacred",
+					"parent": "root",
+					"pivot": [
+						0,
+						14.75,
+						-22.33333
+					],
+					"rotation": [
+						90,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2,
+								-44.5,
+								-24
+							],
+							"size": [
+								4,
+								72,
+								4
+							],
+							"uv": [
+								248,
+								0
+							]
+						},
+						{
+							"origin": [
+								-1,
+								27.5,
+								-23
+							],
+							"size": [
+								2,
+								6,
+								2
+							],
+							"uv": [
+								264,
+								0
+							]
+						},
+						{
+							"origin": [
+								-3,
+								10.5,
+								-25
+							],
+							"size": [
+								6,
+								8,
+								6
+							],
+							"uv": [
+								264,
+								8
+							]
+						},
+						{
+							"origin": [
+								-0.5,
+								13.5,
+								-31
+							],
+							"size": [
+								1,
+								5,
+								6
+							],
+							"uv": [
+								264,
+								22
+							]
+						},
+						{
+							"origin": [
+								0,
+								0.5,
+								-37
+							],
+							"size": [
+								0,
+								30,
+								26
+							],
+							"pivot": [
+								0,
+								15.5,
+								-24
+							],
+							"rotation": [
+								0,
+								180,
+								0
+							],
+							"uv": [
+								248,
+								50
+							]
+						},
+						{
+							"origin": [
+								-3,
+								-46.5,
+								-25
+							],
+							"size": [
+								6,
+								2,
+								6
+							],
+							"uv": [
+								272,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:structures/paths_blocks_two_feature_mcstructure"
+		},
+		"iterations": "math.random_integer(50,75)",
+		"x": {
+			"extent": [
+				0,
+				5
+			],
+			"distribution": "jittered_grid"
+		},
+		"z": {
+			"extent": [
+				0,
+				8
+			],
+			"distribution": "jittered_grid"
+		},
+		"y": "q.heightmap(v.worldx, v.worldz) -1",
+		"places_feature": "dk:structures/paths_blocks_weighted_random"
+	}
+}

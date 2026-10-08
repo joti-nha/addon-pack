@@ -1,0 +1,20 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:miscellaneous_biome_checker",
+      "render_controllers": [
+        "controller.render.miscellaneous.ntk_biome_checker"
+      ],
+      "geometry": {
+        "default": "geometry.miscellaneous.ntk_biome_checker"
+      },
+      "materials": {
+        "default": "ntk_miscellaneous_alpha"
+      },
+      "textures": {
+        "default": "textures/misc/nie/ntk_biome_checker"
+      }
+    }
+  }
+}

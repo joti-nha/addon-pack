@@ -1,0 +1,34 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.entity.ntk_clurve": {
+			"geometry": "Geometry.default",
+			"materials": [
+				{
+					"*": "Material.default"
+				}
+			],
+			"textures": [
+				"Array.textures[query.has_target ? 1 : 0]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.clurve_calm",
+						"Texture.clurve_angry"
+					]
+				}
+			},
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.mod(math.floor(query.life_time * 4),8) / 8"
+				],
+				"scale": [
+					1,
+					"1 / 8"
+				]
+			}
+		}
+	}
+}

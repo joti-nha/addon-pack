@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.duck": {
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.duck_two"
+					]
+				}
+			},
+			"geometry": "geometry.default",
+			"part_visibility": [
+				{
+					"*": true
+				}
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"q.variant==1 ? texture.duck_two : texture.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_bottle_of_white_cloud",
+		"normal": "ntk_bottle_of_cloud_height",
+		"metalness_emissive_roughness": "ntk_bottle_of_cloud_mer"
+	}
+}

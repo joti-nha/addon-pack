@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:solar_element",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "mnra_cata_solar_element",
+			"minecraft:fire_resistant": {
+				"value": true
+			}
+		}
+	}
+}

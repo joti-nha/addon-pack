@@ -1,0 +1,1 @@
+{"format_version":"1.19.0","minecraft:recipe_shaped":{"description":{"identifier":"hf_mzs:blowgun"},"tags":["crafting_table"],"pattern":[" A ","BAB"," A "],"key":{"A":{"item":"minecraft:bamboo"},"B":{"item":"minecraft:string"}},"result":{"item":"hf_mzs:blowgun","count":1}}}

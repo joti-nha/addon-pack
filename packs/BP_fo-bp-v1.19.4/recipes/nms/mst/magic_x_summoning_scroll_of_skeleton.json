@@ -1,0 +1,58 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:magic_x_summoning_scroll_of_skeleton"
+    },
+    "priority": 1,
+    "tags": [ "magic_spells_table" ],
+    "group": "summoning_scroll_of_skeleton",
+    "assume_symmetry": false,
+    "pattern": [
+      "#HQ",
+      "BOB",
+      " B "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:empty_scroll"
+      },
+      "Q": {
+        "item": "ntk:soul_quill"
+      },
+      "H": {
+        "item": "minecraft:skeleton_skull"
+      },
+      "B": {
+        "item": "minecraft:bone"
+      },
+      "O": {
+        "item": "minecraft:bow"
+      }
+    },
+    "result": {
+      "item": "ntk:summoning_scroll_of_skeleton",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:magic_spells_table"
+      },
+      {
+        "item": "ntk:empty_scroll"
+      },
+      {
+        "item": "ntk:soul_quill"
+      },
+      {
+        "item": "minecraft:skeleton_skull"
+      },
+      {
+        "item": "minecraft:bone"
+      },
+      {
+        "item": "minecraft:bow"
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:mercenary",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/mercenary/mercenary_sword",
+				"hammer": "textures/entity/mobs/mercenary/mercenary_hammer",
+				"h1": "textures/entity/mobs/mercenary/heads/axel_head",
+				"h2": "textures/entity/mobs/mercenary/heads/facunau_head",
+				"h3": "textures/entity/mobs/mercenary/heads/gabriel_head",
+				"h4": "textures/entity/mobs/mercenary/heads/gentrix_head",
+				"h5": "textures/entity/mobs/mercenary/heads/link_head",
+				"h6": "textures/entity/mobs/mercenary/heads/mercenary_head",
+				"h7": "textures/entity/mobs/mercenary/heads/naru_head",
+				"h8": "textures/entity/mobs/mercenary/heads/peje_head",
+				"h9": "textures/entity/mobs/mercenary/heads/peter_head",
+				"h10": "textures/entity/mobs/mercenary/heads/salmule_head",
+				"h11": "textures/entity/mobs/mercenary/heads/sebas_head",
+				"h12": "textures/entity/mobs/mercenary/heads/zheka_head",
+				"h13": "textures/entity/mobs/mercenary/heads/auxiliary_head",
+				"h14": "textures/entity/mobs/mercenary/heads/blox_head"
+			},
+			"geometry": {
+				"default": "geometry.mercenary",
+				"hammer": "geometry.mercenary_two",
+				"head": "geometry.head"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"attacks",
+					"look_at_target",
+					"use_item"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.mercenary.controller",
+				"use_item": "controller.animation.humanoid.use_item_progress",
+				"attacks": "controller.animation.mercenary.attack",
+				"look_at_target": "controller.animation.mercenary.look_at_target",
+				"look_at_target_default": "animation.mercenary.look_at_target.default",
+				"look_at_target_gliding": "animation.mercenary.look_at_target.gliding",
+				"look_at_target_swimming": "animation.mercenary.look_at_target.swimming",
+				"static": "animation.mercenary.static",
+				"guard": "animation.mercenary.guard",
+				"sit": "animation.mercenary.sit",
+				"sit_two": "animation.mercenary.sit_two",
+				"move": "animation.mercenary.move",
+				"use_item_food": "animation.mercenary.use_item",
+				"item": "animation.mercenary.item",
+				"move_arm_right": "animation.mercenary.move_arm_right",
+				"move_arm_left": "animation.mercenary.move_arm_left",
+				"bow": "animation.mercenary.bow",
+				"ride": "animation.mercenary.ride",
+				"attack_one": "animation.sentinel_soldier.attack",
+				"attack_two": "animation.mercenary.attack",
+				"shield": "animation.mercenary.shield",
+				"use_item_progress": "animation.humanoid.use_item_progress"
+			},
+			"spawn_egg": {
+				"texture": "mercenary_spawn"
+			},
+			"render_controllers": [
+				"controller.render.mercenary.sword",
+				"controller.render.mercenary.hammer",
+				"controller.render.mercenary.head"
+			],
+			"enable_attachables": true
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:abomination_duck_egg",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 16,
+			"minecraft:display_name": {
+				"value": "item.dk:abomination_duck_egg.name"
+			},
+			"minecraft:icon": "abomination_duck_egg",
+			"minecraft:projectile": {
+				"projectile_entity": "dk:abomination_duck_egg",
+				"minimum_critical_power": 1
+			},
+			"minecraft:throwable": {
+				"do_swing_animation": true,
+				"max_draw_duration": 0,
+				"min_draw_duration": 0,
+				"scale_power_by_draw_duration": false,
+				"launch_power_scale": 1.5,
+				"max_launch_power": 3
+			}
+		}
+	}
+}

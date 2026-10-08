@@ -1,0 +1,126 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:blood_clot",
+			"runtime_identifier": "snowball",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"dk:timer_no_hit": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1,
+					"time_down_event": {
+						"event": "dk:timer"
+					}
+				}
+			},
+			"dk:timer": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.01,
+					"time_down_event": {
+						"event": "dk:projectile_despawn"
+					}
+				}
+			},
+			"dk:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"blood_clot",
+					"arrow",
+					"dk",
+					"plague",
+					"abomination_duck",
+					"projectile"
+				]
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:collision_box": {
+				"width": 0.25,
+				"height": 0.25
+			},
+			"minecraft:projectile": {
+				"on_hit": {
+					"definition_event": {
+						"affect_projectile": true,
+						"event_trigger": {
+							"event": "dk:timer",
+							"target": "self"
+						}
+					},
+					"impact_damage": {
+						"damage": 6,
+						"knockback": true,
+						"semi_random_diff_damage": false,
+						"destroy_on_hit": false
+					},
+					"stick_in_ground": {
+						"shake_time": 0
+					}
+				},
+				"liquid_inertia": 0.99,
+				"hit_sound": "hurt",
+				"hit_ground_sound": "hurt",
+				"power": 2,
+				"destroy_on_hurt": true,
+				"gravity": 0.15,
+				"uncertainty_base": 1,
+				"uncertainty_multiplier": 0,
+				"stop_on_hurt": false,
+				"anchor": 1,
+				"offset": [
+					0,
+					0.1,
+					0
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"dk:timer_no_hit"
+					]
+				}
+			},
+			"dk:timer": {
+				"queue_command": {
+					"command": [
+						"effect @e[type=!dk:abomination_duck,r=6] blindness 10 0",
+						"effect @e[type=!dk:abomination_duck,r=6] slowness 10 5",
+						"particle dk:blood_hit_drip_particle ~~~"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dk:timer"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:timer_no_hit"
+					]
+				}
+			},
+			"dk:projectile_despawn": {
+				"add": {
+					"component_groups": [
+						"dk:despawn"
+					]
+				}
+			}
+		}
+	}
+}

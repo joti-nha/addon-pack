@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:elemental_knight",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/elemental_knight"
+			},
+			"geometry": {
+				"default": "geometry.elemental_knight"
+			},
+			"spawn_egg": {
+				"texture": "elemental_knight_spawn"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"attacks",
+					"controller"
+				],
+				"pre_animation": [
+					"variable.attack = Math.sin(variable.attack_time * 30.0);",
+					"variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+				]
+			},
+			"animations": {
+				"look_at_target": "controller.animation.elemental_knight.look_at_target",
+				"controller": "controller.animation.elemental_knight.controller",
+				"attacks": "controller.animation.elemental_knight.attack",
+				"look_at_target_default": "animation.elemental_knight.look_at_target.default",
+				"look_at_target_gliding": "animation.elemental_knight.look_at_target.gliding",
+				"look_at_target_swimming": "animation.elemental_knight.look_at_target.swimming",
+				"guard": "animation.elemental_knight.guard",
+				"agony": "animation.elemental_knight.agony",
+				"static": "animation.elemental_knight.static",
+				"move": "animation.elemental_knight.move",
+				"move_arms": "animation.elemental_knight.move_arms",
+				"ride": "animation.elemental_knight.ride",
+				"attack_one": "animation.elemental_knight.attack_one",
+				"attack_two": "animation.elemental_knight.attack_two",
+				"rings_of_light": "animation.elemental_knight.rings_of_light",
+				"defense": "animation.elemental_knight.defense",
+				"defense_attack": "animation.elemental_knight.defense_attack",
+				"storm": "animation.elemental_knight.storm",
+				"attack_storm": "animation.elemental_knight.attack_storm",
+				"prepare_storm": "animation.elemental_knight.prepare_storm"
+			},
+			"render_controllers": [
+				"controller.render.elemental_knight"
+			]
+		}
+	}
+}

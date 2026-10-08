@@ -1,0 +1,43 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:ore_x_fossiliferous_soul_soil",
+      "places_feature": "ntk:nce/ore_x_fossiliferous_soul_soil_x_ore"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "soulsand_valley"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 100.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ 0, 128 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

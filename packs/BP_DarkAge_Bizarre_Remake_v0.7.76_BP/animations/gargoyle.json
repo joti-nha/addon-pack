@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.gargoyle.charge_fireball": {
+			"animation_length": 10,
+			"loop": true,
+			"timeline": {
+				"0": [
+					"/tag @s add dk_charging_fireball"
+				]
+			}
+		},
+		"animation.gargoyle.die": {
+			"animation_length": 4.5,
+			"loop": false,
+			"timeline": {
+				"4.4": [
+					"/particle minecraft:death_explosion_emitter ~~~",
+					"/event entity @s despawn"
+				]
+			}
+		}
+	}
+}

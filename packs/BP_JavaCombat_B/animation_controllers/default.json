@@ -1,0 +1,55 @@
+{
+   "format_version": "1.10.0",
+   "animation_controllers": {
+      "controller.animation.attacking": {
+         "initial_state": "default",
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "attacking": "variable.attack_time"
+                  }
+               ]
+            },
+            "attacking": {
+               "on_entry": ["/scriptevent jc:attacking"],
+               "transitions": [
+                  {
+                     "default": "!variable.attack_time"
+                  }
+               ]
+            }
+         }
+      },
+      "controller.animation.blocking": {
+         "states": {
+            "default": {
+               "transitions": [
+                  {
+                     "blocking": "query.blocking && (query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:shield') || query.is_item_name_any('slot.weapon.offhand',0,'minecraft:shield'))"
+                  },
+                  {
+                     "not_blocking": "!query.blocking"
+                  }
+               ]
+            },
+            "blocking": {
+               "transitions": [
+                  {
+                     "default": "(1.0)"
+                  }
+               ],
+               "on_entry": ["/tag @s[tag=!jc:blocking] add jc:blocking"]
+            },
+            "not_blocking": {
+               "transitions": [
+                  {
+                     "default": "(1.0)"
+                  }
+               ],
+               "on_entry": ["/tag @s[tag=jc:blocking] remove jc:blocking"]
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unbound_arm_projectile_two",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unbound_elemental"
+			},
+			"geometry": {
+				"default": "geometry.unbound_arm_projectile"
+			},
+			"scripts": {
+				"animate": [
+					"static",
+					"setup"
+				],
+				"scale": "1.0",
+				"pre_animation": [
+					"variable.shake = query.shake_time - query.frame_alpha;",
+					"variable.shake_power = variable.shake > 0.0 ? -Math.sin(variable.shake * 200.0) * variable.shake : 0.0;"
+				]
+			},
+			"animations": {
+				"static": "animation.unbound_arm.projectile",
+				"setup": "animation.unbound_arm_projectile.throw"
+			},
+			"render_controllers": [
+				"controller.render.sun_arrow"
+			]
+		}
+	}
+}

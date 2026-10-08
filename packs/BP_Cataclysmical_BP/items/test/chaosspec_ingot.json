@@ -1,0 +1,20 @@
+{
+	"format_version": "1.21.110",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:chaosspec_ingot"
+		},
+		"components": {
+			"minecraft:block_placer": {
+				"block": "mnra_cata:chaosspec_ingot",
+				"use_on": [
+					"mnra_cata:chaosspec_ingot"
+				],
+				"replace_block_item": true
+			},
+			"minecraft:hover_text_color": {
+				"value": "red"
+			}
+		}
+	}
+}

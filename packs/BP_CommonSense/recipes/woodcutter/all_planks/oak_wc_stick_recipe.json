@@ -1,0 +1,20 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:oak_wc_stick_recipe"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"tag": "minecraft:planks"
+			}
+		],
+		"result": {
+			"item": "stick",
+			"count": 2
+		}
+	}
+}

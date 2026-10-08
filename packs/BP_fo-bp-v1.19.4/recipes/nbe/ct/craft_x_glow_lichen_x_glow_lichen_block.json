@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_glow_lichen_x_glow_lichen_block"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "glow_lichen",
+    "ingredients": [
+      {
+        "item": "ntk:glow_lichen_block"
+      }
+    ],
+    "result": {
+      "item": "minecraft:glow_lichen",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:glow_lichen_block"
+      }
+    ]
+  }
+}

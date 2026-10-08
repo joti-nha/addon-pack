@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_hummingbird",
+    "heightmap": "ntk_hummingbird_height",
+    "metalness_emissive_roughness": "ntk_hummingbird_mer"
+  }
+}

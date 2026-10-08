@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:wetland/mutated_tree_one_proxy"
+		},
+		"places_feature": "dk:wetland/mutated_tree_one",
+		"iterations": 1,
+		"x": -16,
+		"z": -16,
+		"y": 0
+	}
+}

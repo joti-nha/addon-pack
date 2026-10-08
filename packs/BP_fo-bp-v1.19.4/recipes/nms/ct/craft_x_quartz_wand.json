@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_quartz_wand"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "quartz_wand",
+    "assume_symmetry": false,
+    "pattern": [
+      " Q ",
+      "LQL",
+      " S "
+    ],
+    "key": {
+      "Q": {
+        "item": "minecraft:quartz"
+      },
+      "L": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ntk:quartz_wand",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:quartz"
+      },
+      {
+        "item": "minecraft:lapis_lazuli"
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}

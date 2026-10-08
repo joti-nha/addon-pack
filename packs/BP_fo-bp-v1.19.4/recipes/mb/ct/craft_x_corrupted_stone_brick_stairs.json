@@ -1,0 +1,29 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_corrupted_stone_brick_stairs"
+		},
+		"priority": 1,
+		"tags": [ "crafting_table" ],
+		"pattern": [
+			"C  ",
+			"CC ",
+			"CCC"
+		],
+		"key": {
+			"C": {
+				"item": "ntk:corrupted_stone_bricks"
+			}
+		},
+		"result": {
+			"item": "ntk:corrupted_stone_brick_stairs",
+			"count": 4
+		},
+    "unlock": [
+      {
+        "item": "ntk:corrupted_stone_bricks"
+      }
+    ]
+	}
+}

@@ -1,0 +1,105 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.unbound_proyectil",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 8,
+				"visible_bounds_height": 9,
+				"visible_bounds_offset": [
+					0,
+					3.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [
+						0,
+						6,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-6,
+								0,
+								-6
+							],
+							"size": [
+								12,
+								12,
+								12
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										14,
+										46
+									],
+									"uv_size": [
+										6,
+										6
+									]
+								},
+								"east": {
+									"uv": [
+										8,
+										46
+									],
+									"uv_size": [
+										6,
+										6
+									]
+								},
+								"south": {
+									"uv": [
+										26,
+										46
+									],
+									"uv_size": [
+										6,
+										6
+									]
+								},
+								"west": {
+									"uv": [
+										20,
+										46
+									],
+									"uv_size": [
+										6,
+										6
+									]
+								},
+								"up": {
+									"uv": [
+										14,
+										40
+									],
+									"uv_size": [
+										6,
+										6
+									]
+								},
+								"down": {
+									"uv": [
+										20,
+										46
+									],
+									"uv_size": [
+										6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

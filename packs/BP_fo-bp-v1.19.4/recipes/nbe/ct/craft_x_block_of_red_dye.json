@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_red_dye"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "block_of_red_dye",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:red_dye"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_red_dye",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:red_dye"
+      }
+    ]
+  }
+}

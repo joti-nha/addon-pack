@@ -1,0 +1,37 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "ntk:block_x_pile_of_bones_x_underground",
+      "places_feature": "ntk:nbe/block_x_pile_of_bones_x_singleblock"
+    },
+    "conditions": {
+      "placement_pass": "underground_pass",
+      "minecraft:biome_filter": [
+        {
+          "all_of": [
+            {
+              "any_of": [
+                {
+                  "test": "has_biome_tag",
+                  "operator": "==",
+                  "value": "overworld"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "distribution": {
+      "iterations": 2.0,
+      "scatter_chance": 100.0,
+      "x": 0,
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -64, 64 ]
+      },
+      "z": 0
+    }
+  }
+}

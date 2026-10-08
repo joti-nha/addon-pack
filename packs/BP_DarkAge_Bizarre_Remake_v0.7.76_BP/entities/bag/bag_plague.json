@@ -1,0 +1,77 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:bag_plague",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"dk:timer": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.01,
+					"time_down_event": {
+						"event": "dk:bag_despawn"
+					}
+				}
+			},
+			"dk:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:fire_immune": true,
+			"minecraft:interact": {
+				"interactions": {
+					"on_interact": {
+						"event": "dk:bag_timer"
+					},
+					"use_item": false,
+					"play_sounds": "armor",
+					"interact_text": "action.interact.bag_open"
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"dk:bag_timer": {
+				"queue_command": {
+					"command": [
+						"loot spawn ~~1~ loot \"entities/plague\"",
+						"playsound armor.equip_leather @a[r=10] ~~~ 1 1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"dk:timer"
+					]
+				}
+			},
+			"dk:bag_despawn": {
+				"add": {
+					"component_groups": [
+						"dk:despawn"
+					]
+				}
+			}
+		}
+	}
+}

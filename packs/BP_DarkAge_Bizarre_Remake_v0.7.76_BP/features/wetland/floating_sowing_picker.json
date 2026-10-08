@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:wetland/floating_sowing_picker"
+		},
+		"places_feature": "dk:structures/floating_sowing_weighted_random",
+		"iterations": "t.biome_idx == 0 && (math.abs(v.originx) > 200 || math.abs(v.originz) > 200)",
+		"x": 0,
+		"z": 0,
+		"y": 0
+	}
+}

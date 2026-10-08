@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_stone_bricks_x_slabs"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_stone_bricks",
+    "assume_symmetry": true,
+    "pattern": [
+      "D ",
+      " D"
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:mossy_stone_brick_slab"
+      }
+    },
+    "result": {
+      "item": "minecraft:mossy_stone_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:mossy_stone_brick_slab"
+      }
+    ]
+  }
+}

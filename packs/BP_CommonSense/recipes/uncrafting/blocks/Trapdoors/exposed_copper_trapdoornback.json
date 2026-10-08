@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:exposed_copper_trapdoornback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:exposed_copper_trapdoor"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:copper_ingot",
+				"count": 3
+			}
+		]
+	}
+}

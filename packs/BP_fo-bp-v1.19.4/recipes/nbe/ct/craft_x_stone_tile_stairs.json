@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_stone_tile_stairs"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "stone_tile_stairs",
+    "assume_symmetry": false,
+    "pattern": [
+      "A  ",
+      "AA ",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:stone_tiles"
+      }
+    },
+    "result": {
+      "item": "ntk:stone_tile_stairs",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:stone_tiles"
+      }
+    ]
+  }
+}

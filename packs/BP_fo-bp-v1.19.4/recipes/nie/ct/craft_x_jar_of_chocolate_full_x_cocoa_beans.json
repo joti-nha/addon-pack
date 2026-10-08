@@ -1,0 +1,42 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_jar_of_chocolate_full_x_cocoa_beans"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "jar_of_chocolate_full",
+    "assume_symmetry": true,
+    "pattern": [
+      "CS",
+      "J"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:cocoa_beans"
+      },
+      "S": {
+        "item": "minecraft:sugar"
+      },
+      "J": {
+        "item": "ntk:jar_of_chocolate_half"
+      }
+    },
+    "result": {
+      "item": "ntk:jar_of_chocolate_full",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cocoa_beans"
+      },
+      {
+        "item": "minecraft:sugar"
+      },
+      {
+        "item": "ntk:jar_of_chocolate_half"
+      }
+    ]
+  }
+}

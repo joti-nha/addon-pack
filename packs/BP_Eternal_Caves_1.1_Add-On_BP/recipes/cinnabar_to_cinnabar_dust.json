@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shapeless":{"description":{"identifier":"panascais_caves:cinnabar_to_cinnabar_dust"},"ingredients":["minecraft:cinnabar"],"tags":["crafting_table"],"result":{"item":"panascais_caves:cinnabar_dust","count":4}}}

@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/788b72b3998319bc7677eea6f4dd65bc"},"places_block":"minecraft:big_dripleaf","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]},"randomize_rotation":true}}

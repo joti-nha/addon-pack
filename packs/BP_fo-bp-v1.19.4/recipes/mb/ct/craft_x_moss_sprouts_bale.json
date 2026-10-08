@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_moss_sprouts_bale"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "SSS",
+      "SSS",
+      "SSS"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:tall_moss_sprouts"
+      }
+    },
+    "result": {
+      "item": "ntk:moss_sprouts_bale",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:tall_moss_sprouts"
+      }
+    ]
+  }
+}

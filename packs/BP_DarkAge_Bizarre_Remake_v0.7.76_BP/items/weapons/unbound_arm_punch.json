@@ -1,0 +1,30 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:unbound_arm_punch"
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:should_despawn": true,
+			"minecraft:hand_equipped": true,
+			"minecraft:display_name": {
+				"value": "item.dk:unbound_arm_punch.name"
+			},
+			"minecraft:damage": 20,
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:icon": "unbound_arm_punch",
+			"minecraft:use_modifiers": {
+				"use_duration": 1,
+				"movement_modifier": 0.35
+			},
+			"minecraft:custom_components": [
+				"dk:on_use"
+			],
+			"minecraft:cooldown": {
+				"category": "unbound_arm_punch",
+				"duration": 8
+			}
+		}
+	}
+}

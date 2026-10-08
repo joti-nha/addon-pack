@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.outcast.despawn": {
+			"animation_length": 36,
+			"loop": true,
+			"timeline": {
+				"34.5": [
+					"/event entity @s dk:outcast_event_mode_no_light"
+				],
+				"35.8": [
+					"/fill ~8 ~5 ~8 ~-8 ~-4 ~-8 air [] replace light_block"
+				],
+				"35.9": [
+					"/event entity @s dk:outcast_event_mode_despawn"
+				],
+				"36.0": [
+					"/fill ~8 ~5 ~8 ~-8 ~-4 ~-8 air [] replace light_block"
+				]
+			}
+		},
+		"animation.all.despawn": {
+			"animation_length": 36,
+			"loop": true,
+			"timeline": {
+				"35.8": [
+					"/fill ~8 ~5 ~8 ~-8 ~-4 ~-8 air [] replace light_block"
+				],
+				"35.9": [
+					"/event entity @s dk:all_event_mode_despawn"
+				],
+				"36.0": [
+					"/fill ~8 ~5 ~8 ~-8 ~-4 ~-8 air [] replace light_block"
+				]
+			}
+		}
+	}
+}

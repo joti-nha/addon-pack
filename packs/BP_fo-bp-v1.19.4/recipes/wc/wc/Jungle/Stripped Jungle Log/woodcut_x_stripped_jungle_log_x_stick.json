@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_stripped_jungle_log_x_stick"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "stick",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:stripped_jungle_log"
+      }
+    },
+    "result": {
+      "item": "minecraft:stick",
+      "count": 8
+    },
+    "unlock": [
+      {
+        "item": "minecraft:stripped_jungle_log"
+      }
+    ]
+  }
+}

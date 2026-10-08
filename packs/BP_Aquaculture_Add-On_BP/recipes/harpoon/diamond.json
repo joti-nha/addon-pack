@@ -1,0 +1,25 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "tm_aqc:diamond_harpoon"
+    },
+    "tags": [
+      "tm_aqc_table"
+    ],
+    "pattern": [
+      " A ",
+      "ABA",
+      " C "
+    ],
+    "key": {
+      "A": "minecraft:diamond",
+      "B": "minecraft:lead",
+      "C": "minecraft:stick"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "result": "tm_aqc:diamond_harpoon"
+  }
+}

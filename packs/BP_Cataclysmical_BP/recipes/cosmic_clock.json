@@ -1,0 +1,34 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:cosmic_clock"
+		},
+		"pattern": [
+			"121",
+			"232",
+			"121"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:starfall"
+			},
+			"2": {
+				"item": "mnra_cata:astral_alloy"
+			},
+			"3": {
+				"item": "mnra_cata:twilight_crystal"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:cosmic_clock",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

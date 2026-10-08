@@ -1,0 +1,12 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/tree_weight_x_overgrown_jungle_tree"
+    },
+    "features": [
+      [ "ntk:mb/overgrown_jungle/tree_x_overgrown_jungle_x_cap_tree_01", 100 ],
+      [ "ntk:mb/overgrown_jungle/tree_x_overgrown_jungle_x_rooted_grove_tree_01", 100 ]
+    ]
+  }
+}

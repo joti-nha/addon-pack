@@ -1,0 +1,218 @@
+{
+	"format_version": "1.26.40",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "ntk:projectile_fire_spike_magic_missile",
+			"runtime_identifier": "minecraft:snowball",
+      "spawn_category": "misc",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+      "component:projectile_despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			}
+    },
+		"components": {
+      "minecraft:fire_immune": {},
+      "minecraft:scale": {
+        "value": 0.8
+      },
+      "minecraft:type_family": {
+        "family": [
+          "fire_spike_magic_missile",
+          "magic_missile",
+          "projectile",
+          "inanimate",
+          // Effects:
+          "flame"
+        ]
+      },
+      
+      "minecraft:collision_box": {
+        "width": 0.4,
+        "height": 0.4
+      },
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "event": "event:on_environment_sensor_in_water",
+            "target": "self",
+            "filters": {
+              "all_of": [
+                {
+                  "any_of": [
+                    {
+                      "test": "in_water",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": true
+                    },
+                    {
+                      "test": "is_underwater",
+                      "subject": "self",
+                      "operator": "==",
+                      "value": true
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
+      "minecraft:projectile": {
+        "catch_fire": false,
+				"crit_particle_on_hurt": false,
+				"destroy_on_hurt": false,
+				"fire_affected_by_griefing": true,
+				"hit_nearest_passenger": false,
+				"homing": false,
+				"is_dangerous": false,
+				"knockback": false,
+				"lightning": false,
+				"multiple_targets": false,
+				"reflect_on_hurt": false,
+				"semi_random_diff_damage": false,
+				"shoot_target": true,
+        "should_bounce": "no",
+        "splash_potion": false,
+        "stop_on_hurt": false,
+				"anchor": 1.0,
+				"angle_offset": 0.0,
+				"power": 1.8,
+				"gravity": 0.001,
+				"inertia": 0.99,
+        "liquid_inertia": 0.0,
+        "on_fire_time": 3.0,
+        "uncertainty_base": 0.0,
+        "uncertainty_multiplier": 0.0,
+        "potion_effect": -1,
+				"offset": [ 0.0, 0.0, 0.0 ],
+        "shoot_sound": "mob.blaze.shoot",
+				"hit_sound": "bullet.hit",
+				"hit_ground_sound": "bullet.hit",
+				"ignored_entities": [],
+				"filters": {
+					"all_of": [
+						{
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "==",
+									"value": "blaze"
+								},
+								{
+									"test": "has_mob_effect",
+									"subject": "other",
+									"operator": "==",
+									"value": "fire_resistance"
+								}
+							]
+						}
+					]
+				},
+        "on_hit": {
+					"impact_damage": {
+						"damage": [ 6, 6 ],
+						"max_critical_damage": 0.0,
+						"min_critical_damage": 0.0,
+						"power_multiplier": 0.0,
+						"catch_fire": false,
+						"channeling": false,
+						"destroy_on_hit": false,
+						"destroy_on_hit_requires_damage": false,
+						"knockback": false,
+            "semi_random_diff_damage": false,
+            "set_last_hurt_requires_damage": false,
+            "should_bounce": false
+					},
+					"catch_fire": {
+            "fire_affected_by_griefing": false
+          },
+					"definition_event": {
+						"affect_projectile": true,
+						"affect_shooter": false,
+						"affect_splash_area": false,
+						"affect_target": false,
+						"event_trigger": {
+							"event": "event:on_hit",
+							"target": "self",
+							"filters": {}
+						}
+					},
+          "stick_in_ground": {
+						"shake_time": 0.01
+					}
+				}
+			},
+      "minecraft:timer": {
+        "looping": false,
+        "randomInterval": true,
+        "time": [ 2.2, 2.2 ],
+        "time_down_event": {
+          "event": "event:on_timer_down",
+          "target": "self"
+        }
+      },
+      
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "use_motion_prediction_hints": true,
+          "max_dropped_ticks": 7,
+          "max_optimized_distance": 80.0
+        }
+      }
+		},
+		"events": {
+			"event:on_environment_sensor_in_water": {
+        "queue_command": {
+          "command": [
+            "playsound random.fizz @a[r=12] ~ ~ ~ 1.0 2.0 0.0"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:projectile_despawn"
+          ]
+        }
+			},
+			"event:on_hit": {
+        "queue_command": {
+          "command": [
+            "playsound random.fizz @a[r=12] ~ ~ ~ 1.0 2.0 0.0",
+            "particle ntk:fire_spike_magic_impact_particle ~ ~ ~",
+            "damage @e[r=1] 2 projectile entity @s"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:projectile_despawn"
+          ]
+        }
+      },
+			"event:on_timer_down": {
+        "queue_command": {
+          "command": [
+            "playsound random.fizz @a[r=12] ~ ~ ~ 1.0 2.0 0.0",
+            "particle ntk:fire_spike_magic_impact_particle ~ ~ ~",
+            "damage @e[r=1] 2 projectile entity @s"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "component:projectile_despawn"
+          ]
+        }
+			}
+		}
+	}
+}

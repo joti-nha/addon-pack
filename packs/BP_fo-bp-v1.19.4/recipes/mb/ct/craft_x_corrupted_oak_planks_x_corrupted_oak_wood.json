@@ -1,0 +1,27 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_oak_planks_x_corrupted_oak_wood"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "W"
+    ],
+    "key": {
+      "W": {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_oak_planks",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "ntk:corrupted_oak_wood"
+      }
+    ]
+  }
+}

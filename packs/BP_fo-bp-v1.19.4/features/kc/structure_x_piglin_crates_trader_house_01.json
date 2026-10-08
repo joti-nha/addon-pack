@@ -1,0 +1,41 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:structure_template_feature": {
+    "description": {
+      "identifier": "ntk:kc/structure_x_piglin_crates_trader_house_01"
+    },
+    "structure_name": "mystructure:kc/piglin_crates_trader_house_01",
+    "adjustment_radius": 8,
+    "facing_direction": "random",
+    "constraints": {
+      "grounded": {},
+      "unburied": {},
+      "block_intersection": {
+        "block_allowlist": [
+          { "tags": "query.any_tag('ntk:custom_plant')" },
+          { "tags": "query.any_tag('ntk:pile_of_bones')" },
+          "minecraft:air",
+          "minecraft:basalt",
+          "minecraft:brown_mushroom",
+          "minecraft:crimson_fungus",
+          "minecraft:crimson_roots",
+          "minecraft:crimson_stem",
+          "minecraft:fire",
+          "minecraft:flowing_lava",
+          "minecraft:glow_lichen",
+          "minecraft:nether_sprouts",
+          "minecraft:nether_wart_block",
+          "minecraft:red_mushroom",
+          "minecraft:shroomlight",
+          "minecraft:soul_fire",
+          "minecraft:twisting_vines",
+          "minecraft:warped_fungus",
+          "minecraft:warped_roots",
+          "minecraft:warped_stem",
+          "minecraft:warped_wart_block",
+          "minecraft:weeping_vines"
+        ]
+      }
+    }
+  }
+}

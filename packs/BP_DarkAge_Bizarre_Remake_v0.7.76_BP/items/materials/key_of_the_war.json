@@ -1,0 +1,18 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:key_of_the_war",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:display_name": {
+				"value": "item.dk:key_of_the_war.name"
+			},
+			"minecraft:icon": "key_of_the_war"
+		}
+	}
+}

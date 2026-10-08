@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_stripped_mosshroom_stem_x_stripped_hyphae"
+    },
+    "priority": 0,
+    "tags": [ "wood_cutter" ],
+    "group": "stripped_mosshroom_hyphae",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:stripped_mosshroom_stem"
+      }
+    },
+    "result": {
+      "item": "ntk:stripped_mosshroom_hyphae",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:stripped_mosshroom_stem"
+      }
+    ]
+  }
+}

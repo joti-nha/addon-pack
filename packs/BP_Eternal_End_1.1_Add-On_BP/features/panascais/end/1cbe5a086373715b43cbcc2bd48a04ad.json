@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_end:panascais/end/1cbe5a086373715b43cbcc2bd48a04ad"},"places_block":"panascais_end:end_stone_iron_ore","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:end_stone"]}}

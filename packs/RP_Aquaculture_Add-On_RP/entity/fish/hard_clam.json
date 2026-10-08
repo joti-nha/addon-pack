@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tm_aqc:hard_clam",
+      "materials": {
+        "default": "entity_alphatest",
+        "outline": "tm_aqc_outline"
+      },
+      "textures": {
+        "base": "textures/tm/aqc/entity/fish/bivalve/hard_clam",
+        "white": "textures/tm/aqc/entity/fish/bivalve/white_pearl",
+        "gold": "textures/tm/aqc/entity/fish/bivalve/gold_pearl",
+        "black": "textures/tm/aqc/entity/fish/bivalve/black_pearl"
+      },
+      "geometry": {
+        "base": "geometry.tm_aqc.fish_bivalve",
+        "pearl": "geometry.tm_aqc.pearl"
+      },
+      "particle_effects": {
+        "bubble": "tm_aqc:bubble_particle"
+      },
+      "scripts": {
+        "animate": [
+          "controller"
+        ]
+      },
+      "animations": {
+        "open": "animation.tm_aqc.clam.open",
+        "closed": "animation.tm_aqc.clam.closed",
+        "ready": "animation.tm_aqc.clam.ready",
+        "controller": "controller.animation.tm_aqc.clam"
+      },
+      "render_controllers": [
+        "controller.render.tm_aqc.clam",
+        { "controller.render.tm_aqc.clam.pearl": "q.property('tm_aqc:pearl') > 0" }
+      ]
+    }
+  }
+}

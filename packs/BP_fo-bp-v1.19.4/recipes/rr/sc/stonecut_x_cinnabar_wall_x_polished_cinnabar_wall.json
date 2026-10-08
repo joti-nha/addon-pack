@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_cinnabar_wall_x_polished_cinnabar_wall"
+    },
+    "priority": 4,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:cinnabar_wall"
+      }
+    ],
+    "result": {
+      "item": "minecraft:polished_cinnabar_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:cinnabar_wall"
+      }
+    ]
+  }
+}

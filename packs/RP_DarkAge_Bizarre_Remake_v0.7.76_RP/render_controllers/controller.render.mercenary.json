@@ -1,0 +1,86 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.mercenary.sword": {
+			"part_visibility": [
+				{
+					"*": "q.property('dk:weapons') == 'sword'"
+				},
+				{
+					"sword": "q.property('dk:weapons') == 'sword' && (q.property('dk:states') == 'melee' && q.property('dk:target') == 'target')"
+				},
+				{
+					"sword_two": "q.property('dk:weapons') == 'sword' && (q.property('dk:states') == 'bow' || q.property('dk:states') == 'potion' || q.property('dk:target') == 'no_target')"
+				},
+				{
+					"bow": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bow')"
+				}
+			],
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.mercenary.hammer": {
+			"part_visibility": [
+				{
+					"*": "q.property('dk:weapons') == 'hammer'"
+				},
+				{
+					"warhammer": "q.property('dk:weapons') == 'hammer' && (q.property('dk:states') == 'melee' && q.property('dk:target') == 'target')"
+				},
+				{
+					"warhammer_two": "q.property('dk:weapons') == 'hammer' && (q.property('dk:states') == 'bow' || q.property('dk:states') == 'potion' || q.property('dk:target') == 'no_target')"
+				},
+				{
+					"bow": "!query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:bow')"
+				}
+			],
+			"geometry": "geometry.hammer",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.hammer"
+			]
+		},
+		"controller.render.mercenary.head": {
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.textures[query.variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.textures": [
+						"Texture.h1",
+						"Texture.h2",
+						"Texture.h3",
+						"Texture.h4",
+						"Texture.h5",
+						"Texture.h6",
+						"Texture.h7",
+						"Texture.h8",
+						"Texture.h9",
+						"Texture.h10",
+						"Texture.h11",
+						"Texture.h12",
+						"Texture.h13",
+						"Texture.h14"
+					]
+				}
+			},
+			"geometry": "geometry.head"
+		}
+	}
+}

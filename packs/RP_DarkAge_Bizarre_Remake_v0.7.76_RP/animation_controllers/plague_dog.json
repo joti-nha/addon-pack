@@ -1,0 +1,138 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.plague_dog.controller": {
+			"initial_state": "spawn",
+			"states": {
+				"spawn": {
+					"animations": [
+						{
+							"spawn": "q.property('dk:plague_dog')=='spawn'"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:plague_dog')=='static'||q.property('dk:plague_dog')=='static_two'"
+						},
+						{
+							"eating": "q.property('dk:plague_dog')=='eating'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"default": {
+					"animations": [
+						"static"
+					],
+					"transitions": [
+						{
+							"static_two": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static_two'"
+						},
+						{
+							"run": "query.ground_speed>0.4"
+						},
+						{
+							"attack": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"eating": "q.property('dk:plague_dog')=='eating'"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"static_two": {
+					"animations": [
+						"static_two"
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static'"
+						},
+						{
+							"run": "query.ground_speed>0.4"
+						},
+						{
+							"attack": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"eating": "q.property('dk:plague_dog')=='eating'"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"run": {
+					"animations": [
+						"move"
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static'"
+						},
+						{
+							"static_two": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static_two'"
+						},
+						{
+							"attack": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"eating": "q.property('dk:plague_dog')=='eating'"
+						}
+					],
+					"blend_transition": 0.8
+				},
+				"attack": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed<0.3&&!query.is_delayed_attacking&&q.property('dk:plague_dog')=='static'"
+						},
+						{
+							"static_two": "query.ground_speed<0.3&&!query.is_delayed_attacking&&q.property('dk:plague_dog')=='static_two'"
+						},
+						{
+							"run": "query.ground_speed>0.4&&!query.is_delayed_attacking"
+						},
+						{
+							"eating": "q.property('dk:plague_dog')=='eating'"
+						}
+					],
+					"blend_transition": 0.9
+				},
+				"eating": {
+					"animations": [
+						"eating",
+						{
+							"scale_one": "q.property('dk:plague_dog_scales')=='scales_one'"
+						},
+						{
+							"scale_two": "q.property('dk:plague_dog_scales')=='scales_two'"
+						}
+					],
+					"particle_effects": [
+						{
+							"effect": "blood_hit",
+							"locator": "blood"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static'"
+						},
+						{
+							"static_two": "query.ground_speed<0.3&&q.property('dk:plague_dog')=='static_two'"
+						},
+						{
+							"run": "query.ground_speed>0.4"
+						},
+						{
+							"attack": "query.mark_variant==1&&query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.8
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_birch_planks_x_ladder"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "ladder",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:birch_planks"
+      }
+    },
+    "result": {
+      "item": "minecraft:ladder",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:birch_planks"
+      }
+    ]
+  }
+}

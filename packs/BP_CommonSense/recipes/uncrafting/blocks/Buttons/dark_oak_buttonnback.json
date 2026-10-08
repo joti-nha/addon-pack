@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:dark_oak_buttonnback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:dark_oak_button"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:dark_oak_planks",
+				"count": 1
+			}
+		]
+	}
+}

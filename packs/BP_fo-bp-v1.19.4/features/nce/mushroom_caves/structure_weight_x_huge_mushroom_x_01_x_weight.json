@@ -1,0 +1,28 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:nce/mushroom_caves/structure_weight_x_huge_mushroom_x_01_x_weight"
+    },
+    "features": [
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_01", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_02", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_03", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_04", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_05", 20 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_06", 50 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_07", 90 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_brown_mushroom_08", 100 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_01", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_02", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_03", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_04", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_05", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_06", 10 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_07", 20 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_08", 50 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_09", 80 ],
+      [ "ntk:nce/mushroom_caves/structure_x_huge_red_mushroom_10", 100 ]
+    ]
+  }
+}

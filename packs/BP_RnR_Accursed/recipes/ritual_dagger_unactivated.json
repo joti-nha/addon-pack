@@ -1,0 +1,29 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "rnr:ritual_dagger_unactivated"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " I ",
+      " S ",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:amethyst_shard"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "rnr:ritual_dagger_unactivated",
+      "count": 1
+    }
+  }
+}

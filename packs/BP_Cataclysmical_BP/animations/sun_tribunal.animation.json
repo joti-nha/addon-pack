@@ -1,0 +1,527 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sun_tribunal.normal_attack": {
+			"animation_length": 3.5,
+			"timeline": {
+				"1.25": [
+					"/summon mnra_cata:sun_tribunal_normal_attack ^^1^ facing ^^^90"
+				],
+				"1.6": [
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph^^1^ facing ^^^90 start1"
+				]
+			},
+			"loop": false
+		},
+		"animation.sun_tribunal.double_dash_attack": {
+			"animation_length": 5.5,
+			"timeline": {
+				"4": [
+					"@s is_attacking"
+				],
+				"0.13": [
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph^^1^ facing ^^^90 start1"
+				],
+				"1.95": [
+					"@s double_dash_attack_move"
+				],
+				"4.25": [
+					"/summon mnra_cata:sun_tribunal_double_dash_attack  ^^1^ facing ^^^90",
+					"/particle mnra_cata:sun_tribunal_air_attack ~ ~ ~"
+				]
+			},
+			"loop": false
+		},
+		"animation.sun_tribunal.normal_attack_projectile": {
+			"animation_length": 2.5,
+			"timeline": {
+				"0.33": [
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph^^1^ facing ^^^90 start2",
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph^^1^ facing ^-90^^90 start2",
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph^^1^ facing ^90^^90 start2"
+				]
+			},
+			"loop": false
+		},
+		"animation.sun_tribunal.summon_attack": {
+			"animation_length": 4.5,
+			"loop": false,
+			"timeline": {
+				"0.60": [
+					"/scriptevent mnra_cata:sun_tribunal_summon_attack"
+				]
+			}
+		},
+		"animation.sun_tribunal.dash_attack": {
+			"animation_length": 5.5,
+			"loop": false,
+			"timeline": {
+				"0.25": [
+					"@s double_dash_attack_move"
+				],
+				"3.25": [
+					"@s is_attacking"
+				],
+				"3.95": [
+					"/summon mnra_cata:sun_tribunal_dash_attack ^^1^ facing ^^^90"
+				]
+			}
+		},
+		"animation.sun_tribunal.teleport": {
+			"animation_length": 1.25,
+			"loop": false,
+			"timeline": {
+				"0.6": [
+					"/scriptevent mnra_cata:sun_tribunal_teleport"
+				]
+			}
+		},
+		"animation.sun_tribunal.desperation_attack": {
+			"animation_length": 14,
+			"loop": false,
+			"timeline": {
+				"1.2": [
+					"/summon mnra_cata:sun_tribunal_beam ~ ~ ~"
+				],
+				"1.5": [
+					"/scriptevent mnra_cata:sun_tribunal_desperation_attack"
+				]
+			}
+		},
+		"animation.sun_tribunal.teleport_attack": {
+			"animation_length": 6.5,
+			"loop": false,
+			"timeline": {
+				"0.85": [
+					"/scriptevent mnra_cata:sun_tribunal_teleport_attack"
+				],
+				"1.85": [
+					"/scriptevent mnra_cata:sun_tribunal_teleport_attack"
+				],
+				"2.85": [
+					"/scriptevent mnra_cata:sun_tribunal_teleport_attack"
+				],
+				"3.7": [
+					"/scriptevent mnra_cata:sun_tribunal_teleport_attack"
+				]
+			}
+		},
+		"animation.sun_tribunal.heavy_attack_projectile": {
+			"animation_length": 3.25,
+			"loop": false,
+			"timeline": {
+				"0.42": [
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph ~ ~1 ~ 45 0 start1",
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph ~ ~1 ~ 135 0 start1",
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph ~ ~1 ~ -135 0 start1",
+					"/summon mnra_cata:sun_tribunal_phantom_blade_telegraph ~ ~1 ~ -45 0 start1"
+				]
+			}
+		},
+		"animation.sun_tribunal.death": {
+			"animation_length": 8,
+			"loop": "hold_on_last_frame",
+			"timeline": {
+				"1": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"2": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"3": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"4": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"6": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"8": [
+					"@s despawn"
+				],
+				"1.5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"2.5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"3.5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"4.5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"5.6": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				],
+				"6.5": [
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~",
+					"/summon xp_orb ~ ~6 ~"
+				]
+			}
+		}
+	}
+}

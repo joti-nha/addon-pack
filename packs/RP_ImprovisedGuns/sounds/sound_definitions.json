@@ -1,0 +1,78 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"rev.musket_shot": {
+			"sounds": [
+				{
+					"name": "sounds/musket_shot",
+					"volume": 0.5
+				}
+			]
+		},
+		"rev.flintlock_shot": {
+			"sounds": [
+				{
+					"name": "sounds/flintlock_shot",
+					"volume": 0.4
+				}
+			]
+		},
+		"rev.despoiler_shot": {
+			"sounds": [
+				{
+					"name": "sounds/despoiler_shot",
+					"volume": 0.4
+				}
+			]
+		},
+		"rev.shotgun_shot": {
+			"sounds": [
+				{
+					"name": "sounds/shotgun_shot",
+					"volume": 0.3
+				}
+			]
+		},
+		"rev.mortar_shot": {
+			"sounds": [
+				{
+					"name": "sounds/hand_mortar_shot",
+					"volume": 0.5
+				}
+			]
+		},
+		"rev.crooked_mortar_shot": {
+			"sounds": [
+				{
+					"name": "sounds/crooked_mortar_shot",
+					"volume": 1.0
+				}
+			]
+		},
+		
+		"rev.mauler_shot": {
+			"sounds": [
+				{
+					"name": "sounds/mauler_shot",
+					"volume": 0.5
+				}
+			]
+		},
+		"rev.auto_shot": {
+			"sounds": [
+				{
+					"name": "sounds/auto_gun",
+					"volume": 0.2
+				}
+			]
+		},
+		"rev.s_shotgun_shot": {
+			"sounds": [
+				{
+					"name": "sounds/s_shotgun_shot",
+					"volume": 0.3
+				}
+			]
+		}
+	}
+}

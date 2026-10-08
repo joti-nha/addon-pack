@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/tumbril_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/tumbril_one_feature_mcstructure",
+				60
+			],
+			[
+				"dk:structures/tumbril_two_feature_mcstructure",
+				55
+			]
+		]
+	}
+}

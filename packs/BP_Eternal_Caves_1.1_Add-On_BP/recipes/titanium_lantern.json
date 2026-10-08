@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:titanium_lantern"},"key":{"T":"panascais_caves:titanium_torch","N":"minecraft:iron_nugget"},"pattern":["NNN","NTN","NNN"],"tags":["panascais_common:forge"],"result":"panascais_caves:titanium_lantern"}}

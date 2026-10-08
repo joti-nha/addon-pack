@@ -1,0 +1,41 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_overgrown_jungle_wood_lamp"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      " A ",
+      "BCB",
+      " A "
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:overgrown_jungle_slab"
+      },
+      "B": {
+        "item": "minecraft:stick"
+      },
+      "C": {
+        "item": "minecraft:torch"
+      }
+    },
+    "result": {
+      "item": "ntk:overgrown_jungle_wood_lamp",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:overgrown_jungle_slab"
+      },
+      {
+        "item": "minecraft:stick"
+      },
+      {
+        "item": "minecraft:torch"
+      }
+    ]
+  }
+}

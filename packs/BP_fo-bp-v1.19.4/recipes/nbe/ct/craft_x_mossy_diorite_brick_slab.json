@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_diorite_brick_slab"
+    },
+    "priority": 0,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_diorite_brick_slab",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "ntk:mossy_diorite_bricks"
+      }
+    },
+    "result": {
+      "item": "ntk:mossy_diorite_brick_slab",
+      "count": 6
+    },
+    "unlock": [
+      {
+        "item": "ntk:mossy_diorite_bricks"
+      }
+    ]
+  }
+}

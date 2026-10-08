@@ -1,0 +1,80 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:scorpion_telson",
+      "menu_category": {
+        "category": "items",
+        "group": "minecraft:items",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.scorpion_telson.name"
+			},
+			"minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_scorpion_telson"  
+				}
+			},
+      "minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 64
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:material",
+          "ntk:organic_material",
+          "ntk:scorpion_telson",
+          
+          "ntk:poison_effect"
+        ]
+      },
+      "ntk:inflict_effect_on_hit_entity": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:scorpion_telson",
+          "item_slot": "Mainhand",
+          "exclude_family_type": "earth_elemetal_type",
+          "inflict_effect": "poison",
+          "inflict_duration": 300,
+          "inflict_amplifier": 0,
+          "inflict_level": 1,
+          "inflict_particles": true,
+          "decrease_item": 1,
+          "decrease_item_chance": 100.0,
+          "sound_effect": "mob.bee.sting",
+          "sound_pitch_min": 0.8,
+          "sound_pitch_max": 1.2,
+          "sound_volume": 1.0
+        }
+      ]
+    }
+  }
+}

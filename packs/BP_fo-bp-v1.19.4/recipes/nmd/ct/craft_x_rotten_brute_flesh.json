@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_rotten_brute_flesh"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "rotten_brute_flesh",
+    "ingredients": [
+      {
+        "item": "ntk:block_of_rotten_brute_flesh"
+      }
+    ],
+    "result": {
+      "item": "ntk:rotten_brute_flesh",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_rotten_brute_flesh"
+      }
+    ]
+  }
+}

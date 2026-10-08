@@ -1,0 +1,65 @@
+{
+	"format_version": "1.26.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ntk:pile_of_dandelion",
+			"menu_category": {
+				"category": "nature",
+        "group": "ntk:itemGroup.name.pile_of_flowers",
+        "is_hidden_in_commands": false
+      }
+		},
+		"components": {
+      "minecraft:display_name": {
+				"value": "%tile.ntk.pile_of_dandelion.name"
+			},
+      "minecraft:rarity": "common",
+      "minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 64
+			},
+			"minecraft:fuel": {
+        "duration": 50.0
+      },
+      "minecraft:compostable": {
+        "composting_chance": 100
+			},
+			"minecraft:block_placer": {
+				"block": "ntk:pile_of_dandelion",
+				"replace_block_item": true
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:block_item",
+          "ntk:compacted_block",
+          "ntk:pile_of_flowers",
+          "ntk:pile_of_dandelion"
+        ]
+      }
+		}
+	}
+}

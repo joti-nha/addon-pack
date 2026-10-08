@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:5recipes_e03ch7ejd05jy"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"priority": 1,
+		"ingredients": [
+			{
+				"item": "minecraft:stripped_cherry_wood",
+				"data": 0
+			}
+		],
+		"result": {
+			"item": "minecraft:cherry_trapdoor",
+			"count": 8,
+			"data": 0
+		}
+	}
+}

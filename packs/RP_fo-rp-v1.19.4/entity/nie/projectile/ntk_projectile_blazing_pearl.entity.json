@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:projectile_blazing_pearl",
+      "render_controllers": [
+        "controller.render.projectile.ntk_blazing_pearl"
+      ],
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "materials": {
+        "default": "ntk_projectile_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/projectiles/nie/ntk_blazing_pearl"
+      },
+      "particle_effects": {
+        "blazing_magic_impact_particle": "ntk:blazing_magic_impact_particle"
+      },
+      "animations": {
+        "travelling": "animation.projectile.ntk_blazing_pearl.travelling"
+      },
+      "scripts": {
+        "animate": [
+          "travelling"
+        ]
+      }
+    }
+  }
+} 

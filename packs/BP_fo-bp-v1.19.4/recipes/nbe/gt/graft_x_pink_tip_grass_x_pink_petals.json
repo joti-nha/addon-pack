@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_pink_tip_grass_x_pink_petals"
+    },
+    "priority": 2,
+    "tags": [ "grafting_table" ],
+    "group": "pink_tip_grass",
+    "assume_symmetry": true,
+    "pattern": [
+      "C",
+      "G"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:pink_petals"
+      },
+      "G": {
+        "item": "minecraft:short_grass"
+      }
+    },
+    "result": {
+      "item": "ntk:pink_tip_grass",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:pink_petals"
+      },
+      {
+        "item": "minecraft:short_grass"
+      }
+    ]
+  }
+}

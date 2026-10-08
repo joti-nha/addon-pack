@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_amethyst_wand_uncharged",
+    "normal": "ntk_wand_height",
+    "metalness_emissive_roughness": "ntk_wand_uncharged_mer"
+  }
+}

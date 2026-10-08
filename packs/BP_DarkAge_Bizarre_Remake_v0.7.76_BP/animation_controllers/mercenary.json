@@ -1,0 +1,110 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.mercenary.drink": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"drink": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						}
+					]
+				},
+				"drink": {
+					"transitions": [
+						{
+							"default": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						}
+					],
+					"on_entry": [
+						"/playsound random.drink @a[r=20] ~~~ 1 1"
+					]
+				}
+			}
+		},
+		"controller.animation.mercenary.weapons": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"melee": "q.property('dk:states')=='melee'&&q.property('dk:target')=='target'&&query.is_item_equipped"
+						},
+						{
+							"bow": "q.property('dk:states')=='bow'&&q.property('dk:target')=='target'&&!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow')"
+						}
+					]
+				},
+				"melee": {
+					"transitions": [
+						{
+							"default": "(q.property('dk:states')=='melee'&&q.property('dk:target')=='target'&&!query.is_item_equipped)||(q.property('dk:states')=='bow'&&q.property('dk:target')=='target'&&!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow'))"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 air"
+					]
+				},
+				"bow": {
+					"transitions": [
+						{
+							"default": "(q.property('dk:states')=='bow'&&q.property('dk:target')=='target'&&query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:bow'))||(q.property('dk:states')=='melee'&&q.property('dk:target')=='target'&&query.is_item_equipped)"
+						}
+					],
+					"on_entry": [
+						"/replaceitem entity @s slot.weapon.mainhand 0 bow"
+					]
+				}
+			}
+		},
+		"controller.animation.mercenary.potion": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"potion_health": "query.health<15&&q.property('dk:potion')=='potion_default'"
+						}
+					]
+				},
+				"potion_health": {
+					"transitions": [
+						{
+							"potion_hard": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						}
+					],
+					"on_entry": [
+						"@s dk:mercenary_event_mode_potion_hard"
+					]
+				},
+				"potion_hard": {
+					"transitions": [
+						{
+							"potion_cooldown": "!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:potion')"
+						}
+					],
+					"on_exit": [
+						"/effect @s instant_health 2 2",
+						"/effect @s regeneration 25 3",
+						"/effect @s strength 5 3",
+						"/effect @s speed 5 2",
+						"/effect @s fire_resistance 25 3",
+						"/effect @s resistance 5 3",
+						"@s dk:mercenary_event_mode_potion_cooldown"
+					]
+				},
+				"potion_cooldown": {
+					"animations": [
+						"potion_animation"
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:potion')=='potion_default'"
+						}
+					]
+				}
+			}
+		}
+	}
+}

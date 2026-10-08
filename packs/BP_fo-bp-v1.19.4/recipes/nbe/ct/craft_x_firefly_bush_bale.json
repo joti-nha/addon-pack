@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_firefly_bush_bale"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "firefly_bush_bale",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:firefly_bush"
+      }
+    },
+    "result": {
+      "item": "ntk:firefly_bush_bale",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:firefly_bush"
+      }
+    ]
+  }
+}

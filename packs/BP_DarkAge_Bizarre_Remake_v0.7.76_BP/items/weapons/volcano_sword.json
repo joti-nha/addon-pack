@@ -1,0 +1,55 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:volcano_sword",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.sword"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 1,
+			"minecraft:damage": 15,
+			"minecraft:enchantable": {
+				"slot": "sword",
+				"value": 2
+			},
+			"minecraft:can_destroy_in_creative": false,
+			"minecraft:durability": {
+				"max_durability": 1750
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"dk:soul_gem"
+						],
+						"repair_amount": 750
+					},
+					{
+						"items": [
+							"dk:corrupted_armor_fragment"
+						],
+						"repair_amount": 500
+					}
+				]
+			},
+			"minecraft:icon": "volcano_sword",
+			"minecraft:display_name": {
+				"value": "item.dk:volcano_sword.name"
+			},
+			"minecraft:use_modifiers": {
+				"use_duration": 1,
+				"movement_modifier": 0.35
+			},
+			"minecraft:custom_components": [
+				"dk:on_use"
+			],
+			"minecraft:cooldown": {
+				"category": "volcano_sword",
+				"duration": 1
+			}
+		}
+	}
+}

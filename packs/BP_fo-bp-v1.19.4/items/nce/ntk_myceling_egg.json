@@ -1,0 +1,68 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "ntk:myceling_egg",
+      "menu_category": {
+        "category": "nature",
+        "group": "ntk:itemGroup.name.eggs",
+				"is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+				"value": "%item.ntk.myceling_egg.name"
+			},
+      "minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_myceling_egg"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 64
+			},
+      "minecraft:block_placer": {
+				"block": "ntk:myceling_egg_block",
+				"replace_block_item": false
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:placeable",
+          "ntk:material",
+          "ntk:organic_material",
+          "ntk:egg",
+          "ntk:medium_egg",
+          "ntk:reptile_egg",
+          "ntk:medium_reptile_egg",
+          "ntk:myceling_egg"
+        ]
+      }
+    }
+  }
+}

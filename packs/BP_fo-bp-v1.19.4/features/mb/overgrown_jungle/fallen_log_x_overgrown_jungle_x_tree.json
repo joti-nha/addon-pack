@@ -1,0 +1,119 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/fallen_log_x_overgrown_jungle_x_tree"
+    },
+    "fallen_trunk": {
+      "trunk_block": "ntk:overgrown_jungle_log",
+      "log_length": {
+        "range_min": 3,
+        "range_max": 6
+      },
+      "stump_height": 1,
+      "trunk_decoration": {
+        "decoration_block": "minecraft:vine",
+        "decoration_chance": 75.0,
+        "num_steps": 1,
+        "step_direction": "down"
+      },
+      "log_decoration_feature": "minecraft:optional_log_mushrooms_feature"
+    },
+    "base_block": [
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots"
+    ],
+    "may_grow_on": [
+      { "tags": "query.all_tags('ntk:dirt')" },
+      { "tags": "query.all_tags('ntk:moss')" },
+      { "tags": "query.all_tags('ntk:mud')" },
+      { "tags": "query.all_tags('ntk:bryumed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:grassed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:mossed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:myceliated_blocks', 'ntk:stones')" },
+      // Soil:
+      "minecraft:coarse_dirt",
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots",
+      "minecraft:grass_block",
+      "minecraft:moss_block",
+      "minecraft:mud",
+      "minecraft:muddy_mangrove_roots",
+      "minecraft:mycelium",
+      "minecraft:pale_moss_block",
+      "minecraft:podzol"
+    ],
+    "may_grow_through": [
+      { "tags": "query.all_tags('ntk:dirt')" },
+      { "tags": "query.all_tags('ntk:moss')" },
+      { "tags": "query.all_tags('ntk:mud')" },
+      { "tags": "query.all_tags('ntk:bryumed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:grassed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:mossed_blocks', 'ntk:stones')" },
+      { "tags": "query.all_tags('ntk:myceliated_blocks', 'ntk:stones')" },
+      // Soil:
+      "minecraft:coarse_dirt",
+      "minecraft:dirt",
+      "minecraft:dirt_with_roots",
+      "minecraft:grass_block",
+      "minecraft:moss_block",
+      "minecraft:mud",
+      "minecraft:muddy_mangrove_roots",
+      "minecraft:mycelium",
+      "minecraft:pale_moss_block",
+      "minecraft:podzol"
+    ],
+    "may_replace": [
+      { "tags": "query.all_tags('ntk:environmental_block')" },
+      { "tags": "query.all_tags('ntk:leaves')" },
+      { "tags": "query.all_tags('ntk:plant')" },
+      "minecraft:air",
+      "minecraft:flowing_water",
+      "minecraft:water",
+      // Grass:
+      "minecraft:bush",
+      "minecraft:fern",
+      "minecraft:firefly_bush",
+      "minecraft:large_fern",
+      "minecraft:short_dry_grass",
+      "minecraft:short_grass",
+      "minecraft:tall_dry_grass",
+      "minecraft:tall_grass",
+      // Flower:
+      "minecraft:pink_petals",
+      "minecraft:wildflowers",
+      // Fungus:
+      "minecraft:brown_mushroom",
+      "minecraft:red_mushroom",
+      // Sapling:
+      "minecraft:azalea",
+      "minecraft:flowering_azalea",
+      "minecraft:mangrove_propagule",
+      // Plants:
+      "minecraft:big_dripleaf",
+      "minecraft:glow_lichen",
+      "minecraft:leaf_litter",
+      "minecraft:moss_carpet",
+      "minecraft:pale_hanging_moss",
+      "minecraft:pale_moss_carpet",
+      "minecraft:small_dripleaf_block",
+      "minecraft:vine",
+      // Leaves:
+      "minecraft:acacia_leaves",
+      "minecraft:azalea_leaves",
+      "minecraft:azalea_leaves_flowered",
+      "minecraft:birch_leaves",
+      "minecraft:cherry_leaves",
+      "minecraft:dark_oak_leaves",
+      "minecraft:jungle_leaves",
+      "minecraft:mangrove_leaves",
+      "minecraft:oak_leaves",
+      "minecraft:pale_oak_leaves",
+      "minecraft:spruce_leaves",
+      // Other:
+      "minecraft:sculk_vein",
+      "minecraft:snow_layer",
+      "minecraft:web"
+    ]
+  }
+}

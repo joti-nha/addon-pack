@@ -1,0 +1,126 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tm_aqc:bobber",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/tm/aqc/entity/bobbers/default",
+
+        "potato": "textures/tm/aqc/entity/bobbers/potato",
+
+        "basic_black": "textures/tm/aqc/entity/bobbers/basic/black",
+        "basic_blue": "textures/tm/aqc/entity/bobbers/basic/blue",
+        "basic_brown": "textures/tm/aqc/entity/bobbers/basic/brown",
+        "basic_cyan": "textures/tm/aqc/entity/bobbers/basic/cyan",
+        "basic_gray": "textures/tm/aqc/entity/bobbers/basic/gray",
+        "basic_green": "textures/tm/aqc/entity/bobbers/basic/green",
+        "basic_light_blue": "textures/tm/aqc/entity/bobbers/basic/light_blue",
+        "basic_light_gray": "textures/tm/aqc/entity/bobbers/basic/light_gray",
+        "basic_lime": "textures/tm/aqc/entity/bobbers/basic/lime",
+        "basic_magenta": "textures/tm/aqc/entity/bobbers/basic/magenta",
+        "basic_orange": "textures/tm/aqc/entity/bobbers/basic/orange",
+        "basic_pink": "textures/tm/aqc/entity/bobbers/basic/pink",
+        "basic_purple": "textures/tm/aqc/entity/bobbers/basic/purple",
+        "basic_red": "textures/tm/aqc/entity/bobbers/basic/red",
+        "basic_white": "textures/tm/aqc/entity/bobbers/basic/white",
+        "basic_yellow": "textures/tm/aqc/entity/bobbers/basic/yellow",
+
+        "feathered_black": "textures/tm/aqc/entity/bobbers/feathered/black",
+        "feathered_blue": "textures/tm/aqc/entity/bobbers/feathered/blue",
+        "feathered_brown": "textures/tm/aqc/entity/bobbers/feathered/brown",
+        "feathered_cyan": "textures/tm/aqc/entity/bobbers/feathered/cyan",
+        "feathered_gray": "textures/tm/aqc/entity/bobbers/feathered/gray",
+        "feathered_green": "textures/tm/aqc/entity/bobbers/feathered/green",
+        "feathered_light_blue": "textures/tm/aqc/entity/bobbers/feathered/light_blue",
+        "feathered_light_gray": "textures/tm/aqc/entity/bobbers/feathered/light_gray",
+        "feathered_lime": "textures/tm/aqc/entity/bobbers/feathered/lime",
+        "feathered_magenta": "textures/tm/aqc/entity/bobbers/feathered/magenta",
+        "feathered_orange": "textures/tm/aqc/entity/bobbers/feathered/orange",
+        "feathered_pink": "textures/tm/aqc/entity/bobbers/feathered/pink",
+        "feathered_purple": "textures/tm/aqc/entity/bobbers/feathered/purple",
+        "feathered_red": "textures/tm/aqc/entity/bobbers/feathered/red",
+        "feathered_white": "textures/tm/aqc/entity/bobbers/feathered/white",
+        "feathered_yellow": "textures/tm/aqc/entity/bobbers/feathered/yellow",
+
+        "winged_black": "textures/tm/aqc/entity/bobbers/winged/black",
+        "winged_blue": "textures/tm/aqc/entity/bobbers/winged/blue",
+        "winged_brown": "textures/tm/aqc/entity/bobbers/winged/brown",
+        "winged_cyan": "textures/tm/aqc/entity/bobbers/winged/cyan",
+        "winged_gray": "textures/tm/aqc/entity/bobbers/winged/gray",
+        "winged_green": "textures/tm/aqc/entity/bobbers/winged/green",
+        "winged_light_blue": "textures/tm/aqc/entity/bobbers/winged/light_blue",
+        "winged_light_gray": "textures/tm/aqc/entity/bobbers/winged/light_gray",
+        "winged_lime": "textures/tm/aqc/entity/bobbers/winged/lime",
+        "winged_magenta": "textures/tm/aqc/entity/bobbers/winged/magenta",
+        "winged_orange": "textures/tm/aqc/entity/bobbers/winged/orange",
+        "winged_pink": "textures/tm/aqc/entity/bobbers/winged/pink",
+        "winged_purple": "textures/tm/aqc/entity/bobbers/winged/purple",
+        "winged_red": "textures/tm/aqc/entity/bobbers/winged/red",
+        "winged_white": "textures/tm/aqc/entity/bobbers/winged/white",
+        "winged_yellow": "textures/tm/aqc/entity/bobbers/winged/yellow",
+
+        "creeper_black": "textures/tm/aqc/entity/bobbers/creeper/black",
+        "creeper_blue": "textures/tm/aqc/entity/bobbers/creeper/blue",
+        "creeper_brown": "textures/tm/aqc/entity/bobbers/creeper/brown",
+        "creeper_cyan": "textures/tm/aqc/entity/bobbers/creeper/cyan",
+        "creeper_gray": "textures/tm/aqc/entity/bobbers/creeper/gray",
+        "creeper_green": "textures/tm/aqc/entity/bobbers/creeper/green",
+        "creeper_light_blue": "textures/tm/aqc/entity/bobbers/creeper/light_blue",
+        "creeper_light_gray": "textures/tm/aqc/entity/bobbers/creeper/light_gray",
+        "creeper_lime": "textures/tm/aqc/entity/bobbers/creeper/lime",
+        "creeper_magenta": "textures/tm/aqc/entity/bobbers/creeper/magenta",
+        "creeper_orange": "textures/tm/aqc/entity/bobbers/creeper/orange",
+        "creeper_pink": "textures/tm/aqc/entity/bobbers/creeper/pink",
+        "creeper_purple": "textures/tm/aqc/entity/bobbers/creeper/purple",
+        "creeper_red": "textures/tm/aqc/entity/bobbers/creeper/red",
+        "creeper_white": "textures/tm/aqc/entity/bobbers/creeper/white",
+        "creeper_yellow": "textures/tm/aqc/entity/bobbers/creeper/yellow",
+
+        "hook_basic": "textures/tm/aqc/entity/basic_hook",
+        "hook_iron": "textures/tm/aqc/items/hooks/iron",
+        "hook_gold": "textures/tm/aqc/items/hooks/gold",
+        "hook_diamond": "textures/tm/aqc/items/hooks/diamond",
+        "hook_neptunium": "textures/tm/aqc/items/hooks/neptunium",
+        "hook_redstone": "textures/tm/aqc/items/hooks/redstone",
+        "hook_heavy": "textures/tm/aqc/items/hooks/heavy",
+        "hook_light": "textures/tm/aqc/items/hooks/light",
+        "hook_double": "textures/tm/aqc/items/hooks/double",
+        "hook_note": "textures/tm/aqc/items/hooks/note",
+        "hook_glow": "textures/tm/aqc/items/hooks/glow",
+        "hook_creeper": "textures/tm/aqc/items/hooks/creeper",
+        "hook_essence": "textures/tm/aqc/items/hooks/essence"
+      },
+      "geometry": {
+        "basic": "geometry.tm_aqc.basic_bobber",
+        "feathered": "geometry.tm_aqc.feathered_bobber",
+        "winged": "geometry.tm_aqc.winged_bobber",
+        "creeper": "geometry.tm_aqc.creeper_bobber",
+        "hook": "geometry.tm_aqc.hook"
+      },
+      "scripts": {
+        "animate": ["hook"]
+      },
+      "animations": {
+        "hook": "animation.tm_aqc.bobber.hook"
+      },
+      "render_controllers": [
+        {"controller.render.tm_aqc.bobber.default": "q.property('tm_aqc:bobber') == 0 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.basic": "q.property('tm_aqc:bobber') == 1 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.feathered": "q.property('tm_aqc:bobber') == 2 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.winged": "q.property('tm_aqc:bobber') == 3 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.creeper": "q.property('tm_aqc:bobber') == 4 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.special": "q.property('tm_aqc:bobber') == 5 && !q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.default.glow": "q.property('tm_aqc:bobber') == 0 && q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.basic.glow": "q.property('tm_aqc:bobber') == 1 && q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.feathered": "q.property('tm_aqc:bobber') == 2 && q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.winged.glow": "q.property('tm_aqc:bobber') == 3 && q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.creeper.glow": "q.property('tm_aqc:bobber') == 4 && q.property('tm_aqc:glow')"},
+        {"controller.render.tm_aqc.bobber.special.glow": "q.property('tm_aqc:bobber') == 5 && q.property('tm_aqc:glow')"},
+        "controller.render.tm_aqc.bobber.hook"
+      ]
+    }
+  }
+}

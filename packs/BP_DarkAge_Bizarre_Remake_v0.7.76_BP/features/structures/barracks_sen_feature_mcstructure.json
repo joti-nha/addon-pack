@@ -1,0 +1,12 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:structure_template_feature": {
+		"description": {
+			"identifier": "dk:structures/barracks_sen_feature_mcstructure"
+		},
+		"structure_name": "mystructure:barracks_sen",
+		"adjustment_radius": 8,
+		"facing_direction": "south",
+		"constraints": {}
+	}
+}

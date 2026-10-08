@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_jungle_stairs_x_slab"
+    },
+    "priority": 0,
+    "tags": [ "wood_cutter" ],
+    "group": "jungle_slab",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:jungle_stairs"
+      }
+    },
+    "result": {
+      "item": "minecraft:jungle_slab",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:jungle_stairs"
+      }
+    ]
+  }
+}

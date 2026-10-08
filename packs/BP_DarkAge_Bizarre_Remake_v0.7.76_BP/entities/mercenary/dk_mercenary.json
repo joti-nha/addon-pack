@@ -1,0 +1,2140 @@
+{
+	"format_version": "1.14.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:mercenary",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					{
+						"no_target": "!query.has_target"
+					},
+					{
+						"target": "query.has_target&&q.property('dk:modes')=='standing'"
+					},
+					{
+						"target_shield": "query.has_target&&q.property('dk:modes')=='standing'&&q.property('dk:weapons')=='sword'&&q.property('dk:states')=='melee'&&q.property('dk:shield_cooldown')=='no_cooldown'"
+					},
+					{
+						"home": "query.is_saddled&&q.property('dk:target')=='no_target'&&q.property('dk:patrol')=='no_patrol'&&!query.is_tamed"
+					},
+					{
+						"food": "query.is_tamed&&q.property('dk:target')=='no_target'"
+					},
+					{
+						"weapons": "query.has_target&&q.property('dk:modes')=='standing'"
+					},
+					{
+						"despawn": "q.property('dk:patrol')=='patrol'"
+					},
+					"potion",
+					"drink"
+				]
+			},
+			"animations": {
+				"drink": "controller.animation.mercenary.drink",
+				"potion": "controller.animation.mercenary.potion",
+				"weapons": "controller.animation.mercenary.weapons",
+				"potion_animation": "animation.mercenary.potion_animation",
+				"no_target": "animation.mercenary.no_target",
+				"target": "animation.mercenary.target",
+				"target_shield": "animation.mercenary.target_shield",
+				"home": "animation.mercenary.home",
+				"food": "animation.mercenary.food",
+				"despawn": "animation.all.despawn"
+			},
+			"properties": {
+				"dk:patrol": {
+					"type": "enum",
+					"values": [
+						"no_patrol",
+						"patrol"
+					],
+					"default": "no_patrol",
+					"client_sync": true
+				},
+				"dk:target": {
+					"type": "enum",
+					"values": [
+						"no_target",
+						"target"
+					],
+					"default": "no_target",
+					"client_sync": true
+				},
+				"dk:modes": {
+					"type": "enum",
+					"values": [
+						"standing",
+						"sit",
+						"sit_two"
+					],
+					"default": "standing",
+					"client_sync": true
+				},
+				"dk:weapons": {
+					"type": "enum",
+					"values": [
+						"none",
+						"sword",
+						"hammer"
+					],
+					"default": "none",
+					"client_sync": true
+				},
+				"dk:shield": {
+					"type": "enum",
+					"values": [
+						"none",
+						"shield"
+					],
+					"default": "none",
+					"client_sync": true
+				},
+				"dk:shield_cooldown": {
+					"type": "enum",
+					"values": [
+						"no_cooldown",
+						"yes_cooldown"
+					],
+					"default": "no_cooldown",
+					"client_sync": true
+				},
+				"dk:states": {
+					"type": "enum",
+					"values": [
+						"none",
+						"melee",
+						"bow",
+						"potion"
+					],
+					"default": "none",
+					"client_sync": true
+				},
+				"dk:potion": {
+					"type": "enum",
+					"values": [
+						"potion_default",
+						"potion_hard",
+						"potion_cooldown"
+					],
+					"default": "potion_default",
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {
+			"dk:variant0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"dk:variant1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"dk:variant2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"dk:variant3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"dk:variant4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"dk:variant5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"dk:variant6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"dk:variant7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"dk:variant8": {
+				"minecraft:variant": {
+					"value": 8
+				}
+			},
+			"dk:variant9": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			},
+			"dk:variant10": {
+				"minecraft:variant": {
+					"value": 10
+				}
+			},
+			"dk:variant11": {
+				"minecraft:variant": {
+					"value": 11
+				}
+			},
+			"dk:variant12": {
+				"minecraft:variant": {
+					"value": 12
+				}
+			},
+			"dk:variant13": {
+				"minecraft:variant": {
+					"value": 13
+				}
+			},
+			"dk:variant14": {
+				"minecraft:variant": {
+					"value": 14
+				}
+			},
+			"dk:mercenary_mode_sword_statistics": {
+				"minecraft:health": {
+					"value": 35,
+					"max": 35
+				}
+			},
+			"dk:mercenary_mode_hammer_statistics": {
+				"minecraft:health": {
+					"value": 45,
+					"max": 45
+				},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				}
+			},
+			"dk:mercenary_mode_free": {
+				"minecraft:type_family": {
+					"family": [
+						"player",
+						"mercenary",
+						"mercenary_wild",
+						"dk"
+					]
+				},
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 64,
+					"broadcast_targets": [
+						"mercenary_wild"
+					]
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 4,
+					"alert_same_type": true,
+					"entity_types": {
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "mercenary_wild"
+								}
+							]
+						},
+						"max_dist": 64
+					}
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 4,
+					"within_radius": 64,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "monster"
+											},
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "!=",
+												"value": "stinky_medical"
+											}
+										]
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "undead"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "unbound"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "sentinel"
+									}
+								]
+							},
+							"max_dist": 64
+						},
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "dk:human_flesh"
+									}
+								]
+							},
+							"max_dist": 64
+						},
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "has_container_open",
+										"subject": "other",
+										"operator": "==",
+										"value": true
+									}
+								]
+							},
+							"max_dist": 64
+						}
+					],
+					"must_see": true,
+					"must_see_forget_duration": 17
+				},
+				"minecraft:tameable": {
+					"probability": 100,
+					"tame_items": "dk:contract",
+					"tame_event": {
+						"event": "dk:mercenary_tame",
+						"target": "self"
+					}
+				}
+			},
+			"dk:mercenary_mode_tamed": {
+				"minecraft:type_family": {
+					"family": [
+						"player",
+						"mercenary",
+						"mercenary_tamed",
+						"dk"
+					]
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 4,
+					"within_radius": 64,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "monster"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "undead"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "unbound"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "sentinel"
+									}
+								]
+							},
+							"max_dist": 64
+						}
+					],
+					"must_see": true,
+					"must_see_forget_duration": 17
+				},
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 64,
+					"broadcast_targets": [
+						"mercenary_tamed"
+					]
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 4,
+					"alert_same_type": true,
+					"entity_types": {
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "mercenary_tamed"
+								}
+							]
+						},
+						"max_dist": 64
+					}
+				},
+				"minecraft:is_tamed": {},
+				"minecraft:sittable": {},
+				"minecraft:behavior.stay_while_sitting": {
+					"priority": 1
+				},
+				"minecraft:healable": {
+					"items": [
+						{
+							"item": "cooked_porkchop",
+							"heal_amount": 8
+						},
+						{
+							"item": "cooked_beef",
+							"heal_amount": 8
+						},
+						{
+							"item": "cooked_chicken",
+							"heal_amount": 6
+						},
+						{
+							"item": "cooked_mutton",
+							"heal_amount": 6
+						},
+						{
+							"item": "cooked_rabbit",
+							"heal_amount": 5
+						}
+					]
+				},
+				"minecraft:behavior.follow_owner": {
+					"priority": 3,
+					"speed_multiplier": 1.5,
+					"start_distance": 10,
+					"stop_distance": 2
+				},
+				"minecraft:behavior.owner_hurt_by_target": {
+					"priority": 1
+				},
+				"minecraft:behavior.owner_hurt_target": {
+					"priority": 1
+				}
+			},
+			"dk:mercenary_sit": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:environment_sensor": {
+					"triggers": [
+						{
+							"filters": {
+								"test": "is_riding",
+								"subject": "self",
+								"operator": "equals",
+								"value": true
+							},
+							"event": "dk:mercenary_mode_guard"
+						}
+					]
+				},
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 4,
+					"outside_range": 5,
+					"must_see": true,
+					"on_inside_range": {
+						"event": "dk:mercenary_mode_guard",
+						"target": "self"
+					}
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"event": "dk:mercenary_mode_guard"
+							},
+							"deals_damage": true
+						}
+					]
+				},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 50,
+					"time_down_event": {
+						"event": "dk:mercenary_modes_to_be"
+					}
+				},
+				"minecraft:pushable": {
+					"is_pushable": false,
+					"is_pushable_by_piston": true
+				}
+			},
+			"dk:mercenary_trading": {
+				"minecraft:economy_trade_table": {
+					"display_name": "entity.mercenary.trade",
+					"table": "trading/economy_trades/mercenary_trades.json",
+					"new_screen": true,
+					"persist_trades": true
+				}
+			},
+			"dk:mercenary_move": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 4,
+					"outside_range": 5,
+					"must_see": true,
+					"on_inside_range": {
+						"event": "dk:mercenary_mode_melee",
+						"target": "self",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:states",
+							"operator": "!=",
+							"subject": "self",
+							"value": "potion"
+						}
+					},
+					"on_outside_range": {
+						"event": "dk:mercenary_mode_bow",
+						"target": "self",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:states",
+							"operator": "!=",
+							"subject": "self",
+							"value": "potion"
+						}
+					}
+				},
+				"minecraft:movement": {
+					"value": 0.2
+				},
+				"minecraft:navigation.generic": {
+					"is_amphibious": true,
+					"can_path_over_water": true,
+					"can_pass_doors": true,
+					"can_open_doors": true,
+					"can_swim": true,
+					"can_walk": true,
+					"avoid_damage_blocks": true
+				},
+				"minecraft:annotation.open_door": {},
+				"minecraft:behavior.move_indoors": {
+					"priority": 4,
+					"speed_multiplier": 0.8
+				},
+				"minecraft:behavior.restrict_open_door": {
+					"priority": 5
+				},
+				"minecraft:behavior.open_door": {
+					"priority": 6,
+					"close_door_after": true
+				},
+				"minecraft:can_climb": {},
+				"minecraft:jump.static": {},
+				"minecraft:behavior.float": {
+					"priority": 20
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:behavior.random_look_around": {
+					"priority": 9
+				},
+				"minecraft:behavior.look_at_player": {
+					"priority": 9,
+					"look_distance": 6,
+					"probability": 7
+				},
+				"minecraft:behavior.look_at_entity": {
+					"priority": 9,
+					"look_distance": 6,
+					"probability": 7,
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "mob"
+					}
+				},
+				"minecraft:pushable": {
+					"is_pushable": true,
+					"is_pushable_by_piston": true
+				}
+			},
+			"dk:mercenary_random_stroll": {
+				"minecraft:behavior.random_stroll": {
+					"priority": 4,
+					"speed_multiplier": 0.8
+				}
+			},
+			"dk:mercenary_time_from_start_go_home": {
+				"minecraft:is_saddled": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 15,
+					"time_down_event": {
+						"event": "dk:mercenary_event_mode_start_go_home",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:target",
+							"subject": "self",
+							"operator": "==",
+							"value": "no_target"
+						}
+					}
+				}
+			},
+			"dk:mercenary_mode_go_home": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 60,
+					"time_down_event": {
+						"event": "dk:mercenary_event_mode_go_home_wait",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:target",
+							"subject": "self",
+							"operator": "==",
+							"value": "no_target"
+						}
+					}
+				},
+				"minecraft:behavior.go_home": {
+					"priority": 1,
+					"speed_multiplier": 1.5,
+					"interval": 50,
+					"goal_radius": 1,
+					"on_home": {
+						"event": "dk:mercenary_event_mode_go_home_wait",
+						"target": "self",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:target",
+							"subject": "self",
+							"operator": "==",
+							"value": "no_target"
+						}
+					}
+				}
+			},
+			"dk:mercenary_mode_in_home_time": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 2,
+					"time_down_event": {
+						"event": "dk:mercenary_modes_to_be",
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:target",
+							"subject": "self",
+							"operator": "==",
+							"value": "no_target"
+						}
+					}
+				}
+			},
+			"dk:mercenary_mode_sword": {
+				"minecraft:attack": {
+					"damage": 7
+				},
+				"minecraft:behavior.melee_attack": {
+					"priority": 2,
+					"speed_multiplier": 1.8,
+					"reach_multiplier": 2.5,
+					"track_target": true
+				}
+			},
+			"dk:mercenary_mode_hammer": {
+				"minecraft:attack": {
+					"damage": 8,
+					"effect_name": "slowness",
+					"effect_duration": 1
+				},
+				"minecraft:behavior.melee_attack": {
+					"priority": 2,
+					"speed_multiplier": 1.2,
+					"reach_multiplier": 2.5,
+					"track_target": true
+				}
+			},
+			"dk:mercenary_mode_bow": {
+				"minecraft:follow_range": {
+					"value": 64,
+					"max": 64
+				},
+				"minecraft:behavior.ranged_attack": {
+					"priority": 2,
+					"attack_interval_min": 1,
+					"attack_interval_max": 3,
+					"attack_radius": 64
+				}
+			},
+			"dk:mercenary_mode_shield": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "iron_axe"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "diamond_axe"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "netherite_axe"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:halberd"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:sentinel_halberd"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:volcano_sword"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:unbound_arm"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:unbound_arm_punch"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:sword_of_fatality"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:sickle_of_fatality"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "is_family",
+									"subject": "other",
+									"value": "unbound"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "is_family",
+									"subject": "other",
+									"value": "warden"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "is_family",
+									"subject": "other",
+									"value": "plague"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "is_family",
+									"subject": "other",
+									"value": "sentinel"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "block_explosion"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "entity_explosion"
+								},
+								"event": "dk:mercenary_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "projectile"
+								},
+								"event": "dk:mercenary_event_mode_sound"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "attack"
+								},
+								"event": "dk:mercenary_event_mode_sound"
+							},
+							"deals_damage": false
+						}
+					]
+				}
+			},
+			"dk:mercenary_mode_no_shield": {
+				"minecraft:timer": {
+					"time": 6,
+					"time_down_event": {
+						"event": "dk:mercenary_event_mode_shield"
+					}
+				}
+			},
+			"dk:potion_default": {
+				"minecraft:behavior.drink_potion": {
+					"priority": 3,
+					"speed_modifier": 0.5,
+					"potions": [
+						{
+							"id": 0,
+							"chance": 1,
+							"filters": {
+								"all_of": [
+									{
+										"all_of": [
+											{
+												"test": "has_equipment",
+												"domain": "hand",
+												"subject": "self",
+												"value": "potion"
+											},
+											{
+												"test": "enum_property",
+												"domain": "dk:target",
+												"subject": "self",
+												"value": "no_target"
+											}
+										]
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			"dk:potion_hard": {
+				"minecraft:behavior.avoid_mob_type": {
+					"priority": 1,
+					"entity_types": [
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "actor_health",
+										"subject": "self",
+										"operator": "<=",
+										"value": 15
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "self",
+										"value": "potion"
+									},
+									{
+										"test": "has_target",
+										"subject": "self",
+										"value": true
+									}
+								]
+							},
+							"max_dist": 8,
+							"walk_speed_multiplier": 1.2,
+							"sprint_speed_multiplier": 1.4
+						}
+					]
+				},
+				"minecraft:behavior.drink_potion": {
+					"priority": 2,
+					"speed_modifier": 0.5,
+					"potions": [
+						{
+							"id": 22,
+							"chance": 1,
+							"filters": {
+								"all_of": [
+									{
+										"test": "actor_health",
+										"subject": "self",
+										"operator": "<=",
+										"value": 15
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			"dk:mercenary_mode_patrol": {
+				"minecraft:is_tamed": {},
+				"minecraft:type_family": {
+					"family": [
+						"player",
+						"mercenary",
+						"outcast",
+						"dk"
+					]
+				},
+				"minecraft:behavior.follow_target_captain": {
+					"priority": 4,
+					"speed_multiplier": 1.2,
+					"within_radius": 64,
+					"follow_distance": 5
+				},
+				"minecraft:angry": {
+					"duration": 30,
+					"broadcast_anger": true,
+					"broadcast_anger_on_attack": true,
+					"broadcast_anger_on_being_attacked": true,
+					"broadcast_range": 16,
+					"broadcast_targets": [
+						"outcast"
+					]
+				},
+				"minecraft:behavior.hurt_by_target": {
+					"priority": 1,
+					"alert_same_type": true,
+					"entity_types": {
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "outcast"
+								}
+							]
+						},
+						"max_dist": 16
+					}
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 1,
+					"within_radius": 16,
+					"reselect_targets": true,
+					"entity_types": [
+						{
+							"filters": {
+								"any_of": [
+									{
+										"all_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "==",
+												"value": "monster"
+											},
+											{
+												"test": "is_family",
+												"subject": "other",
+												"operator": "!=",
+												"value": "stinky_medical"
+											}
+										]
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "corrupted"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "undead"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "unbound"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "sentinel"
+									},
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "plague"
+									}
+								]
+							},
+							"max_dist": 16
+						},
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_equipment",
+										"domain": "hand",
+										"subject": "other",
+										"value": "dk:human_flesh"
+									}
+								]
+							},
+							"max_dist": 16
+						}
+					],
+					"must_see": true,
+					"must_see_forget_duration": 17
+				}
+			},
+			"dk:mercenary_mode_despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:home": {},
+			"minecraft:shooter": {
+				"def": "minecraft:arrow"
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?8+(query.equipment_count*math.random(6,8)):0"
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": true
+			},
+			"minecraft:collision_box": {
+				"height": 1.8,
+				"width": 0.6
+			},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/assassin.json"
+			},
+			"minecraft:nameable": {},
+			"minecraft:physics": {},
+			"minecraft:behavior.eat_carried_item": {
+				"priority": 1,
+				"delay_before_eating": 0.1
+			},
+			"minecraft:equip_item": {},
+			"minecraft:behavior.equip_item": {
+				"priority": 1
+			},
+			"minecraft:shareables": {
+				"items": [
+					{
+						"item": "bread",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "baked_potato",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "potion",
+						"item_aux": 0,
+						"consume_item": true,
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_chicken",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_mutton",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_cod",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_porkchop",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_salmon",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_rabbit",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "cooked_beef",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "apple",
+						"priority": 2,
+						"max_amount": 1
+					},
+					{
+						"item": "carrot",
+						"priority": 2,
+						"max_amount": 1
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 80,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_sword",
+										"dk:mercenary_mode_sword_statistics",
+										"dk:mercenary_time_from_start_go_home",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "standing",
+									"dk:weapons": "sword",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 60,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_sword",
+										"dk:mercenary_mode_sword_statistics",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_sit",
+										"dk:mercenary_trading",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit",
+									"dk:weapons": "sword",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 50,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_sword",
+										"dk:mercenary_mode_sword_statistics",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_sit",
+										"dk:mercenary_trading",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit_two",
+									"dk:weapons": "sword",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 81,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_hammer",
+										"dk:mercenary_mode_hammer_statistics",
+										"dk:mercenary_time_from_start_go_home",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "standing",
+									"dk:weapons": "hammer",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 61,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_hammer",
+										"dk:mercenary_mode_hammer_statistics",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_sit",
+										"dk:mercenary_trading",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit",
+									"dk:weapons": "hammer",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 51,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_hammer",
+										"dk:mercenary_mode_hammer_statistics",
+										"dk:mercenary_mode_free",
+										"dk:mercenary_sit",
+										"dk:mercenary_trading",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit_two",
+									"dk:weapons": "hammer",
+									"dk:states": "melee"
+								}
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant0"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant1"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant2"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant3"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant4"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant5"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant6"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant7"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant8"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant9"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant10"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant11"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant12"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant13"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant14"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"dk:mercenary_event_mode_patrol": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 80,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_sword",
+										"dk:mercenary_mode_sword_statistics",
+										"dk:mercenary_mode_patrol",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "standing",
+									"dk:patrol": "patrol",
+									"dk:weapons": "sword",
+									"dk:states": "melee"
+								}
+							},
+							{
+								"weight": 81,
+								"add": {
+									"component_groups": [
+										"dk:potion_default",
+										"dk:mercenary_mode_hammer",
+										"dk:mercenary_mode_hammer_statistics",
+										"dk:mercenary_mode_patrol",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "standing",
+									"dk:weapons": "hammer",
+									"dk:patrol": "patrol",
+									"dk:states": "melee"
+								}
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant0"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant1"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant2"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant3"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant4"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant5"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant6"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant7"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant8"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant9"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant10"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant11"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant12"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant13"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"dk:variant14"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"dk:all_event_mode_despawn": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_despawn"
+					]
+				}
+			},
+			"dk:mercenary_event_mode_start_go_home": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_go_home"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_random_stroll",
+						"dk:mercenary_time_from_start_go_home"
+					]
+				}
+			},
+			"dk:mercenary_event_mode_go_home_wait": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_in_home_time"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_go_home"
+					]
+				}
+			},
+			"dk:mercenary_modes_to_be": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "!=",
+							"subject": "self",
+							"value": "minecraft:is_tamed"
+						},
+						"randomize": [
+							{
+								"weight": 90,
+								"add": {
+									"component_groups": [
+										"dk:mercenary_sit",
+										"dk:mercenary_trading"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:mercenary_mode_in_home_time",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit"
+								}
+							},
+							{
+								"weight": 70,
+								"add": {
+									"component_groups": [
+										"dk:mercenary_sit",
+										"dk:mercenary_trading"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:mercenary_mode_in_home_time",
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll"
+									]
+								},
+								"set_property": {
+									"dk:modes": "sit_two"
+								}
+							},
+							{
+								"weight": 50,
+								"add": {
+									"component_groups": [
+										"dk:mercenary_move",
+										"dk:mercenary_random_stroll",
+										"dk:mercenary_time_from_start_go_home"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:mercenary_mode_in_home_time",
+										"dk:mercenary_trading"
+									]
+								},
+								"set_property": {
+									"dk:modes": "standing"
+								}
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 10,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 air"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 bread"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 baked_potato"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 potion"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_chicken"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_mutton"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_cod"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_porkchop"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_salmon"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_rabbit"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 cooked_beef"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 apple"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"queue_command": {
+									"command": [
+										"replaceitem entity @s slot.weapon.mainhand 0 carrot"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"dk:mercenary_mode_guard": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:weapons",
+							"operator": "==",
+							"subject": "self",
+							"value": "sword"
+						},
+						"add": {
+							"component_groups": [
+								"dk:mercenary_move",
+								"dk:mercenary_mode_sword",
+								"dk:mercenary_random_stroll",
+								"dk:mercenary_time_from_start_go_home"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:mercenary_sit",
+								"dk:mercenary_trading",
+								"dk:mercenary_mode_bow"
+							]
+						},
+						"queue_command": {
+							"command": [
+								"replaceitem entity @s slot.weapon.mainhand 0 air"
+							]
+						},
+						"set_property": {
+							"dk:modes": "standing",
+							"dk:states": "melee"
+						}
+					},
+					{
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:weapons",
+							"operator": "==",
+							"subject": "self",
+							"value": "hammer"
+						},
+						"add": {
+							"component_groups": [
+								"dk:mercenary_move",
+								"dk:mercenary_mode_hammer",
+								"dk:mercenary_random_stroll",
+								"dk:mercenary_time_from_start_go_home"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:mercenary_sit",
+								"dk:mercenary_trading",
+								"dk:mercenary_mode_bow"
+							]
+						},
+						"queue_command": {
+							"command": [
+								"replaceitem entity @s slot.weapon.mainhand 0 air"
+							]
+						},
+						"set_property": {
+							"dk:modes": "standing",
+							"dk:states": "melee"
+						}
+					}
+				]
+			},
+			"dk:mercenary_mode_melee": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:weapons",
+							"operator": "==",
+							"subject": "self",
+							"value": "sword"
+						},
+						"add": {
+							"component_groups": [
+								"dk:mercenary_mode_sword"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:mercenary_mode_bow"
+							]
+						},
+						"set_property": {
+							"dk:states": "melee"
+						}
+					},
+					{
+						"filters": {
+							"test": "enum_property",
+							"domain": "dk:weapons",
+							"operator": "==",
+							"subject": "self",
+							"value": "hammer"
+						},
+						"add": {
+							"component_groups": [
+								"dk:mercenary_mode_hammer"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"dk:mercenary_mode_bow"
+							]
+						},
+						"set_property": {
+							"dk:states": "melee"
+						}
+					}
+				]
+			},
+			"dk:mercenary_mode_bow": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_bow"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_shield",
+						"dk:mercenary_mode_sword",
+						"dk:mercenary_mode_hammer"
+					]
+				},
+				"set_property": {
+					"dk:states": "bow",
+					"dk:shield": "none"
+				}
+			},
+			"dk:mercenary_event_no_target": {
+				"set_property": {
+					"dk:target": "no_target",
+					"dk:shield": "none",
+					"dk:shield_cooldown": "no_cooldown"
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_shield",
+						"dk:mercenary_mode_no_shield"
+					]
+				}
+			},
+			"dk:mercenary_event_target": {
+				"set_property": {
+					"dk:target": "target"
+				}
+			},
+			"dk:mercenary_event_target_shield": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_shield"
+					]
+				},
+				"set_property": {
+					"dk:shield": "shield"
+				}
+			},
+			"dk:mercenary_event_mode_no_shield": {
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_shield"
+					]
+				},
+				"set_property": {
+					"dk:shield": "none"
+				}
+			},
+			"dk:mercenary_event_mode_shield": {
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_no_shield"
+					]
+				},
+				"set_property": {
+					"dk:shield_cooldown": "no_cooldown"
+				}
+			},
+			"dk:mercenary_event_mode_shieldless": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_no_shield"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_mode_shield"
+					]
+				},
+				"set_property": {
+					"dk:shield": "none",
+					"dk:shield_cooldown": "yes_cooldown"
+				},
+				"queue_command": {
+					"command": [
+						"playsound random.break @a[r=10] ~~~ 1 1"
+					]
+				}
+			},
+			"dk:mercenary_event_mode_sound": {
+				"queue_command": {
+					"command": [
+						"playsound item.shield.block @a[r=10] ~~~ 1 1"
+					]
+				}
+			},
+			"dk:mercenary_tame": {
+				"add": {
+					"component_groups": [
+						"dk:mercenary_mode_tamed",
+						"dk:mercenary_random_stroll",
+						"dk:mercenary_move"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:mercenary_trading",
+						"dk:mercenary_sit",
+						"dk:mercenary_mode_free",
+						"dk:mercenary_time_from_start_go_home",
+						"dk:mercenary_mode_go_home",
+						"dk:mercenary_mode_in_home_time"
+					]
+				},
+				"set_property": {
+					"dk:modes": "standing"
+				}
+			},
+			"dk:mercenary_event_mode_potion_hard": {
+				"add": {
+					"component_groups": [
+						"dk:potion_hard"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:potion_default",
+						"dk:mercenary_mode_hammer",
+						"dk:mercenary_mode_sword",
+						"dk:mercenary_mode_shield",
+						"dk:mercenary_mode_bow"
+					]
+				},
+				"set_property": {
+					"dk:potion": "potion_hard",
+					"dk:shield": "none",
+					"dk:states": "potion"
+				}
+			},
+			"dk:mercenary_event_mode_potion_cooldown": {
+				"add": {
+					"component_groups": [
+						"dk:potion_default",
+						"dk:mercenary_mode_bow"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:potion_hard"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"replaceitem entity @s slot.weapon.mainhand 0 bow"
+					]
+				},
+				"set_property": {
+					"dk:potion": "potion_cooldown",
+					"dk:states": "bow"
+				}
+			},
+			"dk:mercenary_event_mode_potion_default": {
+				"set_property": {
+					"dk:potion": "potion_default"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+{
+    "format_version": "1.20.50",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "otg:recipe_cosmetic_snowfox"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "BSB",
+            "KLK",
+            "WKW"
+        ],
+        "key": {
+            "B": {
+                "item": "minecraft:light_blue_wool"
+            },
+            "W": {
+                "item": "minecraft:white_wool"
+            },
+            "S": {
+                "item": "minecraft:snowball"
+            },
+            "L": {
+                "item": "minecraft:leather"
+            },
+            "K": {
+                "item": "minecraft:black_wool"
+            }
+        },
+        "result": {
+            "item": "otg:cosmetic_snowfox"
+        },
+        "unlock": [
+            {
+                "item": "minecraft:white_wool"
+            },
+            {
+                "item": "minecraft:snowball"
+            },
+            {
+                "item": "minecraft:leather"
+            }
+        ]
+    }
+}

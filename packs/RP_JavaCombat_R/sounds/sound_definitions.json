@@ -1,0 +1,74 @@
+{
+	"format_version": "1.17.0",
+	"sound_definitions": {
+		"critical_attack": {
+			"category": "player",
+			"sounds": [
+				{
+					"name": "sounds/critical_hit/0"
+				},
+				{
+					"name": "sounds/critical_hit/1"
+				},
+				{
+					"name": "sounds/critical_hit/2"
+				},
+				{
+					"name": "sounds/critical_hit/3"
+				},
+				{
+					"name": "sounds/critical_hit/4"
+				},
+				{
+					"name": "sounds/critical_hit/5"
+				}
+			]
+		},
+		"sweep_attack": {
+			"category": "player",
+			"sounds": [
+				{
+					"name": "sounds/sweeping_edge/0"
+				},
+				{
+					"name": "sounds/sweeping_edge/1"
+				},
+				{
+					"name": "sounds/sweeping_edge/2"
+				},
+				{
+					"name": "sounds/sweeping_edge/3"
+				},
+				{
+					"name": "sounds/sweeping_edge/4"
+				},
+				{
+					"name": "sounds/sweeping_edge/5"
+				},
+				{
+					"name": "sounds/sweeping_edge/6"
+				}
+			]
+		},
+		"sprint_attack": {
+			"sounds": [
+				{
+					"name": "sounds/knockback/0",
+					"volume": 0.9
+				},
+				{
+					"name": "sounds/knockback/1",
+					"volume": 0.9
+				},
+				{
+					"name": "sounds/knockback/2"
+				},
+				{
+					"name": "sounds/knockback/3",
+					"volume": 0.9
+				}
+			],
+			"category": "player"
+		}
+	}
+}

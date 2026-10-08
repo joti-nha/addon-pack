@@ -1,0 +1,78 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.starfall_star.spawn_fall": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2.75,
+			"bones": {
+				"starfall": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"2.75": [
+							0,
+							0,
+							1080
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"root": {
+					"position": {
+						"0.0": [
+							0,
+							1800,
+							0
+						],
+						"2.75": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.starfall_star.star_sword": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [
+							0,
+							345,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"starfall": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.5": [
+							0,
+							0,
+							725
+						]
+					}
+				}
+			}
+		}
+	}
+}

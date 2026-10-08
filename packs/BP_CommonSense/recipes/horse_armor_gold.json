@@ -1,0 +1,28 @@
+{
+	"format_version": "1.16",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:gold_horse_armor"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"  #",
+			"#A#",
+			"# #"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:gold_ingot"
+			},
+			"A": {
+				"item": "minecraft:leather"
+			}
+		},
+		"result": {
+			"item": "minecraft:golden_horse_armor",
+			"count": 1
+		}
+	}
+}

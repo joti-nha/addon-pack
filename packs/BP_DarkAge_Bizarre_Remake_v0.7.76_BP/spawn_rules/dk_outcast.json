@@ -1,0 +1,152 @@
+{
+	"format_version": "1.11.0",
+	"minecraft:spawn_rules": {
+		"description": {
+			"identifier": "dk:outcast",
+			"population_control": "pillager"
+		},
+		"conditions": [
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 7,
+					"adjust_for_weather": true
+				},
+				"minecraft:difficulty_filter": {
+					"min": "peaceful",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 1
+				},
+				"minecraft:density_limit": {
+					"surface": 1
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1
+				},
+				"minecraft:permute_type": [
+					{
+						"weight": 100,
+						"entity_type": "dk:outcast<dk:outcast_event_mode_profeta>"
+					}
+				],
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			},
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 7,
+					"adjust_for_weather": true
+				},
+				"minecraft:difficulty_filter": {
+					"min": "peaceful",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 1
+				},
+				"minecraft:density_limit": {
+					"surface": 1
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1
+				},
+				"minecraft:permute_type": [
+					{
+						"weight": 100,
+						"entity_type": "dk:outcast<dk:outcast_event_mode_profeta_sen>"
+					}
+				],
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			},
+			{
+				"minecraft:spawns_on_surface": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 7,
+					"adjust_for_weather": true
+				},
+				"minecraft:difficulty_filter": {
+					"min": "peaceful",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 1
+				},
+				"minecraft:density_limit": {
+					"surface": 1
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1
+				},
+				"minecraft:permute_type": [
+					{
+						"weight": 100,
+						"entity_type": "dk:outcast<dk:outcast_event_mode_profeta_un>"
+					}
+				],
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				}
+			},
+			{
+				"minecraft:spawns_underground": {},
+				"minecraft:brightness_filter": {
+					"min": 0,
+					"max": 7,
+					"adjust_for_weather": true
+				},
+				"minecraft:spawns_on_block_filter": [
+					"netherrack",
+					"soul_soil",
+					"crimson_nylium",
+					"warped_nylium",
+					"blackstone",
+					"basalt"
+				],
+				"minecraft:density_limit": {
+					"surface": 1,
+					"underground": 1
+				},
+				"minecraft:difficulty_filter": {
+					"min": "peaceful",
+					"max": "hard"
+				},
+				"minecraft:weight": {
+					"default": 1
+				},
+				"minecraft:herd": {
+					"min_size": 1,
+					"max_size": 1
+				},
+				"minecraft:permute_type": [
+					{
+						"weight": 100,
+						"entity_type": "dk:outcast<dk:outcast_event_mode_profeta_un>"
+					}
+				],
+				"minecraft:biome_filter": {
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "nether"
+				}
+			}
+		]
+	}
+}

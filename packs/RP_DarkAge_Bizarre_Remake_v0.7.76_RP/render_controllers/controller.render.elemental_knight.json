@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.elemental_knight": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"*": "material.glow"
+				},
+				{
+					"*": "material.glow2"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"storm": "query.health <= 60"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.21.90",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:trinket_bag"
+		},
+		"pattern": [
+			" 1 ",
+			"121",
+			"111"
+		],
+		"key": {
+			"1": {
+				"item": "minecraft:leather"
+			},
+			"2": {
+				"item": "mnra_cata:starfall"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:trinket_bag",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:sequence_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/structure_sequence_x_overgrown_jungle_tree"
+    },
+    "features": [
+      "ntk:mb/overgrown_jungle/structure_weight_x_overgrown_jungle_tree",
+      "minecraft:vines_feature"
+    ]
+  }
+}

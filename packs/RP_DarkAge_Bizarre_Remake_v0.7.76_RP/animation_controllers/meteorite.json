@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.meteorite.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"fire"
+					],
+					"particle_effects": [
+						{
+							"effect": "fire",
+							"locator": "fire_up"
+						},
+						{
+							"effect": "firefire",
+							"locator": "firefire_one"
+						},
+						{
+							"effect": "firefire",
+							"locator": "firefire_two"
+						},
+						{
+							"effect": "firefire",
+							"locator": "firefire_three"
+						},
+						{
+							"effect": "firefire",
+							"locator": "firefire_four"
+						},
+						{
+							"effect": "firefire",
+							"locator": "fire_five"
+						}
+					]
+				}
+			}
+		}
+	}
+}

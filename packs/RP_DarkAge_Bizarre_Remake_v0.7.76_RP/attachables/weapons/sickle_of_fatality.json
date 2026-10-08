@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "dk:sickle_of_fatality",
+			"materials": {
+				"default": "armor"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/plague/plague",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.sword_of_fatality"
+			},
+			"animations": {
+				"first_person": "animation.sword_of_fatality.first_person",
+				"3ra": "animation.sword_of_fatality.sword_of_fatality",
+				"sickle": "animation.sword_of_fatality.sickle"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sickle_of_fatality'"
+					},
+					{
+						"3ra": "!c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sickle_of_fatality'"
+					},
+					{
+						"sickle": "q.get_equipped_item_name == 'sickle_of_fatality'"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

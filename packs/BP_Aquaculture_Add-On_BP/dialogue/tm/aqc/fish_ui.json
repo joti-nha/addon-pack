@@ -1,0 +1,491 @@
+{
+	"format_version": "1.17.0",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "arapaima",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:arapaima.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:arapaima.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "atlantic_cod",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:atlantic_cod.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:atlantic_cod.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "bayad",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:bayad.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:bayad.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "sacramento_blackfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:sacramento_blackfish.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:sacramento_blackfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "bluegill",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:bluegill.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:bluegill.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "nile_tilapia",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:nile_tilapia.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:nile_tilapia.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "brown_shrooma",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:brown_shrooma.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:brown_shrooma.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "brown_trout",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:brown_trout.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:brown_trout.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "nile_perch",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:nile_perch.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:nile_perch.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "common_carp",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:common_carp.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:common_carp.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "blue_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:blue_catfish.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:blue_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "florida_gar",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:florida_gar.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:florida_gar.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "goldfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:goldfish.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:goldfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "largemouth_bass",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:largemouth_bass.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:largemouth_bass.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "minnow",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:minnow.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:minnow.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "muskellunge",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:muskellunge.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:muskellunge.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "yellow_perch",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:yellow_perch.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:yellow_perch.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "pink_salmon",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:pink_salmon.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:pink_salmon.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "black_piranha",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:black_piranha.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:black_piranha.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "american_pollock",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:american_pollock.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:american_pollock.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "rainbow_trout",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:rainbow_trout.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:rainbow_trout.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "red_grouper",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:red_grouper.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:red_grouper.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "red_shrooma",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:red_shrooma.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:red_shrooma.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "smallmouth_bass",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:smallmouth_bass.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:smallmouth_bass.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "synodontis",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:synodontis.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:synodontis.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "tambaqui",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:tambaqui.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:tambaqui.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "skipjack_tuna",
+				"npc_name": { "rawtext": [{"text":"§l"},{	"translate": "entity.tm_aqc:skipjack_tuna.name" }, {"text":"§r"} ]},
+				"text": {"rawtext": [{"translate": "tm_aqc:skipjack_tuna.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+			{
+				"scene_tag": "brown_bullhead",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:brown_bullhead.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:brown_bullhead.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "white_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:white_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:white_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "flathead_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:flathead_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:flathead_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "airbreathing_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:airbreathing_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:airbreathing_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "channel_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:channel_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:channel_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "sharptooth_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:sharptooth_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:sharptooth_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "bullhead_catfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:bullhead_catfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:bullhead_catfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "yellow_bullhead",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:yellow_bullhead.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:yellow_bullhead.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "atlantic_halibut",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:atlantic_halibut.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:atlantic_halibut.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "pacific_halibut",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:pacific_halibut.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:pacific_halibut.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "greenland_halibut",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:greenland_halibut.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:greenland_halibut.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "gizzard_shad",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:gizzard_shad.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:gizzard_shad.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "bamboo_spitter",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:bamboo_spitter.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:bamboo_spitter.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "white_crappie",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:white_crappie.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:white_crappie.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "black_crappie",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:black_crappie.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:black_crappie.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "pumpkinseed",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:pumpkinseed.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:pumpkinseed.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "redear_sunfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:redear_sunfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:redear_sunfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "green_sunfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:green_sunfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:green_sunfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "common_bream",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:common_bream.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:common_bream.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "spotted_bass",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:spotted_bass.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:spotted_bass.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "mud_sunfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:mud_sunfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:mud_sunfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "grass_pickerel",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:grass_pickerel.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:grass_pickerel.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "chain_pickerel",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:chain_pickerel.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:chain_pickerel.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "common_shiner",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:common_shiner.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:common_shiner.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "golden_shiner",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:golden_shiner.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:golden_shiner.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "warmouth",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:warmouth.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:warmouth.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "redfin_pickerel",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:redfin_pickerel.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:redfin_pickerel.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "striped_bass",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:striped_bass.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:striped_bass.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "yellow_walleye",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:yellow_walleye.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:yellow_walleye.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "sakurafin",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:sakurafin.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:sakurafin.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "blind_creeker",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:blind_creeker.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:blind_creeker.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "pink_shrimp",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:pink_shrimp.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:pink_shrimp.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "rusty_crayfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:rusty_crayfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:rusty_crayfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "devil_crayfish",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:devil_crayfish.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:devil_crayfish.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "american_lobster",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:american_lobster.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:american_lobster.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "giant_tiger_prawn",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:giant_tiger_prawn.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:giant_tiger_prawn.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			},
+
+			{
+				"scene_tag": "hard_clam",
+				"npc_name": { "rawtext": [{"text":"§l"},{"translate": "entity.tm_aqc:hard_clam.name"}, {"text":"§r"}]},
+				"text": {"rawtext": [{"translate": "tm_aqc:hard_clam.info"}]},
+				"buttons": [{"name": {"rawtext": [{"translate": "tm_aqc.form.button.back"}]},"commands": ["/execute as @initiator at @s[tag=!noback] run scriptevent tm_aqc:fish_cataloge"]}],
+				"on_close_commands": ["/event entity @e[type=tm_aqc:fish_ui, c=1] tm_aqc:despawn"]
+			}
+		]
+	}
+}

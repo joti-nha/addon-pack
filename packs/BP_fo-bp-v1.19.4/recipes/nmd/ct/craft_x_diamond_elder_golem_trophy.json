@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diamond_elder_golem_trophy"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "diamond_elder_golem_trophy",
+    "assume_symmetry": false,
+    "pattern": [
+      " T",
+      "TD"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:golden_elder_golem_trophy"
+      },
+      "D": {
+        "item": "minecraft:diamond_block"
+      }
+    },
+    "result": {
+      "item": "ntk:diamond_elder_golem_trophy",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:golden_elder_golem_trophy"
+      },
+      {
+        "item": "minecraft:diamond_block"
+      }
+    ]
+  }
+}

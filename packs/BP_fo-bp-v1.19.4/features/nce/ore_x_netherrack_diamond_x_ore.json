@@ -1,0 +1,18 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:nce/ore_x_netherrack_diamond_x_ore"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "ntk:netherrack_diamond_ore",
+        "may_replace": [
+          "ntk:heated_netherrack",
+          "minecraft:netherrack"
+        ]
+      }
+    ]
+  }
+}

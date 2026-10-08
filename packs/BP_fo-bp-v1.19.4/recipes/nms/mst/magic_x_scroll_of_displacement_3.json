@@ -1,0 +1,52 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:magic_x_scroll_of_displacement_3"
+    },
+    "priority": 1,
+    "tags": [ "magic_spells_table" ],
+    "group": "scroll_of_displacement_3",
+    "assume_symmetry": false,
+    "pattern": [
+      "#Q ",
+      "SES",
+      " S "
+    ],
+    "key": {
+      "#": {
+        "item": "ntk:empty_scroll"
+      },
+      "Q": {
+        "item": "ntk:void_quill"
+      },
+      "E": {
+        "item": "minecraft:ender_pearl"
+      },
+      "S": {
+        "item": "minecraft:slime_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:scroll_of_displacement_3",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:magic_spells_table"
+      },
+      {
+        "item": "ntk:empty_scroll"
+      },
+      {
+        "item": "ntk:void_quill"
+      },
+      {
+        "item": "minecraft:ender_pearl"
+      },
+      {
+        "item": "minecraft:slime_ball"
+      }
+    ]
+  }
+}

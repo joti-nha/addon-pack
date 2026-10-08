@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:written_book",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_name",
+              "name": "Jellyfish"
+            },
+            {
+              "function": "set_book_contents",
+              "title": "Guide Book #5",
+              "author": "Forsaken Odyssey",
+              "pages": [
+                "        §7Guide Book #5§r\n§lJellyfish§r\n§8MOB§r\n \n•§lVariants§r:\n -Baby Jellyfish\n -Medium Jellyfish\n -Large Jellyfish\n -Giant Jellyfish\n \n•§lRarity§r: Common\n \n•§lBehavior§r: Passive",
+                "•§lMob type§r: Animal, Aquatic\n \n•§lSpawns in§r: All oceans.\n \n•§lHealth§r:\n -§lBaby§r: 6\n -§lMedium§r: 10\n -§lLarge§r: 20\n -§lGiant§r: 40\n \n•§lKnockback resistance§r: 0.0\n \n•§lImmunities§r: §o(None)§r",
+                "•§lSwim speed§r: 0.1\n \n•§lBreathes in§r: Water\n \n•§lTempted by§r: Bottle of Plankton\n \n•§lBreed with§r: Jellyfish\n \n•§lBreed cooldown§r: 5:00\n \n•§lBreed items§r: Bottle of Plankton",
+                "•§lEgg laying§r: Jellyfish Polyp §o(1-4)§r\n \n•§lAging duration§r: 1:00:00\n \n•§lAging items§r:\n -Bottle of Plankton §o(100%)§r\n \n•§lCapturable using§r: Water Bucket",
+                "•§lPossible drops§r: Jellyfish Slime, XP Orbs.\n \n•§lThorns Defense§r:\n -§lBaby§r:\n  -§lDamage§r: 0\n -§lMedium§r:\n  -§lDamage§r: 1\n -§lLarge§r:\n  -§lDamage§r: 2\n -§lGiant§r:\n  -§lDamage§r: 2",
+                "•Can slowly regenerate their health when they underwater.\n \n•Can be dyed in 16 colors by interacting with dyes."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

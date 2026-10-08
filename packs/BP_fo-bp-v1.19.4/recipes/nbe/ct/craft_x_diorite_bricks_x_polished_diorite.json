@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diorite_bricks_x_polished_diorite"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "diorite_bricks",
+    "assume_symmetry": true,
+    "pattern": [
+      "AA",
+      "AA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:polished_diorite"
+      }
+    },
+    "result": {
+      "item": "ntk:diorite_bricks",
+      "count": 4
+    },
+    "unlock": [
+      {
+        "item": "minecraft:polished_diorite"
+      }
+    ]
+  }
+}

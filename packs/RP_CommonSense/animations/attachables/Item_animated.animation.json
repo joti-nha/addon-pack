@@ -1,0 +1,65 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bv.item_fpp": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						-45.75,
+						-1,
+						197.09
+					],
+					"position": [
+						-2,
+						-17,
+						1
+					],
+					"scale": 1.46
+				},
+				"root_item": {
+					"rotation": [
+						70.79552,
+						26.97398,
+						7.31161
+					],
+					"position": [
+						0,
+						16,
+						-8
+					]
+				}
+			}
+		},
+		"animation.bv.item_tpp": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"rotation": [
+						25,
+						10,
+						200
+					],
+					"position": [
+						3,
+						-0.15711,
+						-8.55526
+					],
+					"scale": 0.59
+				},
+				"root_item": {
+					"position": [
+						0,
+						24,
+						-8
+					],
+					"scale": [
+						0.6,
+						0.8,
+						0.6
+					]
+				}
+			}
+		}
+	}
+}

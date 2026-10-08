@@ -1,0 +1,129 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.outcast.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						{
+							"fe_one": "query.variant==1"
+						},
+						{
+							"fe_two": "query.variant==2"
+						},
+						{
+							"scary": "query.variant==3"
+						}
+					],
+					"transitions": [
+						{
+							"static": "query.variant==4"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"static": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"animations": [
+						{
+							"static": "query.variant==4"
+						},
+						{
+							"ride": "query.is_riding"
+						},
+						{
+							"chest": "query.is_chested"
+						},
+						{
+							"move": "variable.move_speed"
+						},
+						{
+							"torch": "query.is_illager_captain"
+						},
+						{
+							"torch_particle": "query.is_illager_captain"
+						},
+						{
+							"banner": "query.mark_variant==1||query.mark_variant==2||query.mark_variant==3"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant==1||query.variant==2||query.variant==3"
+						},
+						{
+							"sleep": "query.is_sleeping"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sleep": {
+					"animations": [
+						"sleep"
+					],
+					"transitions": [
+						{
+							"static": "!query.is_sleeping"
+						},
+						{
+							"default": "query.variant==1||query.variant==2||query.variant==3"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.outcast.look_at_target": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"look_at_target_default"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"swimming": "query.is_swimming"
+						}
+					]
+				},
+				"gliding": {
+					"animations": [
+						"look_at_target_gliding"
+					],
+					"transitions": [
+						{
+							"swimming": "query.is_swimming"
+						},
+						{
+							"default": "!query.is_gliding"
+						}
+					]
+				},
+				"swimming": {
+					"animations": [
+						"look_at_target_swimming"
+					],
+					"transitions": [
+						{
+							"gliding": "query.is_gliding"
+						},
+						{
+							"default": "!query.is_swimming"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "ntk:mb/overgrown_jungle/plant_x_large_fern_x_05_x_scatter"
+    },
+    "places_feature": "ntk:mb/overgrown_jungle/plant_x_large_fern_x_04_x_aggregate",
+    "project_input_to_floor": false,
+    "distribution": {
+      "iterations": 10.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -8, 8 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

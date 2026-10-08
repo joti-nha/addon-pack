@@ -1,0 +1,14 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"bv.silence": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/random/click",
+					"volume": 0.0
+				}
+			]
+		}
+	}
+}

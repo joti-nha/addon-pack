@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:scatter_feature": {
+		"description": {
+			"identifier": "dk:structures/paths_blocks_feature_mcstructure"
+		},
+		"iterations": "t.height=5+(q.noise(v.originz/5,v.originx/8))*8; return t.height;",
+		"x": {
+			"extent": [
+				0,
+				"t.height"
+			],
+			"distribution": "jittered_grid"
+		},
+		"z": {
+			"extent": [
+				0,
+				"t.height"
+			],
+			"distribution": "jittered_grid"
+		},
+		"y": "q.heightmap(v.worldx, v.worldz) -1",
+		"places_feature": "dk:structures/paths_blocks_weighted_random"
+	}
+}

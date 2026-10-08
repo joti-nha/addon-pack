@@ -1,0 +1,944 @@
+{
+	"resource_pack_name": "Aquaculture",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		
+		"tm_aqc_guide_book": {
+			"textures": "textures/tm/aqc/items/book"
+		},
+		
+		"tm_aqc_fishing_net": {
+			"textures": "textures/tm/aqc/items/tools/fishing_net"
+		},
+		
+		"tm_aqc_fishing_pot": {
+			"textures": "textures/tm/aqc/items/tools/fishing_pot"
+		},
+		"tm_aqc_bucket_arapaima": {
+			"textures": "textures/tm/aqc/items/buckets/arapaima"
+		},
+		"tm_aqc_bucket_atlantic_cod": {
+			"textures": "textures/tm/aqc/items/buckets/atlantic_cod"
+		},
+		"tm_aqc_bucket_atlantic_herring": {
+			"textures": "textures/tm/aqc/items/buckets/atlantic_herring"
+		},
+		"tm_aqc_bucket_bayad": {
+			"textures": "textures/tm/aqc/items/buckets/bayad"
+		},
+		"tm_aqc_bucket_sacramento_blackfish": {
+			"textures": "textures/tm/aqc/items/buckets/sacramento_blackfish"
+		},
+		"tm_aqc_bucket_bluegill": {
+			"textures": "textures/tm/aqc/items/buckets/bluegill"
+		},
+		"tm_aqc_bucket_nile_tilapia": {
+			"textures": "textures/tm/aqc/items/buckets/nile_tilapia"
+		},
+		"tm_aqc_bucket_brown_shrooma": {
+			"textures": "textures/tm/aqc/items/buckets/brown_shrooma"
+		},
+		"tm_aqc_bucket_brown_trout": {
+			"textures": "textures/tm/aqc/items/buckets/brown_trout"
+		},
+		"tm_aqc_bucket_nile_perch": {
+			"textures": "textures/tm/aqc/items/buckets/nile_perch"
+		},
+		"tm_aqc_bucket_common_carp": {
+			"textures": "textures/tm/aqc/items/buckets/common_carp"
+		},
+		"tm_aqc_bucket_blue_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/blue_catfish"
+		},
+		"tm_aqc_bucket_florida_gar": {
+			"textures": "textures/tm/aqc/items/buckets/florida_gar"
+		},
+		"tm_aqc_bucket_goldfish": {
+			"textures": "textures/tm/aqc/items/buckets/goldfish"
+		},
+		"tm_aqc_bucket_largemouth_bass": {
+			"textures": "textures/tm/aqc/items/buckets/largemouth_bass"
+		},
+		"tm_aqc_bucket_muskellunge": {
+			"textures": "textures/tm/aqc/items/buckets/muskellunge"
+		},
+		"tm_aqc_bucket_yellow_perch": {
+			"textures": "textures/tm/aqc/items/buckets/yellow_perch"
+		},
+		"tm_aqc_bucket_pink_salmon": {
+			"textures": "textures/tm/aqc/items/buckets/pink_salmon"
+		},
+		"tm_aqc_bucket_black_piranha": {
+			"textures": "textures/tm/aqc/items/buckets/black_piranha"
+		},
+		"tm_aqc_bucket_american_pollock": {
+			"textures": "textures/tm/aqc/items/buckets/american_pollock"
+		},
+		"tm_aqc_bucket_rainbow_trout": {
+			"textures": "textures/tm/aqc/items/buckets/rainbow_trout"
+		},
+		"tm_aqc_bucket_red_grouper": {
+			"textures": "textures/tm/aqc/items/buckets/red_grouper"
+		},
+		"tm_aqc_bucket_red_shrooma": {
+			"textures": "textures/tm/aqc/items/buckets/red_shrooma"
+		},
+		"tm_aqc_bucket_smallmouth_bass": {
+			"textures": "textures/tm/aqc/items/buckets/smallmouth_bass"
+		},
+		"tm_aqc_bucket_synodontis": {
+			"textures": "textures/tm/aqc/items/buckets/synodontis"
+		},
+		"tm_aqc_bucket_tambaqui": {
+			"textures": "textures/tm/aqc/items/buckets/tambaqui"
+		},
+		"tm_aqc_bucket_skipjack_tuna": {
+			"textures": "textures/tm/aqc/items/buckets/skipjack_tuna"
+		},
+		"tm_aqc_bucket_minnow": {
+			"textures": "textures/tm/aqc/items/buckets/minnow"
+		},
+		"tm_aqc_bucket_brown_bullhead": {
+			"textures": "textures/tm/aqc/items/buckets/brown_bullhead"
+		},
+		"tm_aqc_bucket_white_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/white_catfish"
+		},
+		"tm_aqc_bucket_flathead_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/flathead_catfish"
+		},
+		"tm_aqc_bucket_airbreathing_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/airbreathing_catfish"
+		},
+		"tm_aqc_bucket_channel_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/channel_catfish"
+		},
+		"tm_aqc_bucket_sharptooth_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/sharptooth_catfish"
+		},
+		"tm_aqc_bucket_bullhead_catfish": {
+			"textures": "textures/tm/aqc/items/buckets/bullhead_catfish"
+		},
+		"tm_aqc_bucket_yellow_bullhead": {
+			"textures": "textures/tm/aqc/items/buckets/yellow_bullhead"
+		},
+		"tm_aqc_bucket_atlantic_halibut": {
+			"textures": "textures/tm/aqc/items/buckets/atlantic_halibut"
+		},
+		"tm_aqc_bucket_pacific_halibut": {
+			"textures": "textures/tm/aqc/items/buckets/pacific_halibut"
+		},
+		"tm_aqc_bucket_greenland_halibut": {
+			"textures": "textures/tm/aqc/items/buckets/greenland_halibut"
+		},
+		"tm_aqc_bucket_gizzard_shad": {
+			"textures": "textures/tm/aqc/items/buckets/gizzard_shad"
+		},
+		"tm_aqc_bucket_bamboo_spitter": {
+			"textures": "textures/tm/aqc/items/buckets/bamboo_spitter"
+		},
+		"tm_aqc_bucket_white_crappie": {
+			"textures": "textures/tm/aqc/items/buckets/white_crappie"
+		},
+		"tm_aqc_bucket_black_crappie": {
+			"textures": "textures/tm/aqc/items/buckets/black_crappie"
+		},
+		"tm_aqc_bucket_pumpkinseed": {
+			"textures": "textures/tm/aqc/items/buckets/pumpkinseed"
+		},
+		"tm_aqc_bucket_redear_sunfish": {
+			"textures": "textures/tm/aqc/items/buckets/redear_sunfish"
+		},
+		"tm_aqc_bucket_green_sunfish": {
+			"textures": "textures/tm/aqc/items/buckets/green_sunfish"
+		},
+		"tm_aqc_bucket_common_bream": {
+			"textures": "textures/tm/aqc/items/buckets/common_bream"
+		},
+		"tm_aqc_bucket_spotted_bass": {
+			"textures": "textures/tm/aqc/items/buckets/spotted_bass"
+		},
+		"tm_aqc_bucket_mud_sunfish": {
+			"textures": "textures/tm/aqc/items/buckets/mud_sunfish"
+		},
+		"tm_aqc_bucket_grass_pickerel": {
+			"textures": "textures/tm/aqc/items/buckets/grass_pickerel"
+		},
+		"tm_aqc_bucket_chain_pickerel": {
+			"textures": "textures/tm/aqc/items/buckets/chain_pickerel"
+		},
+		"tm_aqc_bucket_common_shiner": {
+			"textures": "textures/tm/aqc/items/buckets/common_shiner"
+		},
+		"tm_aqc_bucket_golden_shiner": {
+			"textures": "textures/tm/aqc/items/buckets/golden_shiner"
+		},
+		"tm_aqc_bucket_warmouth": {
+			"textures": "textures/tm/aqc/items/buckets/warmouth"
+		},
+		"tm_aqc_bucket_redfin_pickerel": {
+			"textures": "textures/tm/aqc/items/buckets/redfin_pickerel"
+		},
+		"tm_aqc_bucket_striped_bass": {
+			"textures": "textures/tm/aqc/items/buckets/striped_bass"
+		},
+		"tm_aqc_bucket_yellow_walleye": {
+			"textures": "textures/tm/aqc/items/buckets/yellow_walleye"
+		},
+		"tm_aqc_bucket_sakurafin": {
+			"textures": "textures/tm/aqc/items/buckets/sakurafin"
+		},
+		"tm_aqc_bucket_blind_creeker": {
+			"textures": "textures/tm/aqc/items/buckets/blind_creeker"
+		},
+		"tm_aqc_bucket_pink_shrimp": {
+			"textures": "textures/tm/aqc/items/buckets/pink_shrimp"
+		},
+		"tm_aqc_bucket_rusty_crayfish": {
+			"textures": "textures/tm/aqc/items/buckets/rusty_crayfish"
+		},
+		"tm_aqc_bucket_devil_crayfish": {
+			"textures": "textures/tm/aqc/items/buckets/devil_crayfish"
+		},
+		"tm_aqc_bucket_american_lobster": {
+			"textures": "textures/tm/aqc/items/buckets/american_lobster"
+		},
+		"tm_aqc_bucket_giant_tiger_prawn": {
+			"textures": "textures/tm/aqc/items/buckets/giant_tiger_prawn"
+		},
+		"tm_aqc_bucket_hard_clam": {
+			"textures": "textures/tm/aqc/items/buckets/hard_clam"
+		},
+
+
+		
+		"tm_aqc_arapaima": {
+			"textures": "textures/tm/aqc/items/fish/arapaima"
+		},
+		"tm_aqc_atlantic_cod": {
+			"textures": "textures/tm/aqc/items/fish/atlantic_cod"
+		},
+		"tm_aqc_atlantic_herring": {
+			"textures": "textures/tm/aqc/items/fish/atlantic_herring"
+		},
+		"tm_aqc_bayad": {
+			"textures": "textures/tm/aqc/items/fish/bayad"
+		},
+		"tm_aqc_sacramento_blackfish": {
+			"textures": "textures/tm/aqc/items/fish/sacramento_blackfish"
+		},
+		"tm_aqc_bluegill": {
+			"textures": "textures/tm/aqc/items/fish/bluegill"
+		},
+		"tm_aqc_nile_tilapia": {
+			"textures": "textures/tm/aqc/items/fish/nile_tilapia"
+		},
+		"tm_aqc_brown_shrooma": {
+			"textures": "textures/tm/aqc/items/fish/brown_shrooma"
+		},
+		"tm_aqc_brown_trout": {
+			"textures": "textures/tm/aqc/items/fish/brown_trout"
+		},
+		"tm_aqc_nile_perch": {
+			"textures": "textures/tm/aqc/items/fish/nile_perch"
+		},
+		"tm_aqc_common_carp": {
+			"textures": "textures/tm/aqc/items/fish/common_carp"
+		},
+		"tm_aqc_blue_catfish": {
+			"textures": "textures/tm/aqc/items/fish/blue_catfish"
+		},
+		"tm_aqc_florida_gar": {
+			"textures": "textures/tm/aqc/items/fish/florida_gar"
+		},
+		"tm_aqc_goldfish": {
+			"textures": "textures/tm/aqc/items/fish/goldfish"
+		},
+		"tm_aqc_largemouth_bass": {
+			"textures": "textures/tm/aqc/items/fish/largemouth_bass"
+		},
+		"tm_aqc_muskellunge": {
+			"textures": "textures/tm/aqc/items/fish/muskellunge"
+		},
+		"tm_aqc_yellow_perch": {
+			"textures": "textures/tm/aqc/items/fish/yellow_perch"
+		},
+		"tm_aqc_pink_salmon": {
+			"textures": "textures/tm/aqc/items/fish/pink_salmon"
+		},
+		"tm_aqc_black_piranha": {
+			"textures": "textures/tm/aqc/items/fish/black_piranha"
+		},
+		"tm_aqc_american_pollock": {
+			"textures": "textures/tm/aqc/items/fish/american_pollock"
+		},
+		"tm_aqc_rainbow_trout": {
+			"textures": "textures/tm/aqc/items/fish/rainbow_trout"
+		},
+		"tm_aqc_red_grouper": {
+			"textures": "textures/tm/aqc/items/fish/red_grouper"
+		},
+		"tm_aqc_red_shrooma": {
+			"textures": "textures/tm/aqc/items/fish/red_shrooma"
+		},
+		"tm_aqc_smallmouth_bass": {
+			"textures": "textures/tm/aqc/items/fish/smallmouth_bass"
+		},
+		"tm_aqc_synodontis": {
+			"textures": "textures/tm/aqc/items/fish/synodontis"
+		},
+		"tm_aqc_tambaqui": {
+			"textures": "textures/tm/aqc/items/fish/tambaqui"
+		},
+		"tm_aqc_skipjack_tuna": {
+			"textures": "textures/tm/aqc/items/fish/skipjack_tuna"
+		},
+		"tm_aqc_minnow": {
+			"textures": "textures/tm/aqc/items/fish/minnow"
+		},
+		"tm_aqc_pink_shrimp": {
+			"textures": "textures/tm/aqc/items/fish/pink_shrimp"
+		},
+		"tm_aqc_rusty_crayfish": {
+			"textures": "textures/tm/aqc/items/fish/rusty_crayfish"
+		},
+		"tm_aqc_devil_crayfish": {
+			"textures": "textures/tm/aqc/items/fish/devil_crayfish"
+		},
+		"tm_aqc_american_lobster": {
+			"textures": "textures/tm/aqc/items/fish/american_lobster"
+		},
+		"tm_aqc_giant_tiger_prawn": {
+			"textures": "textures/tm/aqc/items/fish/giant_tiger_prawn"
+		},
+		"tm_aqc_brown_bullhead": {
+			"textures": "textures/tm/aqc/items/fish/brown_bullhead"
+		},
+		"tm_aqc_white_catfish": {
+			"textures": "textures/tm/aqc/items/fish/white_catfish"
+		},
+		"tm_aqc_flathead_catfish": {
+			"textures": "textures/tm/aqc/items/fish/flathead_catfish"
+		},
+		"tm_aqc_airbreathing_catfish": {
+			"textures": "textures/tm/aqc/items/fish/airbreathing_catfish"
+		},
+		"tm_aqc_channel_catfish": {
+			"textures": "textures/tm/aqc/items/fish/channel_catfish"
+		},
+		"tm_aqc_sharptooth_catfish": {
+			"textures": "textures/tm/aqc/items/fish/sharptooth_catfish"
+		},
+		"tm_aqc_bullhead_catfish": {
+			"textures": "textures/tm/aqc/items/fish/bullhead_catfish"
+		},
+		"tm_aqc_yellow_bullhead": {
+			"textures": "textures/tm/aqc/items/fish/yellow_bullhead"
+		},
+		"tm_aqc_atlantic_halibut": {
+			"textures": "textures/tm/aqc/items/fish/atlantic_halibut"
+		},
+		"tm_aqc_pacific_halibut": {
+			"textures": "textures/tm/aqc/items/fish/pacific_halibut"
+		},
+		"tm_aqc_greenland_halibut": {
+			"textures": "textures/tm/aqc/items/fish/greenland_halibut"
+		},
+		"tm_aqc_gizzard_shad": {
+			"textures": "textures/tm/aqc/items/fish/gizzard_shad"
+		},
+		"tm_aqc_bamboo_spitter": {
+			"textures": "textures/tm/aqc/items/fish/bamboo_spitter"
+		},
+		"tm_aqc_white_crappie": {
+			"textures": "textures/tm/aqc/items/fish/white_crappie"
+		},
+		"tm_aqc_black_crappie": {
+			"textures": "textures/tm/aqc/items/fish/black_crappie"
+		},
+		"tm_aqc_pumpkinseed": {
+			"textures": "textures/tm/aqc/items/fish/pumpkinseed"
+		},
+		"tm_aqc_redear_sunfish": {
+			"textures": "textures/tm/aqc/items/fish/redear_sunfish"
+		},
+		"tm_aqc_green_sunfish": {
+			"textures": "textures/tm/aqc/items/fish/green_sunfish"
+		},
+		"tm_aqc_common_bream": {
+			"textures": "textures/tm/aqc/items/fish/common_bream"
+		},
+		"tm_aqc_spotted_bass": {
+			"textures": "textures/tm/aqc/items/fish/spotted_bass"
+		},
+		"tm_aqc_mud_sunfish": {
+			"textures": "textures/tm/aqc/items/fish/mud_sunfish"
+		},
+		"tm_aqc_grass_pickerel": {
+			"textures": "textures/tm/aqc/items/fish/grass_pickerel"
+		},
+		"tm_aqc_chain_pickerel": {
+			"textures": "textures/tm/aqc/items/fish/chain_pickerel"
+		},
+		"tm_aqc_common_shiner": {
+			"textures": "textures/tm/aqc/items/fish/common_shiner"
+		},
+		"tm_aqc_golden_shiner": {
+			"textures": "textures/tm/aqc/items/fish/golden_shiner"
+		},
+		"tm_aqc_warmouth": {
+			"textures": "textures/tm/aqc/items/fish/warmouth"
+		},
+		"tm_aqc_redfin_pickerel": {
+			"textures": "textures/tm/aqc/items/fish/redfin_pickerel"
+		},
+		"tm_aqc_striped_bass": {
+			"textures": "textures/tm/aqc/items/fish/striped_bass"
+		},
+		"tm_aqc_yellow_walleye": {
+			"textures": "textures/tm/aqc/items/fish/yellow_walleye"
+		},
+		"tm_aqc_sakurafin": {
+			"textures": "textures/tm/aqc/items/fish/sakurafin"
+		},
+		"tm_aqc_blind_creeker": {
+			"textures": "textures/tm/aqc/items/fish/blind_creeker"
+		},
+		"tm_aqc_hard_clam": {
+			"textures": "textures/tm/aqc/items/fish/hard_clam"
+		},
+
+
+
+
+		"tm_aqc_iron_fishing_rod": {
+			"textures": "textures/tm/aqc/items/tools/iron_fishing_rod_uncast"
+		},
+		"tm_aqc_gold_fishing_rod": {
+			"textures": "textures/tm/aqc/items/tools/gold_fishing_rod_uncast"
+		},
+		"tm_aqc_diamond_fishing_rod": {
+			"textures": "textures/tm/aqc/items/tools/diamond_fishing_rod_uncast"
+		},
+		"tm_aqc_netherite_fishing_rod": {
+			"textures": "textures/tm/aqc/items/tools/netherite_fishing_rod_uncast"
+		},
+		"tm_aqc_neptunium_fishing_rod": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_fishing_rod_uncast"
+		},
+		"tm_aqc_iron_fillet_knife": {
+			"textures": "textures/tm/aqc/items/tools/iron_fillet_knife"
+		},
+		"tm_aqc_gold_fillet_knife": {
+			"textures": "textures/tm/aqc/items/tools/gold_fillet_knife"
+		},
+		"tm_aqc_diamond_fillet_knife": {
+			"textures": "textures/tm/aqc/items/tools/diamond_fillet_knife"
+		},
+		"tm_aqc_netherite_fillet_knife": {
+			"textures": "textures/tm/aqc/items/tools/netherite_fillet_knife"
+		},
+		"tm_aqc_neptunium_fillet_knife": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_fillet_knife"
+		},
+
+		"tm_aqc_fillet_raw": {
+			"textures": "textures/tm/aqc/items/food/fillet_raw"
+		},
+		"tm_aqc_fillet_cooked": {
+			"textures": "textures/tm/aqc/items/food/fillet_cooked"
+		},
+		"tm_aqc_shrimp_raw": {
+			"textures": "textures/tm/aqc/items/food/shrimp_raw"
+		},
+		"tm_aqc_shrimp_cooked": {
+			"textures": "textures/tm/aqc/items/food/shrimp_cooked"
+		},
+		"tm_aqc_lobster_raw": {
+			"textures": "textures/tm/aqc/items/food/lobster_raw"
+		},
+		"tm_aqc_lobster_cooked": {
+			"textures": "textures/tm/aqc/items/food/lobster_cooked"
+		},
+		"tm_aqc_crayfish_raw": {
+			"textures": "textures/tm/aqc/items/food/crayfish_raw"
+		},
+		"tm_aqc_crayfish_cooked": {
+			"textures": "textures/tm/aqc/items/food/crayfish_cooked"
+		},
+		"tm_aqc_clam_raw": {
+			"textures": "textures/tm/aqc/items/food/clam_raw"
+		},
+		"tm_aqc_clam_cooked": {
+			"textures": "textures/tm/aqc/items/food/clam_cooked"
+		},
+
+		"tm_aqc_clam_chowder": {
+			"textures": "textures/tm/aqc/items/food/stew/clam_chowder"
+		},
+		"tm_aqc_fish_chowder": {
+			"textures": "textures/tm/aqc/items/food/stew/fish_chowder"
+		},
+		"tm_aqc_green_juice": {
+			"textures": "textures/tm/aqc/items/food/stew/green_juice"
+		},
+		"tm_aqc_gumbo": {
+			"textures": "textures/tm/aqc/items/food/stew/gumbo"
+		},
+		"tm_aqc_lobster_bisque": {
+			"textures": "textures/tm/aqc/items/food/stew/lobster_bisque"
+		},
+		"tm_aqc_stone_soup": {
+			"textures": "textures/tm/aqc/items/food/stew/stone_soup"
+		},
+		"tm_aqc_super_mushroom_stew": {
+			"textures": "textures/tm/aqc/items/food/stew/super_mushroom_stew"
+		},
+		"tm_aqc_turtle_soup": {
+			"textures": "textures/tm/aqc/items/food/stew/turtle_soup"
+		},
+		"tm_aqc_garbage_goulash": {
+			"textures": "textures/tm/aqc/items/food/stew/garbage_goulash"
+		},
+
+		"tm_aqc_clam_chowder_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/clam_chowder"
+		},
+		"tm_aqc_fish_chowder_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/fish_chowder"
+		},
+		"tm_aqc_green_juice_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/green_juice"
+		},
+		"tm_aqc_gumbo_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/gumbo"
+		},
+		"tm_aqc_lobster_bisque_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/lobster_bisque"
+		},
+		"tm_aqc_stone_soup_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/stone_soup"
+		},
+		"tm_aqc_super_mushroom_stew_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/super_mushroom_stew"
+		},
+		"tm_aqc_turtle_soup_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/turtle_soup"
+		},
+		"tm_aqc_garbage_goulash_bucket": {
+			"textures": "textures/tm/aqc/items/food/stew_bucket/garbage_goulash"
+		},
+
+		"tm_aqc_neptunium_boots": {
+			"textures": "textures/tm/aqc/items/armor/neptunium_boots"
+		},
+		"tm_aqc_neptunium_leggings": {
+			"textures": "textures/tm/aqc/items/armor/neptunium_leggings"
+		},
+		"tm_aqc_neptunium_chestplate": {
+			"textures": "textures/tm/aqc/items/armor/neptunium_chestplate"
+		},
+		"tm_aqc_neptunium_helmet": {
+			"textures": "textures/tm/aqc/items/armor/neptunium_helmet"
+		},
+		"tm_aqc_scale_boots": {
+			"textures": "textures/tm/aqc/items/armor/scale_boots"
+		},
+		"tm_aqc_scale_leggings": {
+			"textures": "textures/tm/aqc/items/armor/scale_leggings"
+		},
+		"tm_aqc_scale_chestplate": {
+			"textures": "textures/tm/aqc/items/armor/scale_chestplate"
+		},
+		"tm_aqc_scale_helmet": {
+			"textures": "textures/tm/aqc/items/armor/scale_helmet"
+		},
+		"tm_aqc_scale_boots_dyed": {
+			"textures": "textures/tm/aqc/items/armor/scale_boots_dyed"
+		},
+		"tm_aqc_scale_leggings_dyed": {
+			"textures": "textures/tm/aqc/items/armor/scale_leggings_dyed"
+		},
+		"tm_aqc_scale_chestplate_dyed": {
+			"textures": "textures/tm/aqc/items/armor/scale_chestplate_dyed"
+		},
+		"tm_aqc_scale_helmet_dyed": {
+			"textures": "textures/tm/aqc/items/armor/scale_helmet_dyed"
+		},
+		"tm_aqc_neptunium_sword": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_sword"
+		},
+		"tm_aqc_neptunium_pickaxe": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_pickaxe"
+		},
+		"tm_aqc_neptunium_axe": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_axe"
+		},
+		"tm_aqc_neptunium_shovel": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_shovel"
+		},
+		"tm_aqc_neptunium_hoe": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_hoe"
+		},
+		"tm_aqc_neptunium_scale": {
+			"textures": "textures/tm/aqc/items/neptunium_scale"
+		},
+
+		"tm_aqc_scale": {
+			"textures": "textures/tm/aqc/items/scale"
+		},
+		"tm_aqc_pin_bone": {
+			"textures": "textures/tm/aqc/items/pin_bone"
+		},
+		"tm_aqc_pearl": {
+			"textures": "textures/tm/aqc/items/pearl"
+		},
+		"tm_aqc_gold_pearl": {
+			"textures": "textures/tm/aqc/items/gold_pearl"
+		},
+		"tm_aqc_black_pearl": {
+			"textures": "textures/tm/aqc/items/black_pearl"
+		},
+		"tm_aqc_shell_piece": {
+			"textures": "textures/tm/aqc/items/shell_piece"
+		},
+
+		"tm_aqc_bait_worm": {
+			"textures": "textures/tm/aqc/items/bait/worm"
+		},
+		"tm_aqc_bait_slime_worm": {
+			"textures": "textures/tm/aqc/items/bait/slime_worm"
+		},
+		"tm_aqc_bait_slime_minnow": {
+			"textures": "textures/tm/aqc/items/bait/slime_minnow"
+		},
+		"tm_aqc_bait_slime_shad": {
+			"textures": "textures/tm/aqc/items/bait/slime_shad"
+		},
+		"tm_aqc_bait_slime_shiner": {
+			"textures": "textures/tm/aqc/items/bait/slime_shiner"
+		},
+		"tm_aqc_bait_slime_spitter": {
+			"textures": "textures/tm/aqc/items/bait/slime_spitter"
+		},
+		"tm_aqc_bait_slime_crayfish": {
+			"textures": "textures/tm/aqc/items/bait/slime_crayfish"
+		},
+		"tm_aqc_bait_slime_shrimp": {
+			"textures": "textures/tm/aqc/items/bait/slime_shrimp"
+		},
+		"tm_aqc_bait_leech": {
+			"textures": "textures/tm/aqc/items/bait/leech"
+		},
+		"tm_aqc_bait_gold_worm": {
+			"textures": "textures/tm/aqc/items/bait/gold_worm"
+		},
+		"tm_aqc_bait_magnet": {
+			"textures": "textures/tm/aqc/items/bait/magnet"
+		},
+		"tm_aqc_bait_gold_magnet": {
+			"textures": "textures/tm/aqc/items/bait/gold_magnet"
+		},
+		"tm_aqc_bait_spinner": {
+			"textures": "textures/tm/aqc/items/bait/spinner"
+		},
+
+
+
+		"tm_aqc_hook_creeper": {
+			"textures": "textures/tm/aqc/items/hooks/creeper"
+		},
+		"tm_aqc_hook_diamond": {
+			"textures": "textures/tm/aqc/items/hooks/diamond"
+		},
+		"tm_aqc_hook_double": {
+			"textures": "textures/tm/aqc/items/hooks/double"
+		},
+		"tm_aqc_hook_glow": {
+			"textures": "textures/tm/aqc/items/hooks/glow"
+		},
+		"tm_aqc_hook_gold": {
+			"textures": "textures/tm/aqc/items/hooks/gold"
+		},
+		"tm_aqc_hook_heavy": {
+			"textures": "textures/tm/aqc/items/hooks/heavy"
+		},
+		"tm_aqc_hook_iron": {
+			"textures": "textures/tm/aqc/items/hooks/iron"
+		},
+		"tm_aqc_hook_light": {
+			"textures": "textures/tm/aqc/items/hooks/light"
+		},
+		"tm_aqc_hook_neptunium": {
+			"textures": "textures/tm/aqc/items/hooks/neptunium"
+		},
+		"tm_aqc_hook_note": {
+			"textures": "textures/tm/aqc/items/hooks/note"
+		},
+		"tm_aqc_hook_redstone": {
+			"textures": "textures/tm/aqc/items/hooks/redstone"
+		},
+		"tm_aqc_hook_essence": {
+			"textures": "textures/tm/aqc/items/hooks/essence"
+		},
+
+
+		"tm_aqc_potato_bobber": {
+			"textures": "textures/tm/aqc/items/bobber/potato"
+		},
+		"tm_aqc_basic_bobber_black": {
+			"textures": "textures/tm/aqc/items/bobber/basic/black"
+		},
+		"tm_aqc_basic_bobber_blue": {
+			"textures": "textures/tm/aqc/items/bobber/basic/blue"
+		},
+		"tm_aqc_basic_bobber_brown": {
+			"textures": "textures/tm/aqc/items/bobber/basic/brown"
+		},
+		"tm_aqc_basic_bobber_cyan": {
+			"textures": "textures/tm/aqc/items/bobber/basic/cyan"
+		},
+		"tm_aqc_basic_bobber_gray": {
+			"textures": "textures/tm/aqc/items/bobber/basic/gray"
+		},
+		"tm_aqc_basic_bobber_green": {
+			"textures": "textures/tm/aqc/items/bobber/basic/green"
+		},
+		"tm_aqc_basic_bobber_light_blue": {
+			"textures": "textures/tm/aqc/items/bobber/basic/light_blue"
+		},
+		"tm_aqc_basic_bobber_light_gray": {
+			"textures": "textures/tm/aqc/items/bobber/basic/light_gray"
+		},
+		"tm_aqc_basic_bobber_lime": {
+			"textures": "textures/tm/aqc/items/bobber/basic/lime"
+		},
+		"tm_aqc_basic_bobber_magenta": {
+			"textures": "textures/tm/aqc/items/bobber/basic/magenta"
+		},
+		"tm_aqc_basic_bobber_orange": {
+			"textures": "textures/tm/aqc/items/bobber/basic/orange"
+		},
+		"tm_aqc_basic_bobber_pink": {
+			"textures": "textures/tm/aqc/items/bobber/basic/pink"
+		},
+		"tm_aqc_basic_bobber_purple": {
+			"textures": "textures/tm/aqc/items/bobber/basic/purple"
+		},
+		"tm_aqc_basic_bobber_red": {
+			"textures": "textures/tm/aqc/items/bobber/basic/red"
+		},
+		"tm_aqc_basic_bobber_white": {
+			"textures": "textures/tm/aqc/items/bobber/basic/white"
+		},
+		"tm_aqc_basic_bobber_yellow": {
+			"textures": "textures/tm/aqc/items/bobber/basic/yellow"
+		},
+
+		"tm_aqc_feathered_bobber_black": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/black"
+		},
+		"tm_aqc_feathered_bobber_blue": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/blue"
+		},
+		"tm_aqc_feathered_bobber_brown": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/brown"
+		},
+		"tm_aqc_feathered_bobber_cyan": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/cyan"
+		},
+		"tm_aqc_feathered_bobber_gray": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/gray"
+		},
+		"tm_aqc_feathered_bobber_green": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/green"
+		},
+		"tm_aqc_feathered_bobber_light_blue": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/light_blue"
+		},
+		"tm_aqc_feathered_bobber_light_gray": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/light_gray"
+		},
+		"tm_aqc_feathered_bobber_lime": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/lime"
+		},
+		"tm_aqc_feathered_bobber_magenta": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/magenta"
+		},
+		"tm_aqc_feathered_bobber_orange": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/orange"
+		},
+		"tm_aqc_feathered_bobber_pink": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/pink"
+		},
+		"tm_aqc_feathered_bobber_purple": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/purple"
+		},
+		"tm_aqc_feathered_bobber_red": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/red"
+		},
+		"tm_aqc_feathered_bobber_white": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/white"
+		},
+		"tm_aqc_feathered_bobber_yellow": {
+			"textures": "textures/tm/aqc/items/bobber/feathered/yellow"
+		},
+
+		"tm_aqc_winged_bobber_black": {
+			"textures": "textures/tm/aqc/items/bobber/winged/black"
+		},
+		"tm_aqc_winged_bobber_blue": {
+			"textures": "textures/tm/aqc/items/bobber/winged/blue"
+		},
+		"tm_aqc_winged_bobber_brown": {
+			"textures": "textures/tm/aqc/items/bobber/winged/brown"
+		},
+		"tm_aqc_winged_bobber_cyan": {
+			"textures": "textures/tm/aqc/items/bobber/winged/cyan"
+		},
+		"tm_aqc_winged_bobber_gray": {
+			"textures": "textures/tm/aqc/items/bobber/winged/gray"
+		},
+		"tm_aqc_winged_bobber_green": {
+			"textures": "textures/tm/aqc/items/bobber/winged/green"
+		},
+		"tm_aqc_winged_bobber_light_blue": {
+			"textures": "textures/tm/aqc/items/bobber/winged/light_blue"
+		},
+		"tm_aqc_winged_bobber_light_gray": {
+			"textures": "textures/tm/aqc/items/bobber/winged/light_gray"
+		},
+		"tm_aqc_winged_bobber_lime": {
+			"textures": "textures/tm/aqc/items/bobber/winged/lime"
+		},
+		"tm_aqc_winged_bobber_magenta": {
+			"textures": "textures/tm/aqc/items/bobber/winged/magenta"
+		},
+		"tm_aqc_winged_bobber_orange": {
+			"textures": "textures/tm/aqc/items/bobber/winged/orange"
+		},
+		"tm_aqc_winged_bobber_pink": {
+			"textures": "textures/tm/aqc/items/bobber/winged/pink"
+		},
+		"tm_aqc_winged_bobber_purple": {
+			"textures": "textures/tm/aqc/items/bobber/winged/purple"
+		},
+		"tm_aqc_winged_bobber_red": {
+			"textures": "textures/tm/aqc/items/bobber/winged/red"
+		},
+		"tm_aqc_winged_bobber_white": {
+			"textures": "textures/tm/aqc/items/bobber/winged/white"
+		},
+		"tm_aqc_winged_bobber_yellow": {
+			"textures": "textures/tm/aqc/items/bobber/winged/yellow"
+		},
+
+		"tm_aqc_creeper_bobber_black": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/black"
+		},
+		"tm_aqc_creeper_bobber_blue": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/blue"
+		},
+		"tm_aqc_creeper_bobber_brown": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/brown"
+		},
+		"tm_aqc_creeper_bobber_cyan": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/cyan"
+		},
+		"tm_aqc_creeper_bobber_gray": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/gray"
+		},
+		"tm_aqc_creeper_bobber_green": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/green"
+		},
+		"tm_aqc_creeper_bobber_light_blue": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/light_blue"
+		},
+		"tm_aqc_creeper_bobber_light_gray": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/light_gray"
+		},
+		"tm_aqc_creeper_bobber_lime": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/lime"
+		},
+		"tm_aqc_creeper_bobber_magenta": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/magenta"
+		},
+		"tm_aqc_creeper_bobber_orange": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/orange"
+		},
+		"tm_aqc_creeper_bobber_pink": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/pink"
+		},
+		"tm_aqc_creeper_bobber_purple": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/purple"
+		},
+		"tm_aqc_creeper_bobber_red": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/red"
+		},
+		"tm_aqc_creeper_bobber_white": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/white"
+		},
+		"tm_aqc_creeper_bobber_yellow": {
+			"textures": "textures/tm/aqc/items/bobber/creeper/yellow"
+		},
+
+
+		"tm_aqc_sonar": {
+			"textures": "textures/tm/aqc/items/utility/sonar"
+		},
+		"tm_aqc_bait_bucket": {
+			"textures": "textures/tm/aqc/items/utility/bait_bucket"
+		},
+		"tm_aqc_fishing_basket": {
+			"textures": "textures/tm/aqc/items/utility/fishing_basket"
+		},
+		"tm_aqc_flippers": {
+			"textures": "textures/tm/aqc/items/utility/flippers"
+		},
+		"tm_aqc_snorkel": {
+			"textures": "textures/tm/aqc/items/utility/snorkel"
+		},
+		"tm_aqc_scanner": {
+			"textures": "textures/tm/aqc/items/utility/scanner"
+		},
+
+		"tm_aqc_algae": {
+			"textures": "textures/tm/aqc/items/fishing_loot/algae"
+		},
+		"tm_aqc_message_in_a_bottle": {
+			"textures": "textures/tm/aqc/items/fishing_loot/message_in_a_bottle"
+		},
+
+		"tm_aqc_iron_harpoon": {
+			"textures": "textures/tm/aqc/items/tools/iron_harpoon"
+		},
+		"tm_aqc_gold_harpoon": {
+			"textures": "textures/tm/aqc/items/tools/gold_harpoon"
+		},
+		"tm_aqc_diamond_harpoon": {
+			"textures": "textures/tm/aqc/items/tools/diamond_harpoon"
+		},
+		"tm_aqc_netherite_harpoon": {
+			"textures": "textures/tm/aqc/items/tools/netherite_harpoon"
+		},
+		"tm_aqc_neptunium_harpoon": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_harpoon"
+		},
+		"tm_aqc_iron_fishing_spear": {
+			"textures": "textures/tm/aqc/items/tools/iron_fishing_spear"
+		},
+		"tm_aqc_gold_fishing_spear": {
+			"textures": "textures/tm/aqc/items/tools/gold_fishing_spear"
+		},
+		"tm_aqc_diamond_fishing_spear": {
+			"textures": "textures/tm/aqc/items/tools/diamond_fishing_spear"
+		},
+		"tm_aqc_netherite_fishing_spear": {
+			"textures": "textures/tm/aqc/items/tools/netherite_fishing_spear"
+		},
+		"tm_aqc_neptunium_fishing_spear": {
+			"textures": "textures/tm/aqc/items/tools/neptunium_fishing_spear"
+		}
+		
+	}
+}

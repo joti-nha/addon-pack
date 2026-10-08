@@ -1,0 +1,249 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tm_aqc:pink_shrimp",
+        "is_spawnable": false,
+        "is_summonable": true,
+        "is_experimental": false,
+        "properties": {
+          "tm_aqc:outline": {
+            "type": "bool",
+            "default": false,
+            "client_sync": true
+          }
+        }
+      },
+      "component_groups": {
+        "tm_aqc:outline": {
+          "minecraft:timer": {
+            "time": 3,
+            "looping": true,
+            "time_down_event": {
+              "event": "tm_aqc:outline_off",
+              "target": "self"
+            }
+          }
+        },
+        "tm_aqc:despawn": { "minecraft:instant_despawn": {} },
+        "scale_small": {
+          "minecraft:scale": {
+            "value": 0.5
+          }          
+        },
+        "scale_normal": {
+          "minecraft:scale": {
+            "value": 1
+          }
+        },
+        "scale_large": {
+          "minecraft:scale": {
+            "value": 1.5
+          }
+        }
+      },
+  
+      "components": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "swing": true,
+              "transform_to_item": "tm_aqc:bucket_pink_shrimp",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "value": "minecraft:water_bucket"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "tm_aqc:despawn"
+              }
+            }
+          ]
+        },
+        "minecraft:health": {
+            "value": 4,
+            "max": 4
+          },
+        "minecraft:is_hidden_when_invisible": {},
+        "minecraft:experience_reward": {
+          "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+        },
+        "minecraft:type_family": {
+          "family": ["fish","crustacean", "tm_aqc_crustacean"]
+        },
+        "minecraft:collision_box": {
+          "width": 0.5,
+          "height": 0.5
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": [
+            "drowned"
+          ],
+          "seats": {
+            "position": [0, 0, -0.1]
+          }
+        },
+        "minecraft:breathable": {
+          "total_supply": 15,
+          "suffocate_time": 0,
+          "breathes_air": false,
+          "breathes_water": true
+        },
+        "minecraft:hurt_on_condition": {
+          "damage_conditions": [
+            {
+              "filters": {
+                "test": "in_lava",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+              },
+              "cause": "lava",
+              "damage_per_tick": 4
+            }
+          ]
+        },
+        "minecraft:movement": {
+          "value": 0.12
+        },
+        "minecraft:underwater_movement": {
+          "value": 0.12
+        },
+        "minecraft:navigation.generic": {
+          // Allows the mob to go through water
+          "is_amphibious": true,
+          "can_path_over_water": false,
+          "can_swim": true,
+          "can_walk": true,
+          "can_breach": false,
+          "can_sink": true
+        },
+        "minecraft:movement.sway": {
+          "sway_amplitude": 0.0
+        },
+        "minecraft:physics": {
+          "has_gravity": true
+        },
+        "minecraft:pushable": {
+          "is_pushable": true,
+          "is_pushable_by_piston": true
+        },
+        "minecraft:despawn": {
+          "despawn_from_distance": {
+            "min_distance": 32,
+            "max_distance": 40
+          }
+        },
+        "minecraft:behavior.avoid_mob_type": {
+          "priority": 1,
+          "entity_types": [
+            {
+              "filters": {
+                "any_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "player"
+                  },
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "axolotl"
+                  }
+                ]
+              },
+              "max_dist": 3,
+              "max_flee": 10,
+              "walk_speed_multiplier": 1.5,
+              "sprint_speed_multiplier": 2.0
+            }
+          ]
+        },
+        "minecraft:behavior.swim_idle": {
+          "priority": 5,
+          "idle_time": 5.0,
+          "success_rate": 0.1
+        },
+  
+        "minecraft:behavior.random_swim": {
+          // Randomly selects points to go to, even in water
+          "speed_multiplier": 1.0,
+          "priority": 3,
+          "xz_dist": 16,
+          "y_dist": 4,
+          "interval": 0
+        },
+  
+        "minecraft:behavior.swim_wander": {
+          "priority": 4,
+          "interval": 0.0166,
+          "look_ahead": 5.0,
+          "speed_multiplier": 0.014,
+          "wander_time": 5.0
+        },
+        "minecraft:nameable": {},
+        "minecraft:conditional_bandwidth_optimization": {}
+      },
+  
+      "events": {
+        "tm_aqc:outline": {
+          "add": {
+            "component_groups": ["tm_aqc:outline"]
+          },
+          "set_property": {
+            "tm_aqc:outline": true
+          }
+        },
+        "tm_aqc:outline_off": {
+          "remove": {
+            "component_groups": ["tm_aqc:outline"]
+          },
+          "set_property": {
+            "tm_aqc:outline": false
+          }
+        },
+        "tm_aqc:despawn": {
+          "add": { "component_groups": ["tm_aqc:despawn"] }
+        },
+        "tm_aqc:scale_normal": {
+          "add": { "component_groups": ["tm_aqc:scale_normal"] }
+        },
+        "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 15,
+            "add": {
+              "component_groups": ["scale_small"]
+            }
+          },
+          {
+            "weight": 80,
+            "add": {
+              "component_groups": ["scale_normal"]
+            }
+          },
+          {
+            "weight": 5,
+            "add": {
+              "component_groups": ["scale_large"]
+            }
+          }
+        ]
+      }
+      }
+    }
+  }
+  

@@ -1,0 +1,230 @@
+// Forsaken Odyssey:
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "item",
+          "name": "minecraft:wooden_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 35,
+          "type": "item",
+          "name": "minecraft:stone_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "minecraft:golden_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "ntk:brass_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "ntk:bronze_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "minecraft:copper_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "ntk:tin_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 25,
+          "type": "item",
+          "name": "ntk:zinc_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 20,
+          "type": "item",
+          "name": "minecraft:iron_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        },
+        {
+          "weight": 1,
+          "type": "item",
+          "name": "minecraft:diamond_hoe",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_damage",
+              "damage": {
+                "min": 0.1,
+                "max": 0.2
+              }
+            },
+            {
+              "function": "enchant_random_gear",
+              "chance": 0.1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_corrupted_stone_bricks_x_clay"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "SC"
+    ],
+    "key": {
+      "S": {
+        "item": "ntk:cracked_corrupted_stone_bricks"
+      },
+      "C": {
+        "item": "minecraft:clay_ball"
+      }
+    },
+    "result": {
+      "item": "ntk:corrupted_stone_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:cracked_corrupted_stone_bricks"
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "ntk:blast_x_deepslate_bricks"
+    },
+    "tags": [ "blast_furnace" ],
+    "input": {
+      "item": "minecraft:deepslate_bricks"
+    },
+    "output": {
+      "item": "minecraft:cracked_deepslate_bricks",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:deepslate_bricks"
+      }
+    ]
+  }
+}

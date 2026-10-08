@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "ntk:active_heated_netherrack_particle",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particles/nce/ntk_active_heated_netherrack_particle"
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true,
+				"velocity": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 30,
+				"max_particles": 50
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "Math.random(0.1, 1.2)"
+			},
+			"minecraft:particle_initial_speed": "Math.random(5, 35)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [0, "Math.random(5,75)", 0],
+				"linear_drag_coefficient": "Math.random(10, 20)"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [0.1, 0.15],
+				"facing_camera_mode": "lookat_xyz",
+				"uv": {
+					"texture_width": 8,
+					"texture_height": 8,
+					"uv": [0, 0],
+					"uv_size": [8, 8]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_iron_crate_key"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "iron_crate_key",
+    "assume_symmetry": false,
+    "pattern": [
+      "  N",
+      " N ",
+      "I  "
+    ],
+    "key": {
+      "N": {
+        "item": "minecraft:iron_nugget"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:iron_crate_key",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_nugget"
+      },
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/ruin_road_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/ruin_road_five",
+				10
+			],
+			[
+				"dk:structures/ruin_road_four",
+				20
+			],
+			[
+				"dk:structures/ruin_road_three",
+				30
+			],
+			[
+				"dk:structures/ruin_road_two",
+				40
+			],
+			[
+				"dk:structures/ruin_road_one",
+				50
+			]
+		]
+	}
+}

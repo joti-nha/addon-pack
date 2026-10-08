@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_giant_moa_awake",
+    "heightmap": "ntk_giant_moa_height",
+    "metalness_emissive_roughness": "ntk_giant_moa_mer"
+  }
+}

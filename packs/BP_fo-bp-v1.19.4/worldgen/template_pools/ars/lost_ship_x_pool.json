@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:ars/lost_ship_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "ars/lost_ship_01",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/decorated_pot_x_processor"
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "ars/lost_ship_02",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/decorated_pot_x_processor"
+        }
+      }
+    ]
+  }
+}

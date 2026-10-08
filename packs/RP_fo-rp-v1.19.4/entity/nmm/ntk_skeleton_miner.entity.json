@@ -1,0 +1,97 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "ntk:skeleton_miner",
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "ntk_spawn_egg_skeleton_miner"
+      },
+      "render_controllers": [
+        "controller.render.entity.ntk_skeleton_miner"
+      ],
+      "geometry": {
+        "default": "geometry.entity.ntk_skeleton_miner"
+      },
+      "materials": {
+        "default": "ntk_entity_emissive_alpha"
+      },
+      "textures": {
+        "variant_0_skeleton_miner": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner",
+        "variant_1_skeleton_miner_with_coal": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_coal",
+        "variant_2_skeleton_miner_with_copper": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_copper",
+        "variant_3_skeleton_miner_with_iron": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_iron",
+        "variant_4_skeleton_miner_with_gold": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_gold",
+        "variant_5_skeleton_miner_with_redstone": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_redstone",
+        "variant_6_skeleton_miner_with_lapis_lazuli": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_lapis_lazuli",
+        "variant_7_skeleton_miner_with_amethyst": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_amethyst",
+        "variant_8_skeleton_miner_with_emerald": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_emerald",
+        "variant_9_skeleton_miner_with_diamond": "textures/entity/nmm/skeleton_miner/ntk_skeleton_miner_diamond"
+      },
+      "animations": {
+        "controller_attack": "controller.animation.entity.ntk_skeleton_miner.attack",
+        "controller_attack_crossbow": "controller.animation.entity.ntk_skeleton_miner.attack_crossbow",
+        "controller_general": "controller.animation.entity.ntk_skeleton_miner.general",
+        "controller_look_at_target": "controller.animation.entity.ntk_skeleton_miner.look_at_target",
+        "controller_movement": "controller.animation.entity.ntk_skeleton_miner.movement",
+        "attack_bow": "animation.entity.ntk_skeleton_miner.attack_bow",
+        "attack_crossbow_hold": "animation.entity.ntk_skeleton_miner.attack_crossbow_hold",
+        "attack_crossbow_charge": "animation.entity.ntk_skeleton_miner.attack_crossbow_charge",
+        "attack_hand": "animation.entity.ntk_skeleton_miner.attack_hand",
+        "attack_magic_staff": "animation.entity.ntk_skeleton_miner.attack_magic_staff",
+        "attack_melee": "animation.entity.ntk_skeleton_miner.attack_melee",
+        "attack_trident": "animation.entity.ntk_skeleton_miner.attack_trident",
+        "attack_trident.rotations": "animation.entity.ntk_skeleton_miner.attack_trident.rotations",
+        "attack.rotations": "animation.entity.ntk_skeleton_miner.attack.rotations",
+        "base_pose": "animation.entity.ntk_skeleton_miner.base_pose",
+        "bobbing": "animation.entity.ntk_skeleton_miner.bobbing",
+        "charging": "animation.entity.ntk_skeleton_miner.charging",
+        "damage_nearby_mobs": "animation.entity.ntk_skeleton_miner.damage_nearby_mobs",
+        "holding": "animation.entity.ntk_skeleton_miner.holding",
+        "look_at_target_default": "animation.entity.ntk_skeleton_miner.look_at_target_default",
+        "look_at_target_gliding": "animation.entity.ntk_skeleton_miner.look_at_target_gliding",
+        "look_at_target_swimming": "animation.entity.ntk_skeleton_miner.look_at_target_swimming",
+        "riding": "animation.entity.ntk_skeleton_miner.riding",
+        "sitting": "animation.entity.ntk_skeleton_miner.sitting",
+        "sleeping": "animation.entity.ntk_skeleton_miner.sleeping",
+        "sneaking": "animation.entity.ntk_skeleton_miner.sneaking",
+        "swimming": "animation.entity.ntk_skeleton_miner.swimming",
+        "use_item_progress": "animation.entity.ntk_skeleton_miner.use_item_progress",
+        "walking": "animation.entity.ntk_skeleton_miner.walking"
+      },
+      "scripts": {
+        "animate": [
+          "controller_attack",
+          "controller_look_at_target",
+          "controller_movement",
+          "bobbing",
+          {
+            "attack_trident": "variable.is_brandishing_spear"
+          },
+          {
+            "damage_nearby_mobs": "variable.damage_nearby_mobs"
+          },
+          {
+            "riding": "query.is_riding"
+          },
+          {
+            "sneaking": "query.is_sneaking"
+          },
+          {
+            "swimming": "variable.swim_amount > 0.0"
+          },
+          {
+            "use_item_progress": "( variable.use_item_interval_progress > 0.0 ) || ( variable.use_item_startup_progress > 0.0 )"
+          }
+        ],
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.attack_state = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+          "variable.attack_state2 = Math.sin(variable.attack_time * 180.0) * 57.3;",
+          "variable.attack = Math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3;",
+          "variable.attack2 = Math.sin(variable.attack_time * 180.0) * 57.3;"
+        ]
+      }
+    }
+  }
+}

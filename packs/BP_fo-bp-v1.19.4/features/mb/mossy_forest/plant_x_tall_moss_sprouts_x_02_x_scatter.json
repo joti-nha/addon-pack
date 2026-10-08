@@ -1,0 +1,25 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:scatter_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/plant_x_tall_moss_sprouts_x_02_x_scatter"
+    },
+    "places_feature": "ntk:mb/mossy_forest/plant_x_tall_moss_sprouts_x_01_x_singleblock",
+    "distribution": {
+      "iterations": 50.0,
+      "scatter_chance": 100.0,
+      "x": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      },
+      "y": {
+        "distribution": "uniform",
+        "extent": [ -8, 8 ]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [ -16, 16 ]
+      }
+    }
+  }
+}

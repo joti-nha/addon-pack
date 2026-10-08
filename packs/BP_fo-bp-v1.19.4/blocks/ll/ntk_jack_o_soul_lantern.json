@@ -1,0 +1,158 @@
+{
+  "format_version": "1.26.40",
+  "minecraft:block": {
+    "description": {
+      "identifier": "ntk:jack_o_soul_lantern",
+      "menu_category": {
+				"category": "items",
+				"group": "minecraft:items",
+				"is_hidden_in_commands": false
+			},
+			"traits": {
+        "minecraft:placement_direction": {
+          "enabled_states": [ "minecraft:cardinal_direction" ],
+          "y_rotation_offset": 180
+        }
+			}
+    },
+    "components": {
+      "minecraft:display_name": "%tile.ntk.jack_o_soul_lantern.name",
+      "minecraft:geometry": {
+        "identifier": "geometry.block.ntk_cube"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "ntk_jack_o_soul_lantern",
+          "render_method": "opaque",
+          "tint_method": "none",
+          "ambient_occlusion": 0.0,
+					"face_dimming": false,
+					"isotropic": false
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "geometry.block.ntk_cube"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "ntk_jack_o_soul_lantern",
+            "render_method": "opaque",
+            "tint_method": "none",
+            "ambient_occlusion": 0.0,
+            "face_dimming": false,
+            "isotropic": false
+          }
+        }
+      },
+      "minecraft:destruction_particles": {
+        "texture": "ntk_jack_o_soul_lantern",
+        "tint_method": "none",
+        "particle_count": 100
+      },
+      "minecraft:map_color": {
+        "tint_method": "none",
+        "color": "#cd9260"
+      },
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "can_contain_liquid": false,
+            "use_liquid_clipping": false,
+            "liquid_type": "water",
+            "on_liquid_touches": "blocking",
+            "stops_liquid_flowing_from_direction": [
+              "up", "down", "north", "south", "east", "west"
+            ]
+          }
+        ]
+      },
+      "minecraft:collision_box": [
+        {
+          "origin": [ -8, 0, -8 ],
+          "size": [ 16, 16, 16 ]
+        }
+      ],
+      "minecraft:selection_box": {
+        "origin": [ -8, 0, -8 ],
+        "size": [ 16, 16, 16 ]
+      },
+      "minecraft:light_dampening": 15,
+      "minecraft:light_emission": 10,
+      "minecraft:friction": 0.4,
+      "minecraft:flammable": false,
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 5.0
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 1.0
+      },
+      "minecraft:chest_obstruction": {
+        "obstruction_rule": "shape"
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.bassattack",
+        "up": "note.bassattack"
+      },
+      "minecraft:movable": {
+        "movement_type": "push_pull"
+      },
+      "minecraft:precipitation_interactions": {
+        "precipitation_behavior": "obstruct_rain_accumulate_snow"
+      },
+      "minecraft:redstone_conductivity": {
+        "allows_wire_to_step_down": true,
+        "redstone_conductor": true
+      },
+      "minecraft:transformation": {
+        "rotation": [ 0, 0, 0 ]
+      },
+      "minecraft:loot": "loot_tables/ll/blocks/ntk_jack_o_soul_lantern.json",
+      "minecraft:tags": [
+        "ntk:blocks",
+        "ntk:axe_tool_diggable",
+        "ntk:full_block",
+        "ntk:solid_block",
+        "ntk:lantern",
+        "ntk:soul_lantern",
+        "ntk:jack_o_soul_lantern",
+        
+        "minecraft:is_axe_item_destructible"
+      ]
+    },
+    "permutations": [
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'north'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 0, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'west'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 90, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'south'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, 180, 0 ]
+          }
+        }
+      },
+      {
+        "condition": "query.block_state('minecraft:cardinal_direction') == 'east'",
+        "components": {
+          "minecraft:transformation": {
+            "rotation": [ 0, -90, 0 ]
+          }
+        }
+      }
+    ]
+  }
+}

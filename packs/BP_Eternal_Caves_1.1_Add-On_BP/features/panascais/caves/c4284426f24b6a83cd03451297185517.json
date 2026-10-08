@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/c4284426f24b6a83cd03451297185517"},"places_block":"minecraft:mob_spawner","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"],"may_not_attach_to":{"bottom":["minecraft:air"]}}}

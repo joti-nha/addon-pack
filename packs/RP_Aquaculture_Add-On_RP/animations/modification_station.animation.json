@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.tm_aqc.modification_station.rot": {
+			"loop": true,
+			"bones": {
+				"table_root": {
+					"rotation": [0, "v.rot", 0]
+				}
+			}
+		},
+		"animation.tm_aqc.modification_station.placment": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [0, 0, -90],
+					"position": [-2, 0.5, -4]
+				}
+			}
+		}
+	}
+}

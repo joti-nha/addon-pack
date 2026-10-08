@@ -1,0 +1,39 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:verdant_sentinel_arm_summon",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/verdant_sentinel_texture"
+			},
+			"geometry": {
+				"default": "geometry.verdant_sentinel_arm_summon"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"attack": "animation.verdant_sentinel_arm_summon.attack"
+			},
+			"scripts": {
+				"animate": [
+					"attack"
+				]
+			},
+			"sound_effects": {
+				"feralbloom_awaken": "mob.large_impact"
+			},
+			"particle_effects": {
+				"large_impact": "mnra_cata:large_impact",
+				"verdant_crusher": "mnra_cata:verdant_crusher"
+			}
+		}
+	}
+}

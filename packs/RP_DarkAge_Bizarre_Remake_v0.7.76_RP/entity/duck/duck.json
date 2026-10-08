@@ -1,0 +1,48 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:duck",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/duck/duck",
+				"duck_two": "textures/entity/mobs/duck/duck_gradient"
+			},
+			"geometry": {
+				"default": "geometry.duck"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"look_at_target",
+					{
+						"baby": "query.is_baby"
+					}
+				]
+			},
+			"animations": {
+				"controller": "controller.animation.duck.controller",
+				"look_at_target": "controller.animation.duck.look_at_target",
+				"look_at_target_default": "animation.duck.look_at_target.default",
+				"look_at_target_gliding": "animation.duck.look_at_target.gliding",
+				"look_at_target_swimming": "animation.duck.look_at_target.swimming",
+				"static": "animation.duck.static",
+				"life": "animation.duck.life",
+				"falling": "animation.duck.falling",
+				"move": "animation.duck.move",
+				"baby": "animation.duck.baby_head",
+				"swimming": "animation.duck.swimming",
+				"swimming_move": "animation.duck.swimming_move",
+				"fly": "animation.duck.fly"
+			},
+			"render_controllers": [
+				"controller.render.duck"
+			],
+			"spawn_egg": {
+				"texture": "duck_spawn"
+			}
+		}
+	}
+}

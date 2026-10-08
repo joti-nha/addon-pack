@@ -1,0 +1,33 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "mnra_cata:infernum_helmet"
+		},
+		"pattern": [
+			"121",
+			"3 3"
+		],
+		"key": {
+			"1": {
+				"item": "mnra_cata:sun_fragment"
+			},
+			"2": {
+				"item": "mnra_cata:overloaded_solar_core"
+			},
+			"3": {
+				"item": "mnra_cata:infernal_ash"
+			}
+		},
+		"result": {
+			"item": "mnra_cata:infernum_helmet",
+			"count": 1
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"unlock": {
+			"context": "AlwaysUnlocked"
+		}
+	}
+}

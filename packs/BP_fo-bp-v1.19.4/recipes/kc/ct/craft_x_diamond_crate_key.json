@@ -1,0 +1,29 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diamond_crate_key"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "diamond_crate_key",
+    "assume_symmetry": true,
+    "pattern": [
+      "D"
+    ],
+    "key": {
+      "D": {
+        "item": "minecraft:diamond"
+      }
+    },
+    "result": {
+      "item": "ntk:diamond_crate_key",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      }
+    ]
+  }
+}

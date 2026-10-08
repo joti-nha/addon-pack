@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_emerald_x_emerald_powder"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "emerald",
+    "assume_symmetry": true,
+    "pattern": [
+      " E ",
+      "EQE",
+      " E "
+    ],
+    "key": {
+      "E": {
+        "item": "ntk:emerald_powder"
+      },
+      "Q": {
+        "item": "minecraft:quartz"
+      }
+    },
+    "result": {
+      "item": "minecraft:emerald",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:emerald_powder"
+      },
+      {
+        "item": "minecraft:quartz"
+      }
+    ]
+  }
+}

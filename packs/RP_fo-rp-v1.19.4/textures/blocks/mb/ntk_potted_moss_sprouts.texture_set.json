@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_potted_moss_sprouts",
+    "heightmap": "ntk_potted_moss_sprouts_height",
+    "metalness_emissive_roughness": "ntk_potted_moss_sprouts_mer"
+  }
+}

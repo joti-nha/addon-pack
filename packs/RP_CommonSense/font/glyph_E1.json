@@ -1,0 +1,13 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "textures/ui/crosshair",
+      "chars": [
+        "\uE100"
+      ],
+      "ascent": 7,
+      "height": 14
+    }
+  ]
+}

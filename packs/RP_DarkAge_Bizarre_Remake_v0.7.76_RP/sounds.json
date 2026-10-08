@@ -1,0 +1,282 @@
+{
+	"entity_sounds": {
+		"entities": {
+			"dk:gargoyle_grounded": {
+				"events": {
+					"hurt": "mob.gargoyle.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"dk:gargoyle": {
+				"events": {
+					"hurt": "mob.gargoyle.hurt"
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": 1
+			},
+			"dk:sentinel": {
+				"volume": 2.0,
+				"pitch": [
+					1.0,
+					0.6
+				],
+				"events": {
+					"hurt": "mob.sentinel.hurt",
+					"death": "mob.sentinel.death"
+				}
+			},
+			"dk:sentinel_soldier": {
+				"volume": 1.0,
+				"pitch": [
+					1.2,
+					0.8
+				],
+				"events": {
+					"hurt": "mob.sentinel.hurt",
+					"death": "mob.sentinel_soldier.death"
+				}
+			},
+			"dk:duck": {
+				"volume": 1.0,
+				"pitch": [
+					0.8,
+					1.4
+				],
+				"events": {
+					"ambient": "mob.duck.say",
+					"hurt": "mob.duck.hurt",
+					"death": "mob.duck.death",
+					"step": {
+						"sound": "mob.chicken.step",
+						"pitch": 0.8,
+						"volume": 1.0
+					}
+				}
+			},
+			"dk:abomination_duck": {
+				"volume": 1.0,
+				"pitch": [
+					0.6,
+					0.8
+				],
+				"events": {
+					"ambient": "mob.abomination_duck.say",
+					"hurt": "mob.abomination_duck.hurt",
+					"death": "mob.abomination_duck.death",
+					"step": {
+						"sound": "mob.abomination_duck.step",
+						"pitch": 0.8,
+						"volume": 0.7
+					}
+				}
+			},
+			"dk:plague_dog": {
+				"volume": 1.0,
+				"pitch": [
+					0.7,
+					1.0
+				],
+				"events": {
+					"ambient": "mob.plague_dog.say",
+					"hurt": "mob.plague_dog.hurt",
+					"death": "mob.plague_dog.death",
+					"step": {
+						"sound": "mob.abomination_duck.step",
+						"pitch": 0.8,
+						"volume": 0.7
+					}
+				}
+			},
+			"dk:plague": {
+				"volume": 1.0,
+				"pitch": [
+					0.7,
+					1.2
+				],
+				"events": {
+					"ambient": "mob.plague.say",
+					"hurt": "mob.plague.hurt",
+					"death": "mob.plague.death",
+					"step": {
+						"sound": "mob.abomination_duck.step",
+						"pitch": 0.8,
+						"volume": 0.7
+					}
+				}
+			},
+			"dk:unboned": {
+				"events": {
+					"ambient": "mob.skeleton.say",
+					"death": "mob.skeleton.death",
+					"hurt": {
+						"sound": "mob.skeleton.hurt",
+						"volume": 0.70
+					},
+					"step": {
+						"pitch": 1.0,
+						"sound": "mob.skeleton.step",
+						"volume": 1.0
+					}
+				},
+				"pitch": [
+					0.5,
+					0.7
+				],
+				"volume": 1.0
+			},
+			"dk:unbound_elemental": {
+				"events": {
+					"attack": {
+						"sound": "mob.blaze.hit",
+						"volume": 3.0,
+						"pitch": 0.4
+					},
+					"ambient": "mob.unbound_elemental.say",
+					"death": "mob.unbound_elemental.death",
+					"hurt": {
+						"sound": "mob.unbound_elemental.hurt",
+						"volume": 0.70
+					}
+				},
+				"pitch": [
+					0.6,
+					1.2
+				],
+				"volume": [
+					0.9,
+					1.4
+				]
+			},
+			"dk:elemental_knight": {
+				"events": {
+					"attack": {
+						"sound": "mob.elemental_knight.attack",
+						"volume": 0.8,
+						"pitch": 0.9
+					},
+					"ambient": "mob.elemental_knight.say",
+					"death": "mob.elemental_knight.death",
+					"hurt": {
+						"sound": "mob.elemental_knight.hurt",
+						"volume": 0.70
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": [
+					0.9,
+					1.4
+				]
+			},
+			"dk:outcast": {
+				"events": {
+					"ambient": "mob.outcast.say",
+					"death": "mob.outcast.death",
+					"hurt": {
+						"sound": "mob.outcast.hurt",
+						"volume": 0.70
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": [
+					0.9,
+					1.4
+				]
+			},
+			"dk:outcast_corrupted": {
+				"events": {
+					"ambient": "mob.outcast_corrupted.say",
+					"death": "mob.outcast_corrupted.death",
+					"hurt": {
+						"sound": "mob.outcast_corrupted.hurt",
+						"volume": 0.70
+					}
+				},
+				"pitch": [
+					0.8,
+					1.2
+				],
+				"volume": [
+					0.9,
+					1.4
+				]
+			},
+			"dk:stinky_medical": {
+				"events": {
+					"ambient": "mob.witch.ambient",
+					"death": "mob.witch.death",
+					"hurt": "mob.witch.hurt"
+				},
+				"pitch": [
+					0.35,
+					0.5
+				],
+				"volume": 1.0
+			},
+			"dk:mercenary": {
+				"events": {
+					"ambient": "mob.pillager.idle",
+					"death": "mob.pillager.death",
+					"hurt": "mob.pillager.hurt"
+				},
+				"pitch": [
+					0.6,
+					0.45
+				],
+				"volume": 1.0
+			},
+			"dk:putrefied": {
+				"events": {
+					"ambient": "mob.warden.idle",
+					"death": "mob.warden.death",
+					"hurt": "mob.warden.hurt",
+					"step": {
+						"pitch": 0.6,
+						"sound": "mob.zombie.step",
+						"volume": 10.0
+					}
+				},
+				"pitch": [
+					0.6,
+					0.45
+				],
+				"volume": 1.0
+			},
+			"dk:flagon_mysthic": {
+				"events": {
+					"death": "block.turtle_egg.break",
+					"hurt": "block.turtle_egg.crack"
+				},
+				"pitch": [
+					0.6,
+					0.45
+				],
+				"volume": 1.0
+			},
+			"dk:assassin": {
+				"events": {
+					"ambient": "mob.allay.idle",
+					"death": "mob.allay.death",
+					"hurt": "mob.allay.hurt"
+				},
+				"pitch": [
+					0.6,
+					0.45
+				],
+				"volume": 1.0
+			}
+		}
+	}
+}

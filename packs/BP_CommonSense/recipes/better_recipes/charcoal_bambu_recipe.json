@@ -1,0 +1,13 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_furnace": {
+		"description": {
+			"identifier": "bv:charcoal_bambu_recipe"
+		},
+		"tags": [
+			"furnace"
+		],
+		"input": "bamboo_block",
+		"output": "charcoal"
+	}
+}

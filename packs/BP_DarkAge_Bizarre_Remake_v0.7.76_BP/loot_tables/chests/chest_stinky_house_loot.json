@@ -1,0 +1,234 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 8,
+				"max": 10
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:air",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 1
+							}
+						}
+					],
+					"weight": 80
+				},
+				{
+					"type": "item",
+					"name": "minecraft:web",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 1
+							}
+						}
+					],
+					"weight": 80
+				},
+				{
+					"type": "item",
+					"name": "minecraft:iron_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 4
+							}
+						}
+					],
+					"weight": 70
+				},
+				{
+					"type": "item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 25
+				},
+				{
+					"type": "item",
+					"name": "minecraft:experience_bottle",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 3
+							}
+						}
+					],
+					"weight": 30
+				},
+				{
+					"type": "item",
+					"name": "minecraft:book",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 3
+							}
+						}
+					],
+					"weight": 25
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_data",
+							"data": 6
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_data",
+							"data": 8
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_data",
+							"data": 11
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_data",
+							"data": 13
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:potion",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_data",
+							"data": 16
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_book_contents",
+							"title": "Factions Reports 1.",
+							"author": "Stinky Medical",
+							"pages": [
+								"The Sentinel Faction is on its last legs, because they are losing more and more soldiers due to corruption. Making it difficult to attract new members. The same can be said for Armada Unbound. They are going through a difficult famine.",
+								"Since the last invasion caused by the Sentinel Faction was devastating for them, destroying towns and crops in said invasion. While the Eclipse Platinum I have not received any news about them."
+							]
+						}
+					],
+					"weight": 5
+				},
+				{
+					"type": "item",
+					"name": "minecraft:written_book",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						},
+						{
+							"function": "set_book_contents",
+							"title": "Factions Reports 2.",
+							"author": "Stinky Medical",
+							"pages": [
+								"They have reported to me that there is another invasion but this caused a war, the capital located in the wetlands is going through a great massacre. The Sentinel Faction is holding an Inquisition, eliminating anyone who does not believe their religion.",
+								"The Unbound Army is a very advanced civilization for our time but they refused to follow the religion of the sentinel faction, causing this great war.",
+								"We don't know who the good guys are in this situation but it is strange that I haven't received reports of the platinum eclipse. Meanwhile I will continue with my investigations of the corruption.",
+								"I hope to find a cure. It is incredible what deaths can cause if they reach enormous levels."
+							]
+						}
+					],
+					"weight": 5
+				}
+			]
+		}
+	]
+}

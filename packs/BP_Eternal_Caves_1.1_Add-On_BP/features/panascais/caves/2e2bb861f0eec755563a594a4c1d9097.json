@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:scatter_feature":{"description":{"identifier":"panascais_caves:panascais/caves/2e2bb861f0eec755563a594a4c1d9097"},"places_feature":"panascais_caves:panascais/caves/a9fef360bca855567ee243a53cc94476","distribution":{"iterations":"math.mod(v.worldx, 2) == 0 && math.mod(v.worldz, 2) == 0 ? 1 : 0","scatter_chance":50,"x":0,"y":1,"z":0}}}

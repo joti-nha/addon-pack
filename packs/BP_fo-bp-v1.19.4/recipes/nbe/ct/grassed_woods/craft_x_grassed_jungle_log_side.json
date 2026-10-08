@@ -1,0 +1,38 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_grassed_jungle_log_side"
+    },
+    "priority": 1,
+    "tags": [
+      "crafting_table",
+      "grafting_table"
+    ],
+    "group": "grassed_jungle_log_side",
+    "assume_symmetry": true,
+    "pattern": [
+      "GL"
+    ],
+    "key": {
+      "G": {
+        "item": "ntk:grass_carpet"
+      },
+      "L": {
+        "item": "minecraft:jungle_log"
+      }
+    },
+    "result": {
+      "item": "ntk:grassed_jungle_log_side",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:grass_carpet"
+      },
+      {
+        "item": "minecraft:jungle_log"
+      }
+    ]
+  }
+}

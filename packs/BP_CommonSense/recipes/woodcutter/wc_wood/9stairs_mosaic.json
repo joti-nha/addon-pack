@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:3srecipes_e034bl15j"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"priority": 1,
+		"ingredients": [
+			{
+				"item": "minecraft:bamboo_block",
+				"data": 0
+			}
+		],
+		"result": {
+			"item": "minecraft:bamboo_mosaic_stairs",
+			"count": 2,
+			"data": 0
+		}
+	}
+}

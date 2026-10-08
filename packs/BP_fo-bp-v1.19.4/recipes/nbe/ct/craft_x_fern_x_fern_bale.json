@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_fern_x_fern_bale"
+    },
+    "priority": 3,
+    "tags": [ "crafting_table" ],
+    "group": "fern",
+    "ingredients": [
+      {
+        "item": "ntk:fern_bale"
+      }
+    ],
+    "result": {
+      "item": "minecraft:fern",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:fern_bale"
+      }
+    ]
+  }
+}

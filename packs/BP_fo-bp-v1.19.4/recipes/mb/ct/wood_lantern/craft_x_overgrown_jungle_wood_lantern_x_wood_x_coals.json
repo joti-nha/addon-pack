@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_overgrown_jungle_wood_lantern_x_wood_x_coals"
+    },
+    "priority": 4,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "GCG",
+      " W "
+    ],
+    "key": {
+      "W": {
+        "item": "ntk:overgrown_jungle_wood"
+      },
+      "G": {
+        "item": "minecraft:glass_pane"
+      },
+      "C": {
+        "tag": "minecraft:coals"
+      }
+    },
+    "result": {
+      "item": "ntk:overgrown_jungle_wood_lantern",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:overgrown_jungle_wood"
+      },
+      {
+        "item": "minecraft:glass_pane"
+      },
+      {
+        "tag": "minecraft:coals"
+      }
+    ]
+  }
+}

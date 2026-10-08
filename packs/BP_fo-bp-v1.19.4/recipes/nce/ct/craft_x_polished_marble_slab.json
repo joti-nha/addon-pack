@@ -1,0 +1,27 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_polished_marble_slab"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"MMM"
+		],
+		"key": {
+			"M": {
+				"item": "ntk:polished_marble"
+			}
+		},
+		"result": {
+			"item": "ntk:polished_marble_slab",
+			"count": 6
+		},
+    "unlock": [
+      {
+        "item": "ntk:polished_marble"
+      }
+    ]
+	}
+}

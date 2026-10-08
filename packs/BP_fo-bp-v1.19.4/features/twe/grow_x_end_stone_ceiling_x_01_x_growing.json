@@ -1,0 +1,24 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "ntk:twe/grow_x_end_stone_ceiling_x_01_x_growing"
+    },
+    "growth_direction": "DOWN",
+    "body_blocks": [
+      [
+        "minecraft:end_stone", 100
+      ]
+    ],
+    "head_blocks": [
+      [
+        "minecraft:end_stone", 100
+      ]
+    ],
+    "height_distribution": [
+      [ { "range_min": 1, "range_max": 2 }, 100 ],
+      [ { "range_min": 1, "range_max": 3 }, 25 ],
+      [ { "range_min": 2, "range_max": 4 }, 25 ]
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:processor_list": {
+		"description": {
+			"identifier": "ntk:fo/decorated_pot_x_processor"
+		},
+		"processors": [
+      {
+        "processor_type": "minecraft:capped",
+        "limit": 30,
+        "delegate": {
+          "processor_type": "minecraft:rule",
+          "rules": [
+            // Decorated Pots:
+            {
+              "block_entity_modifier": {
+                "type": "minecraft:append_loot",
+                "loot_table": "loot_tables/loot_set/decorated_pot.json"
+              },
+              "input_predicate": {
+                "predicate_type": "minecraft:block_match",
+                "block": "minecraft:decorated_pot"
+              },
+              "output_state": {
+                "name": "minecraft:decorated_pot"
+              }
+            }
+          ]
+        }
+      }
+		]
+	}
+}

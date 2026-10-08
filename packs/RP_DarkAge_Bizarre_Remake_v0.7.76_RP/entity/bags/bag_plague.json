@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:bag_plague",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/bag/plague_bag"
+			},
+			"geometry": {
+				"default": "geometry.bag"
+			},
+			"render_controllers": [
+				"controller.render.plague"
+			],
+			"animations": {
+				"spawn": "animation.bag.spawn"
+			},
+			"scripts": {
+				"animate": [
+					"spawn"
+				]
+			}
+		}
+	}
+}

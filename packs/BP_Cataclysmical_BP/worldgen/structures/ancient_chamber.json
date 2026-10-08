@@ -1,0 +1,49 @@
+{
+	"format_version": "1.21.100",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "mnra_cata:ancient_chamber"
+		},
+		"step": "underground_structures",
+		"terrain_adaptation": "beard_box",
+		"start_pool": "mnra_cata:ancient_chamber_lobby",
+		"max_depth": 12,
+		"heightmap_projection": "world_surface",
+		"biome_filters": {
+			"all_of": [
+				{
+					"test": "has_biome_tag",
+					"operator": "==",
+					"value": "overworld"
+				},
+				{
+					"test": "has_biome_tag",
+					"operator": "!=",
+					"value": "mountain"
+				},
+				{
+					"test": "has_biome_tag",
+					"operator": "!=",
+					"value": "mountains"
+				},
+				{
+					"test": "has_biome_tag",
+					"operator": "!=",
+					"value": "ocean"
+				},
+				{
+					"test": "has_biome_tag",
+					"operator": "!=",
+					"value": "river"
+				}
+			]
+		},
+		"start_height": {
+			"type": "constant",
+			"value": {
+				"absolute": 0
+			}
+		},
+		"liquid_settings": "ignore_waterlogging"
+	}
+}

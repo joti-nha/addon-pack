@@ -1,0 +1,46 @@
+{
+	"format_version": "1.26.10",
+	"minecraft:jigsaw": {
+		"description": {
+			"identifier": "ntk:shulker_dungeon"
+		},
+		"biome_filters": [
+			{
+        "all_of": [
+          {
+            "any_of": [
+              {
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "the_end"
+							}
+            ]
+          }
+        ]
+      }
+		],
+		"start_pool": "ntk:nmd/shulker_dungeon_x_pool",
+		"heightmap_projection": "none",
+		"step": "surface_structures",
+		"terrain_adaptation": "beard_thin",
+		"liquid_settings": "ignore_waterlogging",
+		"start_height": {
+			"type": "uniform",
+			"min": {
+				"absolute": 54
+			},
+			"max": {
+				"absolute": 64
+			}
+		},
+		"max_depth": 1,
+		"max_distance_from_center": {
+			"horizontal": 128,
+			"vertical": 128
+		},
+		"dimension_padding": {
+			"top": 0,
+			"bottom": 0
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:nce/patch_nether_x_heated_netherrack_x_ore"
+    },
+    "count": 50,
+    "replace_rules": [
+      {
+        "places_block": "ntk:fossiliferous_heated_netherrack",
+        "may_replace": [
+          "ntk:fossiliferous_netherrack"
+        ]
+      },
+      {
+        "places_block": "ntk:heated_netherrack_olivine_ore",
+        "may_replace": [
+          "ntk:netherrack_olivine_ore"
+        ]
+      },
+      {
+        "places_block": "ntk:heated_netherrack",
+        "may_replace": [
+          "minecraft:gravel",
+          "minecraft:netherrack"
+        ]
+      }
+    ]
+  }
+}

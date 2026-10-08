@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_diamond_spellweaver_wand_x_metal_ingots"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "diamond_spellweaver_wand",
+    "assume_symmetry": false,
+    "pattern": [
+      " A ",
+      "LAL",
+      " I "
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:diamond"
+      },
+      "L": {
+        "item": "minecraft:lapis_lazuli"
+      },
+      "I": {
+        "tag": "ntk:metal_ingots"
+      }
+    },
+    "result": {
+      "item": "ntk:diamond_spellweaver_wand",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:diamond"
+      },
+      {
+        "item": "minecraft:lapis_lazuli"
+      },
+      {
+        "tag": "ntk:metal_ingots"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "tm_aqc:pin_bone_block"
+    },
+    "tags": [
+      "tm_aqc_table"
+    ],
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": "tm_aqc:pin_bone"
+    },
+    "unlock": {
+      "context": "AlwaysUnlocked"
+    },
+    "result": "tm_aqc:pin_bone_block"
+  }
+}

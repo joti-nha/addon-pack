@@ -1,0 +1,22 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:mb/corrupted_forest/structure_weight_x_pile_of_corrupted_stone"
+    },
+    "features": [
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_01", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_02", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_03", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_04", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_05", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_06", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_07", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_08", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_09", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_10", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_11", 100 ],
+      [ "ntk:mb/corrupted_forest/structure_x_pile_of_corrupted_stone_12", 100 ]
+    ]
+  }
+}

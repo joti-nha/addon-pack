@@ -1,0 +1,41 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_jar_of_honey_half_x_honey_bottle"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "jar_of_honey_half",
+    "assume_symmetry": true,
+    "pattern": [
+      "JH"
+    ],
+    "key": {
+      "J": {
+        "item": "ntk:empty_jar"
+      },
+      "H": {
+        "item": "minecraft:honey_bottle"
+      }
+    },
+    "result": [
+      {
+        "item": "ntk:jar_of_honey_half",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:honey_bottle"
+      },
+      {
+        "item": "ntk:empty_jar"
+      }
+    ]
+  }
+}

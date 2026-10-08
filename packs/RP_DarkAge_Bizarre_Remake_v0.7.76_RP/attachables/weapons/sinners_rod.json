@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "dk:sinners_rod",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/stinky_medical/stinky_medical",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.sinners_rod"
+			},
+			"animations": {
+				"first_person": "animation.sinners_rod.first_person",
+				"3ra": "animation.sinners_rod.sinners_rod"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sinners_rod'"
+					},
+					{
+						"3ra": "!c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'sinners_rod'"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.default"
+			]
+		}
+	}
+}

@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:cobbled_tuff_wall"},"key":{"#":"panascais_caves:cobbled_tuff"},"pattern":["###","###"],"tags":["crafting_table"],"result":{"item":"panascais_caves:cobbled_tuff_wall","count":6}}}

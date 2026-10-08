@@ -1,0 +1,10 @@
+pack.description=§lDeveloped by §cDustVeyn Studio.
+
+dustveyn.nature_compass.compass.name=Nature's Compass
+dustveyn.nature_compass.select_biome.desc=Select Biome
+dustveyn.nature_compass.choose_a_biome.desc=Choose a biome:
+dustveyn.nature_compass.biome_not_found.desc=Biome not found!
+dustveyn.nature_compass.biome_found.desc=Biome found!
+dustveyn.nature_compass.search.info=Search
+dustveyn.nature_compass.biome_name.desc=Biome Name
+dustveyn.nature_compass.teleport.desc=Teleport

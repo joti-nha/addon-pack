@@ -1,0 +1,17 @@
+{
+  "format_version": "1.17.41",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "tm_aqc:smelted_neptunium"
+    },
+    "tags": [
+      "furnace",
+      "blast_furnace"
+    ],
+    "input": "tm_aqc:neptunium_scale_block",
+    "output": {
+      "item": "tm_aqc:smelted_neptunium",
+      "count": 1
+    }
+  }
+}

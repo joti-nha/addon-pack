@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.plague_sickle.throw": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"variable.shake_power-query.target_x_rotation",
+						"-query.body_y_rotation+query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.plague_sickle.static": {
+			"loop": true,
+			"animation_length": 0.24,
+			"bones": {
+				"bone3": {
+					"rotation": [
+						22.5,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"bone4": {
+					"rotation": [
+						62.5,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"bone5": {
+					"rotation": [
+						85,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"sword": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.24": [
+							360,
+							0,
+							0
+						]
+					},
+					"scale": 1.5
+				}
+			}
+		}
+	}
+}

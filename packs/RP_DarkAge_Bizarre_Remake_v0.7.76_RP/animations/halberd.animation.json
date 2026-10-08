@@ -1,0 +1,31 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.halberd.first_person": {
+			"loop": true,
+			"bones": {
+				"halberd": {
+					"rotation": [
+						"c.is_first_person?-21.0586:0",
+						"c.is_first_person?55.21:0",
+						"c.is_first_person?-61:0"
+					],
+					"position": [
+						"c.is_first_person?16:0",
+						"c.is_first_person?10:0",
+						"c.is_first_person?23:0"
+					],
+					"scale": "c.is_first_person ? 1 : 1"
+				}
+			}
+		},
+		"animation.halberd.halberd": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"scale": 0.6
+				}
+			}
+		}
+	}
+}

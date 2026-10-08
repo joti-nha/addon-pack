@@ -1,0 +1,84 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.sentinel_soldier": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"sword": "(query.variant == 1 || query.variant == 2) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone13": "(query.variant == 1 || query.variant == 2) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone14": "(query.variant == 1 || query.variant == 2) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"sword2": "(!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3) && !(query.variant == 1 || query.variant == 2)) || (query.is_illager_captain && (query.mark_variant == 1) && !(query.variant == 1 || query.variant == 2) && !(query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone5": "(!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3) && !(query.variant == 1 || query.variant == 2)) || (query.is_illager_captain && (query.mark_variant == 1) && !(query.variant == 1 || query.variant == 2) && !(query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone6": "(!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3) && !(query.variant == 1 || query.variant == 2)) || (query.is_illager_captain && (query.mark_variant == 1) && !(query.variant == 1 || query.variant == 2) && !(query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"shield": "(query.is_saddled && query.is_illager_captain && query.mark_variant == 2) || (!query.is_saddled && query.is_illager_captain && query.mark_variant == 2)"
+				},
+				{
+					"shield2": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 3))"
+				},
+				{
+					"arrow": "query.is_charged && query.is_illager_captain"
+				},
+				{
+					"bow": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone2": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone7": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone8": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone11": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone12": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bone3": "query.mark_variant == 1 && query.is_illager_captain"
+				},
+				{
+					"bow2": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone15": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone16": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone17": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				},
+				{
+					"bone18": "(query.variant == 1 || query.variant == 2) || (!query.is_illager_captain && (query.mark_variant == 1 || query.mark_variant == 2 || query.mark_variant == 3)) || (query.is_illager_captain && (query.mark_variant == 2 || query.mark_variant == 3))"
+				}
+			]
+		}
+	}
+}

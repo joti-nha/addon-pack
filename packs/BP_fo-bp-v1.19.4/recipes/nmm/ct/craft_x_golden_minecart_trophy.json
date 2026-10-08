@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_golden_minecart_trophy"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "golden_minecart_trophy",
+    "assume_symmetry": false,
+    "pattern": [
+      " T",
+      "TG"
+    ],
+    "key": {
+      "T": {
+        "item": "ntk:iron_minecart_trophy"
+      },
+      "G": {
+        "item": "minecraft:gold_block"
+      }
+    },
+    "result": {
+      "item": "ntk:golden_minecart_trophy",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:iron_minecart_trophy"
+      },
+      {
+        "item": "minecraft:gold_block"
+      }
+    ]
+  }
+}

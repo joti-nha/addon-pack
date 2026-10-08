@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:graft_x_azure_bluet_x_pile_of_azure_bluet"
+    },
+    "priority": 2,
+    "tags": [ "grafting_table" ],
+    "group": "azure_bluet",
+    "ingredients": [
+      {
+        "item": "ntk:pile_of_azure_bluet"
+      }
+    ],
+    "result": {
+      "item": "minecraft:azure_bluet",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:pile_of_azure_bluet"
+      }
+    ]
+  }
+}

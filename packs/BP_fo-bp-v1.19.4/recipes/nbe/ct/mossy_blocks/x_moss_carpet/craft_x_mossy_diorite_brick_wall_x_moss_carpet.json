@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_mossy_diorite_brick_wall_x_moss_carpet"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "mossy_diorite_brick_wall",
+    "ingredients": [
+      {
+        "item": "ntk:diorite_brick_wall",
+        "count": 1
+      },
+      {
+        "item": "minecraft:moss_carpet",
+        "count": 1
+      }
+    ],
+    "result": {
+      "item": "ntk:mossy_diorite_brick_wall",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:diorite_brick_wall"
+      },
+      {
+        "item": "minecraft:moss_carpet"
+      }
+    ]
+  }
+}

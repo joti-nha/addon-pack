@@ -1,0 +1,8 @@
+{
+	"format_version": "1.16.100",
+	"minecraft:texture_set": {
+		"color": "ntk_piglin_war_hammer",
+		"heightmap": "ntk_piglin_war_hammer_height",
+		"metalness_emissive_roughness": "ntk_piglin_war_hammer_mer"
+	}
+}

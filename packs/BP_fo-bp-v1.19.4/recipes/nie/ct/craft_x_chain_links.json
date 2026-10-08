@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_chain_links"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "chain_links",
+    "assume_symmetry": true,
+    "pattern": [
+      "II",
+      "II"
+    ],
+    "key": {
+      "I": {
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "ntk:chain_links",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:iron_nugget"
+      }
+    ]
+  }
+}

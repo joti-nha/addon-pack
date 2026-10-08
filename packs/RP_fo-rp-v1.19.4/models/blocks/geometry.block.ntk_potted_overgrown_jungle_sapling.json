@@ -1,0 +1,441 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.block.ntk_potted_overgrown_jungle_sapling",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "potted_overgrown_jungle_sapling",
+					"parent": "block",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "pot",
+					"parent": "potted_overgrown_jungle_sapling",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "pot_west",
+					"parent": "pot",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [2, 0, -2],
+							"size": [1, 6, 5],
+							"uv": {
+								"north": {"uv": [6, 32], "uv_size": [1, 6], "material_instance": "alpha"},
+								"east": {"uv": [1, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"south": {"uv": [0, 38], "uv_size": [1, 6], "material_instance": "alpha"},
+								"west": {"uv": [1, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"up": {"uv": [0, 39], "uv_size": [1, 5], "material_instance": "alpha"},
+								"down": {"uv": [5, 43], "uv_size": [1, -5], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "pot_south",
+					"parent": "pot",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-3, 0, 2],
+							"size": [5, 6, 1],
+							"uv": {
+								"north": {"uv": [0, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"east": {"uv": [0, 38], "uv_size": [1, 6], "material_instance": "alpha"},
+								"south": {"uv": [1, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"west": {"uv": [6, 32], "uv_size": [1, 6], "material_instance": "alpha"},
+								"up": {"uv": [0, 32], "uv_size": [5, 1], "material_instance": "alpha"},
+								"down": {"uv": [0, 39], "uv_size": [5, -1], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "dirt",
+					"parent": "pot",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, -2],
+							"size": [4, 5, 4],
+							"uv": {
+								"north": {"uv": [6, 32], "uv_size": [4, 5], "material_instance": "alpha"},
+								"east": {"uv": [6, 32], "uv_size": [4, 5], "material_instance": "alpha"},
+								"south": {"uv": [6, 32], "uv_size": [4, 5], "material_instance": "alpha"},
+								"west": {"uv": [6, 32], "uv_size": [4, 5], "material_instance": "alpha"},
+								"up": {"uv": [1, 33], "uv_size": [4, 4], "material_instance": "alpha"},
+								"down": {"uv": [1, 43], "uv_size": [4, -4], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "pot_north",
+					"parent": "pot",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2, 0, -3],
+							"size": [5, 6, 1],
+							"uv": {
+								"north": {"uv": [1, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"east": {"uv": [6, 32], "uv_size": [1, 6], "material_instance": "alpha"},
+								"south": {"uv": [0, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"west": {"uv": [0, 38], "uv_size": [1, 6], "material_instance": "alpha"},
+								"up": {"uv": [1, 37], "uv_size": [5, 1], "material_instance": "alpha"},
+								"down": {"uv": [1, 44], "uv_size": [5, -1], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "pot_east",
+					"parent": "pot",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-3, 0, -3],
+							"size": [1, 6, 5],
+							"uv": {
+								"north": {"uv": [0, 38], "uv_size": [1, 6], "material_instance": "alpha"},
+								"east": {"uv": [1, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"south": {"uv": [6, 32], "uv_size": [1, 6], "material_instance": "alpha"},
+								"west": {"uv": [0, 38], "uv_size": [5, 6], "material_instance": "alpha"},
+								"up": {"uv": [0, 33], "uv_size": [1, 5], "material_instance": "alpha"},
+								"down": {"uv": [0, 43], "uv_size": [1, -5], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "plant",
+					"parent": "potted_overgrown_jungle_sapling",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "foliage",
+					"parent": "plant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-4, 12, -4],
+							"size": [8, 4, 8],
+							"uv": {
+								"north": {"uv": [8, 8], "uv_size": [8, 4], "material_instance": "foliage"},
+								"east": {"uv": [0, 8], "uv_size": [8, 4], "material_instance": "foliage"},
+								"south": {"uv": [24, 8], "uv_size": [8, 4], "material_instance": "foliage"},
+								"west": {"uv": [16, 8], "uv_size": [8, 4], "material_instance": "foliage"},
+								"up": {"uv": [8, 0], "uv_size": [8, 8], "material_instance": "foliage"},
+								"down": {"uv": [16, 8], "uv_size": [8, -8], "material_instance": "foliage"}
+							}
+						},
+						{
+							"origin": [-7, 9, 1],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [46, 6], "uv_size": [6, 2], "material_instance": "foliage"},
+								"east": {"uv": [40, 6], "uv_size": [6, 2], "material_instance": "foliage"},
+								"south": {"uv": [58, 6], "uv_size": [6, 2], "material_instance": "foliage"},
+								"west": {"uv": [52, 6], "uv_size": [6, 2], "material_instance": "foliage"},
+								"up": {"uv": [46, 0], "uv_size": [6, 6], "material_instance": "foliage"},
+								"down": {"uv": [52, 6], "uv_size": [6, -6], "material_instance": "foliage"}
+							}
+						},
+						{
+							"origin": [1, 7, -7],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 18], "uv_size": [6, 2], "material_instance": "foliage"},
+								"east": {"uv": [0, 18], "uv_size": [6, 2], "material_instance": "foliage"},
+								"south": {"uv": [18, 18], "uv_size": [6, 2], "material_instance": "foliage"},
+								"west": {"uv": [12, 18], "uv_size": [6, 2], "material_instance": "foliage"},
+								"up": {"uv": [6, 12], "uv_size": [6, 6], "material_instance": "foliage"},
+								"down": {"uv": [12, 18], "uv_size": [6, -6], "material_instance": "foliage"}
+							}
+						}
+					]
+				},
+				{
+					"name": "stem",
+					"parent": "plant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [2, 6, 2],
+							"uv": {
+								"north": {"uv": [2, 2], "uv_size": [2, 6], "material_instance": "alpha"},
+								"east": {"uv": [0, 2], "uv_size": [2, 6], "material_instance": "alpha"},
+								"south": {"uv": [6, 2], "uv_size": [2, 6], "material_instance": "alpha"},
+								"west": {"uv": [4, 2], "uv_size": [2, 6], "material_instance": "alpha"},
+								"up": {"uv": [2, 0], "uv_size": [2, 2], "material_instance": "alpha"},
+								"down": {"uv": [4, 2], "uv_size": [2, -2], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "branch_01",
+					"parent": "stem",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [1, 10, 1],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [25, 1], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [24, 1], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [27, 1], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [26, 1], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [25, 0], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [26, 1], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [1, 8, 0],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [12, 24], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [11, 24], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [14, 24], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [13, 24], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [12, 23], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [13, 24], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [0, 6, 0],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [20, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [19, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [22, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [21, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [20, 22], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [21, 23], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-2, 10, -2],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [1, 25], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [0, 25], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [3, 25], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [2, 25], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [1, 24], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [2, 25], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-1, 8, -2],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [24, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [23, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [26, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [25, 23], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [24, 22], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [25, 23], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-1, 6, -1],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [16, 22], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [15, 22], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [18, 22], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [17, 22], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [16, 21], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [17, 22], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "branch_02",
+					"parent": "stem",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1, 6, 1],
+							"size": [1, 1, 2],
+							"uv": {
+								"north": {"uv": [11, 22], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [9, 22], "uv_size": [2, 1], "material_instance": "alpha"},
+								"south": {"uv": [14, 22], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [12, 22], "uv_size": [2, 1], "material_instance": "alpha"},
+								"up": {"uv": [11, 20], "uv_size": [1, 2], "material_instance": "alpha"},
+								"down": {"uv": [12, 22], "uv_size": [1, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-2, 6, 3],
+							"size": [2, 1, 1],
+							"uv": {
+								"north": {"uv": [23, 13], "uv_size": [2, 1], "material_instance": "alpha"},
+								"east": {"uv": [22, 13], "uv_size": [1, 1], "material_instance": "alpha"},
+								"south": {"uv": [26, 13], "uv_size": [2, 1], "material_instance": "alpha"},
+								"west": {"uv": [25, 13], "uv_size": [1, 1], "material_instance": "alpha"},
+								"up": {"uv": [23, 12], "uv_size": [2, 1], "material_instance": "alpha"},
+								"down": {"uv": [25, 13], "uv_size": [2, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-3, 7, 3],
+							"size": [1, 1, 2],
+							"uv": {
+								"north": {"uv": [20, 14], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [18, 14], "uv_size": [2, 1], "material_instance": "alpha"},
+								"south": {"uv": [23, 14], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [21, 14], "uv_size": [2, 1], "material_instance": "alpha"},
+								"up": {"uv": [20, 12], "uv_size": [1, 2], "material_instance": "alpha"},
+								"down": {"uv": [21, 14], "uv_size": [1, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-4, 8, 4],
+							"size": [1, 1, 1],
+							"uv": {
+								"north": {"uv": [8, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [7, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"south": {"uv": [10, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [9, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"up": {"uv": [8, 25], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [9, 26], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "branch_03",
+					"parent": "stem",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [3, 6, -4],
+							"size": [1, 1, 2],
+							"uv": {
+								"north": {"uv": [2, 17], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [0, 17], "uv_size": [2, 1], "material_instance": "alpha"},
+								"south": {"uv": [5, 17], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [3, 17], "uv_size": [2, 1], "material_instance": "alpha"},
+								"up": {"uv": [2, 15], "uv_size": [1, 2], "material_instance": "alpha"},
+								"down": {"uv": [3, 17], "uv_size": [1, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [2, 6, -3],
+							"size": [1, 1, 2],
+							"uv": {
+								"north": {"uv": [20, 17], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [18, 17], "uv_size": [2, 1], "material_instance": "alpha"},
+								"south": {"uv": [23, 17], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [21, 17], "uv_size": [2, 1], "material_instance": "alpha"},
+								"up": {"uv": [20, 15], "uv_size": [1, 2], "material_instance": "alpha"},
+								"down": {"uv": [21, 17], "uv_size": [1, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [1, 5, -2],
+							"size": [1, 1, 1],
+							"uv": {
+								"north": {"uv": [19, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"east": {"uv": [18, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"south": {"uv": [21, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"west": {"uv": [20, 26], "uv_size": [1, 1], "material_instance": "alpha"},
+								"up": {"uv": [19, 25], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [20, 26], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [1, 3, -1],
+							"size": [1, 2, 1],
+							"uv": {
+								"north": {"uv": [25, 4], "uv_size": [1, 2], "material_instance": "alpha"},
+								"east": {"uv": [24, 4], "uv_size": [1, 2], "material_instance": "alpha"},
+								"south": {"uv": [27, 4], "uv_size": [1, 2], "material_instance": "alpha"},
+								"west": {"uv": [26, 4], "uv_size": [1, 2], "material_instance": "alpha"},
+								"up": {"uv": [25, 3], "uv_size": [1, 1], "material_instance": "alpha"},
+								"down": {"uv": [26, 4], "uv_size": [1, -1], "material_instance": "alpha"}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2.5, 0],
+					"scale": [0.375, 0.375, 0.375],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"thirdperson_lefthand": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 1],
+					"scale": [0.55, 0.55, 0.55],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [0, 45, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_lefthand": {
+					"rotation": [0, 225, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"ground": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 0],
+					"scale": [0.25, 0.25, 0.25],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"gui": {
+					"rotation": [0, -90, 0],
+					"translation": [0, 0, 0],
+					"scale": [1, 1, 1],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0],
+					"fit_to_frame": true
+				},
+				"head": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 0, 0],
+					"scale": [1, 1, 1],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"fixed": {
+					"rotation": [0, 180, 0],
+					"translation": [0, 0, 0],
+					"scale": [1, 1, 1],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}

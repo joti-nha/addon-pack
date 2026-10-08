@@ -1,0 +1,85 @@
+{
+	"format_version": "1.26.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "ntk:pink_tip_grass",
+			"menu_category": {
+        "category": "nature",
+        "group": "ntk:itemGroup.name.tip_grasses",
+				"is_hidden_in_commands": false
+      }
+		},
+		"components": {
+		  "minecraft:display_name": {
+				"value": "%item.ntk.pink_tip_grass.name"
+			},
+			"minecraft:rarity": "common",
+      "minecraft:icon": {
+				"textures": {
+          "default": "ntk_pink_tip_grass"  
+				}
+			},
+			"minecraft:hand_equipped": {
+        "value": false
+			},
+			"minecraft:allow_off_hand": {
+        "value": false
+			},
+			"minecraft:can_destroy_in_creative": {
+        "value": true
+			},
+			"minecraft:fire_resistant": {
+        "value": false
+			},
+			"minecraft:glint": {
+        "value": false
+			},
+			"minecraft:liquid_clipped": {
+        "value": false
+			},
+			"minecraft:should_despawn": {
+        "value": true
+			},
+			"minecraft:stacked_by_data": {
+        "value": true
+			},
+			"minecraft:max_stack_size": {
+        "value": 64
+			},
+      "minecraft:fuel": {
+        "duration": 1.0
+      },
+      "minecraft:compostable": {
+        "composting_chance": 30
+			},
+			"minecraft:block_placer": {
+				"block": "ntk:pink_tip_grass",
+				"replace_block_item": true
+			},
+			"minecraft:tags": {
+        "tags": [
+          "ntk:items",
+          "ntk:compostable",
+          "ntk:placeable",
+          "ntk:potable",
+          "ntk:plant",
+          "ntk:flower",
+          "ntk:grass",
+          "ntk:tip_grass",
+          "ntk:pink_tip_grass"
+        ]
+      },
+      "ntk:potted_on_use_on": [
+        {
+          "event_chance": 100.0,
+          "item_name": "ntk:pink_tip_grass",
+          "item_slot": "Mainhand",
+          "pot_type": "minecraft:flower_pot",
+          "potted_plant": "ntk:potted_pink_tip_grass",
+          "decrease_item": 1,
+          "decrease_item_chance": 100.0
+        }
+      ]
+		}
+	}
+}

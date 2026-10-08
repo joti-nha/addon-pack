@@ -1,0 +1,59 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.entity.ntk_warthog.baby_remodel": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": [ 0.0, 10.0, 4.0 ],
+					"scale": 1.4
+				}
+			}
+		},
+		"animation.entity.ntk_warthog.melee_attack": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [ "variable.attack_head_rot", 0, 0 ]
+				}
+			}
+		},
+		"animation.entity.ntk_warthog.look_at_target": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [ 0, "query.target_y_rotation - this", 0 ]
+				}
+			}
+		},
+		"animation.entity.ntk_warthog.walking": {
+			"loop": true,
+			"bones": {
+				"left_ear": {
+					"rotation": [0, 0, "variable.tcos_left_side * 0.5"]
+				},
+				"right_ear": {
+					"rotation": [0, 0, "variable.tcos_right_side * 0.5"]
+				},
+				"right_front_leg": {
+					"rotation": ["-variable.tcos_right_side", 0, 0]
+				},
+				"left_front_leg": {
+					"rotation": ["-variable.tcos_left_side", 0, 0]
+				},
+				"right_hind_leg": {
+					"rotation": ["variable.tcos_right_side", 0, 0]
+				},
+				"left_hind_leg": {
+					"rotation": ["variable.tcos_left_side", 0, 0]
+				},
+				"tail": {
+					"rotation": [0, 0, "variable.tcos_tail"]
+				}
+			}
+		}
+	}
+}

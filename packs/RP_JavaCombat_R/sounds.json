@@ -1,0 +1,13 @@
+{
+  "entity_sounds": {
+    "entities": {
+      "jc:item_damage": {
+        "events": {
+          "hurt": "skibidi_toilet"
+        },
+        "pitch": 1,
+        "volume": 1.0
+      }
+    }
+  }
+}

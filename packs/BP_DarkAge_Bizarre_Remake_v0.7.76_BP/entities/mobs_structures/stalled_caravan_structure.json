@@ -1,0 +1,133 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:stalled_caravan_structure",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"remove"
+				]
+			},
+			"animations": {
+				"remove": "controller.animation.remove.structures"
+			}
+		},
+		"component_groups": {
+			"minecraft:despawning": {
+				"minecraft:despawn": {}
+			},
+			"minecraft:despawn_component": {
+				"minecraft:timer": {
+					"time": 1,
+					"time_down_event": {
+						"event": "minecraft:generate_three"
+					}
+				}
+			},
+			"minecraft:generate": {
+				"minecraft:timer": {
+					"time": 0.1,
+					"time_down_event": {
+						"event": "minecraft:generate_two"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"block",
+					"chest",
+					"zooglin",
+					"inanimate"
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:physics": {},
+			"minecraft:collision_box": {
+				"width": 0.1,
+				"height": 0.1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"on_damage": {},
+					"deals_damage": false
+				}
+			}
+		},
+		"events": {
+			"minecraft:generate_two": {
+				"randomize": [
+					{
+						"weight": 70,
+						"queue_command": {
+							"command": [
+								"execute at @s run kill @e[type=dk:stalled_caravan_structure,rm=0.5]",
+								"structure load stalled_caravan ~-5 ~-1 ~-6 0_degrees none true",
+								"fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air [] replace mob_spawner",
+								"fill ~5 ~-1 ~6 ~-5 ~-25 ~-6 dirt [] replace air",
+								"execute at @e[type=dk:sentinel_soldier] run kill @s"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:despawn_component"
+							]
+						}
+					},
+					{
+						"weight": 10,
+						"queue_command": {
+							"command": [
+								"execute at @s run kill @e[type=dk:stalled_caravan_structure,rm=0.5]",
+								"structure load stalled_caravan_two ~-9 ~-1 ~-13 0_degrees none true",
+								"fill ~-5 ~-5 ~-5 ~5 ~5 ~5 air [] replace mob_spawner",
+								"fill ~9 ~-1 ~13 ~-9 ~-25 ~-13 dirt [] replace air",
+								"execute at @e[type=dk:sentinel_soldier] run kill @s"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"minecraft:despawn_component"
+							]
+						}
+					},
+					{
+						"weight": 20,
+						"add": {
+							"component_groups": [
+								"minecraft:despawn_component"
+							]
+						}
+					}
+				]
+			},
+			"minecraft:generate_three": {
+				"add": {
+					"component_groups": [
+						"minecraft:despawning"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 100,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"minecraft:generate"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

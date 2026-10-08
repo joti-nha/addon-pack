@@ -1,0 +1,46 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_elytra"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "elytra",
+    "assume_symmetry": true,
+    "pattern": [
+      "ENE",
+      "ESE",
+      "ESE"
+    ],
+    "key": {
+      "E": {
+        "item": "ntk:elytra_scrap"
+      },
+      "S": {
+        "item": "minecraft:string"
+      },
+      "N": {
+        "item": "minecraft:netherite_scrap"
+      }
+    },
+    "result": {
+      "item": "minecraft:elytra",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:elytra_scrap"
+      },
+      {
+        "item": "minecraft:string"
+      },
+      {
+        "item": "minecraft:netherite_scrap"
+      }
+    ]
+  }
+}

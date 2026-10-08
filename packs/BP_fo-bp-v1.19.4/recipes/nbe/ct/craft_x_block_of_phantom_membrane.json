@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_block_of_phantom_membrane"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "block_of_phantom_membrane",
+    "assume_symmetry": true,
+    "pattern": [
+      "AAA",
+      "AAA",
+      "AAA"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:phantom_membrane"
+      }
+    },
+    "result": {
+      "item": "ntk:block_of_phantom_membrane",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:phantom_membrane"
+      }
+    ]
+  }
+}

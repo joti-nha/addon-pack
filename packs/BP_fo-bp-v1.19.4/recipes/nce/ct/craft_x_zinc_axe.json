@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_zinc_axe"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "ZZ",
+      "ZS",
+      " S"
+    ],
+    "key": {
+      "Z": {
+        "item": "ntk:zinc_ingot"
+      },
+      "S": {
+        "item": "minecraft:stick"
+      }
+    },
+    "result": {
+      "item": "ntk:zinc_axe",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:zinc_ingot"
+      },
+      {
+        "item": "minecraft:stick"
+      }
+    ]
+  }
+}

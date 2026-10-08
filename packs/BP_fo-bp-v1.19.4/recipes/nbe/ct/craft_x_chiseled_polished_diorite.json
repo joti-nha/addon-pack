@@ -1,0 +1,30 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_chiseled_polished_diorite"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "chiseled_polished_diorite",
+    "assume_symmetry": true,
+    "pattern": [
+      "S",
+      "S"
+    ],
+    "key": {
+      "S": {
+        "item": "minecraft:polished_diorite_slab"
+      }
+    },
+    "result": {
+      "item": "ntk:chiseled_polished_diorite",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:polished_diorite_slab"
+      }
+    ]
+  }
+}

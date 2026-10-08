@@ -1,0 +1,23 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:grecipes_e0342147jy"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"priority": 1,
+		"ingredients": [
+			{
+				"item": "minecraft:wood",
+				"data": 9
+			}
+		],
+		"result": {
+			"item": "minecraft:spruce_pressure_plate",
+			"count": 12,
+			"data": 0
+		}
+	}
+}

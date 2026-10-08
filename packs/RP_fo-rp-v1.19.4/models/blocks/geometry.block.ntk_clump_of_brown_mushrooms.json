@@ -1,0 +1,326 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.block.ntk_clump_of_brown_mushrooms",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "block",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "clump_of_fungus",
+					"parent": "block",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "fungus_4",
+					"parent": "clump_of_fungus",
+					"pivot": [-3, 0, -4],
+					"cubes": [
+						{
+							"origin": [-6, 4, -7],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [24, 8], "uv_size": [6, 2], "material_instance": "alpha"},
+								"east": {"uv": [18, 8], "uv_size": [6, 2], "material_instance": "alpha"},
+								"south": {"uv": [36, 8], "uv_size": [6, 2], "material_instance": "alpha"},
+								"west": {"uv": [30, 8], "uv_size": [6, 2], "material_instance": "alpha"},
+								"up": {"uv": [24, 2], "uv_size": [6, 6], "material_instance": "alpha"},
+								"down": {"uv": [30, 8], "uv_size": [6, -6], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-4, 0, -5],
+							"size": [2, 4, 2],
+							"uv": {
+								"north": {"uv": [10, 26], "uv_size": [2, 4], "material_instance": "alpha"},
+								"east": {"uv": [8, 26], "uv_size": [2, 4], "material_instance": "alpha"},
+								"south": {"uv": [14, 26], "uv_size": [2, 4], "material_instance": "alpha"},
+								"west": {"uv": [12, 26], "uv_size": [2, 4], "material_instance": "alpha"},
+								"up": {"uv": [10, 24], "uv_size": [2, 2], "material_instance": "alpha"},
+								"down": {"uv": [12, 26], "uv_size": [2, -2], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "luminous_4",
+					"parent": "fungus_4",
+					"pivot": [-3, 0, -4],
+					"cubes": [
+						{
+							"origin": [-6, 4, -7],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [24, 8], "uv_size": [6, 2], "material_instance": "emissive"},
+								"east": {"uv": [18, 8], "uv_size": [6, 2], "material_instance": "emissive"},
+								"south": {"uv": [36, 8], "uv_size": [6, 2], "material_instance": "emissive"},
+								"west": {"uv": [30, 8], "uv_size": [6, 2], "material_instance": "emissive"},
+								"up": {"uv": [24, 2], "uv_size": [6, 6], "material_instance": "emissive"},
+								"down": {"uv": [30, 8], "uv_size": [6, -6], "material_instance": "emissive"}
+							}
+						},
+						{
+							"origin": [-4, 0, -5],
+							"size": [2, 4, 2],
+							"uv": {
+								"north": {"uv": [10, 26], "uv_size": [2, 4], "material_instance": "emissive"},
+								"east": {"uv": [8, 26], "uv_size": [2, 4], "material_instance": "emissive"},
+								"south": {"uv": [14, 26], "uv_size": [2, 4], "material_instance": "emissive"},
+								"west": {"uv": [12, 26], "uv_size": [2, 4], "material_instance": "emissive"},
+								"up": {"uv": [10, 24], "uv_size": [2, 2], "material_instance": "emissive"},
+								"down": {"uv": [12, 26], "uv_size": [2, -2], "material_instance": "emissive"}
+							}
+						}
+					]
+				},
+				{
+					"name": "fungus_3",
+					"parent": "clump_of_fungus",
+					"pivot": [-4, 0, 3],
+					"cubes": [
+						{
+							"origin": [-5, 0, 2],
+							"size": [2, 10, 2],
+							"uv": {
+								"north": {"uv": [24, 24], "uv_size": [2, 10], "material_instance": "alpha"},
+								"east": {"uv": [22, 24], "uv_size": [2, 10], "material_instance": "alpha"},
+								"south": {"uv": [28, 24], "uv_size": [2, 10], "material_instance": "alpha"},
+								"west": {"uv": [26, 24], "uv_size": [2, 10], "material_instance": "alpha"},
+								"up": {"uv": [24, 22], "uv_size": [2, 2], "material_instance": "alpha"},
+								"down": {"uv": [26, 24], "uv_size": [2, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [-7, 10, 0],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 14], "uv_size": [6, 2], "material_instance": "alpha"},
+								"east": {"uv": [0, 14], "uv_size": [6, 2], "material_instance": "alpha"},
+								"south": {"uv": [18, 14], "uv_size": [6, 2], "material_instance": "alpha"},
+								"west": {"uv": [12, 14], "uv_size": [6, 2], "material_instance": "alpha"},
+								"up": {"uv": [6, 8], "uv_size": [6, 6], "material_instance": "alpha"},
+								"down": {"uv": [12, 14], "uv_size": [6, -6], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "luminous_3",
+					"parent": "fungus_3",
+					"pivot": [-4, 0, 3],
+					"cubes": [
+						{
+							"origin": [-5, 0, 2],
+							"size": [2, 10, 2],
+							"uv": {
+								"north": {"uv": [24, 24], "uv_size": [2, 10], "material_instance": "emissive"},
+								"east": {"uv": [22, 24], "uv_size": [2, 10], "material_instance": "emissive"},
+								"south": {"uv": [28, 24], "uv_size": [2, 10], "material_instance": "emissive"},
+								"west": {"uv": [26, 24], "uv_size": [2, 10], "material_instance": "emissive"},
+								"up": {"uv": [24, 22], "uv_size": [2, 2], "material_instance": "emissive"},
+								"down": {"uv": [26, 24], "uv_size": [2, -2], "material_instance": "emissive"}
+							}
+						},
+						{
+							"origin": [-7, 10, 0],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 14], "uv_size": [6, 2], "material_instance": "emissive"},
+								"east": {"uv": [0, 14], "uv_size": [6, 2], "material_instance": "emissive"},
+								"south": {"uv": [18, 14], "uv_size": [6, 2], "material_instance": "emissive"},
+								"west": {"uv": [12, 14], "uv_size": [6, 2], "material_instance": "emissive"},
+								"up": {"uv": [6, 8], "uv_size": [6, 6], "material_instance": "emissive"},
+								"down": {"uv": [12, 14], "uv_size": [6, -6], "material_instance": "emissive"}
+							}
+						}
+					]
+				},
+				{
+					"name": "fungus_2",
+					"parent": "clump_of_fungus",
+					"pivot": [3, 0, 4],
+					"cubes": [
+						{
+							"origin": [2, 0, 3],
+							"size": [2, 6, 2],
+							"uv": {
+								"north": {"uv": [24, 16], "uv_size": [2, 6], "material_instance": "alpha"},
+								"east": {"uv": [22, 16], "uv_size": [2, 6], "material_instance": "alpha"},
+								"south": {"uv": [28, 16], "uv_size": [2, 6], "material_instance": "alpha"},
+								"west": {"uv": [26, 16], "uv_size": [2, 6], "material_instance": "alpha"},
+								"up": {"uv": [24, 14], "uv_size": [2, 2], "material_instance": "alpha"},
+								"down": {"uv": [26, 16], "uv_size": [2, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [0, 6, 1],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 6], "uv_size": [6, 2], "material_instance": "alpha"},
+								"east": {"uv": [0, 6], "uv_size": [6, 2], "material_instance": "alpha"},
+								"south": {"uv": [18, 6], "uv_size": [6, 2], "material_instance": "alpha"},
+								"west": {"uv": [12, 6], "uv_size": [6, 2], "material_instance": "alpha"},
+								"up": {"uv": [6, 0], "uv_size": [6, 6], "material_instance": "alpha"},
+								"down": {"uv": [12, 6], "uv_size": [6, -6], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "luminous_2",
+					"parent": "fungus_2",
+					"pivot": [3, 0, 4],
+					"cubes": [
+						{
+							"origin": [2, 0, 3],
+							"size": [2, 6, 2],
+							"uv": {
+								"north": {"uv": [24, 16], "uv_size": [2, 6], "material_instance": "emissive"},
+								"east": {"uv": [22, 16], "uv_size": [2, 6], "material_instance": "emissive"},
+								"south": {"uv": [28, 16], "uv_size": [2, 6], "material_instance": "emissive"},
+								"west": {"uv": [26, 16], "uv_size": [2, 6], "material_instance": "emissive"},
+								"up": {"uv": [24, 14], "uv_size": [2, 2], "material_instance": "emissive"},
+								"down": {"uv": [26, 16], "uv_size": [2, -2], "material_instance": "emissive"}
+							}
+						},
+						{
+							"origin": [0, 6, 1],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 6], "uv_size": [6, 2], "material_instance": "emissive"},
+								"east": {"uv": [0, 6], "uv_size": [6, 2], "material_instance": "emissive"},
+								"south": {"uv": [18, 6], "uv_size": [6, 2], "material_instance": "emissive"},
+								"west": {"uv": [12, 6], "uv_size": [6, 2], "material_instance": "emissive"},
+								"up": {"uv": [6, 0], "uv_size": [6, 6], "material_instance": "emissive"},
+								"down": {"uv": [12, 6], "uv_size": [6, -6], "material_instance": "emissive"}
+							}
+						}
+					]
+				},
+				{
+					"name": "fungus_1",
+					"parent": "clump_of_fungus",
+					"pivot": [4, 0, -3],
+					"cubes": [
+						{
+							"origin": [3, 0, -4],
+							"size": [2, 8, 2],
+							"uv": {
+								"north": {"uv": [2, 26], "uv_size": [2, 8], "material_instance": "alpha"},
+								"east": {"uv": [0, 26], "uv_size": [2, 8], "material_instance": "alpha"},
+								"south": {"uv": [6, 26], "uv_size": [2, 8], "material_instance": "alpha"},
+								"west": {"uv": [4, 26], "uv_size": [2, 8], "material_instance": "alpha"},
+								"up": {"uv": [2, 24], "uv_size": [2, 2], "material_instance": "alpha"},
+								"down": {"uv": [4, 26], "uv_size": [2, -2], "material_instance": "alpha"}
+							}
+						},
+						{
+							"origin": [1, 8, -6],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 22], "uv_size": [6, 2], "material_instance": "alpha"},
+								"east": {"uv": [0, 22], "uv_size": [6, 2], "material_instance": "alpha"},
+								"south": {"uv": [18, 22], "uv_size": [6, 2], "material_instance": "alpha"},
+								"west": {"uv": [12, 22], "uv_size": [6, 2], "material_instance": "alpha"},
+								"up": {"uv": [6, 16], "uv_size": [6, 6], "material_instance": "alpha"},
+								"down": {"uv": [12, 22], "uv_size": [6, -6], "material_instance": "alpha"}
+							}
+						}
+					]
+				},
+				{
+					"name": "luminous_1",
+					"parent": "fungus_1",
+					"pivot": [4, 0, -3],
+					"cubes": [
+						{
+							"origin": [3, 0, -4],
+							"size": [2, 8, 2],
+							"uv": {
+								"north": {"uv": [2, 26], "uv_size": [2, 8], "material_instance": "emissive"},
+								"east": {"uv": [0, 26], "uv_size": [2, 8], "material_instance": "emissive"},
+								"south": {"uv": [6, 26], "uv_size": [2, 8], "material_instance": "emissive"},
+								"west": {"uv": [4, 26], "uv_size": [2, 8], "material_instance": "emissive"},
+								"up": {"uv": [2, 24], "uv_size": [2, 2], "material_instance": "emissive"},
+								"down": {"uv": [4, 26], "uv_size": [2, -2], "material_instance": "emissive"}
+							}
+						},
+						{
+							"origin": [1, 8, -6],
+							"size": [6, 2, 6],
+							"uv": {
+								"north": {"uv": [6, 22], "uv_size": [6, 2], "material_instance": "emissive"},
+								"east": {"uv": [0, 22], "uv_size": [6, 2], "material_instance": "emissive"},
+								"south": {"uv": [18, 22], "uv_size": [6, 2], "material_instance": "emissive"},
+								"west": {"uv": [12, 22], "uv_size": [6, 2], "material_instance": "emissive"},
+								"up": {"uv": [6, 16], "uv_size": [6, 6], "material_instance": "emissive"},
+								"down": {"uv": [12, 22], "uv_size": [6, -6], "material_instance": "emissive"}
+							}
+						}
+					]
+				}
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2.5, 0],
+					"scale": [0.375, 0.375, 0.375],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"thirdperson_lefthand": {
+					"rotation": [75, 45, 0],
+					"translation": [0, 2.5, 0],
+					"scale": [0.375, 0.375, 0.375],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_righthand": {
+					"rotation": [0, 45, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"firstperson_lefthand": {
+					"rotation": [0, -135, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.4, 0.4, 0.4],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"ground": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 3, 0],
+					"scale": [0.25, 0.25, 0.25],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				},
+				"gui": {
+					"rotation": [30, -135, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.625, 0.625, 0.625],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0],
+					"fit_to_frame": true
+				},
+				"fixed": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.5, 0.5, 0.5],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,25 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "ntk:olivine_helmet",
+      "render_controllers": [
+        "controller.render.armor"
+      ],
+      "geometry": {
+        "default": "geometry.humanoid.armor.helmet"
+      },
+      "materials": {
+        "default": "ntk_item_emissive_alpha",
+        "enchanted": "ntk_item_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/models/nce/ntk_olivine_armor_1",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;"
+      }
+    }
+  }
+}

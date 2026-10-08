@@ -1,0 +1,18 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:weighted_random_feature": {
+    "description": {
+      "identifier": "ntk:ars/structure_weight_x_fossil_large_nether"
+    },
+    "features": [
+      [ "ntk:ars/structure_x_fossil_large_nether_01", 20 ],
+      [ "ntk:ars/structure_x_fossil_large_nether_02", 20 ],
+      [ "ntk:ars/structure_x_fossil_large_nether_03", 20 ],
+      [ "ntk:ars/structure_x_fossil_medium_01", 100 ],
+      [ "ntk:ars/structure_x_fossil_medium_02", 100 ],
+      [ "ntk:ars/structure_x_fossil_medium_03", 100 ],
+      [ "ntk:ars/structure_x_fossil_medium_04", 100 ],
+      [ "ntk:ars/structure_x_fossil_medium_05", 100 ]
+    ]
+  }
+}

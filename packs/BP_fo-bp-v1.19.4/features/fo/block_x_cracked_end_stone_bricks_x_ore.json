@@ -1,0 +1,17 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:ore_feature": {
+    "description": {
+      "identifier": "ntk:fo/block_x_cracked_end_stone_bricks_x_ore"
+    },
+    "count": 3,
+    "replace_rules": [
+      {
+        "places_block": "ntk:cracked_end_stone_bricks",
+        "may_replace": [
+          "minecraft:end_bricks"
+        ]
+      }
+    ]
+  }
+}

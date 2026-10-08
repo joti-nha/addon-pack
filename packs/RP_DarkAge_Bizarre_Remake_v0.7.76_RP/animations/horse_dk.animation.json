@@ -1,0 +1,69 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.horse_dk.tail": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": [
+						0,
+						"math.cos(query.life_time*802)*57.3",
+						0
+					]
+				}
+			}
+		},
+		"animation.horse_dk.walk": {
+			"loop": true,
+			"bones": {
+				"leg": {
+					"rotation": [
+						"variable.tcos0*-1.4",
+						0,
+						0
+					]
+				},
+				"leg2": {
+					"rotation": [
+						"variable.tcos0*1.4",
+						0,
+						0
+					]
+				},
+				"leg3": {
+					"rotation": [
+						"variable.tcos0*1.4",
+						0,
+						0
+					]
+				},
+				"leg4": {
+					"rotation": [
+						"variable.tcos0*-1.4",
+						0,
+						0
+					]
+				},
+				"neck": {
+					"rotation": [
+						"variable.tcos0*1",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.horse_dk.look_at_player": {
+			"loop": true,
+			"bones": {
+				"neck": {
+					"rotation": [
+						"variable.head_x_rot",
+						"(variable.stand_anim+variable.inverse_max_stand_eat)*query.head_y_rotation(20)",
+						0
+					]
+				}
+			}
+		}
+	}
+}

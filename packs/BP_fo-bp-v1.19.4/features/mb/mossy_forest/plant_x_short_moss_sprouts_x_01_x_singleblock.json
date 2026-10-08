@@ -1,0 +1,29 @@
+{
+  "format_version": "1.21.40",
+  "minecraft:single_block_feature": {
+    "description": {
+      "identifier": "ntk:mb/mossy_forest/plant_x_short_moss_sprouts_x_01_x_singleblock"
+    },
+    "places_block": [
+      {
+        "block": "ntk:short_moss_sprouts",
+        "weight": 100
+      }
+    ],
+    "enforce_survivability_rules": true,
+    "enforce_placement_rules": false,
+    "randomize_rotation": false,
+    "may_replace": [
+      "minecraft:air"
+    ],
+    "may_attach_to": {
+      "auto_rotate": false,
+      "min_sides_must_attach": 1,
+			"bottom": [
+        { "tags": "query.all_tags('ntk:mossed_blocks')" },
+				"minecraft:moss_block",
+				"minecraft:pale_moss_block"
+			]
+		}
+  }
+}

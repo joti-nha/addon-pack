@@ -1,0 +1,36 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_stripped_mangrove_woodcutter_x_metal_ingots"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "group": "stripped_mangrove_woodcutter",
+    "assume_symmetry": true,
+    "pattern": [
+      " A ",
+      "BBB"
+    ],
+    "key": {
+      "A": {
+        "tag": "ntk:metal_ingots"
+      },
+      "B": {
+        "item": "minecraft:stripped_mangrove_wood"
+      }
+    },
+    "result": {
+      "item": "ntk:stripped_mangrove_woodcutter",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "tag": "ntk:metal_ingots"
+      },
+      {
+        "item": "minecraft:stripped_mangrove_wood"
+      }
+    ]
+  }
+}

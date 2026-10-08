@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.stinky_medical": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"book": "query.is_sheared"
+				},
+				{
+					"bone": "query.is_sheared"
+				},
+				{
+					"bone3": "query.is_sheared"
+				}
+			]
+		}
+	}
+}

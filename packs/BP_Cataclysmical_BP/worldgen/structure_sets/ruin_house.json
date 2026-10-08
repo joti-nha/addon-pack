@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.80",
+	"minecraft:structure_set": {
+		"description": {
+			"identifier": "mnra_cata:ruin_house"
+		},
+		"placement": {
+			"type": "minecraft:random_spread",
+			"salt": 9176317,
+			"separation": 20,
+			"spacing": 45,
+			"spread_type": "linear"
+		},
+		"structures": [
+			{
+				"structure": "mnra_cata:ruin_house",
+				"weight": 1
+			}
+		]
+	}
+}

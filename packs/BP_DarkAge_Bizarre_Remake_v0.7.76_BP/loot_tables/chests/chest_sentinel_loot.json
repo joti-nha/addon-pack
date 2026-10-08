@@ -1,0 +1,152 @@
+{
+	"pools": [
+		{
+			"rolls": {
+				"min": 8,
+				"max": 10
+			},
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:air",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 10,
+								"max": 12
+							}
+						}
+					],
+					"weight": 80
+				},
+				{
+					"type": "item",
+					"name": "minecraft:gold_ingot",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 3,
+								"max": 6
+							}
+						}
+					],
+					"weight": 70
+				},
+				{
+					"type": "item",
+					"name": "minecraft:golden_apple",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 1
+							}
+						}
+					],
+					"weight": 25
+				},
+				{
+					"type": "item",
+					"name": "dk:sunshard",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 10
+				},
+				{
+					"type": "item",
+					"name": "minecraft:emerald",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					],
+					"weight": 50
+				},
+				{
+					"type": "item",
+					"name": "minecraft:experience_bottle",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 1,
+								"max": 2
+							}
+						}
+					],
+					"weight": 30
+				},
+				{
+					"type": "item",
+					"name": "dk:sentinel_soldier_chestplate",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "dk:sentinel_soldier_boots",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "dk:sentinel_soldier_helmet",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 20
+				},
+				{
+					"type": "item",
+					"name": "dk:sentinel_soldier_leggings",
+					"functions": [
+						{
+							"function": "set_count",
+							"count": {
+								"min": 0,
+								"max": 1
+							}
+						}
+					],
+					"weight": 20
+				}
+			]
+		}
+	]
+}

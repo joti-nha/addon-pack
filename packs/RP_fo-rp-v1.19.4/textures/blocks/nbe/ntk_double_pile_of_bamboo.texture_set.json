@@ -1,0 +1,8 @@
+{
+  "format_version": "1.16.100",
+  "minecraft:texture_set": {
+    "color": "ntk_double_pile_of_bamboo",
+    "heightmap": "ntk_double_pile_of_bamboo_height",
+    "metalness_emissive_roughness": "ntk_double_pile_of_bamboo_mer"
+  }
+}

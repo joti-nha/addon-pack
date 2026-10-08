@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.10",
+  "minecraft:template_pool": {
+    "description": {
+      "identifier": "ntk:ars/ice_tower_x_pool"
+    },
+    "elements": [
+      {
+        "weight": 100,
+        "element": {
+          "location": "ars/ice_tower_01_a",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/decorated_pot_x_processor"
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "ars/ice_tower_01_b",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/decorated_pot_x_processor"
+        }
+      },
+      {
+        "weight": 100,
+        "element": {
+          "location": "ars/ice_tower_01_c",
+          "element_type": "minecraft:single_pool_element",
+          "projection": "rigid",
+          "processors": "ntk:ars/decorated_pot_x_processor"
+        }
+      }
+    ]
+  }
+}

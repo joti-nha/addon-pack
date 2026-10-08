@@ -1,0 +1,35 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sinners_rod.first_person": {
+			"loop": true,
+			"bones": {
+				"sword": {
+					"rotation": [
+						"c.is_first_person?0:0",
+						"c.is_first_person?70:0",
+						"c.is_first_person?-30:0"
+					],
+					"position": [
+						"c.is_first_person?-2:0",
+						"c.is_first_person?6:0",
+						"c.is_first_person?-3:0"
+					],
+					"scale": "c.is_first_person ? 1.0 : 1"
+				}
+			}
+		},
+		"animation.sinners_rod.sinners_rod": {
+			"loop": true,
+			"bones": {
+				"rightItem": {
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

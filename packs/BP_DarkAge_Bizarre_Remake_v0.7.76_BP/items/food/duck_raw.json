@@ -1,0 +1,28 @@
+{
+	"format_version": "1.21.10",
+	"minecraft:item": {
+		"description": {
+			"identifier": "dk:duck_raw",
+			"menu_category": {
+				"category": "equipment",
+				"group": "itemGroup.name.miscFood"
+			}
+		},
+		"components": {
+			"minecraft:icon": "duck_raw",
+			"minecraft:display_name": {
+				"value": "item.dk:duck_raw.name"
+			},
+			"minecraft:use_animation": "eat",
+			"minecraft:use_modifiers": {
+				"use_duration": 1.6,
+				"movement_modifier": 0.35
+			},
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": 0.1,
+				"can_always_eat": false
+			}
+		}
+	}
+}

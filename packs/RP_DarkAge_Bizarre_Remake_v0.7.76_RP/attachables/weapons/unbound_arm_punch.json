@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "dk:unbound_arm_punch",
+			"materials": {
+				"default": "armor",
+				"glow": "skeleton",
+				"glow2": "spider_invisible",
+				"glow3": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unbound_elemental",
+				"enchanted": "textures/misc/enchanted_item_glint"
+			},
+			"geometry": {
+				"default": "geometry.unbound_arm"
+			},
+			"animations": {
+				"first_person": "animation.unbound_arm.first_person",
+				"punch": "animation.unbound_arm.punch",
+				"static": "animation.unbound_arm.static",
+				"shoot": "animation.unbound_arm.shoot",
+				"controller": "controller.animation.unbound_arm_punch.shoot"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person && c.item_slot == 'main_hand' && q.get_equipped_item_name == 'unbound_arm_punch'"
+					},
+					"punch",
+					"static",
+					"controller"
+				]
+			},
+			"render_controllers": [
+				"controller.render.armor_glow"
+			]
+		}
+	}
+}

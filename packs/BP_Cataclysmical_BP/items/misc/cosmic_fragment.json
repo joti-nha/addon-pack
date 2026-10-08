@@ -1,0 +1,17 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mnra_cata:cosmic_fragment",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": "mnra_cata_cosmic_fragment",
+			"minecraft:rarity": {
+				"value": "rare"
+			}
+		}
+	}
+}

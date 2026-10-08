@@ -1,0 +1,60 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "item": "minecraft:diamond_pickaxe",
+          "enchantments": [
+            {
+              "enchantment": "silk_touch",
+              "levels": {
+                "min": 1
+              }
+            }
+          ]
+        },
+        {
+          "condition": "random_chance",
+          "chance": 0.5
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "test:vibranium_ore",
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "match_tool",
+          "item": "minecraft:netherite_pickaxe",
+          "enchantments": [
+            {
+              "enchantment": "silk_touch",
+              "levels": {
+                "min": 1
+              }
+            }
+          ]
+        },
+        {
+          "condition": "random_chance",
+          "chance": 0.5
+        }
+      ],
+      "entries": [
+        {
+          "type": "item",
+          "name": "test:vibranium_ore",
+          "weight": 1
+        }
+      ]
+    }
+  ]
+}

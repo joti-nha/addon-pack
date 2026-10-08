@@ -1,0 +1,106 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.merciful.light": {
+			"animation_length": 2,
+			"loop": true,
+			"timeline": {
+				"1.0": [
+					"/particle dk:feather_dark ~~0.1~",
+					"/particle dk:feather_light ~~0.1~",
+					"/particle dk:feather_twilight ~~~"
+				]
+			}
+		},
+		"animation.merciful.time_attack": {
+			"animation_length": 3.1,
+			"loop": true,
+			"timeline": {
+				"3.0": [
+					"@s dk:attacks"
+				]
+			}
+		},
+		"animation.merciful.twilight_wheel": {
+			"animation_length": 0.96,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/playanimation @e[type=dk:abomination_duck_mer,c=1,r=8] animation.merciful.attack.ride"
+				],
+				"0.90": [
+					"@s dk:no_attacks"
+				]
+			}
+		},
+		"animation.merciful.twilight_cut": {
+			"animation_length": 0.96,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/playanimation @e[type=dk:abomination_duck_mer,c=1,r=8] animation.merciful.attack.ride.two"
+				],
+				"0.90": [
+					"@s dk:no_attacks"
+				]
+			}
+		},
+		"animation.merciful.summon_unknown": {
+			"animation_length": 1.2,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/playanimation @e[type=dk:abomination_duck_mer,c=1,r=8] animation.merciful.summon.ride"
+				],
+				"0.76": [
+					"/summon dk:unknown_portal_merciful ~~5~ ~~ dk:unknown_portal_three"
+				],
+				"1.0": [
+					"@s dk:no_attacks"
+				]
+			}
+		},
+		"animation.merciful.summon_lightning": {
+			"animation_length": 3.84,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/playanimation @e[type=dk:abomination_duck_mer,c=1,r=8] animation.merciful.summon.ride.two"
+				],
+				"0.70": [
+					"/summon dk:merciful_light ~~~ ~~ dk:light_center",
+					"/summon dk:merciful_light ~~~2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~~~-2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~2~~ ~~ dk:light_exit",
+					"/summon dk:merciful_light ~-2~~ ~~ dk:light_exit"
+				],
+				"0.72": [
+					"/summon lightning_bolt ~~~"
+				],
+				"1.90": [
+					"/summon dk:merciful_light ~~~ ~~ dk:light_center",
+					"/summon dk:merciful_light ~~~2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~~~-2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~2~~ ~~ dk:light_exit",
+					"/summon dk:merciful_light ~-2~~ ~~ dk:light_exit"
+				],
+				"1.92": [
+					"/summon lightning_bolt ~~~"
+				],
+				"3.14": [
+					"/summon dk:merciful_light ~~~ ~~ dk:light_center",
+					"/summon dk:merciful_light ~~~2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~~~-2 ~~ dk:light_exit",
+					"/summon dk:merciful_light ~2~~ ~~ dk:light_exit",
+					"/summon dk:merciful_light ~-2~~ ~~ dk:light_exit"
+				],
+				"3.16": [
+					"/summon lightning_bolt ~~~"
+				],
+				"3.78": [
+					"@s dk:no_attacks"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_nether_wart_block_x_crimson_fungus"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "nether_wart_block",
+    "assume_symmetry": true,
+    "pattern": [
+      "BAB",
+      "AAA",
+      "BAB"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:crimson_fungus"
+      },
+      "B": {
+        "item": "minecraft:crimson_roots"
+      }
+    },
+    "result": {
+      "item": "minecraft:nether_wart_block",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:crimson_fungus"
+      },
+      {
+        "item": "minecraft:crimson_roots"
+      }
+    ]
+  }
+}

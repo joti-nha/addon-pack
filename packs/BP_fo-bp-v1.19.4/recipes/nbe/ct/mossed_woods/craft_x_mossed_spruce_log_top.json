@@ -1,0 +1,39 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_mossed_spruce_log_top"
+    },
+    "priority": 1,
+    "tags": [
+      "crafting_table",
+      "grafting_table"
+    ],
+    "group": "mossed_spruce_log_top",
+    "assume_symmetry": true,
+    "pattern": [
+      "G",
+      "L"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:moss_carpet"
+      },
+      "L": {
+        "item": "minecraft:spruce_log"
+      }
+    },
+    "result": {
+      "item": "ntk:mossed_spruce_log_top",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:moss_carpet"
+      },
+      {
+        "item": "minecraft:spruce_log"
+      }
+    ]
+  }
+}

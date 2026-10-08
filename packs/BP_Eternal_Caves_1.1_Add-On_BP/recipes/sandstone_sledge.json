@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:sandstone_sledge"},"key":{"D":"minecraft:cut_sandstone","S":"minecraft:stick"},"pattern":[" D ","SSS"],"tags":["crafting_table"],"result":"panascais_caves:sandstone_sledge"}}

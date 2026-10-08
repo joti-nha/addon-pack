@@ -1,0 +1,349 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tm_aqc:hard_clam",
+      "is_summonable": true,
+      "is_spawnable": false,
+      "is_experimental": false,
+      "properties": {
+        "tm_aqc:pearl": {
+          "type": "int",
+          "range": [0, 3],
+          "default": 0,
+          "client_sync": true
+        },
+        "tm_aqc:clam_state": {
+          "type": "enum",
+          "values": ["ready", "open", "closed"],
+          "default": "ready",
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "tm_aqc:closed": {
+        "minecraft:timer": {
+          "time": [180, 300],
+          "looping": true,
+          "time_down_event": {
+            "event": "tm_aqc:open",
+            "target": "self"
+          }
+        }
+      },
+      "tm_aqc:open": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "swing": true,
+              "play_sounds": "pop",
+              "interact_text": "action.interact.tm_aqc.collect_pearl"
+            }
+          ]
+        }
+      },
+      "tm_aqc:ready": {
+        "minecraft:interact": {
+          "interactions": [
+            {
+              "swing": true,
+              "transform_to_item": "tm_aqc:bucket_hard_clam",
+              "on_interact": {
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "value": "minecraft:water_bucket"
+                      }
+                    ]
+                  }
+                ],
+                "target": "self",
+                "event": "tm_aqc:despawn"
+              }
+            },
+            {
+              "swing": true,
+              "use_item": true,
+              "play_sounds": "pop",
+              "interact_text": "action.interact.tm_aqc.add_item",
+              "on_interact": {
+                "event": "tm_aqc:prep_white_pearl",
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "value": "minecraft:calcite"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "swing": true,
+              "use_item": true,
+              "play_sounds": "pop",
+              "interact_text": "action.interact.tm_aqc.add_item",
+              "on_interact": {
+                "event": "tm_aqc:prep_gold_pearl",
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "value": "minecraft:gold_block"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "swing": true,
+              "use_item": true,
+              "play_sounds": "pop",
+              "interact_text": "action.interact.tm_aqc.add_item",
+              "on_interact": {
+                "event": "tm_aqc:prep_black_pearl",
+                "filters": [
+                  {
+                    "all_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                      },
+                      {
+                        "test": "has_equipment",
+                        "subject": "other",
+                        "value": "minecraft:obsidian"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "tm_aqc:despawn": { "minecraft:instant_despawn": {} }
+    },
+    "components": {
+      "minecraft:type_family": { "family": ["tm_aqc:clam"] },
+      "minecraft:health": { "value": 4, "max": 4 },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 0,
+        "breathes_air": false,
+        "breathes_water": true
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "swing": true,
+            "transform_to_item": "tm_aqc:bucket_hard_clam",
+            "on_interact": {
+              "filters": [
+                {
+                  "all_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "player"
+                    },
+                    {
+                      "test": "has_equipment",
+                      "subject": "other",
+                      "value": "minecraft:water_bucket"
+                    }
+                  ]
+                }
+              ],
+              "target": "self",
+              "event": "tm_aqc:despawn"
+            }
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": { "value": 1, "max": 1 },
+      "minecraft:push_through": { "value": 1 },
+      "minecraft:collision_box": { "width": 1, "height": 1 },
+      "minecraft:physics": {
+        "has_gravity": true,
+        "has_collision": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:conditional_bandwidth_optimization": {
+        "default_values": {
+          "max_optimized_distance": 80.0,
+          "max_dropped_ticks": 5,
+          "use_motion_prediction_hints": true
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+              "component_groups": ["tm_aqc:ready"]
+            }
+      },
+       "tm_aqc:random_pearl": {
+        "randomize": [
+          {
+            "set_property": {
+              "tm_aqc:clam_state": "ready"
+            },
+            "add": {
+              "component_groups": ["tm_aqc:ready"]
+            },
+            "weight": 70
+          },
+          {
+            "set_property": {
+              "tm_aqc:clam_state": "open",
+              "tm_aqc:pearl": 1
+            },
+            "add": {
+              "component_groups": ["tm_aqc:open"]
+            },
+            "weight": 15
+          },
+          {
+            "set_property": {
+              "tm_aqc:clam_state": "open",
+              "tm_aqc:pearl": 2
+            },
+            "add": {
+              "component_groups": ["tm_aqc:open"]
+            },
+            "weight": 10
+          },
+          {
+            "set_property": {
+              "tm_aqc:clam_state": "open",
+              "tm_aqc:pearl": 3
+            },
+            "add": {
+              "component_groups": ["tm_aqc:open"]
+            },
+            "weight": 5
+          }
+        ]
+      },
+      "tm_aqc:white_pearl": {
+        "set_property": {
+          "tm_aqc:pearl": 1
+        }
+      },
+      "tm_aqc:gold_pearl": {
+        "set_property": {
+          "tm_aqc:pearl": 2
+        }
+      },
+      "tm_aqc:black_pearl": {
+        "set_property": {
+          "tm_aqc:pearl": 3
+        }
+      },
+      "tm_aqc:prep_white_pearl": {
+        "add": {
+          "component_groups": ["tm_aqc:closed"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:ready", "tm_aqc:open"]
+        },
+        "set_property": {
+          "tm_aqc:pearl": 1,
+          "tm_aqc:clam_state": "closed"
+        }
+      },
+      "tm_aqc:prep_gold_pearl": {
+        "add": {
+          "component_groups": ["tm_aqc:closed"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:ready", "tm_aqc:open"]
+        },
+        "set_property": {
+          "tm_aqc:pearl": 2,
+          "tm_aqc:clam_state": "closed"
+        }
+      },
+      "tm_aqc:prep_black_pearl": {
+        "add": {
+          "component_groups": ["tm_aqc:closed"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:ready", "tm_aqc:open"]
+        },
+        "set_property": {
+          "tm_aqc:pearl": 3,
+          "tm_aqc:clam_state": "closed"
+        }
+      },
+      "tm_aqc:ready": {
+        "set_property": {
+          "tm_aqc:clam_state": "ready",
+          "tm_aqc:pearl": 0
+        },
+        "add": {
+          "component_groups": ["tm_aqc:ready"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:closed", "tm_aqc:open"]
+        }
+      },
+      "tm_aqc:open": {
+        "set_property": {
+          "tm_aqc:clam_state": "open"
+        },
+        "add": {
+          "component_groups": ["tm_aqc:open"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:closed", "tm_aqc:ready"]
+        }
+      },
+      "tm_aqc:closed": {
+        "set_property": {
+          "tm_aqc:clam_state": "closed",
+          "tm_aqc:pearl": 0
+        },
+        "add": {
+          "component_groups": ["tm_aqc:closed"]
+        },
+        "remove": {
+          "component_groups": ["tm_aqc:ready", "tm_aqc:open"]
+        }
+      },
+      "tm_aqc:despawn": {
+        "add": { "component_groups": ["tm_aqc:despawn"] }
+      }
+    }
+  }
+}

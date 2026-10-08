@@ -1,0 +1,35 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_olivine_pickaxe"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "OOO",
+      " R ",
+      " R "
+    ],
+    "key": {
+      "O": {
+        "item": "ntk:olivine"
+      },
+      "R": {
+        "item": "ntk:metal_rod"
+      }
+    },
+    "result": {
+      "item": "ntk:olivine_pickaxe",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:olivine"
+      },
+      {
+        "item": "ntk:metal_rod"
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_jar_of_water_half_x_water_bottle"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "jar_of_water_half",
+    "assume_symmetry": true,
+    "pattern": [
+      "JW"
+    ],
+    "key": {
+      "J": {
+        "item": "ntk:empty_jar"
+      },
+      "W": {
+        "item": "minecraft:potion",
+        "data": 0
+      }
+    },
+    "result": [
+      {
+        "item": "ntk:jar_of_water_half",
+        "count": 1
+      },
+      {
+        "item": "minecraft:glass_bottle",
+        "count": 1
+      }
+    ],
+    "unlock": [
+      {
+        "item": "minecraft:potion",
+        "data": 0
+      },
+      {
+        "item": "ntk:empty_jar"
+      }
+    ]
+  }
+}

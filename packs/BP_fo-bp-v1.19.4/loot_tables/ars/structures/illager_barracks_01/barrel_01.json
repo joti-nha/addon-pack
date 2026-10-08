@@ -1,0 +1,26 @@
+{
+  "pools": [
+    // Structures 
+    {
+      "rolls": 12,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/structure_libraries.json"
+        }
+      ]
+    },
+    // Rarity
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "weight": 100,
+          "type": "loot_table",
+          "name": "loot_tables/loot_set/rarity_items.json"
+        }
+      ]
+    }
+  ]
+}

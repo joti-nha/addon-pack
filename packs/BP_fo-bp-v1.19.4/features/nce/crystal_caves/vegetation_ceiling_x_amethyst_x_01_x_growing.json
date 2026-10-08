@@ -1,0 +1,31 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:growing_plant_feature": {
+    "description": {
+      "identifier": "ntk:nce/crystal_caves/vegetation_ceiling_x_amethyst_x_01_x_growing"
+    },
+    "growth_direction": "DOWN",
+    "body_blocks": [
+      [
+        "minecraft:amethyst_block", 100
+      ]
+    ],
+    "head_blocks": [
+      [
+        "minecraft:amethyst_block", 10
+      ],
+      [
+        {
+          "name": "minecraft:amethyst_cluster",
+          "states": {
+            "minecraft:block_face": "down"
+          }
+        }, 100
+      ]
+    ],
+    "height_distribution": [
+      [ { "range_min": 1, "range_max": 3 }, 2 ],
+      [ { "range_min": 3, "range_max": 6 }, 1 ]
+    ]
+  }
+}

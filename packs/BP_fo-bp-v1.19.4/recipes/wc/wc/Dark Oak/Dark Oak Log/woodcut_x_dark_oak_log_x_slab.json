@@ -1,0 +1,31 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:woodcut_x_dark_oak_log_x_slab"
+    },
+    "priority": 1,
+    "tags": [ "wood_cutter" ],
+    "group": "dark_oak_slab",
+    "assume_symmetry": true,
+    "pattern": [
+      "   ",
+      " # ",
+      "   "
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:dark_oak_log"
+      }
+    },
+    "result": {
+      "item": "minecraft:dark_oak_slab",
+      "count": 8
+    },
+    "unlock": [
+      {
+        "item": "minecraft:dark_oak_log"
+      }
+    ]
+  }
+}

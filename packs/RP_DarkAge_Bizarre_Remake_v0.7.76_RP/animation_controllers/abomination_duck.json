@@ -1,0 +1,437 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.abomination_duck.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"wait"
+					],
+					"transitions": [
+						{
+							"static": "q.property('dk:abomination_duck_modes')=='dk_abomination_duck_mode_target'"
+						}
+					],
+					"blend_transition": 0.5
+				},
+				"static": {
+					"animations": [
+						"static"
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:abomination_duck_modes')=='dk_abomination_duck_mode_wait'"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.abomination_duck.moves": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.5,
+					"animations": [
+						{
+							"move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"move_angry": "query.modified_move_speed>=0.4"
+						},
+						{
+							"none": "query.is_delayed_attacking||query.is_charged"
+						}
+					]
+				},
+				"move_angry": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.5,
+					"animations": [
+						{
+							"move_angry": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed<0.4"
+						},
+						{
+							"none": "query.is_delayed_attacking||query.is_charged"
+						}
+					]
+				},
+				"none": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking&&!query.is_charged"
+						}
+					],
+					"blend_transition": 0.5
+				}
+			}
+		},
+		"controller.animation.abomination_duck.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bite": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"peck": "query.mark_variant==2&&query.is_delayed_attacking"
+						},
+						{
+							"squash_one": "query.mark_variant==3&&query.is_delayed_attacking"
+						},
+						{
+							"squash_two": "query.mark_variant==4&&query.is_delayed_attacking"
+						},
+						{
+							"squash_three": "query.mark_variant==5&&query.is_roaring"
+						},
+						{
+							"shoot": "query.is_charged&&query.mark_variant==6"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"bite": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"bite"
+					]
+				},
+				"peck": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"peck"
+					]
+				},
+				"squash_one": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_one"
+					]
+				},
+				"squash_two": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_two"
+					]
+				},
+				"squash_three": {
+					"transitions": [
+						{
+							"default": "!query.is_roaring"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_three"
+					]
+				},
+				"shoot": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"shoot"
+					]
+				}
+			}
+		},
+		"controller.animation.abomination_duck_mer.moves": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.4,
+					"animations": [
+						{
+							"move": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"move_angry": "query.modified_move_speed>=0.4"
+						},
+						{
+							"move_fly": "q.property('dk:modes')=='on_fly'"
+						},
+						{
+							"fall": "q.property('dk:modes')=='on_ground'&&!query.is_on_ground"
+						},
+						{
+							"none": "query.is_delayed_attacking||query.is_charged"
+						}
+					]
+				},
+				"move_angry": {
+					"variables": {
+						"move_speed": {
+							"input": "query.modified_move_speed",
+							"remap_curve": {
+								"0.0": 0,
+								"0.25": 1
+							}
+						}
+					},
+					"blend_transition": 0.4,
+					"animations": [
+						{
+							"move_angry": "variable.move_speed"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.modified_move_speed<0.4"
+						},
+						{
+							"move_fly": "q.property('dk:modes')=='on_fly'"
+						},
+						{
+							"fall": "q.property('dk:modes')=='on_ground'&&!query.is_on_ground"
+						},
+						{
+							"none": "query.is_delayed_attacking||query.is_charged"
+						}
+					]
+				},
+				"none": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking&&!query.is_charged"
+						},
+						{
+							"move_fly": "q.property('dk:modes')=='on_fly'"
+						},
+						{
+							"fall": "q.property('dk:modes')=='on_ground'&&!query.is_on_ground"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"move_fly": {
+					"blend_transition": 0.4,
+					"animations": [
+						"move_fly"
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:modes')=='on_ground'"
+						},
+						{
+							"move_fly_angry": "q.property('dk:modes')=='on_fly_two'"
+						},
+						{
+							"fall": "(q.property('dk:modes')=='on_ground'&&query.is_on_ground)||q.property('dk:modes')=='fall'"
+						}
+					]
+				},
+				"move_fly_angry": {
+					"blend_transition": 0.4,
+					"animations": [
+						"move_fly_angry"
+					],
+					"transitions": [
+						{
+							"default": "q.property('dk:modes')=='on_ground'"
+						},
+						{
+							"move_fly": "q.property('dk:modes')=='on_fly'"
+						},
+						{
+							"fall": "(q.property('dk:modes')=='on_ground'&&query.is_on_ground)||q.property('dk:modes')=='fall'"
+						}
+					]
+				},
+				"fall": {
+					"blend_transition": 0.4,
+					"animations": [
+						"fall"
+					],
+					"transitions": [
+						{
+							"default": "query.is_on_ground"
+						},
+						{
+							"move_fly": "q.property('dk:modes')=='on_fly'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.abomination_duck_mer.attacks": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"bite": "query.mark_variant==1&&query.is_delayed_attacking"
+						},
+						{
+							"peck": "query.mark_variant==2&&query.is_delayed_attacking"
+						},
+						{
+							"squash_one": "query.mark_variant==3&&query.is_delayed_attacking"
+						},
+						{
+							"squash_two": "query.mark_variant==4&&query.is_delayed_attacking"
+						},
+						{
+							"squash_three": "query.mark_variant==5&&query.is_roaring"
+						},
+						{
+							"shoot": "q.property('dk:modes')=='on_ground'&&query.is_charged&&query.mark_variant==6"
+						},
+						{
+							"shoot_fly": "q.property('dk:modes')=='on_fly_two'&&query.is_charged&&query.mark_variant==7"
+						},
+						{
+							"shoot_melee": "q.property('dk:modes')=='on_fly_two'&&query.is_charged&&query.mark_variant==8"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"bite": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"bite"
+					]
+				},
+				"peck": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"peck"
+					]
+				},
+				"squash_one": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_one"
+					]
+				},
+				"squash_two": {
+					"transitions": [
+						{
+							"default": "!query.is_delayed_attacking"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_two"
+					]
+				},
+				"squash_three": {
+					"transitions": [
+						{
+							"default": "!query.is_roaring"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"squash_three"
+					]
+				},
+				"shoot": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"shoot"
+					]
+				},
+				"shoot_fly": {
+					"transitions": [
+						{
+							"default": "!query.is_charged"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"shoot_fly"
+					]
+				},
+				"shoot_melee": {
+					"transitions": [
+						{
+							"default": "q.property('dk:modes')=='on_ground'&&query.is_on_ground"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

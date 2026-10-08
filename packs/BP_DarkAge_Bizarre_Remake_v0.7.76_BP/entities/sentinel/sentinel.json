@@ -1,0 +1,1247 @@
+{
+	"format_version": "1.19.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "dk:sentinel",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					{
+						"attacks": "!query.is_illager_captain"
+					},
+					{
+						"guard": "!query.is_illager_captain"
+					},
+					{
+						"destroy": "!query.is_illager_captain"
+					},
+					{
+						"berserk": "!query.is_illager_captain"
+					},
+					{
+						"unshield": "!query.is_illager_captain"
+					},
+					{
+						"death": "query.is_illager_captain&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'"
+					},
+					{
+						"spear_shoot": "query.mark_variant==7&&!query.is_illager_captain&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'"
+					},
+					{
+						"unshield": "query.is_sheared&&!query.is_roaring&&!query.is_illager_captain&&query.has_target&&q.property('dk:sentinel_modes')=='dk_sentinel_mode_life'"
+					}
+				]
+			},
+			"animations": {
+				"attacks": "controller.animation.sentinel.attacks",
+				"guard": "controller.animation.sentinel.guard",
+				"spear_shoot": "animation.sentinel.attack_ranged",
+				"berserk": "controller.animation.sentinel.berserk",
+				"unshield": "animation.sentinel.unshield",
+				"death": "animation.sentinel.death",
+				"destroy": "controller.animation.sentinel.destroys"
+			},
+			"properties": {
+				"dk:sentinel_modes": {
+					"type": "enum",
+					"values": [
+						"dk_sentinel_mode_wait",
+						"dk_sentinel_mode_explode",
+						"dk_sentinel_mode_life"
+					],
+					"default": "dk_sentinel_mode_wait",
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {
+			"dk:sentinel_mode_spawn": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 5,
+					"outside_range": 6,
+					"must_see": true,
+					"on_inside_range": {
+						"event": "dk:sentinel_event_mode_explode",
+						"target": "self"
+					}
+				},
+				"minecraft:follow_range": {
+					"max": 6,
+					"value": 6
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"event": "dk:sentinel_event_mode_explode"
+							},
+							"deals_damage": true
+						}
+					]
+				}
+			},
+			"dk:sentinel_mode_explode": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.1,
+					"time_down_event": {
+						"event": "dk:sentinel_event_mode_spawn_explode",
+						"target": "self"
+					}
+				},
+				"minecraft:damage_sensor": {
+					"triggers": {
+						"cause": "all",
+						"deals_damage": false
+					}
+				},
+				"minecraft:behavior.knockback_roar": {
+					"priority": 1,
+					"duration": 1.8,
+					"attack_time": 1.1,
+					"knockback_damage": 4,
+					"knockback_horizontal_strength": 10,
+					"knockback_vertical_strength": 2,
+					"knockback_range": 16,
+					"knockback_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "sentinel"
+					},
+					"damage_filters": {
+						"test": "is_family",
+						"subject": "other",
+						"operator": "!=",
+						"value": "sentinel"
+					},
+					"cooldown_time": 1,
+					"on_roar_end": {
+						"event": "dk:sentinel_event_mode_life",
+						"target": "self"
+					}
+				}
+			},
+			"dk:sentinel_mode_life": {
+				"minecraft:follow_range": {
+					"max": 64,
+					"value": 64
+				},
+				"minecraft:movement": {
+					"value": 0.2
+				},
+				"minecraft:can_climb": {},
+				"minecraft:jump.static": {},
+				"minecraft:behavior.float": {
+					"priority": 20
+				},
+				"minecraft:movement.basic": {},
+				"minecraft:navigation.walk": {
+					"can_path_over_water": true,
+					"can_float": true,
+					"avoid_water": false,
+					"avoid_damage_blocks": false
+				},
+				"minecraft:behavior.look_at_player": {
+					"priority": 9,
+					"look_distance": 6,
+					"probability": 7
+				},
+				"minecraft:behavior.look_at_entity": {
+					"priority": 9,
+					"look_distance": 6,
+					"probability": 7,
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "mob"
+					}
+				},
+				"minecraft:pushable": {
+					"is_pushable": false,
+					"is_pushable_by_piston": true
+				}
+			},
+			"dk:sentinel_mode_no_guard": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"dk:sentinel_mode_guard": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"dk:sentinel_mode_shield": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "netherite_axe"
+								},
+								"event": "dk:sentinel_event_mode_shieldless"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:halberd"
+								},
+								"event": "dk:sentinel_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_equipment",
+									"subject": "other",
+									"domain": "hand",
+									"value": "dk:sentinel_halberd"
+								},
+								"event": "dk:sentinel_event_mode_shieldless"
+							},
+							"deals_damage": true
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "block_explosion"
+								},
+								"event": "dk:sentinel_event_mode_sound"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "entity_explosion"
+								},
+								"event": "dk:sentinel_event_mode_sound"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "projectile"
+								},
+								"event": "dk:sentinel_event_mode_sound"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"subject": "self",
+									"value": "attack"
+								},
+								"event": "dk:sentinel_event_mode_sound"
+							},
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"value": "fatal"
+								},
+								"event": "dk:sentinel_event_mode_death",
+								"on_damage_sound_event": "hurt"
+							},
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:is_saddled": {}
+			},
+			"dk:sentinel_mode_no_shield": {
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"value": "fatal"
+								},
+								"event": "dk:sentinel_event_mode_death",
+								"on_damage_sound_event": "hurt"
+							},
+							"deals_damage": false
+						}
+					]
+				},
+				"minecraft:is_sheared": {}
+			},
+			"dk:sentinel_mode_attack_one": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 18,
+					"outside_range": 19,
+					"must_see": true,
+					"on_outside_range": {
+						"event": "dk:sentinel_event_mode_spear_two",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 5
+								},
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 7
+								},
+								{
+									"test": "has_component",
+									"operator": "==",
+									"value": "minecraft:is_saddled"
+								}
+							]
+						}
+					}
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_duration": 0.88,
+					"hit_delay_pct": 0.6,
+					"reach_multiplier": 3,
+					"speed_multiplier": 1.4
+				},
+				"minecraft:attack": {
+					"damage": 12
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"dk:sentinel_mode_attack_two": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 18,
+					"outside_range": 19,
+					"must_see": true,
+					"on_outside_range": {
+						"event": "dk:sentinel_event_mode_spear_two",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 5
+								},
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 7
+								},
+								{
+									"test": "has_component",
+									"operator": "==",
+									"value": "minecraft:is_saddled"
+								}
+							]
+						}
+					}
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_duration": 1.04,
+					"hit_delay_pct": 0.68,
+					"reach_multiplier": 3.5,
+					"speed_multiplier": 1.4
+				},
+				"minecraft:attack": {
+					"damage": 13
+				},
+				"minecraft:mark_variant": {
+					"value": 2
+				}
+			},
+			"dk:sentinel_mode_attack_three": {
+				"minecraft:target_nearby_sensor": {
+					"inside_range": 18,
+					"outside_range": 19,
+					"must_see": true,
+					"on_outside_range": {
+						"event": "dk:sentinel_event_mode_spear_two",
+						"target": "self",
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 5
+								},
+								{
+									"test": "is_mark_variant",
+									"operator": "!=",
+									"value": 7
+								},
+								{
+									"test": "has_component",
+									"operator": "==",
+									"value": "minecraft:is_saddled"
+								}
+							]
+						}
+					}
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 1,
+					"attack_duration": 1.44,
+					"hit_delay_pct": 0.68,
+					"reach_multiplier": 3,
+					"speed_multiplier": 1.4
+				},
+				"minecraft:attack": {
+					"damage": 15
+				},
+				"minecraft:mark_variant": {
+					"value": 3
+				}
+			},
+			"dk:sentinel_mode_attack_four": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.6,
+					"cooldown_time": 0.1,
+					"duration": 1,
+					"knockback_damage": 11,
+					"knockback_vertical_strength": 2,
+					"knockback_horizontal_strength": 4,
+					"knockback_range": 4,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "sentinel"
+							}
+						]
+					},
+					"damage_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "sentinel"
+							}
+						]
+					},
+					"on_roar_end": {
+						"event": "dk:sentinel_event_mode_attacks",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 4
+				}
+			},
+			"dk:sentinel_mode_spears": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.24,
+					"time_down_event": {
+						"event": "dk:sentinel_event_mode_spawn_spears",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 5
+				}
+			},
+			"dk:sentinel_mode_spears_two": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.72,
+					"time_down_event": {
+						"event": "dk:sentinel_event_mode_spawn_spears_two",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 6
+				}
+			},
+			"dk:sentinel_mode_on_ground": {
+				"minecraft:is_tamed": {},
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0.96,
+					"time_down_event": {
+						"event": "dk:sentinel_event_mode_ground",
+						"target": "self",
+						"filters": {
+							"test": "is_riding",
+							"subject": "self",
+							"value": false
+						}
+					}
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"cause": "all",
+							"deals_damage": false
+						},
+						{
+							"on_damage": {
+								"filters": {
+									"test": "has_damage",
+									"value": "fatal"
+								},
+								"event": "dk:sentinel_event_mode_death",
+								"on_damage_sound_event": "hurt"
+							},
+							"deals_damage": false
+						}
+					]
+				}
+			},
+			"dk:sentinel_mode_spears_shoot": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 1.2,
+					"time_down_event": {
+						"event": "dk:sentinel_event_mode_attacks",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 7
+				}
+			},
+			"dk:sentinel_mode_knockback": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.8,
+					"cooldown_time": 0.1,
+					"duration": 1.12,
+					"knockback_damage": 8,
+					"knockback_vertical_strength": 4,
+					"knockback_horizontal_strength": 4,
+					"knockback_range": 6,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "sentinel"
+							}
+						]
+					},
+					"damage_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"operator": "!=",
+								"value": "sentinel"
+							}
+						]
+					},
+					"on_roar_end": {
+						"event": "dk:sentinel_event_mode_attacks",
+						"target": "self"
+					}
+				},
+				"minecraft:mark_variant": {
+					"value": 8
+				}
+			},
+			"dk:sentinel_mode_death": {
+				"minecraft:timer": {
+					"time": 1.45,
+					"looping": true,
+					"time_down_event": {
+						"event": "dk:despawn_event",
+						"target": "self"
+					}
+				},
+				"minecraft:damage_sensor": {
+					"triggers": [
+						{
+							"deals_damage": false,
+							"on_damage_sound_event": "hurt"
+						}
+					]
+				},
+				"minecraft:is_illager_captain": {},
+				"minecraft:movement": {
+					"value": 0
+				},
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"min_wait_time": 1.95,
+							"max_wait_time": 1.95,
+							"num_to_spawn": 1,
+							"spawn_entity": "dk:bag_sentinel",
+							"single_use": true
+						}
+					]
+				}
+			},
+			"dk:despawn": {
+				"minecraft:instant_despawn": {},
+				"minecraft:is_illager_captain": {}
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 300,
+				"max": 300
+			},
+			"minecraft:type_family": {
+				"family": [
+					"sentinel",
+					"monster",
+					"dk"
+				]
+			},
+			"minecraft:scale": {
+				"value": 1.75
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:loot": {
+				"table": "loot_tables/entities/sentinel.json"
+			},
+			"minecraft:experience_reward": {
+				"on_death": "query.last_hit_by_player?5+(query.equipment_count*math.random(1,3)):0"
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1.2,
+				"height": 4
+			},
+			"minecraft:angry": {
+				"duration": 30,
+				"broadcast_anger": true,
+				"broadcast_anger_on_attack": true,
+				"broadcast_anger_on_being_attacked": true,
+				"broadcast_range": 30,
+				"broadcast_targets": [
+					"sentinel"
+				]
+			},
+			"minecraft:behavior.hurt_by_target": {
+				"priority": 1,
+				"alert_same_type": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"operator": "!=",
+									"value": "sentinel"
+								}
+							]
+						}
+					}
+				]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 1,
+				"scan_interval": 10,
+				"within_radius": 64,
+				"reselect_targets": true,
+				"entity_types": [
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "snowgolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "irongolem"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "soulless_knight"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "gargoyle"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "unbound"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "stinky"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "assassin"
+								},
+								{
+									"all_of": [
+										{
+											"none_of": [
+												{
+													"all_of": [
+														{
+															"test": "has_equipment",
+															"subject": "other",
+															"domain": "head",
+															"operator": "==",
+															"value": "dk:sentinel_soldier_helmet"
+														},
+														{
+															"test": "has_equipment",
+															"subject": "other",
+															"domain": "torso",
+															"operator": "==",
+															"value": "dk:sentinel_soldier_chestplate"
+														},
+														{
+															"test": "has_equipment",
+															"subject": "other",
+															"domain": "leg",
+															"operator": "==",
+															"value": "dk:sentinel_soldier_leggings"
+														},
+														{
+															"test": "has_equipment",
+															"subject": "other",
+															"domain": "feet",
+															"operator": "==",
+															"value": "dk:sentinel_soldier_boots"
+														}
+													]
+												}
+											]
+										},
+										{
+											"test": "is_family",
+											"subject": "other",
+											"value": "player"
+										}
+									]
+								}
+							]
+						},
+						"max_dist": 64
+					},
+					{
+						"filters": {
+							"any_of": [
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "villager"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "corrupted"
+								},
+								{
+									"test": "is_family",
+									"subject": "other",
+									"value": "wandering_trader"
+								}
+							]
+						},
+						"max_dist": 64
+					}
+				],
+				"must_see": false,
+				"must_see_forget_duration": 50
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": 0,
+				"breathes_air": true,
+				"breathes_water": true
+			},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"randomize": [
+					{
+						"weight": 80,
+						"remove": {},
+						"add": {
+							"component_groups": [
+								"dk:sentinel_mode_spawn"
+							]
+						}
+					}
+				]
+			},
+			"dk:sentinel_event_mode_explode": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_explode"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_spawn"
+					]
+				},
+				"set_property": {
+					"dk:sentinel_modes": "dk_sentinel_mode_explode"
+				}
+			},
+			"dk:sentinel_event_mode_spawn_explode": {
+				"queue_command": {
+					"command": [
+						"summon dk:sentinel_explosion ~ ~2.5 ~",
+						"fill ~10 ~ ~-10 ~-10 ~-50 ~10 air [] replace barrier",
+						"fill ~10 ~ ~-10 ~-10 ~-50 ~10 air [] replace spruce_trapdoor"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_life": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_life",
+						"dk:sentinel_mode_guard",
+						"dk:sentinel_mode_shield",
+						"dk:sentinel_mode_attack_one"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_explode"
+					]
+				},
+				"set_property": {
+					"dk:sentinel_modes": "dk_sentinel_mode_life"
+				}
+			},
+			"dk:sentinel_event_mode_no_guard": {
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_shield"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_guard": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_shield"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_shield": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_guard",
+						"dk:sentinel_mode_shield"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_no_guard",
+						"dk:sentinel_mode_no_shield"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_shieldless": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_no_guard",
+						"dk:sentinel_mode_no_shield",
+						"dk:sentinel_mode_attack_one"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_guard",
+						"dk:sentinel_mode_shield",
+						"dk:sentinel_mode_spears",
+						"dk:sentinel_mode_attack_three",
+						"dk:sentinel_mode_attack_two",
+						"dk:sentinel_mode_attack_four",
+						"dk:sentinel_mode_spears_shoot",
+						"dk:sentinel_mode_spears_two"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"playsound random.break @a[r=30]",
+						"effect @s weakness 6 1",
+						"effect @s slowness 10 1"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_sound": {
+				"queue_command": {
+					"command": [
+						"playsound mob.blaze.hit @a[r=30]"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_attacks": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"subject": "self",
+							"operator": "!=",
+							"value": "minecraft:is_illager_captain"
+						},
+						"randomize": [
+							{
+								"weight": 90,
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_one"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears_shoot",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 80,
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears_shoot",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 70,
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_three"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears_shoot",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 75,
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_mark_variant",
+											"operator": "!=",
+											"value": 4
+										},
+										{
+											"test": "has_component",
+											"operator": "==",
+											"value": "minecraft:is_saddled"
+										},
+										{
+											"test": "has_target",
+											"value": true
+										}
+									]
+								},
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_four"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears_shoot",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 65,
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_mark_variant",
+											"operator": "!=",
+											"value": 5
+										},
+										{
+											"test": "has_component",
+											"operator": "==",
+											"value": "minecraft:is_saddled"
+										},
+										{
+											"test": "has_target",
+											"value": true
+										}
+									]
+								},
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_spears"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears_shoot",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 68,
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_mark_variant",
+											"operator": "!=",
+											"value": 7
+										},
+										{
+											"test": "has_component",
+											"operator": "==",
+											"value": "minecraft:is_saddled"
+										},
+										{
+											"test": "has_target",
+											"value": true
+										}
+									]
+								},
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_spears_shoot"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_knockback"
+									]
+								}
+							},
+							{
+								"weight": 75,
+								"filters": {
+									"all_of": [
+										{
+											"test": "is_mark_variant",
+											"operator": "!=",
+											"value": 8
+										},
+										{
+											"test": "has_component",
+											"operator": "==",
+											"value": "minecraft:is_sheared"
+										},
+										{
+											"test": "has_target",
+											"value": true
+										}
+									]
+								},
+								"add": {
+									"component_groups": [
+										"dk:sentinel_mode_knockback"
+									]
+								},
+								"remove": {
+									"component_groups": [
+										"dk:sentinel_mode_attack_two",
+										"dk:sentinel_mode_attack_three",
+										"dk:sentinel_mode_attack_one",
+										"dk:sentinel_mode_attack_four",
+										"dk:sentinel_mode_spears_two",
+										"dk:sentinel_mode_spears",
+										"dk:sentinel_mode_spears_shoot"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"dk:sentinel_event_mode_spear_two": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_spears_two"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_attack_two",
+						"dk:sentinel_mode_attack_three",
+						"dk:sentinel_mode_attack_one",
+						"dk:sentinel_mode_attack_four",
+						"dk:sentinel_mode_spears",
+						"dk:sentinel_mode_spears_shoot",
+						"dk:sentinel_mode_knockback"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_spawn_spears": {
+				"queue_command": {
+					"command": [
+						"summon dk:halberd_sacred ~5~30~5 ~~ dk:halberd_sacred_special"
+					]
+				},
+				"trigger": "dk:sentinel_event_mode_attacks"
+			},
+			"dk:sentinel_event_mode_spawn_spears_two": {
+				"queue_command": {
+					"command": [
+						"effect @s invisibility 15 0 true",
+						"tp @s ~~10 ~",
+						"effect @s slow_falling 10 5 true",
+						"effect @s instant_health 1 1 true",
+						"playsound random.fizz @a[r=30]",
+						"playsound item.trident.throw @a[r=30]",
+						"summon dk:halberd_sacred ~5~30~5 ~~ dk:halberd_sacred_special",
+						"summon dk:halberd_sacred ~5~45~5 ~~ dk:halberd_sacred_special_two"
+					]
+				},
+				"trigger": "dk:sentinel_event_mode_no_ground"
+			},
+			"dk:sentinel_event_mode_no_ground": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_on_ground"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_spears_two",
+						"dk:sentinel_mode_shield",
+						"dk:sentinel_mode_no_shield"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_ground": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_attack_one",
+						"dk:sentinel_mode_shield"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_on_ground"
+					]
+				}
+			},
+			"dk:sentinel_event_mode_death": {
+				"add": {
+					"component_groups": [
+						"dk:sentinel_mode_death",
+						"dk:sentinel_mode_no_guard"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"dk:sentinel_mode_life",
+						"dk:sentinel_mode_guard",
+						"dk:sentinel_mode_shield",
+						"dk:sentinel_mode_no_shield",
+						"dk:sentinel_mode_spears",
+						"dk:sentinel_mode_attack_three",
+						"dk:sentinel_mode_attack_two",
+						"dk:sentinel_mode_attack_four",
+						"dk:sentinel_mode_spears_shoot",
+						"dk:sentinel_mode_spears_two",
+						"dk:sentinel_mode_attack_one",
+						"dk:sentinel_mode_on_ground"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"effect @s slowness 100 200 true"
+					]
+				}
+			},
+			"dk:despawn_event": {
+				"add": {
+					"component_groups": [
+						"dk:despawn"
+					]
+				},
+				"queue_command": {
+					"command": [
+						"particle minecraft:huge_explosion_lab_misc_emitter ~~1~",
+						"playsound mob.sentinel.death @a[r=20] ~~~ 1 0.8",
+						"playsound block.bell.hit @a[r=20] ~ ~ ~ 60 0.6"
+					]
+				}
+			}
+		}
+	}
+}

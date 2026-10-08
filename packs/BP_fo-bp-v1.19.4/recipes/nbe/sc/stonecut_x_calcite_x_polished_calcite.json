@@ -1,0 +1,24 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:stonecut_x_calcite_x_polished_calcite"
+    },
+    "priority": 3,
+    "tags": [ "stonecutter" ],
+    "ingredients": [
+      {
+        "item": "minecraft:calcite"
+      }
+    ],
+    "result": {
+      "item": "ntk:polished_calcite",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "minecraft:calcite"
+      }
+    ]
+  }
+}

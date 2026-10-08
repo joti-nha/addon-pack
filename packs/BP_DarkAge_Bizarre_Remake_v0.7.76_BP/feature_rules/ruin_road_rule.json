@@ -1,0 +1,47 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:feature_rules": {
+		"description": {
+			"identifier": "dk:ruin_road_rule",
+			"places_feature": "dk:wetland/ruin_determinant"
+		},
+		"conditions": {
+			"placement_pass": "after_surface_pass",
+			"minecraft:biome_filter": {
+				"all_of": [
+					{
+						"any_of": [
+							{
+								"test": "has_biome_tag",
+								"operator": "==",
+								"value": "ocean"
+							}
+						]
+					}
+				]
+			}
+		},
+		"distribution": {
+			"iterations": 1,
+			"scatter_chance": {
+				"numerator": 1,
+				"denominator": 10
+			},
+			"x": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"z": {
+				"distribution": "uniform",
+				"extent": [
+					0,
+					16
+				]
+			},
+			"y": 62
+		}
+	}
+}

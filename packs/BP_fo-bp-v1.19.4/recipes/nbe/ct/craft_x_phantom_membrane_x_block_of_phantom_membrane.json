@@ -1,0 +1,25 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "ntk:craft_x_phantom_membrane_x_block_of_phantom_membrane"
+    },
+    "priority": 2,
+    "tags": [ "crafting_table" ],
+    "group": "phantom_membrane",
+    "ingredients": [
+      {
+        "item": "ntk:block_of_phantom_membrane"
+      }
+    ],
+    "result": {
+      "item": "minecraft:phantom_membrane",
+      "count": 9
+    },
+    "unlock": [
+      {
+        "item": "ntk:block_of_phantom_membrane"
+      }
+    ]
+  }
+}

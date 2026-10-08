@@ -1,0 +1,30 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "dk:unbound_elemental_fireball_two",
+			"materials": {
+				"default": "skeleton",
+				"glow": "spider_invisible",
+				"glow2": "spider"
+			},
+			"textures": {
+				"default": "textures/entity/mobs/unbound_elemental/unbound_elemental"
+			},
+			"geometry": {
+				"default": "geometry.unbound_proyectil"
+			},
+			"scripts": {
+				"animate": [
+					"spawn"
+				]
+			},
+			"animations": {
+				"spawn": "animation.unbound_proyectil.static"
+			},
+			"render_controllers": [
+				"controller.render.sun_arrow"
+			]
+		}
+	}
+}

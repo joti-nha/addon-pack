@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/paths_blocks_scatter_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/paths_blocks_feature_mcstructure",
+				50
+			],
+			[
+				"dk:structures/paths_blocks_two_feature_mcstructure",
+				50
+			]
+		]
+	}
+}

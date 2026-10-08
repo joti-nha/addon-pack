@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/85daf72af1d08220f7eb3a3fa53d2ef1"},"places_block":"minecraft:air","enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":[{"name":"minecraft:waxed_oxidized_cut_copper_slab","states":{"minecraft:vertical_half":"bottom"}}]}}

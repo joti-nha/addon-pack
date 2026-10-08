@@ -1,0 +1,47 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.twilight_wheel",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 7,
+				"visible_bounds_height": 11.5,
+				"visible_bounds_offset": [
+					0,
+					5.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "twilight_wheel",
+					"pivot": [
+						0,
+						1,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14.5,
+								1,
+								-14.5
+							],
+							"size": [
+								29,
+								0,
+								29
+							],
+							"uv": [
+								-1,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

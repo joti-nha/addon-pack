@@ -1,0 +1,31 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "bv:disc_ward"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:green_dye"
+			},
+			"P": {
+				"item": "minecraft:polished_deepslate"
+			},
+			"L": {
+				"item": "minecraft:lime_dye"
+			}
+		},
+		"pattern": [
+			" # ",
+			"PPP",
+			" L "
+		],
+		"result": {
+			"item": "minecraft:music_disc_ward",
+			"count": 1
+		}
+	}
+}

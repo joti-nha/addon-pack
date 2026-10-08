@@ -1,0 +1,1 @@
+{"format_version":"1.21.40","minecraft:single_block_feature":{"description":{"identifier":"panascais_caves:panascais/caves/56ffd348d6830cce209c21ae755cf39f"},"places_block":{"name":"panascais_caves:grimrock_nadd_pillar_ending","states":{"minecraft:block_face":"up"}},"enforce_placement_rules":false,"enforce_survivability_rules":false,"may_replace":["minecraft:air"]}}

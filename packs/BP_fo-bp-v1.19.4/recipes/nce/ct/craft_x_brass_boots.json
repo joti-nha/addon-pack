@@ -1,0 +1,28 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:craft_x_brass_boots"
+    },
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "Z Z",
+      "Z Z"
+    ],
+    "key": {
+      "Z": {
+        "item": "ntk:brass_ingot"
+      }
+    },
+    "result": {
+      "item": "ntk:brass_boots",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:brass_ingot"
+      }
+    ]
+  }
+}

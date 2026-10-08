@@ -1,0 +1,22 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bv:golden_leggingsnback"
+		},
+		"tags": [
+			"stonecutter"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:golden_leggings"
+			}
+		],
+		"result": [
+			{
+				"item": "minecraft:gold_ingot",
+				"count": 6
+			}
+		]
+	}
+}

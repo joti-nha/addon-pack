@@ -1,0 +1,1 @@
+{"format_version":"1.17.41","minecraft:recipe_shaped":{"description":{"identifier":"panascais_caves:titanium_torch"},"key":{"R":"panascais_caves:titanium_rod","C":{"tag":"minecraft:coals"}},"pattern":["C","R","R"],"tags":["panascais_common:forge"],"result":"panascais_caves:titanium_torch"}}

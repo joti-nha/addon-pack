@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.entity.ntk_mossheep.movement": {
+			"initial_state": "walking",
+			"states": {
+				"walking": {
+					"animations": [
+						{
+							"walking": "query.modified_move_speed"
+						}
+					],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"grazing": "query.is_grazing"
+						}
+					]
+				},
+				"grazing": {
+					"animations": [ "grazing" ],
+					"blend_transition": 0.0,
+					"transitions": [
+						{
+							"walking": "!query.is_grazing && query.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

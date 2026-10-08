@@ -1,0 +1,32 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:graft_x_spruce_roots_x_wood"
+    },
+    "priority": 2,
+    "tags": [ "grafting_table" ],
+    "group": "spruce_roots",
+    "assume_symmetry": true,
+    "pattern": [
+      "A"
+    ],
+    "key": {
+      "A": {
+        "item": "minecraft:spruce_wood"
+      }
+    },
+    "result": {
+      "item": "ntk:spruce_roots",
+      "count": 3
+    },
+    "unlock": [
+      {
+        "item": "ntk:grafting_table"
+      },
+      {
+        "item": "minecraft:spruce_wood"
+      }
+    ]
+  }
+}

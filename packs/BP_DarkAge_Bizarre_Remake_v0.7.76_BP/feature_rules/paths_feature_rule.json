@@ -1,0 +1,39 @@
+{
+    "format_version": "1.20.30",
+    "minecraft:feature_rules": {
+        "description": {
+            "identifier": "dk:paths_feature_rule",
+            "places_feature": "dk:structures/paths_blocks_scatter_weighted_random"
+        },
+        "conditions": {
+            "placement_pass": "surface_pass",
+            "minecraft:biome_filter": {
+                "test": "has_biome_tag",
+                "operator": "==",
+                "value": "overworld"
+            }
+        },
+        "distribution": {
+            "iterations": 1,
+            "x": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "y": 0,
+            "z": {
+                "extent": [
+                    0,
+                    16
+                ],
+                "distribution": "uniform"
+            },
+            "scatter_chance": {
+                "numerator": 1,
+                "denominator": 95
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "ntk:artif_x_ender_pearl"
+    },
+    "priority": 1,
+    "tags": [ "artifacture_table" ],
+    "group": "ender_pearl",
+    "assume_symmetry": true,
+    "pattern": [
+      "EAE",
+      "APA",
+      "EAE"
+    ],
+    "key": {
+      "P": {
+        "item": "ntk:pearl"
+      },
+      "A": {
+        "item": "ntk:amethyst_powder"
+      },
+      "E": {
+        "item": "ntk:emerald_powder"
+      }
+    },
+    "result": {
+      "item": "minecraft:ender_pearl",
+      "count": 1
+    },
+    "unlock": [
+      {
+        "item": "ntk:artifacture_table"
+      },
+      {
+        "item": "ntk:pearl"
+      },
+      {
+        "item": "ntk:amethyst_powder"
+      },
+      {
+        "item": "ntk:emerald_powder"
+      }
+    ]
+  }
+}

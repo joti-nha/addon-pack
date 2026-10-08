@@ -1,0 +1,237 @@
+// Forsaken Odyssey:
+{
+  "tiers": [
+    { // Level 1 - Novice:
+      "total_exp_required": 0,
+      "groups": [
+        { // Buy:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:amethyst_shard", "quantity": 16, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "minecraft:emerald", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:arcane_quill", "quantity": 1 }],
+              "trader_exp": 1,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 2 - Initiate:
+      "total_exp_required": 5,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:earthen_quill", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:gale_quill", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:wild_quill", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald", "quantity": 16, "price_multiplier": 0.05 },
+                { "item": "ntk:empty_scroll", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:unknown_scroll", "quantity": 1 }],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 3 - Apprentice:
+      "total_exp_required": 15,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:lush_quill", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:ominous_quill", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:void_quill", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald", "quantity": 24, "price_multiplier": 0.05 },
+                { "item": "ntk:empty_scroll", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:scroll_of_clear_sky", "quantity": 1 }],
+              "trader_exp": 4,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 4 - Adept:
+      "total_exp_required": 35,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:ember_quill", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:soul_quill", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [{ "item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.05 }],
+              "gives": [{ "item": "ntk:radiant_quill", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald", "quantity": 24, "price_multiplier": 0.05 },
+                { "item": "ntk:empty_scroll", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:scroll_of_rain", "quantity": 1 }],
+              "trader_exp": 8,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    { // Level 5 - Journeyman:
+      "total_exp_required": 75,
+      "groups": [
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald", "quantity": 24, "price_multiplier": 0.05 },
+                { "item": "ntk:empty_scroll", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:scroll_of_thunderstorm", "quantity": 1 }],
+              "trader_exp": 16,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        { // Sell:
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                { "item": "minecraft:emerald_block", "quantity": 16, "price_multiplier": 0.05 },
+                { "item": "ntk:empty_scroll", "quantity": 1, "price_multiplier": 0.05 }
+              ],
+              "gives": [{ "item": "ntk:scroll_of_homeward_bound", "quantity": 1 }],
+              "trader_exp": 16,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

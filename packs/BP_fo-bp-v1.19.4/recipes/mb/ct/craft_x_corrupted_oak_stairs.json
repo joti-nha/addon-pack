@@ -1,0 +1,29 @@
+{
+	"format_version": "1.26.0",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "ntk:craft_x_corrupted_oak_stairs"
+		},
+    "priority": 1,
+    "tags": [ "crafting_table" ],
+		"pattern": [
+			"P  ",
+			"PP ",
+			"PPP"
+		],
+		"key": {
+			"P": {
+				"item": "ntk:corrupted_oak_planks"
+			}
+		},
+		"result": {
+			"item": "ntk:corrupted_oak_stairs",
+			"count": 4
+		},
+    "unlock": [
+      {
+        "item": "ntk:corrupted_oak_planks"
+      }
+    ]
+	}
+}

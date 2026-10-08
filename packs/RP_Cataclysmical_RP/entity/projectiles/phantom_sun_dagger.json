@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "mnra_cata:phantom_sun_dagger",
+			"materials": {
+				"default": "drowned"
+			},
+			"textures": {
+				"default": "textures/minera/cata/entity/projectile/phantom_sun_dagger"
+			},
+			"geometry": {
+				"default": "geometry.phantom_sun_dagger"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"texture": "mnra_cata_stone_golem_egg"
+			},
+			"animations": {
+				"telegraph": "animation.phantom_sun_dagger.telegraph",
+				"spawn": "animation.phantom_sun_dagger.spawn"
+			},
+			"scripts": {
+				"animate": [
+					"telegraph",
+					"spawn"
+				]
+			},
+			"particle_effects": {
+				"sun_tribunal_telegraph": "mnra_cata:sun_tribunal_telegraph",
+				"sun_tribunal_phantom_blade_emitter2": "mnra_cata:sun_tribunal_phantom_blade_emitter2"
+			},
+			"sound_effects": {
+				"sun_tribunal_dagger": "sound.sun_tribunal_dagger"
+			}
+		}
+	}
+}

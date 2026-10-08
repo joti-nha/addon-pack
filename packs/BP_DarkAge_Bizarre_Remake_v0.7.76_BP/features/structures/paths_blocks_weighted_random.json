@@ -1,0 +1,26 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:weighted_random_feature": {
+		"description": {
+			"identifier": "dk:structures/paths_blocks_weighted_random"
+		},
+		"features": [
+			[
+				"dk:structures/paths_feature_mcstructure",
+				25
+			],
+			[
+				"dk:structures/paths_two_feature_mcstructure",
+				15
+			],
+			[
+				"dk:structures/paths_three_feature_mcstructure",
+				30
+			],
+			[
+				"dk:structures/paths_four_feature_mcstructure",
+				10
+			]
+		]
+	}
+}
