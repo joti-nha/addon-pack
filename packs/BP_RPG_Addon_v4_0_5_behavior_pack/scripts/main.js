@@ -2164,7 +2164,7 @@ function handleSkillUnlock(player, path, nextLvl) {
   }
   for (const item of unlockedItems) {
     if (classId === 3 /* Mage */ && item.tag.startsWith("spell_unlocked:")) {
-      player.sendMessage(`\xA7d  \u2192 Spell: \xA7f${item.name} \xA7d\u2014 unlock it in your Spellbook!\xA7r`);
+      player.sendMessage(`\xA7d  \u2192 Spell: \xA7f${item.name} \xA7d\u2014 buy its Infinite Tome in your Spellbook!\xA7r`);
     } else if (item.isActiveAbility) {
       player.sendMessage(`\xA76  \u2192 Active Ability: \xA7f${item.name} \xA77\u2014 equip in Soul Shop, then \xA7eSneaking + Jumping\xA77 to activate.\xA7r`);
     } else {
@@ -2179,9 +2179,9 @@ function closeSkillTreeUI(player) {
 import { system as system5, world as world7 } from "@minecraft/server";
 import { ActionFormData as ActionFormData4 } from "@minecraft/server-ui";
 function showSpellbookUI(player) {
-  const form = new ActionFormData4().title("\xA7dMage Spellbook").body("Manage your spells here. You can buy unlocked spells or equip them.");
+  const form = new ActionFormData4().title("\xA7dMage Spellbook").body("Spells are now Infinite Tomes for your Grimoire. Buy the ones you unlocked.");
   const spells = MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"));
-  form.button("\xA75Equip / Buy Spells", "textures/items/book_enchanted");
+  form.button("\xA75Buy Infinite Tomes", "textures/items/book_enchanted");
   system5.run(() => {
     form.show(player).then((res) => {
       if (res.canceled) return;
@@ -2191,31 +2191,41 @@ function showSpellbookUI(player) {
     }).catch(e => {});
   });
 }
-function showSpellsList(player, spells) {
-  const form = new ActionFormData4().title("\xA7dSpells");
-  let activeSpell = "";
-  for (const tag of player.getTags()) {
-    if (tag.startsWith("active_spell:")) {
-      activeSpell = tag.split(":")[1];
-      break;
-    }
+// Addon Pack: as magias do Mago viraram Tomos Infinitos do Grimorio (Forsaken Grimoires).
+// Comprar uma magia entrega o tomo; quem ja tinha a magia comprada recebe o tomo uma vez.
+var SPELL_TOMES = {
+  fireball: "fgr:infinite_tome_fire_blast",
+  frost: "fgr:infinite_tome_slowness",
+  lightning: "fgr:infinite_tome_lightning_bolt",
+  invisibility: "fgr:infinite_tome_invisibility"
+};
+function giveSpellTome(player, spellId) {
+  const tome = new ItemStack4(SPELL_TOMES[spellId], 1);
+  const left = player.getComponent("minecraft:inventory")?.container?.addItem(tome);
+  if (left) player.dimension.spawnItem(left, player.location);
+}
+function convertOwnedSpells(player) {
+  for (const spellId of Object.keys(SPELL_TOMES)) {
+    if (!player.hasTag(`spell_unlocked:${spellId}`)) continue;
+    player.removeTag(`spell_unlocked:${spellId}`);
+    player.removeTag(`active_spell:${spellId}`);
+    giveSpellTome(player, spellId);
+    player.sendMessage(`\xA7d[Spellbook] \xA7aYour spell became an \xA76Infinite Tome\xA7a. Put it in your Grimoire at the Arcane Lectern.`);
   }
-  form.body("Select a spell to buy or equip.\n\n");
+}
+world7.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
+  if (initialSpawn) system5.runTimeout(() => { try { convertOwnedSpells(player); } catch (e) {} }, 60);
+});
+function showSpellsList(player, spells) {
+  convertOwnedSpells(player);
+  const form = new ActionFormData4().title("\xA7dSpells");
+  form.body("Buy the Infinite Tome of a spell. Put the tome in your Grimoire at the Arcane Lectern: its spell never runs out.\n\n");
   for (const spell of spells) {
-    const spellId = spell.tag.split(":")[1];
-    if (player.hasTag(spell.tag)) {
-      if (activeSpell === spellId) {
-        form.button(`\xA7a[Equipped] \xA7r${spell.name}`);
-      } else {
-        form.button(`\xA78[Owned] \xA7r${spell.name}`);
-      }
-    } else {
-      if (player.hasTag(spell.requiresTag)) {
-        form.button(`\xA7e[Buy] \xA7r${spell.name}
+    if (player.hasTag(spell.requiresTag)) {
+      form.button(`\xA7e[Buy Tome] \xA7r${spell.name}
 \xA77Cost: ${spell.costSouls} Souls`);
-      } else {
-        form.button(`\xA7c[Locked] \xA7r${spell.name}`);
-      }
+    } else {
+      form.button(`\xA7c[Locked] \xA7r${spell.name}`);
     }
   }
   system5.run(() => {
@@ -2226,37 +2236,19 @@ function showSpellsList(player, spells) {
       }
       const selectedSpell = spells[res.selection];
       const spellId = selectedSpell.tag.split(":")[1];
-      if (player.hasTag(selectedSpell.tag)) {
-        for (const tag of player.getTags()) {
-          if (tag.startsWith("active_spell:")) {
-            player.removeTag(tag);
-          }
-        }
-        player.addTag(`active_spell:${spellId}`);
-        player.sendMessage(`\xA7d[Spellbook] \xA7aEquipped spell: \xA7e${selectedSpell.name}`);
-        const equippable = player.getComponent("minecraft:equippable");
-        if (equippable) {
-          const mainhand = equippable.getEquipment("Mainhand");
-          if (mainhand && mainhand.typeId.startsWith("rpg:mage_staff")) {
-            mainhand.nameTag = `\xA7dMage Staff \xA77[\xA7e${selectedSpell.name.replace(" Spell", "")}\xA77]`;
-            equippable.setEquipment("Mainhand", mainhand);
-          }
-        }
+      if (!player.hasTag(selectedSpell.requiresTag)) {
+        player.sendMessage("\xA7c[Spellbook] You must unlock this spell in the Skill Tree first!");
+        return;
+      }
+      const objective = world7.scoreboard.getObjective("souls");
+      if (!objective) return;
+      const currentSouls = objective.getScore(player) || 0;
+      if (currentSouls >= selectedSpell.costSouls) {
+        objective.setScore(player, currentSouls - selectedSpell.costSouls);
+        giveSpellTome(player, spellId);
+        player.sendMessage(`\xA7a[Spellbook] Bought the Infinite Tome: \xA7e${selectedSpell.name}`);
       } else {
-        if (!player.hasTag(selectedSpell.requiresTag)) {
-          player.sendMessage("\xA7c[Spellbook] You must unlock this spell in the Skill Tree first!");
-          return;
-        }
-        const objective = world7.scoreboard.getObjective("souls");
-        if (!objective) return;
-        const currentSouls = objective.getScore(player) || 0;
-        if (currentSouls >= selectedSpell.costSouls) {
-          objective.setScore(player, currentSouls - selectedSpell.costSouls);
-          player.addTag(selectedSpell.tag);
-          player.sendMessage(`\xA7a[Spellbook] Successfully bought: \xA7e${selectedSpell.name}`);
-        } else {
-          player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
-        }
+        player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
       }
     }).catch(e => {});
   });

@@ -1,0 +1,1 @@
+{"format_version":"1.21.60","minecraft:recipe_shapeless":{"description":{"identifier":"fgr:grimorio_invisivel"},"tags":["crafting_table"],"ingredients":[{"tag":"fgr:grimoire"},{"item":"minecraft:glass"}],"result":{"item":"fgr:grimoire_invisible"}}}

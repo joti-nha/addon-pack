@@ -1,0 +1,1 @@
+{"format_version":"1.21.60","minecraft:recipe_shapeless":{"description":{"identifier":"fgr:tingir_yellow"},"tags":["crafting_table"],"ingredients":[{"tag":"fgr:grimoire"},{"item":"minecraft:yellow_dye"}],"result":{"item":"fgr:grimoire_yellow"}}}
