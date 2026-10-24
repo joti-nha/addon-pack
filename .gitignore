@@ -4,3 +4,4 @@
 *.mctemplate
 *.zip
 __pycache__/
+*.parcial

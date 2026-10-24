@@ -27,7 +27,7 @@ Precisa só do Python 3, sem os arquivos originais:
 python ferramentas/empacotar.py
 ```
 
-O `Addon_Pack_Completo.mcaddon` aparece na raiz do repositório.
+O script mostra cada pack sendo montado (`[ 1/42] ...`). Espere a mensagem **Pronto**: o `Addon_Pack_Completo.mcaddon` só aparece na raiz do repositório quando termina. Enquanto isso, existe só um `Addon_Pack_Completo.mcaddon.parcial`, que não deve ser aberto.
 
 ## Instalar
 
