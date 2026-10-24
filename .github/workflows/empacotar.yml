@@ -54,6 +54,8 @@ jobs:
 
   publicar:
     needs: [mcaddon, exe]
+    # rodando a mao numa outra branch, so testa a montagem; a release so muda com a main
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
