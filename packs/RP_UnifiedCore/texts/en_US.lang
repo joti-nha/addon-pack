@@ -92,3 +92,4 @@ item.panascais_caves:seers_relic.title=Seers Relic\n§9Eternal Caves Add-On\n\n�
 waila.item.panascais_caves:seers_relic=Seers Relic\n§9Eternal Caves Add-On\n\n§pAttack§7: reveal target details§r\n§nUse (hold)§7: magnifier zoom§r\n\n§9+64 Durability§r\n\n§7Offhand: §aYes§r\n§7Repairable with: Chitin Lens§r
 item.addonpack:rpg_book=§cRPG Progress Book
 item.addonpack:traveler_book=§bTraveler's Book
+unified.armadura.gemas=§9+%s Gemstone Slots§r

@@ -13,6 +13,8 @@ Modpack para Minecraft Bedrock que junta 37 addons de vários criadores e 5 pack
 | `ferramentas/empacotador_janela.py` | A janela do Windows (vira o `.exe` da Release). |
 | `ferramentas/menu_celular.py` | O menu para o celular (Termux). |
 | `ferramentas/otimizar.py` | Compacta JSON e PNG sem perder nada (ver abaixo). |
+| `ferramentas/mesclar_jogador.py` | Monta o jogador único (A&S + RnR, RPG e OTG). Rode depois de atualizar um deles. |
+| `ferramentas/gerar_anexos.py`, `armas_pesadas.py`, `armaduras.py` | Geram os modelos na mão (varas, grimórios, armas pesadas) e as etiquetas e descrições das armaduras. Rode de novo depois de atualizar os addons envolvidos. |
 | `docs/` | CHANGELOG, créditos, roteiro de pedidos e levantamentos. |
 
 O histórico do Git mostra o que o modpack muda em cada addon: o commit "Packs originais extraídos" tem os addons como vieram, e o commit seguinte aplica as alterações.
