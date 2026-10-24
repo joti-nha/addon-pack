@@ -177,11 +177,8 @@ CORANTES = {
     'light_gray': (157, 157, 151), 'cyan': (22, 156, 156), 'purple': (137, 50, 184), 'blue': (60, 68, 170),
     'brown': (131, 84, 50), 'green': (94, 124, 22), 'red': (176, 46, 38), 'black': (45, 45, 52),
 }
-ROXO_ICONE = (111, 47, 154)  # roxo principal do icone original (textures/fgr/grimoire.png)
 GEO_LIVRO = 'geometry.fgr_grimorio_livro'
 GEO_VAZIA = 'geometry.fgr_vazio'
-OURO, OURO_ESC = (244, 196, 72), (176, 128, 40)
-PAPEL, PAPEL_LINHA = (236, 226, 200), (196, 182, 150)
 
 
 def ident(cor): return 'fgr:grimoire' if cor == 'purple' else f'fgr:grimoire_{cor}'
@@ -190,68 +187,64 @@ def ident(cor): return 'fgr:grimoire' if cor == 'purple' else f'fgr:grimoire_{co
 def tom(c, f): return tuple(max(0, min(255, int(v * f))) for v in c)
 
 
-def textura_livro(cor):
-    """Textura 32x16 do livro: capa (com o ornamento do icone), lombada, bordas e paginas."""
-    base = CORANTES[cor]
-    esc, mais_esc, clara = tom(base, 0.72), tom(base, 0.5), tom(base, 1.18)
-    gema, brilho = tom(clara, 1.15), (255, 255, 255)
-    im = Image.new('RGBA', (32, 16))
-    px = im.load()
-    def ret(x0, y0, w, h, c):
-        for y in range(y0, y0 + h):
-            for x in range(x0, x0 + w): px[x, y] = (*c, 255)
-    # A (0,0) 7x10: capa
-    ret(0, 0, 7, 10, base)
-    for x in range(7): px[x, 0] = px[x, 9] = (*esc, 255)
-    for y in range(10): px[0, y] = px[6, y] = (*esc, 255)
-    desenho = ['.......', '...G...', '..GVG..', '.GVWVG.', '.GVVVG.', '..GVG..', '...G...', '.......', '.o...o.', '.......']
+LIVRO_REF = (149, 81, 35)  # marrom principal da capa do livro do A&S
+ICONE_REF = (101, 75, 23)  # marrom principal do icone do livro (Bare Bones, que fica no topo dos packs)
+ICONE_LIVRO = os.path.join(RAIZ, 'packs', 'RP_BareBones_RP', 'textures', 'items', 'book_normal.png')
+
+
+def tingir(im, cor, ref, capa):
+    """Troca os pixels da capa (marrons) pela cor do corante, mantendo o sombreado; paginas ficam."""
+    alvo, r = CORANTES[cor], luz(ref)
+    out = im.copy()
+    out.putdata([(*tom(alvo, luz(c) / r), c[3]) if c[3] and capa(c) else c for c in im.getdata()])
+    return out
+
+
+def capa_livro(c):  # paginas sao claras (luz alta); o resto e capa
+    return colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))[1] < 0.52
+
+
+def capa_icone(c):  # paginas do icone sao cinza (sem saturacao)
+    return colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))[2] > 0.3
+
+
+# Detalhe de cada Grimorio: desenho 5x5 na capa ('#' = cor 1, 'o' = cor 2), no icone e no livro da mao.
+EMBLEMAS = {
+    'white': ('floco', ['#.#.#', '.#o#.', '#ooo#', '.#o#.', '#.#.#'], (150, 210, 255), (255, 255, 255)),
+    'orange': ('chama', ['..#..', '.##..', '.#o#.', '#ooo#', '.###.'], (255, 214, 64), (255, 250, 200)),
+    'magenta': ('flor', ['.#.#.', '##o##', '.#.#.', '..o..', '..o..'], (255, 190, 240), (70, 150, 40)),
+    'light_blue': ('gota', ['..#..', '.###.', '#o###', '#####', '.###.'], (30, 80, 200), (220, 245, 255)),
+    'yellow': ('sol', ['#.#.#', '.ooo.', '#ooo#', '.ooo.', '#.#.#'], (200, 90, 20), (255, 150, 30)),
+    'lime': ('folha', ['...##', '..#o#', '.#o#.', '#o#..', 'o....'], (40, 110, 20), (200, 255, 120)),
+    'pink': ('coração', ['##.##', '#o###', '#####', '.###.', '..#..'], (200, 30, 60), (255, 200, 210)),
+    'gray': ('engrenagem', ['.#.#.', '#####', '##o##', '#####', '.#.#.'], (190, 190, 200), (60, 60, 66)),
+    'light_gray': ('lua', ['.##..', '##...', '#o...', '##...', '.##..'], (250, 250, 230), (255, 255, 255)),
+    'cyan': ('cristal', ['..#..', '.#o#.', '#ooo#', '.#o#.', '..#..'], (200, 255, 250), (60, 220, 220)),
+    'purple': ('olho', ['.....', '.###.', '##o##', '.###.', '.....'], (244, 196, 72), (40, 10, 50)),
+    'blue': ('estrela', ['..#..', '..#..', '##o##', '.###.', '.#.#.'], (244, 196, 72), (255, 245, 200)),
+    'brown': ('árvore', ['.###.', '##o##', '.###.', '..o..', '..o..'], (80, 150, 40), (60, 35, 15)),
+    'green': ('trevo', ['##.##', '#o.o#', '..o..', '##o##', '##.##'], (140, 230, 80), (40, 90, 20)),
+    'red': ('espada', ['....#', '...#.', 'o.#..', '.o...', 'o.o..'], (230, 230, 240), (244, 196, 72)),
+    'black': ('caveira', ['.###.', '#####', '#o#o#', '#####', '.#.#.'], (235, 235, 225), (20, 20, 24)),
+}
+
+
+def emblema(im, cor, x0, y0):
+    _, desenho, c1, c2 = EMBLEMAS[cor]
+    out = im.copy()
+    px = out.load()
     for y, linha in enumerate(desenho):
         for x, ch in enumerate(linha):
-            c = {'G': OURO, 'V': gema, 'W': brilho, 'o': OURO_ESC}.get(ch)
-            if c: px[x, y] = (*c, 255)
-    # (7,0) 1x10: borda da capa;  (0,10) 7x1: borda de cima/baixo da capa
-    ret(7, 0, 1, 10, mais_esc); ret(0, 10, 7, 1, mais_esc)
-    # (8,0) 3x10: lombada com faixas douradas;  (11,0) 1x3: topo da lombada
-    ret(8, 0, 3, 10, esc)
-    for y in (1, 8): ret(8, y, 3, 1, OURO_ESC)
-    ret(11, 0, 1, 3, mais_esc)
-    # (12,0) 2x9: paginas vistas de lado;  (0,11) 7x2: paginas vistas de cima
-    ret(12, 0, 2, 9, PAPEL)
-    for y in range(1, 9, 2): px[12, y] = (*PAPEL_LINHA, 255)
-    ret(0, 11, 7, 2, PAPEL)
-    for x in range(0, 7, 2): px[x, 12] = (*PAPEL_LINHA, 255)
-    return im
-
-
-def geometria_livro():
-    """Mesmo esqueleto e posicoes do livro do A&S (geometry do minecraft:book), com UV proprios."""
-    g = copy.deepcopy(brarchive.geometria(AS, brarchive.anexo(AS, 'minecraft:book')['minecraft:attachable']['description']['geometry']['default']))
-    def f(x, y, w, h): return {'uv': [x, y], 'uv_size': [w, h]}
-    capa = {'north': f(0, 0, 7, 10), 'south': f(7, 0, -7, 10), 'east': f(7, 0, 1, 10), 'west': f(7, 0, 1, 10),
-            'up': f(0, 10, 7, 1), 'down': f(0, 10, 7, 1)}
-    lombada = {'north': f(7, 0, 1, 10), 'south': f(7, 0, 1, 10), 'east': f(8, 0, 3, 10), 'west': f(8, 0, 3, 10),
-               'up': f(11, 0, 1, 3), 'down': f(11, 0, 1, 3)}
-    paginas = {'west': f(12, 0, 2, 9), 'up': f(0, 11, 7, 2), 'down': f(0, 11, 7, 2)}
-    cubos = [c for b in g['bones'] for c in b.get('cubes', [])]
-    assert len(cubos) == 4, 'o livro do A&S mudou: confira geometria_livro()'
-    for c, uv in zip(cubos, (capa, capa, lombada, paginas)): c['uv'] = uv
-    g['description'].update({'identifier': GEO_LIVRO, 'texture_width': 32, 'texture_height': 16})
-    return g
-
-
-def icone(cor, original):
-    """Icone 16x16: os roxos do icone original trocados pela cor do corante, mantendo o sombreado."""
-    alvo = CORANTES[cor]
-    ref = luz(ROXO_ICONE)
-    out = original.copy()
-    dados = []
-    for c in original.getdata():
-        h, l, s = colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))
-        if c[3] and s > 0.25 and 0.70 < h < 0.85:
-            dados.append((*tom(alvo, luz(c) / ref), c[3]))
-        else: dados.append(c)
-    out.putdata(dados)
+            if ch != '.': px[x0 + x, y0 + y] = (*(c1 if ch == '#' else c2), 255)
     return out
+
+
+def livro_as():
+    """Geometria e textura do livro comum do A&S (minecraft:book), com o atlas reduzido ao que o livro usa."""
+    d = brarchive.anexo(AS, 'minecraft:book')['minecraft:attachable']['description']
+    geo, img = reempacotar(brarchive.geometria(AS, d['geometry']['default']), textura_as(d['textures']['default'].split('/')[-1]))
+    geo['description']['identifier'] = GEO_LIVRO
+    return geo, img
 
 
 def icone_invisivel(original):
@@ -269,18 +262,19 @@ def icone_invisivel(original):
 
 def grimorios():
     base_anexo = brarchive.anexo(AS, 'minecraft:book')
+    geo, textura = livro_as()
     gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_grimorio_livro.geo.json'),
-                {'format_version': '1.16.0', 'minecraft:geometry': [geometria_livro()]})
+                {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
     gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_vazio.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [
         {'description': {'identifier': GEO_VAZIA, 'texture_width': 16, 'texture_height': 16},
          'bones': [{'name': 'root', 'pivot': [0, 0, 0]}]}]})
-    original = Image.open(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png')).convert('RGBA')
+    livro = Image.open(ICONE_LIVRO).convert('RGBA')
     os.makedirs(os.path.join(FGR, 'textures', 'fgr', 'livro'), exist_ok=True)
     itens = json.load(open(os.path.join(FGR, 'textures', 'item_texture.json'), encoding='utf-8'))
     for cor in CORANTES:
-        textura_livro(cor).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
+        emblema(tingir(textura, cor, LIVRO_REF, capa_livro), cor, 1, 2).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
+        emblema(tingir(livro, cor, ICONE_REF, capa_icone), cor, 6, 3).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png' if cor == 'purple' else f'grimoire_{cor}.png'))
         if cor != 'purple':
-            icone(cor, original).save(os.path.join(FGR, 'textures', 'fgr', f'grimoire_{cor}.png'))
             itens['texture_data'][f'fgr_grimoire_{cor}'] = {'textures': f'textures/fgr/grimoire_{cor}'}
         a = copy.deepcopy(base_anexo)
         d = a['minecraft:attachable']['description']
@@ -291,7 +285,7 @@ def grimorios():
         d['render_controllers'] = ['controller.render.fgr.livro']
         nome = 'grimoire' if cor == 'purple' else f'grimoire_{cor}'
         gravar_json(os.path.join(FGR, 'attachables', f'{nome}.json'), a)
-    icone_invisivel(original).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
+    icone_invisivel(emblema(tingir(livro, 'purple', ICONE_REF, capa_icone), 'purple', 6, 3)).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
     itens['texture_data']['fgr_grimoire_invisible'] = {'textures': 'textures/fgr/grimoire_invisible'}
     gravar_json(os.path.join(FGR, 'textures', 'item_texture.json'), itens)
     # invisivel: anexo sem nada para desenhar (a mao fica vazia; o icone continua no inventario)
