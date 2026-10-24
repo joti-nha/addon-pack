@@ -1,6 +1,17 @@
 # Changelog – Addon Pack
 
-## 0.4 (esta versão)
+## 0.5 (esta versão)
+
+Nada desta versão foi testado no jogo.
+
+### Alterado
+- **Tomos Infinitos no lugar das magias do Mago (RPG Addon).** A loja de magias do grimório do Mago vende agora um Tomo Infinito, pelo mesmo preço em almas e com o mesmo requisito na árvore de habilidades: Fireball → Rajada de Fogo II, Frost Wave → Lentidão II, Lightning Blast → Raio III, Arcane Dissolution → Invisibilidade III. Dá para comprar de novo se perder. Quem já tinha a magia comprada recebe o tomo uma vez (ao entrar no mundo ou abrir a loja) e a magia antiga sai do cajado.
+- **Tomo no Grimório**: um tomo posto num dos 9 espaços deixa aquele feitiço infinito (o pergaminho lançado não é gasto). Gerado por `ferramentas/tomos.py`.
+- **Sem usos ilimitados por nível**: a regra do Mago (feitiços de graça conforme o nível da classe) foi removida. Só os tomos dão uso infinito.
+- **Atril Arcano virou vitrine**: tocar no livro em cima do bloco abre uma tela própria com 9 espaços em 3x3 e o espaço do Grimório ao lado. Ponha o Grimório e os feitiços dele aparecem nos 9 espaços; o que você mexer ali fica gravado; ao tirar o Grimório, tudo vai junto com ele. Se o Grimório estiver na mão secundária, ele entra sozinho no espaço do livro e volta para a mão secundária quando você o tira. O menu de formulários saiu.
+- **Cor e invisibilidade na mesa de trabalho**: Grimório + corante = Grimório daquela cor; Grimório + vidro = invisível; invisível + corante = visível de novo. Os feitiços passam para o Grimório novo. São 17 receitas (com a etiqueta `fgr:grimoire`), não uma por par de cores. A mesa de ferraria não foi usada porque o jogo só aceita nela materiais de acabamento de armadura, e os corantes não são.
+
+## 0.4
 
 Nada desta versão foi testado no jogo.
 

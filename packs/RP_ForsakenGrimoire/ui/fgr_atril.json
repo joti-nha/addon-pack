@@ -1,0 +1,142 @@
+{
+  "namespace": "fgr_atril",
+  "slot@common.container_item": {
+    "$item_collection_name": "container_items"
+  },
+  "grade": {
+    "type": "grid",
+    "size": [
+      54,
+      54
+    ],
+    "grid_dimensions": [
+      3,
+      3
+    ],
+    "grid_item_template": "fgr_atril.slot",
+    "collection_name": "container_items"
+  },
+  "topo": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "50%"
+    ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "collection_name": "container_items",
+    "layer": 2,
+    "controls": [
+      {
+        "titulo": {
+          "type": "label",
+          "offset": [
+            7,
+            6
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "$container_title",
+          "size": [
+            "90%",
+            "default"
+          ],
+          "color": "$title_text_color",
+          "layer": 2
+        }
+      },
+      {
+        "grade@fgr_atril.grade": {
+          "offset": [
+            43,
+            17
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 2
+        }
+      },
+      {
+        "livro@fgr_atril.slot": {
+          "collection_index": 9,
+          "offset": [
+            115,
+            35
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "layer": 2
+        }
+      },
+      {
+        "livro_texto": {
+          "type": "label",
+          "offset": [
+            104,
+            56
+          ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "text": "fgr.atril.livro",
+          "color": "$title_text_color",
+          "layer": 2
+        }
+      }
+    ]
+  },
+  "atril_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "container_gamepad_helpers@common.container_gamepad_helpers": {}
+      },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 14
+        }
+      },
+      {
+        "selected_item_details_factory@common.selected_item_details_factory": {}
+      },
+      {
+        "item_lock_notification_factory@common.item_lock_notification_factory": {}
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 5,
+          "controls": [
+            {
+              "common_panel@common.common_panel": {}
+            },
+            {
+              "chest_panel": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  {
+                    "topo@fgr_atril.topo": {}
+                  },
+                  {
+                    "inventory_panel_bottom_half_with_label@common.inventory_panel_bottom_half_with_label": {}
+                  },
+                  {
+                    "hotbar_grid@common.hotbar_grid_template": {}
+                  },
+                  {
+                    "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {}
+                  }
+                ]
+              }
+            },
+            {
+              "inventory_selected_icon_button@common.inventory_selected_icon_button": {}
+            },
+            {
+              "gamepad_cursor@common.gamepad_cursor_button": {}
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

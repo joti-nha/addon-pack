@@ -1,19 +1,21 @@
 // Forsaken Grimoires (Addon Pack)
 // Grimorio guarda ate 9 feiticos (pergaminhos do Forsaken Odyssey) em ordem escolhida.
-// Atril Arcano (bloco): tocar nele abre um menu (formularios do proprio jogo, sem UI JSON) com os 9 espacos do
-// Grimorio: colocar/trocar/retirar pergaminhos, encher com os do inventario, tingir com corante, deixar invisivel.
+// Atril Arcano (bloco): tocar no livro em cima abre uma vitrine (tela de bau propria, ui/fgr_atril.json): 9 espacos
+// de feitico em 3x3 e o espaco do Grimorio. Pondo o Grimorio, os pergaminhos dele aparecem nos 9 espacos; o que voce
+// mexer ali e gravado nele; ao tirar o Grimorio, os espacos esvaziam (tudo vai dentro dele).
+// Tomo Infinito num espaco: o feitico daquele espaco nao acaba. Os tomos sao vendidos pela loja do Mago (RPG Addon).
+// Cor e invisibilidade: na mesa de trabalho (Grimorio + corante, ou + vidro); os feiticos passam para o Grimorio novo.
 // Segurando uma varinha (tag ntk:wand) com o Grimorio na mao secundaria, o feitico escolhido vai sozinho para a mao
 // secundaria (onde a varinha busca a municao) e o Grimorio volta ao soltar a varinha.
 // Agachar 2x rapido abre a barra de feiticos por 5 s: os 9 slots da hotbar viram "cartas" e girar/clicar escolhe.
-// Classe Mago (RPG Addon): o feitico equipado nao e gasto, ate o nivel de pergaminho que o nivel do mago permite.
 import { world, system, ItemStack, ItemLockMode, EquipmentSlot } from "@minecraft/server";
-import { ActionFormData, ModalFormData, FormCancelationReason } from "@minecraft/server-ui";
+import { TOMES } from "./tomos.js";
 
 const GRIMOIRE = "fgr:grimoire";
 const GRIMOIRE_TAG = "fgr:grimoire";
 const INVISIBLE = "fgr:grimoire_invisible";
 const LECTERN = "fgr:arcane_lectern";
-const P_SLOTS = "fgr:slots";   // no item: JSON [{id,n}|null] x9
+const P_SLOTS = "fgr:slots";   // no item: JSON [{id,n,tome?}|null] x9 (tome: Tomo Infinito no espaco)
 const P_UID = "fgr:uid";       // no item: identificador do grimorio
 const P_SEL = "fgr:sel";       // no item: espaco escolhido por ultimo (usado ao pegar a varinha)
 const P_COLOR = "fgr:color";   // no item: cor que o grimorio invisivel volta a ter
@@ -25,29 +27,10 @@ const MAX_STACK = 64;          // pergaminhos por espaco do Grimorio
 const ITEM_STACK = 64;         // tamanho real da pilha de pergaminhos no inventario
 const TAP_WINDOW = 12;         // ticks entre os dois agachamentos (0,6 s)
 const BAR_TICKS = 100;         // 5 s
-const FREE_MARK = "§8Feitiço do Grimório (Mago)"; // lore do pergaminho que o mago usa sem gastar
+const FREE_MARK = "§8Feitiço do Tomo Infinito"; // lore do pergaminho lancado sem gastar (espaco com tomo)
+const OLD_FREE_MARK = "§8Feitiço do Grimório (Mago)"; // versao anterior (bonus do Mago, removido)
 
-// Mago (RPG Addon: placar "class" = 3, nivel no placar "level"). Nivel minimo para cada nivel de pergaminho;
-// pergaminhos sem numero (invocacoes, teias) contam como nivel II.
-const MAGE_CLASS = 3;
-const MAGE_TIER_LEVEL = { 1: 1, 2: 8, 3: 15 };
-
-const DYES = {
-  white: ["minecraft:white_dye", "minecraft:bone_meal"], orange: ["minecraft:orange_dye"],
-  magenta: ["minecraft:magenta_dye"], light_blue: ["minecraft:light_blue_dye"], yellow: ["minecraft:yellow_dye"],
-  lime: ["minecraft:lime_dye"], pink: ["minecraft:pink_dye"], gray: ["minecraft:gray_dye"],
-  light_gray: ["minecraft:light_gray_dye"], cyan: ["minecraft:cyan_dye"], purple: ["minecraft:purple_dye"],
-  blue: ["minecraft:blue_dye", "minecraft:lapis_lazuli"], brown: ["minecraft:brown_dye", "minecraft:cocoa_beans"],
-  green: ["minecraft:green_dye"], red: ["minecraft:red_dye"], black: ["minecraft:black_dye", "minecraft:ink_sac"],
-};
-const COLOR_NAMES = {
-  white: "Branco", orange: "Laranja", magenta: "Magenta", light_blue: "Azul-claro", yellow: "Amarelo", lime: "Verde-limão",
-  pink: "Rosa", gray: "Cinza", light_gray: "Cinza-claro", cyan: "Ciano", purple: "Roxo", blue: "Azul", brown: "Marrom",
-  green: "Verde", red: "Vermelho", black: "Preto",
-};
-const idOfColor = (c) => (c === "purple" ? GRIMOIRE : `fgr:grimoire_${c}`);
 const colorOfId = (id) => (id === GRIMOIRE ? "purple" : id.startsWith("fgr:grimoire_") ? id.slice(13) : null);
-const isGlass = (it) => !!it && (it.typeId === "minecraft:glass" || it.typeId === "minecraft:tinted_glass" || /^minecraft:[a-z_]+_stained_glass$/.test(it.typeId));
 
 const log = (...a) => console.warn("[Grimoire]", ...a);
 
@@ -57,11 +40,11 @@ const offhandOf = (p) => p.getComponent("equippable").getEquipmentSlot(Equipment
 const isGrimoire = (it) => !!it && (it.typeId === GRIMOIRE || it.hasTag(GRIMOIRE_TAG));
 const isScroll = (it) => !!it && it.hasTag("ntk:scroll") && !it.typeId.includes("empty_scroll");
 const isWand = (it) => !!it && it.hasTag("ntk:wand");
-const isFreeCopy = (it) => !!it && it.getLore().includes(FREE_MARK);
+const isFreeCopy = (it) => { if (!it) return false; const l = it.getLore(); return l.includes(FREE_MARK) || l.includes(OLD_FREE_MARK); };
+const isTome = (it) => !!it && TOMES[it.typeId] !== undefined;
 const tr = (id) => ({ translate: `item.${id.split(":")[0]}.${id.split(":")[1]}.name` });
 const iconOf = (id) => `textures/items/nms/ntk_${id.split(":")[1]}`;
 const ROMAN = { 1: "I", 2: "II", 3: "III" };
-const tierOf = (id) => { const m = id.match(/_(\d)$/); return m ? Number(m[1]) : 2; };
 const heldItem = (p) => invOf(p).getItem(p.selectedSlotIndex);
 
 function pretty(id) {
@@ -72,26 +55,15 @@ function pretty(id) {
   return n + (m ? " " + (ROMAN[m[1]] ?? m[1]) : "");
 }
 
-function score(p, name) {
-  try { return world.scoreboard.getObjective(name)?.getScore(p) ?? 0; } catch { return 0; }
-}
-const isMage = (p) => score(p, "class") === MAGE_CLASS;
-function mageMaxTier(p) {
-  if (!isMage(p)) return 0;
-  const lvl = Math.max(1, score(p, "level"));
-  let t = 0;
-  for (const [tier, need] of Object.entries(MAGE_TIER_LEVEL)) if (lvl >= need) t = Math.max(t, Number(tier));
-  return t;
-}
-const mageFree = (p, id) => tierOf(id) <= mageMaxTier(p);
-
 function readSlots(item) {
   let a = [];
   try { a = JSON.parse(item.getDynamicProperty(P_SLOTS) ?? "[]"); } catch { a = []; }
   const out = [];
   for (let i = 0; i < MAX_SLOTS; i++) {
     const e = a[i];
-    out.push(e && typeof e.id === "string" ? { id: e.id, n: Math.max(0, e.n | 0) } : null);
+    if (!e || typeof e.id !== "string") { out.push(null); continue; }
+    const tome = typeof e.tome === "string" && TOMES[e.tome] ? e.tome : undefined;
+    out.push(tome ? { id: TOMES[tome], n: 0, tome } : { id: e.id, n: Math.max(0, e.n | 0) });
   }
   return out;
 }
@@ -99,7 +71,7 @@ function writeSlots(item, slots) {
   item.setDynamicProperty(P_SLOTS, JSON.stringify(slots));
   const lore = ["§5Grimório de feitiços"];
   slots.forEach((e, i) => {
-    if (e) lore.push(`§7${i + 1}. §f${pretty(e.id)} §8x${e.n}`);
+    if (e) lore.push(`§7${i + 1}. §f${pretty(e.id)} ${e.tome ? "§6∞" : `§8x${e.n}`}`);
   });
   if (lore.length === 1) lore.push("§8(vazio) use o Atril Arcano");
   item.setLore(lore);
@@ -228,7 +200,7 @@ function equip(p, uid, idx, auto = false) {
   const e = slots[idx];
   if (!e) { say(p, `§7Espaço ${idx + 1} do Grimório vazio`); return false; }
   if (st && st.uid === uid && st.idx === idx && !auto) { unequip(p); return false; }
-  const free = mageFree(p, e.id);
+  const free = !!e.tome;
   if (!free && e.n <= 0) { say(p, `§cSem pergaminhos no espaço ${idx + 1}`); return false; }
   const oh = offhandOf(p);
   let dest = g;
@@ -252,7 +224,7 @@ function equip(p, uid, idx, auto = false) {
   commit(p, dest, slots);
   oh.setItem(scrollFor(e.id, free));
   setState(p, { uid, idx, id: e.id, free, auto });
-  say(p, { rawtext: [{ text: `§dFeitiço §f${idx + 1}: §d` }, tr(e.id), { text: free ? " §b(∞ Mago)" : ` §8(x${e.n} restantes)` }] });
+  say(p, { rawtext: [{ text: `§dFeitiço §f${idx + 1}: §d` }, tr(e.id), { text: free ? " §6(∞ Tomo)" : ` §8(x${e.n} restantes)` }] });
   p.playSound("random.orb", { volume: 0.6, pitch: 1.4 });
   return true;
 }
@@ -270,7 +242,7 @@ function maintain(p) {
   if (!g) { setState(p, null); return; }
   const slots = readSlots(g.item);
   const e = slots[st.idx];
-  if (e && e.id === st.id && st.free && mageFree(p, e.id)) { // mago: o feitico nao acaba
+  if (e && e.id === st.id && st.free && e.tome) { // tomo infinito: o feitico nao acaba
     oh.setItem(scrollFor(st.id, true));
     return;
   }
@@ -278,7 +250,7 @@ function maintain(p) {
     e.n -= 1;
     commit(p, g, slots);
     oh.setItem(new ItemStack(st.id, 1));
-    if (st.free) setState(p, { ...st, free: false }); // perdeu o nivel/classe: passa a gastar
+    if (st.free) setState(p, { ...st, free: false }); // o tomo saiu do espaco: passa a gastar
   } else {
     if (e && e.id === st.id && e.n <= 0) { slots[st.idx] = null; commit(p, g, slots); } // espaco esgotado: libera
     setState(p, null);
@@ -287,7 +259,7 @@ function maintain(p) {
   }
 }
 
-// Copias "de mago" nunca saem da mao secundaria: se aparecerem no inventario (arrastadas, sobras), somem.
+// Copias do tomo nunca saem da mao secundaria: se aparecerem no inventario (arrastadas, sobras), somem.
 function purgeFreeCopies(p) {
   const c = invOf(p);
   for (let i = 0; i < c.size; i++) {
@@ -308,7 +280,7 @@ function autoWand(p) {
     if (!oh.hasItem() || !isGrimoire(oh.getItem())) return;
     const g = ensureUid(p, { loc: { t: "off" }, item: oh.getItem() });
     const slots = readSlots(g.item);
-    const usable = (e) => e && (e.n > 0 || mageFree(p, e.id));
+    const usable = (e) => e && (e.n > 0 || e.tome);
     let sel = g.item.getDynamicProperty(P_SEL);
     if (typeof sel !== "number" || !usable(slots[sel])) sel = slots.findIndex(usable);
     if (sel < 0) {
@@ -328,11 +300,11 @@ const cardOf = (id) => "fgr:card_" + id.split(":")[1];
 
 function makeCard(p, e, active) {
   let c;
-  try { c = new ItemStack(e ? cardOf(e.id) : CARD_EMPTY, e ? Math.max(1, Math.min(ITEM_STACK, e.n)) : 1); }
+  try { c = new ItemStack(e ? cardOf(e.id) : CARD_EMPTY, e ? Math.max(1, Math.min(ITEM_STACK, e.tome ? 1 : e.n)) : 1); }
   catch { c = new ItemStack(CARD_EMPTY, 1); e = null; }
   c.lockMode = ItemLockMode.slot;
   if (e) {
-    const stock = mageFree(p, e.id) ? "§b∞ (Mago)" : e.n > 0 ? `§7Estoque: §f${e.n}` : "§cEsgotado";
+    const stock = e.tome ? "§6∞ (Tomo Infinito)" : e.n > 0 ? `§7Estoque: §f${e.n}` : "§cEsgotado";
     c.setLore([stock, active ? "§aEquipado" : "§8Gire a hotbar ou clique para equipar"]);
   }
   return c;
@@ -470,243 +442,273 @@ world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
   if (bar) choose(source, bar, source.selectedSlotIndex);
 });
 
-// ---------- Atril Arcano (menu) ----------
-const busy = new Set(); // jogadores com o menu aberto
+// ---------- Atril Arcano (vitrine) ----------
+// Sobre o bloco fica uma entidade invisivel (fgr:atril_vitrine) com 10 espacos. Tocar no livro em cima abre a tela
+// dela, desenhada em RP_ForsakenGrimoire/ui/fgr_atril.json (escolhida pelo nome "§5Atril Arcano"):
+//   espacos 0-8 = os 9 feiticos em 3x3, na ordem;  espaco 9 = o Grimorio.
+// Grimorio no espaco 9: os pergaminhos e tomos dele aparecem nos 9 espacos; tudo o que voce mexer ali e gravado nele
+// a cada tick; ao tirar o Grimorio, os espacos esvaziam (o conteudo ja esta dentro dele).
+const VITRINE = "fgr:atril_vitrine";
+const V_TITLE = "§5Atril Arcano"; // a tela propria e escolhida por este nome (ui/fgr_atril.json)
+const V_BOOK = 9;
+const V_LOADED = "fgr:loaded"; // na entidade: uid do Grimorio cujos feiticos estao nos 9 espacos
+const V_SNAP = "fgr:snap";     // na entidade: os 9 espacos como foram gravados no Grimorio pela ultima vez
+const vitrinePos = (b) => ({ x: b.location.x + 0.5, y: b.location.y + 0.75, z: b.location.z + 0.5 });
 
-async function show(p, form) {
-  for (let i = 0; i < 20; i++) {
-    const r = await form.show(p);
-    if (r.canceled && r.cancelationReason === FormCancelationReason.UserBusy) {
-      await new Promise((ok) => system.runTimeout(ok, 5));
-      continue;
-    }
-    return r;
+// Correcoes pendentes (uid -> espacos): quando o Grimorio sai do atril no mesmo tick em que o jogador tirou algo dos
+// espacos, o que ficou e gravado nele assim que ele aparecer num inventario ou atril. Evita duplicar pergaminhos.
+const W_PENDING = "fgr:pending";
+// Grimorios aposentados: o conteudo foi para um Grimorio novo (tingido na mesa de trabalho). Se uma copia antiga
+// aparecer (guardada num bau, por exemplo), ela e esvaziada.
+const W_RETIRED = "fgr:retired";
+function worldJson(key, def) {
+  try { return JSON.parse(world.getDynamicProperty(key) ?? "null") ?? def; } catch { return def; }
+}
+const setWorldJson = (key, v) => world.setDynamicProperty(key, JSON.stringify(v));
+function addPending(uid, slots) { const m = worldJson(W_PENDING, {}); m[uid] = slots; setWorldJson(W_PENDING, m); }
+function retire(uid) {
+  const a = worldJson(W_RETIRED, []);
+  if (!a.includes(uid)) { a.push(uid); setWorldJson(W_RETIRED, a.slice(-300)); }
+}
+// Aplica correcao pendente ou esvaziamento num Grimorio. Retorna true se mudou o item.
+function settle(item) {
+  const uid = uidOf(item);
+  if (!uid) return false;
+  if (worldJson(W_RETIRED, []).includes(uid)) {
+    item.setDynamicProperty(P_UID, newUid());
+    item.setDynamicProperty(P_SEL, undefined);
+    writeSlots(item, readSlots(item).map(() => null));
+    return true;
   }
-  return { canceled: true };
+  const m = worldJson(W_PENDING, {});
+  if (!m[uid]) return false;
+  writeSlots(item, m[uid]);
+  delete m[uid];
+  setWorldJson(W_PENDING, m);
+  return true;
+}
+function settlePlayer(p) {
+  for (const g of allGrimoires(p)) if (settle(g.item)) slotAt(p, g.loc).setItem(g.item);
 }
 
-// O Grimorio que o atril usa: o da mao, o da mao secundaria ou o primeiro do inventario.
-function lecternGrimoire(p) {
-  const held = heldItem(p);
-  if (isGrimoire(held)) return ensureUid(p, { loc: { t: "inv", i: p.selectedSlotIndex }, item: held });
-  const list = allGrimoires(p);
-  return list.length ? ensureUid(p, list[0]) : null;
+function vitrineAt(block) {
+  return block.dimension.getEntities({ type: VITRINE, location: vitrinePos(block), maxDistance: 0.6 })[0];
 }
-
-function swapGrimoire(p, g, newId) {
-  const old = g.item;
-  const it = new ItemStack(newId, 1);
-  for (const k of [P_SLOTS, P_UID, P_SEL, P_COLOR]) {
-    const v = old.getDynamicProperty(k);
-    if (v !== undefined) it.setDynamicProperty(k, v);
+function ensureVitrine(block) {
+  let e = vitrineAt(block);
+  if (!e) {
+    try { e = block.dimension.spawnEntity(VITRINE, vitrinePos(block)); } catch (err) { log("atril", err); return undefined; }
   }
-  it.setLore(old.getLore());
-  if (old.nameTag) it.nameTag = old.nameTag;
-  slotAt(p, g.loc).setItem(it);
+  if (e.nameTag !== V_TITLE) e.nameTag = V_TITLE;
+  return e;
 }
-
-function slotLabel(e, i, p) {
-  if (!e) return { rawtext: [{ text: `§8${i + 1}. Espaço vazio` }] };
-  const stock = mageFree(p, e.id) ? " §b∞" : ` §8x${e.n}`;
-  return { rawtext: [{ text: `§0${i + 1}. ` }, tr(e.id), { text: stock }] };
+function eject(ent, item) {
+  try { ent.dimension.spawnItem(item, { x: ent.location.x, y: ent.location.y + 0.4, z: ent.location.z }); } catch (e) { log("eject", e); }
 }
-
-async function lecternMenu(p) {
-  if (busy.has(p.id)) return;
-  busy.add(p.id);
-  try {
-    if (getState(p)) unequip(p, true); // pergaminho na mao secundaria volta para o Grimorio antes de mexer
-    for (let guard = 0; guard < 200; guard++) {
-      const g = lecternGrimoire(p);
-      if (!g) { say(p, "§dAtril Arcano§7: traga um §fGrimório§7 no inventário"); return; }
-      const uid = uidOf(g.item);
-      const slots = readSlots(g.item);
-      const invisible = g.item.typeId === INVISIBLE;
-      const tier = mageMaxTier(p);
-      const info = tier > 0
-        ? `§bMago: feitiços até o nível ${ROMAN[tier]} não são gastos (basta 1 pergaminho no espaço).`
-        : "§7Cada lançamento gasta 1 pergaminho do espaço.";
-      const form = new ActionFormData()
-        .title("§5Atril Arcano")
-        .body({ rawtext: [{ text: "§7Grimório: §f" }, { translate: `item.${g.item.typeId}.name` }, { text: `\n${info}\n§7Toque num espaço para colocar, trocar ou retirar pergaminhos.` }] });
-      const actions = [];
-      slots.forEach((e, i) => {
-        form.button(slotLabel(e, i, p), e ? iconOf(e.id) : "textures/fgr/card_empty");
-        actions.push(() => slotMenu(p, uid, i));
-      });
-      form.button("§2Encher com os pergaminhos do inventário", "textures/items/book_writable");
-      actions.push(async () => fillAll(p, uid));
-      if (slots.some((e) => e)) { form.button("§cEsvaziar o Grimório", "textures/ui/cancel"); actions.push(async () => emptyAll(p, uid)); }
-      form.button("§6Tingir (usa 1 corante)", "textures/items/dye_powder_purple_new");
-      actions.push(() => dyeMenu(p, uid));
-      if (invisible) { form.button("§3Tornar visível", "textures/fgr/grimoire"); actions.push(async () => makeVisible(p, uid)); }
-      else { form.button("§3Tornar invisível na mão (usa 1 vidro)", "textures/blocks/glass"); actions.push(async () => makeInvisible(p, uid)); }
-      form.button("Fechar");
-      const r = await show(p, form);
-      if (r.canceled || r.selection === undefined || r.selection >= actions.length) return;
-      await actions[r.selection]();
-      p.playSound("item.book.page_turn", { volume: 0.8 });
-    }
-  } catch (e) { log("atril", e); } finally { busy.delete(p.id); }
-}
-
-async function slotMenu(p, uid, idx) {
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  const slots = readSlots(g.item);
-  const cur = slots[idx];
-  const have = [...countInInventory(p, isScroll).entries()].sort((a, b) => pretty(a[0]).localeCompare(pretty(b[0])));
-  const form = new ActionFormData().title(`§5Espaço ${idx + 1}`);
-  form.body(cur
-    ? { rawtext: [{ text: "§7Agora: §f" }, tr(cur.id), { text: ` §8x${cur.n}\n§7Escolha um pergaminho do inventário para colocar aqui.` }] }
-    : "§7Escolha um pergaminho do inventário para colocar aqui.");
-  const actions = [];
-  for (const [id, n] of have) {
-    form.button({ rawtext: [tr(id), { text: ` §8(você tem ${n})` }] }, iconOf(id));
-    actions.push(() => putScroll(p, uid, idx, id, n));
+// Le os 9 espacos da vitrine; devolve o que nao for pergaminho nem tomo.
+function readVitrine(ent, c) {
+  const now = [];
+  for (let i = 0; i < MAX_SLOTS; i++) {
+    const it = c.getItem(i);
+    if (!it) { now.push(null); continue; }
+    if (isTome(it)) { now.push({ id: TOMES[it.typeId], n: 0, tome: it.typeId }); continue; }
+    if (isScroll(it) && isFreeCopy(it)) { c.setItem(i, undefined); now.push(null); continue; } // copia do tomo: some
+    if (!isScroll(it)) { c.setItem(i, undefined); eject(ent, it); now.push(null); continue; }
+    now.push({ id: it.typeId, n: it.amount });
   }
-  if (cur) { form.button("§cRetirar daqui", "textures/ui/cancel"); actions.push(async () => takeOut(p, uid, idx)); }
-  if (!have.length && !cur) form.body("§7Você não tem pergaminhos do Forsaken no inventário.");
-  form.button("Voltar");
-  const r = await show(p, form);
-  if (r.canceled || r.selection === undefined || r.selection >= actions.length) return;
-  await actions[r.selection]();
+  return now;
+}
+function showSlots(c, slots) {
+  slots.forEach((e, i) => {
+    c.setItem(i, undefined);
+    if (!e) return;
+    try {
+      if (e.tome) c.setItem(i, new ItemStack(e.tome, 1));
+      else if (e.n > 0) c.setItem(i, new ItemStack(e.id, Math.min(ITEM_STACK, e.n)));
+    } catch { /* pergaminho de addon ausente */ }
+  });
+}
+// O Grimorio que estava carregado saiu: se os espacos mudaram depois da ultima gravacao, guarda a correcao.
+function unload(ent, c) {
+  const loaded = ent.getDynamicProperty(V_LOADED);
+  if (!loaded) return;
+  const now = readVitrine(ent, c);
+  if (JSON.stringify(now) !== (ent.getDynamicProperty(V_SNAP) ?? "")) addPending(loaded, now);
+  for (let i = 0; i < MAX_SLOTS; i++) c.setItem(i, undefined);
+  ent.setDynamicProperty(V_LOADED, undefined);
+  ent.setDynamicProperty(V_SNAP, undefined);
 }
 
-async function putScroll(p, uid, idx, id, have) {
-  let g = findGrimoire(p, uid);
-  if (!g) return;
-  let slots = readSlots(g.item);
-  const same = slots[idx] && slots[idx].id === id;
-  const room = MAX_STACK - (same ? slots[idx].n : 0);
-  let amount = Math.min(have, room);
-  if (amount <= 0) { say(p, "§7Esse espaço já está cheio"); return; }
-  if (amount > 1) {
-    const free = mageFree(p, id);
-    const m = new ModalFormData().title(`§5Espaço ${idx + 1}`)
-      .slider({ rawtext: [{ text: free ? "§bMago: 1 já basta. §7Quantos colocar de " : "§7Quantos colocar de " }, tr(id), { text: "?" }] },
-        1, amount, { valueStep: 1, defaultValue: free ? 1 : amount });
-    const r = await show(p, m);
-    if (r.canceled || !r.formValues) return;
-    amount = Math.max(1, Math.min(amount, Number(r.formValues[0]) | 0));
-  }
-  g = findGrimoire(p, uid);
-  if (!g) return;
-  slots = readSlots(g.item);
-  const missing = removeFromInventory(p, id, amount);
-  amount -= missing;
-  if (amount <= 0) return;
-  if (slots[idx] && slots[idx].id !== id) giveItems(p, slots[idx].id, slots[idx].n); // troca: devolve os antigos
-  if (slots[idx] && slots[idx].id === id) slots[idx].n += amount;
-  else slots[idx] = { id, n: amount };
-  g = findGrimoire(p, uid); // o inventario mudou: acha de novo
-  if (!g) { giveItems(p, id, amount); return; }
-  commit(p, g, slots);
-}
-
-function takeOut(p, uid, idx) {
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  const slots = readSlots(g.item);
-  const e = slots[idx];
-  if (!e) return;
-  slots[idx] = null;
-  commit(p, g, slots);
-  giveItems(p, e.id, e.n);
-}
-
-function fillAll(p, uid) {
-  let g = findGrimoire(p, uid);
-  if (!g) return;
-  const slots = readSlots(g.item);
-  const have = countInInventory(p, isScroll);
-  let added = 0;
-  // primeiro completa os espacos que ja tem o mesmo pergaminho, depois ocupa os vazios
-  for (const e of slots) {
-    if (!e || !have.has(e.id)) continue;
-    const k = Math.min(have.get(e.id), MAX_STACK - e.n);
-    if (k <= 0) continue;
-    const got = k - removeFromInventory(p, e.id, k);
-    e.n += got; added += got; have.delete(e.id);
-  }
-  for (const [id, n] of have) {
-    const i = slots.findIndex((e) => !e);
-    if (i < 0) break;
-    const k = Math.min(n, MAX_STACK);
-    const got = k - removeFromInventory(p, id, k);
-    if (got > 0) { slots[i] = { id, n: got }; added += got; }
-  }
-  g = findGrimoire(p, uid);
-  if (!g) return;
-  commit(p, g, slots);
-  say(p, added ? `§dGrimório: §f${added} pergaminho(s) guardado(s)` : "§7Nenhum pergaminho novo para guardar");
-}
-
-function emptyAll(p, uid) {
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  const slots = readSlots(g.item);
-  commit(p, g, slots.map(() => null));
-  for (const e of slots) if (e && e.n > 0) giveItems(p, e.id, e.n);
-}
-
-async function dyeMenu(p, uid) {
-  const c = invOf(p);
-  const owned = [];
-  for (const [color, ids] of Object.entries(DYES)) {
+function tickVitrine(ent) {
+  const c = ent.getComponent("inventory")?.container;
+  if (!c) return;
+  let block;
+  try { block = ent.dimension.getBlock({ x: Math.floor(ent.location.x), y: Math.floor(ent.location.y), z: Math.floor(ent.location.z) }); } catch { return; }
+  if (!block) return; // chunk nao carregado
+  if (ent.nameTag !== V_TITLE) ent.nameTag = V_TITLE;
+  const g = c.getItem(V_BOOK);
+  const isGrim = isGrimoire(g);
+  const loaded = ent.getDynamicProperty(V_LOADED);
+  // bloco sumiu (quebrado, explodido, empurrado): o Grimorio cai com o conteudo atual e a entidade some
+  if (block.typeId !== LECTERN) {
+    if (isGrim && loaded && uidOf(g) === loaded) writeSlots(g, readVitrine(ent, c));
     for (let i = 0; i < c.size; i++) {
       const it = c.getItem(i);
-      if (it && ids.includes(it.typeId)) { owned.push({ color, id: it.typeId }); break; }
+      if (!it) continue;
+      c.setItem(i, undefined);
+      if (i < MAX_SLOTS && loaded) continue; // ja estao no Grimorio
+      if (i < MAX_SLOTS && isFreeCopy(it)) continue;
+      eject(ent, i === V_BOOK && isGrim ? g : it);
+    }
+    ent.remove();
+    return;
+  }
+  if (g && !isGrim) { c.setItem(V_BOOK, undefined); eject(ent, g); }
+  if (!isGrim) {
+    if (loaded) unload(ent, c);
+    else { // sem Grimorio os espacos nao guardam nada: devolve o que for colocado
+      for (let i = 0; i < MAX_SLOTS; i++) {
+        const it = c.getItem(i);
+        if (!it) continue;
+        c.setItem(i, undefined);
+        if (!isFreeCopy(it)) eject(ent, it);
+      }
+    }
+    return;
+  }
+  let changed = settle(g);
+  let uid = uidOf(g);
+  if (!uid) { uid = newUid(); g.setDynamicProperty(P_UID, uid); changed = true; }
+  if (changed) c.setItem(V_BOOK, g);
+  if (loaded !== uid) { // Grimorio novo no atril
+    if (loaded) unload(ent, c);
+    else for (let i = 0; i < MAX_SLOTS; i++) { const it = c.getItem(i); if (it) { c.setItem(i, undefined); if (!isFreeCopy(it)) eject(ent, it); } }
+    const slots = readSlots(g);
+    showSlots(c, slots);
+    ent.setDynamicProperty(V_LOADED, uid);
+    ent.setDynamicProperty(V_SNAP, JSON.stringify(readVitrine(ent, c)));
+    clearCraftWatch(uid);
+    return;
+  }
+  // mesmo Grimorio: grava o estado atual dos 9 espacos
+  const now = readVitrine(ent, c);
+  const snap = JSON.stringify(now);
+  if (snap !== ent.getDynamicProperty(V_SNAP)) {
+    writeSlots(g, now);
+    c.setItem(V_BOOK, g);
+    ent.setDynamicProperty(V_SNAP, snap);
+  }
+}
+system.runInterval(() => {
+  const seen = new Set();
+  for (const p of world.getPlayers()) {
+    let list;
+    try { list = p.dimension.getEntities({ type: VITRINE, location: p.location, maxDistance: 12 }); } catch { continue; }
+    for (const ent of list) {
+      if (seen.has(ent.id)) continue;
+      seen.add(ent.id);
+      try { tickVitrine(ent); } catch (e) { log("atril", e); }
     }
   }
-  if (!owned.length) { say(p, "§7Tenha um corante no inventário para tingir o Grimório"); return; }
-  const form = new ActionFormData().title("§5Tingir o Grimório").body("§7Escolha a cor. Gasta 1 corante; os feitiços continuam dentro.");
-  for (const o of owned) form.button(`§0${COLOR_NAMES[o.color]}`, `textures/fgr/${o.color === "purple" ? "grimoire" : "grimoire_" + o.color}`);
-  form.button("Voltar");
-  const r = await show(p, form);
-  if (r.canceled || r.selection === undefined || r.selection >= owned.length) return;
-  const o = owned[r.selection];
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  if (removeFromInventory(p, o.id, 1) > 0) return;
-  const g2 = findGrimoire(p, uid);
-  if (!g2) return;
-  g2.item.setDynamicProperty(P_COLOR, o.color);
-  swapGrimoire(p, g2, idOfColor(o.color));
-  say(p, `§dGrimório agora é ${COLOR_NAMES[o.color]}`);
-}
+}, 1);
 
-function makeInvisible(p, uid) {
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  const c = invOf(p);
-  let glass = null;
-  for (let i = 0; i < c.size; i++) if (isGlass(c.getItem(i))) { glass = c.getItem(i).typeId; break; }
-  if (!glass) { say(p, "§7Tenha 1 bloco de vidro no inventário"); return; }
-  removeFromInventory(p, glass, 1);
-  const g2 = findGrimoire(p, uid);
-  if (!g2) return;
-  g2.item.setDynamicProperty(P_COLOR, colorOfId(g2.item.typeId) ?? "purple");
-  swapGrimoire(p, g2, INVISIBLE);
-  say(p, "§dGrimório invisível na mão §8(o ícone continua no inventário)");
-}
+world.afterEvents.playerPlaceBlock.subscribe(({ block }) => {
+  if (block.typeId === LECTERN) system.run(() => { try { ensureVitrine(block); } catch (e) { log("atril", e); } });
+});
 
-function makeVisible(p, uid) {
-  const g = findGrimoire(p, uid);
-  if (!g) return;
-  const color = g.item.getDynamicProperty(P_COLOR);
-  swapGrimoire(p, g, idOfColor(typeof color === "string" && DYES[color] ? color : "purple"));
-  say(p, "§dGrimório visível de novo");
-}
+// Abrir a vitrine: o feitico da mao secundaria volta para o Grimorio e, se o espaco do livro estiver vazio, o
+// Grimorio da mao secundaria vai sozinho para ele (a tela de bau nao mostra a mao secundaria). Ao sair, ele volta.
+const backToOffhand = new Map(); // uid -> id do jogador
+world.afterEvents.playerInteractWithEntity.subscribe(({ player, target }) => {
+  if (target?.typeId !== VITRINE) return;
+  system.run(() => {
+    try {
+      if (getState(player)) unequip(player, true);
+      const c = target.getComponent("inventory")?.container;
+      const oh = offhandOf(player);
+      if (!c || c.getItem(V_BOOK) || !oh.hasItem() || !isGrimoire(oh.getItem())) return;
+      const g = ensureUid(player, { loc: { t: "off" }, item: oh.getItem() });
+      oh.setItem(undefined);
+      c.setItem(V_BOOK, g.item);
+      backToOffhand.set(uidOf(g.item), player.id);
+    } catch (e) { log("atril", e); }
+  });
+});
 
+// Tocar na madeira do bloco: garante a entidade e avisa onde tocar.
+const lastHint = new Map();
 system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
   blockComponentRegistry.registerCustomComponent("fgr:atril", {
-    onPlayerInteract({ player }) {
+    onPlayerInteract({ block, player }) {
       if (!player) return;
-      system.run(() => { lecternMenu(player); });
+      system.run(() => {
+        try {
+          ensureVitrine(block);
+          const t = system.currentTick;
+          if (t - (lastHint.get(player.id) ?? -99) < 20) return;
+          lastHint.set(player.id, t);
+          say(player, "§dAtril Arcano§7: toque no §flivro§7 em cima para abrir");
+        } catch (e) { log("atril", e); }
+      });
     },
   });
 });
+
+// ---------- cor e invisibilidade na mesa de trabalho ----------
+// A receita cria um Grimorio novo, sem os dados do antigo. Quando um Grimorio sai do inventario (foi para a mesa) e,
+// pouco depois, aparece um Grimorio de outro tipo sem identificador, os feiticos passam para ele e o antigo e
+// aposentado (se uma copia dele voltar, ela vem vazia).
+const CRAFT_TICKS = 1200; // 60 s
+const craftWatch = new Map(); // id do jogador -> {uid, typeId, slots, sel, color, name, tick}
+function clearCraftWatch(uid) {
+  for (const [pid, w] of craftWatch) if (w.uid === uid) craftWatch.delete(pid);
+}
+world.afterEvents.playerInventoryItemChange.subscribe(({ player, beforeItemStack, itemStack, slot }) => {
+  const before = isGrimoire(beforeItemStack) ? beforeItemStack : null;
+  const after = isGrimoire(itemStack) ? itemStack : null;
+  if (before && uidOf(before) && (!after || uidOf(after) !== uidOf(before))) {
+    const old = player.getDynamicProperty(P_STASH) ? null : before; // barra de feiticos aberta: nao e a mesa
+    if (old) craftWatch.set(player.id, {
+      uid: uidOf(old), typeId: old.typeId, slots: old.getDynamicProperty(P_SLOTS), sel: old.getDynamicProperty(P_SEL),
+      color: old.getDynamicProperty(P_COLOR), name: old.nameTag, tick: system.currentTick,
+    });
+  }
+  if (!after) return;
+  const uid = uidOf(after);
+  system.run(() => {
+    try {
+      const inv = invOf(player);
+      const item = inv.getItem(slot);
+      if (!item || item.typeId !== after.typeId) return;
+      if (uid) {
+        clearCraftWatch(uid); // voltou para o inventario: nao foi tingido
+        if (settle(item)) inv.setItem(slot, item);
+        if (backToOffhand.get(uid) === player.id) {
+          backToOffhand.delete(uid);
+          const oh = offhandOf(player);
+          if (!oh.hasItem()) { inv.setItem(slot, undefined); oh.setItem(item); }
+        }
+        return;
+      }
+      const w = craftWatch.get(player.id);
+      if (!w || system.currentTick - w.tick > CRAFT_TICKS || w.typeId === item.typeId) return;
+      if (findGrimoire(player, w.uid)) { craftWatch.delete(player.id); return; }
+      craftWatch.delete(player.id);
+      if (typeof w.slots === "string") item.setDynamicProperty(P_SLOTS, w.slots);
+      if (typeof w.sel === "number") item.setDynamicProperty(P_SEL, w.sel);
+      if (item.typeId === INVISIBLE) item.setDynamicProperty(P_COLOR, colorOfId(w.typeId) ?? (typeof w.color === "string" ? w.color : "purple"));
+      item.setDynamicProperty(P_UID, newUid());
+      if (w.name) item.nameTag = w.name;
+      writeSlots(item, readSlots(item));
+      inv.setItem(slot, item);
+      retire(w.uid);
+      say(player, "§dGrimório: §7os feitiços passaram para o novo Grimório");
+    } catch (e) { log("mesa", e); }
+  });
+});
+system.runInterval(() => {
+  for (const p of world.getPlayers()) { try { settlePlayer(p); } catch (e) { log("settle", e); } }
+}, 40);
 
 // ---------- atris antigos (entidade fgr:lectern com inventario) ----------
 // Versoes anteriores punham uma entidade com 18 espacos sobre o bloco. Ela e desfeita: o que estiver dentro cai no
