@@ -208,6 +208,37 @@ def capa_icone(c):  # paginas do icone sao cinza (sem saturacao)
     return colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))[2] > 0.3
 
 
+# Detalhe de cada Grimorio: desenho 5x5 na capa ('#' = cor 1, 'o' = cor 2), no icone e no livro da mao.
+EMBLEMAS = {
+    'white': ('floco', ['#.#.#', '.#o#.', '#ooo#', '.#o#.', '#.#.#'], (150, 210, 255), (255, 255, 255)),
+    'orange': ('chama', ['..#..', '.##..', '.#o#.', '#ooo#', '.###.'], (255, 214, 64), (255, 250, 200)),
+    'magenta': ('flor', ['.#.#.', '##o##', '.#.#.', '..o..', '..o..'], (255, 190, 240), (70, 150, 40)),
+    'light_blue': ('gota', ['..#..', '.###.', '#o###', '#####', '.###.'], (30, 80, 200), (220, 245, 255)),
+    'yellow': ('sol', ['#.#.#', '.ooo.', '#ooo#', '.ooo.', '#.#.#'], (200, 90, 20), (255, 150, 30)),
+    'lime': ('folha', ['...##', '..#o#', '.#o#.', '#o#..', 'o....'], (40, 110, 20), (200, 255, 120)),
+    'pink': ('coração', ['##.##', '#o###', '#####', '.###.', '..#..'], (200, 30, 60), (255, 200, 210)),
+    'gray': ('engrenagem', ['.#.#.', '#####', '##o##', '#####', '.#.#.'], (190, 190, 200), (60, 60, 66)),
+    'light_gray': ('lua', ['.##..', '##...', '#o...', '##...', '.##..'], (250, 250, 230), (255, 255, 255)),
+    'cyan': ('cristal', ['..#..', '.#o#.', '#ooo#', '.#o#.', '..#..'], (200, 255, 250), (60, 220, 220)),
+    'purple': ('olho', ['.....', '.###.', '##o##', '.###.', '.....'], (244, 196, 72), (40, 10, 50)),
+    'blue': ('estrela', ['..#..', '..#..', '##o##', '.###.', '.#.#.'], (244, 196, 72), (255, 245, 200)),
+    'brown': ('árvore', ['.###.', '##o##', '.###.', '..o..', '..o..'], (80, 150, 40), (60, 35, 15)),
+    'green': ('trevo', ['##.##', '#o.o#', '..o..', '##o##', '##.##'], (140, 230, 80), (40, 90, 20)),
+    'red': ('espada', ['....#', '...#.', 'o.#..', '.o...', 'o.o..'], (230, 230, 240), (244, 196, 72)),
+    'black': ('caveira', ['.###.', '#####', '#o#o#', '#####', '.#.#.'], (235, 235, 225), (20, 20, 24)),
+}
+
+
+def emblema(im, cor, x0, y0):
+    _, desenho, c1, c2 = EMBLEMAS[cor]
+    out = im.copy()
+    px = out.load()
+    for y, linha in enumerate(desenho):
+        for x, ch in enumerate(linha):
+            if ch != '.': px[x0 + x, y0 + y] = (*(c1 if ch == '#' else c2), 255)
+    return out
+
+
 def livro_as():
     """Geometria e textura do livro comum do A&S (minecraft:book), com o atlas reduzido ao que o livro usa."""
     d = brarchive.anexo(AS, 'minecraft:book')['minecraft:attachable']['description']
@@ -241,8 +272,8 @@ def grimorios():
     os.makedirs(os.path.join(FGR, 'textures', 'fgr', 'livro'), exist_ok=True)
     itens = json.load(open(os.path.join(FGR, 'textures', 'item_texture.json'), encoding='utf-8'))
     for cor in CORANTES:
-        tingir(textura, cor, LIVRO_REF, capa_livro).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
-        tingir(livro, cor, ICONE_REF, capa_icone).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png' if cor == 'purple' else f'grimoire_{cor}.png'))
+        emblema(tingir(textura, cor, LIVRO_REF, capa_livro), cor, 1, 2).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
+        emblema(tingir(livro, cor, ICONE_REF, capa_icone), cor, 6, 3).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png' if cor == 'purple' else f'grimoire_{cor}.png'))
         if cor != 'purple':
             itens['texture_data'][f'fgr_grimoire_{cor}'] = {'textures': f'textures/fgr/grimoire_{cor}'}
         a = copy.deepcopy(base_anexo)
@@ -254,7 +285,7 @@ def grimorios():
         d['render_controllers'] = ['controller.render.fgr.livro']
         nome = 'grimoire' if cor == 'purple' else f'grimoire_{cor}'
         gravar_json(os.path.join(FGR, 'attachables', f'{nome}.json'), a)
-    icone_invisivel(tingir(livro, 'purple', ICONE_REF, capa_icone)).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
+    icone_invisivel(emblema(tingir(livro, 'purple', ICONE_REF, capa_icone), 'purple', 6, 3)).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
     itens['texture_data']['fgr_grimoire_invisible'] = {'textures': 'textures/fgr/grimoire_invisible'}
     gravar_json(os.path.join(FGR, 'textures', 'item_texture.json'), itens)
     # invisivel: anexo sem nada para desenhar (a mao fica vazia; o icone continua no inventario)
