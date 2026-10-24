@@ -9,7 +9,9 @@ Modpack para Minecraft Bedrock que junta 37 addons de vários criadores e 5 pack
 | Pasta | O que tem |
 |---|---|
 | `packs/` | Os 42 packs prontos: os originais com as alterações do modpack já aplicadas, mais os packs próprios. É aqui que se edita. |
-| `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/`. |
+| `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/` (comando). |
+| `ferramentas/empacotador_janela.py` | A janela do Windows (vira o `.exe` da Release). |
+| `ferramentas/menu_celular.py` | O menu para o celular (Termux). |
 | `ferramentas/otimizar.py` | Compacta JSON e PNG sem perder nada (ver abaixo). |
 | `docs/` | CHANGELOG, créditos, roteiro de pedidos e levantamentos. |
 
@@ -17,17 +19,30 @@ O histórico do Git mostra o que o modpack muda em cada addon: o commit "Packs o
 
 ## Baixar o pacote pronto
 
-A cada envio para a branch `main`, o GitHub monta o pacote sozinho. Vá em **Releases**, abra **Addon Pack (última montagem)** e baixe o `Addon_Pack_Completo.mcaddon`. Funciona pelo celular, com a conta do GitHub conectada.
+A cada envio para a branch `main`, o GitHub monta o pacote sozinho. Vá em **Releases > Addon Pack (última montagem)** e baixe o `Addon_Pack_Completo.mcaddon`. Funciona pelo celular, com a conta do GitHub conectada.
 
-## Montar no seu aparelho
+## Montar você mesmo
 
-Precisa só do Python 3, sem os arquivos originais:
+Há três jeitos, e todos geram o mesmo arquivo. Primeiro baixe o repositório (no GitHub: **Code > Download ZIP**) e extraia.
 
+**Windows, com janela:** baixe o `Empacotador Addon Pack.exe` na mesma Release, coloque dentro da pasta extraída (a que tem `packs/`) e dê dois cliques. Toque em **Montar .mcaddon**, acompanhe a barra e, no fim, use **Abrir no Minecraft**. Se o Windows avisar que o programa é desconhecido, clique em "Mais informações" e "Executar assim mesmo": o .exe não tem assinatura digital paga.
+
+**Celular (Termux), com menu:**
+```
+pkg install -y python
+termux-setup-storage
+cd ~/storage/downloads/addon-pack-main
+python ferramentas/menu_celular.py
+```
+Escolha **3** para montar e abrir direto no Minecraft. O arquivo fica na pasta Download.
+
+**Comando (qualquer aparelho com Python 3):**
 ```
 python ferramentas/empacotar.py
 ```
+Mostra uma barra de progresso colorida e termina com **Pronto**. O `Addon_Pack_Completo.mcaddon` só aparece quando termina; antes disso existe só um `.mcaddon.parcial`, que não deve ser aberto. Use `--simples` para uma linha por pack, sem cores.
 
-O script mostra cada pack sendo montado (`[ 1/42] ...`). Espere a mensagem **Pronto**: o `Addon_Pack_Completo.mcaddon` só aparece na raiz do repositório quando termina. Enquanto isso, existe só um `Addon_Pack_Completo.mcaddon.parcial`, que não deve ser aberto.
+Cada montagem sai com versão maior que a anterior (o número é a quantidade de minutos desde 01/10/2026), então o jogo aceita como atualização, seja ela feita no GitHub ou no seu aparelho.
 
 ## Instalar
 
@@ -38,7 +53,6 @@ O script mostra cada pack sendo montado (`[ 1/42] ...`). Espere a mensagem **Pro
 
 Ordem dos packs de recursos (topo = maior prioridade): Bare Bones & Stuff, Bare Bones, Unified Core, Addon Pack Compat, Forsaken Grimoires, os demais, e Actions & Stuff por último. Nos de comportamento, deixe Unified Core e Forsaken Grimoires no topo.
 
-Cada montagem sai com versão maior que a anterior (200 + número de commits), então o jogo aceita como atualização.
 
 ## Otimização
 
