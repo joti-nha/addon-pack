@@ -1,0 +1,353 @@
+#!/usr/bin/env python3
+"""Gera anexos (modelos 3D na mao) derivados do Actions & Stuff para itens de outros addons.
+
+Uso: python ferramentas/gerar_anexos.py
+Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff_RP e grava:
+  - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
+    (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
+     textures/ap/aqc_rod_*.png)
+  - Grimorios (todas as cores e o invisivel) com o modelo de livro do A&S
+    (packs/RP_ForsakenGrimoire/attachables, models/entity, textures/fgr)
+Rode de novo depois de atualizar o A&S.
+"""
+import colorsys, copy, json, math, os, sys
+from PIL import Image
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import brarchive  # noqa: E402
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff_RP')
+COMPAT = os.path.join(RAIZ, 'packs', 'RP_AddonPack_Compat')
+FGR = os.path.join(RAIZ, 'packs', 'RP_ForsakenGrimoire')
+AQC = os.path.join(RAIZ, 'packs', 'RP_Aquaculture_Add-On_RP')
+
+
+def gravar_json(caminho, obj):
+    os.makedirs(os.path.dirname(caminho), exist_ok=True)
+    with open(caminho, 'w', encoding='utf-8') as f: json.dump(obj, f, ensure_ascii=False, separators=(',', ':'))
+
+
+def textura_as(nome):
+    return Image.open(os.path.join(AS, 'textures', 'oreville', 'ans', nome + '.png')).convert('RGBA')
+
+
+def reempacotar(geo, atlas):
+    """Copia so os pedacos do atlas (1024x1024) usados pela geometria para uma textura pequena e
+    reescreve os UV. Devolve (geometria nova, imagem)."""
+    geo = copy.deepcopy(geo)
+    faces = [u for b in geo['bones'] for c in b.get('cubes', []) for u in c.get('uv', {}).values()]
+    retang = {}
+    for u in faces:
+        (x, y), (w, h) = u['uv'], u['uv_size']
+        r = (math.floor(min(x, x + w)), math.floor(min(y, y + h)), math.ceil(max(x, x + w)), math.ceil(max(y, y + h)))
+        retang.setdefault(r, []).append(u)
+    # empacotamento em prateleiras, do mais alto para o mais baixo, com 1 px de folga
+    larg = 64
+    lugar, cx, cy, alt = {}, 0, 0, 0
+    for r in sorted(retang, key=lambda r: -(r[3] - r[1])):
+        w, h = r[2] - r[0], r[3] - r[1]
+        if cx + w > larg: cx, cy, alt = 0, cy + alt + 1, 0
+        lugar[r] = (cx, cy); cx += w + 1; alt = max(alt, h)
+    altura = 1
+    while altura < cy + alt + 1: altura *= 2
+    img = Image.new('RGBA', (larg, altura))
+    for r, (nx, ny) in lugar.items():
+        img.paste(atlas.crop(r), (nx, ny))
+        for u in retang[r]: u['uv'] = [u['uv'][0] - r[0] + nx, u['uv'][1] - r[1] + ny]
+    geo['description']['texture_width'], geo['description']['texture_height'] = larg, altura
+    return geo, img
+
+
+def luz(c): return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]
+
+
+def mapear_quantis(cores, paleta):
+    """Cada cor (ordenada por brilho) recebe a cor da paleta na mesma posicao relativa."""
+    cores = sorted(set(cores), key=luz)
+    paleta = sorted(paleta, key=luz)
+    return {c: paleta[min(len(paleta) - 1, int(i * len(paleta) / len(cores)))] for i, c in enumerate(cores)}
+
+
+# ------------------------------------------------------------------ varas do Aquaculture
+
+# Paletas tiradas dos icones de cada vara (escuro -> claro): corpo da vara e partes de metal.
+VARAS = {
+    'iron': ([(40, 30, 11), (73, 54, 21), (104, 78, 30), (137, 103, 39)], [(68, 68, 68), (100, 100, 100), (150, 150, 150), (216, 216, 216)]),
+    'gold': ([(63, 46, 14), (130, 93, 22), (152, 104, 14), (185, 139, 17), (233, 177, 21), (238, 192, 72)],
+             [(130, 93, 22), (185, 139, 17), (238, 192, 72), (253, 255, 118)]),
+    'diamond': ([(9, 45, 47), (14, 63, 54), (21, 99, 85), (5, 135, 99), (17, 179, 150)],
+                [(21, 99, 85), (17, 179, 150), (51, 235, 203), (164, 253, 240)]),
+    'netherite': ([(35, 16, 18), (47, 33, 34), (50, 39, 39), (74, 41, 64), (96, 52, 50), (115, 69, 67)],
+                  [(81, 68, 78), (93, 86, 93), (112, 103, 112), (134, 123, 134)]),
+    'neptunium': ([(1, 12, 33), (0, 25, 57), (3, 62, 80), (19, 72, 103), (65, 107, 142)],
+                  [(7, 163, 160), (9, 208, 178), (27, 245, 193), (140, 251, 220)]),
+}
+GEO_VARA = 'geometry.ap_aqc_rod'
+
+
+def tipo_pixel(c):
+    h, l, s = colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))
+    if s < 0.22 or (0.45 < h < 0.65 and s < 0.4): return 'metal' if l < 0.8 else 'linha'
+    if 0.04 < h < 0.13 and l < 0.85: return 'madeira'
+    return 'outro'
+
+
+def varas():
+    anexo = brarchive.anexo(AS, 'minecraft:carrot_on_a_stick')
+    d = anexo['minecraft:attachable']['description']
+    geo = copy.deepcopy(brarchive.geometria(AS, d['geometry']['default']))
+    # tira a cenoura (filhos de g3b64l) e pendura um anzol de metal no fim da linha
+    pai = {b['name']: b.get('parent') for b in geo['bones']}
+    def sob(nome, alvo):
+        while nome:
+            if nome == alvo: return True
+            nome = pai.get(nome)
+        return False
+    ponta = next(b for b in geo['bones'] if b['name'] == 'g3b64l')
+    geo['bones'] = [b for b in geo['bones'] if b['name'] == 'g3b64l' or not sob(b['name'], 'g3b64l')]
+    geo, img = reempacotar(geo, textura_as('czc'))
+    # um pixel de metal do proprio modelo para o anzol
+    metal = next((x, y) for y in range(img.height) for x in range(img.width)
+                 if img.getpixel((x, y))[3] and tipo_pixel(img.getpixel((x, y))) == 'metal')
+    uv = {f: {'uv': list(metal), 'uv_size': [1, 1]} for f in ('north', 'south', 'east', 'west', 'up', 'down')}
+    px, py, pz = ponta['pivot']
+    geo['bones'].append({'name': 'anzol', 'parent': 'g3b64l', 'pivot': [px, py, pz], 'cubes': [
+        {'origin': [px - 0.25, py - 0.25, pz - 2.5], 'size': [0.5, 0.5, 2.5], 'uv': uv},
+        {'origin': [px - 0.25, py - 1.25, pz - 2.5], 'size': [0.5, 1, 0.5], 'uv': uv}]})
+    geo['description']['identifier'] = GEO_VARA
+    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_rod.geo.json'),
+                {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
+
+    # pixels da linha de pesca (ossos gh2im6fg72f4q*): no A&S tem cor de barbante; numa vara de pesca, linha clara
+    linha = set()
+    for b in geo['bones']:
+        if not b['name'].startswith('gh2im6fg72f4q'): continue
+        for c in b.get('cubes', []):
+            for u in c['uv'].values():
+                (x, y), (w, h) = u['uv'], u['uv_size']
+                for yy in range(math.floor(min(y, y + h)), math.ceil(max(y, y + h))):
+                    for xx in range(math.floor(min(x, x + w)), math.ceil(max(x, x + w))): linha.add((xx, yy))
+    px = img.load()
+    for (x, y) in linha:
+        if px[x, y][3]: px[x, y] = (*tom((236, 236, 236), luz(px[x, y]) / 230), px[x, y][3])
+    usadas = [img.getpixel((x, y)) for y in range(img.height) for x in range(img.width)
+              if img.getpixel((x, y))[3] and (x, y) not in linha]
+    for nome, (corpo, metal_pal) in VARAS.items():
+        troca = {}
+        troca.update(mapear_quantis([c[:3] for c in usadas if tipo_pixel(c) == 'madeira'], corpo))
+        troca.update(mapear_quantis([c[:3] for c in usadas if tipo_pixel(c) == 'metal'], metal_pal))
+        nova = img.copy()
+        npx = nova.load()
+        for y in range(img.height):
+            for x in range(img.width):
+                c = npx[x, y]
+                if c[3] and (x, y) not in linha and c[:3] in troca: npx[x, y] = (*troca[c[:3]], c[3])
+        tex = f'textures/ap/aqc_rod_{nome}'
+        os.makedirs(os.path.join(COMPAT, 'textures', 'ap'), exist_ok=True)
+        nova.save(os.path.join(COMPAT, tex + '.png'))
+        a = copy.deepcopy(anexo)
+        da = a['minecraft:attachable']['description']
+        da['identifier'] = f'tm_aqc:{nome}_fishing_rod'
+        da['geometry'] = {'default': GEO_VARA}
+        da['textures'] = {'default': tex, 'enchanted': 'textures/misc/enchanted_item_glint'}
+        da['materials'] = {'default': da['materials']['default'], 'enchanted': 'entity_alphatest_glint'}
+        da['render_controllers'] = ['controller.render.ap.as_item']
+        gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{nome}_fishing_rod.json'), a)
+    print('varas do Aquaculture: 5 anexos')
+
+
+def controlador():
+    """Render controller com brilho de encantamento, para os anexos gerados aqui."""
+    gravar_json(os.path.join(COMPAT, 'render_controllers', 'ap_as_item.render_controllers.json'), {
+        'format_version': '1.10.0', 'render_controllers': {'controller.render.ap.as_item': {
+            'geometry': 'Geometry.default',
+            'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
+            'textures': ['Texture.default', 'Texture.enchanted']}}})
+
+
+
+
+# ------------------------------------------------------------------ Grimorios
+
+# Cores dos corantes do jogo. O Grimorio comum (fgr:grimoire) e o roxo.
+CORANTES = {
+    'white': (249, 255, 254), 'orange': (249, 128, 29), 'magenta': (199, 78, 189), 'light_blue': (58, 179, 218),
+    'yellow': (254, 216, 61), 'lime': (128, 199, 31), 'pink': (243, 139, 170), 'gray': (71, 79, 82),
+    'light_gray': (157, 157, 151), 'cyan': (22, 156, 156), 'purple': (137, 50, 184), 'blue': (60, 68, 170),
+    'brown': (131, 84, 50), 'green': (94, 124, 22), 'red': (176, 46, 38), 'black': (45, 45, 52),
+}
+ROXO_ICONE = (111, 47, 154)  # roxo principal do icone original (textures/fgr/grimoire.png)
+GEO_LIVRO = 'geometry.fgr_grimorio_livro'
+GEO_VAZIA = 'geometry.fgr_vazio'
+OURO, OURO_ESC = (244, 196, 72), (176, 128, 40)
+PAPEL, PAPEL_LINHA = (236, 226, 200), (196, 182, 150)
+
+
+def ident(cor): return 'fgr:grimoire' if cor == 'purple' else f'fgr:grimoire_{cor}'
+
+
+def tom(c, f): return tuple(max(0, min(255, int(v * f))) for v in c)
+
+
+def textura_livro(cor):
+    """Textura 32x16 do livro: capa (com o ornamento do icone), lombada, bordas e paginas."""
+    base = CORANTES[cor]
+    esc, mais_esc, clara = tom(base, 0.72), tom(base, 0.5), tom(base, 1.18)
+    gema, brilho = tom(clara, 1.15), (255, 255, 255)
+    im = Image.new('RGBA', (32, 16))
+    px = im.load()
+    def ret(x0, y0, w, h, c):
+        for y in range(y0, y0 + h):
+            for x in range(x0, x0 + w): px[x, y] = (*c, 255)
+    # A (0,0) 7x10: capa
+    ret(0, 0, 7, 10, base)
+    for x in range(7): px[x, 0] = px[x, 9] = (*esc, 255)
+    for y in range(10): px[0, y] = px[6, y] = (*esc, 255)
+    desenho = ['.......', '...G...', '..GVG..', '.GVWVG.', '.GVVVG.', '..GVG..', '...G...', '.......', '.o...o.', '.......']
+    for y, linha in enumerate(desenho):
+        for x, ch in enumerate(linha):
+            c = {'G': OURO, 'V': gema, 'W': brilho, 'o': OURO_ESC}.get(ch)
+            if c: px[x, y] = (*c, 255)
+    # (7,0) 1x10: borda da capa;  (0,10) 7x1: borda de cima/baixo da capa
+    ret(7, 0, 1, 10, mais_esc); ret(0, 10, 7, 1, mais_esc)
+    # (8,0) 3x10: lombada com faixas douradas;  (11,0) 1x3: topo da lombada
+    ret(8, 0, 3, 10, esc)
+    for y in (1, 8): ret(8, y, 3, 1, OURO_ESC)
+    ret(11, 0, 1, 3, mais_esc)
+    # (12,0) 2x9: paginas vistas de lado;  (0,11) 7x2: paginas vistas de cima
+    ret(12, 0, 2, 9, PAPEL)
+    for y in range(1, 9, 2): px[12, y] = (*PAPEL_LINHA, 255)
+    ret(0, 11, 7, 2, PAPEL)
+    for x in range(0, 7, 2): px[x, 12] = (*PAPEL_LINHA, 255)
+    return im
+
+
+def geometria_livro():
+    """Mesmo esqueleto e posicoes do livro do A&S (geometry do minecraft:book), com UV proprios."""
+    g = copy.deepcopy(brarchive.geometria(AS, brarchive.anexo(AS, 'minecraft:book')['minecraft:attachable']['description']['geometry']['default']))
+    def f(x, y, w, h): return {'uv': [x, y], 'uv_size': [w, h]}
+    capa = {'north': f(0, 0, 7, 10), 'south': f(7, 0, -7, 10), 'east': f(7, 0, 1, 10), 'west': f(7, 0, 1, 10),
+            'up': f(0, 10, 7, 1), 'down': f(0, 10, 7, 1)}
+    lombada = {'north': f(7, 0, 1, 10), 'south': f(7, 0, 1, 10), 'east': f(8, 0, 3, 10), 'west': f(8, 0, 3, 10),
+               'up': f(11, 0, 1, 3), 'down': f(11, 0, 1, 3)}
+    paginas = {'west': f(12, 0, 2, 9), 'up': f(0, 11, 7, 2), 'down': f(0, 11, 7, 2)}
+    cubos = [c for b in g['bones'] for c in b.get('cubes', [])]
+    assert len(cubos) == 4, 'o livro do A&S mudou: confira geometria_livro()'
+    for c, uv in zip(cubos, (capa, capa, lombada, paginas)): c['uv'] = uv
+    g['description'].update({'identifier': GEO_LIVRO, 'texture_width': 32, 'texture_height': 16})
+    return g
+
+
+def icone(cor, original):
+    """Icone 16x16: os roxos do icone original trocados pela cor do corante, mantendo o sombreado."""
+    alvo = CORANTES[cor]
+    ref = luz(ROXO_ICONE)
+    out = original.copy()
+    dados = []
+    for c in original.getdata():
+        h, l, s = colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))
+        if c[3] and s > 0.25 and 0.70 < h < 0.85:
+            dados.append((*tom(alvo, luz(c) / ref), c[3]))
+        else: dados.append(c)
+    out.putdata(dados)
+    return out
+
+
+def icone_invisivel(original):
+    """Icone do Grimorio invisivel: o mesmo desenho, transparente como vidro, com contorno claro."""
+    out = original.copy()
+    out.putdata([(min(255, c[0] + 60), min(255, c[1] + 70), min(255, c[2] + 90), 110) if c[3] else c for c in original.getdata()])
+    px = out.load()
+    for y in range(16):
+        for x in range(16):
+            if original.getpixel((x, y))[3] and any(not (0 <= x + dx < 16 and 0 <= y + dy < 16) or not original.getpixel((x + dx, y + dy))[3]
+                                                   for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))):
+                px[x, y] = (220, 240, 255, 230)
+    return out
+
+
+def grimorios():
+    base_anexo = brarchive.anexo(AS, 'minecraft:book')
+    gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_grimorio_livro.geo.json'),
+                {'format_version': '1.16.0', 'minecraft:geometry': [geometria_livro()]})
+    gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_vazio.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [
+        {'description': {'identifier': GEO_VAZIA, 'texture_width': 16, 'texture_height': 16},
+         'bones': [{'name': 'root', 'pivot': [0, 0, 0]}]}]})
+    original = Image.open(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png')).convert('RGBA')
+    os.makedirs(os.path.join(FGR, 'textures', 'fgr', 'livro'), exist_ok=True)
+    itens = json.load(open(os.path.join(FGR, 'textures', 'item_texture.json'), encoding='utf-8'))
+    for cor in CORANTES:
+        textura_livro(cor).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
+        if cor != 'purple':
+            icone(cor, original).save(os.path.join(FGR, 'textures', 'fgr', f'grimoire_{cor}.png'))
+            itens['texture_data'][f'fgr_grimoire_{cor}'] = {'textures': f'textures/fgr/grimoire_{cor}'}
+        a = copy.deepcopy(base_anexo)
+        d = a['minecraft:attachable']['description']
+        d['identifier'] = ident(cor)
+        d['geometry'] = {'default': GEO_LIVRO}
+        d['textures'] = {'default': f'textures/fgr/livro/{cor}', 'enchanted': 'textures/misc/enchanted_item_glint'}
+        d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
+        d['render_controllers'] = ['controller.render.fgr.livro']
+        nome = 'grimoire' if cor == 'purple' else f'grimoire_{cor}'
+        gravar_json(os.path.join(FGR, 'attachables', f'{nome}.json'), a)
+    icone_invisivel(original).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
+    itens['texture_data']['fgr_grimoire_invisible'] = {'textures': 'textures/fgr/grimoire_invisible'}
+    gravar_json(os.path.join(FGR, 'textures', 'item_texture.json'), itens)
+    # invisivel: anexo sem nada para desenhar (a mao fica vazia; o icone continua no inventario)
+    gravar_json(os.path.join(FGR, 'attachables', 'grimoire_invisible.json'), {'format_version': '1.10.0', 'minecraft:attachable': {'description': {
+        'identifier': 'fgr:grimoire_invisible', 'materials': {'default': 'entity_alphatest'},
+        'textures': {'default': 'textures/fgr/blank'}, 'geometry': {'default': GEO_VAZIA},
+        'render_controllers': ['controller.render.default']}}})
+    gravar_json(os.path.join(FGR, 'render_controllers', 'fgr_livro.render_controllers.json'), {
+        'format_version': '1.10.0', 'render_controllers': {'controller.render.fgr.livro': {
+            'geometry': 'Geometry.default',
+            'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
+            'textures': ['Texture.default', 'Texture.enchanted']}}})
+    print(f'grimorios: {len(CORANTES)} cores + invisivel')
+
+
+NOMES = {  # pt_BR, en_US
+    'white': ('Branco', 'White'), 'orange': ('Laranja', 'Orange'), 'magenta': ('Magenta', 'Magenta'),
+    'light_blue': ('Azul-Claro', 'Light Blue'), 'yellow': ('Amarelo', 'Yellow'), 'lime': ('Verde-Limão', 'Lime'),
+    'pink': ('Rosa', 'Pink'), 'gray': ('Cinza', 'Gray'), 'light_gray': ('Cinza-Claro', 'Light Gray'),
+    'cyan': ('Ciano', 'Cyan'), 'purple': ('Roxo', 'Purple'), 'blue': ('Azul', 'Blue'), 'brown': ('Marrom', 'Brown'),
+    'green': ('Verde', 'Green'), 'red': ('Vermelho', 'Red'), 'black': ('Preto', 'Black'),
+}
+BP_FGR = os.path.join(RAIZ, 'packs', 'BP_ForsakenGrimoire')
+
+
+def item_grimorio(identificador, icone_nome):
+    return {'format_version': '1.21.90', 'minecraft:item': {
+        'description': {'identifier': identificador, 'menu_category': {'category': 'equipment'}},
+        'components': {'minecraft:icon': {'textures': {'default': icone_nome}},
+                       'minecraft:display_name': {'value': f'item.{identificador}.name'},
+                       'minecraft:max_stack_size': 1, 'minecraft:allow_off_hand': True, 'minecraft:hand_equipped': False,
+                       'minecraft:glint': True, 'minecraft:rarity': 'rare', 'minecraft:tags': {'tags': ['fgr:grimoire']}}}}
+
+
+def itens_grimorio():
+    """Itens (BP) e nomes (RP) das variantes do Grimorio."""
+    linhas = {'pt_BR': [], 'en_US': []}
+    for cor, (pt, en) in NOMES.items():
+        i = ident(cor)
+        gravar_json(os.path.join(BP_FGR, 'items', 'grimoire.json' if cor == 'purple' else f'grimoire_{cor}.json'),
+                    item_grimorio(i, 'fgr_grimoire' if cor == 'purple' else f'fgr_grimoire_{cor}'))
+        if cor != 'purple':
+            linhas['pt_BR'].append(f'item.{i}.name=Grimório {pt}')
+            linhas['en_US'].append(f'item.{i}.name={en} Grimoire')
+    gravar_json(os.path.join(BP_FGR, 'items', 'grimoire_invisible.json'), item_grimorio('fgr:grimoire_invisible', 'fgr_grimoire_invisible'))
+    linhas['pt_BR'].append('item.fgr:grimoire_invisible.name=Grimório Invisível')
+    linhas['en_US'].append('item.fgr:grimoire_invisible.name=Invisible Grimoire')
+    for lingua, novas in linhas.items():
+        arq = os.path.join(FGR, 'texts', f'{lingua}.lang')
+        atuais = [l for l in open(arq, encoding='utf-8').read().splitlines() if l and not l.startswith('item.fgr:grimoire_')]
+        with open(arq, 'w', encoding='utf-8', newline='\n') as f: f.write('\n'.join(atuais + novas) + '\n')
+    print('itens do Grimorio: 17')
+
+
+if __name__ == '__main__':
+    controlador()
+    varas()
+    grimorios()
+    itens_grimorio()

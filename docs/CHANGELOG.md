@@ -1,6 +1,38 @@
 # Changelog – Addon Pack
 
-## 0.3 (esta versão)
+## 0.4 (esta versão)
+
+Nada desta versão foi testado no jogo.
+
+### Corrigido
+- **Animações do Actions & Stuff no jogador.** RnR, RPG e OTG traziam um `player.entity.json` próprio, montado a partir do jogador do jogo base. Como ficam acima do A&S, ele substituía o jogador do A&S e nenhuma animação de corpo, braço ou item do A&S rodava. Agora os três packs levam o jogador do A&S com os acréscimos de cada addon (raças, lobisomem e morcego do RnR, mochila do OTG, espada nas costas do RPG). Gerado por `ferramentas/mesclar_jogador.py`.
+- **"Bedrock" no lugar de "Dano de Ataque"** na descrição das armas: o JavaCombat trocava o nome do atributo em todos os idiomas. Voltou a ser "Dano de Ataque" (pt_BR) e "Attack Damage".
+- **Varinhas do Forsaken** fora da mão e longe da câmera: os anexos 3D das 8 varinhas foram removidos e elas usam o desenho normal, posicionado pelo A&S (o brilho de carga se perde). Os avisos de "sem pergaminho na mão secundária" saíram do chat e vão para a barra de ação, sem aparecer quando o grimório está na mão secundária.
+- **Varas do Aquaculture** invisíveis: agora usam a vara 3D do A&S, pintada conforme o ícone de cada vara (`ferramentas/gerar_anexos.py`).
+
+### Alterado
+- **Relíquia da Vidência**: o modelo da luneta do A&S ficou preto na parte de baixo (onde era marrom e cobre).
+- **Grimório**: modelo de livro do A&S (esqueleto do livro do Minecraft), 16 cores e o grimório invisível (some na mão, aparece no inventário).
+- **Atril Arcano**: virou um bloco com menu próprio (Script API). Coloca o grimório, mostra os 9 espaços de feitiço, enche com os pergaminhos do inventário, esvazia, tinge com corante e deixa invisível com 1 vidro (ou visível de novo). Os atris antigos (entidade) devolvem o que tinham e somem.
+- **Mago (RPG Addon, classe 3)**: feitiços do grimório ilimitados. O pergaminho equipado não é gasto. Nível 1 libera pergaminhos de nível 1, nível 8 os de nível 2 e nível 15 os de nível 3. Com o grimório na mão secundária, segurar uma varinha equipa o feitiço escolhido sozinho.
+- **Armas pesadas** (6 montantes do Dungeons e 14 espadas grandes do Cataclysmical): seguram e golpeiam com o esqueleto e as animações do Machado Wroughtnaut (Mowzie's Mobs), mais rápidas. A mão some durante o golpe em primeira pessoa; em terceira pessoa o jogador faz o golpe de duas mãos do machado. O próprio machado também esconde a mão no golpe. Gerado por `ferramentas/armas_pesadas.py`.
+- **Ritual Dagger (RnR) e Star Sword (Cataclysmical)**: animações de espada do A&S.
+- **Armaduras dos outros addons** (DarkAge, Forsaken, Mowzie's, Aquaculture, Better on Bedrock, Cataclysmical e Eternal End): cada conjunto ganhou o bônus de conjunto completo de um conjunto do Dungeons e todas aceitam gemas do Ferreiro Anão do Eternal Caves (as que não tinham nível ganharam um pela durabilidade). A descrição de cada peça mostra o bônus e os espaços de gema, no estilo do Eternal Caves; as armaduras do jogo base mostram os espaços de gema. Gerado por `ferramentas/armaduras.py`.
+
+| Conjunto | Bônus do Dungeons |
+|---|---|
+| DarkAge: Sentinel Soldier / Elemental Soldier / Oath / Unbound | Champion's / Ember / Hero's / Titan's Shroud |
+| Forsaken: Estanho / Zinco / Bronze / Latão / Olivina | Wolf / Mercenary / Guard / Emerald / Turtle |
+| Mowzie's: Geomante | Rugged Climbing Gear |
+| Aquaculture: Netúnio / Escamas | Glow Squid / Squid |
+| Better on Bedrock: Ametista / Corstinite / Stardust / Shulker | Evocation / Full Metal / Souldancer / Sturdy Shulker |
+| Cataclysmical: Infernum / Stellar / Terrabloom / Exodius | Ghost Kindler / Phantom / Living Vines / Wither |
+| Eternal End: Enderite / Shulker / Ametrina | Ender / Shulker / Troubadour |
+
+### Não feito
+- **Actions & Stuff 1.12**: o pack enviado tem só materiais, sons, textos e texturas (estas cifradas), sem anexos, animações, entidades nem modelos. Continua o 1.11.
+
+## 0.3
 
 ### Atualizado
 - **Alylica's Dungeons 2.0.3 → 2.1.0** (BP + RP, mesmos UUIDs: substitui a versão antiga). 671 itens (eram 472); nenhum removido. A 2.1.0 já traz tags do A&S nos arcos/bestas (`oreville:is_bow`/`is_crossbow`), 11 maças e 2 foices.

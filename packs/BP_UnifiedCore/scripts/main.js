@@ -4,6 +4,7 @@
 import { world, system, GameMode, ItemStack } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 import { FERRAMENTAS, POR_DURABILIDADE, MINERIOS, NOME_NIVEL, QUEBRA_TUDO } from "./niveis.js";
+import "./armaduras.js";
 
 const RELIC = "panascais_caves:seers_relic";
 const ZOOM_FOV = 25;          // campo de visao com zoom (o normal e ~70)

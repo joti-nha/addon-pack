@@ -93,7 +93,7 @@ const BlockOnPlayerInteractComponent = {
               if (itemStack.typeId === itemType || itemStack.hasTag(itemType)) {
                 // Interaction Guide:
                 if (interactGuide !== false) {
-                  source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${interactGuide}\"}]}`);
+                  source.onScreenDisplay?.setActionBar(`${interactGuide}`);
                   source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                 }
                 // Decrease item:
@@ -189,7 +189,7 @@ const BlockOnPlayerInteractComponent = {
               else {
                 if (itemUndefinedOnly === false) {
                   if (interactFailGuide !== false) {
-                    source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${interactFailGuide}\"}]}`);
+                    source.onScreenDisplay?.setActionBar(`${interactFailGuide}`);
                     source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                   }
                 }
@@ -197,7 +197,7 @@ const BlockOnPlayerInteractComponent = {
             }
             else {
               if (interactFailGuide !== false) {
-                source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${interactFailGuide}\"}]}`);
+                source.onScreenDisplay?.setActionBar(`${interactFailGuide}`);
                 source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
               }
             }
@@ -207,7 +207,7 @@ const BlockOnPlayerInteractComponent = {
               if (itemStack === undefined) {
                 // Interaction Guide:
                 if (interactGuide !== false) {
-                  source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${interactGuide}\"}]}`);
+                  source.onScreenDisplay?.setActionBar(`${interactGuide}`);
                   source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                 }
                 // Give item:
@@ -292,7 +292,7 @@ const BlockOnPlayerInteractComponent = {
             else {
               // Interaction Guide:
               if (interactGuide !== false) {
-                source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${interactGuide}\"}]}`);
+                source.onScreenDisplay?.setActionBar(`${interactGuide}`);
                 source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
               }
               // Give item:
