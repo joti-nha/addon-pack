@@ -165,7 +165,7 @@ const ItemOnCompleteUseComponent = {
                 if (ammunitionType !== false) {
                   if (ammunitionItemStack === undefined || !ammunitionItemStack.hasTag(ammunitionType)) {
                     if (ammunitionFailGuide !== false) {
-                      source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${ammunitionFailGuide}\"}]}`);
+                      source.onScreenDisplay?.setActionBar(`${ammunitionFailGuide}`);
                       source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                     }
                   }
@@ -212,7 +212,7 @@ const ItemOnCompleteUseComponent = {
                     }
                     else {
                       if (releaseFailGuide !== false) {
-                        source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${releaseFailGuide}\"}]}`);
+                        source.onScreenDisplay?.setActionBar(`${releaseFailGuide}`);
                         source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                         // Cancel the cooldown when used while sneaking:
                         if (itemCooldownCategory !== false) {
@@ -306,7 +306,7 @@ const ItemOnCompleteUseComponent = {
               if (ammunitionType !== false) {
                 if (ammunitionItemStack === undefined || !ammunitionItemStack.hasTag(ammunitionType)) {
                   if (ammunitionFailGuide !== false) {
-                    source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${ammunitionFailGuide}\"}]}`);
+                    source.onScreenDisplay?.setActionBar(`${ammunitionFailGuide}`);
                     source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                   }
                 }
@@ -353,7 +353,7 @@ const ItemOnCompleteUseComponent = {
                   }
                   else {
                     if (releaseFailGuide !== false) {
-                      source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${releaseFailGuide}\"}]}`);
+                      source.onScreenDisplay?.setActionBar(`${releaseFailGuide}`);
                       source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                       // Cancel the cooldown when used while sneaking:
                       if (itemCooldownCategory !== false) {
@@ -452,7 +452,7 @@ const ItemOnCompleteUseComponent = {
                   if (ammunitionType !== false) {
                     if (ammunitionItemStack === undefined || !ammunitionItemStack.hasTag(ammunitionType)) {
                       if (ammunitionFailGuide !== false) {
-                        source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${ammunitionFailGuide}\"}]}`);
+                        source.onScreenDisplay?.setActionBar(`${ammunitionFailGuide}`);
                         source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                       }
                     }
@@ -499,7 +499,7 @@ const ItemOnCompleteUseComponent = {
                       }
                       else {
                         if (releaseFailGuide !== false) {
-                          source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${releaseFailGuide}\"}]}`);
+                          source.onScreenDisplay?.setActionBar(`${releaseFailGuide}`);
                           source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                           // Cancel the cooldown when used while sneaking:
                           if (itemCooldownCategory !== false) {
@@ -604,7 +604,7 @@ const ItemOnCompleteUseComponent = {
                 if (ammunitionType !== false) {
                   if (ammunitionItemStack === undefined || !ammunitionItemStack.hasTag(ammunitionType)) {
                     if (ammunitionFailGuide !== false) {
-                      source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${ammunitionFailGuide}\"}]}`);
+                      source.onScreenDisplay?.setActionBar(`${ammunitionFailGuide}`);
                       source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                     }
                   }
@@ -651,7 +651,7 @@ const ItemOnCompleteUseComponent = {
                     }
                     else {
                       if (releaseFailGuide !== false) {
-                        source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"${releaseFailGuide}\"}]}`);
+                        source.onScreenDisplay?.setActionBar(`${releaseFailGuide}`);
                         source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                         // Cancel the cooldown when used while sneaking:
                         if (itemCooldownCategory !== false) {

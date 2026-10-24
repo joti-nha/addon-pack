@@ -77,7 +77,7 @@ export function homewardBoundMagicSpell(source) {
   const sourceSpawnPoint = source.getSpawnPoint();
   if (sourceSpawnPoint === undefined) {
     source.dimension.playSound("game.source.attack.nodamage", source.location, { pitch: 1.1, volume: 1.0 });
-    source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eYou don't have a set spawn point yet.§r\"}]}`);
+    source.onScreenDisplay?.setActionBar(`§eYou don't have a set spawn point yet.§r`);
   }
   else {
     source.dimension.spawnParticle("ntk:homeward_bound_magic_spell_casting_particle", { x: source.location.x, y: source.location.y + 0.1, z: source.location.z });

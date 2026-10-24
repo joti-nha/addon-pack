@@ -49,7 +49,7 @@ const ItemWandOnUseComponent = {
               }
               if (hasAmmunition === false) {
                 if (ammunitionFailGuide !== false) {
-                  source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§e${ammunitionFailGuide}§r\"}]}`);
+                  if (!source.getComponent("equippable")?.getEquipmentSlot("Offhand")?.getItem()?.hasTag("fgr:grimoire")) source.onScreenDisplay?.setActionBar(`§e${ammunitionFailGuide}§r`);
                   source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                 }
               }
@@ -59,7 +59,7 @@ const ItemWandOnUseComponent = {
               const ammunitionItemStack = ammunitionItemSlot.getItem();
               if (ammunitionItemStack === undefined || !ammunitionItemStack.hasTag(ammunitionType)) {
                 if (ammunitionFailGuide !== false) {
-                  source.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§e${ammunitionFailGuide}§r\"}]}`);
+                  if (!source.getComponent("equippable")?.getEquipmentSlot("Offhand")?.getItem()?.hasTag("fgr:grimoire")) source.onScreenDisplay?.setActionBar(`§e${ammunitionFailGuide}§r`);
                   source.dimension.playSound("game.player.attack.nodamage", source.location, { pitch: 1.2, volume: 1.0 });
                 }
               }
