@@ -143,7 +143,7 @@ def main():
             'description': {'identifier': ident, 'menu_category': {'category': 'equipment'}},
             'components': {'minecraft:icon': {'textures': {'default': f'fgr_tome_{nome}'}},
                            'minecraft:display_name': {'value': f'item.{ident}.name'},
-                           'minecraft:max_stack_size': 1, 'minecraft:glint': True, 'minecraft:rarity': 'epic',
+                           'minecraft:max_stack_size': 1, 'minecraft:allow_off_hand': True, 'minecraft:glint': True, 'minecraft:rarity': 'epic',
                            'minecraft:tags': {'tags': ['fgr:tome']}}}})
         for l, texto in (('pt_BR', f'§6Tomo Infinito: {pt}'), ('en_US', f'§6Infinite Tome: {en}')):
             chave = f'item.{ident}.name='
