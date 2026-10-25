@@ -2264,11 +2264,12 @@ function showSpellbookUI(player, mage = true) {
   const buys = readBuys(player);
   const rows = [];
   const listed = new Set(known);
-  if (mage && limit > 0) rows.push({ text: `\xA7d\xA7lEscolher Tomos Infinitos\xA7r \xA78(${known.length}/${limit})\n\xA77Troque quais tomos voc\xEA conhece`, menu: true, act: () => showChooseTomesUI(player) });
+  if (mage && limit > 0) rows.push({ text: `\xA7d\xA7lEscolher Tomos Infinitos\xA7r \xA78(${known.length}/${limit})\n\xA77Marcar v\xE1rios de uma vez`, menu: true, act: () => showChooseTomesUI(player) });
   for (const tome of known) {
-    if (findCarriedTome(player, tome)) rows.push({ text: `\xA7a[No invent\xE1rio] \xA75${tomeLabel(tome)}\n\xA77Ponha num Grim\xF3rio no Atril Arcano`, act: () => player.sendMessage(`\xA7d[RPG Guide] \xA75${tomeLabel(tome)}\xA7d: ponha o tomo num espa\xE7o do Grim\xF3rio (Atril Arcano) ou na m\xE3o secund\xE1ria com uma varinha.`) });
-    else rows.push({ text: `\xA7e[Receber de novo] \xA75${tomeLabel(tome)}\n\xA77S\xF3 se perdeu (n\xE3o est\xE1 num Grim\xF3rio)`, act: () => { giveTomeCopy(player, tome); player.sendMessage(`\xA7a[RPG Guide] Tomo entregue: \xA75${tomeLabel(tome)}`); } });
+    const carried = findCarriedTome(player, tome);
+    rows.push({ text: `${carried ? "\xA7a[No invent\xE1rio]" : "\xA7e[Fora do invent\xE1rio]"} \xA75${tomeLabel(tome)}\n\xA77Toque para trocar${carried ? "" : " ou receber de novo"}`, menu: true, act: () => showSwapTome(player, tome) });
   }
+  for (let i = known.length; i < limit; i++) rows.push({ text: `\xA7b[Vaga livre]\n\xA77Toque para escolher um tomo`, menu: true, act: () => showSwapTome(player, null) });
   if (mage) {
     for (const spell of MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"))) {
       const spellId = spell.tag.split(":")[1];
@@ -2298,7 +2299,7 @@ function showSpellbookUI(player, mage = true) {
     showPlayerMenuUI(player, classObj ? getPlayerScoreSafe(classObj, player, 0) : 0);
   } });
   const body = mage
-    ? `Tomos conhecidos: \xA7e${known.length}/${limit}\xA7r. Cada compra de magia com almas d\xE1 +1 vaga e um tomo \xE0 sua escolha.\n\nO tomo fica no invent\xE1rio (n\xE3o d\xE1 para descartar). Ponha num Grim\xF3rio no Atril Arcano para a troca r\xE1pida, ou na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.`
+    ? `Tomos conhecidos: \xA7e${known.length}/${limit}\xA7r. Cada compra de magia com almas d\xE1 +1 vaga e um tomo \xE0 sua escolha; toque num tomo para troc\xE1-lo quando quiser.\n\nO tomo fica no invent\xE1rio (n\xE3o d\xE1 para descartar). Ponha num Grim\xF3rio no Atril Arcano para a troca r\xE1pida, ou na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.`
     : "Tomos Infinitos guardados. S\xF3 o Mago conhece tomos; os daqui s\xE3o de vers\xF5es anteriores.";
   const form = new ActionFormData4().title(mage ? "\xA7dTomos Infinitos do Mago" : "\xA75Estante de Tomos").body(body);
   for (const r of rows) form.button(r.text);
@@ -2309,6 +2310,53 @@ function showSpellbookUI(player, mage = true) {
       if (!r) return;
       r.act();
       if (!r.back && !r.menu) system5.runTimeout(() => { try { showSpellbookUI(player, mage); } catch (e) {} }, 2);
+    }).catch(e => {});
+  });
+}
+// Troca: escolhe outro tomo das magias compradas no lugar de um conhecido (ou ocupa uma vaga livre). Pode trocar
+// quantas vezes quiser; o tomo antigo some do invent\xE1rio e o novo \xE9 entregue.
+function swapOptions(player) {
+  const known = readKnown(player);
+  const buys = readBuys(player);
+  const out = [];
+  for (const [spellId, list] of Object.entries(SPELL_TOME_OPTIONS)) {
+    if (!(buys[spellId] > 0)) continue;
+    const spell = MageShopItems.find((i) => i.tag === `spell_unlocked:${spellId}`);
+    for (const o of list) if (!known.includes(o.tome)) out.push({ ...o, spell: spell?.name ?? spellId });
+  }
+  return out;
+}
+function showSwapTome(player, oldTome) {
+  const options = swapOptions(player);
+  const carried = oldTome ? findCarriedTome(player, oldTome) : true;
+  const form = new ActionFormData4().title(oldTome ? `\xA7dTrocar \xA75${tomeLabel(oldTome)}` : "\xA7dEscolher Tomo Infinito");
+  form.body(options.length
+    ? (oldTome ? "Escolha o tomo que vai ficar no lugar deste. Voc\xEA pode trocar de novo quando quiser." : "Escolha o tomo para esta vaga. Voc\xEA pode trocar depois.")
+    : "N\xE3o h\xE1 outro tomo dispon\xEDvel: compre outra magia com almas para liberar mais op\xE7\xF5es.");
+  const acts = [];
+  for (const o of options) {
+    form.button(`\xA75${o.name} \xA78(${o.spell})`);
+    acts.push(() => {
+      if (readKnown(player).includes(o.tome)) return;
+      if (oldTome) forgetTome(player, oldTome);
+      else if (readKnown(player).length >= tomeLimit(player)) { player.sendMessage("\xA7c[RPG Guide] Sem vagas livres."); return; }
+      learnTome(player, o.tome);
+      player.sendMessage(oldTome
+        ? `\xA7a[RPG Guide] Tomo trocado: \xA75${tomeLabel(oldTome)}\xA7a \u2192 \xA75${o.name}`
+        : `\xA7a[RPG Guide] Tomo escolhido: \xA75${o.name}`);
+    });
+  }
+  if (oldTome && !carried) {
+    form.button("\xA7eReceber de novo\n\xA77S\xF3 se perdeu (n\xE3o est\xE1 num Grim\xF3rio)");
+    acts.push(() => { giveTomeCopy(player, oldTome); player.sendMessage(`\xA7a[RPG Guide] Tomo entregue: \xA75${tomeLabel(oldTome)}`); });
+  }
+  form.button(oldTome ? "Manter" : "Voltar");
+  acts.push(() => {});
+  system5.run(() => {
+    form.show(player).then((res) => {
+      if (res.canceled) return;
+      acts[res.selection]?.();
+      system5.runTimeout(() => { try { showSpellbookUI(player); } catch (e) {} }, 2);
     }).catch(e => {});
   });
 }

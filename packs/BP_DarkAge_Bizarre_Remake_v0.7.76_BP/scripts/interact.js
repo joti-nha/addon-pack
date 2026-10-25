@@ -1,4 +1,4 @@
-import { world, ItemStack } from '@minecraft/server';
+import { world, system, ItemStack } from '@minecraft/server';
 
 world.afterEvents.itemReleaseUse.subscribe((ev) => {
   try {
@@ -82,6 +82,8 @@ world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
           break;
 
         case 'dk:sinners_rod':
+          // fgr: com pergaminho na mão secundária o cajado conjura o pergaminho
+          if (player.getComponent('equippable')?.getEquipment('Offhand')?.hasTag('ntk:magic_scroll')) break;
           if (!player.isSneaking) {
             await spawnEntityWithEvent(player, "dk:putrefied", player.location, "dk:putrefied_event_mode_ally");
             player.playSound("mob.evocation_illager.prepare_summon");
@@ -187,4 +189,14 @@ world.beforeEvents.worldInitialize.subscribe(({ itemComponentRegistry }) => {
       }
     },
   });
+});
+
+// fgr: botão de ataque conjura o feitiço padrão do cajado (chamado pelo pack FO)
+system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity: player }) => {
+  if (id !== "fgr:cajado_ataque" || message !== "dk:sinners_rod" || player?.typeId !== "minecraft:player") return;
+  if (player.isSneaking || player.getItemCooldown("sinners_rod") > 0) return;
+  if (player.getComponent('equippable')?.getEquipment('Mainhand')?.typeId !== "dk:sinners_rod") return;
+  player.startItemCooldown("sinners_rod", 120 * 20);
+  spawnEntityWithEvent(player, "dk:putrefied", player.location, "dk:putrefied_event_mode_ally");
+  player.playSound("mob.evocation_illager.prepare_summon");
 });

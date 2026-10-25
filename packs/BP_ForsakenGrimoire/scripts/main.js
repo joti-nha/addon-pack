@@ -45,7 +45,7 @@ const invOf = (p) => p.getComponent("inventory").container;
 const offhandOf = (p) => p.getComponent("equippable").getEquipmentSlot(EquipmentSlot.Offhand);
 const isGrimoire = (it) => !!it && (it.typeId === GRIMOIRE || it.hasTag(GRIMOIRE_TAG));
 const isScroll = (it) => !!it && it.hasTag("ntk:scroll") && !it.typeId.includes("empty_scroll");
-const isWand = (it) => !!it && it.hasTag("ntk:wand");
+const isWand = (it) => !!it && (it.hasTag("ntk:wand") || it.hasTag("fgr:cajado"));
 const isFreeCopy = (it) => { if (!it) return false; const l = it.getLore(); return l.includes(FREE_MARK) || l.includes(OLD_FREE_MARK); };
 const isTome = (it) => !!it && TOMES[it.typeId] !== undefined;
 const tr = (id) => ({ translate: `item.${id.split(":")[0]}.${id.split(":")[1]}.name` });

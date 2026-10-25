@@ -13,6 +13,8 @@ system.beforeEvents.startup.subscribe((event) => {
     onUse(e) {
       const player = e.source;
       const item = e.itemStack;
+      // fgr: com pergaminho na mão secundária a varinha conjura o pergaminho (o ataque usa dungeons:force_artefact)
+      if (player.getComponent("equippable")?.getEquipment("Offhand")?.hasTag("ntk:magic_scroll")) return;
 
       useArtefact(player, item, false)
     }
