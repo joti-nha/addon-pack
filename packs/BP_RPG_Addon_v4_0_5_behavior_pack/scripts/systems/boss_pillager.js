@@ -678,7 +678,7 @@ system9.runInterval(() => {
                 const v = dimension.spawnEntity("minecraft:vindicator", { x: sx, y: boss.location.y, z: sz });
                 dimension.spawnParticle("minecraft:dragon_breath_trail", { x: sx, y: boss.location.y + 1, z: sz });
                 if (v) {
-                  v.nameTag = "Corrupted Vindicator";
+                  v.nameTag = "Vingador Corrompido";
                   currentWaveMobs.push(v);
                 }
               } catch (e) {}
@@ -693,7 +693,7 @@ system9.runInterval(() => {
                 const p = dimension.spawnEntity("minecraft:pillager", { x: sx, y: boss.location.y, z: sz });
                 dimension.spawnParticle("minecraft:dragon_breath_trail", { x: sx, y: boss.location.y + 1, z: sz });
                 if (p) {
-                  p.nameTag = "Corrupted Pillager";
+                  p.nameTag = "Saqueador Corrompido";
                   currentWaveMobs.push(p);
                   // 1-tick delay guarantees equipment initialization before /enchant
                   system9.runTimeout(() => {
@@ -724,7 +724,7 @@ system9.runInterval(() => {
                 const r = dimension.spawnEntity("minecraft:ravager", { x: rx, y: boss.location.y, z: rz });
                 dimension.spawnParticle("minecraft:large_explosion", { x: rx, y: boss.location.y + 1, z: rz });
                 if (r) {
-                  r.nameTag = "Corrupted Ravager";
+                  r.nameTag = "Devastador Corrompido";
                   currentWaveMobs.push(r);
                 }
               } catch (e) {}

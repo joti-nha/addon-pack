@@ -165,9 +165,9 @@ function giveRPGBook(player) {
   book.lockMode = ItemLockMode.inventory;
   const added = giveOrDropItem(player, book);
   if (added) {
-    player.sendMessage("\xA7a[System] You received the \xA76RPG Guide\xA7a!");
+    player.sendMessage("\xA7a[Sistema] Voc\xEA recebeu o \xA76RPG Guide\xA7a!");
   } else {
-    player.sendMessage("\xA7a[System] Your inventory was full! The \xA76RPG Guide\xA7a was dropped at your feet.");
+    player.sendMessage("\xA7a[Sistema] Seu invent\xE1rio estava cheio! O \xA76RPG Guide\xA7a caiu aos seus p\xE9s.");
   }
 }
 
@@ -197,10 +197,10 @@ function castSpell(player, spellId) {
       castLightning(player);
       break;
     case "invisibility":
-      player.sendMessage("\xA78[Mage] Invisibility is permanent while equipped in Spellbook. No need to cast!");
+      player.sendMessage("\xA78[Mago] A Invisibilidade \xE9 permanente enquanto estiver equipada no Livro de Feiti\xE7os. N\xE3o precisa lan\xE7ar!");
       break;
     default:
-      player.sendMessage("\xA7cNo active spell selected! Open your RPG Guide to select one.");
+      player.sendMessage("\xA7cNenhum feiti\xE7o ativo! Abra o RPG Guide para escolher um.");
       break;
   }
 }
@@ -336,23 +336,23 @@ import { world as world4, ItemStack as ItemStack3, EnchantmentTypes as Enchantme
 import { world as world3, ItemStack as ItemStack2, EnchantmentTypes, ItemLockMode as ItemLockMode2 } from "@minecraft/server";
 import { ActionFormData } from "@minecraft/server-ui";
 var ABILITY_USAGE_MESSAGES = {
-  active_ability_sword: "\xA7eTo use ability, crouch and then jump and it has a cooldown of 5 min after use.\xA7r",
-  active_ability_survivor_dash: "\xA7eTo use Dash, crouch and then jump. Pushes you 10 blocks forward, damages nearby mobs, and grants Invisibility & Resistance for 10s. (Cooldown: 45s)\xA7r",
-  active_ability_groundsmash: "\xA7eTo use this ability, crouch and then jump. (Cooldown: 2 min)\xA7r",
-  active_ability_ranger_rapidarrow: "\xA7eTo use Rapid Arrow, crouch and then jump. Instantly shoots 30 arrows! (Cooldown: 4 min)\xA7r",
-  active_ability_ranger_aim: "\xA7eTo use Aim, crouch and then jump. Grants Night Vision for 1 minute. (Cooldown: 6 min)\xA7r",
-  active_ability_survivor_safety: "\xA7eTo use Safety, crouch and then jump. Grants Resistance III, Fire Resistance, and Absorption for 30s. (Cooldown: 6 min)\xA7r",
-  active_ability_survivor_speedboost: "\xA7eTo use Speedboost, crouch and then jump. Grants Speed III, Jump Boost II, and Resistance II for 20s. (Cooldown: 4 min)\xA7r",
-  active_ability_survivor_hide: "\xA7eTo use Hide, crouch and then jump. Grants complete Invisibility for 60 seconds. (Cooldown: 5 min)\xA7r",
-  active_ability_survivor_lock: "\xA7eTo use Lock, crouch and then jump. Traps nearby enemies in obsidian and applies Slowness III. (Cooldown: 5 min)\xA7r",
-  active_ability_assassin_vanish: "\xA7eTo use Vanish, crouch and then jump. Grants Invisibility for 45s. (Cooldown: 8 mins)\xA7r"
+  active_ability_sword: "\xA7ePara usar a habilidade, agache e depois pule. Ela tem 5 min de recarga depois de usada.\xA7r",
+  active_ability_survivor_dash: "\xA7ePara usar Investida, agache e depois pule. Empurra voc\xEA 10 blocos para a frente, fere mobs pr\xF3ximos e concede Invisibilidade e Resist\xEAncia por 10s. (Recarga: 45s)\xA7r",
+  active_ability_groundsmash: "\xA7ePara usar esta habilidade, agache e depois pule. (Recarga: 2 min)\xA7r",
+  active_ability_ranger_rapidarrow: "\xA7ePara usar Chuva de Flechas, agache e depois pule. Dispara 30 flechas na hora! (Recarga: 4 min)\xA7r",
+  active_ability_ranger_aim: "\xA7ePara usar Mira, agache e depois pule. Concede Vis\xE3o Noturna por 1 minuto. (Recarga: 6 min)\xA7r",
+  active_ability_survivor_safety: "\xA7ePara usar Prote\xE7\xE3o, agache e depois pule. Concede Resist\xEAncia III, Resist\xEAncia ao Fogo e Absor\xE7\xE3o por 30s. (Recarga: 6 min)\xA7r",
+  active_ability_survivor_speedboost: "\xA7ePara usar Impulso, agache e depois pule. Concede Velocidade III, Super Pulo II e Resist\xEAncia II por 20s. (Recarga: 4 min)\xA7r",
+  active_ability_survivor_hide: "\xA7ePara usar Esconder, agache e depois pule. Concede Invisibilidade completa por 60 segundos. (Recarga: 5 min)\xA7r",
+  active_ability_survivor_lock: "\xA7ePara usar Pris\xE3o, agache e depois pule. Prende inimigos pr\xF3ximos em obsidiana e aplica Lentid\xE3o III. (Recarga: 5 min)\xA7r",
+  active_ability_assassin_vanish: "\xA7ePara usar Sumir, agache e depois pule. Concede Invisibilidade por 45s. (Recarga: 8 min)\xA7r"
 };
 
 var WarriorShopItems = [
   {
     id: "active_ability_sword",
-    name: "Summon Sword",
-    description: "(Equip & Use : Crouch + Jump ) Grants an Iron Sword with Curse of Vanishing.",
+    name: "Invocar Espada",
+    description: "(Equipe e use: agachar + pular) Concede uma Espada de Ferro com Maldi\xE7\xE3o do Desaparecimento.",
     costXP: 1,
     costSouls: 100,
     tag: "active_ability_sword",
@@ -361,8 +361,8 @@ var WarriorShopItems = [
   },
   {
     id: "active_ability_groundsmash",
-    name: "Ground Smash",
-    description: "(Equip & Use : Crouch + Jump ) Pushes away enemies and deals damage. Gives Resistance 1 and Absorption 1.",
+    name: "Esmagar o Ch\xE3o",
+    description: "(Equipe e use: agachar + pular) Empurra os inimigos e causa dano. D\xE1 Resist\xEAncia I e Absor\xE7\xE3o I.",
     costXP: 5,
     costSouls: 150,
     tag: "active_ability_groundsmash",
@@ -371,8 +371,8 @@ var WarriorShopItems = [
   },
   {
     id: "active_ability_attack_strength",
-    name: "Valor",
-    description: "(Equip & Use : Crouch + Jump ) Gives massive buffs and damages nearby enemies.",
+    name: "Bravura",
+    description: "(Equipe e use: agachar + pular) D\xE1 b\xF4nus enormes e causa dano aos inimigos pr\xF3ximos.",
     costXP: 5,
     costSouls: 200,
     tag: "active_ability_attack_strength",
@@ -381,8 +381,8 @@ var WarriorShopItems = [
   },
   {
     id: "healthmet_buff",
-    name: "Reinforced Recovery",
-    description: "(Passive) Grants Regeneration I while wearing any helmet.",
+    name: "Recupera\xE7\xE3o Refor\xE7ada",
+    description: "(Passiva) Concede Regenera\xE7\xE3o I enquanto voc\xEA usa qualquer capacete.",
     costXP: 5,
     costSouls: 280,
     tag: "shop_healthmet",
@@ -390,8 +390,8 @@ var WarriorShopItems = [
   },
   {
     id: "assassin_skill_buff",
-    name: "Swift-Footed",
-    description: "(Passive) Grants permanent Speed I.",
+    name: "P\xE9s Ligeiros",
+    description: "(Passiva) Concede Velocidade I permanente.",
     costXP: 5,
     costSouls: 300,
     tag: "shop_assassin_skill",
@@ -400,8 +400,8 @@ var WarriorShopItems = [
   },
   {
     id: "heart_buff",
-    name: "Vitality",
-    description: "(Passive) Permanently grants 6 Extra Hearts.",
+    name: "Vitalidade",
+    description: "(Passiva) Concede 6 cora\xE7\xF5es extras permanentes.",
     costXP: 5,
     costSouls: 350,
     tag: "shop_heart",
@@ -409,8 +409,8 @@ var WarriorShopItems = [
   },
   {
     id: "armour_buff",
-    name: "Juggernaut",
-    description: "(Passive) Grants Resistance II and Jump Boost I when wearing full armor.",
+    name: "Colosso",
+    description: "(Passiva) Concede Resist\xEAncia II e Super Pulo I com a armadura completa.",
     costXP: 5,
     costSouls: 200,
     tag: "shop_armour",
@@ -418,8 +418,8 @@ var WarriorShopItems = [
   },
   {
     id: "strength_buff",
-    name: "Rage",
-    description: "(Passive) Permanently grants Strength I.",
+    name: "F\xFAria",
+    description: "(Passiva) Concede For\xE7a I permanente.",
     costXP: 5,
     costSouls: 250,
     tag: "shop_strength",
@@ -428,8 +428,8 @@ var WarriorShopItems = [
   },
   {
     id: "unbreakable_sword_buff",
-    name: "Enhanced Summon Sword",
-    description: "(Passive) Upgrades Sword Ability to Summon a Diamond Sword.",
+    name: "Invocar Espada Aprimorada",
+    description: "(Passiva) Melhora a habilidade da espada para invocar uma Espada de Diamante.",
     costXP: 5,
     costSouls: 350,
     tag: "shop_unbreakable_sword",
@@ -437,8 +437,8 @@ var WarriorShopItems = [
   },
   {
     id: "groundsmash_passive_buff",
-    name: "Thick-Skinned",
-    description: "(Passive) Grants permanent Resistance I.",
+    name: "Casca Grossa",
+    description: "(Passiva) Concede Resist\xEAncia I permanente.",
     costXP: 5,
     costSouls: 250,
     tag: "shop_groundsmash",
@@ -447,8 +447,8 @@ var WarriorShopItems = [
   },
   {
     id: "dual_sword_buff",
-    name: "Sword Mastery",
-    description: "(Passive) Your melee attacks deal bonus damage based on your sword type.",
+    name: "Maestria da Espada",
+    description: "(Passiva) Seus ataques corpo a corpo causam dano b\xF4nus conforme o tipo da espada.",
     costXP: 5,
     costSouls: 400,
     tag: "shop_dual_sword",
@@ -456,8 +456,8 @@ var WarriorShopItems = [
   },
   {
     id: "shield_buff",
-    name: "Bulwark",
-    description: "(Passive) Instantly heals 5 hearts every 75 seconds when a Shield is equipped in offhand.",
+    name: "Baluarte",
+    description: "(Passiva) Cura 5 cora\xE7\xF5es na hora a cada 75 segundos quando h\xE1 um Escudo na m\xE3o secund\xE1ria.",
     costXP: 5,
     costSouls: 500,
     tag: "shop_shield",
@@ -465,8 +465,8 @@ var WarriorShopItems = [
   },
   {
     id: "fire_slash_buff",
-    name: "Blood of Fire",
-    description: "(Passive) Burns enemies when they attack you.",
+    name: "Sangue de Fogo",
+    description: "(Passiva) Queima os inimigos que atacarem voc\xEA.",
     costXP: 5,
     costSouls: 500,
     tag: "shop_fire_slash",
@@ -476,8 +476,8 @@ var WarriorShopItems = [
 var RangerShopItems = [
   {
     id: "ranger_agility",
-    name: "Forest Walking",
-    description: "(Passive) Grants permanent Speed I.",
+    name: "Andar na Floresta",
+    description: "(Passiva) Concede Velocidade I permanente.",
     costSouls: 100,
     costXP: 1,
     tag: "shop_ranger_agility",
@@ -486,8 +486,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_firearrow",
-    name: "Arrows of Fire",
-    description: "(Passive) Arrows fired apply Burn for 12 seconds and deal extra fire damage.",
+    name: "Flechas de Fogo",
+    description: "(Passiva) As flechas incendeiam o alvo por 12 segundos e causam dano extra de fogo.",
     costSouls: 150,
     costXP: 5,
     tag: "shop_ranger_firearrow",
@@ -496,8 +496,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_poisonarrow",
-    name: "Poisoned Arrows",
-    description: "(Passive) Arrows fired apply Poison for 6 seconds.",
+    name: "Flechas Envenenadas",
+    description: "(Passiva) As flechas envenenam o alvo por 6 segundos.",
     costSouls: 150,
     costXP: 5,
     tag: "shop_ranger_poisonarrow",
@@ -506,8 +506,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_map",
-    name: "Sense Heading",
-    description: "(Equip & Use : Crouch + Jump ) Scans the world and lists all players with distance & direction (e.g. 140m North-East) in chat. (Cooldown: 5 mins)",
+    name: "Senso de Dire\xE7\xE3o",
+    description: "(Equipe e use: agachar + pular) Varre o mundo e lista no chat todos os jogadores com dist\xE2ncia e dire\xE7\xE3o (ex.: 140m Nordeste). (Recarga: 5 min)",
     costSouls: 100,
     costXP: 5,
     tag: "shop_ranger_map",
@@ -516,8 +516,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_arrowsunlimi",
-    name: "Fletching",
-    description: "(Passive) Automatically replenishes an arrow in your inventory if you are holding a bow and dont have any arrows.",
+    name: "Empluma\xE7\xE3o",
+    description: "(Passiva) Rep\xF5e uma flecha no invent\xE1rio quando voc\xEA segura um arco e n\xE3o tem flechas.",
     costSouls: 250,
     costXP: 5,
     tag: "shop_ranger_arrowsunlimi",
@@ -526,8 +526,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_hearts",
-    name: "Hardened Scout",
-    description: "(Passive) Grants +6 extra hearts and permanent Regeneration.",
+    name: "Batedor Endurecido",
+    description: "(Passiva) Concede +6 cora\xE7\xF5es extras e Regenera\xE7\xE3o permanente.",
     costSouls: 300,
     costXP: 5,
     tag: "shop_ranger_hearts",
@@ -536,8 +536,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_rapidarrow",
-    name: " Arrow Barrage",
-    description: "(Equip & Use : Crouch + Jump ) shoot 60 magically summoned poisoned arrows rapidly. Cooldown: 4 minutes.",
+    name: " Chuva de Flechas",
+    description: "(Equipe e use: agachar + pular) Dispara rapidamente 60 flechas envenenadas invocadas por magia. Recarga: 4 minutos.",
     costSouls: 150,
     costXP: 5,
     tag: "active_ability_ranger_rapidarrow",
@@ -546,8 +546,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_immunearrow",
-    name: "Deflect Missiles",
-    description: "(Passive) Immunity to all arrow damage.",
+    name: "Desviar Proj\xE9teis",
+    description: "(Passiva) Imunidade a todo dano de flechas.",
     costSouls: 400,
     costXP: 5,
     tag: "shop_ranger_immunearrow",
@@ -556,8 +556,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_deadarrow",
-    name: "Heavy Draw",
-    description: "(Passive) Fully charged arrow shots from the Special Ranger Bows deal double damage.",
+    name: "Puxada Pesada",
+    description: "(Passiva) Flechas totalmente carregadas dos Arcos de Patrulheiro causam dano dobrado.",
     costSouls: 200,
     costXP: 5,
     tag: "shop_ranger_deadarrow",
@@ -566,8 +566,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_aim",
-    name: "Aspect of the Owl",
-    description: "(Equip & Use : Crouch + Jump ) You gain Night Vision for 1 minute. Cooldown: 6 minutes.",
+    name: "Aspecto da Coruja",
+    description: "(Equipe e use: agachar + pular) Voc\xEA ganha Vis\xE3o Noturna por 1 minuto. Recarga: 6 minutos.",
     costSouls: 100,
     costXP: 5,
     tag: "active_ability_ranger_aim",
@@ -576,8 +576,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_archersafe",
-    name: "Hunter’s Stamina",
-    description: "(Passive) Grants permanent Resistance I. Holding a bow grants Speed II and +2 more extra hearts.",
+    name: "F\xF4lego do Ca\xE7ador",
+    description: "(Passiva) Concede Resist\xEAncia I permanente. Segurar um arco d\xE1 Velocidade II e +2 cora\xE7\xF5es extras.",
     costSouls: 300,
     costXP: 5,
     tag: "shop_ranger_archersafe",
@@ -586,8 +586,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_explosion",
-    name: "Explosive Arrows",
-    description: "(Passive) Arrows create an explosion upon impact.",
+    name: "Flechas Explosivas",
+    description: "(Passiva) As flechas explodem ao acertar.",
     costSouls: 200,
     costXP: 5,
     tag: "shop_ranger_explosion",
@@ -596,8 +596,8 @@ var RangerShopItems = [
   },
   {
     id: "ranger_armour",
-    name: "Barkskin Binding",
-    description: "(Passive) Grants Resistance II when wearing a full set of armor.",
+    name: "Amarra de Casca",
+    description: "(Passiva) Concede Resist\xEAncia II com um conjunto completo de armadura.",
     costSouls: 275,
     costXP: 5,
     tag: "shop_ranger_armour",
@@ -608,8 +608,8 @@ var RangerShopItems = [
 var AssassinShopItems = [
   {
     id: "assassin_speed",
-    name: "Nimble Stride",
-    description: "(Passive) Grants permanent Speed II at all times.",
+    name: "Passo \xC1gil",
+    description: "(Passiva) Concede Velocidade II permanente o tempo todo.",
     costSouls: 100,
     costXP: 1,
     tag: "shop_assassin_speed",
@@ -618,8 +618,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_dagger",
-    name: "Deep Laceration",
-    description: "(Passive) Every melee hit deals +3 bonus damage.",
+    name: "Lacera\xE7\xE3o Profunda",
+    description: "(Passiva) Cada golpe corpo a corpo causa +3 de dano b\xF4nus.",
     costSouls: 225,
     costXP: 5,
     tag: "shop_assassin_dagger",
@@ -628,8 +628,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_silence",
-    name: "Vanish",
-    description: "(Active) Equip & Use: Crouch + Jump. Grants Invisibility for 45s. Cooldown: 8 mins.",
+    name: "Sumir",
+    description: "(Ativo) Equipe e use: agachar + pular. Concede Invisibilidade por 45s. Recarga: 8 min.",
     costSouls: 200,
     costXP: 5,
     tag: "active_ability_assassin_vanish",
@@ -638,8 +638,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_critical",
-    name: "Surprise Attack",
-    description: "(Passive) Attacking while airborne deals +7 bonus damage. Triggers once every 2 minutes.",
+    name: "Ataque Surpresa",
+    description: "(Passiva) Atacar no ar causa +7 de dano b\xF4nus. Ativa uma vez a cada 2 minutos.",
     costSouls: 220,
     costXP: 5,
     tag: "shop_assassin_critical",
@@ -648,8 +648,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_bow",
-    name: "Assassin's Deadly Bow",
-    description: "(Passive) Receive a Power IV + Unbreaking III bow that is kept on death, automatically repaired, and restored if lost.",
+    name: "Arco Mortal do Assassino",
+    description: "(Passiva) Receba um arco com For\xE7a IV + Inquebr\xE1vel III que fica com voc\xEA ao morrer, se conserta sozinho e volta se for perdido.",
     costSouls: 200,
     costXP: 5,
     tag: "shop_assassin_bow",
@@ -658,8 +658,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_blind",
-    name: "Enervating Fade",
-    description: "(Equip & Use : Crouch + Jump ) All mobs within 15 blocks get Weakness for 20s and you get Invisibility for 20 seconds. *PvP- Players also get Darkness* (Cooldown: 5 mins)",
+    name: "Desvanecer Enfraquecedor",
+    description: "(Equipe e use: agachar + pular) Todos os mobs num raio de 15 blocos recebem Fraqueza por 20s e voc\xEA recebe Invisibilidade por 20 segundos. *PvP: jogadores tamb\xE9m recebem Escurid\xE3o* (Recarga: 5 min)",
     costSouls: 200,
     costXP: 5,
     tag: "shop_assassin_blind",
@@ -668,8 +668,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_lethal",
-    name: "Vampiric Strike",
-    description: "(Passive) Your next melee strike heals you for 5 hearts. (Cooldown: 75s)",
+    name: "Golpe Vamp\xEDrico",
+    description: "(Passiva) Seu pr\xF3ximo golpe corpo a corpo cura 5 cora\xE7\xF5es. (Recarga: 75s)",
     costSouls: 300,
     costXP: 5,
     tag: "shop_assassin_lethal",
@@ -678,8 +678,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_arrow",
-    name: "Flawless Quiver",
-    description: "(Passive) Receive 7 arrows every Minecraft day to use with the Assassin Bow.",
+    name: "Aljava Perfeita",
+    description: "(Passiva) Receba 7 flechas a cada dia do Minecraft para usar com o Arco do Assassino.",
     costSouls: 150,
     costXP: 5,
     tag: "shop_assassin_arrow",
@@ -688,8 +688,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_shadow",
-    name: "Phantom Form",
-    description: "(Equip & Use : Crouch + Jump ) Gain Invisibility, Speed II, Strength II, Resistance, and Jump Boost for 30s. Enemies within 5 blocks get Poisoned and Weakness. (Cooldown: 10 mins)",
+    name: "Forma Fantasma",
+    description: "(Equipe e use: agachar + pular) Ganhe Invisibilidade, Velocidade II, For\xE7a II, Resist\xEAncia e Super Pulo por 30s. Inimigos a at\xE9 5 blocos recebem Veneno e Fraqueza. (Recarga: 10 min)",
     costSouls: 350,
     costXP: 5,
     tag: "shop_assassin_shadow",
@@ -698,8 +698,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_poison",
-    name: "Aura of Poison",
-    description: "(Passive) Any enemy that damages you gets poisoned for 25 seconds.",
+    name: "Aura de Veneno",
+    description: "(Passiva) Qualquer inimigo que causar dano a voc\xEA fica envenenado por 25 segundos.",
     costSouls: 350,
     costXP: 5,
     tag: "shop_assassin_poison",
@@ -708,8 +708,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_hearts",
-    name: "Demon's Deal",
-    description: "(Passive) Gain +6 extra hearts and permanent Regeneration.",
+    name: "Pacto do Dem\xF4nio",
+    description: "(Passiva) Ganhe +6 cora\xE7\xF5es extras e Regenera\xE7\xE3o permanente.",
     costSouls: 500,
     costXP: 5,
     tag: "shop_assassin_hearts",
@@ -718,8 +718,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_disharm",
-    name: "Void Walker",
-    description: "(Passive) Every 5 minutes, you become invisible for 20s and are immune to all damage except fire, lava, fall, explosions, poison, and wither damage during that time.",
+    name: "Andarilho do Vazio",
+    description: "(Passiva) A cada 5 minutos voc\xEA fica invis\xEDvel por 20s e imune a todo dano, exceto fogo, lava, queda, explos\xF5es, veneno e Wither.",
     costSouls: 250,
     costXP: 5,
     tag: "shop_assassin_disharm",
@@ -728,8 +728,8 @@ var AssassinShopItems = [
   },
   {
     id: "assassin_instantkill",
-    name: "Deadly Strike",
-    description: "(Passive) Hit the same target 3 times in 5s without being hit yourself to deal 40 bonus damage. One use per mob. 60-second cooldown after triggering.",
+    name: "Golpe Mortal",
+    description: "(Passiva) Acerte o mesmo alvo 3 vezes em 5s sem ser atingido para causar 40 de dano b\xF4nus. Uma vez por mob. 60 segundos de recarga depois de ativar.",
     costSouls: 300,
     costXP: 5,
     tag: "shop_assassin_instantkill",
@@ -740,8 +740,8 @@ var AssassinShopItems = [
 var MageShopItems = [
   {
     id: "mage_staff",
-    name: "Mage Staff",
-    description: "(Active) Activate Mage Staff to receive a magical staff to cast your spells.",
+    name: "Cajado de Mago",
+    description: "(Ativo) Ative o Cajado de Mago para receber um cajado m\xE1gico e lan\xE7ar seus feiti\xE7os.",
     costSouls: 200,
     costXP: 1,
     tag: "shop_mage_staff",
@@ -750,8 +750,8 @@ var MageShopItems = [
   },
   {
     id: "mage_fireball",
-    name: "Fireball",
-    description: "(Spell) Shoots a fireball up to 10 blocks that burns enemies.",
+    name: "Bola de Fogo",
+    description: "(Feiti\xE7o) Dispara uma bola de fogo de at\xE9 10 blocos que queima os inimigos.",
     costSouls: 100,
     costXP: 5,
     tag: "spell_unlocked:fireball",
@@ -760,8 +760,8 @@ var MageShopItems = [
   },
   {
     id: "mage_frost",
-    name: "Frost Wave",
-    description: "(Spell) Deals 4 damage to all mobs in a 10-block radius, applies Slowness & Weakness, and has a 2-second cooldown.",
+    name: "Onda de Gelo",
+    description: "(Feiti\xE7o) Causa 4 de dano a todos os mobs num raio de 10 blocos, aplica Lentid\xE3o e Fraqueza e tem 2 segundos de recarga.",
     costSouls: 125,
     costXP: 5,
     tag: "spell_unlocked:frost",
@@ -770,8 +770,8 @@ var MageShopItems = [
   },
   {
     id: "mage_manashield",
-    name: "Arcane Ward",
-    description: "(Equip & Use : Crouch + Jump ) Gain Fire Protection, Absorption, Resistance III, and Regeneration.",
+    name: "Prote\xE7\xE3o Arcana",
+    description: "(Equipe e use: agachar + pular) Ganhe Prote\xE7\xE3o contra Fogo, Absor\xE7\xE3o, Resist\xEAncia III e Regenera\xE7\xE3o.",
     costSouls: 200,
     costXP: 5,
     tag: "shop_manashield",
@@ -780,8 +780,8 @@ var MageShopItems = [
   },
   {
     id: "mage_lightning",
-    name: "Lightning Blast",
-    description: "(Spell) Strikes mobs in a 10-block radius with lightning. Cooldown: 5 seconds.",
+    name: "Explos\xE3o de Raios",
+    description: "(Feiti\xE7o) Atinge com raios os mobs num raio de 10 blocos. Recarga: 5 segundos.",
     costSouls: 300,
     costXP: 5,
     tag: "spell_unlocked:lightning",
@@ -790,8 +790,8 @@ var MageShopItems = [
   },
   {
     id: "mage_hypnosis",
-    name: "Cloud of Poison",
-    description: "(Equip & Use : Crouch + Jump ) Apply Poison to nearby enemies. *PvP- Players also receive Nausea*",
+    name: "Nuvem de Veneno",
+    description: "(Equipe e use: agachar + pular) Aplica Veneno nos inimigos pr\xF3ximos. *PvP: jogadores tamb\xE9m recebem N\xE1usea*",
     costSouls: 100,
     costXP: 5,
     tag: "shop_hypnosis",
@@ -800,8 +800,8 @@ var MageShopItems = [
   },
   {
     id: "mage_ice",
-    name: "Frostbite Mastery",
-    description: "(Passive) Increases Frost damage to 12 and cast range to 20 blocks, with a 5-second cooldown.",
+    name: "Maestria do Congelamento",
+    description: "(Passiva) O dano do Gelo sobe para 12 e o alcance para 20 blocos, com 5 segundos de recarga.",
     costSouls: 230,
     costXP: 5,
     tag: "shop_ice",
@@ -810,8 +810,8 @@ var MageShopItems = [
   },
   {
     id: "mage_magicslash",
-    name: "Hellfire Eruption",
-    description: "(Equip & Use : Crouch + Jump ) to deal 20 damage and burn all mobs in a 15-block radius.",
+    name: "Erup\xE7\xE3o Infernal",
+    description: "(Equipe e use: agachar + pular) Causa 20 de dano e queima todos os mobs num raio de 15 blocos.",
     costSouls: 300,
     costXP: 5,
     tag: "shop_magicslash",
@@ -820,8 +820,8 @@ var MageShopItems = [
   },
   {
     id: "mage_mageshoot",
-    name: "Flame Mastery",
-    description: "(Passive) Fireball damage increases to 10, cast range to 20 blocks, and destroys blocks like a creeper, but adds a 2-second cooldown.",
+    name: "Maestria das Chamas",
+    description: "(Passiva) O dano da Bola de Fogo sobe para 10 e o alcance para 20 blocos, e ela quebra blocos como um creeper, mas ganha 2 segundos de recarga.",
     costSouls: 240,
     costXP: 5,
     tag: "shop_mageshoot",
@@ -830,8 +830,8 @@ var MageShopItems = [
   },
   {
     id: "mage_enchantment",
-    name: "Ethereal Library",
-    description: "(Passive) Receive one random enchanted book every Minecraft day.",
+    name: "Biblioteca Et\xE9rea",
+    description: "(Passiva) Receba um livro encantado aleat\xF3rio a cada dia do Minecraft.",
     costSouls: 500,
     costXP: 5,
     tag: "shop_enchantment",
@@ -840,8 +840,8 @@ var MageShopItems = [
   },
   {
     id: "mage_effectmage",
-    name: "Wild Magic Surge",
-    description: "(Passive) Receive a random beneficial effect for 1 minute every 6 minutes.",
+    name: "Surto de Magia Selvagem",
+    description: "(Passiva) Receba um efeito ben\xE9fico aleat\xF3rio por 1 minuto a cada 6 minutos.",
     costSouls: 400,
     costXP: 5,
     tag: "shop_effectmage",
@@ -850,8 +850,8 @@ var MageShopItems = [
   },
   {
     id: "mage_petsmage",
-    name: "Petsmage (Warden Guard)",
-    description: "(Special Ability) Unlocks the 'Summon Guard!' option in the Soul Shop to summon a loyal Warden Guard.",
+    name: "Mago das Feras (Guardi\xE3o Warden)",
+    description: "(Habilidade especial) Libera a op\xE7\xE3o 'Invocar Guardi\xE3o!' na Loja de Almas para invocar um Guardi\xE3o Warden leal.",
     costSouls: 500,
     costXP: 5,
     tag: "shop_petsmage",
@@ -860,8 +860,8 @@ var MageShopItems = [
   },
   {
     id: "mage_invisibility",
-    name: "Arcane Dissolution",
-    description: "(Spell) When selected in the Spellbook, you become permanently invisible while holding your Mage Staff.",
+    name: "Dissolu\xE7\xE3o Arcana",
+    description: "(Feiti\xE7o) Quando escolhido no Livro de Feiti\xE7os, voc\xEA fica invis\xEDvel enquanto segura o Cajado de Mago.",
     costSouls: 1000,
     costXP: 5,
     tag: "spell_unlocked:invisibility",
@@ -872,8 +872,8 @@ var MageShopItems = [
 var SurvivorShopItems = [
   {
     id: "survivor_boot",
-    name: "Wayfarer’s Pace",
-    description: "(Passive) Grants Speed I permanently while wearing boots.",
+    name: "Passo do Viajante",
+    description: "(Passiva) Concede Velocidade I permanente enquanto voc\xEA usa botas.",
     costSouls: 100,
     costXP: 1,
     tag: "shop_survivor_boot",
@@ -882,8 +882,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_map",
-    name: "Master Cartographer",
-    description: "(Equip & Use : Crouch + Jump ) Reveals exact X-Y-Z coordinates of all online players and identifies the nearest structure in chat. (Cooldown: 8 mins)",
+    name: "Mestre Cart\xF3grafo",
+    description: "(Equipe e use: agachar + pular) Mostra no chat as coordenadas X-Y-Z de todos os jogadores online e a estrutura mais pr\xF3xima. (Recarga: 8 min)",
     costSouls: 100,
     costXP: 5,
     tag: "shop_survivor_map",
@@ -892,8 +892,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_healing",
-    name: "Vagabond’s Constitution",
-    description: "(Passive) Grants +4 extra hearts and Regeneration while wearing a chestplate.",
+    name: "Constitui\xE7\xE3o do Andarilho",
+    description: "(Passiva) Concede +4 cora\xE7\xF5es extras e Regenera\xE7\xE3o enquanto voc\xEA usa um peitoral.",
     costSouls: 215,
     costXP: 5,
     tag: "shop_survivor_healing",
@@ -902,8 +902,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_thrones",
-    name: "Alchemist's Retaliation",
-    description: "(Passive) Any enemy that damages you will be poisoned for 10 seconds.",
+    name: "Retalia\xE7\xE3o do Alquimista",
+    description: "(Passiva) Qualquer inimigo que causar dano a voc\xEA fica envenenado por 10 segundos.",
     costSouls: 200,
     costXP: 5,
     tag: "shop_survivor_thrones",
@@ -912,8 +912,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_dash",
-    name: "Escape Artist",
-    description: "(Equip & Use : Crouch + Jump ) Push yourself 10 blocks forward while Dealing 5 damage to mobs near start point. Grants Invisibility and Resistance for 10s. (Cooldown: 45s)",
+    name: "Mestre da Fuga",
+    description: "(Equipe e use: agachar + pular) Avan\xE7a 10 blocos causando 5 de dano aos mobs perto do ponto de partida. Concede Invisibilidade e Resist\xEAncia por 10s. (Recarga: 45s)",
     costSouls: 180,
     costXP: 5,
     tag: "active_ability_survivor_dash",
@@ -922,8 +922,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_medkit",
-    name: "Vagabond's Constitution Mastery",
-    description: "(Passive) Upgrades extra hearts to +10 total while wearing a chestplate and with Vagabond’s Constitution unlocked. Also heals you instantly for 5 hearts every 5 minutes.",
+    name: "Maestria da Constitui\xE7\xE3o do Andarilho",
+    description: "(Passiva) Aumenta os cora\xE7\xF5es extras para +10 no total enquanto voc\xEA usa um peitoral e tem a Constitui\xE7\xE3o do Andarilho. Tamb\xE9m cura 5 cora\xE7\xF5es na hora a cada 5 minutos.",
     costSouls: 350,
     costXP: 5,
     tag: "shop_survivor_medkit",
@@ -932,8 +932,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_safety",
-    name: "Hero's Panic",
-    description: "(Equip & Use : Crouch + Jump ) Gain Resistance III, Fire Resistance, and Absorption for 30s. (Cooldown: 6m)",
+    name: "P\xE2nico do Her\xF3i",
+    description: "(Equipe e use: agachar + pular) Ganhe Resist\xEAncia III, Resist\xEAncia ao Fogo e Absor\xE7\xE3o por 30s. (Recarga: 6 min)",
     costSouls: 150,
     costXP: 5,
     tag: "active_ability_survivor_safety",
@@ -942,8 +942,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_speedboost",
-    name: "Second Wind",
-    description: "(Equip & Use : Crouch + Jump ) Gain Speed III, Jump Boost II, and Resistance II for 20s. (Cooldown: 4m)",
+    name: "Segundo F\xF4lego",
+    description: "(Equipe e use: agachar + pular) Ganhe Velocidade III, Super Pulo II e Resist\xEAncia II por 20s. (Recarga: 4 min)",
     costSouls: 100,
     costXP: 5,
     tag: "active_ability_survivor_speedboost",
@@ -952,8 +952,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_hide",
-    name: "Camouflage",
-    description: "(Equip & Use : Crouch + Jump ) Gain 60 seconds of complete Invisibility. (Cooldown: 5m)",
+    name: "Camuflagem",
+    description: "(Equipe e use: agachar + pular) Ganhe 60 segundos de Invisibilidade completa. (Recarga: 5 min)",
     costSouls: 280,
     costXP: 5,
     tag: "active_ability_survivor_hide",
@@ -962,8 +962,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_backup",
-    name: "Adventure's Reserve",
-    description: "(Passive) Receive food and crafting supplies every full minecraft day, an enchanted apple if also given every 5 days.",
+    name: "Reserva do Aventureiro",
+    description: "(Passiva) Receba comida e materiais a cada dia completo do Minecraft, e uma ma\xE7\xE3 encantada a cada 5 dias.",
     costSouls: 425,
     costXP: 5,
     tag: "shop_survivor_backup",
@@ -972,8 +972,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_effect",
-    name: "Potion Guzzler",
-    description: "(Passive) Randomly gives a beneficial effect for 1 minute, every 6 minutes.",
+    name: "Bebedor de Po\xE7\xF5es",
+    description: "(Passiva) D\xE1 um efeito ben\xE9fico aleat\xF3rio por 1 minuto, a cada 6 minutos.",
     costSouls: 450,
     costXP: 5,
     tag: "shop_survivor_effect",
@@ -982,8 +982,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_vision",
-    name: "Nocturnal Adaptation",
-    description: "(Passive) Grants permanent Night Vision.",
+    name: "Adapta\xE7\xE3o Noturna",
+    description: "(Passiva) Concede Vis\xE3o Noturna permanente.",
     costSouls: 500,
     costXP: 5,
     tag: "shop_survivor_vision",
@@ -992,8 +992,8 @@ var SurvivorShopItems = [
   },
   {
     id: "survivor_lock",
-    name: "Makeshift Shelter",
-    description: "(Equip & Use : Crouch + Jump ) Create a permanent cobblestone emergency shelter with a crafting table and furnace. (Cooldown: 5m)",
+    name: "Abrigo Improvisado",
+    description: "(Equipe e use: agachar + pular) Cria um abrigo de emerg\xEAncia permanente de pedregulho, com mesa de trabalho e fornalha. (Recarga: 5 min)",
     costSouls: 600,
     costXP: 5,
     tag: "active_ability_survivor_lock",
@@ -1005,14 +1005,14 @@ var AllShopItems = [...WarriorShopItems, ...RangerShopItems, ...AssassinShopItem
 function showSoulShopUI(player) {
   const classObj = world3.scoreboard.getObjective("class");
   const classId = classObj?.getScore(player) ?? 0;
-  const form = new ActionFormData().title("Soul Shop").body("Welcome to the Soul Shop! Choose a category:");
-  form.button("Active Abilities");
-  form.button("Passive Abilities");
+  const form = new ActionFormData().title("Loja de Almas").body("Bem-vindo \xE0 Loja de Almas! Escolha uma categoria:");
+  form.button("Habilidades Ativas");
+  form.button("Habilidades Passivas");
   const hasPetsmage = classId === 3 && player.hasTag("shop_petsmage");
   if (hasPetsmage) {
-    form.button("\xA75✨ Summon Guard! ✨\xA7r");
+    form.button("\xA75\u2728 Invocar Guardi\xE3o! \u2728\xA7r");
   }
-  form.button("Close");
+  form.button("Fechar");
   form.show(player).then((response) => {
     if (response.canceled || response.selection === void 0) return;
     if (response.selection === 0) {
@@ -1028,11 +1028,11 @@ function showSoulShopUI(player) {
 function showSummonGuardUI(player) {
   const isSitting = player.hasTag("warden_sitting");
   const form = new ActionFormData()
-    .title("\xA75Warden Guard Control\xA7r")
-    .body("Manage your loyal Warden Guard:\n\nStatus: " + (isSitting ? "\xA7eSITTING (Stationary)\xA7r" : "\xA7aSTANDING & GUARDING\xA7r"))
-    .button("✨ Summon / Recall Warden Guard")
-    .button(isSitting ? "🟢 Order Warden to STAND" : "🟡 Order Warden to SIT")
-    .button("Back");
+    .title("\xA75Controle do Guardi\xE3o Warden\xA7r")
+    .body("Controle o seu Guardi\xE3o Warden leal:\n\nEstado: " + (isSitting ? "\xA7eSENTADO (parado)\xA7r" : "\xA7aDE P\xC9 E PROTEGENDO\xA7r"))
+    .button("\u2728 Invocar / Chamar de volta o Guardi\xE3o Warden")
+    .button(isSitting ? "🟢 Mandar o Warden LEVANTAR" : "🟡 Mandar o Warden SENTAR")
+    .button("Voltar");
 
   form.show(player).then((res) => {
     if (res.canceled || res.selection === void 0) return;
@@ -1041,10 +1041,10 @@ function showSummonGuardUI(player) {
     } else if (res.selection === 1) {
       if (isSitting) {
         player.removeTag("warden_sitting");
-        player.sendMessage("\xA75[Warden Guard]\xA7a Your Warden Guard is now STANDING and guarding you!\xA7r");
+        player.sendMessage("\xA75[Guardi\xE3o Warden]\xA7a Seu Guardi\xE3o Warden agora est\xE1 DE P\xC9 e protegendo voc\xEA!\xA7r");
       } else {
         player.addTag("warden_sitting");
-        player.sendMessage("\xA75[Warden Guard]\xA7e Your Warden Guard is now SITTING. It will stay in place and not attack.\xA7r");
+        player.sendMessage("\xA75[Guardi\xE3o Warden]\xA7e Seu Guardi\xE3o Warden agora est\xE1 SENTADO. Ele fica parado e n\xE3o ataca.\xA7r");
       }
     } else if (res.selection === 2) {
       showSoulShopUI(player);
@@ -1060,7 +1060,7 @@ function handleSummonOrRecallWarden(player) {
   if (rem > 0) {
     const mcDays = (rem / 24000).toFixed(1);
     const realMins = (rem / 1200).toFixed(1);
-    player.sendMessage(`\xA7c[Warden Guard]\xA74 Your Warden Guard was killed! You can summon a new guard in ${mcDays} MC days (${realMins} mins).\xA7r`);
+    player.sendMessage(`\xA7c[Guardi\xE3o Warden]\xA74 Seu Guardi\xE3o Warden foi morto! Voc\xEA pode invocar outro em ${mcDays} dias do Minecraft (${realMins} min).\xA7r`);
     return;
   }
 
@@ -1081,11 +1081,11 @@ function handleSummonOrRecallWarden(player) {
       player.dimension.spawnParticle("minecraft:sculk_soul_particle", player.location);
       player.playSound("mob.warden.emerge");
     } catch (_) {}
-    player.sendMessage("\xA75[Warden Guard]\xA7a Recalled your Warden Guard directly to your position!\xA7r");
+    player.sendMessage("\xA75[Guardi\xE3o Warden]\xA7a Seu Guardi\xE3o Warden foi chamado at\xE9 voc\xEA!\xA7r");
     return;
   }
 
-  player.sendMessage("\xA75[Ritual]\xA7e Performing 5-second ritual to summon your Warden Guard...\xA7r");
+  player.sendMessage("\xA75[Ritual]\xA7e Realizando um ritual de 5 segundos para invocar seu Guardi\xE3o Warden...\xA7r");
   
   let ticksLeft = 100;
   const intervalId = system8.runInterval(() => {
@@ -1106,12 +1106,12 @@ function handleSummonOrRecallWarden(player) {
         const warden = player.dimension.spawnEntity("minecraft:warden", player.location);
         warden.addTag("warden_guard");
         warden.addTag(ownerTag);
-        warden.nameTag = `\xA75${player.name}'s Warden Guard\xA7r`;
+        warden.nameTag = `\xA75Guardi\xE3o Warden de ${player.name}\xA7r`;
         try {
           player.playSound("mob.warden.emerge");
           player.dimension.spawnParticle("minecraft:sonic_explosion", player.location);
         } catch (_) {}
-        player.sendMessage("\xA75[Warden Guard]\xA7a Your Warden Guard has risen to protect you!\xA7r");
+        player.sendMessage("\xA75[Guardi\xE3o Warden]\xA7a Seu Guardi\xE3o Warden se ergueu para proteger voc\xEA!\xA7r");
       }
     }
   }, 10);
@@ -1137,12 +1137,10 @@ function showActiveAbilitiesUI(player) {
   const rpgLevel = levelObj ? levelObj.getScore(player) ?? 1 : 1;
   const shopItems = getShopItemsForClass(classId).filter((i) => i.isActiveAbility);
   const visibleItems = shopItems.filter((i) => !i.requiresTag || player.hasTag(i.requiresTag));
-  const form = new ActionFormData().title("Active Abilities").body(`Purchase and Equip active abilities.
-Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
-`);
+  const form = new ActionFormData().title("Habilidades Ativas").body(`Compre e equipe habilidades ativas.\nAlmas: \xA7c${currentSouls}\xA7r | N\xEDvel de XP: \xA7a${player.level}\xA7r\n`);
   if (visibleItems.length === 0) {
-    form.body("\xA7cThere are currently no active abilities available for your class.");
-    form.button("\xA7cBack");
+    form.body("\xA7cAinda n\xE3o h\xE1 habilidades ativas para a sua classe.");
+    form.button("\xA7cVoltar");
     form.show(player).then(() => showSoulShopUI(player)).catch(e => {});
     return;
   }
@@ -1150,16 +1148,14 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
     const hasPurchased = player.hasTag(item.tag);
     const isEquipped = player.hasTag(`equipped_${item.tag}`);
     if (isEquipped) {
-      form.button(`\xA7a[Equipped] ${item.name}`);
+      form.button(`\xA7a[Equipado] ${item.name}`);
     } else if (hasPurchased) {
-      form.button(`\xA78[Owned] ${item.name}
-\xA7eClick to Equip`);
+      form.button(`\xA78[Comprado] ${item.name}\n\xA7eToque para equipar`);
     } else {
-      form.button(`\xA7b${item.name}
-\xA78${item.costSouls} Souls | ${item.costXP} XP`);
+      form.button(`\xA7b${item.name}\n\xA78${item.costSouls} Almas | ${item.costXP} XP`);
     }
   }
-  form.button("\xA7cBack");
+  form.button("\xA7cVoltar");
   form.show(player).then((response) => {
     if (response.canceled) return;
     if (response.selection === visibleItems.length) {
@@ -1171,16 +1167,16 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
     if (hasPurchased) {
       const isEquipped = player.hasTag(`equipped_${selectedItem.tag}`);
       if (isEquipped) {
-        player.sendMessage("\xA7cThis ability is already equipped!");
+        player.sendMessage("\xA7cEssa habilidade j\xE1 est\xE1 equipada!");
       } else {
         for (const item of shopItems) {
           player.removeTag(`equipped_${item.tag}`);
         }
         player.addTag(`equipped_${selectedItem.tag}`);
-        player.sendMessage(`\xA7aSuccessfully equipped: \xA7e${selectedItem.name}`);
+        player.sendMessage(`\xA7aEquipado: \xA7e${selectedItem.name}`);
         player.playSound("armor.equip_iron");
         if (selectedItem.tag !== "shop_mage_staff") {
-          player.sendMessage(ABILITY_USAGE_MESSAGES[selectedItem.tag] || `\xA7eTo use ${selectedItem.name}, crouch and then jump! Make sure to manage your cooldown.\xA7r`);
+          player.sendMessage(ABILITY_USAGE_MESSAGES[selectedItem.tag] || `\xA7ePara usar ${selectedItem.name}, agache e depois pule! Fique de olho na recarga.\xA7r`);
         }
       }
       return;
@@ -1191,8 +1187,8 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
       if (selectedItem.tag === "shop_assassin_bow") {
         player.addTag(selectedItem.tag);
         giveAssassinBow(player);
-        player.sendMessage(`\xA7aSuccessfully purchased: \xA7e${selectedItem.name}`);
-        player.sendMessage("\xA7a[System] Your Assassin's Deadly Bow is locked to your inventory, automatically repaired, and restored if lost.");
+        player.sendMessage(`\xA7aComprado: \xA7e${selectedItem.name}`);
+        player.sendMessage("\xA7a[Sistema] O seu Arco Mortal do Assassino fica travado no invent\xE1rio, se conserta sozinho e volta se for perdido.");
       } else if (selectedItem.tag === "shop_mage_staff") {
         const eqComp = player.getComponent("minecraft:inventory");
         if (eqComp) {
@@ -1215,12 +1211,12 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
           giveOrDropItem(player, staff);
         }
         player.addTag(selectedItem.tag);
-        player.sendMessage(`\xA7aSuccessfully purchased: \xA7eMage Staff`);
+        player.sendMessage(`\xA7aComprado: \xA7eCajado de Mago`);
 
       } else {
         player.addTag(selectedItem.tag);
-        player.sendMessage(`\xA7aSuccessfully purchased: \xA7e${selectedItem.name}`);
-        player.sendMessage(`\xA7bUsage: \xA7f${selectedItem.description.replace(/^Passive: |^Active: /g, "")}`);
+        player.sendMessage(`\xA7aComprado: \xA7e${selectedItem.name}`);
+        player.sendMessage(`\xA7bUso: \xA7f${selectedItem.description.replace(/^Passive: |^Active: /g, "")}`);
         if (selectedItem.isActiveAbility) {
           const allShopItems = getShopItemsForClass(classObj.getScore(player) ?? 0);
           for (const item of allShopItems) {
@@ -1229,12 +1225,12 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
             }
           }
           player.addTag(`equipped_${selectedItem.tag}`);
-          player.sendMessage(`\xA7aAuto-equipped active ability: \xA7e${selectedItem.name}`);
+          player.sendMessage(`\xA7aHabilidade ativa equipada sozinha: \xA7e${selectedItem.name}`);
         }
       }
       player.playSound("random.levelup");
     } else {
-      player.sendMessage(`\xA7cNot enough resources! You need ${selectedItem.costSouls} Souls and ${selectedItem.costXP} XP Levels.`);
+      player.sendMessage(`\xA7cRecursos insuficientes! Voc\xEA precisa de ${selectedItem.costSouls} Almas e ${selectedItem.costXP} n\xEDveis de XP.`);
       player.playSound("note.bass");
     }
   }).catch(e => {});
@@ -1248,12 +1244,10 @@ function showBuyBuffsUI(player) {
   const levelObj = world3.scoreboard.getObjective("level");
   const rpgLevel = levelObj ? levelObj.getScore(player) ?? 1 : 1;
   const shopItems = getShopItemsForClass(classId).filter((i) => !i.isActiveAbility && (!i.requiresTag || player.hasTag(i.requiresTag)));
-  const form = new ActionFormData().title("Passive Abilities").body(`Purchase new passive abilities specific to your class.
-Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
-`);
+  const form = new ActionFormData().title("Habilidades Passivas").body(`Compre habilidades passivas da sua classe.\nAlmas: \xA7c${currentSouls}\xA7r | N\xEDvel de XP: \xA7a${player.level}\xA7r\n`);
   if (shopItems.length === 0) {
-    form.body("\xA7cThere are currently no base items available for your class.");
-    form.button("\xA7cBack");
+    form.body("\xA7cAinda n\xE3o h\xE1 itens b\xE1sicos para a sua classe.");
+    form.button("\xA7cVoltar");
     form.show(player).then(() => showSoulShopUI(player)).catch(e => {});
     return;
   }
@@ -1261,16 +1255,14 @@ Souls: \xA7c${currentSouls}\xA7r | XP Level: \xA7a${player.level}\xA7r
     const hasPurchased = player.hasTag(item.tag);
     const locked = item.unlockLevel && rpgLevel < item.unlockLevel;
     if (hasPurchased) {
-      form.button(`\xA78[Owned] ${item.name}`);
+      form.button(`\xA78[Comprado] ${item.name}`);
     } else if (locked) {
-      form.button(`\xA78[Locked - Lv ${item.unlockLevel}]
-${item.name}`);
+      form.button(`\xA78[Bloqueado - Nv ${item.unlockLevel}]\n${item.name}`);
     } else {
-      form.button(`\xA72${item.name}
-\xA78${item.costSouls} Souls | ${item.costXP} XP`);
+      form.button(`\xA72${item.name}\n\xA78${item.costSouls} Almas | ${item.costXP} XP`);
     }
   }
-  form.button("\xA7cBack");
+  form.button("\xA7cVoltar");
   form.show(player).then((response) => {
     if (response.canceled) return;
     if (response.selection === shopItems.length) {
@@ -1282,16 +1274,16 @@ ${item.name}`);
       const offTag = `${selectedItem.tag}_off`;
       if (player.hasTag(offTag)) {
         player.removeTag(offTag);
-        player.sendMessage(`\xA7aEnabled passive ability: \xA7e${selectedItem.name}`);
+        player.sendMessage(`\xA7aHabilidade passiva ligada: \xA7e${selectedItem.name}`);
       } else {
         player.addTag(offTag);
-        player.sendMessage(`\xA7cDisabled passive ability: \xA7e${selectedItem.name}`);
+        player.sendMessage(`\xA7cHabilidade passiva desligada: \xA7e${selectedItem.name}`);
       }
       player.playSound("random.orb");
       return;
     }
     if (selectedItem.unlockLevel && rpgLevel < selectedItem.unlockLevel) {
-      player.sendMessage(`\xA7cThis ability unlocks at RPG Level ${selectedItem.unlockLevel}!`);
+      player.sendMessage(`\xA7cEssa habilidade libera no n\xEDvel ${selectedItem.unlockLevel} do RPG!`);
       return;
     }
     if (currentSouls >= selectedItem.costSouls && player.level >= selectedItem.costXP) {
@@ -1300,17 +1292,17 @@ ${item.name}`);
       if (selectedItem.tag === "shop_assassin_bow") {
         player.addTag(selectedItem.tag);
         giveAssassinBow(player);
-        player.sendMessage(`\xA7aSuccessfully purchased: \xA7e${selectedItem.name}`);
-        player.sendMessage("\xA7a[System] Your Assassin's Deadly Bow is locked to your inventory, automatically repaired, and restored if lost.");
+        player.sendMessage(`\xA7aComprado: \xA7e${selectedItem.name}`);
+        player.sendMessage("\xA7a[Sistema] O seu Arco Mortal do Assassino fica travado no invent\xE1rio, se conserta sozinho e volta se for perdido.");
       } else {
         player.addTag(selectedItem.tag);
         grantTimedSkillRewardImmediately(player, selectedItem.tag);
-        player.sendMessage(`\xA7aSuccessfully purchased: \xA7e${selectedItem.name}`);
-        player.sendMessage(`\xA7bUsage: \xA7f${selectedItem.description.replace(/^Passive: |^Active: /g, "")}`);
+        player.sendMessage(`\xA7aComprado: \xA7e${selectedItem.name}`);
+        player.sendMessage(`\xA7bUso: \xA7f${selectedItem.description.replace(/^Passive: |^Active: /g, "")}`);
       }
       player.playSound("random.levelup");
     } else {
-      player.sendMessage(`\xA7cNot enough resources! You need ${selectedItem.costSouls} Souls and ${selectedItem.costXP} XP Levels.`);
+      player.sendMessage(`\xA7cRecursos insuficientes! Voc\xEA precisa de ${selectedItem.costSouls} Almas e ${selectedItem.costXP} n\xEDveis de XP.`);
       player.playSound("note.bass");
     }
   }).catch(e => {});
@@ -1352,7 +1344,7 @@ function levelUp(player, newLevel, classId) {
   const levelObj = world4.scoreboard.getObjective("level");
   if (!levelObj) return;
   levelObj.setScore(player, newLevel);
-  player.sendMessage(`\xA7a\xA7lLEVEL UP! \xA7r\xA7aYou are now RPG Level \xA7e${newLevel}\xA7a!`);
+  player.sendMessage(`\xA7a\xA7lSUBIU DE N\xCDVEL! \xA7r\xA7aAgora voc\xEA \xE9 n\xEDvel \xA7e${newLevel}\xA7a no RPG!`);
   let earnedPerks = 1;
   if (newLevel <= 7) {
     earnedPerks = 1;
@@ -1361,7 +1353,7 @@ function levelUp(player, newLevel, classId) {
   } else {
     earnedPerks = 2;
   }
-  player.sendMessage(`\xA7b[Skill Tree] \xA7fYou earned \xA7e+${earnedPerks} Perk Point(s)\xA7f! Open your Skill Tree to spend it.`);
+  player.sendMessage(`\xA7b[\xC1rvore de Habilidades] \xA7fVoc\xEA ganhou \xA7e+${earnedPerks} ponto(s) de vantagem\xA7f! Abra a \xC1rvore de Habilidades para gastar.`);
   player.playSound("random.levelup");
   const shopItems = getShopItemsForClass(classId);
   let unlockedItems = [];
@@ -1371,7 +1363,7 @@ function levelUp(player, newLevel, classId) {
     }
   }
   if (unlockedItems.length > 0) {
-    player.sendMessage(`\xA7d[Soul Shop] \xA7fNew abilities unlocked: \xA7e${unlockedItems.join(", ")}`);
+    player.sendMessage(`\xA7d[Loja de Almas] \xA7fNovas habilidades desbloqueadas: \xA7e${unlockedItems.join(", ")}`);
   }
   applyBuffs(player, newLevel, classId);
 }
@@ -1407,7 +1399,7 @@ function giveItem(player, typeId, amount = 1, enchants, keepAndLock = false) {
     }
     giveOrDropItem(player, item);
   } catch (e) {
-    player.sendMessage("\xA7cError giving item: " + typeId);
+    player.sendMessage("\xA7cErro ao dar o item: " + typeId);
   }
 }
 function applyTempEffect(player, effectId, durationTicks, amplifier) {
@@ -1422,119 +1414,119 @@ var unbreaking1 = { unbreaking: 1 };
 var CLASS_LEVEL_REWARDS = {
   // Class 1: Warrior
   1: {
-    1: { items: [["minecraft:wooden_sword"], ["minecraft:leather_chestplate"]], msg: "\xA7e[System] Granted starter gear!" },
-    2: { effects: [["speed", min2, 0], ["strength", min2, 0]], msg: "\xA7e[System] Temporary boosts granted for 2 minutes!" },
-    3: { items: [["minecraft:chainmail_chestplate"], ["minecraft:stone_sword", 2]], msg: "\xA7e[System] Granted new gear!" },
-    4: { msg: "\xA7e[System] You reached Level 4!" },
-    5: { items: [["minecraft:iron_chestplate"], ["minecraft:iron_sword"], ["minecraft:iron_axe"]], msg: "\xA7a[Rank Up] \xA7eNewbie to Big One! Iron gear granted." },
-    6: { items: [["minecraft:iron_sword"]], msg: "\xA7e[System] You received the Iron Broadsword!" },
-    7: { msg: "\xA7e[System] You reached Level 7!" },
-    8: { items: [["minecraft:iron_helmet", 1, unbreaking1], ["minecraft:iron_chestplate", 1, unbreaking1], ["minecraft:iron_leggings", 1, unbreaking1], ["minecraft:iron_boots", 1, unbreaking1], ["minecraft:iron_sword", 1, { sharpness: 3 }]], msg: "\xA7e[System] Granted Enchanted Iron gear!" },
-    9: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[System] Level 9 Boosts granted!" },
-    10: { items: [["minecraft:diamond_chestplate", 1, { unbreaking: 3 }], ["minecraft:diamond_sword"]], msg: "\xA7a[Rank Up] \xA7eGranted Diamond gear!" },
-    11: { items: [["minecraft:diamond_sword", 1, { sharpness: 4 }]], effects: [["strength", min10, 2], ["speed", min10, 1], ["resistance", min10, 1], ["health_boost", min10, 4]], msg: "\xA7e[System] Granted powerful sword and 10min boosts!" },
-    12: { items: [["minecraft:iron_axe"], ["minecraft:diamond_chestplate", 1, { protection: 4, unbreaking: 3, thorns: 3, mending: 1 }]], msg: "\xA7e[System] Granted Master Diamond Chestplate and Steel Waraxe!" },
-    13: { items: [["minecraft:diamond_sword", 1, { sharpness: 5, looting: 3, unbreaking: 3, mending: 1, fire_aspect: 2 }]], effects: [["strength", min10, 1]], msg: "\xA7e[System] Granted Master Diamond Sword!" },
-    14: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[System] Rank Up Boosts granted!" },
-    15: { msg: "\xA7e[System] You reached Level 15!" },
-    16: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[System] Granted Dragonbone Greatsword!" },
-    17: { items: [["minecraft:netherite_ingot", 3]], effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[System] Granted Netherite and 30min boosts!" },
-    18: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["fire_resistance", min2, 0]], msg: "\xA7e[System] Rank Up Boosts granted!" },
-    20: { msg: "\xA7e[System] Maximum level reached! Congratulations, Warrior!" },
+    1: { items: [["minecraft:wooden_sword"], ["minecraft:leather_chestplate"]], msg: "\xA7e[Sistema] Equipamento inicial recebido!" },
+    2: { effects: [["speed", min2, 0], ["strength", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 2 minutos!" },
+    3: { items: [["minecraft:chainmail_chestplate"], ["minecraft:stone_sword", 2]], msg: "\xA7e[Sistema] Equipamento novo recebido!" },
+    4: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 4!" },
+    5: { items: [["minecraft:iron_chestplate"], ["minecraft:iron_sword"], ["minecraft:iron_axe"]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eDe novato a grand\xE3o! Voc\xEA ganhou equipamento de ferro." },
+    6: { items: [["minecraft:iron_sword"]], msg: "\xA7e[Sistema] Voc\xEA recebeu o Espad\xE3o de Ferro!" },
+    7: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 7!" },
+    8: { items: [["minecraft:iron_helmet", 1, unbreaking1], ["minecraft:iron_chestplate", 1, unbreaking1], ["minecraft:iron_leggings", 1, unbreaking1], ["minecraft:iron_boots", 1, unbreaking1], ["minecraft:iron_sword", 1, { sharpness: 3 }]], msg: "\xA7e[Sistema] Equipamento de Ferro Encantado recebido!" },
+    9: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus do N\xEDvel 9 concedidos!" },
+    10: { items: [["minecraft:diamond_chestplate", 1, { unbreaking: 3 }], ["minecraft:diamond_sword"]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou equipamento de diamante!" },
+    11: { items: [["minecraft:diamond_sword", 1, { sharpness: 4 }]], effects: [["strength", min10, 2], ["speed", min10, 1], ["resistance", min10, 1], ["health_boost", min10, 4]], msg: "\xA7e[Sistema] Espada poderosa e b\xF4nus de 10 min recebidos!" },
+    12: { items: [["minecraft:iron_axe"], ["minecraft:diamond_chestplate", 1, { protection: 4, unbreaking: 3, thorns: 3, mending: 1 }]], msg: "\xA7e[Sistema] Peitoral de Diamante Mestre e Machado de Guerra de A\xE7o recebidos!" },
+    13: { items: [["minecraft:diamond_sword", 1, { sharpness: 5, looting: 3, unbreaking: 3, mending: 1, fire_aspect: 2 }]], effects: [["strength", min10, 1]], msg: "\xA7e[Sistema] Espada de Diamante Mestre recebida!" },
+    14: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus de promo\xE7\xE3o concedidos!" },
+    15: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 15!" },
+    16: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[Sistema] Montante de Osso de Drag\xE3o recebido!" },
+    17: { items: [["minecraft:netherite_ingot", 3]], effects: [["resistance", min30, 1], ["strength", min30, 1], ["health_boost", min30, 2], ["fire_resistance", min2, 0]], msg: "\xA7e[Sistema] Netherite e b\xF4nus de 30 min recebidos!" },
+    18: { effects: [["resistance", min30, 1], ["strength", min30, 1], ["fire_resistance", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus de promo\xE7\xE3o concedidos!" },
+    20: { msg: "\xA7e[Sistema] N\xEDvel m\xE1ximo alcan\xE7ado! Parab\xE9ns, Guerreiro!" },
   },
   // Class 2: Ranger
   2: {
-    1: { items: [["minecraft:arrow", 32], ["minecraft:leather_helmet"], ["minecraft:leather_chestplate"]], bow: 1, msg: "\xA7e[System] Granted Ranger starter gear! \xA76Ranger Bow\xA7e locked to inventory." },
-    2: { effects: [["speed", min2, 1]], msg: "\xA7e[System] Temporary boosts granted for 2 minutes!" },
-    3: { items: [["minecraft:arrow", 64]], msg: "\xA7e[System] Granted arrows!" },
-    4: { msg: "\xA7e[System] You reached Level 4!" },
-    5: { items: [["minecraft:chainmail_helmet"], ["minecraft:chainmail_chestplate"], ["minecraft:chainmail_leggings"], ["minecraft:chainmail_boots"]], msg: "\xA7a[Rank Up] \xA7eGranted Chainmail gear." },
-    6: { items: [["minecraft:bow"], ["minecraft:bow", 1, { power: 1 }], ["minecraft:arrow", 64]], msg: "\xA7e[System] Granted Enchanted Bow and Hunter's Longbow!" },
-    7: { bow: 7, msg: "\xA7e[System] \xA76Ranger Bow upgraded to Power IV!" },
-    8: { items: [["minecraft:iron_helmet"], ["minecraft:iron_chestplate"], ["minecraft:iron_leggings"], ["minecraft:iron_boots"]], msg: "\xA7e[System] Granted Iron armor!" },
-    9: { items: [["minecraft:bow", 1, { power: 2, punch: 1 }], ["minecraft:arrow", 64]], msg: "\xA7e[System] Granted Power II Bow!" },
-    10: { items: [["minecraft:crossbow"], ["minecraft:arrow", 64]], effects: [["speed", min10, 2]], msg: "\xA7a[Rank Up] \xA7eGranted Crossbow!" },
-    11: { items: [["minecraft:crossbow", 1, { quick_charge: 2, piercing: 2 }]], msg: "\xA7e[System] Granted Enchanted Crossbow!" },
-    12: { items: [["minecraft:crossbow"], ["minecraft:diamond_helmet", 1, { unbreaking: 2 }], ["minecraft:diamond_boots", 1, { unbreaking: 2 }]], msg: "\xA7e[System] Granted Diamond armor and Phantom Crossbow!" },
-    13: { items: [["minecraft:crossbow", 1, { quick_charge: 3, multishot: 1, unbreaking: 3 }]], msg: "\xA7e[System] Granted Master Crossbow!" },
-    14: { effects: [["speed", min30, 2], ["jump_boost", min30, 1]], msg: "\xA7e[System] Rank Up Boosts granted!" },
-    15: { bow: 15, msg: "\xA7e[System] \xA76Ranger Bow upgraded to MAX (Power V + Flame + Infinity)!" },
-    16: { items: [["minecraft:bow"], ["minecraft:bow", 1, { power: 5, flame: 1, unbreaking: 3, infinity: 1 }], ["minecraft:arrow", 1]], msg: "\xA7e[System] Granted Master Bow and Stormcaller Bow!" },
-    17: { effects: [["strength", min30, 1], ["regeneration", min30, 0]], msg: "\xA7e[System] 30min Boosts granted!" },
-    18: { msg: "\xA7e[System] You reached Level 18!" },
-    20: { msg: "\xA7e[System] Maximum level reached! Congratulations, Ranger!" },
+    1: { items: [["minecraft:arrow", 32], ["minecraft:leather_helmet"], ["minecraft:leather_chestplate"]], bow: 1, msg: "\xA7e[Sistema] Equipamento inicial de Patrulheiro recebido! \xA76Arco do Patrulheiro\xA7e preso ao invent\xE1rio." },
+    2: { effects: [["speed", min2, 1]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 2 minutos!" },
+    3: { items: [["minecraft:arrow", 64]], msg: "\xA7e[Sistema] Flechas recebidas!" },
+    4: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 4!" },
+    5: { items: [["minecraft:chainmail_helmet"], ["minecraft:chainmail_chestplate"], ["minecraft:chainmail_leggings"], ["minecraft:chainmail_boots"]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou equipamento de malha." },
+    6: { items: [["minecraft:bow"], ["minecraft:bow", 1, { power: 1 }], ["minecraft:arrow", 64]], msg: "\xA7e[Sistema] Arco Encantado e Arco Longo do Ca\xE7ador recebidos!" },
+    7: { bow: 7, msg: "\xA7e[Sistema] \xA76Arco do Patrulheiro melhorado para For\xE7a IV!" },
+    8: { items: [["minecraft:iron_helmet"], ["minecraft:iron_chestplate"], ["minecraft:iron_leggings"], ["minecraft:iron_boots"]], msg: "\xA7e[Sistema] Armadura de Ferro recebida!" },
+    9: { items: [["minecraft:bow", 1, { power: 2, punch: 1 }], ["minecraft:arrow", 64]], msg: "\xA7e[Sistema] Arco com For\xE7a II recebido!" },
+    10: { items: [["minecraft:crossbow"], ["minecraft:arrow", 64]], effects: [["speed", min10, 2]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou uma besta!" },
+    11: { items: [["minecraft:crossbow", 1, { quick_charge: 2, piercing: 2 }]], msg: "\xA7e[Sistema] Besta Encantada recebida!" },
+    12: { items: [["minecraft:crossbow"], ["minecraft:diamond_helmet", 1, { unbreaking: 2 }], ["minecraft:diamond_boots", 1, { unbreaking: 2 }]], msg: "\xA7e[Sistema] Armadura de Diamante e Besta Fantasma recebidas!" },
+    13: { items: [["minecraft:crossbow", 1, { quick_charge: 3, multishot: 1, unbreaking: 3 }]], msg: "\xA7e[Sistema] Besta Mestre recebida!" },
+    14: { effects: [["speed", min30, 2], ["jump_boost", min30, 1]], msg: "\xA7e[Sistema] B\xF4nus de promo\xE7\xE3o concedidos!" },
+    15: { bow: 15, msg: "\xA7e[Sistema] \xA76Arco do Patrulheiro melhorado ao M\xC1XIMO (For\xE7a V + Chama + Infinidade)!" },
+    16: { items: [["minecraft:bow"], ["minecraft:bow", 1, { power: 5, flame: 1, unbreaking: 3, infinity: 1 }], ["minecraft:arrow", 1]], msg: "\xA7e[Sistema] Arco Mestre e Arco Chama-Tempestades recebidos!" },
+    17: { effects: [["strength", min30, 1], ["regeneration", min30, 0]], msg: "\xA7e[Sistema] B\xF4nus de 30 min concedidos!" },
+    18: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 18!" },
+    20: { msg: "\xA7e[Sistema] N\xEDvel m\xE1ximo alcan\xE7ado! Parab\xE9ns, Patrulheiro!" },
   },
   // Class 3: Mage
   3: {
     1: { items: [["minecraft:leather_helmet"], ["minecraft:leather_chestplate"]] },
-    2: { effects: [["speed", min2, 0]], msg: "\xA7e[System] Temporary boosts granted for 2 minutes!" },
-    3: { msg: "\xA7e[System] You reached Level 3!" },
-    4: { items: [["minecraft:chainmail_helmet"], ["minecraft:chainmail_chestplate"], ["minecraft:chainmail_leggings"], ["minecraft:chainmail_boots"]], msg: "\xA7e[System] Granted Chainmail armor." },
-    5: { msg: "\xA7a[Rank Up] \xA7eSpell unlocked: \xA7bIce Spike\xA7e!" },
-    6: { effects: [["speed", min30, 1], ["regeneration", min30, 0]], msg: "\xA7e[System] Temporary boosts granted for 30 minutes!" },
-    7: { msg: "\xA7e[System] You reached Level 7!" },
-    8: { items: [["minecraft:iron_helmet", 1, { protection: 1 }], ["minecraft:iron_boots", 1, { protection: 1 }]], msg: "\xA7e[System] Granted Enchanted Iron armor!" },
-    9: { msg: "\xA7e[System] You reached Level 9!" },
-    10: { items: [["minecraft:diamond_helmet"], ["minecraft:diamond_boots"]], msg: "\xA7e[System] Granted Diamond armor and Poison Cloud spell!" },
-    11: { effects: [["speed", min10, 2], ["regeneration", min10, 1]], msg: "\xA7e[System] Granted 10min boosts!" },
-    12: { msg: "\xA7e[System] You reached Level 12!" },
-    13: { msg: "\xA7e[System] You reached Level 13!" },
-    14: { effects: [["speed", min30, 2], ["resistance", min30, 1]], msg: "\xA7e[System] Rank Up Boosts granted!" },
-    15: { msg: "\xA7e[System] Lightning Strike spell unlocked!" },
-    16: { items: [["minecraft:netherite_ingot", 2]], msg: "\xA7e[System] Granted Netherite!" },
-    17: { msg: "\xA7e[System] You reached Level 17!" },
-    18: { msg: "\xA7e[System] You reached Level 18!" },
-    20: { msg: "\xA7e[System] Maximum level reached! Wither Blast unlocked!" },
+    2: { effects: [["speed", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 2 minutos!" },
+    3: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 3!" },
+    4: { items: [["minecraft:chainmail_helmet"], ["minecraft:chainmail_chestplate"], ["minecraft:chainmail_leggings"], ["minecraft:chainmail_boots"]], msg: "\xA7e[Sistema] Armadura de Cota de Malha recebida." },
+    5: { msg: "\xA7a[Promo\xE7\xE3o] \xA7eFeiti\xE7o desbloqueado: \xA7bEspinho de Gelo\xA7e!" },
+    6: { effects: [["speed", min30, 1], ["regeneration", min30, 0]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 30 minutos!" },
+    7: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 7!" },
+    8: { items: [["minecraft:iron_helmet", 1, { protection: 1 }], ["minecraft:iron_boots", 1, { protection: 1 }]], msg: "\xA7e[Sistema] Armadura de Ferro Encantada recebida!" },
+    9: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 9!" },
+    10: { items: [["minecraft:diamond_helmet"], ["minecraft:diamond_boots"]], msg: "\xA7e[Sistema] Armadura de Diamante e feiti\xE7o Nuvem Venenosa recebidos!" },
+    11: { effects: [["speed", min10, 2], ["regeneration", min10, 1]], msg: "\xA7e[Sistema] B\xF4nus de 10 min concedidos!" },
+    12: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 12!" },
+    13: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 13!" },
+    14: { effects: [["speed", min30, 2], ["resistance", min30, 1]], msg: "\xA7e[Sistema] B\xF4nus de promo\xE7\xE3o concedidos!" },
+    15: { msg: "\xA7e[Sistema] Feiti\xE7o Golpe de Rel\xE2mpago desbloqueado!" },
+    16: { items: [["minecraft:netherite_ingot", 2]], msg: "\xA7e[Sistema] Netherite recebido!" },
+    17: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 17!" },
+    18: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 18!" },
+    20: { msg: "\xA7e[Sistema] N\xEDvel m\xE1ximo alcan\xE7ado! Explos\xE3o Wither desbloqueada!" },
   },
   // Class 4: Assassin
   4: {
-    1: { items: [["minecraft:stone_sword", 2], ["minecraft:leather_boots"]], msg: "\xA7e[System] Granted Assassin starter gear!" },
-    2: { effects: [["speed", min2, 1]], msg: "\xA7e[System] Temporary boosts granted for 2 minutes!" },
-    3: { msg: "\xA7e[System] You reached Level 3!" },
-    4: { items: [["minecraft:iron_sword", 2]], msg: "\xA7e[System] Granted Iron Swords!" },
-    5: { items: [["minecraft:iron_helmet"], ["minecraft:iron_boots"]], msg: "\xA7a[Rank Up] \xA7eGranted Iron armor." },
-    6: { items: [["minecraft:iron_sword"], ["minecraft:iron_sword", 1, { sharpness: 2 }]], msg: "\xA7e[System] Granted Enchanted Sword and Shadow Dagger!" },
-    7: { msg: "\xA7e[System] You reached Level 7!" },
-    8: { effects: [["invisibility", min30, 0], ["strength", min30, 1]], msg: "\xA7e[System] Granted 30min Stealth boosts!" },
-    9: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[System] Granted Diamond Sword!" },
-    10: { items: [["minecraft:diamond_boots", 1, { feather_falling: 4 }]], msg: "\xA7a[Rank Up] \xA7eGranted Feather Falling boots!" },
-    11: { items: [["minecraft:diamond_sword", 1, { sharpness: 3, fire_aspect: 1 }]], msg: "\xA7e[System] Granted Enchanted Diamond Sword!" },
-    12: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[System] Granted Venom Twinblade!" },
-    13: { items: [["minecraft:diamond_sword", 1, { sharpness: 5, looting: 3, unbreaking: 3 }]], msg: "\xA7e[System] Granted Master Diamond Sword!" },
-    14: { effects: [["strength", min30, 2], ["speed", min30, 2]], msg: "\xA7e[System] Rank Up Burst Boosts granted!" },
-    15: { msg: "\xA7e[System] You reached Level 15!" },
-    16: { items: [["minecraft:netherite_sword"], ["minecraft:netherite_ingot", 2]], msg: "\xA7e[System] Granted Netherite and Eclipse Karambit!" },
-    17: { effects: [["strength", min10, 3]], msg: "\xA7e[System] 10min Extreme Strength granted!" },
-    18: { msg: "\xA7e[System] You reached Level 18!" },
-    20: { msg: "\xA7e[System] Maximum level reached! Congratulations, Assassin!" },
+    1: { items: [["minecraft:stone_sword", 2], ["minecraft:leather_boots"]], msg: "\xA7e[Sistema] Equipamento inicial de Assassino recebido!" },
+    2: { effects: [["speed", min2, 1]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 2 minutos!" },
+    3: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 3!" },
+    4: { items: [["minecraft:iron_sword", 2]], msg: "\xA7e[Sistema] Espadas de Ferro recebidas!" },
+    5: { items: [["minecraft:iron_helmet"], ["minecraft:iron_boots"]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou armadura de ferro." },
+    6: { items: [["minecraft:iron_sword"], ["minecraft:iron_sword", 1, { sharpness: 2 }]], msg: "\xA7e[Sistema] Espada Encantada e Adaga Sombria recebidas!" },
+    7: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 7!" },
+    8: { effects: [["invisibility", min30, 0], ["strength", min30, 1]], msg: "\xA7e[Sistema] B\xF4nus de Furtividade de 30 min concedidos!" },
+    9: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[Sistema] Espada de Diamante recebida!" },
+    10: { items: [["minecraft:diamond_boots", 1, { feather_falling: 4 }]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou botas com Peso-Pena!" },
+    11: { items: [["minecraft:diamond_sword", 1, { sharpness: 3, fire_aspect: 1 }]], msg: "\xA7e[Sistema] Espada de Diamante Encantada recebida!" },
+    12: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[Sistema] L\xE2mina Dupla Venenosa recebida!" },
+    13: { items: [["minecraft:diamond_sword", 1, { sharpness: 5, looting: 3, unbreaking: 3 }]], msg: "\xA7e[Sistema] Espada de Diamante Mestre recebida!" },
+    14: { effects: [["strength", min30, 2], ["speed", min30, 2]], msg: "\xA7e[Sistema] B\xF4nus de explos\xE3o da promo\xE7\xE3o concedidos!" },
+    15: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 15!" },
+    16: { items: [["minecraft:netherite_sword"], ["minecraft:netherite_ingot", 2]], msg: "\xA7e[Sistema] Netherite e Karambit do Eclipse recebidos!" },
+    17: { effects: [["strength", min10, 3]], msg: "\xA7e[Sistema] 10 min de For\xE7a Extrema concedidos!" },
+    18: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 18!" },
+    20: { msg: "\xA7e[Sistema] N\xEDvel m\xE1ximo alcan\xE7ado! Parab\xE9ns, Assassino!" },
   },
   // Class 5: Survivor
   5: {
-    1: { items: [["minecraft:stone_pickaxe"], ["minecraft:stone_axe"], ["minecraft:leather_helmet"], ["minecraft:leather_chestplate"]], msg: "\xA7e[System] Granted Survivor starter gear!" },
-    2: { effects: [["resistance", min2, 0]], msg: "\xA7e[System] Temporary boosts granted for 2 minutes!" },
-    3: { msg: "\xA7e[System] You reached Level 3!" },
-    4: { items: [["minecraft:shield"]], msg: "\xA7e[System] Granted Shield!" },
-    5: { items: [["minecraft:iron_chestplate"], ["minecraft:iron_leggings"]], msg: "\xA7a[Rank Up] \xA7eGranted Iron armor." },
-    6: { items: [["minecraft:iron_sword"]], msg: "\xA7e[System] Granted Iron Broadsword!" },
-    7: { msg: "\xA7e[System] You reached Level 7!" },
-    8: { items: [["minecraft:iron_helmet", 1, { protection: 2 }], ["minecraft:iron_boots", 1, { protection: 2 }]], msg: "\xA7e[System] Granted Enchanted Iron armor!" },
-    9: { items: [["minecraft:diamond_chestplate"]], msg: "\xA7e[System] Granted Diamond Chestplate!" },
-    10: { items: [["minecraft:shield", 1, { unbreaking: 3 }]], msg: "\xA7a[Rank Up] \xA7eGranted Enchanted Shield!" },
-    11: { effects: [["invisibility", min30, 0]], msg: "\xA7e[System] Granted 30min Invisibility!" },
-    12: { items: [["minecraft:iron_axe"]], msg: "\xA7e[System] Granted Steel Waraxe!" },
-    13: { items: [["minecraft:diamond_chestplate", 1, { protection: 4, unbreaking: 3 }], ["minecraft:diamond_leggings", 1, { protection: 4, unbreaking: 3 }]], msg: "\xA7e[System] Granted Master Diamond Armor!" },
-    14: { effects: [["regeneration", min30, 0], ["resistance", min30, 1]], msg: "\xA7e[System] Rank Up Defense Boosts granted!" },
-    15: { msg: "\xA7e[System] You reached Level 15!" },
-    16: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[System] Granted Dragonbone Greatsword!" },
-    17: { effects: [["health_boost", min30, 4]], msg: "\xA7e[System] 30min Max Health boosts granted!" },
-    18: { msg: "\xA7e[System] You reached Level 18!" },
-    20: { msg: "\xA7e[System] Maximum level reached! Congratulations, Survivor!" },
+    1: { items: [["minecraft:stone_pickaxe"], ["minecraft:stone_axe"], ["minecraft:leather_helmet"], ["minecraft:leather_chestplate"]], msg: "\xA7e[Sistema] Equipamento inicial de Sobrevivente recebido!" },
+    2: { effects: [["resistance", min2, 0]], msg: "\xA7e[Sistema] B\xF4nus tempor\xE1rios concedidos por 2 minutos!" },
+    3: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 3!" },
+    4: { items: [["minecraft:shield"]], msg: "\xA7e[Sistema] Escudo recebido!" },
+    5: { items: [["minecraft:iron_chestplate"], ["minecraft:iron_leggings"]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou armadura de ferro." },
+    6: { items: [["minecraft:iron_sword"]], msg: "\xA7e[Sistema] Espad\xE3o de Ferro recebido!" },
+    7: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 7!" },
+    8: { items: [["minecraft:iron_helmet", 1, { protection: 2 }], ["minecraft:iron_boots", 1, { protection: 2 }]], msg: "\xA7e[Sistema] Armadura de Ferro Encantada recebida!" },
+    9: { items: [["minecraft:diamond_chestplate"]], msg: "\xA7e[Sistema] Peitoral de Diamante recebido!" },
+    10: { items: [["minecraft:shield", 1, { unbreaking: 3 }]], msg: "\xA7a[Promo\xE7\xE3o] \xA7eVoc\xEA ganhou um escudo encantado!" },
+    11: { effects: [["invisibility", min30, 0]], msg: "\xA7e[Sistema] 30 min de Invisibilidade concedidos!" },
+    12: { items: [["minecraft:iron_axe"]], msg: "\xA7e[Sistema] Machado de Guerra de A\xE7o recebido!" },
+    13: { items: [["minecraft:diamond_chestplate", 1, { protection: 4, unbreaking: 3 }], ["minecraft:diamond_leggings", 1, { protection: 4, unbreaking: 3 }]], msg: "\xA7e[Sistema] Armadura de Diamante Mestre recebida!" },
+    14: { effects: [["regeneration", min30, 0], ["resistance", min30, 1]], msg: "\xA7e[Sistema] B\xF4nus de defesa da promo\xE7\xE3o concedidos!" },
+    15: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 15!" },
+    16: { items: [["minecraft:diamond_sword"]], msg: "\xA7e[Sistema] Montante de Osso de Drag\xE3o recebido!" },
+    17: { effects: [["health_boost", min30, 4]], msg: "\xA7e[Sistema] B\xF4nus de Vida M\xE1xima de 30 min concedidos!" },
+    18: { msg: "\xA7e[Sistema] Voc\xEA alcan\xE7ou o N\xEDvel 18!" },
+    20: { msg: "\xA7e[Sistema] N\xEDvel m\xE1ximo alcan\xE7ado! Parab\xE9ns, Sobrevivente!" },
   },
 };
 
 function applyBuffs(player, level, classId) {
   if (level === 19) {
-    player.sendMessage("\xA7c[System] Boss unlocked to fight! Check your RPG Guide.");
+    player.sendMessage("\xA7c[Sistema] Chefe liberado para luta! Veja no RPG Guide.");
   }
   const reward = CLASS_LEVEL_REWARDS[classId]?.[level];
   if (reward) {
@@ -1600,7 +1592,7 @@ function giveRangerBow(player, level, dropIfFull = true) {
       player.dimension.spawnItem(leftover, player.location);
     }
   } catch (e) {
-    player.sendMessage("\xA7c[Error] Could not create Ranger Bow.");
+    player.sendMessage("\xA7c[Erro] N\xE3o foi poss\xEDvel criar o Arco de Patrulheiro.");
   }
 }
 function maintainRangerBow(player, level, allowRecovery = false) {
@@ -1631,7 +1623,7 @@ function maintainRangerBow(player, level, allowRecovery = false) {
   }
   if (!foundRangerBow && allowRecovery) {
     giveRangerBow(player, level);
-    player.sendMessage("\xA7a[System] Your Ranger Bow was restored for your current level.");
+    player.sendMessage("\xA7a[Sistema] O seu Arco de Patrulheiro foi restaurado para o seu n\xEDvel atual.");
   }
 }
 function giveAssassinBow(player, dropIfFull = true) {
@@ -1660,7 +1652,7 @@ function giveAssassinBow(player, dropIfFull = true) {
       player.dimension.spawnItem(leftover, player.location);
     }
   } catch (e) {
-    player.sendMessage("\xA7c[Error] Could not create Assassin's Deadly Bow.");
+    player.sendMessage("\xA7c[Erro] N\xE3o foi poss\xEDvel criar o Arco Mortal do Assassino.");
     console.warn(e);
   }
 }
@@ -1692,7 +1684,7 @@ function maintainAssassinBow(player, allowRecovery = false) {
   }
   if (!foundBow && allowRecovery) {
     giveAssassinBow(player);
-    player.sendMessage("\xA7a[System] Your Assassin's Deadly Bow was restored.");
+    player.sendMessage("\xA7a[Sistema] O seu Arco Mortal do Assassino foi restaurado.");
   }
 }
 // src/systems/boss.ts
@@ -1703,10 +1695,10 @@ var spawnCooldowns = /* @__PURE__ */ new Map();
 function showBossWarningUI(player) {
   const cd = spawnCooldowns.get(player.id) ?? 0;
   if (system3.currentTick < cd) {
-    player.sendMessage(`\xA7cYou cannot summon the boss again yet! Wait a few minutes.`);
+    player.sendMessage(`\xA7cVoc\xEA ainda n\xE3o pode invocar o chefe de novo! Espere alguns minutos.`);
     return;
   }
-  const form = new ActionFormData2().title("\u2620 Boss Fight \u2620").body("Are you ready to fight the boss? Be careful! It is extremely dangerous.").button("\xA7cFight Boss").button("\xA77Back");
+  const form = new ActionFormData2().title("\u2620 Luta contra o Chefe \u2620").body("Pronto para enfrentar o chefe? Cuidado! Ele \xE9 extremamente perigoso.").button("\xA7cEnfrentar o Chefe").button("\xA77Voltar");
   form.show(player).then((response) => {
     if (response.canceled) return;
     if (response.selection === 0) {
@@ -1716,7 +1708,7 @@ function showBossWarningUI(player) {
 }
 function startBossSequence(player) {
   spawnCooldowns.set(player.id, system3.currentTick + BOSS_COOLDOWN_TICKS);
-  player.sendMessage("\xA74[System] The boss will arrive in 7 seconds!");
+  player.sendMessage("\xA74[Sistema] O chefe chega em 7 segundos!");
   player.playSound("ambient.weather.thunder");
   let secondsLeft = 7;
   const interval = system3.runInterval(() => {
@@ -1737,7 +1729,7 @@ function startBossSequence(player) {
 }
 function spawnWardenBoss(player) {
   if (!player.isValid()) return;
-  player.onScreenDisplay.setTitle("\xA74FIGHT!");
+  player.onScreenDisplay.setTitle("\xA74LUTE!");
   player.playSound("mob.enderdragon.growl");
   const spawnLoc = {
     x: player.location.x + (Math.random() * 4 - 2),
@@ -1745,7 +1737,7 @@ function spawnWardenBoss(player) {
     z: player.location.z + (Math.random() * 4 - 2)
   };
   const warden = player.dimension.spawnEntity("minecraft:warden", spawnLoc);
-  warden.nameTag = "\xA74\u2620 Awakened Warden \u2620";
+  warden.nameTag = "\xA74\u2620 Warden Desperto \u2620";
   const duration = 1e6;
   warden.addEffect("minecraft:speed", duration, { amplifier: 1, showParticles: true });
   warden.addEffect("minecraft:regeneration", duration, { amplifier: 0, showParticles: false });
@@ -1758,7 +1750,7 @@ function spawnWardenBoss(player) {
       warden.addEffect("minecraft:instant_health", 20, { amplifier: 20, showParticles: false });
     }
   }, 5);
-  world5.sendMessage("\xA74[Boss] The Awakened Warden has been summoned!");
+  world5.sendMessage("\xA74[Chefe] O Warden Desperto foi invocado!");
 }
 
 // src/systems/skills.ts
@@ -1912,7 +1904,7 @@ function spawnSkillTreeUI(player) {
   const classId = classObj.getScore(player) ?? 0;
   if (classId === 0) return;
   const availablePoints = getSkillPoints(player);
-  player.sendMessage(`\xA7e[Skill Tree]\xA7r Available Points: \xA7a${availablePoints}\xA7r.`);
+  player.sendMessage(`\xA7e[\xC1rvore de Habilidades]\xA7r Pontos dispon\xEDveis: \xA7a${availablePoints}\xA7r.`);
   let form = new ActionFormData3();
   const bgMap = {
     1: "textures/warrior_skill_tree_bg",
@@ -1922,7 +1914,7 @@ function spawnSkillTreeUI(player) {
     5: "textures/survivor_skill_tree_bg"
   };
   form.title(bgMap[classId] || "textures/skill_tree_bg_empty");
-  form.body(`You have ${availablePoints} points.`);
+  form.body(`Voc\xEA tem ${availablePoints} pontos.`);
   const leftLvl = getPathLevel(player, "left");
   const rightLvl = getPathLevel(player, "right");
   const middleLvl = getPathLevel(player, "middle");
@@ -1937,53 +1929,50 @@ function spawnSkillTreeUI(player) {
   }
   const choices = [];
   if (middleLvl === 0) {
-    choices.push({ text: `Disabled`, action: () => {
+    choices.push({ text: `Desligado`, action: () => {
     } });
   } else if (leftLvl < 5) {
     const leftCost = getCost("left", leftLvl + 1);
-    choices.push({ text: `Unlock Left Path (${leftLvl + 1}/5)
-${leftCost} perk pts`, action: () => handleSkillUnlock(player, "left", leftLvl + 1) });
+    choices.push({ text: `Desbloquear caminho da esquerda (${leftLvl + 1}/5)\n${leftCost} pts de vantagem`, action: () => handleSkillUnlock(player, "left", leftLvl + 1) });
   } else {
-    choices.push({ text: `Left Path Maxed!`, action: () => {
+    choices.push({ text: `Caminho da esquerda completo!`, action: () => {
     } });
   }
   if (middleLvl < 3) {
     const midCost = getCost("middle", middleLvl + 1);
-    choices.push({ text: `Unlock Middle Path (${middleLvl + 1}/3)
-${midCost} perk pts`, action: () => handleSkillUnlock(player, "middle", middleLvl + 1) });
+    choices.push({ text: `Desbloquear caminho do meio (${middleLvl + 1}/3)\n${midCost} pts de vantagem`, action: () => handleSkillUnlock(player, "middle", middleLvl + 1) });
   } else {
-    choices.push({ text: `Middle Path Maxed!`, action: () => {
+    choices.push({ text: `Caminho do meio completo!`, action: () => {
     } });
   }
   if (middleLvl === 0) {
-    choices.push({ text: `Disabled`, action: () => {
+    choices.push({ text: `Desligado`, action: () => {
     } });
   } else if (rightLvl < 5) {
     const rightCost = getCost("right", rightLvl + 1);
-    choices.push({ text: `Unlock Right Path (${rightLvl + 1}/5)
-${rightCost} perk pts`, action: () => handleSkillUnlock(player, "right", rightLvl + 1) });
+    choices.push({ text: `Desbloquear caminho da direita (${rightLvl + 1}/5)\n${rightCost} pts de vantagem`, action: () => handleSkillUnlock(player, "right", rightLvl + 1) });
   } else {
-    choices.push({ text: `Right Path Maxed!`, action: () => {
+    choices.push({ text: `Caminho da direita completo!`, action: () => {
     } });
   }
   for (const choice of choices) {
     form.button(choice.text);
   }
-  form.button("Exit");
-  form.button("Upgrade Skill");
-  form.button("Refund all perks");
-  form.button("List skill");
+  form.button("Sair");
+  form.button("Melhorar habilidade");
+  form.button("Devolver todas as vantagens");
+  form.button("Lista de habilidades");
   form.show(player).then((res) => {
     if (res.canceled || res.selection === void 0) return;
     const choiceIdx = res.selection - 13;
     if (choiceIdx >= 0 && choiceIdx < choices.length) {
       choices[choiceIdx].action();
     } else if (choiceIdx === choices.length) {
-      player.sendMessage("\xA7eExiting skill tree.");
+      player.sendMessage("\xA7eSaindo da \xE1rvore de habilidades.");
     } else if (choiceIdx === choices.length + 1) {
-      player.sendMessage("\xA7eComing soon!");
+      player.sendMessage("\xA7eEm breve!");
     } else if (choiceIdx === choices.length + 2) {
-      player.sendMessage("\xA7eComing soon!");
+      player.sendMessage("\xA7eEm breve!");
     } else if (choiceIdx === choices.length + 3) {
       system4.run(() => spawnSkillListUI(player));
     }
@@ -1997,8 +1986,8 @@ function spawnSkillListUI(player) {
   const classId = classObj?.getScore(player) ?? 0;
   const currentUiNodes = getUiNodes(classId);
   const form = new ActionFormData3();
-  form.title("Skill List");
-  form.body("All available skills and their benefits:\n");
+  form.title("Lista de habilidades");
+  form.body("Todas as habilidades dispon\xEDveis e seus benef\xEDcios:\n");
   for (const node of currentUiNodes) {
     let isUnlocked = false;
     if (node.path === "left" && node.level <= leftLvl) isUnlocked = true;
@@ -2008,7 +1997,7 @@ function spawnSkillListUI(player) {
     const displayName = getNodeDisplayName(classId, node);
     form.button(displayName, `textures/skill_icons/${node.id}${iconType}`);
   }
-  form.button("Back");
+  form.button("Voltar");
   form.show(player).then((res) => {
     if (res.canceled || res.selection === void 0) return;
     if (res.selection === currentUiNodes.length) {
@@ -2019,79 +2008,79 @@ function spawnSkillListUI(player) {
   }).catch(e => {});
 }
 var rangerSkillDescriptions = {
-  agility: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Permanent \xA7aSpeed I\xA7r at all times.\n",
-  firearrow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every arrow you fire \xA76ignites\xA7r the target for \xA7e12 seconds\xA7r and deals extra damage.\n\u2022 Works on mobs and players.\n",
-  poisonarrow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every arrow you fire \xA72poisons\xA7r the target for \xA7e6 seconds\xA7r.\n\u2022 Stacks with Fire Arrow \u2014 burn AND poison together!\n",
-  map: "\xA7dType: Active Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Scans the world and lists all online players in chat.\n\u2022 Displays distance and direction (e.g. 140m North-East).\n\n\xA77Cooldown: 5 minutes\xA7r\n",
-  arrowsunlimi: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Your quiver \xA7anever runs dry\xA7r \u2014 a replacement arrow appears automatically when you're out.\n\u2022 \xA77Requires a bow in main hand or offhand.\xA7r\n",
-  hearts: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Grants \xA7c+6 extra hearts\xA7r permanently.\n\u2022 Grants \xA7apermanent Regeneration\xA7r.\n",
-  rapidarrow: "\xA7dType: Active Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7eSneaking + Jumping\xA7r unleashes \xA7e60 arrows\xA7r in rapid succession toward where you're looking.\n\u2022 Arrows carry your Fire Arrow / Poison Arrow effects.\n\n\xA77Cooldown: 4 minutes\xA7r\n",
-  immunearrow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7aComplete immunity\xA7r to all incoming arrow/projectile damage.\n\u2022 Health is fully restored equal to any projectile hit.\n",
-  deadarrow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Fully-charged arrows deal \xA7cDouble damage\xA7r on top of normal damage.\n\u2022 \xA77Tip: Hold the bow back all the way until it stops wobbling.\xA7r\n",
-  aim: "\xA7dType: Active Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7eSneaking + Jumping\xA7r grants \xA7eNight Vision\xA7r for \xA7e1 minute\xA7r \u2014 perfect for night hunts.\n\n\xA77Cooldown: 6 minutes\xA7r\n",
-  archersafe: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Permanent \xA7aResistance I\xA7r.\n\u2022 While holding a bow: grants \xA7aSpeed II\xA7r and \xA7c+2 more extra hearts\xA7r.\n\u2022 \xA77Stacks with Hearts ability.\xA7r\n",
-  explosion: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every arrow creates an \xA76explosion\xA7r on impact \u2014 damages nearby mobs.\n\u2022 \xA77Regular bow shots break blocks. Rapid Arrow explosions do not.\xA7r\n",
-  armour: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7aResistance II\xA7r when wearing a \xA7efull armor set\xA7r (all 4 pieces).\n\u2022 Permanent \xA7aSlow Falling II\xA7r while wearing \xA7eboots\xA7r.\n"
+  agility: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7aVelocidade I\xA7r permanente o tempo todo.\n",
+  firearrow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Toda flecha que voc\xEA dispara \xA76incendeia\xA7r o alvo por \xA7e12 segundos\xA7r e causa dano extra.\n\u2022 Funciona em mobs e jogadores.\n",
+  poisonarrow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Toda flecha que voc\xEA dispara \xA72envenena\xA7r o alvo por \xA7e6 segundos\xA7r.\n\u2022 Acumula com a Flecha de Fogo: queima E envenena juntos!\n",
+  map: "\xA7dTipo: Habilidade Ativa (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Varre o mundo e lista no chat todos os jogadores online.\n\u2022 Mostra dist\xE2ncia e dire\xE7\xE3o (ex.: 140m Nordeste).\n\n\xA77Recarga: 5 minutos\xA7r\n",
+  arrowsunlimi: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Sua aljava \xA7anunca esvazia\xA7r: uma flecha nova aparece sozinha quando acabam.\n\u2022 \xA77Precisa de um arco na m\xE3o principal ou secund\xE1ria.\xA7r\n",
+  hearts: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Concede \xA7c+6 cora\xE7\xF5es extras\xA7r permanentes.\n\u2022 Concede \xA7aRegenera\xE7\xE3o permanente\xA7r.\n",
+  rapidarrow: "\xA7dTipo: Habilidade Ativa\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7eAgachar + Pular\xA7r dispara \xA7e60 flechas\xA7r em sequ\xEAncia r\xE1pida para onde voc\xEA est\xE1 olhando.\n\u2022 As flechas levam seus efeitos de Flecha de Fogo / Flecha Venenosa.\n\n\xA77Recarga: 4 minutos\xA7r\n",
+  immunearrow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7aImunidade total\xA7r a dano de flechas e proj\xE9teis.\n\u2022 A vida \xE9 restaurada no mesmo valor de cada proj\xE9til que acertar voc\xEA.\n",
+  deadarrow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Flechas totalmente carregadas causam \xA7cdano dobrado\xA7r al\xE9m do dano normal.\n\u2022 \xA77Dica: puxe o arco at\xE9 ele parar de tremer.\xA7r\n",
+  aim: "\xA7dTipo: Habilidade Ativa\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7eAgachar + Pular\xA7r concede \xA7eVis\xE3o Noturna\xA7r por \xA7e1 minuto\xA7r, perfeita para ca\xE7adas noturnas.\n\n\xA77Recarga: 6 minutos\xA7r\n",
+  archersafe: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7aResist\xEAncia I\xA7r permanente.\n\u2022 Segurando um arco: concede \xA7aVelocidade II\xA7r e \xA7c+2 cora\xE7\xF5es extras\xA7r.\n\u2022 \xA77Acumula com a habilidade Cora\xE7\xF5es.\xA7r\n",
+  explosion: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Toda flecha cria uma \xA76explos\xE3o\xA7r ao atingir, ferindo mobs pr\xF3ximos.\n\u2022 \xA77Tiros normais de arco quebram blocos. As explos\xF5es da Chuva de Flechas n\xE3o.\xA7r\n",
+  armour: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7aResist\xEAncia II\xA7r usando \xA7earmadura completa\xA7r (as 4 pe\xE7as).\n\u2022 \xA7aQueda Lenta II\xA7r permanente usando \xA7ebotas\xA7r.\n"
 };
 var assassinSkillDescriptions = {
-  speed: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Permanent \xA7aSpeed II\xA7r at all times.\n",
-  dagger: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every melee hit deals \xA7c+3 bonus damage\xA7r (1.5 extra hearts), even barehanded.\n",
-  silence: "\xA7dType: Active Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7eSneaking + Jumping\xA7r grants \xA7aInvisibility\xA7r for \xA7e45 seconds\xA7r.\n\n\xA77Cooldown: 8 minutes\xA7r\n",
-  critical: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Attacking while \xA7eairborne (jumping/falling)\xA7r deals \xA7c+7 bonus damage\xA7r.\n\u2022 \xA77Applies when hitting enemies with a sword in mid-air.\xA7r\n",
-  bow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Grants a \xA7ePower IV + Unbreaking III\xA7r bow added directly to your inventory.\n\u2022 \xA77Re-purchase to receive another bow.\xA7r\n",
-  blind: "\xA7dType: Active Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7eSneaking + Jumping\xA7r inflicts \xA78Darkness\xA7r and \xA7cWeakness\xA7r on all entities within \xA7e15 blocks\xA7r for \xA7e20s\xA7r.\n\u2022 You gain \xA7aInvisibility\xA7r for \xA7e20s\xA7r.\n\n\xA77Cooldown: 5 minutes\xA7r\n",
-  lethal: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every melee hit \xA7aheals you for 1 heart\xA7r (lifesteal).\n\u2022 A heart particle plays on each heal.\n",
-  arrow: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Receive \xA7e7 arrows\xA7r every Minecraft day automatically.\n\u2022 \xA77Pairs perfectly with the Assassin Bow.\xA7r\n",
-  shadow: "\xA7dType: Active Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 \xA7eSneaking + Jumping\xA7r grants \xA7aInvisibility\xA7r, \xA7aSpeed II\xA7r, \xA7aStrength II\xA7r, \xA7aResistance\xA7r, and \xA7aJump Boost\xA7r for \xA7e30s\xA7r.\n\u2022 Enemies within \xA7e5 blocks\xA7r receive \xA7cPoison\xA7r and \xA7cWeakness\xA7r.\n\n\xA77Cooldown: 10 minutes\xA7r\n",
-  poison: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Any entity that damages you gets \xA72poisoned\xA7r for \xA7e25 seconds\xA7r.\n",
-  hearts: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Grants \xA7c+6 extra hearts\xA7r permanently.\n\u2022 Grants \xA7apermanent Regeneration\xA7r.\n",
-  disharm: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Every \xA7e5 minutes\xA7r: gain \xA7aInvisibility\xA7r for \xA7e20s\xA7r and become \xA7aimmune to sword damage\xA7r during that window.\n\u2022 \xA77Axe hits are NOT blocked.\xA7r\n",
-  instantkill: "\xA7dType: Passive\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Hit the same target \xA7e3 times in 5 seconds\xA7r without being hit yourself \u2192 deal \xA7c40 bonus damage\xA7r.\n\u2022 Works only once per mob and has a \xA7e60-second cooldown\xA7r after triggering.\n\u2022 \xA77Getting hit by anyone resets your combo!\xA7r\n"
+  speed: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7aVelocidade II\xA7r permanente o tempo todo.\n",
+  dagger: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Todo golpe corpo a corpo causa \xA7c+3 de dano b\xF4nus\xA7r (1,5 cora\xE7\xE3o extra), mesmo de m\xE3os vazias.\n",
+  silence: "\xA7dTipo: Habilidade Ativa\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7eAgachar + Pular\xA7r concede \xA7aInvisibilidade\xA7r por \xA7e45 segundos\xA7r.\n\n\xA77Recarga: 8 minutos\xA7r\n",
+  critical: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Atacar \xA7eno ar (pulando/caindo)\xA7r causa \xA7c+7 de dano b\xF4nus\xA7r.\n\u2022 \xA77Vale ao acertar inimigos com espada no ar.\xA7r\n",
+  bow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 D\xE1 um arco com \xA7eFor\xE7a IV + Inquebr\xE1vel III\xA7r direto no seu invent\xE1rio.\n\u2022 \xA77Compre de novo para receber outro arco.\xA7r\n",
+  blind: "\xA7dTipo: Habilidade Ativa\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7eAgachar + Pular\xA7r aplica \xA78Escurid\xE3o\xA7r e \xA7cFraqueza\xA7r em todas as entidades a at\xE9 \xA7e15 blocos\xA7r por \xA7e20s\xA7r.\n\u2022 Voc\xEA ganha \xA7aInvisibilidade\xA7r por \xA7e20s\xA7r.\n\n\xA77Recarga: 5 minutos\xA7r\n",
+  lethal: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Todo golpe corpo a corpo \xA7acura 1 cora\xE7\xE3o\xA7r (roubo de vida).\n\u2022 Uma part\xEDcula de cora\xE7\xE3o aparece a cada cura.\n",
+  arrow: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Receba \xA7e7 flechas\xA7r automaticamente a cada dia do Minecraft.\n\u2022 \xA77Combina perfeitamente com o Arco do Assassino.\xA7r\n",
+  shadow: "\xA7dTipo: Habilidade Ativa\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 \xA7eAgachar + Pular\xA7r concede \xA7aInvisibilidade\xA7r, \xA7aVelocidade II\xA7r, \xA7aFor\xE7a II\xA7r, \xA7aResist\xEAncia\xA7r e \xA7aSuper Pulo\xA7r por \xA7e30s\xA7r.\n\u2022 Inimigos a at\xE9 \xA7e5 blocos\xA7r recebem \xA7cVeneno\xA7r e \xA7cFraqueza\xA7r.\n\n\xA77Recarga: 10 minutos\xA7r\n",
+  poison: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Toda entidade que causar dano a voc\xEA fica \xA72envenenada\xA7r por \xA7e25 segundos\xA7r.\n",
+  hearts: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Concede \xA7c+6 cora\xE7\xF5es extras\xA7r permanentes.\n\u2022 Concede \xA7aRegenera\xE7\xE3o permanente\xA7r.\n",
+  disharm: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 A cada \xA7e5 minutos\xA7r: ganhe \xA7aInvisibilidade\xA7r por \xA7e20s\xA7r e fique \xA7aimune a dano de espada\xA7r durante esse tempo.\n\u2022 \xA77Golpes de machado N\xC3O s\xE3o bloqueados.\xA7r\n",
+  instantkill: "\xA7dTipo: Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Acerte o mesmo alvo \xA7e3 vezes em 5 segundos\xA7r sem ser atingido \u2192 cause \xA7c40 de dano b\xF4nus\xA7r.\n\u2022 Funciona s\xF3 uma vez por mob e tem \xA7e60 segundos de recarga\xA7r depois de ativar.\n\u2022 \xA77Levar um golpe de qualquer um zera seu combo!\xA7r\n"
 };
 var survivorSkillDescriptions = {
-  boot: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants Speed I permanently while wearing boots.\n",
-  map: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Reveals exact X-Y-Z coordinates of all online players in chat.\n\u2022 Identifies the nearest structure name.\n\u2022 Requires no map item in hand!\n\n\xA77Cooldown: 8 mins\xA7r\n",
-  healing: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants +4 extra hearts and Regeneration while wearing a chestplate.\n",
-  thrones: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Any enemy that damages you will be poisoned for 10 seconds.\n",
-  dash: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n- Pushes you 10 blocks forward.\n- Deals 5 damage to mobs within 3 blocks of your start position.\n- Grants Invisibility & Resistance for 10s.\n\n\xA77Cooldown: 45s\xA7r\n",
-  medkit: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Upgrades extra hearts to +10 total while wearing a chestplate and with Vagabond’s Constitution unlocked.\n- Instantly heals 5 hearts every 5 minutes while Vagabond’s Constitution is unlocked.\n",
-  safety: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants Resistance III, Fire Resistance, and Absorption for 30 seconds.\n\n\xA77Cooldown: 6 mins\xA7r\n",
-  speedboost: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants Speed III, Jump Boost II, and Resistance II for 20 seconds.\n\n\xA77Cooldown: 4 mins\xA7r\n",
-  hide: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants complete Invisibility for 60 seconds (mobs won't see you).\n\n\xA77Cooldown: 5 mins\xA7r\n",
-  backup: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Gives 5 golden carrots, 10 bread, and 30 cobblestone every MC day.\n- Gives an enchanted golden apple every 5 days.\n",
-  effect: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Randomly gives a beneficial effect for 1 minute, every 6 minutes.\n",
-  vision: "\xA7dType: Passive Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Grants permanent Night Vision.\n",
-  lock: "\xA7dType: Special Ability (Crouch + Jump)\xA7r\n\n\xA7eBenefits:\xA7r\n- Traps other players in obsidian (unless within 3 blocks of you).\n- Applies Slowness III to everyone within 15 blocks.\n\n\xA77Cooldown: 5 mins\xA7r\n"
+  boot: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede Velocidade I permanente enquanto usa botas.\n",
+  map: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Mostra no chat as coordenadas X-Y-Z exatas de todos os jogadores online.\n\u2022 Identifica o nome da estrutura mais pr\xF3xima.\n\u2022 N\xE3o precisa de mapa na m\xE3o!\n\n\xA77Recarga: 8 min\xA7r\n",
+  healing: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede +4 cora\xE7\xF5es extras e Regenera\xE7\xE3o enquanto usa peitoral.\n",
+  thrones: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Todo inimigo que causar dano a voc\xEA fica envenenado por 10 segundos.\n",
+  dash: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Empurra voc\xEA 10 blocos para a frente.\n- Causa 5 de dano aos mobs a at\xE9 3 blocos do ponto de partida.\n- Concede Invisibilidade e Resist\xEAncia por 10s.\n\n\xA77Recarga: 45s\xA7r\n",
+  medkit: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Aumenta os cora\xE7\xF5es extras para +10 no total enquanto usa peitoral e tem a Constitui\xE7\xE3o do Andarilho desbloqueada.\n- Cura 5 cora\xE7\xF5es na hora a cada 5 minutos enquanto a Constitui\xE7\xE3o do Andarilho estiver desbloqueada.\n",
+  safety: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede Resist\xEAncia III, Resist\xEAncia ao Fogo e Absor\xE7\xE3o por 30 segundos.\n\n\xA77Recarga: 6 min\xA7r\n",
+  speedboost: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede Velocidade III, Super Pulo II e Resist\xEAncia II por 20 segundos.\n\n\xA77Recarga: 4 min\xA7r\n",
+  hide: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede Invisibilidade completa por 60 segundos (os mobs n\xE3o veem voc\xEA).\n\n\xA77Recarga: 5 min\xA7r\n",
+  backup: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- D\xE1 5 cenouras douradas, 10 p\xE3es e 30 pedregulhos a cada dia do Minecraft.\n- D\xE1 uma ma\xE7\xE3 dourada encantada a cada 5 dias.\n",
+  effect: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- D\xE1 um efeito ben\xE9fico aleat\xF3rio por 1 minuto, a cada 6 minutos.\n",
+  vision: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Concede Vis\xE3o Noturna permanente.\n",
+  lock: "\xA7dTipo: Habilidade Especial (Agachar + Pular)\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Prende outros jogadores em obsidiana (exceto quem estiver a at\xE9 3 blocos de voc\xEA).\n- Aplica Lentid\xE3o III em todos a at\xE9 15 blocos.\n\n\xA77Recarga: 5 min\xA7r\n"
 };
 var warriorSkillDescriptions = {
-  "sword": "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a new Special Ability in the Soul Shop.\n- Grants an Iron Sword with Curse of Vanishing.\n\n\xA77Note: After unlocking here, you must purchase and equip this ability in the Soul Shop. You can only have one active special ability at a time.\xA7r",
-  "healthmet": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Grants continuous Regeneration I while wearing ANY helmet.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "assasin": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Grants continuous Speed I.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "heart": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Permanently grants Extra Hearts.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "smash": "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks an active ability in the Soul Shop.\n- Ground Smash: Crouch and jump to push away all nearby enemies (within 5 blocks) up to 10 blocks, dealing 10 damage.\n- Grants Resistance I and Absorption I for 30 seconds.\n- Cooldown: 2 minutes.\n\n\xA77Note: To use, equip the ability and perform a Crouch + Jump.\xA7r",
-  "strength": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Grants continuous Strength I.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "armour": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Grants Resistance II and Jump Boost I when you wear a full set of armor (Helmet, Chestplate, Leggings, and Boots).\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "unbreakable_sword": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Upgrades the Sword Special Ability to grant an Unbreakable Cursed Diamond Sword instead of Iron.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "groundsmash": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Grants continuous Resistance I, making you tougher in all fights.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "dual_sword": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Doubles the damage dealt when attacking with fists or any sword (Wooden to Netherite).\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "attack_strength": "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks an active ability in the Soul Shop.\n- Attack Strength: Crouch and jump to gain max Strength, Resistance, Fire Resistance, Regeneration, and Extra Hearts for 10 seconds.\n- All hostile mobs within 10 blocks take 20 damage and Slowness III for 10 seconds.\n- Cooldown: 5 minutes.\n\n\xA77Note: To use, equip the ability and perform a Crouch + Jump.\xA7r",
-  "shield": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Instantly heals you 5 hearts every 30 seconds, but ONLY when a Shield is equipped in your Offhand.\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r",
-  "fire_slash": "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks a passive buff in the Soul Shop.\n- Passively burns any enemy that damages you (works on zombies, creepers, players, etc.).\n\n\xA77Note: After unlocking here, you must purchase this passive buff in the Soul Shop. It is always active once purchased.\xA7r"
+  "sword": "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma nova Habilidade Especial na Loja de Almas.\n- Concede uma Espada de Ferro com Maldi\xE7\xE3o do Desaparecimento.\n\n\xA77Nota: depois de desbloquear aqui, compre e equipe esta habilidade na Loja de Almas. S\xF3 \xE9 poss\xEDvel ter uma habilidade especial ativa por vez.\xA7r",
+  "healthmet": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Regenera\xE7\xE3o I cont\xEDnua enquanto usa QUALQUER capacete.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "assasin": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Velocidade I cont\xEDnua.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "heart": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Cora\xE7\xF5es Extras permanentes.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "smash": "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma habilidade ativa na Loja de Almas.\n- Impacto no Ch\xE3o: agache e pule para empurrar todos os inimigos pr\xF3ximos (a at\xE9 5 blocos) por at\xE9 10 blocos, causando 10 de dano.\n- Concede Resist\xEAncia I e Absor\xE7\xE3o I por 30 segundos.\n- Recarga: 2 minutos.\n\n\xA77Nota: para usar, equipe a habilidade e fa\xE7a Agachar + Pular.\xA7r",
+  "strength": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede For\xE7a I cont\xEDnua.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "armour": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Resist\xEAncia II e Super Pulo I quando voc\xEA usa armadura completa (Capacete, Peitoral, Cal\xE7as e Botas).\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "unbreakable_sword": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Melhora a Habilidade Especial da Espada para dar uma Espada de Diamante Amaldi\xE7oada Inquebr\xE1vel em vez de Ferro.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "groundsmash": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Resist\xEAncia I cont\xEDnua, deixando voc\xEA mais resistente em todas as lutas.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "dual_sword": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Dobra o dano ao atacar com os punhos ou qualquer espada (de Madeira a Netherite).\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "attack_strength": "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma habilidade ativa na Loja de Almas.\n- For\xE7a de Ataque: agache e pule para ganhar For\xE7a, Resist\xEAncia, Resist\xEAncia ao Fogo, Regenera\xE7\xE3o e Cora\xE7\xF5es Extras no m\xE1ximo por 10 segundos.\n- Todos os mobs hostis a at\xE9 10 blocos recebem 20 de dano e Lentid\xE3o III por 10 segundos.\n- Recarga: 5 minutos.\n\n\xA77Nota: para usar, equipe a habilidade e fa\xE7a Agachar + Pular.\xA7r",
+  "shield": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Cura 5 cora\xE7\xF5es na hora a cada 30 segundos, mas S\xD3 com um Escudo na m\xE3o secund\xE1ria.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "fire_slash": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Queima passivamente todo inimigo que causar dano a voc\xEA (funciona em zumbis, creepers, jogadores etc.).\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r"
 };
 var mageSkillDescriptions = {
-  magestaff: "\xA7dType: Base Item\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Mage Staff with 7 physical damage.\n\n\xA77Note: No spells active initially.\xA7r",
-  fireball: "\xA7dType: Spell\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Fireball spell in the Soul Shop.\n- Shoots a fireball up to 10 blocks.\n- Deals 4 damage and burns enemies for 6 seconds.\n\n\xA77Note: Equip in Spellbook.\xA7r",
-  frost: "\xA7dType: Spell\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Frost spell in the Soul Shop.\n- Deals 4 damage to all mobs in a 10-block radius.\n- Applies Slowness IV and Weakness I.\n- Cooldown: 2 seconds.\n\n\xA77Note: Equip in Spellbook.\xA7r",
-  manashield: "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Mana Shield ability in the Soul Shop.\n- Crouch + Jump: Grants Fire Protection, Absorption, Resistance III, and Regeneration I for 20 seconds.\n- Cooldown: 5 minutes.\xA7r",
-  lightning: "\xA7dType: Spell\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Lightning spell in the Soul Shop.\n- Strikes mobs in a 10-block radius with lightning.\n- Cooldown: 5 seconds.\n\n\xA77Note: Equip in Spellbook.\xA7r",
-  hypnosis: "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Hypnosis ability in the Soul Shop.\n- Crouch + Jump: Grants Nausea and Poison to nearby mobs/players for 20 seconds.\n- Cooldown: 5 minutes.\xA7r",
-  ice: "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Ice passive in the Soul Shop.\n- Enhances Frost spell: Increases damage from 4 to 12.\n- Increases cast range from 10 to 20 blocks.\n- Frost cooldown becomes 5 seconds.\n\n\xA77Note: Toggle on/off in Soul Shop.\xA7r",
-  magicslash: "\xA7dType: Special Ability\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Magic Slash ability in the Soul Shop.\n- Crouch + Jump: Deals 10 hearts (20 damage) to all mobs/players in a 15-block radius and burns them for 15 seconds.\n- Cooldown: 5 minutes.\xA7r",
-  mageshoot: "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Mage Shoot passive in the Soul Shop.\n- Enhances Fireball spell: Increases damage to 10, creates a fiery explosion.\n- Adds a 2-second cooldown when casting Fireball.\n\n\xA77Note: Toggle on/off in Soul Shop.\xA7r",
-  enchantment: "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Enchantment passive in the Soul Shop.\n- Grants 1 random enchanted book every Minecraft day.\n\n\xA77Note: Toggle on/off in Soul Shop.\xA7r",
-  effectmage: "\xA7dType: Passive Skill\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Effect Mage passive in the Soul Shop.\n- Grants a random beneficial effect for 1 minute every 6 minutes.\n\n\xA77Note: Toggle on/off in Soul Shop.\xA7r",
-  petsmage: "\xA7dType: Special Soul Shop Ability\xA7r\n\n\xA7eBenefits:\xA7r\n\u2022 Unlocks the \xA7e'Summon Guard!'\xA7r option in the Soul Shop.\n\u2022 Summons a loyal \xA75Warden Guard\xA7r to protect you with a 5-second ritual.\n\u2022 The Warden acts like a loyal dog \u2014 follows you, teleports to you, and attacks hostile mobs or enemies that attack you or that you attack.\n\u2022 \xA77Never attacks you, never inflicts Darkness effect, and never attacks non-hostile mobs.\xA7r\n\u2022 Includes a \xA7eSit / Stand\xA7r toggle menu.\n\u2022 If killed, can be re-summoned after \xA7e5 Minecraft days\xA7r.\n",
-  invisibility: "\xA7dType: Spell\xA7r\n\n\xA7eBenefits:\xA7r\n- Unlocks the Invisibility spell in the Soul Shop.\n- When selected in the Spellbook, you become permanently invisible while equipped. No right-clicking required.\n\n\xA77Note: Equip in Spellbook.\xA7r"
+  magestaff: "\xA7dTipo: Item Base\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia o Cajado de Mago com 7 de dano f\xEDsico.\n\n\xA77Nota: nenhum feiti\xE7o ativo no in\xEDcio.\xA7r",
+  fireball: "\xA7dTipo: Feiti\xE7o\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia o feiti\xE7o Bola de Fogo na Loja de Almas.\n- Dispara uma bola de fogo de at\xE9 10 blocos.\n- Causa 4 de dano e queima os inimigos por 6 segundos.\n\n\xA77Nota: equipe no Livro de Feiti\xE7os.\xA7r",
+  frost: "\xA7dTipo: Feiti\xE7o\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia o feiti\xE7o Geada na Loja de Almas.\n- Causa 4 de dano a todos os mobs num raio de 10 blocos.\n- Aplica Lentid\xE3o IV e Fraqueza I.\n- Recarga: 2 segundos.\n\n\xA77Nota: equipe no Livro de Feiti\xE7os.\xA7r",
+  manashield: "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a habilidade Escudo de Mana na Loja de Almas.\n- Agachar + Pular: concede Prote\xE7\xE3o contra Fogo, Absor\xE7\xE3o, Resist\xEAncia III e Regenera\xE7\xE3o I por 20 segundos.\n- Recarga: 5 minutos.\xA7r",
+  lightning: "\xA7dTipo: Feiti\xE7o\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia o feiti\xE7o Rel\xE2mpago na Loja de Almas.\n- Atinge com raios os mobs num raio de 10 blocos.\n- Recarga: 5 segundos.\n\n\xA77Nota: equipe no Livro de Feiti\xE7os.\xA7r",
+  hypnosis: "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a habilidade Hipnose na Loja de Almas.\n- Agachar + Pular: aplica N\xE1usea e Veneno em mobs/jogadores pr\xF3ximos por 20 segundos.\n- Recarga: 5 minutos.\xA7r",
+  ice: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a passiva Gelo na Loja de Almas.\n- Melhora o feiti\xE7o Geada: dano de 4 para 12.\n- Alcance de 10 para 20 blocos.\n- A recarga da Geada passa a 5 segundos.\n\n\xA77Nota: ligue/desligue na Loja de Almas.\xA7r",
+  magicslash: "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a habilidade Corte M\xE1gico na Loja de Almas.\n- Agachar + Pular: causa 10 cora\xE7\xF5es (20 de dano) a todos os mobs/jogadores num raio de 15 blocos e os queima por 15 segundos.\n- Recarga: 5 minutos.\xA7r",
+  mageshoot: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a passiva Disparo do Mago na Loja de Almas.\n- Melhora a Bola de Fogo: dano 10 e explos\xE3o flamejante.\n- Adiciona 2 segundos de recarga \xE0 Bola de Fogo.\n\n\xA77Nota: ligue/desligue na Loja de Almas.\xA7r",
+  enchantment: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a passiva Encantamento na Loja de Almas.\n- Concede 1 livro encantado aleat\xF3rio a cada dia do Minecraft.\n\n\xA77Nota: ligue/desligue na Loja de Almas.\xA7r",
+  effectmage: "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia a passiva Mago dos Efeitos na Loja de Almas.\n- Concede um efeito ben\xE9fico aleat\xF3rio por 1 minuto a cada 6 minutos.\n\n\xA77Nota: ligue/desligue na Loja de Almas.\xA7r",
+  petsmage: "\xA7dTipo: Habilidade Especial da Loja de Almas\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n\u2022 Desbloqueia a op\xE7\xE3o \xA7e'Invocar Guardi\xE3o!'\xA7r na Loja de Almas.\n\u2022 Invoca um leal \xA75Guardi\xE3o Warden\xA7r para proteger voc\xEA, com um ritual de 5 segundos.\n\u2022 O Warden age como um c\xE3o leal: segue voc\xEA, se teleporta at\xE9 voc\xEA e ataca mobs hostis ou inimigos que atacam voc\xEA ou que voc\xEA ataca.\n\u2022 \xA77Nunca ataca voc\xEA, nunca aplica Escurid\xE3o e nunca ataca mobs pac\xEDficos.\xA7r\n\u2022 Inclui um menu para \xA7eSentar / Levantar\xA7r.\n\u2022 Se morrer, pode ser invocado de novo depois de \xA7e5 dias do Minecraft\xA7r.\n",
+  invisibility: "\xA7dTipo: Feiti\xE7o\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia o feiti\xE7o Invisibilidade na Loja de Almas.\n- Selecionado no Livro de Feiti\xE7os, voc\xEA fica invis\xEDvel enquanto ele estiver equipado. N\xE3o precisa clicar.\n\n\xA77Nota: equipe no Livro de Feiti\xE7os.\xA7r"
 };
 function getShopItemForNode(classId, node) {
   const requiredTag = `path_${node.path}_${node.level}`;
@@ -2107,12 +2096,12 @@ function getSkillDescription(classId, node) {
   const match = getShopItemForNode(classId, node);
   if (match?.description) return match.description;
   const nodeId = node.id;
-  if (classId === 2 /* Ranger */) return rangerSkillDescriptions[nodeId] || "\xA7cDescription not found!\xA7r";
-  if (classId === 3 /* Mage */) return mageSkillDescriptions[nodeId] || "\xA7cDescription not found!\xA7r";
-  if (classId === 4 /* Assassin */) return assassinSkillDescriptions[nodeId] || "\xA7cDescription not found!\xA7r";
-  if (classId === 5 /* Survivor */) return survivorSkillDescriptions[nodeId] || "\xA7cDescription not found!\xA7r";
-  if (classId === 1 /* Warrior */) return warriorSkillDescriptions[nodeId] || "\xA7cDescription not found!\xA7r";
-  return "\xA7eBenefits:\xA7r\n- (Coming soon...)\n";
+  if (classId === 2 /* Ranger */) return rangerSkillDescriptions[nodeId] || "\xA7cDescri\xE7\xE3o n\xE3o encontrada!\xA7r";
+  if (classId === 3 /* Mage */) return mageSkillDescriptions[nodeId] || "\xA7cDescri\xE7\xE3o n\xE3o encontrada!\xA7r";
+  if (classId === 4 /* Assassin */) return assassinSkillDescriptions[nodeId] || "\xA7cDescri\xE7\xE3o n\xE3o encontrada!\xA7r";
+  if (classId === 5 /* Survivor */) return survivorSkillDescriptions[nodeId] || "\xA7cDescri\xE7\xE3o n\xE3o encontrada!\xA7r";
+  if (classId === 1 /* Warrior */) return warriorSkillDescriptions[nodeId] || "\xA7cDescri\xE7\xE3o n\xE3o encontrada!\xA7r";
+  return "\xA7eBenef\xEDcios:\xA7r\n- (Em breve...)\n";
 }
 function spawnSkillDetailUI(player, node) {
   const classObj = world6.scoreboard.getObjective("class");
@@ -2127,17 +2116,15 @@ function spawnSkillDetailUI(player, node) {
   const iconType = isUnlocked ? "_un" : "_l";
   const displayName = getNodeDisplayName(classId, node);
   const form = new ActionFormData3();
-  form.title(`${displayName} Details`);
+  form.title(`Detalhes: ${displayName}`);
   let bodyText = `\xA7l${displayName}\xA7r
 
 `;
-  bodyText += `Status: ${isUnlocked ? "\xA7aUnlocked\xA7r" : "\xA7cLocked\xA7r"}
-
-`;
+  bodyText += `Estado: ${isUnlocked ? "\xA7aDesbloqueada\xA7r" : "\xA7cBloqueada\xA7r"}\n\n`;
   const description = getSkillDescription(classId, node);
   bodyText += description;
   form.body(bodyText);
-  form.button("Back to List", `textures/skill_icons/${node.id}${iconType}`);
+  form.button("Voltar \xE0 lista", `textures/skill_icons/${node.id}${iconType}`);
   form.show(player).then((res) => {
     if (res.canceled) return;
     system4.run(() => spawnSkillListUI(player));
@@ -2147,7 +2134,7 @@ function handleSkillUnlock(player, path, nextLvl) {
   const cost = getCost(path, nextLvl);
   const availablePoints = getSkillPoints(player);
   if (availablePoints < cost) {
-    player.sendMessage(`\xA7cNot enough Perk Points! Need \xA7e${cost} pts\xA7c, you have \xA7e${availablePoints} pts\xA7c.`);
+    player.sendMessage(`\xA7cPontos de vantagem insuficientes! Precisa de \xA7e${cost} pts\xA7c, voc\xEA tem \xA7e${availablePoints} pts\xA7c.`);
     return;
   }
   player.addTag(`path_${path}_${nextLvl}`);
@@ -2158,17 +2145,17 @@ function handleSkillUnlock(player, path, nextLvl) {
   const unlockedItems = shopItems.filter((item) => item.requiresTag === requiredTag);
   if (unlockedItems.length > 0) {
     const nameList = unlockedItems.map((i) => `\xA7b${i.name}\xA7e`).join("\xA77, \xA7e");
-    player.sendMessage(`\xA7a\u2726 Skill Node Unlocked! \xA7e${nameList} \xA77is now in the Soul Shop! \xA77(\xA7c-${cost} pt${cost > 1 ? "s" : ""}\xA77)\xA7r`);
+    player.sendMessage(`\xA7a\u2726 N\xF3 de habilidade desbloqueado! \xA7e${nameList} \xA77j\xE1 est\xE1 na Loja de Almas! \xA77(\xA7c-${cost} pt${cost > 1 ? "s" : ""}\xA77)\xA7r`);
   } else {
-    player.sendMessage(`\xA7aSkill path advanced! \xA77(-${cost} perk point${cost > 1 ? "s" : ""})`);
+    player.sendMessage(`\xA7aCaminho de habilidade avan\xE7ado! \xA77(-${cost} ponto${cost > 1 ? "s" : ""} de vantagem)`);
   }
   for (const item of unlockedItems) {
     if (classId === 3 /* Mage */ && item.tag.startsWith("spell_unlocked:")) {
-      player.sendMessage(`\xA7d  \u2192 Spell: \xA7f${item.name} \xA7d\u2014 buy its Infinite Tome in your Spellbook!\xA7r`);
+      player.sendMessage(`\xA7d  \u2192 Feiti\xE7o: \xA7f${item.name} \xA7d\u2014 compre o Tomo Infinito no Livro de Feiti\xE7os!\xA7r`);
     } else if (item.isActiveAbility) {
-      player.sendMessage(`\xA76  \u2192 Active Ability: \xA7f${item.name} \xA77\u2014 equip in Soul Shop, then \xA7eSneaking + Jumping\xA77 to activate.\xA7r`);
+      player.sendMessage(`\xA76  \u2192 Habilidade ativa: \xA7f${item.name} \xA77\u2014 equipe na Loja de Almas e depois \xA7eagache + pule\xA77 para ativar.\xA7r`);
     } else {
-      player.sendMessage(`\xA7a  \u2192 Passive Skill: \xA7f${item.name} \xA77\u2014 purchase in Soul Shop to activate automatically.\xA7r`);
+      player.sendMessage(`\xA7a  \u2192 Habilidade passiva: \xA7f${item.name} \xA77\u2014 compre na Loja de Almas para ativar sozinha.\xA7r`);
     }
   }
 }
@@ -2179,9 +2166,9 @@ function closeSkillTreeUI(player) {
 import { system as system5, world as world7 } from "@minecraft/server";
 import { ActionFormData as ActionFormData4 } from "@minecraft/server-ui";
 function showSpellbookUI(player) {
-  const form = new ActionFormData4().title("\xA7dMage Spellbook").body("Spells are now Infinite Tomes for your Grimoire. Buy the ones you unlocked.");
+  const form = new ActionFormData4().title("\xA7dLivro de Feiti\xE7os do Mago").body("Os feiti\xE7os agora s\xE3o Tomos Infinitos. Compre os que voc\xEA j\xE1 desbloqueou.");
   const spells = MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"));
-  form.button("\xA75Buy Infinite Tomes", "textures/items/book_enchanted");
+  form.button("\xA75Comprar Tomos Infinitos", "textures/items/book_enchanted");
   system5.run(() => {
     form.show(player).then((res) => {
       if (res.canceled) return;
@@ -2209,7 +2196,7 @@ function convertOwnedSpells(player) {
     player.removeTag(`spell_unlocked:${spellId}`);
     player.removeTag(`active_spell:${spellId}`);
     giveSpellTome(player, spellId);
-    player.sendMessage(`\xA7d[Spellbook] \xA7aYour spell became an \xA76Infinite Tome\xA7a. Put it in your Grimoire at the Arcane Lectern.`);
+    player.sendMessage(`\xA7d[Livro de Feiti\xE7os] \xA7aSeu feiti\xE7o virou um \xA76Tomo Infinito\xA7a. Guarde-o no seu Grim\xF3rio no Atril Arcano.`);
   }
 }
 world7.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
@@ -2217,14 +2204,13 @@ world7.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
 });
 function showSpellsList(player, spells) {
   convertOwnedSpells(player);
-  const form = new ActionFormData4().title("\xA7dSpells");
-  form.body("Buy the Infinite Tome of a spell. Put the tome in your Grimoire at the Arcane Lectern: its spell never runs out.\n\n");
+  const form = new ActionFormData4().title("\xA7dFeiti\xE7os");
+  form.body("Compre o Tomo Infinito de um feiti\xE7o. Ponha o tomo no seu Grim\xF3rio no Atril Arcano, ou use-o na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.\n\n");
   for (const spell of spells) {
     if (player.hasTag(spell.requiresTag)) {
-      form.button(`\xA7e[Buy Tome] \xA7r${spell.name}
-\xA77Cost: ${spell.costSouls} Souls`);
+      form.button(`\xA7e[Comprar Tomo] \xA7r${spell.name}\n\xA77Custo: ${spell.costSouls} Almas`);
     } else {
-      form.button(`\xA7c[Locked] \xA7r${spell.name}`);
+      form.button(`\xA7c[Bloqueado] \xA7r${spell.name}`);
     }
   }
   system5.run(() => {
@@ -2236,14 +2222,14 @@ function showSpellsList(player, spells) {
       const selectedSpell = spells[res.selection];
       const spellId = selectedSpell.tag.split(":")[1];
       if (!player.hasTag(selectedSpell.requiresTag)) {
-        player.sendMessage("\xA7c[Spellbook] You must unlock this spell in the Skill Tree first!");
+        player.sendMessage("\xA7c[Livro de Feiti\xE7os] Desbloqueie este feiti\xE7o na \xC1rvore de Habilidades primeiro!");
         return;
       }
       const objective = world7.scoreboard.getObjective("souls");
       if (!objective) return;
       const currentSouls = objective.getScore(player) || 0;
       if (currentSouls < selectedSpell.costSouls) {
-        player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
+        player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Almas insuficientes! Voc\xEA precisa de ${selectedSpell.costSouls} Almas.`);
         return;
       }
       showTomeChoice(player, selectedSpell, spellId, spells);
@@ -2254,7 +2240,7 @@ function showSpellsList(player, spells) {
 function showTomeChoice(player, selectedSpell, spellId, spells) {
   const options = SPELL_TOME_OPTIONS[spellId] ?? [{ tome: SPELL_TOMES[spellId], name: selectedSpell.name }];
   const form = new ActionFormData4().title(`\xA7d${selectedSpell.name}`);
-  form.body(`Choose which Infinite Tome you want (${selectedSpell.costSouls} Souls):`);
+  form.body(`Escolha qual Tomo Infinito voc\xEA quer (${selectedSpell.costSouls} Almas):`);
   for (const o of options) form.button(`\xA75${o.name}`);
   system5.run(() => {
     form.show(player).then((res) => {
@@ -2264,31 +2250,31 @@ function showTomeChoice(player, selectedSpell, spellId, spells) {
       if (!objective || !choice) return;
       const currentSouls = objective.getScore(player) || 0;
       if (currentSouls < selectedSpell.costSouls) {
-        player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
+        player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Almas insuficientes! Voc\xEA precisa de ${selectedSpell.costSouls} Almas.`);
         return;
       }
       objective.setScore(player, currentSouls - selectedSpell.costSouls);
       giveSpellTome(player, spellId, choice.tome);
-      player.sendMessage(`\xA7a[Spellbook] Bought the Infinite Tome: \xA7e${choice.name}`);
+      player.sendMessage(`\xA7a[Livro de Feiti\xE7os] Tomo Infinito comprado: \xA7e${choice.name}`);
     }).catch(e => {});
   });
 }
 
 // src/systems/classes.ts
 var ClassNames = {
-  0: "Unselected",
-  1: "Warrior",
-  2: "Ranger",
-  3: "Mage",
-  4: "Assassin",
-  5: "Survivor"
+  0: "Sem classe",
+  1: "Guerreiro",
+  2: "Patrulheiro",
+  3: "Mago",
+  4: "Assassino",
+  5: "Sobrevivente"
 };
 var ClassDescriptions = {
-  1: "\xA7lWarrior\xA7r\n\n\xA7aPros:\xA7r A powerful short range tank and sword fighter, who never accepts lose. Has more health and resistance, strength unlocked by leveling up, powerful armor on level up.",
-  2: "\xA7lRanger\xA7r\n\n\xA7aPros:\xA7r High speed and ranged damage.",
-  3: "\xA7lMage\xA7r\n\n\xA7aPros:\xA7r Magic utility and area damage.",
-  4: "\xA7lAssassin\xA7r\n\n\xA7aPros:\xA7r High burst damage and mobility.",
-  5: "\xA7lSurvivor\xA7r\n\n\xA7aPros:\xA7r Balanced stats, good for beginners."
+  1: "\xA7lGuerreiro\xA7r\n\n\xA7aVantagens:\xA7r Um tanque poderoso de curto alcance e lutador de espada que nunca aceita a derrota. Tem mais vida e resist\xEAncia, for\xE7a desbloqueada ao subir de n\xEDvel e armadura poderosa a cada n\xEDvel.",
+  2: "\xA7lPatrulheiro\xA7r\n\n\xA7aVantagens:\xA7r Muita velocidade e dano \xE0 dist\xE2ncia.",
+  3: "\xA7lMago\xA7r\n\n\xA7aVantagens:\xA7r Utilidade m\xE1gica e dano em \xE1rea.",
+  4: "\xA7lAssassino\xA7r\n\n\xA7aVantagens:\xA7r Dano explosivo alto e mobilidade.",
+  5: "\xA7lSobrevivente\xA7r\n\n\xA7aVantagens:\xA7r Atributos equilibrados, bom para iniciantes."
 };
 function getPlayerScoreSafe(objective, player, fallback = 0) {
   try {
@@ -2311,7 +2297,7 @@ world8.afterEvents.itemUse.subscribe((event) => {
         if (!player.isValid()) return;
         const classObj = world8.scoreboard.getObjective("class");
         if (!classObj) {
-          player.sendMessage("\xA7c[RPG] The class scoreboard is missing.");
+          player.sendMessage("\xA7c[RPG] O placar de classe n\xE3o existe.");
           return;
         }
         const currentClass = getPlayerScoreSafe(classObj, player, 0);
@@ -2325,13 +2311,13 @@ world8.afterEvents.itemUse.subscribe((event) => {
       } catch (e) {
         console.warn(`[RPG Guide] Failed to open menu: ${e}`);
         try {
-          player.sendMessage("\xA7c[RPG] The menu could not open. Please use the book again.");
+          player.sendMessage("\xA7c[RPG] O menu n\xE3o abriu. Use o livro de novo.");
         } catch (ignored) { console.warn("Caught error:", ignored, ignored?.stack); }
       }
     });
 });
 function showClassSelectionUI(player) {
-  const form = new ActionFormData5().title("Select Your Class").body("Choose your destiny carefully. This cannot be changed later!").button("Warrior").button("Ranger").button("Mage").button("Assassin").button("Survivor");
+  const form = new ActionFormData5().title("Escolha sua classe").body("Escolha seu destino com cuidado. Depois, s\xF3 d\xE1 para trocar nas Configura\xE7\xF5es.").button("Guerreiro").button("Patrulheiro").button("Mago").button("Assassino").button("Sobrevivente");
   form.show(player).then((response) => {
     if (response.canceled) return;
     const selection = (response.selection ?? 0) + 1;
@@ -2339,14 +2325,14 @@ function showClassSelectionUI(player) {
   }).catch(e => {});
 }
 function showClassDetailsUI(player, classId) {
-  const desc = ClassDescriptions[classId] || "Unknown Class";
-  const className = ClassNames[classId] || "Unknown";
-  const form = new ActionFormData5().title(`Class Details: ${className}`).body(desc + "\n\n\xA7eAre you sure you want to select this class?").button("\xA72Select " + className).button("\xA7cBack to Menu");
+  const desc = ClassDescriptions[classId] || "Classe desconhecida";
+  const className = ClassNames[classId] || "Desconhecido";
+  const form = new ActionFormData5().title(`Detalhes da classe: ${className}`).body(desc + "\n\n\xA7eTem certeza de que quer esta classe?").button("\xA72Escolher " + className).button("\xA7cVoltar ao menu");
   form.show(player).then((response) => {
     if (response.canceled) return;
     if (response.selection === 0) {
       setClass(player, classId);
-      player.sendMessage("\xA7a[System] You can access your Spellbook and Skill Tree directly from the RPG Guide!");
+      player.sendMessage("\xA7a[Sistema] O Livro de Feiti\xE7os e a \xC1rvore de Habilidades ficam no RPG Guide!");
     } else if (response.selection === 1) {
       showClassSelectionUI(player);
     }
@@ -2356,7 +2342,7 @@ function setClass(player, classId) {
   const classObj = world8.scoreboard.getObjective("class");
   if (!classObj) return;
   classObj.setScore(player, classId);
-  player.sendMessage("\xA7aYou have successfully become a \xA7e" + ClassNames[classId] + "\xA7a!");
+  player.sendMessage("\xA7aAgora voc\xEA \xE9 um \xA7e" + ClassNames[classId] + "\xA7a!");
   player.playSound("random.levelup");
   if (classId === 3 /* Mage */ && !player.hasTag("initial_mage_souls")) {
     const soulsObj = world8.scoreboard.getObjective("souls");
@@ -2364,7 +2350,7 @@ function setClass(player, classId) {
       const currentSouls = soulsObj.getScore(player) ?? 0;
       soulsObj.setScore(player, currentSouls + 70);
       player.addTag("initial_mage_souls");
-      player.sendMessage("\xA7b[Bonus] You received 70 Souls as a starting bonus for choosing Mage!");
+      player.sendMessage("\xA7b[B\xF4nus] Voc\xEA recebeu 70 Almas de b\xF4nus inicial por escolher Mago!");
     }
   }
   const levelObj = world8.scoreboard.getObjective("level");
@@ -2381,54 +2367,46 @@ function showPlayerMenuUI(player, classId) {
   const currentSouls = getPlayerScoreSafe(soulsObj, player, 0);
   const req = getLevelRequirement(currentLevel + 1);
   const canLevelUp = player.level >= req.xpLevel && currentSouls >= req.souls;
-  let bodyText = `\xA7bClass: \xA7e${ClassNames[classId]}
-`;
-  bodyText += `\xA7bRPG Level: \xA7e${currentLevel}
-`;
-  bodyText += `\xA7bSouls: \xA7c${currentSouls}
-
-`;
-  bodyText += `\xA7lRequirements for Level ${currentLevel + 1}:\xA7r
-`;
-  bodyText += `XP Levels: ${player.level} / ${req.xpLevel}
-`;
-  bodyText += `Souls: ${currentSouls} / ${req.souls}
-
-`;
+  let bodyText = `\xA7bClasse: \xA7e${ClassNames[classId]}\n`;
+  bodyText += `\xA7bN\xEDvel de RPG: \xA7e${currentLevel}\n`;
+  bodyText += `\xA7bAlmas: \xA7c${currentSouls}\n\n`;
+  bodyText += `\xA7lRequisitos para o N\xEDvel ${currentLevel + 1}:\xA7r\n`;
+  bodyText += `N\xEDveis de XP: ${player.level} / ${req.xpLevel}\n`;
+  bodyText += `Almas: ${currentSouls} / ${req.souls}\n\n`;
   if (canLevelUp) {
-    bodyText += "\xA7aYou are ready to level up!";
+    bodyText += "\xA7aVoc\xEA pode subir de n\xEDvel!";
   } else {
-    bodyText += "\xA7cYou need more XP Levels or Souls.";
+    bodyText += "\xA7cVoc\xEA precisa de mais n\xEDveis de XP ou Almas.";
   }
-  const form = new ActionFormData5().title("Player Menu").body(bodyText);
+  const form = new ActionFormData5().title("Menu do Jogador").body(bodyText);
   const buttons = [];
   if (canLevelUp) {
-    buttons.push({ text: "\xA7aLevel Up!", action: () => {
+    buttons.push({ text: "\xA7aSubir de n\xEDvel!", action: () => {
       player.addLevels(-req.xpLevel);
       soulsObj.setScore(player, currentSouls - req.souls);
       levelUp(player, currentLevel + 1, classId);
     } });
   } else {
-    buttons.push({ text: "\xA78[Not Ready]", action: () => {
+    buttons.push({ text: "\xA78[N\xE3o est\xE1 pronto]", action: () => {
     } });
   }
-  buttons.push({ text: "\xA7cSoul Shop", action: () => showSoulShopUI(player) });
+  buttons.push({ text: "\xA7cLoja de Almas", action: () => showSoulShopUI(player) });
   if (classId !== 0 /* Unselected */) {
-    buttons.push({ text: "\xA76Skill Tree", action: () => spawnSkillTreeUI(player) });
+    buttons.push({ text: "\xA76\xC1rvore de Habilidades", action: () => spawnSkillTreeUI(player) });
   } else {
-    buttons.push({ text: "\xA76Skill Tree", action: () => {
-      player.sendMessage("\xA7ePlease select a class first!\xA7r");
+    buttons.push({ text: "\xA76\xC1rvore de Habilidades", action: () => {
+      player.sendMessage("\xA7eEscolha uma classe primeiro!\xA7r");
     } });
   }
   if (currentLevel >= 19) {
-    buttons.push({ text: "\xA74\u2620 Fight Boss \u2620", action: () => showBossWarningUI(player) });
+    buttons.push({ text: "\xA74\u2620 Enfrentar o Chefe \u2620", action: () => showBossWarningUI(player) });
   }
   if (classId === 3 /* Mage */) {
-    buttons.push({ text: "\xA75Mage Spellbook", action: () => showSpellbookUI(player) });
+    buttons.push({ text: "\xA75Livro de Feiti\xE7os do Mago", action: () => showSpellbookUI(player) });
   }
   buttons.push({ text: "\xA75Estante de Tomos", action: () => showTomeShelfUI(player) });
-  buttons.push({ text: "\xA78Settings", action: () => showSettingsUI(player) });
-  buttons.push({ text: "Close", action: () => {
+  buttons.push({ text: "\xA78Configura\xE7\xF5es", action: () => showSettingsUI(player) });
+  buttons.push({ text: "Fechar", action: () => {
   } });
   for (const b of buttons) {
     form.button(b.text);
@@ -2507,19 +2485,19 @@ function showSettingsUI(player) {
   const classObj = world8.scoreboard.getObjective("class");
   const currentClass = getPlayerScoreSafe(classObj, player, 0);
 
-  const form = new ActionFormData5().title("Settings").body("Choose a setting to manage:");
-  form.button("Item Lock Settings");
-  form.button("Block Destruction Settings");
-  form.button("HUD Settings");
+  const form = new ActionFormData5().title("Configura\xE7\xF5es").body("Escolha uma configura\xE7\xE3o:");
+  form.button("Trava de itens");
+  form.button("Destrui\xE7\xE3o de blocos");
+  form.button("HUD");
   
   const showBowSummon = currentClass === 2 || (currentClass === 4 && player.hasTag("shop_assassin_bow"));
   if (showBowSummon) {
-    form.button("Summon Bow");
+    form.button("Invocar arco");
   }
   
-  form.button("Change Class");
-  form.button("New Beginning");
-  form.button("Back");
+  form.button("Trocar de classe");
+  form.button("Novo Come\xE7o");
+  form.button("Voltar");
   form.show(player).then((response) => {
     if (response.canceled) return;
     
@@ -2550,11 +2528,11 @@ function showSettingsUI(player) {
 }
 
 function showNewBeginningUI(player) {
-  const form = new ActionFormData5().title("New Beginning")
-    .body("By confirming, your all xp, skill points or pearks, souls will become zero and all skill will be locked and you will select your class again.");
+  const form = new ActionFormData5().title("Novo Come\xE7o")
+    .body("Ao confirmar, todo o seu XP, pontos de habilidade, vantagens e almas v\xE3o a zero, todas as habilidades s\xE3o bloqueadas e voc\xEA escolhe a classe de novo.");
   
-  form.button("Confirm");
-  form.button("Back");
+  form.button("Confirmar");
+  form.button("Voltar");
 
   form.show(player).then((response) => {
     if (response.canceled) return;
@@ -2574,7 +2552,7 @@ function showNewBeginningUI(player) {
       }
       
       giveRPGBook(player);
-      player.sendMessage("§a[System] New beginning confirmed. Your stats have been reset.");
+      player.sendMessage("\xA7a[Sistema] Novo come\xE7o confirmado. Seus atributos foram zerados.");
     } else if (response.selection === 1) {
       showSettingsUI(player);
     }
@@ -2635,11 +2613,11 @@ function showChangeClassUI(player) {
 }
 
 function showBowSummonUI(player) {
-  const form = new ActionFormData5().title("Summon Bow")
-    .body("If you lost or accidentally destroyed your class weapon (Ranger Bow or Assassin's Deadly Bow), you can summon a new one here.\n\nIt will match your current RPG Level.");
+  const form = new ActionFormData5().title("Invocar arco")
+    .body("Se voc\xEA perdeu ou destruiu sem querer a arma da sua classe (Arco de Patrulheiro ou Arco Mortal do Assassino), pode invocar uma nova aqui.\n\nEla acompanha o seu n\xEDvel de RPG atual.");
   
-  form.button("\xA7aSummon Bow");
-  form.button("Back");
+  form.button("\xA7aInvocar arco");
+  form.button("Voltar");
 
   form.show(player).then((response) => {
     if (response.canceled) return;
@@ -2665,11 +2643,11 @@ function showItemLockUI(player) {
     }
   }
 
-  const form = new ActionFormData5().title("Item Lock Settings")
-    .body("When enabled, important RPG items like your Guide Book and Ranger Bow are locked in your inventory so you cannot drop or lose them.");
+  const form = new ActionFormData5().title("Trava de itens")
+    .body("Ligado, os itens importantes do RPG, como o RPG Guide e o Arco de Patrulheiro, ficam travados no invent\xE1rio para voc\xEA n\xE3o largar nem perder.");
   
-  form.button(isLocked ? "\xA7cDisable Item Lock" : "\xA7aEnable Item Lock");
-  form.button("Back");
+  form.button(isLocked ? "\xA7cDesligar trava de itens" : "\xA7aLigar trava de itens");
+  form.button("Voltar");
 
   form.show(player).then((response) => {
     if (response.canceled) return;
@@ -2683,11 +2661,11 @@ function showItemLockUI(player) {
 
 function showBlockDestructionUI(player) {
   const isDestructive = player.hasTag("destroy_blocks");
-  const form = new ActionFormData5().title("Block Destruction")
-    .body("When enabled, powerful explosive abilities (like Mage Fireball upgrades) will destroy blocks and cause fire. Disable for safe explosions.");
+  const form = new ActionFormData5().title("Destrui\xE7\xE3o de blocos")
+    .body("Ligado, as habilidades explosivas (como as melhorias da Bola de Fogo do Mago) quebram blocos e p\xF5em fogo. Desligue para explos\xF5es seguras.");
   
-  form.button(isDestructive ? "\xA7cDisable Block Destruction" : "\xA7aEnable Block Destruction");
-  form.button("Back");
+  form.button(isDestructive ? "\xA7cDesligar destrui\xE7\xE3o de blocos" : "\xA7aLigar destrui\xE7\xE3o de blocos");
+  form.button("Voltar");
 
   form.show(player).then((response) => {
     if (response.canceled) return;
@@ -2701,11 +2679,11 @@ function showBlockDestructionUI(player) {
 
 function showHudToggleUI(player) {
   const isHidden = player.hasTag("hide_rpg_hud");
-  const form = new ActionFormData5().title("HUD Settings")
-    .body("When disabled, the custom RPG HUD (showing level, souls, and compass) will be hidden from your screen.");
+  const form = new ActionFormData5().title("HUD")
+    .body("Desligado, o HUD do RPG (n\xEDvel, almas e b\xFAssola) some da sua tela.");
   
-  form.button(isHidden ? "\xA7aShow HUD" : "\xA7cHide HUD");
-  form.button("Back");
+  form.button(isHidden ? "\xA7aMostrar HUD" : "\xA7cEsconder HUD");
+  form.button("Voltar");
 
   form.show(player).then((response) => {
     if (response.canceled) return;
@@ -2717,14 +2695,14 @@ function showHudToggleUI(player) {
   }).catch(e => {});
 }
 var SPELL_LIST = [
-  { id: "fireball", name: "Fireball", color: "\xA7c" },
-  { id: "frost", name: "Frost", color: "\xA7b" },
-  { id: "lightning", name: "Lightning", color: "\xA7e" },
-  { id: "invisibility", name: "Invisibility", color: "\xA77" }
+  { id: "fireball", name: "Bola de Fogo", color: "\xA7c" },
+  { id: "frost", name: "Gelo", color: "\xA7b" },
+  { id: "lightning", name: "Raio", color: "\xA7e" },
+  { id: "invisibility", name: "Invisibilidade", color: "\xA77" }
 ];
 function syncMageStaffName(player, level) {
   let activeSpellId = "none";
-  let activeSpellName = "No Spell";
+  let activeSpellName = "Sem feiti\xE7o";
   for (const spell of SPELL_LIST) {
     if (player.hasTag("active_spell:" + spell.id)) {
       activeSpellName = spell.name;
@@ -2740,7 +2718,7 @@ function syncMageStaffName(player, level) {
       if (item && item.typeId.startsWith("rpg:mage_staff")) {
         if (item.typeId !== targetTypeId) {
           const newItem = new ItemStack4(targetTypeId, 1);
-          newItem.nameTag = `\xA7dMage Staff Lvl.${level} \xA77[${activeSpellName}]`;
+          newItem.nameTag = `\xA7dCajado de Mago Nv.${level} \xA77[${activeSpellName}]`;
           newItem.keepOnDeath = true;
           newItem.lockMode = ItemLockMode4.inventory;
           const enchComp = newItem.getComponent("enchantable");
@@ -2762,7 +2740,7 @@ function syncMageStaffName(player, level) {
           }
           inv.container.setItem(i, newItem);
         } else {
-          item.nameTag = `\xA7dMage Staff Lvl.${level} \xA77[${activeSpellName}]`;
+          item.nameTag = `\xA7dCajado de Mago Nv.${level} \xA77[${activeSpellName}]`;
           item.keepOnDeath = true;
           item.lockMode = ItemLockMode4.inventory;
           const enchComp2 = item.getComponent("enchantable");
@@ -2833,7 +2811,7 @@ world9.afterEvents.entityDie.subscribe((event) => {
         try {
           for (const p of world9.getAllPlayers()) {
             if (p.id === ownerId) {
-              p.sendMessage("\xA7c[Warden Guard]\xA74 Your Warden Guard has fallen in battle! You can summon a new guard in 5 Minecraft days.\xA7r");
+              p.sendMessage("\xA7c[Guardi\xE3o Warden]\xA74 Seu Guardi\xE3o Warden caiu em batalha! Voc\xEA pode invocar outro em 5 dias do Minecraft.\xA7r");
               break;
             }
           }
@@ -3004,16 +2982,16 @@ system7.runInterval(() => {
       const isClone = nearestBoss.typeId.includes("clone");
       const isFlying = markVariant === 2 || variant === 3 || nearestBoss.hasTag("phase_2");
 
-      let stateName = "\xA78IDLE";
+      let stateName = "\xA78PARADO";
       if (isFlying) {
-        if (variant === 1) stateName = "\xA7dFLYING (Beam Attack)";
-        else if (variant === 3) stateName = "\xA75CLONE (Airborne)";
-        else stateName = "\xA7dAIRBORNE (Hovering)";
+        if (variant === 1) stateName = "\xA7dVOANDO (ataque de raio)";
+        else if (variant === 3) stateName = "\xA75CLONE (no ar)";
+        else stateName = "\xA7dNO AR (pairando)";
       } else {
-        if (variant === 0) stateName = "\xA7cMELEE MODE (Smash)";
-        else if (variant === 1) stateName = "\xA7aRANGED MODE (Shooting)";
-        else if (variant === 2) stateName = "\xA77IDLE MODE";
-        else if (variant === 3) stateName = "\xA75CLONE MODE";
+        if (variant === 0) stateName = "\xA7cMODO CORPO A CORPO (esmagar)";
+        else if (variant === 1) stateName = "\xA7aMODO \xC0 DIST\xC2NCIA (tiros)";
+        else if (variant === 2) stateName = "\xA77MODO PARADO";
+        else if (variant === 3) stateName = "\xA75MODO CLONE";
       }
 
       const healthComp = nearestBoss.getComponent("minecraft:health");
@@ -3026,17 +3004,17 @@ system7.runInterval(() => {
         const filled = Math.ceil(p * bars);
         const empty = bars - filled;
         const barStr = "\xA7c" + "|".repeat(filled) + "\xA78" + "|".repeat(empty);
-        const name = isClone ? "Boss Clone" : "Pillager Boss";
+        const name = isClone ? "Clone do Chefe" : "Chefe Saqueador";
         bossHpText = `\xA7l\xA75[${name}]\xA7r ${barStr} \xA7e${Math.floor(curHp)}/${maxHp}`;
       }
 
-      const bossAiInfoText = `\xA7e[Boss AI] \xA7fDist: \xA7b${distStr}m \xA7f| State: ${stateName} \xA7f(Variant: ${variant})`;
+      const bossAiInfoText = `\xA7e[IA do Chefe] \xA7fDist: \xA7b${distStr}m \xA7f| Estado: ${stateName} \xA7f(Variante: ${variant})`;
       text = centerHudLines([compassText, bossHpText, bossAiInfoText]);
     } else {
       // Normal RPG HUD when not in boss combat
-      let rpgStatsText = `\xA7l\xA76RPG\xA7r \xA78| \xA7bClass: \xA7e${ClassNames[stats.classId]}\xA7r \xA78| \xA7aLv: \xA7e${stats.level}\xA7r \xA78| \xA7cSouls: \xA7e${stats.souls}\xA7r \xA78| \xA7dPerks: \xA7e${stats.perks}\xA7r`;
+      let rpgStatsText = `\xA7l\xA76RPG\xA7r \xA78| \xA7bClasse: \xA7e${ClassNames[stats.classId]}\xA7r \xA78| \xA7aNv: \xA7e${stats.level}\xA7r \xA78| \xA7cAlmas: \xA7e${stats.souls}\xA7r \xA78| \xA7dVantagens: \xA7e${stats.perks}\xA7r`;
       if (stats.levelUpAvailable) {
-        rpgStatsText += " \xA78| \xA7a\xA7l[LEVEL UP AVAILABLE]";
+        rpgStatsText += " \xA78| \xA7a\xA7l[SUBIR DE N\xCDVEL DISPON\xCDVEL]";
       }
       text = centerHudLines([compassText, rpgStatsText]);
     }
@@ -3375,7 +3353,7 @@ function checkCooldown(player, key, cooldownSeconds) {
   if (COOLDOWNS.has(key)) {
     const remaining = COOLDOWNS.get(key) - system8.currentTick;
     if (remaining > 0) {
-      sendCooldownMessageThrottled(player, key, `\xA7cAbility is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+      sendCooldownMessageThrottled(player, key, `\xA7cHabilidade em recarga! (${(remaining / 20).toFixed(1)}s)`);
       return true;
     }
   }
@@ -3564,10 +3542,10 @@ function initCombatSystem() {
             if (eqComp && eqComp.container) {
               const leftover = eqComp.container.addItem(book);
               if (leftover) player.dimension.spawnItem(leftover, player.location);
-              player.sendMessage(`\xA7d[Enchantment] \xA7fYou received an enchanted book of ${randomEnchant}!`);
+              player.sendMessage(`\xA7d[Encantamento] \xA7fVoc\xEA recebeu um livro encantado de ${randomEnchant}!`);
             }
           } catch (e) {
-            player.sendMessage(`\xA7cFailed to generate enchantment: ${randomEnchant}`);
+            player.sendMessage(`\xA7cN\xE3o foi poss\xEDvel gerar o encantamento: ${randomEnchant}`);
           }
         }
       }
@@ -3575,7 +3553,7 @@ function initCombatSystem() {
         if (player.hasTag("shop_effectmage") && !player.hasTag("shop_effectmage_off")) {
           const randomEffect = MAGE_BLESSING_EFFECTS[Math.floor(Math.random() * MAGE_BLESSING_EFFECTS.length)];
           player.addEffect(randomEffect, 20 * 60, { amplifier: 0, showParticles: true });
-          player.sendMessage(`\xA7d[Effect Mage] \xA7fYou received a random blessing: ${randomEffect} for 1 minute!`);
+          player.sendMessage(`\xA7d[Mago dos Efeitos] \xA7fVoc\xEA recebeu uma b\xEAn\xE7\xE3o aleat\xF3ria: ${randomEffect} por 1 minuto!`);
         }
       }
       if (player.hasTag("active_spell:invisibility")) {
@@ -3688,7 +3666,7 @@ function initCombatSystem() {
       if (doDisharm && player.hasTag("shop_assassin_disharm") && !player.hasTag("shop_assassin_disharm_off")) {
         player.addEffect("minecraft:invisibility", 400, { amplifier: 0, showParticles: false });
         player.addTag("active_disharm_immunity");
-        player.sendMessage("\xA78[Assassin] \xA7fYou vanish into the shadows! Protected from most damage for 20s.");
+        player.sendMessage("\xA78[Assassino] \xA7fVoc\xEA some nas sombras! Protegido da maior parte do dano por 20s.");
         system8.runTimeout(() => {
           if (player.isValid()) player.removeTag("active_disharm_immunity");
         }, 400);
@@ -3739,7 +3717,7 @@ function initCombatSystem() {
               const leftover = inv.container.addItem(item);
               if (leftover) player.dimension.spawnItem(leftover, player.location);
             }
-            player.sendMessage("\xA7aAdventure's Reserve supplies arrived!");
+            player.sendMessage("\xA7aOs suprimentos da Reserva do Aventureiro chegaram!");
           } catch (e) {
             console.warn(e);
           }
@@ -3751,14 +3729,14 @@ function initCombatSystem() {
           const newHealth = Math.min(health.currentValue + 10, health.effectiveMax);
           health.setCurrentValue(newHealth);
           player.dimension.spawnParticle("minecraft:heart_particle", player.location);
-          player.sendMessage("\xA7aMedkit healed you!");
+          player.sendMessage("\xA7aO kit m\xE9dico curou voc\xEA!");
         }
       }
       if (doEffects && player.hasTag("shop_survivor_effect") && !player.hasTag("shop_survivor_effect_off")) {
         const buffs = ["minecraft:speed", "minecraft:jump_boost", "minecraft:haste", "minecraft:strength"];
         const buff = buffs[Math.floor(Math.random() * buffs.length)];
         player.addEffect(buff, 1200, { amplifier: 0, showParticles: true });
-        player.sendMessage(`\xA7aRandom Effect triggered: ${buff}!`);
+        player.sendMessage(`\xA7aEfeito aleat\xF3rio ativado: ${buff}!`);
       }
       if (player.hasTag("shop_survivor_vision") && !player.hasTag("shop_survivor_vision_off")) {
         player.addEffect("minecraft:night_vision", 400, { amplifier: 0, showParticles: false });
@@ -3907,12 +3885,12 @@ function initCombatSystem() {
           const playerId = player.id;
           COOLDOWNS.set(cooldownKey, readyTick);
           dealTrueDamage(target, 7, player);
-          player.sendMessage("\xA7c\u2605 [Surprise Attack] \xA7f7 bonus damage!");
+          player.sendMessage("\xA7c\u2605 [Ataque Surpresa] \xA7f7 de dano b\xF4nus!");
           system8.runTimeout(() => {
             if ((COOLDOWNS.get(cooldownKey) ?? 0) !== readyTick || system8.currentTick < readyTick) return;
             const currentPlayer = world11.getEntity(p);
             if (currentPlayer?.isValid()) {
-              currentPlayer.sendMessage("\xA7aYour Surprise Attack is Ready!");
+              currentPlayer.sendMessage("\xA7aSeu Ataque Surpresa est\xE1 pronto!");
             }
             COOLDOWNS.delete(cooldownKey);
           }, 120 * 20 + 1);
@@ -3930,12 +3908,12 @@ function initCombatSystem() {
           COOLDOWNS.set(cooldownKey, readyTick);
           health.setCurrentValue(Math.min(health.effectiveMax, health.currentValue + 10));
           player.dimension.spawnParticle("minecraft:heart_particle", player.location);
-          player.sendMessage("\xA7c\u2605 [Vampiric Strike] \xA7fHealed 5 hearts!");
+          player.sendMessage("\xA7c\u2605 [Golpe Vamp\xEDrico] \xA7fCurou 5 cora\xE7\xF5es!");
           system8.runTimeout(() => {
             if ((COOLDOWNS.get(cooldownKey) ?? 0) !== readyTick || system8.currentTick < readyTick) return;
             const currentPlayer = world11.getEntity(p);
             if (currentPlayer?.isValid()) {
-              currentPlayer.sendMessage("\xA7aYour Vampiric Strike is Ready!");
+              currentPlayer.sendMessage("\xA7aSeu Golpe Vamp\xEDrico est\xE1 pronto!");
             }
             COOLDOWNS.delete(cooldownKey);
           }, 75 * 20 + 1);
@@ -3978,13 +3956,13 @@ function initCombatSystem() {
             if ((COOLDOWNS.get(cdKey) ?? 0) !== readyTick || system8.currentTick < readyTick) return;
             const currentPlayer = world11.getEntity(p);
             if (currentPlayer?.isValid()) {
-              currentPlayer.sendMessage("\xA7aYour Deadly Strike is Ready!");
+              currentPlayer.sendMessage("\xA7aSeu Golpe Mortal est\xE1 pronto!");
             }
             COOLDOWNS.delete(cdKey);
           }, 60 * 20 + 1);
           dealTrueDamage(target, 40, player);
           player.dimension.spawnParticle("minecraft:large_explosion", target.location);
-          player.sendMessage("\xA7c[Deadly Strike] \xA7fCombo triggered! 40 bonus damage!");
+          player.sendMessage("\xA7c[Golpe Mortal] \xA7fCombo! 40 de dano b\xF4nus!");
         }
         ikState.hits = 0;
         IK_STATES.set(ikDataKey, ikState);
@@ -4163,7 +4141,7 @@ function initCombatSystem() {
       if (COOLDOWNS.has(cooldownKey)) {
         const remaining = COOLDOWNS.get(cooldownKey) - system8.currentTick;
         if (remaining > 0) {
-          source.sendMessage(`\xA7cArrow Volley is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+          source.sendMessage(`\xA7cSaraivada de Flechas em recarga! (${(remaining / 20).toFixed(1)}s)`);
           return;
         }
       }
@@ -4262,7 +4240,7 @@ function handlePhysicalInputs(player) {
           castAssassinDash(player);
           COOLDOWNS.set(cooldownKey, currentTick + 4 * 20);
         } else {
-          player.sendMessage(`\xA7cShadow Dash is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+          player.sendMessage(`\xA7cInvestida Sombria em recarga! (${(remaining / 20).toFixed(1)}s)`);
         }
       }
       lastSneakStartTick.set(player.id, 0);
@@ -4287,7 +4265,7 @@ function handlePhysicalInputs(player) {
         castSwordAbility(player);
         COOLDOWNS.set(cooldownKey, system8.currentTick + 300 * 20);
       } else {
-        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cSword Ability is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cHabilidade da espada em recarga! (${(remaining / 20).toFixed(1)}s)`);
       }
     }
     if (player.hasTag("equipped_active_ability_groundsmash")) {
@@ -4297,7 +4275,7 @@ function handlePhysicalInputs(player) {
         castGroundSmash(player);
         COOLDOWNS.set(cooldownKey, system8.currentTick + 120 * 20);
       } else {
-        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cGround Smash is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cEsmagar o Ch\xE3o em recarga! (${(remaining / 20).toFixed(1)}s)`);
       }
     }
     if (player.hasTag("equipped_active_ability_attack_strength")) {
@@ -4307,7 +4285,7 @@ function handlePhysicalInputs(player) {
         castAttackStrength(player);
         COOLDOWNS.set(cooldownKey, system8.currentTick + 300 * 20);
       } else {
-        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cAttack Strength is on cooldown! (${(remaining / 20).toFixed(1)}s)`);
+        sendCooldownMessageThrottled(player, cooldownKey, `\xA7cFor\xE7a de Ataque em recarga! (${(remaining / 20).toFixed(1)}s)`);
       }
     }
     if (player.hasTag("equipped_active_ability_warrior_earthquake")) {
@@ -4435,15 +4413,15 @@ function handlePhysicalInputs(player) {
 function getCardinalDirection(dx, dz) {
   let angle = Math.atan2(dx, -dz) * (180 / Math.PI);
   if (angle < 0) angle += 360;
-  if (angle >= 337.5 || angle < 22.5) return "North";
-  if (angle >= 22.5 && angle < 67.5) return "North-East";
-  if (angle >= 67.5 && angle < 112.5) return "East";
-  if (angle >= 112.5 && angle < 157.5) return "South-East";
-  if (angle >= 157.5 && angle < 202.5) return "South";
-  if (angle >= 202.5 && angle < 247.5) return "South-West";
-  if (angle >= 247.5 && angle < 292.5) return "West";
-  if (angle >= 292.5 && angle < 337.5) return "North-West";
-  return "North";
+  if (angle >= 337.5 || angle < 22.5) return "Norte";
+  if (angle >= 22.5 && angle < 67.5) return "Nordeste";
+  if (angle >= 67.5 && angle < 112.5) return "Leste";
+  if (angle >= 112.5 && angle < 157.5) return "Sudeste";
+  if (angle >= 157.5 && angle < 202.5) return "Sul";
+  if (angle >= 202.5 && angle < 247.5) return "Sudoeste";
+  if (angle >= 247.5 && angle < 292.5) return "Oeste";
+  if (angle >= 292.5 && angle < 337.5) return "Noroeste";
+  return "Norte";
 }
 async function getNearestStructureName(player) {
   const dim = player.dimension.id;
@@ -4461,15 +4439,15 @@ async function getNearestStructureName(player) {
       }
     } catch (_) {}
   }
-  if (dim.includes("nether")) return "Nether Fortress";
-  if (dim.includes("the_end")) return "End City";
-  return "Village";
+  if (dim.includes("nether")) return "Fortaleza do Nether";
+  if (dim.includes("the_end")) return "Cidade do End";
+  return "Vila";
 }
 async function castMasterCartographer(player) {
   try {
     player.playSound("ui.cartography_table.take_result");
   } catch (_) {}
-  let listStr = "\xA7a--- Master Cartographer (Survivor) ---\xA7r\n";
+  let listStr = "\xA7a--- Mestre Cart\xF3grafo (Sobrevivente) ---\xA7r\n";
   const allPlayers = world11.getAllPlayers();
   let foundOther = false;
   for (const p of allPlayers) {
@@ -4479,17 +4457,17 @@ async function castMasterCartographer(player) {
     listStr += `\xA7e${p.name}\xA7r: X: ${Math.floor(p.location.x)}, Y: ${Math.floor(p.location.y)}, Z: ${Math.floor(p.location.z)}\n`;
   }
   if (!foundOther) {
-    listStr += "\xA77No other players found in the world.\xA7r\n";
+    listStr += "\xA77Nenhum outro jogador no mundo.\xA7r\n";
   }
   const structName = await getNearestStructureName(player);
-  listStr += `\n\xA7bNearest Structure\xA7r: \xA7e${structName}\xA7r`;
+  listStr += `\n\xA7bEstrutura mais pr\xF3xima\xA7r: \xA7e${structName}\xA7r`;
   player.sendMessage(listStr);
 }
 function castSenseHeading(player) {
   try {
     player.playSound("random.bow");
   } catch (_) {}
-  let listStr = "\xA7a--- Sense Heading (Ranger) ---\xA7r\n";
+  let listStr = "\xA7a--- Senso de Dire\xE7\xE3o (Patrulheiro) ---\xA7r\n";
   const allPlayers = world11.getAllPlayers();
   let foundOther = false;
   for (const p of allPlayers) {
@@ -4504,7 +4482,7 @@ function castSenseHeading(player) {
     listStr += `\xA7e${p.name}\xA7r: \xA7b${dist}m ${dirStr}\xA7r\n`;
   }
   if (!foundOther) {
-    listStr += "\xA77No other players found in the world.\xA7r\n";
+    listStr += "\xA77Nenhum outro jogador no mundo.\xA7r\n";
   }
   player.sendMessage(listStr);
 }
@@ -4531,13 +4509,13 @@ function castSwordAbility(player) {
     }
     const added = giveOrDropItem(player, sword);
     if (!added) {
-      player.sendMessage("\xA7cYour inventory is full! The sword fell to the ground.");
+      player.sendMessage("\xA7cSeu invent\xE1rio est\xE1 cheio! A espada caiu no ch\xE3o.");
     }
   }
   if (player.hasTag("shop_unbreakable_sword")) {
-    player.sendMessage("\xA7bYou summoned an Unbreakable Cursed Diamond Sword!");
+    player.sendMessage("\xA7bVoc\xEA invocou uma Espada de Diamante amaldi\xE7oada e inquebr\xE1vel!");
   } else {
-    player.sendMessage("\xA7bYou summoned a cursed Iron Sword!");
+    player.sendMessage("\xA7bVoc\xEA invocou uma Espada de Ferro amaldi\xE7oada!");
   }
 }
 function castGroundSmash(player) {
@@ -4562,7 +4540,7 @@ function castGroundSmash(player) {
   }
   player.addEffect("minecraft:resistance", 30 * 20, { amplifier: 0, showParticles: true });
   player.addEffect("minecraft:absorption", 30 * 20, { amplifier: 0, showParticles: true });
-  player.sendMessage("\xA7bYou used Ground Smash!");
+  player.sendMessage("\xA7bVoc\xEA usou Esmagar o Ch\xE3o!");
 }
 function castWarriorEarthquake(player) {
   player.playSound("random.anvil_land");
@@ -4583,7 +4561,7 @@ function castWarriorEarthquake(player) {
       entity.applyKnockback(dx / dist, dz / dist, 2, 0.5);
     } catch (e) { console.warn("Caught error:", e, e?.stack); }
   }
-  player.sendMessage("\xA7bYou used Earthquake Slam!");
+  player.sendMessage("\xA7bVoc\xEA usou Golpe S\xEDsmico!");
 }
 function castWarriorSmash(player) {
   player.playSound("random.explode");
@@ -4603,7 +4581,7 @@ function castWarriorSmash(player) {
       entity.applyKnockback(dx / dist, dz / dist, 1.5, 0.5);
     } catch (e) { console.warn("Caught error:", e, e?.stack); }
   }
-  player.sendMessage("\xA7cYou used Ground Smash!");
+  player.sendMessage("\xA7cVoc\xEA usou Esmagar o Ch\xE3o!");
 }
 function castAssassinDash(player) {
   const viewDir = player.getViewDirection();
@@ -4618,7 +4596,7 @@ function castAssassinDash(player) {
   player.teleport(newLoc, { checkForBlocks: true });
   player.dimension.spawnParticle("minecraft:endrod", currentLoc);
   player.dimension.spawnParticle("minecraft:endrod", player.location);
-  player.sendMessage("\xA78You used Shadow Dash!");
+  player.sendMessage("\xA78Voc\xEA usou Investida Sombria!");
 }
 function castSurvivorDash(player) {
   player.playSound("mob.enderdragon.flap");
@@ -4643,14 +4621,14 @@ function castSurvivorDash(player) {
   }
   player.addEffect("minecraft:invisibility", 200, { amplifier: 0, showParticles: true });
   player.addEffect("minecraft:resistance", 200, { amplifier: 0, showParticles: true });
-  player.sendMessage("\xA7bYou used Dash!");
+  player.sendMessage("\xA7bVoc\xEA usou Investida!");
 }
 function castSurvivorSafety(player) {
   player.playSound("random.orb");
   player.addEffect("minecraft:resistance", 600, { amplifier: 2, showParticles: true });
   player.addEffect("minecraft:fire_resistance", 600, { amplifier: 0, showParticles: true });
   player.addEffect("minecraft:absorption", 600, { amplifier: 0, showParticles: true });
-  player.sendMessage("\xA7aSafety protocol activated for 30s!");
+  player.sendMessage("\xA7aProtocolo de seguran\xE7a ativado por 30s!");
 }
 function castRangerVolley(player) {
   player.playSound("random.bow");
@@ -4676,7 +4654,7 @@ function castRangerVolley(player) {
     };
     arrow.applyImpulse(velocity);
   }
-  player.sendMessage("\xA7aYou used Arrow Volley!");
+  player.sendMessage("\xA7aVoc\xEA usou Saraivada de Flechas!");
 }
 function castRangerRapidArrow(player) {
   player.playSound("random.bow");
@@ -4715,12 +4693,12 @@ function castRangerRapidArrow(player) {
       system8.clearRun(shootInterval);
     }
   }, 2);
-  player.sendMessage("\xA7a[Rapid Arrow] \xA7f60 arrows unleashed! Aim to direct the volley!");
+  player.sendMessage("\xA7a[Flecha R\xE1pida] \xA7f60 flechas disparadas! Mire para guiar a saraivada!");
 }
 function castRangerAim(player) {
   player.playSound("random.orb");
   player.addEffect("minecraft:night_vision", 1200, { amplifier: 0, showParticles: true });
-  player.sendMessage("\xA7aAim activated! Night Vision granted for 1 minute.");
+  player.sendMessage("\xA7aMira ativada! Vis\xE3o Noturna por 1 minuto.");
 }
 function castAttackStrength(player) {
   player.playSound("mob.enderdragon.growl");
@@ -4757,20 +4735,20 @@ function castAttackStrength(player) {
       }
     }
   }
-  player.sendMessage("\xA7bYou unleashed Attack Strength! Massive buffs applied and nearby hostiles took damage.");
+  player.sendMessage("\xA7bVoc\xEA liberou For\xE7a de Ataque! B\xF4nus enormes aplicados e os hostis pr\xF3ximos sofreram dano.");
 }
 function castSurvivorHide(player) {
   player.playSound("mob.endermen.portal");
   player.dimension.spawnParticle("minecraft:egg_destroy_emitter", player.location);
   player.addEffect("minecraft:invisibility", 1200, { amplifier: 0, showParticles: true });
-  player.sendMessage("\xA78You are now hidden! Mobs will ignore you for 60 seconds.");
+  player.sendMessage("\xA78Voc\xEA est\xE1 escondido! Os mobs v\xE3o ignorar voc\xEA por 60 segundos.");
 }
 function castSurvivorSpeedboost(player) {
   player.playSound("mob.enderdragon.flap");
   player.addEffect("minecraft:speed", 400, { amplifier: 2, showParticles: true });
   player.addEffect("minecraft:jump_boost", 400, { amplifier: 1, showParticles: true });
   player.addEffect("minecraft:resistance", 400, { amplifier: 1, showParticles: true });
-  player.sendMessage("\xA7bSpeedboost activated for 20 seconds!");
+  player.sendMessage("\xA7bImpulso de velocidade ativado por 20 segundos!");
 }
 function castSurvivorLock(player) {
   player.playSound("random.anvil_land");
@@ -4839,14 +4817,14 @@ function castSurvivorLock(player) {
       console.warn(e);
     }
   }
-  player.sendMessage("\xA77[Survivor] 6x6 emergency shelter created with a crafting table and furnace!");
+  player.sendMessage("\xA77[Sobrevivente] Abrigo de emerg\xEAncia 6x6 criado com mesa de trabalho e fornalha!");
 }
 function castAssassinVanish(player) {
   player.playSound("random.fizz");
   player.addEffect("minecraft:invisibility", 900, { amplifier: 0, showParticles: true });
 }
 function castAssassinBlind(player) {
-  player.sendMessage("\xA78[Assassin] You cast Blindness on nearby enemies!");
+  player.sendMessage("\xA78[Assassino] Voc\xEA lan\xE7ou Cegueira nos inimigos pr\xF3ximos!");
   player.addEffect("minecraft:invisibility", 20 * 20, { amplifier: 0, showParticles: false });
   const targets = player.dimension.getEntities({ location: player.location, maxDistance: 15 });
   for (const target of targets) {
@@ -4857,7 +4835,7 @@ function castAssassinBlind(player) {
   }
 }
 function castAssassinShadow(player) {
-  player.sendMessage("\xA78[Assassin] You enter the shadows!");
+  player.sendMessage("\xA78[Assassino] Voc\xEA entra nas sombras!");
   player.addEffect("minecraft:invisibility", 30 * 20, { amplifier: 0, showParticles: false });
   player.addEffect("minecraft:resistance", 30 * 20, { amplifier: 0, showParticles: true });
   player.addEffect("minecraft:speed", 30 * 20, { amplifier: 1, showParticles: true });
@@ -4872,14 +4850,14 @@ function castAssassinShadow(player) {
   }
 }
 function castMageManashield(player) {
-  player.sendMessage("\xA7d[Mage] You activate Mana Shield!");
+  player.sendMessage("\xA7d[Mago] Voc\xEA ativou o Escudo de Mana!");
   player.addEffect("minecraft:fire_resistance", 20 * 20, { amplifier: 0 });
   player.addEffect("minecraft:absorption", 20 * 20, { amplifier: 0 });
   player.addEffect("minecraft:resistance", 20 * 20, { amplifier: 2 });
   player.addEffect("minecraft:regeneration", 20 * 20, { amplifier: 0 });
 }
 function castMageHypnosis(player) {
-  player.sendMessage("\xA7d[Mage] You cast Hypnosis!");
+  player.sendMessage("\xA7d[Mago] Voc\xEA lan\xE7ou Hipnose!");
   const targets = player.dimension.getEntities({ location: player.location, maxDistance: 15 });
   for (const target of targets) {
     if (target.id !== player.id) {
@@ -4889,7 +4867,7 @@ function castMageHypnosis(player) {
   }
 }
 function castMageMagicslash(player) {
-  player.sendMessage("\xA7d[Mage] You unleash Magic Slash!");
+  player.sendMessage("\xA7d[Mago] Voc\xEA liberou o Corte M\xE1gico!");
   player.playSound("mob.enderdragon.growl");
   const targets = player.dimension.getEntities({ location: player.location, maxDistance: 15 });
   for (const target of targets) {
@@ -4959,9 +4937,9 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
         }
       }
       if (changedCount > 0) {
-        player.sendMessage(`\xA7a[System] Successfully ${unlocking ? "unlocked" : "locked"} ${changedCount} items!`);
+        player.sendMessage(`\xA7a[Sistema] ${changedCount} itens ${unlocking ? "destravados" : "travados"}!`);
       } else {
-        player.sendMessage(`\xA7c[System] No RPG Guide or Ranger Bow found in your personal inventory.`);
+        player.sendMessage(`\xA7c[Sistema] Nenhum RPG Guide ou Arco de Patrulheiro no seu invent\xE1rio.`);
       }
     });
   } else if (id === "rpg:destroy_on" || id === "rpg:destroy_off") {
@@ -4969,10 +4947,10 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
     system9.run(() => {
       if (turnOn) {
         player.addTag("destroy_blocks");
-        player.sendMessage(`\xA7a[System] Ability explosions will now destroy blocks and cause fire for you.`);
+        player.sendMessage(`\xA7a[Sistema] As explos\xF5es das habilidades agora quebram blocos e p\xF5em fogo para voc\xEA.`);
       } else {
         player.removeTag("destroy_blocks");
-        player.sendMessage(`\xA7c[System] Ability explosions are now safe and will not destroy blocks.`);
+        player.sendMessage(`\xA7c[Sistema] As explos\xF5es das habilidades agora s\xE3o seguras e n\xE3o quebram blocos.`);
       }
     });
   } else if (id === "rpg:hud_off" || id === "rpg:hud_on") {
@@ -4980,16 +4958,16 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
     system9.run(() => {
       if (turnOn) {
         player.removeTag("hide_rpg_hud");
-        player.sendMessage(`\xA7a[System] RPG HUD is now visible.`);
+        player.sendMessage(`\xA7a[Sistema] O HUD do RPG agora est\xE1 vis\xEDvel.`);
       } else {
         player.addTag("hide_rpg_hud");
-        player.sendMessage(`\xA7c[System] RPG HUD is now hidden.`);
+        player.sendMessage(`\xA7c[Sistema] O HUD do RPG agora est\xE1 escondido.`);
       }
     });
   } else if (id === "rpg:reload") {
     system9.run(() => {
       player.runCommandAsync("reload");
-      player.sendMessage("\xA7a[System] Addon reloaded successfully.");
+      player.sendMessage("\xA7a[Sistema] Addon recarregado.");
     });
   } else if (id === "rpg:fix_bow") {
     system9.run(() => {
@@ -5005,7 +4983,7 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
         const souls = soulsObj?.getScore(player) ?? 0;
         
         if (souls < 30) {
-          player.sendMessage(`\xA7c[System] You need 30 Souls to summon your bow! You are missing ${30 - souls} Souls.`);
+          player.sendMessage(`\xA7c[Sistema] Voc\xEA precisa de 30 Almas para invocar o arco! Faltam ${30 - souls} Almas.`);
           return;
         }
         
@@ -5013,13 +4991,13 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
         
         if (classId === 2) {
           giveRangerBow(player, level, true);
-          player.sendMessage("\xA7a[System] Ranger Bow has been manually regenerated! (-30 Souls)");
+          player.sendMessage("\xA7a[Sistema] O Arco de Patrulheiro foi refeito! (-30 Almas)");
         } else if (classId === 4) {
           giveAssassinBow(player, true);
-          player.sendMessage("\xA7a[System] Assassin's Deadly Bow has been manually regenerated! (-30 Souls)");
+          player.sendMessage("\xA7a[Sistema] O Arco Mortal do Assassino foi refeito! (-30 Almas)");
         }
       } else {
-        player.sendMessage("\xA7c[System] You do not have a class weapon that can be regenerated.");
+        player.sendMessage("\xA7c[Sistema] Voc\xEA n\xE3o tem arma de classe que possa ser refeita.");
       }
     });
   }
