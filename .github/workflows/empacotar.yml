@@ -30,30 +30,8 @@ jobs:
             montagem.txt
           retention-days: 1
 
-  exe:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          sparse-checkout: ferramentas
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Gerar o .exe da janela
-        run: |
-          python -m pip install --quiet pyinstaller
-          pyinstaller --noconfirm --onefile --windowed --name "Empacotador Addon Pack" `
-            --icon ferramentas/recursos/icone.ico `
-            --add-data "ferramentas/recursos;recursos" `
-            ferramentas/empacotador_janela.py
-      - uses: actions/upload-artifact@v4
-        with:
-          name: exe
-          path: dist/Empacotador Addon Pack.exe
-          retention-days: 1
-
   publicar:
-    needs: [mcaddon, exe]
+    needs: [mcaddon]
     # rodando a mao numa outra branch, so testa a montagem; a release so muda com a main
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -68,7 +46,6 @@ jobs:
           gh release delete ultima --yes --cleanup-tag || true
           gh release create ultima \
             "mcaddon/Addon_Pack_Completo.mcaddon" \
-            "exe/Empacotador Addon Pack.exe" \
             --title "Addon Pack (última montagem)" \
-            --notes "$(printf '%s, gerada do commit %s.\n\n- **Addon_Pack_Completo.mcaddon**: o pack pronto. Antes de importar, apague do jogo os packs antigos do Addon Pack.\n- **Empacotador Addon Pack.exe**: o empacotador com janela, para Windows. Coloque na pasta do repositório (a que tem packs/) e dê dois cliques.' "${N^}" "${GITHUB_SHA::7}")" \
+            --notes "$(printf '%s, gerada do commit %s.\n\n- **Addon_Pack_Completo.mcaddon**: o pack pronto. Antes de importar, apague do jogo os packs antigos do Addon Pack.' "${N^}" "${GITHUB_SHA::7}")" \
             --target "$GITHUB_SHA"
