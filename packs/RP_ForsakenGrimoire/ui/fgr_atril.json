@@ -109,6 +109,17 @@
           "anchor_to": "top_left",
           "layer": 2
         }
+      },
+      {
+        "fechar@common.close_button": {
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+          "offset": [
+            -1,
+            1
+          ],
+          "layer": 3
+        }
       }
     ]
   },

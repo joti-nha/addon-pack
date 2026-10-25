@@ -1,6 +1,6 @@
 // Forsaken Grimoires (Addon Pack)
 // Grimorio guarda ate 9 feiticos (pergaminhos do Forsaken Odyssey) em ordem escolhida.
-// Atril Arcano (bloco): tocar no livro em cima abre uma vitrine (tela de bau propria, ui/fgr_atril.json): 9 espacos
+// Atril Arcano (bloco): tocar em qualquer parte do bloco abre uma vitrine (tela de bau propria, ui/fgr_atril.json): 9 espacos
 // de feitico em 3x3 e o espaco do Grimorio. Pondo o Grimorio, os pergaminhos dele aparecem nos 9 espacos; o que voce
 // mexer ali e gravado nele; ao tirar o Grimorio, os espacos esvaziam (tudo vai dentro dele).
 // Tomo Infinito num espaco: o feitico daquele espaco nao acaba. Os tomos sao vendidos pela loja do Mago (RPG Addon).
@@ -548,8 +548,8 @@ world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
 });
 
 // ---------- Atril Arcano (vitrine) ----------
-// Sobre o bloco fica uma entidade invisivel (fgr:atril_vitrine) com 10 espacos. Tocar no livro em cima abre a tela
-// dela, desenhada em RP_ForsakenGrimoire/ui/fgr_atril.json (escolhida pelo nome "§5Atril Arcano"):
+// No bloco fica uma entidade invisivel (fgr:atril_vitrine) com 10 espacos e a caixa do tamanho do bloco: tocar em
+// qualquer parte dele abre a tela dela, e bater nele quebra o bloco (como um bloco comum). A tela e desenhada em RP_ForsakenGrimoire/ui/fgr_atril.json (escolhida pelo nome "§5Atril Arcano"):
 //   espacos 0-8 = os 9 feiticos em 3x3, na ordem;  espaco 9 = o Grimorio.
 // Grimorio no espaco 9: os pergaminhos e tomos dele aparecem nos 9 espacos; tudo o que voce mexer ali e gravado nele
 // a cada tick; ao tirar o Grimorio, os espacos esvaziam (o conteudo ja esta dentro dele).
@@ -558,7 +558,7 @@ const V_TITLE = "§5Atril Arcano"; // a tela propria e escolhida por este nome (
 const V_BOOK = 9;
 const V_LOADED = "fgr:loaded"; // na entidade: uid do Grimorio cujos feiticos estao nos 9 espacos
 const V_SNAP = "fgr:snap";     // na entidade: os 9 espacos como foram gravados no Grimorio pela ultima vez
-const vitrinePos = (b) => ({ x: b.location.x + 0.5, y: b.location.y + 0.75, z: b.location.z + 0.5 });
+const vitrinePos = (b) => ({ x: b.location.x + 0.5, y: b.location.y + 0.005, z: b.location.z + 0.5 });
 
 // Correcoes pendentes (uid -> espacos): quando o Grimorio sai do atril no mesmo tick em que o jogador tirou algo dos
 // espacos, o que ficou e gravado nele assim que ele aparecer num inventario ou atril. Evita duplicar pergaminhos.
@@ -597,7 +597,8 @@ function settlePlayer(p) {
 }
 
 function vitrineAt(block) {
-  return block.dimension.getEntities({ type: VITRINE, location: vitrinePos(block), maxDistance: 0.6 })[0];
+  // ate a versao anterior a entidade ficava em cima do livro (0,75 acima); 0,9 ainda a encontra
+  return block.dimension.getEntities({ type: VITRINE, location: vitrinePos(block), maxDistance: 0.9 })[0];
 }
 function ensureVitrine(block) {
   let e = vitrineAt(block);
@@ -606,6 +607,9 @@ function ensureVitrine(block) {
   }
   if (e.nameTag !== V_TITLE) e.nameTag = V_TITLE;
   return e;
+}
+function warnNear(ent, msg) {
+  try { const p = ent.dimension.getPlayers({ location: ent.location, maxDistance: 8, closest: 1 })[0]; if (p) say(p, msg); } catch (e) { }
 }
 function eject(ent, item) {
   try { ent.dimension.spawnItem(item, { x: ent.location.x, y: ent.location.y + 0.4, z: ent.location.z }); } catch (e) { log("eject", e); }
@@ -651,6 +655,7 @@ function tickVitrine(ent) {
   try { block = ent.dimension.getBlock({ x: Math.floor(ent.location.x), y: Math.floor(ent.location.y), z: Math.floor(ent.location.z) }); } catch { return; }
   if (!block) return; // chunk nao carregado
   if (ent.nameTag !== V_TITLE) ent.nameTag = V_TITLE;
+  if (ent.location.y - block.location.y > 0.1) ent.teleport(vitrinePos(block)); // vitrine da versao anterior
   const g = c.getItem(V_BOOK);
   const isGrim = isGrimoire(g);
   const loaded = ent.getDynamicProperty(V_LOADED);
@@ -668,16 +673,22 @@ function tickVitrine(ent) {
     ent.remove();
     return;
   }
-  if (g && !isGrim) { c.setItem(V_BOOK, undefined); eject(ent, g); }
+  if (g && !isGrim) {
+    c.setItem(V_BOOK, undefined);
+    eject(ent, g);
+    warnNear(ent, isTome(g) ? "§cEste espaço é só do Grimório: ponha o Tomo Infinito num dos 9 espaços de feitiço" : "§cEste espaço é só do Grimório");
+  }
   if (!isGrim) {
     if (loaded) unload(ent, c);
     else { // sem Grimorio os espacos nao guardam nada: devolve o que for colocado
+      let back = false;
       for (let i = 0; i < MAX_SLOTS; i++) {
         const it = c.getItem(i);
         if (!it) continue;
         c.setItem(i, undefined);
-        if (!isFreeCopy(it)) eject(ent, it);
+        if (!isFreeCopy(it)) { eject(ent, it); back = true; }
       }
+      if (back) warnNear(ent, "§cPonha um Grimório no espaço do livro primeiro: os feitiços e tomos ficam guardados nele");
     }
     return;
   }
@@ -740,6 +751,30 @@ world.afterEvents.playerInteractWithEntity.subscribe(({ player, target }) => {
   });
 });
 
+// Bater na vitrine quebra o bloco: no criativo na hora; no sobrevivencia com 6 golpes seguidos (cerca de 2 s, o tempo
+// de quebrar o bloco).
+const BREAK_HITS = 6;
+const breaking = new Map(); // id da vitrine -> {n, t}
+world.afterEvents.entityHitEntity.subscribe(({ damagingEntity: p, hitEntity: ent }) => {
+  if (ent?.typeId !== VITRINE || p?.typeId !== "minecraft:player") return;
+  try {
+    const t = system.currentTick;
+    const prev = breaking.get(ent.id);
+    const n = prev && t - prev.t <= 20 ? prev.n + 1 : 1;
+    breaking.set(ent.id, { n, t });
+    ent.dimension.playSound("hit.wood", ent.location);
+    const creative = String(p.getGameMode()).toLowerCase() === "creative";
+    if (!creative && n < BREAK_HITS) return;
+    breaking.delete(ent.id);
+    const { x, y, z } = ent.location;
+    const b = { x: Math.floor(x), y: Math.floor(y), z: Math.floor(z) };
+    const block = ent.dimension.getBlock(b);
+    if (block?.typeId !== LECTERN) return;
+    ent.dimension.runCommand(`setblock ${b.x} ${b.y} ${b.z} air ${creative ? "replace" : "destroy"}`);
+    system.run(() => { try { if (ent.isValid) tickVitrine(ent); } catch (e) { log("atril", e); } });
+  } catch (e) { log("atril", e); }
+});
+
 // Tocar na madeira do bloco: garante a entidade e avisa onde tocar.
 const lastHint = new Map();
 system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
@@ -752,7 +787,7 @@ system.beforeEvents.startup.subscribe(({ blockComponentRegistry }) => {
           const t = system.currentTick;
           if (t - (lastHint.get(player.id) ?? -99) < 20) return;
           lastHint.set(player.id, t);
-          say(player, "§dAtril Arcano§7: toque no §flivro§7 em cima para abrir");
+          say(player, "§dAtril Arcano§7: toque de novo para abrir");
         } catch (e) { log("atril", e); }
       });
     },
