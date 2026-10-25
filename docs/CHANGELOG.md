@@ -1,6 +1,32 @@
 # Changelog – Addon Pack
 
-## 0.5 (esta versão)
+## 0.6 (esta versão)
+
+Nada desta versão foi testado no jogo.
+
+### Corrigido
+- **Tela do Atril Arcano**: o OTG Backpack e o Better on Bedrock redefinem a tela de baú inteira e apagavam a vitrine do Grimório. Os dois agora reconhecem o título "§5Atril Arcano" e mostram a vitrine.
+- **Itens do A&S fora da mão ou invisíveis**: 651 anexos de Dungeons, DarkAge, OTG, Forsaken, Eternal Caves/End, BoB, ImprovisedGuns, Aquaculture, Mowzie, Cataclysmical, CommonSense e Grimório ganharam a linha `parent_setup` do A&S (o A&S só mostra e posiciona o item com ela).
+- **Lanças, cajados e martelos** (Forsaken, Mowzie, Dungeons, Cataclysmical): saíram as tags de lança/maça/vara que o modpack tinha posto em itens com anexo próprio; elas trocavam a animação do braço e desalinhavam o modelo.
+- **Montantes**: voltaram aos anexos originais (o sistema `armas_pesadas` saiu). Ganharam só a tag de machado do A&S (`oreville:is_axe`), mantendo `minecraft:is_sword` para o JavaCombat.
+- **Boneco de treino do Dungeons**: a textura do Bare Bones com o mesmo caminho cobria a dele. A do Dungeons foi renomeada.
+- **"Java" na descrição das armas**: o JavaCombat só remove as linhas com "Java" e não reescreve a descrição a cada tick.
+- **Scripts com API removida no Script API 2.x**: `runCommandAsync` (câmeras do CommonSense, OTG), `isValid()` (CommonSense, Cataclysmical) e o `applyKnockback` antigo (Better on Bedrock).
+
+### Alterado
+- **Simple RPG em português**: menus, descrições, mensagens, HUD e nomes de itens. Nomes que o script usa para reconhecer itens ("RPG Guide", arcos de classe, "Volley Focus") ficaram em inglês para não quebrar itens já existentes.
+- **Trocar de classe**: botão em Configurações (ou `/scriptevent rpg:trocar_classe`). Devolve todas as almas e pontos gastos, mantém o nível e volta para a escolha de classe.
+- **Tomos do Mago**: a compra mostra a lista de tomos que aquela magia permite e o jogador escolhe. São 12 tomos (8 novos).
+- **Tomos Infinitos têm dono**: o primeiro jogador que pega fica dono; com outro jogador, o tomo volta para o dono. Um tomo na mão secundária com uma varinha funciona sozinho, sem Grimório.
+- **Estante de Tomos** no menu do RPG: guarda os tomos no livro do RPG e devolve um por vez.
+- **Atril Arcano com o formato do atril comum**, madeira escura e tampo roxo com moldura dourada; vira para o jogador ao ser posto.
+- **Luneta da Vidência**: lente pintada de branco.
+
+### Removido
+- Livro de Progresso RPG e Livro do Viajante (Unified Core).
+- Itens de configuração, papel de missão e diário perdido que o Better on Bedrock dava nos primeiros passos.
+
+## 0.5
 
 Nada desta versão foi testado no jogo.
 
