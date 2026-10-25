@@ -97,7 +97,8 @@ const canUseTome = (p, e) => !!e && !!e.tome && (!e.owner || e.owner === p.id) &
 function stampOwner(it, id, name) {
   it.setDynamicProperty(P_OWNER, id);
   if (name) it.setDynamicProperty(P_OWNER_NAME, name);
-  it.setLore([`§7Dono: §f${name ?? "?"}`, "§8Mão secundária + varinha: lança sem gastar", "§8Ou guarde no Atril Arcano / RPG Guide"]);
+  it.setLore([`§7Dono: §f${name ?? "?"}`, "§8Num Grimório (Atril Arcano) ou na mão secundária", "§8com uma varinha: lança sem gastar. Não dá para descartar."]);
+  it.keepOnDeath = true;
   return it;
 }
 function tomeItem(e) {
@@ -134,8 +135,9 @@ function commit(p, g, slots) {
   writeSlots(g.item, slots);
   slotAt(p, g.loc).setItem(g.item);
 }
-function firstEmpty(p) {
+function firstEmpty(p, hotbarFirst = false) {
   const c = invOf(p);
+  if (hotbarFirst) for (let i = 0; i < 9; i++) if (!c.getItem(i)) return i;
   for (let i = 9; i < c.size; i++) if (!c.getItem(i)) return i;
   for (let i = 0; i < 9; i++) if (!c.getItem(i)) return i;
   return -1;
@@ -242,7 +244,9 @@ function equip(p, uid, idx, auto = false) {
       slots[st.idx].n = Math.min(MAX_STACK, slots[st.idx].n + 1);
     }
   } else if (g.loc.t === "off") {
-    const free_i = firstEmpty(p);
+    // o Grimorio sai da mao secundaria (a varinha so le o pergaminho de la) e vai para a hotbar, a mao: duplo
+    // agachar troca de novo e, ao soltar a varinha, ele volta para a mao secundaria
+    const free_i = firstEmpty(p, true);
     if (free_i < 0) {
       const t = system.currentTick;
       if (t - (fullWarn.get(p.id) ?? -999) > 100) { fullWarn.set(p.id, t); say(p, "§cInventário cheio: libere um espaço para o Grimório"); }
@@ -504,6 +508,27 @@ system.runInterval(() => {
 system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity }) => {
   if (id !== "fgr:tomos_conhecidos" || sourceEntity?.typeId !== "minecraft:player") return;
   sourceEntity.setDynamicProperty(P_KNOWN, message === "-" ? "" : message);
+});
+// Tomo Infinito nao pode ser descartado: o item que cair no chao volta na hora para o dono (ou o jogador mais perto).
+world.afterEvents.entitySpawn.subscribe(({ entity }) => {
+  if (entity?.typeId !== "minecraft:item") return;
+  system.run(() => {
+    try {
+      if (!entity.isValid) return;
+      const it = entity.getComponent("minecraft:item")?.itemStack;
+      if (!isTome(it)) return;
+      let owner = ownerOf(it);
+      let p = owner ? world.getPlayers().find((x) => x.id === owner) : undefined;
+      if (!p && !owner) p = entity.dimension.getPlayers({ location: entity.location, maxDistance: 4, closest: 1 })[0];
+      if (!p) { if (owner) { giveToOwner(owner, it); entity.remove(); } return; }
+      const oh = offhandOf(p);
+      if (invOf(p).emptySlotsCount === 0 && oh.hasItem()) { say(p, "§cInventário cheio: o Tomo Infinito ficou no chão"); return; }
+      entity.remove();
+      if (!ownerOf(it)) stampOwner(it, p.id, p.name);
+      if (invOf(p).addItem(it)) oh.setItem(it);
+      say(p, "§dTomos Infinitos não podem ser descartados");
+    } catch (e) { log("tomo no chao", e); }
+  });
 });
 world.afterEvents.playerLeave.subscribe(({ playerId }) => {
   bars.delete(playerId); sneakPrev.delete(playerId); lastTap.delete(playerId);
