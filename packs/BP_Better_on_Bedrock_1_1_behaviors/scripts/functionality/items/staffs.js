@@ -387,3 +387,35 @@ export function releaseStaffs(itemStack, player) {
     player.staffUses = 0;
     player.aimingEntity = null;
 };
+// fgr: botão de ataque conjura o feitiço padrão do cajado (chamado pelo pack FO)
+function offhandScroll(player) {
+    try {
+        return player.getComponent("equippable")?.getEquipmentSlot("Offhand")?.getItem()?.hasTag("ntk:magic_scroll") ?? false;
+    } catch { return false; };
+};
+export { offhandScroll };
+
+system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity: player }) => {
+    if (id !== "fgr:cajado_ataque" || !message.startsWith("better_on_bedrock:") || player?.typeId !== "minecraft:player")
+        return;
+    if (player.isUsingStaff || player.getItemCooldown("better_on_bedrock:staff") > 0)
+        return;
+
+    const inventory = player.getComponent(EntityInventoryComponent.componentId).container;
+    const slot = player.selectedSlotIndex;
+    const held = inventory.getItem(slot);
+    if (held?.typeId !== message || !held.hasTag("better_on_bedrock:staff"))
+        return;
+
+    player.startItemCooldown("better_on_bedrock:staff", 10 * TicksPerSecond);
+    staffs(held, player);
+    if (!player.isUsingStaff)
+        return;
+
+    system.runTimeout(() => {
+        if (!player.isValid)
+            return;
+        const current = inventory.getItem(slot);
+        releaseStaffs(current?.typeId === held.typeId ? current : held, player);
+    }, 2 * TicksPerSecond);
+});

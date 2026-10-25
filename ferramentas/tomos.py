@@ -24,11 +24,28 @@ TOMOS = {
     'slowness': ('ntk:scroll_of_slowness_2', 'Lentidão II', 'Slowness II', 'frost'),
     'lightning_bolt': ('ntk:scroll_of_lightning_bolt_3', 'Raio III', 'Lightning Bolt III', 'lightning'),
     'invisibility': ('ntk:scroll_of_invisibility_3', 'Invisibilidade III', 'Invisibility III', 'invisibility'),
+    # opcoes extras: ao comprar a magia, o Mago escolhe qual destes tomos (do mesmo nivel) quer levar
+    'flame_burst': ('ntk:scroll_of_flame_burst_2', 'Explosão de Chamas II', 'Flame Burst II', 'fireball'),
+    'fire_protection': ('ntk:scroll_of_fire_protection_2', 'Proteção contra Fogo II', 'Fire Protection II', 'fireball'),
+    'lethargy': ('ntk:scroll_of_lethargy_2', 'Letargia II', 'Lethargy II', 'frost'),
+    'converging': ('ntk:scroll_of_converging_2', 'Convergência II', 'Converging II', 'frost'),
+    'thunderstorm': ('ntk:scroll_of_thunderstorm', 'Tempestade', 'Thunderstorm', 'lightning'),
+    'earthquake': ('ntk:scroll_of_earthquake_3', 'Terremoto III', 'Earthquake III', 'lightning'),
+    'displacement': ('ntk:scroll_of_displacement_3', 'Deslocamento III', 'Displacement III', 'invisibility'),
+    'acceleration': ('ntk:scroll_of_acceleration_3', 'Aceleração III', 'Acceleration III', 'invisibility'),
 }
 # o nivel do pergaminho acompanha o preco da magia no RPG (100 e 125 almas: II; 300 e 1000: III)
 CORANTES = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
             'purple', 'blue', 'brown', 'green', 'red', 'black']
 OURO = [(255, 221, 85, 255), (214, 158, 46, 255)]
+
+
+def opcoes_rpg():
+    """magia do RPG -> [{tome, name}] na ordem do TOMOS (o primeiro e o padrao)."""
+    out = {}
+    for n, (perg, pt, en, magia) in TOMOS.items():
+        out.setdefault(magia, []).append({'tome': f'fgr:infinite_tome_{n}', 'name': pt})
+    return out
 
 
 def gravar(caminho, obj):
@@ -85,8 +102,16 @@ def main():
         f.write('// Gerado por ferramentas/tomos.py. Nao edite a mao.\n'
                 '// tomo infinito -> pergaminho do Forsaken que ele lanca sem gastar\n'
                 'export const TOMES = ' + json.dumps({f'fgr:infinite_tome_{n}': v[0] for n, v in TOMOS.items()}) + ';\n'
-                '// magia da loja do Simple RPG Buffs -> tomo que ela passa a vender\n'
-                'export const RPG_SPELL_TOME = ' + json.dumps({v[3]: f'fgr:infinite_tome_{n}' for n, v in TOMOS.items()}) + ';\n')
+                '// magia da loja do Simple RPG Buffs -> tomos que o Mago pode escolher ao comprar\n'
+                'export const RPG_SPELL_TOMES = ' + json.dumps(opcoes_rpg(), ensure_ascii=False) + ';\n')
+    # a mesma tabela vai para o script do RPG (entre os marcadores)
+    rpg = os.path.join(PACKS, 'BP_RPG_Addon_v4_0_5_behavior_pack', 'scripts', 'main.js')
+    s = open(rpg, encoding='utf-8').read()
+    ini, fim = '// <tomos.py>\n', '// </tomos.py>\n'
+    if ini in s and fim in s:
+        a, b = s.index(ini) + len(ini), s.index(fim)
+        s = s[:a] + 'var SPELL_TOME_OPTIONS = ' + json.dumps(opcoes_rpg(), ensure_ascii=False) + ';\n' + s[b:]
+        with open(rpg, 'w', encoding='utf-8') as f: f.write(s)
     print(f'{len(TOMOS)} tomos, {len(CORANTES) + 1} receitas de cor')
 
 

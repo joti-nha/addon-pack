@@ -72,3 +72,4 @@ import "./nms/displacement_magic_spell.js";
 import "./nms/flourishing_magic_spell.js";
 import "./nms/lightning_bolt_magic_spell.js";
 import "./nms/wand.js";
+import "./nms/cajados.js";

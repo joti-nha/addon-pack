@@ -4,6 +4,8 @@
 // de feitico em 3x3 e o espaco do Grimorio. Pondo o Grimorio, os pergaminhos dele aparecem nos 9 espacos; o que voce
 // mexer ali e gravado nele; ao tirar o Grimorio, os espacos esvaziam (tudo vai dentro dele).
 // Tomo Infinito num espaco: o feitico daquele espaco nao acaba. Os tomos sao vendidos pela loja do Mago (RPG Addon).
+// O tomo tambem funciona sozinho: na mao secundaria com uma varinha na mao, ele lanca o feitico sem gastar.
+// Cada tomo tem dono (o primeiro jogador que o tiver): com outro jogador ele nao funciona e volta para o dono.
 // Cor e invisibilidade: na mesa de trabalho (Grimorio + corante, ou + vidro); os feiticos passam para o Grimorio novo.
 // Segurando uma varinha (tag ntk:wand) com o Grimorio na mao secundaria, o feitico escolhido vai sozinho para a mao
 // secundaria (onde a varinha busca a municao) e o Grimorio volta ao soltar a varinha.
@@ -21,6 +23,10 @@ const P_SEL = "fgr:sel";       // no item: espaco escolhido por ultimo (usado ao
 const P_COLOR = "fgr:color";   // no item: cor que o grimorio invisivel volta a ter
 const P_ACTIVE = "fgr:active"; // no jogador: {uid, idx, id, free, auto}
 const P_STASH = "fgr:stash";   // no jogador: id da entidade que guarda a hotbar real
+const P_OWNER = "fgr:owner";   // no tomo: id do dono
+const P_OWNER_NAME = "fgr:owner_name"; // no tomo: nome do dono (para o texto)
+const P_SOLO = "fgr:solo_tome"; // no jogador: tomo tirado da mao secundaria enquanto ele lanca sozinho
+const W_TOME_RETURN = "fgr:tome_return"; // no mundo: {idDoDono: [tomos]} a devolver quando o dono entrar
 const CARD_EMPTY = "fgr:card_empty";
 const MAX_SLOTS = 9;
 const MAX_STACK = 64;          // pergaminhos por espaco do Grimorio
@@ -39,7 +45,7 @@ const invOf = (p) => p.getComponent("inventory").container;
 const offhandOf = (p) => p.getComponent("equippable").getEquipmentSlot(EquipmentSlot.Offhand);
 const isGrimoire = (it) => !!it && (it.typeId === GRIMOIRE || it.hasTag(GRIMOIRE_TAG));
 const isScroll = (it) => !!it && it.hasTag("ntk:scroll") && !it.typeId.includes("empty_scroll");
-const isWand = (it) => !!it && it.hasTag("ntk:wand");
+const isWand = (it) => !!it && (it.hasTag("ntk:wand") || it.hasTag("fgr:cajado"));
 const isFreeCopy = (it) => { if (!it) return false; const l = it.getLore(); return l.includes(FREE_MARK) || l.includes(OLD_FREE_MARK); };
 const isTome = (it) => !!it && TOMES[it.typeId] !== undefined;
 const tr = (id) => ({ translate: `item.${id.split(":")[0]}.${id.split(":")[1]}.name` });
@@ -63,7 +69,7 @@ function readSlots(item) {
     const e = a[i];
     if (!e || typeof e.id !== "string") { out.push(null); continue; }
     const tome = typeof e.tome === "string" && TOMES[e.tome] ? e.tome : undefined;
-    out.push(tome ? { id: TOMES[tome], n: 0, tome } : { id: e.id, n: Math.max(0, e.n | 0) });
+    out.push(tome ? withOwner({ id: TOMES[tome], n: 0, tome }, e.owner, e.ownerName) : { id: e.id, n: Math.max(0, e.n | 0) });
   }
   return out;
 }
@@ -78,6 +84,28 @@ function writeSlots(item, slots) {
   return item;
 }
 const uidOf = (item) => item.getDynamicProperty(P_UID);
+function withOwner(e, owner, name) {
+  if (typeof owner === "string") { e.owner = owner; if (typeof name === "string") e.ownerName = name; }
+  return e;
+}
+const ownerOf = (it) => { const o = it.getDynamicProperty(P_OWNER); return typeof o === "string" ? o : undefined; };
+// O Livro de Feiticos do RPG manda (scriptevent fgr:tomos_conhecidos) os tomos que o jogador conhece; so esses
+// ficam infinitos. Sem o RPG (nenhuma lista recebida), todo tomo vale.
+const P_KNOWN = "fgr:known_tomes";
+const knowsTome = (p, tome) => { const k = p.getDynamicProperty(P_KNOWN); return typeof k !== "string" || k.split(",").includes(tome); };
+const canUseTome = (p, e) => !!e && !!e.tome && (!e.owner || e.owner === p.id) && knowsTome(p, e.tome);
+function stampOwner(it, id, name) {
+  it.setDynamicProperty(P_OWNER, id);
+  if (name) it.setDynamicProperty(P_OWNER_NAME, name);
+  it.setLore([`§7Dono: §f${name ?? "?"}`, "§8Num Grimório (Atril Arcano) ou na mão secundária", "§8com uma varinha: lança sem gastar. Não dá para descartar."]);
+  it.keepOnDeath = true;
+  return it;
+}
+function tomeItem(e) {
+  const it = new ItemStack(e.tome, 1);
+  if (e.owner) stampOwner(it, e.owner, e.ownerName);
+  return it;
+}
 const newUid = () => `${Date.now().toString(36)}${Math.floor(Math.random() * 1e6).toString(36)}`;
 
 // Local de um item: {t:"off"} ou {t:"inv", i}
@@ -107,8 +135,9 @@ function commit(p, g, slots) {
   writeSlots(g.item, slots);
   slotAt(p, g.loc).setItem(g.item);
 }
-function firstEmpty(p) {
+function firstEmpty(p, hotbarFirst = false) {
   const c = invOf(p);
+  if (hotbarFirst) for (let i = 0; i < 9; i++) if (!c.getItem(i)) return i;
   for (let i = 9; i < c.size; i++) if (!c.getItem(i)) return i;
   for (let i = 0; i < 9; i++) if (!c.getItem(i)) return i;
   return -1;
@@ -172,6 +201,7 @@ function returnGrimoire(p, g) {
 function unequip(p, silent = false) {
   const st = getState(p);
   if (!st) return;
+  if (st.solo) { unequipSolo(p, st); return; }
   setState(p, null);
   const oh = offhandOf(p);
   const g = findGrimoire(p, st.uid);
@@ -200,6 +230,10 @@ function equip(p, uid, idx, auto = false) {
   const e = slots[idx];
   if (!e) { say(p, `§7Espaço ${idx + 1} do Grimório vazio`); return false; }
   if (st && st.uid === uid && st.idx === idx && !auto) { unequip(p); return false; }
+  if (e.tome && !canUseTome(p, e)) {
+    say(p, !knowsTome(p, e.tome) ? `§cTomo do espaço ${idx + 1} não está entre os conhecidos: escolha-o no Livro de Feitiços` : `§cO Tomo Infinito do espaço ${idx + 1} é de ${e.ownerName ?? "outro jogador"}`);
+    return false;
+  }
   const free = !!e.tome;
   if (!free && e.n <= 0) { say(p, `§cSem pergaminhos no espaço ${idx + 1}`); return false; }
   const oh = offhandOf(p);
@@ -210,7 +244,9 @@ function equip(p, uid, idx, auto = false) {
       slots[st.idx].n = Math.min(MAX_STACK, slots[st.idx].n + 1);
     }
   } else if (g.loc.t === "off") {
-    const free_i = firstEmpty(p);
+    // o Grimorio sai da mao secundaria (a varinha so le o pergaminho de la) e vai para a hotbar, a mao: duplo
+    // agachar troca de novo e, ao soltar a varinha, ele volta para a mao secundaria
+    const free_i = firstEmpty(p, true);
     if (free_i < 0) {
       const t = system.currentTick;
       if (t - (fullWarn.get(p.id) ?? -999) > 100) { fullWarn.set(p.id, t); say(p, "§cInventário cheio: libere um espaço para o Grimório"); }
@@ -234,6 +270,11 @@ function maintain(p) {
   const st = getState(p);
   if (!st) return;
   const oh = offhandOf(p);
+  if (st.solo) { // tomo sozinho: repoe a copia gratis
+    if (oh.hasItem()) { if (oh.typeId !== st.id) unequipSolo(p, st); return; }
+    oh.setItem(scrollFor(st.id, true));
+    return;
+  }
   if (oh.hasItem()) {
     if (oh.typeId !== st.id) setState(p, null); // o jogador trocou o item da mao: abandona
     return;
@@ -242,7 +283,7 @@ function maintain(p) {
   if (!g) { setState(p, null); return; }
   const slots = readSlots(g.item);
   const e = slots[st.idx];
-  if (e && e.id === st.id && st.free && e.tome) { // tomo infinito: o feitico nao acaba
+  if (e && e.id === st.id && st.free && canUseTome(p, e)) { // tomo infinito: o feitico nao acaba
     oh.setItem(scrollFor(st.id, true));
     return;
   }
@@ -271,16 +312,52 @@ function purgeFreeCopies(p) {
   if (oh.hasItem() && isFreeCopy(oh.getItem()) && (!st || !st.free || oh.typeId !== st.id)) oh.setItem(undefined);
 }
 
+// ---------- tomo sozinho (sem Grimorio) ----------
+// Varinha na mao + tomo na mao secundaria: o tomo vai para o jogador (propriedade P_SOLO) e a copia gratis do
+// pergaminho fica na mao secundaria; ao soltar a varinha (ou trocar o item da mao), o tomo volta.
+function equipSolo(p, oh) {
+  const tome = oh.getItem();
+  const owner = ownerOf(tome);
+  if (owner && owner !== p.id) return false; // claimTomes devolve ao dono
+  if (!knowsTome(p, tome.typeId)) { say(p, "§cTomo não conhecido: escolha-o no Livro de Feitiços (RPG Guide)"); return false; }
+  const id = TOMES[tome.typeId];
+  p.setDynamicProperty(P_SOLO, JSON.stringify({ tome: tome.typeId, owner: owner ?? p.id, ownerName: tome.getDynamicProperty(P_OWNER_NAME) ?? p.name }));
+  oh.setItem(scrollFor(id, true));
+  setState(p, { uid: null, idx: -1, id, free: true, auto: true, solo: true });
+  say(p, { rawtext: [{ text: "§dTomo Infinito: §f" }, tr(id), { text: " §6(∞)" }] });
+  p.playSound("random.orb", { volume: 0.6, pitch: 1.4 });
+  return true;
+}
+function restoreSoloTome(p) {
+  const raw = p.getDynamicProperty(P_SOLO);
+  if (!raw) return;
+  p.setDynamicProperty(P_SOLO, undefined);
+  let d; try { d = JSON.parse(raw); } catch { return; }
+  if (!d || !TOMES[d.tome]) return;
+  const it = tomeItem({ tome: d.tome, owner: d.owner, ownerName: d.ownerName });
+  const oh = offhandOf(p);
+  if (!oh.hasItem()) { oh.setItem(it); return; }
+  const left = invOf(p).addItem(it);
+  if (left) p.dimension.spawnItem(left, p.location);
+}
+function unequipSolo(p, st) {
+  setState(p, null);
+  const oh = offhandOf(p);
+  if (oh.hasItem() && oh.typeId === st.id && isFreeCopy(oh.getItem())) oh.setItem(undefined);
+  restoreSoloTome(p);
+}
+
 // Varinha na mao + Grimorio na mao secundaria: equipa o feitico escolhido sozinho; ao soltar a varinha, desfaz.
 function autoWand(p) {
   const wand = isWand(heldItem(p));
   const st = getState(p);
   if (wand && !st) {
     const oh = offhandOf(p);
+    if (oh.hasItem() && isTome(oh.getItem())) { equipSolo(p, oh); return; }
     if (!oh.hasItem() || !isGrimoire(oh.getItem())) return;
     const g = ensureUid(p, { loc: { t: "off" }, item: oh.getItem() });
     const slots = readSlots(g.item);
-    const usable = (e) => e && (e.n > 0 || e.tome);
+    const usable = (e) => e && (e.n > 0 || canUseTome(p, e));
     let sel = g.item.getDynamicProperty(P_SEL);
     if (typeof sel !== "number" || !usable(slots[sel])) sel = slots.findIndex(usable);
     if (sel < 0) {
@@ -428,12 +505,40 @@ system.runInterval(() => {
   }
 }, 1);
 
+system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity }) => {
+  if (id !== "fgr:tomos_conhecidos" || sourceEntity?.typeId !== "minecraft:player") return;
+  sourceEntity.setDynamicProperty(P_KNOWN, message === "-" ? "" : message);
+});
+// Tomo Infinito nao pode ser descartado: o item que cair no chao volta na hora para o dono (ou o jogador mais perto).
+world.afterEvents.entitySpawn.subscribe(({ entity }) => {
+  if (entity?.typeId !== "minecraft:item") return;
+  system.run(() => {
+    try {
+      if (!entity.isValid) return;
+      const it = entity.getComponent("minecraft:item")?.itemStack;
+      if (!isTome(it)) return;
+      let owner = ownerOf(it);
+      let p = owner ? world.getPlayers().find((x) => x.id === owner) : undefined;
+      if (!p && !owner) p = entity.dimension.getPlayers({ location: entity.location, maxDistance: 4, closest: 1 })[0];
+      if (!p) { if (owner) { giveToOwner(owner, it); entity.remove(); } return; }
+      const oh = offhandOf(p);
+      if (invOf(p).emptySlotsCount === 0 && oh.hasItem()) { say(p, "§cInventário cheio: o Tomo Infinito ficou no chão"); return; }
+      entity.remove();
+      if (!ownerOf(it)) stampOwner(it, p.id, p.name);
+      if (invOf(p).addItem(it)) oh.setItem(it);
+      say(p, "§dTomos Infinitos não podem ser descartados");
+    } catch (e) { log("tomo no chao", e); }
+  });
+});
 world.afterEvents.playerLeave.subscribe(({ playerId }) => {
   bars.delete(playerId); sneakPrev.delete(playerId); lastTap.delete(playerId);
 });
 world.afterEvents.playerSpawn.subscribe(({ player }) => {
   bars.delete(player.id);
-  system.runTimeout(() => { try { restoreHotbar(player); } catch (e) { log("restore", e); } }, 20);
+  system.runTimeout(() => {
+    try { restoreHotbar(player); } catch (e) { log("restore", e); }
+    try { const st = getState(player); if (st?.solo) unequipSolo(player, st); else restoreSoloTome(player); } catch (e) { log("tomo", e); }
+  }, 20);
 });
 // clicar (botao direito) numa carta tambem escolhe o feitico
 world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
@@ -511,7 +616,7 @@ function readVitrine(ent, c) {
   for (let i = 0; i < MAX_SLOTS; i++) {
     const it = c.getItem(i);
     if (!it) { now.push(null); continue; }
-    if (isTome(it)) { now.push({ id: TOMES[it.typeId], n: 0, tome: it.typeId }); continue; }
+    if (isTome(it)) { now.push(withOwner({ id: TOMES[it.typeId], n: 0, tome: it.typeId }, ownerOf(it), it.getDynamicProperty(P_OWNER_NAME))); continue; }
     if (isScroll(it) && isFreeCopy(it)) { c.setItem(i, undefined); now.push(null); continue; } // copia do tomo: some
     if (!isScroll(it)) { c.setItem(i, undefined); eject(ent, it); now.push(null); continue; }
     now.push({ id: it.typeId, n: it.amount });
@@ -523,7 +628,7 @@ function showSlots(c, slots) {
     c.setItem(i, undefined);
     if (!e) return;
     try {
-      if (e.tome) c.setItem(i, new ItemStack(e.tome, 1));
+      if (e.tome) c.setItem(i, tomeItem(e));
       else if (e.n > 0) c.setItem(i, new ItemStack(e.id, Math.min(ITEM_STACK, e.n)));
     } catch { /* pergaminho de addon ausente */ }
   });
@@ -706,8 +811,52 @@ world.afterEvents.playerInventoryItemChange.subscribe(({ player, beforeItemStack
     } catch (e) { log("mesa", e); }
   });
 });
+// ---------- dono dos tomos ----------
+// Tomo sem dono ganha o primeiro jogador que o tiver. Tomo de outro jogador sai do inventario e volta para o dono
+// (na hora, se ele estiver online; senao quando ele entrar).
+function giveToOwner(ownerId, it) {
+  const owner = world.getPlayers().find((x) => x.id === ownerId);
+  if (owner) {
+    const left = invOf(owner).addItem(it);
+    if (left) owner.dimension.spawnItem(left, owner.location);
+    say(owner, "§dUm Tomo Infinito seu voltou para você");
+    return;
+  }
+  const m = worldJson(W_TOME_RETURN, {});
+  (m[ownerId] ??= []).push({ tome: it.typeId, ownerName: it.getDynamicProperty(P_OWNER_NAME) });
+  setWorldJson(W_TOME_RETURN, m);
+}
+function claimTomes(p) {
+  const fix = (it, put) => {
+    if (!isTome(it)) return;
+    const owner = ownerOf(it);
+    if (!owner) { put(stampOwner(it, p.id, p.name)); return; }
+    if (owner === p.id) return;
+    put(undefined);
+    giveToOwner(owner, it);
+    say(p, `§cEsse Tomo Infinito é de ${it.getDynamicProperty(P_OWNER_NAME) ?? "outro jogador"}: ele voltou para o dono`);
+  };
+  const c = invOf(p);
+  for (let i = 0; i < c.size; i++) fix(c.getItem(i), (v) => c.setItem(i, v));
+  const oh = offhandOf(p);
+  if (oh.hasItem()) fix(oh.getItem(), (v) => oh.setItem(v));
+  const m = worldJson(W_TOME_RETURN, {});
+  if (m[p.id]) {
+    for (const d of m[p.id]) {
+      if (!TOMES[d.tome]) continue;
+      const left = c.addItem(tomeItem({ tome: d.tome, owner: p.id, ownerName: d.ownerName ?? p.name }));
+      if (left) p.dimension.spawnItem(left, p.location);
+    }
+    delete m[p.id];
+    setWorldJson(W_TOME_RETURN, m);
+    say(p, "§dSeus Tomos Infinitos voltaram para você");
+  }
+}
 system.runInterval(() => {
-  for (const p of world.getPlayers()) { try { settlePlayer(p); } catch (e) { log("settle", e); } }
+  for (const p of world.getPlayers()) {
+    try { settlePlayer(p); } catch (e) { log("settle", e); }
+    try { claimTomes(p); } catch (e) { log("tomos", e); }
+  }
 }, 40);
 
 // ---------- atris antigos (entidade fgr:lectern com inventario) ----------

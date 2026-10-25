@@ -1,1 +1,0 @@
-{"format_version":"1.20.10","minecraft:recipe_shapeless":{"description":{"identifier":"addonpack:rpg_book_recipe"},"tags":["crafting_table"],"ingredients":[{"item":"minecraft:book"},{"item":"minecraft:redstone"}],"result":{"item":"addonpack:rpg_book","count":1}}}

@@ -5,7 +5,7 @@ import { creditScreen, lostJournal } from "../../functionality/items/lost-journa
 import { beginnerPage } from "../../functionality/items/lost-journal";
 import { lootbags } from "../../functionality/items/lootbags";
 import { netherAmulet } from "../../functionality/items/nether-amulet";
-import { useStaff } from "../../functionality/items/staffs";
+import { useStaff, offhandScroll } from "../../functionality/items/staffs";
 import { goalsList } from "../../functionality/goals/goals";
 
 world.afterEvents.itemUse.subscribe(
@@ -33,6 +33,7 @@ world.afterEvents.itemUse.subscribe(
         
         lootbags(itemStack, source);
         netherAmulet(itemStack, source);
-        useStaff(itemStack, source);
+        if (!offhandScroll(source))
+            useStaff(itemStack, source);
     },
 );

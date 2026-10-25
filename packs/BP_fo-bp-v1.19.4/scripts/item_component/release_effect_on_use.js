@@ -1,8 +1,10 @@
 import { system, world, ItemStack, GameMode } from "@minecraft/server";
 import { damageItemDurability, detectNearbyEntities } from "../ntk_functions.js";
 
-const ItemReleaseEffectOnUseComponent = {
-  onUse({ source, itemStack }, { params }) {
+export const ItemReleaseEffectOnUseComponent = {
+  onUse({ source, itemStack }, { params, fgrAttack }) {
+    // [Addon Pack] com pergaminho magico na mao secundaria, o botao de usar lanca o pergaminho (nms/cajados.js)
+    if (!fgrAttack && source.getComponent("equippable")?.getEquipmentSlot("Offhand")?.getItem()?.hasTag("ntk:magic_scroll")) return;
     for (const child of params) {
       const eventChance = child.event_chance ?? 100.0;
       const itemName = child.item_name;

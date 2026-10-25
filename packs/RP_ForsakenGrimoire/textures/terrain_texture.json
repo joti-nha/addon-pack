@@ -1,1 +1,1 @@
-{"resource_pack_name":"fgr","texture_name":"atlas.terrain","padding":8,"num_mip_levels":4,"texture_data":{"fgr_lectern":{"textures":"textures/fgr/lectern"}}}
+{"resource_pack_name": "fgr", "texture_name": "atlas.terrain", "padding": 8, "num_mip_levels": 4, "texture_data": {"fgr_lectern": {"textures": "textures/fgr/lectern"}, "fgr_lectern_base": {"textures": "textures/fgr/lectern_base"}, "fgr_lectern_front": {"textures": "textures/fgr/lectern_front"}, "fgr_lectern_sides": {"textures": "textures/fgr/lectern_sides"}, "fgr_lectern_top": {"textures": "textures/fgr/lectern_top"}}}

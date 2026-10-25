@@ -75,10 +75,7 @@ system.runInterval(() => {
                 player.sendMessage("bob.toast;achievement.0");
                 player.playSound("normal_quest");
 
-                const container = player.getComponent(EntityInventoryComponent.componentId).container;
-                container.addItem(new ItemStack("better_on_bedrock:config"));
-                container.addItem(new ItemStack("better_on_bedrock:quest_paper"));
-                container.addItem(new ItemStack("better_on_bedrock:lost_journal"));
+                // [Addon Pack] os itens de configuracao, missao e diario nao sao mais entregues nos primeiros passos
             };
 
             yield ghostNecklace(player);

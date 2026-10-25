@@ -8,7 +8,7 @@ export class ContainerUtils {
      */
     static getContainer(target) {
         let container = undefined;
-        if (!(target && target.isValid())) { return undefined; }
+        if (!(target && target.isValid)) { return undefined; }
         if (target.getComponent("inventory")) {
             container = target.getComponent("inventory").container
         }

@@ -89,9 +89,9 @@ world.afterEvents.itemUse.subscribe(async (event) => {
     const mode = CAMERA_MODES[next];
     // se for vanilla, libera F5 antes
     if (mode.vanilla) {
-        await player.runCommandAsync("camera @s clear");
+        await player.runCommand("camera @s clear");
     }
-    await player.runCommandAsync(mode.command);
+    await player.runCommand(mode.command);
 });
 
 /* ============================
@@ -120,7 +120,7 @@ system.runInterval(() => {
             const horseIndex = CAMERA_MODES.findIndex(m => m.name === "free_custom_horse");
             if (horseIndex !== -1) {
                 setPlayerViewIndex(player, horseIndex);
-                player.runCommandAsync(CAMERA_MODES[horseIndex].command);
+                player.runCommand(CAMERA_MODES[horseIndex].command);
             }
         }
 
@@ -137,10 +137,10 @@ system.runInterval(() => {
             }
 
             const mode = CAMERA_MODES[prevIndex];
-            if (mode.vanilla) player.runCommandAsync("camera @s clear");
+            if (mode.vanilla) player.runCommand("camera @s clear");
 
             setPlayerViewIndex(player, prevIndex);
-            player.runCommandAsync(mode.command);
+            player.runCommand(mode.command);
         }
     }
 }, 2);
@@ -176,7 +176,7 @@ system.runInterval(() => {
             if (firstIndex !== -1) {
                 setPlayerViewIndex(player, firstIndex);
                 // limpar e setar first person (command do modo já faz clear+set)
-                player.runCommandAsync(CAMERA_MODES[firstIndex].command);
+                player.runCommand(CAMERA_MODES[firstIndex].command);
                 // marcar flag curta também (para evitar retrigger visual)
                 player.addTag("bv:force_first");
             }
@@ -193,10 +193,10 @@ system.runInterval(() => {
             setPlayerViewIndex(player, prev);
 
             // liberar F5 se for vanilla
-            if (mode.vanilla) player.runCommandAsync("camera @s clear");
+            if (mode.vanilla) player.runCommand("camera @s clear");
 
             // aplicar comando antigo
-            player.runCommandAsync(mode.command);
+            player.runCommand(mode.command);
 
             // limpar estado
             bowForceState.delete(player.id);
@@ -220,7 +220,7 @@ system.runInterval(() => {
 
         if (mode && mode.tick) {
             // reaplica a câmera custom (não limpar aqui)
-            player.runCommandAsync(mode.command);
+            player.runCommand(mode.command);
         }
     }
 }, 1);
