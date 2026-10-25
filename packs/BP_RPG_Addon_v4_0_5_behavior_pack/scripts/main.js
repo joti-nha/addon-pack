@@ -2193,14 +2193,13 @@ function showSpellbookUI(player) {
 }
 // Addon Pack: as magias do Mago viraram Tomos Infinitos do Grimorio (Forsaken Grimoires).
 // Comprar uma magia entrega o tomo; quem ja tinha a magia comprada recebe o tomo uma vez.
-var SPELL_TOMES = {
-  fireball: "fgr:infinite_tome_fire_blast",
-  frost: "fgr:infinite_tome_slowness",
-  lightning: "fgr:infinite_tome_lightning_bolt",
-  invisibility: "fgr:infinite_tome_invisibility"
-};
-function giveSpellTome(player, spellId) {
-  const tome = new ItemStack4(SPELL_TOMES[spellId], 1);
+// Cada magia da loja tem uma lista de tomos (do mesmo nivel) para o Mago escolher; o primeiro e o padrao.
+// <tomos.py>
+var SPELL_TOME_OPTIONS = {"fireball": [{"tome": "fgr:infinite_tome_fire_blast", "name": "Rajada de Fogo II"}, {"tome": "fgr:infinite_tome_flame_burst", "name": "Explosão de Chamas II"}, {"tome": "fgr:infinite_tome_fire_protection", "name": "Proteção contra Fogo II"}], "frost": [{"tome": "fgr:infinite_tome_slowness", "name": "Lentidão II"}, {"tome": "fgr:infinite_tome_lethargy", "name": "Letargia II"}, {"tome": "fgr:infinite_tome_converging", "name": "Convergência II"}], "lightning": [{"tome": "fgr:infinite_tome_lightning_bolt", "name": "Raio III"}, {"tome": "fgr:infinite_tome_thunderstorm", "name": "Tempestade"}, {"tome": "fgr:infinite_tome_earthquake", "name": "Terremoto III"}], "invisibility": [{"tome": "fgr:infinite_tome_invisibility", "name": "Invisibilidade III"}, {"tome": "fgr:infinite_tome_displacement", "name": "Deslocamento III"}, {"tome": "fgr:infinite_tome_acceleration", "name": "Aceleração III"}]};
+// </tomos.py>
+var SPELL_TOMES = Object.fromEntries(Object.entries(SPELL_TOME_OPTIONS).map(([k, v]) => [k, v[0].tome]));
+function giveSpellTome(player, spellId, tomeId) {
+  const tome = new ItemStack4(tomeId ?? SPELL_TOMES[spellId], 1);
   const left = player.getComponent("minecraft:inventory")?.container?.addItem(tome);
   if (left) player.dimension.spawnItem(left, player.location);
 }
@@ -2243,13 +2242,34 @@ function showSpellsList(player, spells) {
       const objective = world7.scoreboard.getObjective("souls");
       if (!objective) return;
       const currentSouls = objective.getScore(player) || 0;
-      if (currentSouls >= selectedSpell.costSouls) {
-        objective.setScore(player, currentSouls - selectedSpell.costSouls);
-        giveSpellTome(player, spellId);
-        player.sendMessage(`\xA7a[Spellbook] Bought the Infinite Tome: \xA7e${selectedSpell.name}`);
-      } else {
+      if (currentSouls < selectedSpell.costSouls) {
         player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
+        return;
       }
+      showTomeChoice(player, selectedSpell, spellId, spells);
+    }).catch(e => {});
+  });
+}
+// O Mago escolhe qual tomo leva, entre os que a magia permite.
+function showTomeChoice(player, selectedSpell, spellId, spells) {
+  const options = SPELL_TOME_OPTIONS[spellId] ?? [{ tome: SPELL_TOMES[spellId], name: selectedSpell.name }];
+  const form = new ActionFormData4().title(`\xA7d${selectedSpell.name}`);
+  form.body(`Choose which Infinite Tome you want (${selectedSpell.costSouls} Souls):`);
+  for (const o of options) form.button(`\xA75${o.name}`);
+  system5.run(() => {
+    form.show(player).then((res) => {
+      if (res.canceled) { showSpellsList(player, spells); return; }
+      const choice = options[res.selection];
+      const objective = world7.scoreboard.getObjective("souls");
+      if (!objective || !choice) return;
+      const currentSouls = objective.getScore(player) || 0;
+      if (currentSouls < selectedSpell.costSouls) {
+        player.sendMessage(`\xA7c[Spellbook] Not enough souls! You need ${selectedSpell.costSouls} Souls.`);
+        return;
+      }
+      objective.setScore(player, currentSouls - selectedSpell.costSouls);
+      giveSpellTome(player, spellId, choice.tome);
+      player.sendMessage(`\xA7a[Spellbook] Bought the Infinite Tome: \xA7e${choice.name}`);
     }).catch(e => {});
   });
 }
@@ -2406,6 +2426,7 @@ function showPlayerMenuUI(player, classId) {
   if (classId === 3 /* Mage */) {
     buttons.push({ text: "\xA75Mage Spellbook", action: () => showSpellbookUI(player) });
   }
+  buttons.push({ text: "\xA75Estante de Tomos", action: () => showTomeShelfUI(player) });
   buttons.push({ text: "\xA78Settings", action: () => showSettingsUI(player) });
   buttons.push({ text: "Close", action: () => {
   } });
@@ -2417,6 +2438,71 @@ function showPlayerMenuUI(player, classId) {
     buttons[response.selection].action();
   }).catch(e => {});
 }
+// [Addon Pack] Estante de Tomos: os Tomos Infinitos podem ser guardados de volta no RPG Guide (somem do inventario
+// e ficam gravados no jogador) e retirados quando quiser. Guarda so os do proprio jogador: o Grimorio (Forsaken
+// Grimoires) marca o dono de cada tomo e devolve ao dono os tomos que outros jogadores pegarem.
+var TOME_SHELF = "rpg:tome_shelf";
+var isInfiniteTome = (it) => !!it && it.typeId.startsWith("fgr:infinite_tome_");
+function readShelf(player) {
+  try { return JSON.parse(player.getDynamicProperty(TOME_SHELF) ?? "{}") || {}; } catch (e) { return {}; }
+}
+function writeShelf(player, shelf) {
+  for (const k of Object.keys(shelf)) if (!(shelf[k] > 0)) delete shelf[k];
+  player.setDynamicProperty(TOME_SHELF, JSON.stringify(shelf));
+}
+function tomeLabel(id) {
+  for (const list of Object.values(SPELL_TOME_OPTIONS)) for (const o of list) if (o.tome === id) return o.name;
+  return id.replace("fgr:infinite_tome_", "").replace(/_/g, " ");
+}
+function tomeOwnedByOther(player, it) {
+  try { const o = it.getDynamicProperty("fgr:owner"); return typeof o === "string" && o !== player.id; } catch (e) { return false; }
+}
+function storeAllTomes(player) {
+  const inv = player.getComponent("minecraft:inventory")?.container;
+  if (!inv) return 0;
+  const shelf = readShelf(player);
+  let n = 0;
+  for (let i = 0; i < inv.size; i++) {
+    const it = inv.getItem(i);
+    if (!isInfiniteTome(it) || tomeOwnedByOther(player, it)) continue;
+    shelf[it.typeId] = (shelf[it.typeId] ?? 0) + it.amount;
+    n += it.amount;
+    inv.setItem(i, undefined);
+  }
+  writeShelf(player, shelf);
+  return n;
+}
+function showTomeShelfUI(player) {
+  const shelf = readShelf(player);
+  const ids = Object.keys(shelf);
+  const form = new ActionFormData5().title("\xA75Estante de Tomos")
+    .body(ids.length ? "Toque num tomo para retir\xE1-lo, ou guarde os que est\xE3o no seu invent\xE1rio." : "Nenhum tomo guardado. Os Tomos Infinitos do seu invent\xE1rio podem ser guardados aqui.");
+  form.button("\xA7aGuardar meus tomos do invent\xE1rio");
+  for (const id of ids) form.button(`\xA75${tomeLabel(id)}${shelf[id] > 1 ? ` \xA77x${shelf[id]}` : ""}`);
+  form.button("Voltar");
+  form.show(player).then((res) => {
+    if (res.canceled) return;
+    if (res.selection === 0) {
+      const n = storeAllTomes(player);
+      player.sendMessage(n ? `\xA7a[Estante] ${n} tomo(s) guardado(s) no RPG Guide.` : "\xA7e[Estante] Nenhum tomo seu no invent\xE1rio.");
+      return;
+    }
+    const id = ids[res.selection - 1];
+    if (!id) {
+      const classObj = world8.scoreboard.getObjective("class");
+      showPlayerMenuUI(player, classObj ? getPlayerScoreSafe(classObj, player, 0) : 0);
+      return;
+    }
+    const cur = readShelf(player);
+    if (!(cur[id] > 0)) return;
+    cur[id] -= 1;
+    writeShelf(player, cur);
+    const left = player.getComponent("minecraft:inventory")?.container?.addItem(new ItemStack4(id, 1));
+    if (left) player.dimension.spawnItem(left, player.location);
+    player.sendMessage(`\xA7a[Estante] Retirado: \xA75${tomeLabel(id)}`);
+  }).catch(e => {});
+}
+
 function showSettingsUI(player) {
   const classObj = world8.scoreboard.getObjective("class");
   const currentClass = getPlayerScoreSafe(classObj, player, 0);
@@ -2431,6 +2517,7 @@ function showSettingsUI(player) {
     form.button("Summon Bow");
   }
   
+  form.button("Change Class");
   form.button("New Beginning");
   form.button("Back");
   form.show(player).then((response) => {
@@ -2438,6 +2525,7 @@ function showSettingsUI(player) {
     
     let options = ["lock", "destroy", "hud"];
     if (showBowSummon) options.push("bow");
+    options.push("change_class");
     options.push("new_beginning");
     options.push("back");
 
@@ -2451,6 +2539,8 @@ function showSettingsUI(player) {
       showHudToggleUI(player);
     } else if (action === "bow") {
       showBowSummonUI(player);
+    } else if (action === "change_class") {
+      showChangeClassUI(player);
     } else if (action === "new_beginning") {
       showNewBeginningUI(player);
     } else if (action === "back") {
@@ -2488,6 +2578,59 @@ function showNewBeginningUI(player) {
     } else if (response.selection === 1) {
       showSettingsUI(player);
     }
+  }).catch(e => {});
+}
+
+// [Addon Pack] Trocar de classe: devolve as almas e o XP gastos na loja e os pontos de habilidade (as trilhas saem,
+// entao os pontos voltam sozinhos, porque sao calculados pelo nivel). O nivel continua o mesmo.
+// Tambem pelo comando: /scriptevent rpg:trocar_classe
+function changeClassRefund(player) {
+  const classObj = world8.scoreboard.getObjective("class");
+  const soulsObj = world8.scoreboard.getObjective("souls");
+  if (!classObj || !soulsObj) return;
+  const currentClass = getPlayerScoreSafe(classObj, player, 0);
+  if (currentClass <= 0) {
+    player.sendMessage("\xA7c[Sistema] Voc\xEA ainda n\xE3o escolheu uma classe.");
+    return;
+  }
+  let souls = 0, xp = 0;
+  const counted = new Set();
+  for (const item of AllShopItems) {
+    if (counted.has(item.tag) || !player.hasTag(item.tag)) continue;
+    counted.add(item.tag);
+    souls += item.costSouls || 0;
+    xp += item.costXP || 0;
+  }
+  for (const tag of player.getTags()) {
+    if (tag.startsWith("shop_") || tag.startsWith("active_ability_") || tag.startsWith("equipped_") || tag.startsWith("path_") || tag.startsWith("class_") || tag.startsWith("active_spell:") || tag.startsWith("spell_unlocked:")) {
+      player.removeTag(tag);
+    }
+  }
+  // itens da classe antiga (cajado do Mago, arcos do Patrulheiro e do Assassino)
+  const inv = player.getComponent("minecraft:inventory")?.container;
+  if (inv) {
+    for (let i = 0; i < inv.size; i++) {
+      const it = inv.getItem(i);
+      if (!it) continue;
+      const classItem = it.typeId === "rpg:mage_staff" || (it.typeId === "minecraft:bow" && (it.nameTag === "\xA76Ranger Bow" || it.nameTag === "\xA75Assassin's Deadly Bow"));
+      if (classItem) inv.setItem(i, undefined);
+    }
+  }
+  soulsObj.setScore(player, getPlayerScoreSafe(soulsObj, player, 0) + souls);
+  if (xp > 0) player.addLevels(xp);
+  classObj.setScore(player, 0);
+  player.sendMessage(`\xA7a[Sistema] Classe liberada. Voc\xEA recebeu de volta \xA7e${souls} Almas\xA7a${xp > 0 ? ` e \xA7e${xp} n\xEDveis de XP\xA7a` : ""}, e todos os pontos de habilidade. Use o RPG Guide para escolher a nova classe.`);
+  player.playSound("random.levelup");
+}
+function showChangeClassUI(player) {
+  const form = new ActionFormData5().title("Trocar de classe")
+    .body("Voc\xEA volta para a escolha de classe e recebe de volta todas as Almas e o XP gastos na Loja de Almas e todos os pontos de habilidade. O seu n\xEDvel continua o mesmo.\n\nOs Tomos Infinitos que voc\xEA j\xE1 comprou continuam com voc\xEA.");
+  form.button("\xA7aConfirmar");
+  form.button("Voltar");
+  form.show(player).then((response) => {
+    if (response.canceled) return;
+    if (response.selection === 0) changeClassRefund(player);
+    else showSettingsUI(player);
   }).catch(e => {});
 }
 
@@ -4793,6 +4936,10 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
   const id = event.id;
   const player = event.sourceEntity;
   if (!player || player.typeId !== "minecraft:player") return;
+  if (id === "rpg:trocar_classe" || id === "rpg:change_class") {
+    system9.run(() => changeClassRefund(player));
+    return;
+  }
   if (id === "rpg:unlock" || id === "rpg:lock") {
     const unlocking = id === "rpg:unlock";
     system9.run(() => {

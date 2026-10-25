@@ -6,8 +6,7 @@ Uso: python ferramentas/mesclar_jogador.py
 Tres packs (RnR, RPG e OTG) trazem o mesmo player.entity.json, mesclado so a partir do jogador do jogo base.
 Como eles ficam acima do A&S na ordem, o jogador do A&S (todas as animacoes de braco, item e corpo) era
 substituido e nunca rodava. Este script parte do jogador do A&S e acrescenta so o que e de outros addons:
-racas e lobisomem/morcego do RnR (escala, modelos, controles), mochila do OTG e espada nas costas do RPG,
-alem do golpe das armas pesadas em terceira pessoa (ferramentas/armas_pesadas.py).
+racas e lobisomem/morcego do RnR (escala, modelos, controles), mochila do OTG e espada nas costas do RPG.
 Entradas do jogo base que o A&S trocou pelas dele nao voltam. O resultado e gravado nos tres packs.
 Rode de novo depois de atualizar o A&S ou um desses addons.
 """
@@ -23,8 +22,6 @@ DESTINOS = ['RP_RnR_Accursed', 'RP_RPG_Addon_v4_0_5_resource_pack', 'RP_OTG_Back
 BASE = re.compile(r'^(controller\.)?animation\.(player|humanoid|skeleton|persona)\.')
 SEM_LOBO_MORCEGO = '&&q.skin_id!=9&&q.skin_id!=13'
 SEM_MORCEGO = '&&q.skin_id!=13'
-# golpe das armas pesadas em terceira pessoa (ferramentas/armas_pesadas.py, no Compat)
-PROPRIAS = {'ap_pesada_tp': 'controller.animation.ap.pesada_tp', 'ap_pesada_tp_golpe': 'animation.ap.pesada.tp_golpe'}
 
 
 def jogador_as():
@@ -74,8 +71,6 @@ def mesclar(a, outro):
     for r in o.get('render_controllers', []):
         if nome_rc(r) not in nomes and not nome_rc(r).startswith('controller.render.player.'): rcs.append(r)
     d['render_controllers'] = rcs
-    d['animations'].update(PROPRIAS)
-    if 'ap_pesada_tp' not in s['animate']: s['animate'].append('ap_pesada_tp')
     return j
 
 

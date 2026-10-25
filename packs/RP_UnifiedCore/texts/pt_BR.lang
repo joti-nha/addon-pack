@@ -90,6 +90,4 @@ unified.biome.ntk.overgrown_jungle=Selva tomada pela vegetação
 ## Reliquia da Videncia (Eternal Caves): novo uso
 item.panascais_caves:seers_relic.title=Relíquia dos Videntes\n§9Eternal Caves Add-On\n\n§pAtaque§7: revela detalhes do alvo§r\n§nUsar (segurar)§7: zoom de lupa§r\n\n§9+64 Durabilidade§r
 waila.item.panascais_caves:seers_relic=Relíquia dos Videntes\n§9Eternal Caves Add-On\n\n§pAtaque§7: revela detalhes do alvo§r\n§nUsar (segurar)§7: zoom de lupa§r\n\n§9+64 Durabilidade§r\n\n§7Mão secundária: §aSim§r\n§7Reparável com: Lente de Quitina§r
-item.addonpack:rpg_book=§cLivro de Progresso RPG
-item.addonpack:traveler_book=§bLivro do Viajante
 unified.armadura.gemas=§9+%s Espaços de Gema§r

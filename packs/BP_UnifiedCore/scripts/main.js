@@ -2,7 +2,6 @@
 // Reliquia da Videncia (Eternal Caves): botao secundario (segurar) = zoom de lupa.
 // O botao de ataque (revelar detalhes do alvo) esta em Eternal Caves/scripts/load-*.js (ver CHANGELOG).
 import { world, system, GameMode, ItemStack } from "@minecraft/server";
-import { ActionFormData } from "@minecraft/server-ui";
 import { FERRAMENTAS, POR_DURABILIDADE, MINERIOS, NOME_NIVEL, QUEBRA_TUDO } from "./niveis.js";
 import "./armaduras.js";
 
@@ -110,95 +109,6 @@ world.beforeEvents.playerBreakBlock.subscribe((ev) => {
   });
 });
 
-// ---------------------------------------------------------------------------
-// Livros: Livro de Progresso RPG (so dados de upgrade do jogador) e Livro do Viajante.
-// Nao sao entregues no inicio nem ficam travados no inventario (so o RPG Guide do RPG Addon e fixo). Ambos sao craftaveis.
-// ---------------------------------------------------------------------------
-const RPG_BOOK = "addonpack:rpg_book";
-const TRAVELER_BOOK = "addonpack:traveler_book";
-const CLASSES = ["Sem classe", "Guerreiro", "Arqueiro", "Mago", "Assassino", "Sobrevivente"];
-const CAMINHOS = { left: "Caminho da esquerda", middle: "Caminho do meio", right: "Caminho da direita" };
+// [Addon Pack] O Livro de Progresso RPG e o Livro do Viajante foram removidos (2026-10-25): o RPG Guide ja mostra o
+// progresso e os capitulos do Viajante so geravam mensagens. Sem a definicao do item, exemplares antigos somem.
 
-function placar(player, nome, padrao = 0) {
-  try { return world.scoreboard.getObjective(nome)?.getScore(player) ?? padrao; } catch (e) { return padrao; }
-}
-function nivelCaminho(player, path) {
-  let max = 0;
-  for (const t of player.getTags()) if (t.startsWith(`path_${path}_`)) max = Math.max(max, parseInt(t.split("_").pop(), 10) || 0);
-  return max;
-}
-function bonito(tag) {
-  return tag.replace(/^shop_/, "").replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-}
-
-function abrirLivroRPG(player) {
-  const classe = placar(player, "class");
-  const tags = new Set(player.getTags());
-  const habilidades = [...tags].filter((t) => t.startsWith("shop_") && !t.endsWith("_off"))
-    .map((t) => `${tags.has(t + "_off") ? "§7[desligada] " : "§a[ativa] "}§r${bonito(t)}`);
-  let txt = `§lClasse:§r ${CLASSES[classe] ?? classe}\n§lNivel:§r ${placar(player, "level", 1)}\n§lAlmas:§r ${placar(player, "souls")}\n\n§lCaminhos de habilidade§r\n`;
-  for (const [k, nome] of Object.entries(CAMINHOS)) txt += `- ${nome}: nivel ${nivelCaminho(player, k)}\n`;
-  txt += `\n§lMelhorias desbloqueadas§r\n${habilidades.length ? habilidades.join("\n") : "§7Nenhuma ainda."}`;
-  const f = new ActionFormData().title("Livro de Progresso RPG").body(txt).button("Fechar");
-  f.show(player).catch(() => { });
-}
-
-const CAPITULOS = [
-  { id: "tiers", titulo: "Escada de ferramentas", sempre: true, texto:
-    "Uma picareta so quebra um minerio se o nivel dela for igual ou maior que o do minerio.\n\n" +
-    "1 madeira/ouro | 2 pedra, cobre, estanho, zinco, bronze, laton | 3 ferro, quitina, mumia, olivina, ametista, afiada\n" +
-    "4 diamante, netunio, titanio | 5 netherite, enderite (BoB), criorita | 6 verdita | 7 nocturita | 8 pironita, sunflare\n" +
-    "9 aetherium | 10 corruptium | 11 runebreaker | 12 Eternal End (maior nivel)\n\n" +
-    "A picareta de Stardust quebra qualquer bloco. A tabela completa fica em niveis.js." },
-  { id: "caves", titulo: "Eternal Caves", ns: ["panascais_caves"], texto: "Minerios em sequencia: titanio, criorita, verdita, nocturita, pironita, aetherium e corruptium. Cada minerio exige a picareta do anterior. Runas e gemas podem ser forjadas em itens compativeis." },
-  { id: "end", titulo: "Eternal End", ns: ["panascais_end"], dim: "minecraft:the_end", texto: "Ferramentas de enderite e ametrina sao as de maior nivel. Os detritos eternos so cedem a elas." },
-  { id: "nether", titulo: "Nether+ (ntk)", ns: ["ntk"], texto: "Ligas de estanho, zinco, bronze e laton; olivina no Nether; varinhas e cajados." },
-  { id: "cata", titulo: "Cataclysmical", ns: ["mnra_cata", "cata"], texto: "Montantes e armas de boss. Minerios de platina ate exodius; a picareta sunflare e o topo desta linha." },
-  { id: "dungeons", titulo: "Dungeons", ns: ["dungeons"], texto: "Armas de dungeon, projetos (blueprints) e armaduras de aventura." },
-  { id: "mowzie", titulo: "Mowzie's Mobs", ns: ["hf_mzs"], texto: "Chefes e criaturas com mascaras, lancas e machados cerimoniais." },
-  { id: "aqua", titulo: "Aquaculture", ns: ["tm_aqc"], texto: "Pesca, facas de filetar e ferramentas de netunio (nivel 4)." },
-  { id: "bob", titulo: "Better on Bedrock", ns: ["better_on_bedrock"], texto: "Estardust, ametista e enderite. A picareta de estardust quebra qualquer bloco." },
-  { id: "dark", titulo: "Dark Age", ns: ["dk"], texto: "Sentinelas, gargulas e alabardas. A alabarda da gargula agora causa metade do dano original." },
-  { id: "grimorio", titulo: "Grimorio Esquecido", ns: ["fgr"], texto: "Pergaminhos de feitico organizados no grimorio e no tomo arcano." },
-  { id: "rpg", titulo: "RPG", ns: ["rpg", "test"], classe: true, texto: "Escolha uma classe e abra o Livro de Progresso RPG para ver nivel, almas e melhorias." },
-];
-
-function descobrir(player) {
-  const inv = player.getComponent("minecraft:inventory")?.container;
-  if (!inv) return;
-  const vistos = new Set();
-  for (let i = 0; i < inv.size; i++) {
-    const it = inv.getItem(i);
-    if (it) vistos.add(it.typeId.split(":")[0]);
-  }
-  for (const c of CAPITULOS) {
-    const tag = `ap_cap_${c.id}`;
-    if (c.sempre || player.hasTag(tag)) continue;
-    const achou = c.ns?.some((n) => vistos.has(n)) || (c.dim && player.dimension.id === c.dim) || (c.classe && placar(player, "class") > 0);
-    if (achou) {
-      player.addTag(tag);
-      player.sendMessage(`§b[Livro do Viajante]§r Novo capitulo: ${c.titulo}`);
-    }
-  }
-}
-
-function abrirLivroViajante(player) {
-  descobrir(player);
-  const abertos = CAPITULOS.filter((c) => c.sempre || player.hasTag(`ap_cap_${c.id}`));
-  const f = new ActionFormData().title("Livro do Viajante")
-    .body(`Capitulos liberados: ${abertos.length}/${CAPITULOS.length}\n§7Descubra mais carregando itens ou visitando lugares.`);
-  for (const c of abertos) f.button(c.titulo);
-  f.show(player).then((r) => {
-    if (r.canceled) return;
-    const c = abertos[r.selection];
-    new ActionFormData().title(c.titulo).body(c.texto).button("Voltar").show(player)
-      .then((r2) => { if (!r2.canceled) system.run(() => abrirLivroViajante(player)); }).catch(() => { });
-  }).catch(() => { });
-}
-
-world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
-  if (itemStack?.typeId === RPG_BOOK) system.run(() => abrirLivroRPG(source));
-  else if (itemStack?.typeId === TRAVELER_BOOK) system.run(() => abrirLivroViajante(source));
-});
-world.afterEvents.playerDimensionChange.subscribe(({ player }) => descobrir(player));
-system.runInterval(() => { for (const p of world.getAllPlayers()) descobrir(p); }, 100);
