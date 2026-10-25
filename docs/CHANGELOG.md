@@ -22,6 +22,7 @@ Nada desta versão foi testado no jogo.
 - **Cajados como varinhas** (Forsaken, Better on Bedrock, Mowzie, DarkAge, Dungeons; 21 itens com a tag `fgr:cajado`): com um pergaminho na mão secundária, o botão de usar lança o pergaminho e gasta 1, como a varinha. O botão de ataque lança o feitiço próprio do cajado, respeitando a recarga dele. O Cajado de Pólvora e os bastões de batalha do Dungeons não têm feitiço próprio e só lançam pergaminhos.
 - **Estante de Tomos** (outras classes): o mesmo inventário, sem compra nem vagas.
 - **Atril Arcano com o formato do atril comum**, madeira escura e tampo roxo com moldura dourada; vira para o jogador ao ser posto.
+- **Zoom da Luneta da Vidência com borda**: ao dar zoom aparece a moldura da luneta comum (`textures/ui/spyglass_scope`, a do A&S/Bare Bones & Stuff), com o resto da tela na cor da borda. O script manda um título invisível (`!unified:luneta`) e o `hud_screen` unificado mostra a moldura enquanto ele está ativo.
 - **Luneta da Vidência**: textura refeita sobre a distribuição pintada pelo João (corpo preto, lente branca), com os tons de sombra e brilho do A&S. A textura anterior seguia outro mapa de UV e não casava com o modelo da luneta do A&S.
 
 ### Removido
