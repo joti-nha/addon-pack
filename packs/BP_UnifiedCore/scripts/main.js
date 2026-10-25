@@ -8,6 +8,16 @@ import "./armaduras.js";
 const RELIC = "panascais_caves:seers_relic";
 const ZOOM_FOV = 25;          // campo de visao com zoom (o normal e ~70)
 const zooming = new Set();    // ids de jogadores em zoom
+// Borda da luneta: o hud_screen unificado mostra a moldura (textures/ui/spyglass_scope) enquanto o titulo e esta marca;
+// titulos que comecam com "!" nao aparecem na tela.
+const SCOPE_MARK = "!unified:luneta";
+
+function setScope(player, on) {
+  try {
+    if (on) player.onScreenDisplay.setTitle(SCOPE_MARK, { fadeInDuration: 0, stayDuration: 72000, fadeOutDuration: 0 });
+    else { player.onScreenDisplay.setTitle("!", { fadeInDuration: 0, stayDuration: 1, fadeOutDuration: 0 }); player.onScreenDisplay.clearTitle(); }
+  } catch (e) { }
+}
 
 function setZoom(player, on) {
   // 1) API de camera; 2) comando /camera fov_set (alternativa se a API nao existir nesta versao)
@@ -26,11 +36,13 @@ function zoomOn(player) {
   if (zooming.has(player.id)) return;
   zooming.add(player.id);
   setZoom(player, true);
+  setScope(player, true);
   try { player.playSound("item.spyglass.use"); } catch (e) { }
 }
 function zoomOff(player, sound = true) {
   if (!zooming.delete(player.id)) return;
   setZoom(player, false);
+  setScope(player, false);
   if (sound) { try { player.playSound("item.spyglass.stop_using"); } catch (e) { } }
 }
 

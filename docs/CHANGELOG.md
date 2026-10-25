@@ -9,6 +9,7 @@ Nada desta versão foi testado no jogo.
 - **Itens do A&S fora da mão ou invisíveis**: 651 anexos de Dungeons, DarkAge, OTG, Forsaken, Eternal Caves/End, BoB, ImprovisedGuns, Aquaculture, Mowzie, Cataclysmical, CommonSense e Grimório ganharam a linha `parent_setup` do A&S (o A&S só mostra e posiciona o item com ela).
 - **Lanças, cajados e martelos** (Forsaken, Mowzie, Dungeons, Cataclysmical): saíram as tags de lança/maça/vara que o modpack tinha posto em itens com anexo próprio; elas trocavam a animação do braço e desalinhavam o modelo.
 - **Montantes**: voltaram aos anexos originais (o sistema `armas_pesadas` saiu). Ganharam só a tag de machado do A&S (`oreville:is_axe`), mantendo `minecraft:is_sword` para o JavaCombat.
+- **Steve com a skin do Bare Bones**: o Bare Bones e o Bare Bones & Stuff trocavam as skins padrão do jogador (Steve, Alex e as outras 7 do jogo). Essas texturas saíram dos dois packs, então quem usa uma skin padrão volta a aparecer com a do jogo.
 - **Boneco de treino do Dungeons**: a textura do Bare Bones com o mesmo caminho cobria a dele. A do Dungeons foi renomeada.
 - **"Java" na descrição das armas**: o JavaCombat só remove as linhas com "Java" e não reescreve a descrição a cada tick.
 - **Scripts com API removida no Script API 2.x**: `runCommandAsync` (câmeras do CommonSense, OTG), `isValid()` (CommonSense, Cataclysmical) e o `applyKnockback` antigo (Better on Bedrock).
@@ -22,6 +23,7 @@ Nada desta versão foi testado no jogo.
 - **Cajados como varinhas** (Forsaken, Better on Bedrock, Mowzie, DarkAge, Dungeons; 21 itens com a tag `fgr:cajado`): com um pergaminho na mão secundária, o botão de usar lança o pergaminho e gasta 1, como a varinha. O botão de ataque lança o feitiço próprio do cajado, respeitando a recarga dele. O Cajado de Pólvora e os bastões de batalha do Dungeons não têm feitiço próprio e só lançam pergaminhos.
 - **Estante de Tomos** (outras classes): o mesmo inventário, sem compra nem vagas.
 - **Atril Arcano com o formato do atril comum**, madeira escura e tampo roxo com moldura dourada; vira para o jogador ao ser posto.
+- **Zoom da Luneta da Vidência com borda**: ao dar zoom aparece a moldura da luneta comum (`textures/ui/spyglass_scope`, a do A&S/Bare Bones & Stuff), com o resto da tela na cor da borda. O script manda um título invisível (`!unified:luneta`) e o `hud_screen` unificado mostra a moldura enquanto ele está ativo.
 - **Luneta da Vidência**: textura refeita sobre a distribuição pintada pelo João (corpo preto, lente branca), com os tons de sombra e brilho do A&S. A textura anterior seguia outro mapa de UV e não casava com o modelo da luneta do A&S.
 
 ### Removido
