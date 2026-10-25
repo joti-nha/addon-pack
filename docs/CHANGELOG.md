@@ -20,7 +20,7 @@ Nada desta versão foi testado no jogo.
 - **Tomos Infinitos têm dono**: o primeiro jogador que pega fica dono; com outro jogador, o tomo volta para o dono. Um tomo na mão secundária com uma varinha funciona sozinho, sem Grimório.
 - **Estante de Tomos** no menu do RPG: guarda os tomos no livro do RPG e devolve um por vez.
 - **Atril Arcano com o formato do atril comum**, madeira escura e tampo roxo com moldura dourada; vira para o jogador ao ser posto.
-- **Luneta da Vidência**: lente pintada de branco.
+- **Luneta da Vidência**: textura refeita sobre a distribuição pintada pelo João (corpo preto, lente branca), com os tons de sombra e brilho do A&S. A textura anterior seguia outro mapa de UV e não casava com o modelo da luneta do A&S.
 
 ### Removido
 - Livro de Progresso RPG e Livro do Viajante (Unified Core).
