@@ -7,7 +7,8 @@ Precisa do Pillow. Grava:
     as entradas em item_texture.json e os nomes em pt_BR/en_US;
   - as receitas de cor: Grimorio de qualquer cor + corante = Grimorio daquela cor; Grimorio + vidro = invisivel.
     Usam a etiqueta fgr:grimoire, entao sao 17 receitas no total (nao uma por par de cores).
-Os tomos sao o que a loja de magias do Simple RPG Buffs vende para o Mago (no lugar das magias dele).
+Os tomos sao o que a loja de magias do Simple RPG Buffs vende para o Mago (no lugar das magias dele): cada compra
+da magia da vagas de tomo, e o tomo de nivel N pede N compras.
 """
 import json, os
 from PIL import Image
@@ -18,33 +19,92 @@ BP = os.path.join(PACKS, 'BP_ForsakenGrimoire')
 RP = os.path.join(PACKS, 'RP_ForsakenGrimoire')
 FO = os.path.join(PACKS, 'RP_fo-rp-v1.19.4')
 
-# tomo: (pergaminho do Forsaken que ele lanca sem gastar, nome pt_BR, nome en_US, magia do RPG que ele substitui)
-TOMOS = {
-    'fire_blast': ('ntk:scroll_of_fire_blast_2', 'Rajada de Fogo II', 'Fire Blast II', 'fireball'),
-    'slowness': ('ntk:scroll_of_slowness_2', 'Lentidão II', 'Slowness II', 'frost'),
-    'lightning_bolt': ('ntk:scroll_of_lightning_bolt_3', 'Raio III', 'Lightning Bolt III', 'lightning'),
-    'invisibility': ('ntk:scroll_of_invisibility_3', 'Invisibilidade III', 'Invisibility III', 'invisibility'),
-    # opcoes extras: ao comprar a magia, o Mago escolhe qual destes tomos (do mesmo nivel) quer levar
-    'flame_burst': ('ntk:scroll_of_flame_burst_2', 'Explosão de Chamas II', 'Flame Burst II', 'fireball'),
-    'fire_protection': ('ntk:scroll_of_fire_protection_2', 'Proteção contra Fogo II', 'Fire Protection II', 'fireball'),
-    'lethargy': ('ntk:scroll_of_lethargy_2', 'Letargia II', 'Lethargy II', 'frost'),
-    'converging': ('ntk:scroll_of_converging_2', 'Convergência II', 'Converging II', 'frost'),
-    'thunderstorm': ('ntk:scroll_of_thunderstorm', 'Tempestade', 'Thunderstorm', 'lightning'),
-    'earthquake': ('ntk:scroll_of_earthquake_3', 'Terremoto III', 'Earthquake III', 'lightning'),
-    'displacement': ('ntk:scroll_of_displacement_3', 'Deslocamento III', 'Displacement III', 'invisibility'),
-    'acceleration': ('ntk:scroll_of_acceleration_3', 'Aceleração III', 'Acceleration III', 'invisibility'),
+# Todo pergaminho magico do Forsaken (menos o Pergaminho Desconhecido, que e aleatorio) tem um Tomo Infinito.
+# familia: (nome pt_BR, nome en_US, magia do RPG que libera, niveis). Nivel N pede N compras da magia no RPG.
+FAMILIAS = {
+    # fireball: fogo e forca
+    'fire_blast': ('Rajada de Fogo', 'Fire Blast', 'fireball', 3),
+    'flame_burst': ('Explosão de Chamas', 'Flame Burst', 'fireball', 3),
+    'fire_protection': ('Proteção contra Fogo', 'Fire Protection', 'fireball', 3),
+    'berserk': ('Fúria', 'Berserk', 'fireball', 3),
+    'strength': ('Força', 'Strength', 'fireball', 3),
+    # frost: controle, agua e veneno
+    'slowness': ('Lentidão', 'Slowness', 'frost', 3),
+    'lethargy': ('Letargia', 'Lethargy', 'frost', 3),
+    'converging': ('Convergência', 'Converging', 'frost', 3),
+    'poison_cloud': ('Nuvem Venenosa', 'Poison Cloud', 'frost', 3),
+    'cleansing': ('Limpeza', 'Cleansing', 'frost', 3),
+    'purification': ('Purificação', 'Purification', 'frost', 3),
+    'rain': ('Chuva', 'Rain', 'frost', 0),
+    'clear_sky': ('Céu Limpo', 'Clear Sky', 'frost', 0),
+    'weaving_webs': ('Tecer Teias', 'Weaving Webs', 'frost', 0),
+    # lightning: tempestade e terra
+    'lightning_bolt': ('Raio', 'Lightning Bolt', 'lightning', 3),
+    'earthquake': ('Terremoto', 'Earthquake', 'lightning', 3),
+    'field_levitation': ('Levitação em Área', 'Field Levitation', 'lightning', 3),
+    'thunderstorm': ('Tempestade', 'Thunderstorm', 'lightning', 0),
+    # invisibility: movimento e suporte
+    'invisibility': ('Invisibilidade', 'Invisibility', 'invisibility', 3),
+    'displacement': ('Deslocamento', 'Displacement', 'invisibility', 3),
+    'acceleration': ('Aceleração', 'Acceleration', 'invisibility', 3),
+    'protection': ('Proteção', 'Protection', 'invisibility', 3),
+    'regeneration': ('Regeneração', 'Regeneration', 'invisibility', 3),
+    'resurgence': ('Ressurgimento', 'Resurgence', 'invisibility', 3),
+    'flourishing': ('Florescimento', 'Flourishing', 'invisibility', 3),
+    'hoarding': ('Acúmulo', 'Hoarding', 'invisibility', 3),
+    'homeward_bound': ('Retorno ao Lar', 'Homeward Bound', 'invisibility', 0),
 }
-# o nivel do pergaminho acompanha o preco da magia no RPG (100 e 125 almas: II; 300 e 1000: III)
+# invocacoes: (nome pt_BR, nome en_US, magia)
+INVOCACOES = {
+    'magma_cube': ('Cubo de Magma', 'Magma Cube', 'fireball'),
+    'magma_golem': ('Golem de Magma', 'Magma Golem', 'fireball'),
+    'sulfur_cube': ('Cubo de Enxofre', 'Sulfur Cube', 'fireball'),
+    'wither_skeleton': ('Esqueleto Wither', 'Wither Skeleton', 'fireball'),
+    'snow_golem': ('Golem de Neve', 'Snow Golem', 'frost'),
+    'stray': ('Errante', 'Stray', 'frost'),
+    'slime': ('Slime', 'Slime', 'frost'),
+    'bogged': ('Pantanoso', 'Bogged', 'frost'),
+    'iron_golem': ('Golem de Ferro', 'Iron Golem', 'lightning'),
+    'cobblestone_golem': ('Golem de Pedregulho', 'Cobblestone Golem', 'lightning'),
+    'mossy_cobblestone_golem': ('Golem de Pedregulho Musgoso', 'Mossy Cobblestone Golem', 'lightning'),
+    'deepslate_golem': ('Golem de Ardósia', 'Deepslate Golem', 'lightning'),
+    'cobbled_deepslate_golem': ('Golem de Pedregulho de Ardósia', 'Cobbled Deepslate Golem', 'lightning'),
+    'skeleton': ('Esqueleto', 'Skeleton', 'invisibility'),
+    'mossy_skeleton': ('Esqueleto Musgoso', 'Mossy Skeleton', 'invisibility'),
+    'parched': ('Ressecado', 'Parched', 'invisibility'),
+}
+# tomos das versoes anteriores (um por familia) mantem o identificador sem o numero do nivel
+ANTIGOS = {'fire_blast': 2, 'slowness': 2, 'lightning_bolt': 3, 'invisibility': 3, 'flame_burst': 2, 'fire_protection': 2,
+           'lethargy': 2, 'converging': 2, 'earthquake': 3, 'displacement': 3, 'acceleration': 3}
+ROMANO = {1: 'I', 2: 'II', 3: 'III'}
+
+
+def montar_tomos():
+    """nome do tomo -> (pergaminho, nome pt_BR, nome en_US, magia do RPG, nivel)."""
+    out = {}
+    for fam, (pt, en, magia, niveis) in FAMILIAS.items():
+        if not niveis:
+            out[fam] = (f'ntk:scroll_of_{fam}', pt, en, magia, 1)
+            continue
+        for n in range(1, niveis + 1):
+            nome = fam if ANTIGOS.get(fam) == n else f'{fam}_{n}'
+            out[nome] = (f'ntk:scroll_of_{fam}_{n}', f'{pt} {ROMANO[n]}', f'{en} {ROMANO[n]}', magia, n)
+    for mob, (pt, en, magia) in INVOCACOES.items():
+        out[f'summon_{mob}'] = (f'ntk:summoning_scroll_of_{mob}', f'Invocar {pt}', f'Summon {en}', magia, 1)
+    return out
+
+
+TOMOS = montar_tomos()
 CORANTES = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
             'purple', 'blue', 'brown', 'green', 'red', 'black']
 OURO = [(255, 221, 85, 255), (214, 158, 46, 255)]
 
 
 def opcoes_rpg():
-    """magia do RPG -> [{tome, name}] na ordem do TOMOS (o primeiro e o padrao)."""
+    """magia do RPG -> [{tome, name, lvl}] por nivel (o primeiro e o padrao). lvl = compras da magia que o tomo pede."""
     out = {}
-    for n, (perg, pt, en, magia) in TOMOS.items():
-        out.setdefault(magia, []).append({'tome': f'fgr:infinite_tome_{n}', 'name': pt})
+    for n, (perg, pt, en, magia, nivel) in sorted(TOMOS.items(), key=lambda kv: kv[1][4]):
+        out.setdefault(magia, []).append({'tome': f'fgr:infinite_tome_{n}', 'name': pt, 'lvl': nivel})
     return out
 
 
@@ -55,7 +115,7 @@ def gravar(caminho, obj):
 
 def icone(pergaminho):
     """Icone do pergaminho com moldura dourada (canto e borda), para diferenciar do pergaminho comum."""
-    base = Image.open(os.path.join(FO, 'textures', 'items', 'nms', 'ntk_' + pergaminho.split(':')[1] + '.png')).convert('RGBA')
+    base = Image.open(os.path.join(FO, TEXTURAS_FO['ntk_' + pergaminho.split(':')[1]]['textures'] + '.png')).convert('RGBA')
     base = base.resize((16, 16), Image.NEAREST) if base.size != (16, 16) else base
     out = Image.new('RGBA', (16, 16)); out.alpha_composite(base)
     px = base.load(); o = out.load()
@@ -68,10 +128,13 @@ def icone(pergaminho):
     return out
 
 
+TEXTURAS_FO = json.load(open(os.path.join(FO, 'textures', 'item_texture.json'), encoding='utf-8'))['texture_data']
+
+
 def main():
     tex = json.load(open(os.path.join(RP, 'textures', 'item_texture.json'), encoding='utf-8'))
     langs = {l: open(os.path.join(RP, 'texts', f'{l}.lang'), encoding='utf-8').read().rstrip('\n').split('\n') for l in ('pt_BR', 'en_US')}
-    for nome, (perg, pt, en, _) in TOMOS.items():
+    for nome, (perg, pt, en, _, _n) in TOMOS.items():
         ident = f'fgr:infinite_tome_{nome}'
         os.makedirs(os.path.join(RP, 'textures', 'fgr', 'tomes'), exist_ok=True)
         icone(perg).save(os.path.join(RP, 'textures', 'fgr', 'tomes', f'{nome}.png'))

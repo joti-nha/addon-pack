@@ -2170,7 +2170,7 @@ import { ActionFormData as ActionFormData4 } from "@minecraft/server-ui";
 // a compra vale +1 vaga de tomo conhecido. A tela Escolher Tomos Infinitos troca quais tomos voce conhece dentro
 // das vagas. O Grimorio so deixa infinito o tomo conhecido. Outras classes veem a Estante de Tomos (sem compra).
 // <tomos.py>
-var SPELL_TOME_OPTIONS = {"fireball": [{"tome": "fgr:infinite_tome_fire_blast", "name": "Rajada de Fogo II"}, {"tome": "fgr:infinite_tome_flame_burst", "name": "Explosão de Chamas II"}, {"tome": "fgr:infinite_tome_fire_protection", "name": "Proteção contra Fogo II"}], "frost": [{"tome": "fgr:infinite_tome_slowness", "name": "Lentidão II"}, {"tome": "fgr:infinite_tome_lethargy", "name": "Letargia II"}, {"tome": "fgr:infinite_tome_converging", "name": "Convergência II"}], "lightning": [{"tome": "fgr:infinite_tome_lightning_bolt", "name": "Raio III"}, {"tome": "fgr:infinite_tome_thunderstorm", "name": "Tempestade"}, {"tome": "fgr:infinite_tome_earthquake", "name": "Terremoto III"}], "invisibility": [{"tome": "fgr:infinite_tome_invisibility", "name": "Invisibilidade III"}, {"tome": "fgr:infinite_tome_displacement", "name": "Deslocamento III"}, {"tome": "fgr:infinite_tome_acceleration", "name": "Aceleração III"}]};
+var SPELL_TOME_OPTIONS = {"fireball": [{"tome": "fgr:infinite_tome_fire_blast_1", "name": "Rajada de Fogo I", "lvl": 1}, {"tome": "fgr:infinite_tome_flame_burst_1", "name": "Explosão de Chamas I", "lvl": 1}, {"tome": "fgr:infinite_tome_fire_protection_1", "name": "Proteção contra Fogo I", "lvl": 1}, {"tome": "fgr:infinite_tome_berserk_1", "name": "Fúria I", "lvl": 1}, {"tome": "fgr:infinite_tome_strength_1", "name": "Força I", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_magma_cube", "name": "Invocar Cubo de Magma", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_magma_golem", "name": "Invocar Golem de Magma", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_sulfur_cube", "name": "Invocar Cubo de Enxofre", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_wither_skeleton", "name": "Invocar Esqueleto Wither", "lvl": 1}, {"tome": "fgr:infinite_tome_fire_blast", "name": "Rajada de Fogo II", "lvl": 2}, {"tome": "fgr:infinite_tome_flame_burst", "name": "Explosão de Chamas II", "lvl": 2}, {"tome": "fgr:infinite_tome_fire_protection", "name": "Proteção contra Fogo II", "lvl": 2}, {"tome": "fgr:infinite_tome_berserk_2", "name": "Fúria II", "lvl": 2}, {"tome": "fgr:infinite_tome_strength_2", "name": "Força II", "lvl": 2}, {"tome": "fgr:infinite_tome_fire_blast_3", "name": "Rajada de Fogo III", "lvl": 3}, {"tome": "fgr:infinite_tome_flame_burst_3", "name": "Explosão de Chamas III", "lvl": 3}, {"tome": "fgr:infinite_tome_fire_protection_3", "name": "Proteção contra Fogo III", "lvl": 3}, {"tome": "fgr:infinite_tome_berserk_3", "name": "Fúria III", "lvl": 3}, {"tome": "fgr:infinite_tome_strength_3", "name": "Força III", "lvl": 3}], "frost": [{"tome": "fgr:infinite_tome_slowness_1", "name": "Lentidão I", "lvl": 1}, {"tome": "fgr:infinite_tome_lethargy_1", "name": "Letargia I", "lvl": 1}, {"tome": "fgr:infinite_tome_converging_1", "name": "Convergência I", "lvl": 1}, {"tome": "fgr:infinite_tome_poison_cloud_1", "name": "Nuvem Venenosa I", "lvl": 1}, {"tome": "fgr:infinite_tome_cleansing_1", "name": "Limpeza I", "lvl": 1}, {"tome": "fgr:infinite_tome_purification_1", "name": "Purificação I", "lvl": 1}, {"tome": "fgr:infinite_tome_rain", "name": "Chuva", "lvl": 1}, {"tome": "fgr:infinite_tome_clear_sky", "name": "Céu Limpo", "lvl": 1}, {"tome": "fgr:infinite_tome_weaving_webs", "name": "Tecer Teias", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_snow_golem", "name": "Invocar Golem de Neve", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_stray", "name": "Invocar Errante", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_slime", "name": "Invocar Slime", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_bogged", "name": "Invocar Pantanoso", "lvl": 1}, {"tome": "fgr:infinite_tome_slowness", "name": "Lentidão II", "lvl": 2}, {"tome": "fgr:infinite_tome_lethargy", "name": "Letargia II", "lvl": 2}, {"tome": "fgr:infinite_tome_converging", "name": "Convergência II", "lvl": 2}, {"tome": "fgr:infinite_tome_poison_cloud_2", "name": "Nuvem Venenosa II", "lvl": 2}, {"tome": "fgr:infinite_tome_cleansing_2", "name": "Limpeza II", "lvl": 2}, {"tome": "fgr:infinite_tome_purification_2", "name": "Purificação II", "lvl": 2}, {"tome": "fgr:infinite_tome_slowness_3", "name": "Lentidão III", "lvl": 3}, {"tome": "fgr:infinite_tome_lethargy_3", "name": "Letargia III", "lvl": 3}, {"tome": "fgr:infinite_tome_converging_3", "name": "Convergência III", "lvl": 3}, {"tome": "fgr:infinite_tome_poison_cloud_3", "name": "Nuvem Venenosa III", "lvl": 3}, {"tome": "fgr:infinite_tome_cleansing_3", "name": "Limpeza III", "lvl": 3}, {"tome": "fgr:infinite_tome_purification_3", "name": "Purificação III", "lvl": 3}], "lightning": [{"tome": "fgr:infinite_tome_lightning_bolt_1", "name": "Raio I", "lvl": 1}, {"tome": "fgr:infinite_tome_earthquake_1", "name": "Terremoto I", "lvl": 1}, {"tome": "fgr:infinite_tome_field_levitation_1", "name": "Levitação em Área I", "lvl": 1}, {"tome": "fgr:infinite_tome_thunderstorm", "name": "Tempestade", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_iron_golem", "name": "Invocar Golem de Ferro", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_cobblestone_golem", "name": "Invocar Golem de Pedregulho", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_mossy_cobblestone_golem", "name": "Invocar Golem de Pedregulho Musgoso", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_deepslate_golem", "name": "Invocar Golem de Ardósia", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_cobbled_deepslate_golem", "name": "Invocar Golem de Pedregulho de Ardósia", "lvl": 1}, {"tome": "fgr:infinite_tome_lightning_bolt_2", "name": "Raio II", "lvl": 2}, {"tome": "fgr:infinite_tome_earthquake_2", "name": "Terremoto II", "lvl": 2}, {"tome": "fgr:infinite_tome_field_levitation_2", "name": "Levitação em Área II", "lvl": 2}, {"tome": "fgr:infinite_tome_lightning_bolt", "name": "Raio III", "lvl": 3}, {"tome": "fgr:infinite_tome_earthquake", "name": "Terremoto III", "lvl": 3}, {"tome": "fgr:infinite_tome_field_levitation_3", "name": "Levitação em Área III", "lvl": 3}], "invisibility": [{"tome": "fgr:infinite_tome_invisibility_1", "name": "Invisibilidade I", "lvl": 1}, {"tome": "fgr:infinite_tome_displacement_1", "name": "Deslocamento I", "lvl": 1}, {"tome": "fgr:infinite_tome_acceleration_1", "name": "Aceleração I", "lvl": 1}, {"tome": "fgr:infinite_tome_protection_1", "name": "Proteção I", "lvl": 1}, {"tome": "fgr:infinite_tome_regeneration_1", "name": "Regeneração I", "lvl": 1}, {"tome": "fgr:infinite_tome_resurgence_1", "name": "Ressurgimento I", "lvl": 1}, {"tome": "fgr:infinite_tome_flourishing_1", "name": "Florescimento I", "lvl": 1}, {"tome": "fgr:infinite_tome_hoarding_1", "name": "Acúmulo I", "lvl": 1}, {"tome": "fgr:infinite_tome_homeward_bound", "name": "Retorno ao Lar", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_skeleton", "name": "Invocar Esqueleto", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_mossy_skeleton", "name": "Invocar Esqueleto Musgoso", "lvl": 1}, {"tome": "fgr:infinite_tome_summon_parched", "name": "Invocar Ressecado", "lvl": 1}, {"tome": "fgr:infinite_tome_invisibility_2", "name": "Invisibilidade II", "lvl": 2}, {"tome": "fgr:infinite_tome_displacement_2", "name": "Deslocamento II", "lvl": 2}, {"tome": "fgr:infinite_tome_acceleration_2", "name": "Aceleração II", "lvl": 2}, {"tome": "fgr:infinite_tome_protection_2", "name": "Proteção II", "lvl": 2}, {"tome": "fgr:infinite_tome_regeneration_2", "name": "Regeneração II", "lvl": 2}, {"tome": "fgr:infinite_tome_resurgence_2", "name": "Ressurgimento II", "lvl": 2}, {"tome": "fgr:infinite_tome_flourishing_2", "name": "Florescimento II", "lvl": 2}, {"tome": "fgr:infinite_tome_hoarding_2", "name": "Acúmulo II", "lvl": 2}, {"tome": "fgr:infinite_tome_invisibility", "name": "Invisibilidade III", "lvl": 3}, {"tome": "fgr:infinite_tome_displacement", "name": "Deslocamento III", "lvl": 3}, {"tome": "fgr:infinite_tome_acceleration", "name": "Aceleração III", "lvl": 3}, {"tome": "fgr:infinite_tome_protection_3", "name": "Proteção III", "lvl": 3}, {"tome": "fgr:infinite_tome_regeneration_3", "name": "Regeneração III", "lvl": 3}, {"tome": "fgr:infinite_tome_resurgence_3", "name": "Ressurgimento III", "lvl": 3}, {"tome": "fgr:infinite_tome_flourishing_3", "name": "Florescimento III", "lvl": 3}, {"tome": "fgr:infinite_tome_hoarding_3", "name": "Acúmulo III", "lvl": 3}]};
 // </tomos.py>
 var SPELL_TOMES = Object.fromEntries(Object.entries(SPELL_TOME_OPTIONS).map(([k, v]) => [k, v[0].tome]));
 var TOME_BOUGHT = "tome_bought:"; // versao anterior: magia comprada uma vez
@@ -2195,8 +2195,13 @@ function readBuys(player) {
 function writeBuys(player, b) {
   player.setDynamicProperty(TOME_BUYS, JSON.stringify(b));
 }
+var SLOTS_PER_BUY = 3; // vagas de tomo por compra de magia
 function tomeLimit(player) {
-  return Object.values(readBuys(player)).reduce((a, n) => a + (n > 0 ? n : 0), 0);
+  return SLOTS_PER_BUY * Object.values(readBuys(player)).reduce((a, n) => a + (n > 0 ? n : 0), 0);
+}
+// Tomo de nivel N (I, II, III) pede N compras da magia.
+function tomeUnlocked(o, spellId, buys) {
+  return (o.lvl ?? 1) <= (buys[spellId] ?? 0);
 }
 function giveTomeCopy(player, tome) {
   const it = new ItemStack4(tome, 1);
@@ -2255,7 +2260,7 @@ function convertOwnedSpells(player) {
 world7.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
   if (initialSpawn) system5.runTimeout(() => { try { convertOwnedSpells(player); syncKnown(player); } catch (e) {} }, 60);
 });
-var MAX_BUYS = 3; // uma compra por tomo da magia
+var MAX_BUYS = 3; // a 2\xAA e a 3\xAA compra liberam os tomos de nivel II e III
 function showSpellbookUI(player, mage = true) {
   try { if (mage) convertOwnedSpells(player); } catch (e) {}
   const shelf = readShelf(player);
@@ -2269,7 +2274,7 @@ function showSpellbookUI(player, mage = true) {
     const carried = findCarriedTome(player, tome);
     rows.push({ text: `${carried ? "\xA7a[No invent\xE1rio]" : "\xA7e[Fora do invent\xE1rio]"} \xA75${tomeLabel(tome)}\n\xA77Toque para trocar${carried ? "" : " ou receber de novo"}`, menu: true, act: () => showSwapTome(player, tome) });
   }
-  for (let i = known.length; i < limit; i++) rows.push({ text: `\xA7b[Vaga livre]\n\xA77Toque para escolher um tomo`, menu: true, act: () => showSwapTome(player, null) });
+  if (known.length < limit) rows.push({ text: `\xA7b[${limit - known.length} vaga${limit - known.length > 1 ? "s" : ""} livre${limit - known.length > 1 ? "s" : ""}]\n\xA77Toque para escolher um tomo`, menu: true, act: () => showSwapTome(player, null) });
   if (mage) {
     for (const spell of MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"))) {
       const spellId = spell.tag.split(":")[1];
@@ -2277,7 +2282,7 @@ function showSpellbookUI(player, mage = true) {
       const n = buys[spellId] ?? 0;
       if (n >= MAX_BUYS) continue;
       if (player.hasTag(spell.requiresTag)) {
-        rows.push({ text: `\xA7e[Comprar] \xA7r${spell.name} \xA7a(+1 tomo) \xA78${n}/${MAX_BUYS}\n\xA77Custo: ${spell.costSouls} Almas`, menu: true, act: () => showTomeChoice(player, spell, spellId) });
+        rows.push({ text: `\xA7e[Comprar] \xA7r${spell.name} \xA7a(+${SLOTS_PER_BUY} vagas, n\xEDvel ${["I", "II", "III"][n]}) \xA78${n}/${MAX_BUYS}\n\xA77Custo: ${spell.costSouls} Almas`, menu: true, act: () => showTomeChoice(player, spell, spellId) });
       } else {
         rows.push({ text: `\xA7c[Bloqueado] \xA7r${spell.name}`, act: () => player.sendMessage("\xA7c[RPG Guide] Desbloqueie este feiti\xE7o na \xC1rvore de Habilidades primeiro!") });
       }
@@ -2299,7 +2304,7 @@ function showSpellbookUI(player, mage = true) {
     showPlayerMenuUI(player, classObj ? getPlayerScoreSafe(classObj, player, 0) : 0);
   } });
   const body = mage
-    ? `Tomos conhecidos: \xA7e${known.length}/${limit}\xA7r. Cada compra de magia com almas d\xE1 +1 vaga e um tomo \xE0 sua escolha; toque num tomo para troc\xE1-lo quando quiser.\n\nO tomo fica no invent\xE1rio (n\xE3o d\xE1 para descartar). Ponha num Grim\xF3rio no Atril Arcano para a troca r\xE1pida, ou na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.`
+    ? `Tomos conhecidos: \xA7e${known.length}/${limit}\xA7r. Cada compra de magia com almas d\xE1 +${SLOTS_PER_BUY} vagas e libera o pr\xF3ximo n\xEDvel dos tomos dela (I, II, III); toque num tomo para troc\xE1-lo quando quiser.\n\nO tomo fica no invent\xE1rio (n\xE3o d\xE1 para descartar). Ponha num Grim\xF3rio no Atril Arcano para a troca r\xE1pida, ou na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.`
     : "Tomos Infinitos guardados. S\xF3 o Mago conhece tomos; os daqui s\xE3o de vers\xF5es anteriores.";
   const form = new ActionFormData4().title(mage ? "\xA7dTomos Infinitos do Mago" : "\xA75Estante de Tomos").body(body);
   for (const r of rows) form.button(r.text);
@@ -2322,7 +2327,7 @@ function swapOptions(player) {
   for (const [spellId, list] of Object.entries(SPELL_TOME_OPTIONS)) {
     if (!(buys[spellId] > 0)) continue;
     const spell = MageShopItems.find((i) => i.tag === `spell_unlocked:${spellId}`);
-    for (const o of list) if (!known.includes(o.tome)) out.push({ ...o, spell: spell?.name ?? spellId });
+    for (const o of list) if (!known.includes(o.tome) && tomeUnlocked(o, spellId, buys)) out.push({ ...o, spell: spell?.name ?? spellId });
   }
   return out;
 }
@@ -2331,7 +2336,7 @@ function showSwapTome(player, oldTome) {
   const carried = oldTome ? findCarriedTome(player, oldTome) : true;
   const form = new ActionFormData4().title(oldTome ? `\xA7dTrocar \xA75${tomeLabel(oldTome)}` : "\xA7dEscolher Tomo Infinito");
   form.body(options.length
-    ? (oldTome ? "Escolha o tomo que vai ficar no lugar deste. Voc\xEA pode trocar de novo quando quiser." : "Escolha o tomo para esta vaga. Voc\xEA pode trocar depois.")
+    ? (oldTome ? "Escolha o tomo que vai ficar no lugar deste. Voc\xEA pode trocar de novo quando quiser." : `Vagas livres: \xA7e${tomeLimit(player) - readKnown(player).length}\xA7r. Escolha um tomo; voc\xEA pode trocar depois.`)
     : "N\xE3o h\xE1 outro tomo dispon\xEDvel: compre outra magia com almas para liberar mais op\xE7\xF5es.");
   const acts = [];
   for (const o of options) {
@@ -2355,18 +2360,21 @@ function showSwapTome(player, oldTome) {
   system5.run(() => {
     form.show(player).then((res) => {
       if (res.canceled) return;
+      const last = res.selection === acts.length - 1;
       acts[res.selection]?.();
-      system5.runTimeout(() => { try { showSpellbookUI(player); } catch (e) {} }, 2);
+      const more = !oldTome && !last && readKnown(player).length < tomeLimit(player) && swapOptions(player).length > 0;
+      system5.runTimeout(() => { try { more ? showSwapTome(player, null) : showSpellbookUI(player); } catch (e) {} }, 2);
     }).catch(e => {});
   });
 }
 // Compra: o Mago escolhe qual tomo da magia leva (so os que ainda nao conhece).
 function showTomeChoice(player, spell, spellId) {
   const known = readKnown(player);
-  const options = (SPELL_TOME_OPTIONS[spellId] ?? []).filter((o) => !known.includes(o.tome));
+  const next = { [spellId]: (readBuys(player)[spellId] ?? 0) + 1 };
+  const options = (SPELL_TOME_OPTIONS[spellId] ?? []).filter((o) => !known.includes(o.tome) && tomeUnlocked(o, spellId, next));
   if (!options.length) { player.sendMessage("\xA7e[RPG Guide] Voc\xEA j\xE1 conhece todos os tomos desta magia."); return; }
   const form = new ActionFormData4().title(`\xA7d${spell.name}`);
-  form.body(`Escolha o Tomo Infinito que voc\xEA quer (${spell.costSouls} Almas, +1 vaga):`);
+  form.body(`Compra ${next[spellId]}/${MAX_BUYS}: ${spell.costSouls} Almas, +${SLOTS_PER_BUY} vagas${next[spellId] > 1 ? ` e os tomos de n\xEDvel ${["I", "II", "III"][next[spellId] - 1]}` : ""}. Escolha o primeiro Tomo Infinito (as outras vagas voc\xEA escolhe em seguida):`);
   for (const o of options) form.button(`\xA75${o.name}`);
   form.button("Voltar");
   system5.run(() => {
@@ -2391,8 +2399,9 @@ function showTomeChoice(player, spell, spellId) {
       buys[spellId] = (buys[spellId] ?? 0) + 1;
       writeBuys(player, buys);
       learnTome(player, choice.tome);
-      player.sendMessage(`\xA7a[RPG Guide] Tomo Infinito comprado: \xA75${choice.name}\xA7a (+1 vaga, ${readKnown(player).length}/${tomeLimit(player)}).`);
-      system5.runTimeout(() => { try { showSpellbookUI(player); } catch (e) {} }, 2);
+      player.sendMessage(`\xA7a[RPG Guide] Tomo Infinito comprado: \xA75${choice.name}\xA7a (+${SLOTS_PER_BUY} vagas, ${readKnown(player).length}/${tomeLimit(player)}).`);
+      const more = readKnown(player).length < tomeLimit(player) && swapOptions(player).length > 0;
+      system5.runTimeout(() => { try { more ? showSwapTome(player, null) : showSpellbookUI(player); } catch (e) {} }, 2);
     }).catch(e => {});
   });
 }
@@ -2407,10 +2416,10 @@ function showChooseTomesUI(player) {
   for (const [spellId, list] of Object.entries(SPELL_TOME_OPTIONS)) {
     if (!(buys[spellId] > 0)) continue;
     const spell = MageShopItems.find((i) => i.tag === `spell_unlocked:${spellId}`);
-    for (const o of list) opts.push({ ...o, spell: spell?.name ?? spellId });
+    for (const o of list) if (tomeUnlocked(o, spellId, buys) || known.includes(o.tome)) opts.push({ ...o, spell: spell?.name ?? spellId });
   }
   const form = new __MFD().title(`\xA7dEscolher Tomos Infinitos \xA78(${limit} vaga${limit > 1 ? "s" : ""})`);
-  form.label?.(`Vagas: \xA7e${limit}\xA7r (1 por compra de magia). Marque os tomos que voc\xEA quer conhecer.`);
+  form.label?.(`Vagas: \xA7e${limit}\xA7r (${SLOTS_PER_BUY} por compra de magia). Marque os tomos que voc\xEA quer conhecer.`);
   for (const o of opts) form.toggle(`\xA75${o.name} \xA78(${o.spell})`, known.includes(o.tome));
   form.submitButton?.("Confirmar");
   system5.run(() => {
