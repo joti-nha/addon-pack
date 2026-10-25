@@ -50,7 +50,7 @@ world.beforeEvents.itemUse.subscribe(event => {
             let elapsedTicks = 0;
             const sustainedBoostId = system.runInterval(() => {
                 try {
-                    if (!player.isValid()) {
+                    if (!player.isValid) {
                         system.clearRun(sustainedBoostId);
                         return;
                     }

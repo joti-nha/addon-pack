@@ -62,7 +62,7 @@ world.afterEvents.entityHitEntity.subscribe((event) => {
 		// --- FINALIZAÇÃO DO TEMPO DE RECARGA ---
 		// 1200 ticks = 60 segundos
 		system.runTimeout(() => {
-			if (target.isValid()) {
+			if (target.isValid) {
 				target.removeTag("cooldown_penas");
 			}
 		}, 1200);

@@ -55,7 +55,7 @@ export function poggy(player) {
             const dz = entity.location.z - player.location.z;
             const distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
             if (distance <= 4) {
-                player.applyKnockback(0, 0, 5.4, 1);
+                player.applyKnockback({ x: 0, z: 0 }, 1);
                 player.applyDamage(4);
 
                 if (entity.getComponent(EntityMarkVariantComponent.componentId)?.value == 1) {
