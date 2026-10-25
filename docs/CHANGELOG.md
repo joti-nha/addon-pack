@@ -9,6 +9,7 @@ Nada desta versão foi testado no jogo.
 - **Itens do A&S fora da mão ou invisíveis**: 651 anexos de Dungeons, DarkAge, OTG, Forsaken, Eternal Caves/End, BoB, ImprovisedGuns, Aquaculture, Mowzie, Cataclysmical, CommonSense e Grimório ganharam a linha `parent_setup` do A&S (o A&S só mostra e posiciona o item com ela).
 - **Lanças, cajados e martelos** (Forsaken, Mowzie, Dungeons, Cataclysmical): saíram as tags de lança/maça/vara que o modpack tinha posto em itens com anexo próprio; elas trocavam a animação do braço e desalinhavam o modelo.
 - **Montantes**: voltaram aos anexos originais (o sistema `armas_pesadas` saiu). Ganharam só a tag de machado do A&S (`oreville:is_axe`), mantendo `minecraft:is_sword` para o JavaCombat.
+- **Steve com a skin do Bare Bones**: o Bare Bones e o Bare Bones & Stuff trocavam as skins padrão do jogador (Steve, Alex e as outras 7 do jogo). Essas texturas saíram dos dois packs, então quem usa uma skin padrão volta a aparecer com a do jogo.
 - **Boneco de treino do Dungeons**: a textura do Bare Bones com o mesmo caminho cobria a dele. A do Dungeons foi renomeada.
 - **"Java" na descrição das armas**: o JavaCombat só remove as linhas com "Java" e não reescreve a descrição a cada tick.
 - **Scripts com API removida no Script API 2.x**: `runCommandAsync` (câmeras do CommonSense, OTG), `isValid()` (CommonSense, Cataclysmical) e o `applyKnockback` antigo (Better on Bedrock).
