@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Janela do Empacotador do Addon Pack (Windows, e tambem Linux/macOS com Python + Tk).
 
-No Windows vem pronta como "Empacotador Addon Pack.exe" na Release do GitHub: coloque o .exe na pasta
-do repositorio (a que tem packs/) e de dois cliques. O comando continua funcionando igual:
+No Windows, abra pelo "Empacotador Addon Pack.bat" da raiz do repositorio (precisa do Python instalado). O comando continua funcionando igual:
     python ferramentas/empacotar.py
 """
 import os, queue, subprocess, sys, threading, time
@@ -210,7 +209,7 @@ class Janela:
             n = sum(1 for d in os.listdir(pasta) if os.path.isfile(os.path.join(pasta, d, 'manifest.json')))
             self.l_info.config(text=f'{n} packs encontrados em packs/')
         else:
-            self.l_info.config(text='Dica: coloque o .exe dentro da pasta do repositório para ele achar sozinho.')
+            self.l_info.config(text='Dica: abra pelo .bat da pasta do repositório para ele achar sozinho.')
         self.b_montar.configurar(ativo=bool(self.raiz) and not self.trabalhando)
 
     def _escolher_raiz(self):

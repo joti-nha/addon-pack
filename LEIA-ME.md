@@ -10,8 +10,8 @@ Modpack para Minecraft Bedrock que junta 37 addons de vários criadores e 5 pack
 |---|---|
 | `packs/` | Os 42 packs prontos: os originais com as alterações do modpack já aplicadas, mais os packs próprios. É aqui que se edita. |
 | `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/` (comando). |
-| `Empacotador Addon Pack.exe` | O empacotador com janela para Windows, pronto para usar. |
-| `ferramentas/empacotador_janela.py` | O código da janela do Windows (vira o `.exe`). Se mudar, troque o `.exe` da raiz pelo da Release nova. |
+| `Empacotador Addon Pack.bat` | Abre o empacotador com janela no Windows (precisa do Python instalado). |
+| `ferramentas/empacotador_janela.py` | O código da janela do Windows. |
 | `ferramentas/menu_celular.py` | O menu para o celular (Termux). |
 | `ferramentas/otimizar.py` | Compacta JSON e PNG sem perder nada (ver abaixo). |
 | `ferramentas/mesclar_jogador.py` | Monta o jogador único (A&S + RnR, RPG e OTG). Rode depois de atualizar um deles. |
@@ -29,7 +29,7 @@ A cada envio para a branch `main`, o GitHub monta o pacote sozinho. Vá em **Rel
 
 Há três jeitos, e todos geram o mesmo arquivo. Primeiro baixe o repositório (no GitHub: **Code > Download ZIP**) e extraia.
 
-**Windows, com janela:** na pasta extraída, dê dois cliques em `Empacotador Addon Pack.exe` (ele já fica na raiz do repositório, ao lado de `packs/`). Toque em **Montar .mcaddon**, acompanhe a barra e, no fim, use **Abrir no Minecraft**. Se o Windows avisar que o programa é desconhecido, clique em "Mais informações" e "Executar assim mesmo": o .exe não tem assinatura digital paga.
+**Windows, com janela:** instale o Python 3 uma vez (python.org ou Microsoft Store, marcando "Add python.exe to PATH"). Depois, na pasta extraída, dê dois cliques em `Empacotador Addon Pack.bat`, que fica na raiz ao lado de `packs/`. Ele abre a janela do empacotador. Se o Python faltar, o próprio `.bat` avisa e abre a página de download. Toque em **Montar .mcaddon**, acompanhe a barra e, no fim, use **Abrir no Minecraft**.
 
 **Celular (Termux), com menu:**
 ```
