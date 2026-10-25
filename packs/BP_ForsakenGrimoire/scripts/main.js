@@ -89,7 +89,11 @@ function withOwner(e, owner, name) {
   return e;
 }
 const ownerOf = (it) => { const o = it.getDynamicProperty(P_OWNER); return typeof o === "string" ? o : undefined; };
-const canUseTome = (p, e) => !!e && !!e.tome && (!e.owner || e.owner === p.id);
+// O Livro de Feiticos do RPG manda (scriptevent fgr:tomos_conhecidos) os tomos que o jogador conhece; so esses
+// ficam infinitos. Sem o RPG (nenhuma lista recebida), todo tomo vale.
+const P_KNOWN = "fgr:known_tomes";
+const knowsTome = (p, tome) => { const k = p.getDynamicProperty(P_KNOWN); return typeof k !== "string" || k.split(",").includes(tome); };
+const canUseTome = (p, e) => !!e && !!e.tome && (!e.owner || e.owner === p.id) && knowsTome(p, e.tome);
 function stampOwner(it, id, name) {
   it.setDynamicProperty(P_OWNER, id);
   if (name) it.setDynamicProperty(P_OWNER_NAME, name);
@@ -224,7 +228,10 @@ function equip(p, uid, idx, auto = false) {
   const e = slots[idx];
   if (!e) { say(p, `§7Espaço ${idx + 1} do Grimório vazio`); return false; }
   if (st && st.uid === uid && st.idx === idx && !auto) { unequip(p); return false; }
-  if (e.tome && !canUseTome(p, e)) { say(p, `§cO Tomo Infinito do espaço ${idx + 1} é de ${e.ownerName ?? "outro jogador"}`); return false; }
+  if (e.tome && !canUseTome(p, e)) {
+    say(p, !knowsTome(p, e.tome) ? `§cTomo do espaço ${idx + 1} não está entre os conhecidos: escolha-o no Livro de Feitiços` : `§cO Tomo Infinito do espaço ${idx + 1} é de ${e.ownerName ?? "outro jogador"}`);
+    return false;
+  }
   const free = !!e.tome;
   if (!free && e.n <= 0) { say(p, `§cSem pergaminhos no espaço ${idx + 1}`); return false; }
   const oh = offhandOf(p);
@@ -308,6 +315,7 @@ function equipSolo(p, oh) {
   const tome = oh.getItem();
   const owner = ownerOf(tome);
   if (owner && owner !== p.id) return false; // claimTomes devolve ao dono
+  if (!knowsTome(p, tome.typeId)) { say(p, "§cTomo não conhecido: escolha-o no Livro de Feitiços (RPG Guide)"); return false; }
   const id = TOMES[tome.typeId];
   p.setDynamicProperty(P_SOLO, JSON.stringify({ tome: tome.typeId, owner: owner ?? p.id, ownerName: tome.getDynamicProperty(P_OWNER_NAME) ?? p.name }));
   oh.setItem(scrollFor(id, true));
@@ -493,6 +501,10 @@ system.runInterval(() => {
   }
 }, 1);
 
+system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity }) => {
+  if (id !== "fgr:tomos_conhecidos" || sourceEntity?.typeId !== "minecraft:player") return;
+  sourceEntity.setDynamicProperty(P_KNOWN, message === "-" ? "" : message);
+});
 world.afterEvents.playerLeave.subscribe(({ playerId }) => {
   bars.delete(playerId); sneakPrev.delete(playerId); lastTap.delete(playerId);
 });

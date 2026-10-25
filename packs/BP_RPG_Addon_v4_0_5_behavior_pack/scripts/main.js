@@ -2165,99 +2165,177 @@ function closeSkillTreeUI(player) {
 // src/systems/spellbook.ts
 import { system as system5, world as world7 } from "@minecraft/server";
 import { ActionFormData as ActionFormData4 } from "@minecraft/server-ui";
-function showSpellbookUI(player) {
-  const form = new ActionFormData4().title("\xA7dLivro de Feiti\xE7os do Mago").body("Os feiti\xE7os agora s\xE3o Tomos Infinitos. Compre os que voc\xEA j\xE1 desbloqueou.");
-  const spells = MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"));
-  form.button("\xA75Comprar Tomos Infinitos", "textures/items/book_enchanted");
-  system5.run(() => {
-    form.show(player).then((res) => {
-      if (res.canceled) return;
-      if (res.selection === 0) {
-        showSpellsList(player, spells);
-      }
-    }).catch(e => {});
-  });
-}
-// Addon Pack: as magias do Mago viraram Tomos Infinitos do Grimorio (Forsaken Grimoires).
-// Comprar uma magia entrega o tomo; quem ja tinha a magia comprada recebe o tomo uma vez.
-// Cada magia da loja tem uma lista de tomos (do mesmo nivel) para o Mago escolher; o primeiro e o padrao.
+// [Addon Pack] Livro de Feiticos = inventario de Tomos Infinitos. Cada magia comprada com almas libera +1 vaga de
+// tomo conhecido e os tomos daquela magia para aprender. Um tomo conhecido fica no livro: tocar nele poe uma copia
+// na mao secundaria (onde a varinha usa) e tocar de novo guarda de volta. A Estante de Tomos (outras classes) e o
+// mesmo inventario, sem compra e sem vagas.
 // <tomos.py>
 var SPELL_TOME_OPTIONS = {"fireball": [{"tome": "fgr:infinite_tome_fire_blast", "name": "Rajada de Fogo II"}, {"tome": "fgr:infinite_tome_flame_burst", "name": "Explosão de Chamas II"}, {"tome": "fgr:infinite_tome_fire_protection", "name": "Proteção contra Fogo II"}], "frost": [{"tome": "fgr:infinite_tome_slowness", "name": "Lentidão II"}, {"tome": "fgr:infinite_tome_lethargy", "name": "Letargia II"}, {"tome": "fgr:infinite_tome_converging", "name": "Convergência II"}], "lightning": [{"tome": "fgr:infinite_tome_lightning_bolt", "name": "Raio III"}, {"tome": "fgr:infinite_tome_thunderstorm", "name": "Tempestade"}, {"tome": "fgr:infinite_tome_earthquake", "name": "Terremoto III"}], "invisibility": [{"tome": "fgr:infinite_tome_invisibility", "name": "Invisibilidade III"}, {"tome": "fgr:infinite_tome_displacement", "name": "Deslocamento III"}, {"tome": "fgr:infinite_tome_acceleration", "name": "Aceleração III"}]};
 // </tomos.py>
 var SPELL_TOMES = Object.fromEntries(Object.entries(SPELL_TOME_OPTIONS).map(([k, v]) => [k, v[0].tome]));
-function giveSpellTome(player, spellId, tomeId) {
-  const tome = new ItemStack4(tomeId ?? SPELL_TOMES[spellId], 1);
-  const left = player.getComponent("minecraft:inventory")?.container?.addItem(tome);
-  if (left) player.dimension.spawnItem(left, player.location);
+var TOME_BOUGHT = "tome_bought:";
+var KNOWN_TOMES = "rpg:known_tomes";
+var SPELL_OF_TOME = {};
+for (const [k, v] of Object.entries(SPELL_TOME_OPTIONS)) for (const o of v) SPELL_OF_TOME[o.tome] = k;
+function readKnown(player) {
+  try { const a = JSON.parse(player.getDynamicProperty(KNOWN_TOMES) ?? "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; }
 }
+function writeKnown(player, list) {
+  player.setDynamicProperty(KNOWN_TOMES, JSON.stringify([...new Set(list)]));
+  syncKnown(player);
+}
+// O Grimorio (outro pack) so deixa infinito o tomo que o Livro de Feiticos marca como conhecido.
+function syncKnown(player) {
+  try { player.runCommandAsync(`scriptevent fgr:tomos_conhecidos ${readKnown(player).join(",") || "-"}`); } catch (e) {}
+}
+function tomeLimit(player) {
+  return Object.keys(SPELL_TOMES).filter((k) => player.hasTag(TOME_BOUGHT + k)).length;
+}
+function learnTome(player, tome) {
+  const known = readKnown(player);
+  if (known.includes(tome) || known.length >= tomeLimit(player)) return false;
+  known.push(tome);
+  writeKnown(player, known);
+  const shelf = readShelf(player); // um tomo conhecido mora no livro: a copia guardada na estante sai
+  if (shelf[tome] > 0) { shelf[tome] -= 1; writeShelf(player, shelf); }
+  return true;
+}
+function forgetTome(player, tome) {
+  writeKnown(player, readKnown(player).filter((t) => t !== tome));
+  for (let sl = findCarriedTome(player, tome); sl; sl = findCarriedTome(player, tome)) sl.set(undefined);
+}
+function forgetAllTomes(player) {
+  for (const t of readKnown(player)) forgetTome(player, t);
+}
+// Magias compradas antes (sistema antigo ou tomos da versao anterior, entregues no inventario) passam a valer
+// como compradas, e seus tomos viram conhecidos enquanto houver vaga.
 function convertOwnedSpells(player) {
   for (const spellId of Object.keys(SPELL_TOMES)) {
     if (!player.hasTag(`spell_unlocked:${spellId}`)) continue;
     player.removeTag(`spell_unlocked:${spellId}`);
     player.removeTag(`active_spell:${spellId}`);
-    giveSpellTome(player, spellId);
-    player.sendMessage(`\xA7d[Livro de Feiti\xE7os] \xA7aSeu feiti\xE7o virou um \xA76Tomo Infinito\xA7a. Guarde-o no seu Grim\xF3rio no Atril Arcano.`);
+    player.addTag(TOME_BOUGHT + spellId);
+    learnTome(player, SPELL_TOMES[spellId]);
+    player.sendMessage(`\xA7d[Livro de Feiti\xE7os] \xA7aSeu feiti\xE7o virou um \xA76Tomo Infinito\xA7a conhecido no Livro de Feiti\xE7os.`);
   }
+  const shelf = readShelf(player);
+  const held = carriedTomeIds(player);
+  for (const [tome, spellId] of Object.entries(SPELL_OF_TOME)) {
+    if (!(shelf[tome] > 0) && !held.includes(tome)) continue;
+    if (!player.hasTag(TOME_BOUGHT + spellId)) player.addTag(TOME_BOUGHT + spellId);
+  }
+  for (const tome of Object.keys(SPELL_OF_TOME)) if (shelf[tome] > 0 || held.includes(tome)) learnTome(player, tome);
 }
 world7.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
-  if (initialSpawn) system5.runTimeout(() => { try { convertOwnedSpells(player); } catch (e) {} }, 60);
+  if (initialSpawn) system5.runTimeout(() => { try { convertOwnedSpells(player); syncKnown(player); } catch (e) {} }, 60);
 });
-function showSpellsList(player, spells) {
-  convertOwnedSpells(player);
-  const form = new ActionFormData4().title("\xA7dFeiti\xE7os");
-  form.body("Compre o Tomo Infinito de um feiti\xE7o. Ponha o tomo no seu Grim\xF3rio no Atril Arcano, ou use-o na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba.\n\n");
-  for (const spell of spells) {
-    if (player.hasTag(spell.requiresTag)) {
-      form.button(`\xA7e[Comprar Tomo] \xA7r${spell.name}\n\xA77Custo: ${spell.costSouls} Almas`);
-    } else {
-      form.button(`\xA7c[Bloqueado] \xA7r${spell.name}`);
+function showSpellbookUI(player, mage = true) {
+  try { if (mage) convertOwnedSpells(player); } catch (e) {}
+  const shelf = readShelf(player);
+  const known = mage ? readKnown(player) : [];
+  const limit = mage ? tomeLimit(player) : 0;
+  const rows = [];
+  const listed = new Set(known);
+  for (const tome of known) {
+    if (findCarriedTome(player, tome)) rows.push({ text: `\xA7e[Na m\xE3o] \xA75${tomeLabel(tome)}\n\xA77Toque para guardar`, act: () => storeTome(player, tome) });
+    else rows.push({ text: `\xA7a[No livro] \xA75${tomeLabel(tome)}\n\xA77Toque para pegar na m\xE3o`, act: () => takeTome(player, tome) });
+  }
+  if (mage) {
+    for (const spell of MageShopItems.filter((item) => item.tag.startsWith("spell_unlocked:"))) {
+      const spellId = spell.tag.split(":")[1];
+      if (!SPELL_TOMES[spellId]) continue;
+      if (player.hasTag(TOME_BOUGHT + spellId)) {
+        continue;
+      } else if (player.hasTag(spell.requiresTag)) {
+        rows.push({ text: `\xA7e[Comprar] \xA7r${spell.name} \xA7a(+1 vaga)\n\xA77Custo: ${spell.costSouls} Almas`, act: () => buySpellTome(player, spell, spellId) });
+      } else {
+        rows.push({ text: `\xA7c[Bloqueado] \xA7r${spell.name}`, act: () => player.sendMessage("\xA7c[Livro de Feiti\xE7os] Desbloqueie este feiti\xE7o na \xC1rvore de Habilidades primeiro!") });
+      }
     }
   }
+  // Outros tomos (achados, trocados ou de outras classes): guardados na estante ou levados pelo jogador.
+  for (const id of Object.keys(shelf)) {
+    if (listed.has(id)) continue;
+    listed.add(id);
+    rows.push({ text: `\xA7a[Guardado] \xA75${tomeLabel(id)}${shelf[id] > 1 ? ` \xA77x${shelf[id]}` : ""}\n\xA77Toque para pegar na m\xE3o`, act: () => takeTome(player, id) });
+  }
+  for (const id of carriedTomeIds(player)) {
+    if (listed.has(id)) continue;
+    listed.add(id);
+    rows.push({ text: `\xA7e[Na m\xE3o] \xA75${tomeLabel(id)}\n\xA77Toque para guardar`, act: () => storeTome(player, id) });
+  }
+  if (carriedTomeIds(player).length > 1) rows.push({ text: "\xA7aGuardar todos os tomos", act: () => {
+    const n = storeAllTomes(player);
+    player.sendMessage(n ? `\xA7a[Livro] ${n} tomo(s) guardado(s).` : "\xA7e[Livro] Nenhum tomo seu no invent\xE1rio.");
+  } });
+  if (mage && limit > 0) rows.unshift({ text: `\xA7d\xA7lEscolher Tomos Infinitos\xA7r \xA78(${known.length}/${limit})\n\xA77Marque quais tomos voc\xEA conhece`, menu: true, act: () => showChooseTomesUI(player) });
+  rows.push({ text: "Voltar", back: true, act: () => {
+    const classObj = world7.scoreboard.getObjective("class");
+    showPlayerMenuUI(player, classObj ? getPlayerScoreSafe(classObj, player, 0) : 0);
+  } });
+  const body = mage
+    ? `Tomos conhecidos: \xA7e${known.length}/${limit}\xA7r. Cada magia comprada com almas libera +1 vaga.\n\nPegue um tomo na m\xE3o e use-o na m\xE3o secund\xE1ria com uma varinha: o feiti\xE7o nunca acaba. Tocar de novo guarda o tomo no livro.`
+    : "Seus Tomos Infinitos ficam guardados aqui. Pegue um na m\xE3o e use-o na m\xE3o secund\xE1ria com uma varinha, ou ponha no seu Grim\xF3rio no Atril Arcano.";
+  const form = new ActionFormData4().title(mage ? "\xA7dLivro de Feiti\xE7os do Mago" : "\xA75Estante de Tomos").body(body);
+  for (const r of rows) form.button(r.text);
   system5.run(() => {
     form.show(player).then((res) => {
-      if (res.canceled) {
-        showSpellbookUI(player);
-        return;
-      }
-      const selectedSpell = spells[res.selection];
-      const spellId = selectedSpell.tag.split(":")[1];
-      if (!player.hasTag(selectedSpell.requiresTag)) {
-        player.sendMessage("\xA7c[Livro de Feiti\xE7os] Desbloqueie este feiti\xE7o na \xC1rvore de Habilidades primeiro!");
-        return;
-      }
-      const objective = world7.scoreboard.getObjective("souls");
-      if (!objective) return;
-      const currentSouls = objective.getScore(player) || 0;
-      if (currentSouls < selectedSpell.costSouls) {
-        player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Almas insuficientes! Voc\xEA precisa de ${selectedSpell.costSouls} Almas.`);
-        return;
-      }
-      showTomeChoice(player, selectedSpell, spellId, spells);
+      if (res.canceled) return;
+      const r = rows[res.selection];
+      if (!r) return;
+      r.act();
+      if (!r.back && !r.menu) system5.runTimeout(() => { try { showSpellbookUI(player, mage); } catch (e) {} }, 2);
     }).catch(e => {});
   });
 }
-// O Mago escolhe qual tomo leva, entre os que a magia permite.
-function showTomeChoice(player, selectedSpell, spellId, spells) {
-  const options = SPELL_TOME_OPTIONS[spellId] ?? [{ tome: SPELL_TOMES[spellId], name: selectedSpell.name }];
-  const form = new ActionFormData4().title(`\xA7d${selectedSpell.name}`);
-  form.body(`Escolha qual Tomo Infinito voc\xEA quer (${selectedSpell.costSouls} Almas):`);
-  for (const o of options) form.button(`\xA75${o.name}`);
+// Tela de escolha: um marcador por tomo das magias compradas; ficam marcados os conhecidos. Ao confirmar, os
+// marcados viram os conhecidos (ate o limite de vagas) e os desmarcados saem do livro e da mao do jogador.
+function showChooseTomesUI(player) {
+  const limit = tomeLimit(player);
+  const known = readKnown(player);
+  const opts = [];
+  for (const [spellId, list] of Object.entries(SPELL_TOME_OPTIONS)) {
+    if (!player.hasTag(TOME_BOUGHT + spellId)) continue;
+    const spell = MageShopItems.find((i) => i.tag === `spell_unlocked:${spellId}`);
+    for (const o of list) opts.push({ ...o, spell: spell?.name ?? spellId });
+  }
+  const form = new __MFD().title(`\xA7dEscolher Tomos Infinitos \xA78(${limit} vaga${limit > 1 ? "s" : ""})`);
+  form.label?.(`Vagas: \xA7e${limit}\xA7r (1 por magia comprada com almas). Marque os tomos que voc\xEA quer conhecer.`);
+  for (const o of opts) form.toggle(`\xA75${o.name} \xA78(${o.spell})`, known.includes(o.tome));
+  form.submitButton?.("Confirmar");
   system5.run(() => {
     form.show(player).then((res) => {
-      if (res.canceled) { showSpellsList(player, spells); return; }
-      const choice = options[res.selection];
-      const objective = world7.scoreboard.getObjective("souls");
-      if (!objective || !choice) return;
-      const currentSouls = objective.getScore(player) || 0;
-      if (currentSouls < selectedSpell.costSouls) {
-        player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Almas insuficientes! Voc\xEA precisa de ${selectedSpell.costSouls} Almas.`);
+      if (res.canceled || !res.formValues) { showSpellbookUI(player); return; }
+      const vals = res.formValues.filter((v) => typeof v === "boolean");
+      const chosen = opts.filter((o, i) => vals[i]).map((o) => o.tome);
+      if (chosen.length > limit) {
+        player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Voc\xEA marcou ${chosen.length} tomos, mas s\xF3 tem ${limit} vaga(s). Compre outra magia com almas para ganhar mais.`);
+        system5.runTimeout(() => { try { showChooseTomesUI(player); } catch (e) {} }, 2);
         return;
       }
-      objective.setScore(player, currentSouls - selectedSpell.costSouls);
-      giveSpellTome(player, spellId, choice.tome);
-      player.sendMessage(`\xA7a[Livro de Feiti\xE7os] Tomo Infinito comprado: \xA7e${choice.name}`);
+      for (const t of known) if (!chosen.includes(t)) forgetTome(player, t);
+      for (const t of chosen) learnTome(player, t);
+      player.sendMessage(`\xA7a[Livro de Feiti\xE7os] Tomos conhecidos: \xA7e${chosen.length}/${limit}`);
+      system5.runTimeout(() => { try { showSpellbookUI(player); } catch (e) {} }, 2);
     }).catch(e => {});
   });
+}
+function buySpellTome(player, spell, spellId) {
+  if (!player.hasTag(spell.requiresTag)) {
+    player.sendMessage("\xA7c[Livro de Feiti\xE7os] Desbloqueie este feiti\xE7o na \xC1rvore de Habilidades primeiro!");
+    return;
+  }
+  const objective = world7.scoreboard.getObjective("souls");
+  if (!objective) return;
+  const currentSouls = objective.getScore(player) || 0;
+  if (currentSouls < spell.costSouls) {
+    player.sendMessage(`\xA7c[Livro de Feiti\xE7os] Almas insuficientes! Voc\xEA precisa de ${spell.costSouls} Almas.`);
+    return;
+  }
+  objective.setScore(player, currentSouls - spell.costSouls);
+  player.addTag(TOME_BOUGHT + spellId);
+  learnTome(player, SPELL_TOMES[spellId]);
+  player.sendMessage(`\xA7a[Livro de Feiti\xE7os] ${spell.name} comprada: +1 vaga. Tomo aprendido: \xA75${tomeLabel(SPELL_TOMES[spellId])}`);
 }
 
 // src/systems/classes.ts
@@ -2403,8 +2481,9 @@ function showPlayerMenuUI(player, classId) {
   }
   if (classId === 3 /* Mage */) {
     buttons.push({ text: "\xA75Livro de Feiti\xE7os do Mago", action: () => showSpellbookUI(player) });
+  } else {
+    buttons.push({ text: "\xA75Estante de Tomos", action: () => showSpellbookUI(player, false) });
   }
-  buttons.push({ text: "\xA75Estante de Tomos", action: () => showTomeShelfUI(player) });
   buttons.push({ text: "\xA78Configura\xE7\xF5es", action: () => showSettingsUI(player) });
   buttons.push({ text: "Fechar", action: () => {
   } });
@@ -2416,9 +2495,10 @@ function showPlayerMenuUI(player, classId) {
     buttons[response.selection].action();
   }).catch(e => {});
 }
-// [Addon Pack] Estante de Tomos: os Tomos Infinitos podem ser guardados de volta no RPG Guide (somem do inventario
-// e ficam gravados no jogador) e retirados quando quiser. Guarda so os do proprio jogador: o Grimorio (Forsaken
-// Grimoires) marca o dono de cada tomo e devolve ao dono os tomos que outros jogadores pegarem.
+// [Addon Pack] Inventario de tomos do Livro de Feiticos / Estante de Tomos. Tomos conhecidos do Mago ficam no livro
+// (lista rpg:known_tomes); os demais ficam contados na estante (rpg:tome_shelf). Guarda so os do proprio jogador:
+// o Grimorio (Forsaken Grimoires) escreve o dono na descricao do tomo ("Dono: nome") e devolve ao dono os tomos
+// que outros jogadores pegarem.
 var TOME_SHELF = "rpg:tome_shelf";
 var isInfiniteTome = (it) => !!it && it.typeId.startsWith("fgr:infinite_tome_");
 function readShelf(player) {
@@ -2433,52 +2513,72 @@ function tomeLabel(id) {
   return id.replace("fgr:infinite_tome_", "").replace(/_/g, " ");
 }
 function tomeOwnedByOther(player, it) {
-  try { const o = it.getDynamicProperty("fgr:owner"); return typeof o === "string" && o !== player.id; } catch (e) { return false; }
+  try {
+    const mark = "\xA77Dono: \xA7f";
+    const line = it.getLore().find((l) => l.startsWith(mark));
+    return !!line && line.slice(mark.length) !== player.name;
+  } catch (e) { return false; }
+}
+var ownTome = (player, it) => isInfiniteTome(it) && !tomeOwnedByOther(player, it);
+// Lugares onde o jogador leva um tomo: mao secundaria primeiro, depois o inventario.
+function tomeSlots(player) {
+  const out = [];
+  const eq = player.getComponent("minecraft:equippable");
+  if (eq) out.push({ get: () => eq.getEquipment("Offhand"), set: (it) => eq.setEquipment("Offhand", it) });
+  const inv = player.getComponent("minecraft:inventory")?.container;
+  if (inv) for (let i = 0; i < inv.size; i++) out.push({ get: () => inv.getItem(i), set: (it) => inv.setItem(i, it) });
+  return out;
+}
+function findCarriedTome(player, id) {
+  return tomeSlots(player).find((sl) => { const it = sl.get(); return ownTome(player, it) && it.typeId === id; });
+}
+function carriedTomeIds(player) {
+  const ids = [];
+  for (const sl of tomeSlots(player)) { const it = sl.get(); if (ownTome(player, it) && !ids.includes(it.typeId)) ids.push(it.typeId); }
+  return ids;
+}
+function storeTome(player, id, quiet = false) {
+  const sl = findCarriedTome(player, id);
+  if (!sl) return false;
+  if (readKnown(player).includes(id)) {
+    // conhecido: o livro ja tem o tomo, as copias levadas so voltam
+    for (let c = sl; c; c = findCarriedTome(player, id)) c.set(undefined);
+  } else {
+    const it = sl.get();
+    if (it.amount > 1) { it.amount -= 1; sl.set(it); } else sl.set(undefined);
+    const shelf = readShelf(player);
+    shelf[id] = (shelf[id] ?? 0) + 1;
+    writeShelf(player, shelf);
+  }
+  if (!quiet) player.sendMessage(`\xA7a[Livro] Guardado: \xA75${tomeLabel(id)}`);
+  return true;
 }
 function storeAllTomes(player) {
-  const inv = player.getComponent("minecraft:inventory")?.container;
-  if (!inv) return 0;
-  const shelf = readShelf(player);
   let n = 0;
-  for (let i = 0; i < inv.size; i++) {
-    const it = inv.getItem(i);
-    if (!isInfiniteTome(it) || tomeOwnedByOther(player, it)) continue;
-    shelf[it.typeId] = (shelf[it.typeId] ?? 0) + it.amount;
-    n += it.amount;
-    inv.setItem(i, undefined);
-  }
-  writeShelf(player, shelf);
+  for (const id of carriedTomeIds(player)) while (storeTome(player, id, true)) n++;
   return n;
 }
-function showTomeShelfUI(player) {
-  const shelf = readShelf(player);
-  const ids = Object.keys(shelf);
-  const form = new ActionFormData5().title("\xA75Estante de Tomos")
-    .body(ids.length ? "Toque num tomo para retir\xE1-lo, ou guarde os que est\xE3o no seu invent\xE1rio." : "Nenhum tomo guardado. Os Tomos Infinitos do seu invent\xE1rio podem ser guardados aqui.");
-  form.button("\xA7aGuardar meus tomos do invent\xE1rio");
-  for (const id of ids) form.button(`\xA75${tomeLabel(id)}${shelf[id] > 1 ? ` \xA77x${shelf[id]}` : ""}`);
-  form.button("Voltar");
-  form.show(player).then((res) => {
-    if (res.canceled) return;
-    if (res.selection === 0) {
-      const n = storeAllTomes(player);
-      player.sendMessage(n ? `\xA7a[Estante] ${n} tomo(s) guardado(s) no RPG Guide.` : "\xA7e[Estante] Nenhum tomo seu no invent\xE1rio.");
-      return;
-    }
-    const id = ids[res.selection - 1];
-    if (!id) {
-      const classObj = world8.scoreboard.getObjective("class");
-      showPlayerMenuUI(player, classObj ? getPlayerScoreSafe(classObj, player, 0) : 0);
-      return;
-    }
-    const cur = readShelf(player);
-    if (!(cur[id] > 0)) return;
-    cur[id] -= 1;
-    writeShelf(player, cur);
-    const left = player.getComponent("minecraft:inventory")?.container?.addItem(new ItemStack4(id, 1));
+// Poe um tomo na mao secundaria. Se ja houver outro tomo seu ali, ele volta para o livro; se a mao secundaria tiver
+// outra coisa, o tomo vai para o inventario.
+function takeTome(player, id) {
+  const known = readKnown(player).includes(id);
+  if (known && findCarriedTome(player, id)) return;
+  if (!known) {
+    const shelf = readShelf(player);
+    if (!(shelf[id] > 0)) return;
+    shelf[id] -= 1;
+    writeShelf(player, shelf);
+  }
+  const eq = player.getComponent("minecraft:equippable");
+  const off = eq?.getEquipment("Offhand");
+  if (off && ownTome(player, off)) storeTome(player, off.typeId, true);
+  const item = new ItemStack4(id, 1);
+  if (eq && !eq.getEquipment("Offhand")) eq.setEquipment("Offhand", item);
+  else {
+    const left = player.getComponent("minecraft:inventory")?.container?.addItem(item);
     if (left) player.dimension.spawnItem(left, player.location);
-    player.sendMessage(`\xA7a[Estante] Retirado: \xA75${tomeLabel(id)}`);
-  }).catch(e => {});
+  }
+  player.sendMessage(`\xA7a[Livro] Na m\xE3o: \xA75${tomeLabel(id)}`);
 }
 
 function showSettingsUI(player) {
@@ -2574,16 +2674,17 @@ function changeClassRefund(player) {
   let souls = 0, xp = 0;
   const counted = new Set();
   for (const item of AllShopItems) {
-    if (counted.has(item.tag) || !player.hasTag(item.tag)) continue;
+    if (counted.has(item.tag) || !(player.hasTag(item.tag) || (item.tag.startsWith("spell_unlocked:") && player.hasTag(TOME_BOUGHT + item.tag.split(":")[1])))) continue;
     counted.add(item.tag);
     souls += item.costSouls || 0;
     xp += item.costXP || 0;
   }
   for (const tag of player.getTags()) {
-    if (tag.startsWith("shop_") || tag.startsWith("active_ability_") || tag.startsWith("equipped_") || tag.startsWith("path_") || tag.startsWith("class_") || tag.startsWith("active_spell:") || tag.startsWith("spell_unlocked:")) {
+    if (tag.startsWith("shop_") || tag.startsWith("active_ability_") || tag.startsWith("equipped_") || tag.startsWith("path_") || tag.startsWith("class_") || tag.startsWith("active_spell:") || tag.startsWith("spell_unlocked:") || tag.startsWith(TOME_BOUGHT)) {
       player.removeTag(tag);
     }
   }
+  forgetAllTomes(player); // os tomos conhecidos do Mago voltam com as almas
   // itens da classe antiga (cajado do Mago, arcos do Patrulheiro e do Assassino)
   const inv = player.getComponent("minecraft:inventory")?.container;
   if (inv) {

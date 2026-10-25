@@ -16,9 +16,9 @@ Nada desta versão foi testado no jogo.
 ### Alterado
 - **Simple RPG em português**: menus, descrições, mensagens, HUD e nomes de itens. Nomes que o script usa para reconhecer itens ("RPG Guide", arcos de classe, "Volley Focus") ficaram em inglês para não quebrar itens já existentes.
 - **Trocar de classe**: botão em Configurações (ou `/scriptevent rpg:trocar_classe`). Devolve todas as almas e pontos gastos, mantém o nível e volta para a escolha de classe.
-- **Tomos do Mago**: a compra mostra a lista de tomos que aquela magia permite e o jogador escolhe. São 12 tomos (8 novos).
+- **Livro de Feitiços do Mago = inventário de Tomos Infinitos**: cada magia comprada com almas libera +1 vaga de tomo conhecido e os 3 tomos daquela magia (12 no total). A tela **Escolher Tomos Infinitos** tem um marcador por tomo; ao confirmar, os marcados (até o limite de vagas) viram conhecidos. Um tomo conhecido fica no livro: tocar nele põe uma cópia na mão secundária e tocar de novo guarda. O Grimório só deixa infinito o tomo conhecido (o RPG manda a lista por `scriptevent fgr:tomos_conhecidos`). Trocar de classe devolve as almas das magias e esquece os tomos.
 - **Tomos Infinitos têm dono**: o primeiro jogador que pega fica dono; com outro jogador, o tomo volta para o dono. Um tomo na mão secundária com uma varinha funciona sozinho, sem Grimório.
-- **Estante de Tomos** no menu do RPG: guarda os tomos no livro do RPG e devolve um por vez.
+- **Estante de Tomos** (outras classes): o mesmo inventário, sem compra nem vagas.
 - **Atril Arcano com o formato do atril comum**, madeira escura e tampo roxo com moldura dourada; vira para o jogador ao ser posto.
 - **Luneta da Vidência**: textura refeita sobre a distribuição pintada pelo João (corpo preto, lente branca), com os tons de sombra e brilho do A&S. A textura anterior seguia outro mapa de UV e não casava com o modelo da luneta do A&S.
 
