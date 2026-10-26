@@ -89,7 +89,19 @@ def jogador_original(pack):
     return json.loads(texto)
 
 
+def liberar_skins(j):
+    """Versao minima 1.8.0 no jogador: com outra versao (ou sem ela) o jogo troca as skins do Criador de Personagem e
+    as importadas pela do Steve e esconde as capas; as skins classicas continuam (bug MCPE-74493)."""
+    d = j['minecraft:client_entity']['description']
+    d.pop('min_engine_version', None)
+    novo = {'identifier': d.pop('identifier'), 'min_engine_version': '1.8.0'}
+    novo.update(d)
+    j['minecraft:client_entity']['description'] = novo
+    return j
+
+
 def gravar(pack, j):
+    liberar_skins(j)
     os.makedirs(os.path.join(RAIZ, 'packs', pack, 'entity'), exist_ok=True)
     with open(os.path.join(RAIZ, 'packs', pack, 'entity', 'player.entity.json'), 'w', encoding='utf-8') as f:
         f.write(json.dumps(j, ensure_ascii=False, separators=(',', ':')))

@@ -112,6 +112,7 @@ world.afterEvents.itemUse.subscribe(ev => {
         case "mnra_cata:sunflare_glaive":
             if (!player?.getItemCooldown('sunflare_glaive') && !player.isSneaking) {
                 player.runCommand("playsound sound.spear_dash @s ^^^1 1 0.8 1")
+                player.runCommand("playanimation @s animation.ap.lanca_golpe") // [Addon Pack] golpe normal, como as lancas
                 player.runCommand("particle mnra_cata:blazing_excalibur_impact_emitter ~ ~ ~")
                 player.startItemCooldown('sunflare_glaive', 100)
 
