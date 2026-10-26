@@ -23,7 +23,7 @@ Nada desta versão foi testado no jogo.
 - **Lança do Crepúsculo Invertido e Lança Exodius** (Cataclysmical): o botão de função mantém o puxão, mas o giro da lança e a pose de carga saíram; agora toca só um golpe normal do braço (`animation.ap.lanca_golpe`).
 - **Varinhas do Forsaken não lançavam feitiço** (as 4 varinhas e as 4 Varinhas Tecedoras): os itens, pergaminhos e projéteis estão iguais aos originais, então o problema vinha do disparo nativo (`minecraft:shooter` com carga de besta, que também não usa o pergaminho no modo criativo). O disparo agora é feito pelo script dos cajados: com um pergaminho na mão secundária, o botão de usar lança o feitiço na hora e gasta 1 pergaminho (a Varinha Tecedora também busca no inventário). O Grimório e o Tomo Infinito continuam repondo o pergaminho.
 - **Skin do Criador de Personagem e skin importada viravam Steve, e as capas sumiam**: é um comportamento conhecido do jogo (MCPE-74493). Um pack que troca o `player.entity.json` sem `"min_engine_version": "1.8.0"` desliga essas skins e as capas delas; as skins clássicas continuam. O jogador do Addon Pack Compat (vinha do A&S com 1.13.0), o do OTG e o do Simple RPG (sem versão) agora têm 1.8.0, como o do RnR (`ferramentas/mesclar_jogador.py`).
-- **Sunflare Glaive** (Cataclysmical): como as lanças, o botão de função toca só um golpe normal, sem a pose de carga.
+- **Sunflare Glaive** (Cataclysmical): o botão de função só conjura os pilares solares, sem a pose de carga nem outra animação.
 - **Claymore, Broadsword, Great Axeblade e Heartstealer** (Dungeons): ficaram como a Claymore de Obsidiana, sem a animação própria e com a posição de terceira pessoa também em primeira pessoa (estavam enormes e tortas na tela).
 
 ### Alterado
