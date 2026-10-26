@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "unified:vibranium_ingot_panascais_caves_nocturite_chestplate"
+    },
+    "key": {
+      "#": "test:vibranium_ingot"
+    },
+    "pattern": [
+      "# #",
+      "###",
+      "###"
+    ],
+    "tags": [
+      "panascais_common:forge"
+    ],
+    "result": {
+      "item": "panascais_caves:nocturite_chestplate"
+    }
+  }
+}

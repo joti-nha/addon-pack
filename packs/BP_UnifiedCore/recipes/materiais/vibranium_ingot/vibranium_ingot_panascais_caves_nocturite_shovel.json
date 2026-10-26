@@ -1,0 +1,23 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "unified:vibranium_ingot_panascais_caves_nocturite_shovel"
+    },
+    "key": {
+      "A": "test:vibranium_ingot",
+      "B": "panascais_caves:titanium_rod"
+    },
+    "pattern": [
+      "A",
+      "B",
+      "B"
+    ],
+    "tags": [
+      "panascais_common:forge"
+    ],
+    "result": {
+      "item": "panascais_caves:nocturite_shovel"
+    }
+  }
+}

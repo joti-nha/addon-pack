@@ -1,0 +1,19 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "unified:tin_ingot_para_ntk_tin_ingot"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "better_on_bedrock:tin_ingot"
+      }
+    ],
+    "result": {
+      "item": "ntk:tin_ingot"
+    }
+  }
+}
