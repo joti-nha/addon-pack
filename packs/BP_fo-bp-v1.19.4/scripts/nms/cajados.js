@@ -2,7 +2,7 @@
 // - botao de usar com um pergaminho magico na mao secundaria: lanca o pergaminho (gasta 1, como a varinha; a
 //   copia gratis do Grimorio/Tomo Infinito e reposta pelo Forsaken Grimoires);
 // - varinhas (tag ntk:wand) e cajados conjuram: segurar o botao de usar pelo tempo de cast (CAST_TICKS) e o
-//   pergaminho sai no fim da animacao; soltar antes cancela. A Varinha Tecedora busca o pergaminho tambem no
+//   pergaminho sai so no fim da animacao (nunca no toque); soltar antes cancela. A Varinha Tecedora busca o pergaminho tambem no
 //   inventario. O projetil e o do proprio pergaminho; se o impacto dele nao rodar, o script dispara o evento;
 // - botao de ataque: lanca o feitico proprio do cajado. Os do Forsaken rodam aqui; os de outros addons recebem
 //   "scriptevent fgr:cajado_ataque <item>" (cada addon tem o seu ouvinte) ou o "dungeons:force_artefact" do Dungeons.
@@ -113,8 +113,8 @@ function castWith(player, item, st) {
   try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
 }
 
-// Conjuracao: segurar o botao de usar pelo tempo de cast da varinha/cajado; o pergaminho sai no fim da animacao.
-// Soltar antes cancela. Se o jogo nao comecar o uso (sem itemStartUse), o pergaminho sai na hora do toque.
+// Conjuracao: segurar o botao de usar pelo tempo de cast da varinha/cajado (o mesmo use_duration do item, entao a
+// animacao acaba junto); o pergaminho so sai no fim. Soltar antes cancela. Nunca sai no toque.
 const castInfo = (it) => {
   if (!it) return undefined;
   const st = STAFFS[it.typeId];
@@ -130,23 +130,19 @@ function finishCast(player, item, info, c) {
   charging.delete(player.id);
   if (player.isValid) castWith(player, item, info.st);
 }
-
-world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
-  if (source?.typeId !== "minecraft:player") return;
-  const info = castInfo(itemStack);
-  if (!info || !scrollFor(source, itemStack)?.item) return;
-  system.runTimeout(() => {
-    if (!charging.has(source.id) && source.isValid) castWith(source, itemStack, info.st);
-  }, 2);
-});
-world.afterEvents.itemStartUse.subscribe(({ source, itemStack }) => {
+// itemUse e itemStartUse chegam juntos no inicio do uso; o primeiro comeca a conjuracao
+function startCharging({ source, itemStack }) {
   if (source?.typeId !== "minecraft:player") return;
   const info = castInfo(itemStack);
   if (!info) return;
+  const old = charging.get(source.id);
+  if (old && !old.done && system.currentTick - old.start < 3) return;
   const c = { start: system.currentTick, ticks: info.ticks, done: false };
   charging.set(source.id, c);
   system.runTimeout(() => finishCast(source, itemStack, info, c), info.ticks);
-});
+}
+world.afterEvents.itemUse.subscribe(startCharging);
+world.afterEvents.itemStartUse.subscribe(startCharging);
 world.afterEvents.itemCompleteUse.subscribe(({ source, itemStack }) => {
   if (source?.typeId !== "minecraft:player") return;
   const info = castInfo(itemStack);
