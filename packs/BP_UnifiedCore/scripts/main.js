@@ -57,24 +57,29 @@ world.afterEvents.itemReleaseUse.subscribe(({ source, itemStack }) => {
 });
 world.beforeEvents.playerLeave.subscribe(({ player }) => { zooming.delete(player.id); });
 
-// Luneta da Videncia: todo jogador comeca com ela (uma vez; nao cai na morte).
-function darReliquia(player) {
+// Itens iniciais, uma vez por jogador: a Luneta da Videncia (nao cai na morte) e a mochila de couro do OTG.
+const MOCHILA = "otg:backpack";
+function darUmaVez(player, tipo, etiqueta, manter) {
   try {
-    if (player.hasTag("unified:relic_given")) return;
+    if (player.hasTag(etiqueta)) return;
     const inv = player.getComponent("minecraft:inventory")?.container;
     if (!inv) return;
-    for (let i = 0; i < inv.size; i++) if (inv.getItem(i)?.typeId === RELIC) { player.addTag("unified:relic_given"); return; }
-    const it = new ItemStack(RELIC, 1);
-    it.keepOnDeath = true;
+    for (let i = 0; i < inv.size; i++) if (inv.getItem(i)?.typeId === tipo) { player.addTag(etiqueta); return; }
+    const it = new ItemStack(tipo, 1); // sem o addon do item, isto falha e o jogador fica sem a etiqueta
+    if (manter) it.keepOnDeath = true;
     if (inv.emptySlotsCount > 0) inv.addItem(it);
     else player.dimension.spawnItem(it, player.location);
-    player.addTag("unified:relic_given");
+    player.addTag(etiqueta);
   } catch (e) { }
 }
+function darItensIniciais(player) {
+  darUmaVez(player, RELIC, "unified:relic_given", true);
+  darUmaVez(player, MOCHILA, "unified:mochila_dada", false);
+}
 world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
-  if (initialSpawn) system.runTimeout(() => darReliquia(player), 100);
+  if (initialSpawn) system.runTimeout(() => darItensIniciais(player), 100);
 });
-system.runTimeout(() => { for (const p of world.getAllPlayers()) darReliquia(p); }, 200);
+system.runTimeout(() => { for (const p of world.getAllPlayers()) darItensIniciais(p); }, 200);
 
 // Rede de seguranca: se o jogador trocar de item/slot sem soltar o botao, o zoom nao pode ficar preso.
 system.runInterval(() => {

@@ -1,8 +1,10 @@
 // [Addon Pack] Cajados de todos os addons funcionam como as varinhas:
 // - botao de usar com um pergaminho magico na mao secundaria: lanca o pergaminho (gasta 1, como a varinha; a
 //   copia gratis do Grimorio/Tomo Infinito e reposta pelo Forsaken Grimoires);
-// - as varinhas (tag ntk:wand) lancam o pergaminho do mesmo jeito: o disparo nativo delas (minecraft:shooter) nao
-//   lancava nada no pack, entao o script faz o disparo. A Varinha Tecedora busca o pergaminho tambem no inventario;
+// - as varinhas (tag ntk:wand) lancam o pergaminho pelo script, ao fim do tempo de conjuracao (segurar o botao de
+//   usar pelo use_duration de cada varinha; soltar antes cancela). O disparo nativo delas (minecraft:shooter) nao
+//   lancava nada no pack. Se o jogo nao deixar segurar a varinha (sem itemStartUse), ela lanca na hora do toque.
+//   A Varinha Tecedora busca o pergaminho tambem no inventario;
 // - botao de ataque: lanca o feitico proprio do cajado. Os do Forsaken rodam aqui; os de outros addons recebem
 //   "scriptevent fgr:cajado_ataque <item>" (cada addon tem o seu ouvinte) ou o "dungeons:force_artefact" do Dungeons.
 import { world, system, EquipmentSlot } from "@minecraft/server";
@@ -84,14 +86,40 @@ function castScroll(player, staff, st, scroll, slot) {
   }
 }
 
+function castWith(player, item, st) {
+  const found = item.hasTag("ntk:spellweaver_wand") ? scrollInInventory(player) : { item: scrollInOffhand(player) };
+  if (!found?.item) return;
+  try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
+}
+
+const isWandItem = (it) => !!it && !STAFFS[it.typeId] && it.hasTag("ntk:wand");
+const charging = new Set(); // jogadores segurando uma varinha (conjuracao em andamento)
+
 world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
   if (source?.typeId !== "minecraft:player" || !itemStack) return;
-  const st = STAFFS[itemStack.typeId] ?? (itemStack.hasTag("ntk:wand") ? WAND : undefined);
-  if (!st) return;
-  const found = itemStack.hasTag("ntk:spellweaver_wand") ? scrollInInventory(source) : { item: scrollInOffhand(source) };
-  if (!found?.item) return;
-  try { castScroll(source, itemStack, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
+  if (isWandItem(itemStack)) {
+    // a varinha lanca ao completar o uso; se o jogo nao comecar o uso (item que nao da para segurar), lanca agora
+    system.runTimeout(() => {
+      if (!charging.has(source.id) && source.isValid) castWith(source, itemStack, WAND);
+    }, 2);
+    return;
+  }
+  const st = STAFFS[itemStack.typeId];
+  if (st) castWith(source, itemStack, st);
 });
+world.afterEvents.itemStartUse.subscribe(({ source, itemStack }) => {
+  if (source?.typeId === "minecraft:player" && isWandItem(itemStack)) charging.add(source.id);
+});
+world.afterEvents.itemCompleteUse.subscribe(({ source, itemStack }) => {
+  if (source?.typeId !== "minecraft:player" || !isWandItem(itemStack)) return;
+  system.runTimeout(() => charging.delete(source.id), 3);
+  castWith(source, itemStack, WAND);
+});
+const stopCharging = ({ source, itemStack }) => {
+  if (source?.typeId === "minecraft:player" && isWandItem(itemStack)) system.runTimeout(() => charging.delete(source.id), 3);
+};
+world.afterEvents.itemReleaseUse.subscribe(stopCharging);
+world.afterEvents.itemStopUse.subscribe(stopCharging);
 
 function attack(player, item, st) {
   if (st.attack === "fo") {

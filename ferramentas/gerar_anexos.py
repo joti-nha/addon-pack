@@ -6,6 +6,8 @@ Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff_RP e grava:
   - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
     (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
      textures/ap/aqc_rod_*.png)
+  - arpoes do Aquaculture com o esqueleto e as animacoes do tridente do A&S e o icone plano
+    (attachables/as_compat/tm_aqc, models/entity/ap_aqc_arpao.geo.json)
   - icones dos Grimorios (todas as cores e o invisivel); na mao eles e os Tomos Infinitos ficam em pixel art, sem modelo 3D
     (packs/RP_ForsakenGrimoire/textures/fgr; o invisivel tem um anexo vazio)
 Rode de novo depois de atualizar o A&S.
@@ -84,6 +86,7 @@ VARAS = {
                   [(7, 163, 160), (9, 208, 178), (27, 245, 193), (140, 251, 220)]),
 }
 GEO_VARA = 'geometry.ap_aqc_rod'
+ESCALA_VARA_FP = 0.6
 
 
 def tipo_pixel(c):
@@ -153,8 +156,44 @@ def varas():
         da['textures'] = {'default': tex, 'enchanted': 'textures/misc/enchanted_item_glint'}
         da['materials'] = {'default': da['materials']['default'], 'enchanted': 'entity_alphatest_glint'}
         da['render_controllers'] = ['controller.render.ap.as_item']
+        # em primeira pessoa a linha de pesca do jogo sai de um ponto fixo, perto do meio da vara do A&S:
+        # a vara encolhe ali para a linha sair da ponta
+        da['animations']['ap_vara_fp'] = 'animation.ap.vara_primeira_pessoa'
+        da['scripts']['animate'].append({'ap_vara_fp': 'c.is_first_person'})
         gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{nome}_fishing_rod.json'), a)
+    gravar_json(os.path.join(COMPAT, 'animations', 'ap_aqc_vara.animation.json'), {'format_version': '1.8.0', 'animations': {
+        'animation.ap.vara_primeira_pessoa': {'loop': True, 'bones': {'7ak9af8jg5': {'scale': ESCALA_VARA_FP}}}}})
     print('varas do Aquaculture: 5 anexos')
+
+
+def arpoes():
+    """Arpoes do Aquaculture (etiqueta oreville:is_trident) com o esqueleto e as animacoes do tridente do A&S
+    e o icone plano no lugar do modelo (o icone 'cast' quando o arpao foi disparado)."""
+    from anexos_cataclysm import esqueleto
+    molde = brarchive.anexo(AS, 'minecraft:trident')
+    pele, preso = esqueleto(brarchive.geometria(AS, molde['minecraft:attachable']['description']['geometry']['default']))
+    malha = {'position': [-11.31, -11.31, 0.5], 'rotation': [-90, 0, -45]}  # como no modo 2D do A&S
+    geos = []
+    for chave, tex in (('default', 'default'), ('cast', 'cast')):
+        geos.append({'description': {'identifier': f'geometry.ap.aqc.arpao.{chave}', 'texture_width': 16, 'texture_height': 16,
+                                     'visible_bounds_width': 3, 'visible_bounds_height': 3, 'visible_bounds_offset': [0, 1, 0]},
+                     'bones': copy.deepcopy(pele) + [{'name': 'ap_arma', 'parent': preso, 'pivot': [0, 0, 0],
+                                                      'texture_meshes': [dict(malha, texture=tex)]}]})
+    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_arpao.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': geos})
+    for metal in ('iron', 'gold', 'diamond', 'netherite', 'neptunium'):
+        ident = f'tm_aqc:{metal}_harpoon'
+        a = copy.deepcopy(molde)
+        d = a['minecraft:attachable']['description']
+        d['identifier'] = ident
+        d['item'] = {ident: 'c.owning_entity -> v.actions_and_stuff;'}
+        d['geometry'] = {'default': 'geometry.ap.aqc.arpao.default', 'cast': 'geometry.ap.aqc.arpao.cast'}
+        d['textures'] = {'default': f'textures/tm/aqc/items/tools/{metal}_harpoon',
+                         'cast': f'textures/tm/aqc/items/tools/{metal}_harpoon_cast', 'enchanted': 'textures/misc/enchanted_item_glint'}
+        d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
+        d['render_controllers'] = ['controller.render.ap.sprite_cast']
+        d['scripts']['parent_setup'] = 't.cast = (v.cast ?? 0); ' + d['scripts']['parent_setup']
+        gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{metal}_harpoon.json'), a)
+    print('arpoes do Aquaculture: 5 anexos')
 
 
 def controlador():
@@ -319,5 +358,6 @@ def itens_grimorio():
 if __name__ == '__main__':
     controlador()
     varas()
+    arpoes()
     grimorios()
     itens_grimorio()
