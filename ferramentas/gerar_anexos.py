@@ -87,6 +87,7 @@ VARAS = {
 }
 GEO_VARA = 'geometry.ap_aqc_rod'
 ESCALA_VARA_FP = 0.6
+COMPRIMENTO_ARPAO = 28  # comprimento na mao; o tridente do A&S tem ~32
 
 
 def tipo_pixel(c):
@@ -167,33 +168,36 @@ def varas():
 
 
 def arpoes():
-    """Arpoes do Aquaculture (etiqueta oreville:is_trident) com o esqueleto e as animacoes do tridente do A&S
-    e o icone plano no lugar do modelo (o icone 'cast' quando o arpao foi disparado)."""
-    from anexos_cataclysm import esqueleto
+    """Arpoes do Aquaculture (etiqueta oreville:is_trident) com o esqueleto e as animacoes do tridente do A&S e o
+    modelo 3D original do arpao (cubos), posto de pe com o cabo na mao como as armas do Cataclysmical. A malha
+    plana (texture_meshes) do modo 2D do A&S deixava o arpao sem textura na mao. Disparado, a textura 'cast'
+    (sem a ponta) apaga os cubos da ponta, como no anexo original."""
+    from anexos_cataclysm import geo_bloco
     molde = brarchive.anexo(AS, 'minecraft:trident')
-    pele, preso = esqueleto(brarchive.geometria(AS, molde['minecraft:attachable']['description']['geometry']['default']))
-    malha = {'position': [-11.31, -11.31, 0.5], 'rotation': [-90, 0, -45]}  # como no modo 2D do A&S
-    geos = []
-    for chave, tex in (('default', 'default'), ('cast', 'cast')):
-        geos.append({'description': {'identifier': f'geometry.ap.aqc.arpao.{chave}', 'texture_width': 16, 'texture_height': 16,
-                                     'visible_bounds_width': 3, 'visible_bounds_height': 3, 'visible_bounds_offset': [0, 1, 0]},
-                     'bones': copy.deepcopy(pele) + [{'name': 'ap_arma', 'parent': preso, 'pivot': [0, 0, 0],
-                                                      'texture_meshes': [dict(malha, texture=tex)]}]})
-    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_arpao.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': geos})
+    molde_geo = brarchive.geometria(AS, molde['minecraft:attachable']['description']['geometry']['default'])
+    orig = json.load(open(os.path.join(AQC, 'models', 'entity', 'tools', 'harpoon.json'), encoding='utf-8-sig'))['minecraft:geometry'][0]
+    vara = {k: copy.deepcopy(v) for k, v in next(b for b in orig['bones'] if b['name'] == 'rod').items() if k != 'parent'}
+    img = Image.open(os.path.join(AQC, 'textures', 'tm', 'aqc', 'items', 'tools', 'iron_harpoon.png')).convert('RGBA')
+    geo, comp = geo_bloco('geometry.ap.aqc.arpao', {'description': orig['description'], 'bones': [vara]}, molde_geo, img, 1, False)  # False: o trecho mais largo deste modelo e o do cabo
+    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_arpao.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
+    escala = round(COMPRIMENTO_ARPAO / comp, 4)
     for metal in ('iron', 'gold', 'diamond', 'netherite', 'neptunium'):
         ident = f'tm_aqc:{metal}_harpoon'
         a = copy.deepcopy(molde)
         d = a['minecraft:attachable']['description']
         d['identifier'] = ident
         d['item'] = {ident: 'c.owning_entity -> v.actions_and_stuff;'}
-        d['geometry'] = {'default': 'geometry.ap.aqc.arpao.default', 'cast': 'geometry.ap.aqc.arpao.cast'}
+        d['geometry'] = {'default': 'geometry.ap.aqc.arpao', 'cast': 'geometry.ap.aqc.arpao'}
         d['textures'] = {'default': f'textures/tm/aqc/items/tools/{metal}_harpoon',
                          'cast': f'textures/tm/aqc/items/tools/{metal}_harpoon_cast', 'enchanted': 'textures/misc/enchanted_item_glint'}
         d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
         d['render_controllers'] = ['controller.render.ap.sprite_cast']
         d['scripts']['parent_setup'] = 't.cast = (v.cast ?? 0); ' + d['scripts']['parent_setup']
+        d['scripts'].setdefault('initialize', []).append(f'v.ap_escala = {escala};')
+        d.setdefault('animations', {})['ap_escala'] = 'animation.ap.as_escala'
+        d['scripts'].setdefault('animate', []).append('ap_escala')
         gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{metal}_harpoon.json'), a)
-    print('arpoes do Aquaculture: 5 anexos')
+    print(f'arpoes do Aquaculture: 5 anexos (modelo 3D, escala {escala})')
 
 
 def controlador():
