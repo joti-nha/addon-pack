@@ -113,8 +113,8 @@ function castWith(player, item, st) {
   try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
 }
 
-// Conjuracao: segurar o botao de usar pelo tempo de cast da varinha/cajado (o mesmo use_duration do item, entao a
-// animacao acaba junto); o pergaminho so sai no fim. Soltar antes cancela. Nunca sai no toque.
+// Conjuracao: a varinha gira enquanto o botao de usar fica apertado (use_duration do item) e so para quando conjura:
+// o pergaminho sai no mesmo tick em que o uso termina. Soltar antes cancela. Nunca sai no toque.
 const castInfo = (it) => {
   if (!it) return undefined;
   const st = STAFFS[it.typeId];
@@ -139,7 +139,8 @@ function startCharging({ source, itemStack }) {
   if (old && !old.done && system.currentTick - old.start < 3) return;
   const c = { start: system.currentTick, ticks: info.ticks, done: false };
   charging.set(source.id, c);
-  system.runTimeout(() => finishCast(source, itemStack, info, c), info.ticks);
+  // o fim do uso (itemCompleteUse) para o giro da varinha e conjura; o timer so cobre o caso de o evento nao vir
+  system.runTimeout(() => finishCast(source, itemStack, info, c), info.ticks + 1);
 }
 world.afterEvents.itemUse.subscribe(startCharging);
 world.afterEvents.itemStartUse.subscribe(startCharging);
