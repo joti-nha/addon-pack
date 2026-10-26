@@ -10,6 +10,8 @@
 // Segurando uma varinha (tag ntk:wand) com o Grimorio na mao secundaria, o feitico escolhido vai sozinho para a mao
 // secundaria (onde a varinha busca a municao) e o Grimorio volta ao soltar a varinha.
 // Agachar 2x rapido abre a barra de feiticos por 5 s: os 9 slots da hotbar viram "cartas" e girar/clicar escolhe.
+// Pergaminho tirado do Grimorio que ficou solto no inventario (o jogador tirou da mao secundaria) leva a marca GRIM_MARK
+// e volta para dentro do Grimorio quando ele estiver na mao principal.
 import { world, system, ItemStack, ItemLockMode, EquipmentSlot } from "@minecraft/server";
 import { TOMES } from "./tomos.js";
 
@@ -35,6 +37,7 @@ const TAP_WINDOW = 12;         // ticks entre os dois agachamentos (0,6 s)
 const BAR_TICKS = 100;         // 5 s
 const FREE_MARK = "§8Feitiço do Tomo Infinito"; // lore do pergaminho lancado sem gastar (espaco com tomo)
 const OLD_FREE_MARK = "§8Feitiço do Grimório (Mago)"; // versao anterior (bonus do Mago, removido)
+const GRIM_MARK = "§8Pergaminho do Grimório"; // lore do pergaminho que o Grimorio poe na mao secundaria (gasta)
 
 const colorOfId = (id) => (id === GRIMOIRE ? "purple" : id.startsWith("fgr:grimoire_") ? id.slice(13) : null);
 
@@ -47,6 +50,7 @@ const isGrimoire = (it) => !!it && (it.typeId === GRIMOIRE || it.hasTag(GRIMOIRE
 const isScroll = (it) => !!it && it.hasTag("ntk:scroll") && !it.typeId.includes("empty_scroll");
 const isWand = (it) => !!it && (it.hasTag("ntk:wand") || it.hasTag("fgr:cajado"));
 const isFreeCopy = (it) => { if (!it) return false; const l = it.getLore(); return l.includes(FREE_MARK) || l.includes(OLD_FREE_MARK); };
+const isGrimCopy = (it) => isScroll(it) && it.getLore().includes(GRIM_MARK);
 const isTome = (it) => !!it && TOMES[it.typeId] !== undefined;
 const tr = (id) => ({ translate: `item.${id.split(":")[0]}.${id.split(":")[1]}.name` });
 const iconOf = (id) => `textures/items/nms/ntk_${id.split(":")[1]}`;
@@ -186,6 +190,7 @@ const setState = (p, st) => p.setDynamicProperty(P_ACTIVE, st ? JSON.stringify(s
 function scrollFor(id, free) {
   const it = new ItemStack(id, 1);
   if (free) { it.setLore([FREE_MARK]); it.keepOnDeath = true; }
+  else it.setLore([GRIM_MARK]);
   return it;
 }
 
@@ -290,7 +295,7 @@ function maintain(p) {
   if (e && e.id === st.id && e.n > 0) {
     e.n -= 1;
     commit(p, g, slots);
-    oh.setItem(new ItemStack(st.id, 1));
+    oh.setItem(scrollFor(st.id, false));
     if (st.free) setState(p, { ...st, free: false }); // o tomo saiu do espaco: passa a gastar
   } else {
     if (e && e.id === st.id && e.n <= 0) { slots[st.idx] = null; commit(p, g, slots); } // espaco esgotado: libera
@@ -310,6 +315,34 @@ function purgeFreeCopies(p) {
   const st = getState(p);
   const oh = offhandOf(p);
   if (oh.hasItem() && isFreeCopy(oh.getItem()) && (!st || !st.free || oh.typeId !== st.id)) oh.setItem(undefined);
+}
+
+// Grimorio na mao principal: os pergaminhos dele que ficaram soltos no inventario voltam para os espacos dele
+// (o espaco do mesmo feitico, ou um vazio; ate MAX_STACK por espaco).
+function reclaimScrolls(p) {
+  const held = heldItem(p);
+  if (!isGrimoire(held)) return;
+  const c = invOf(p);
+  let g = null, slots = null, back = 0;
+  for (let i = 0; i < c.size; i++) {
+    if (i === p.selectedSlotIndex) continue;
+    const it = c.getItem(i);
+    if (!it || !isGrimCopy(it) || isFreeCopy(it)) continue;
+    if (!g) { g = ensureUid(p, { loc: { t: "inv", i: p.selectedSlotIndex }, item: held }); slots = readSlots(g.item); }
+    let idx = slots.findIndex((e) => e && !e.tome && e.id === it.typeId && e.n < MAX_STACK);
+    if (idx < 0) { idx = slots.findIndex((e) => !e); if (idx >= 0) slots[idx] = { id: it.typeId, n: 0 }; }
+    if (idx < 0) continue; // Grimorio cheio
+    const take = Math.min(it.amount, MAX_STACK - slots[idx].n);
+    slots[idx].n += take;
+    back += take;
+    if (it.amount - take <= 0) c.setItem(i, undefined);
+    else { it.amount -= take; c.setItem(i, it); }
+  }
+  if (back > 0) {
+    commit(p, g, slots);
+    say(p, `§d${back} pergaminho${back > 1 ? "s voltaram" : " voltou"} para o Grimório`);
+    p.playSound("random.orb", { volume: 0.5, pitch: 1.2 });
+  }
 }
 
 // ---------- tomo sozinho (sem Grimorio) ----------
@@ -500,6 +533,7 @@ system.runInterval(() => {
     try {
       tickPlayer(p, tick);
       if (tick % 2 === 0 && !bars.has(p.id) && !p.getDynamicProperty(P_STASH)) { autoWand(p); maintain(p); }
+      if (tick % 10 === 0 && !bars.has(p.id) && !p.getDynamicProperty(P_STASH)) reclaimScrolls(p);
       if (tick % 20 === 0 && !bars.has(p.id)) purgeFreeCopies(p);
     } catch (e) { log("erro", e); }
   }
