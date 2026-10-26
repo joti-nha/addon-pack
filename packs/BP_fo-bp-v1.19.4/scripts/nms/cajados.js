@@ -1,14 +1,13 @@
 // [Addon Pack] Cajados de todos os addons funcionam como as varinhas:
 // - botao de usar com um pergaminho magico na mao secundaria: lanca o pergaminho (gasta 1, como a varinha; a
 //   copia gratis do Grimorio/Tomo Infinito e reposta pelo Forsaken Grimoires);
-// - as varinhas (tag ntk:wand) lancam o pergaminho pelo script, ao fim do tempo de conjuracao (segurar o botao de
-//   usar pelo use_duration de cada varinha; soltar antes cancela). O disparo nativo delas (minecraft:shooter) nao
-//   lancava nada no pack. Se o jogo nao deixar segurar a varinha (sem itemStartUse), ela lanca na hora do toque.
-//   A Varinha Tecedora busca o pergaminho tambem no inventario;
+// - varinhas (tag ntk:wand) e cajados conjuram: segurar o botao de usar pelo tempo de cast (CAST_TICKS) e o
+//   pergaminho sai no fim da animacao; soltar antes cancela. A Varinha Tecedora busca o pergaminho tambem no
+//   inventario. O projetil e o do proprio pergaminho; se o impacto dele nao rodar, o script dispara o evento;
 // - botao de ataque: lanca o feitico proprio do cajado. Os do Forsaken rodam aqui; os de outros addons recebem
 //   "scriptevent fgr:cajado_ataque <item>" (cada addon tem o seu ouvinte) ou o "dungeons:force_artefact" do Dungeons.
 import { world, system, EquipmentSlot } from "@minecraft/server";
-import { STAFFS, SCROLL_PROJECTILES } from "./cajados_dados.js";
+import { STAFFS, SCROLL_PROJECTILES, CAST_TICKS, STAFF_CAST_TICKS } from "./cajados_dados.js";
 import { ItemShootProjectileOnUseComponent } from "../item_component/shoot_projectile_on_use.js";
 import { ItemReleaseEffectOnUseComponent } from "../item_component/release_effect_on_use.js";
 import { damageItemDurability, decreaseItemStack, decreaseItemStackInventory } from "../ntk_functions.js";
@@ -23,7 +22,7 @@ import {
 } from "./magic_scroll_spells.js";
 import { unknownMagicSpell } from "./unknown_scroll_spells.js";
 
-const POWER = 2.0;      // velocidade do projetil do pergaminho (varinha bem carregada)
+const POWER = 1.5;      // velocidade do projetil do pergaminho
 const CAST_GAP = 20;    // ticks entre dois pergaminhos lancados por cajado
 const lastCast = new Map();
 
@@ -60,6 +59,9 @@ const INSTANT = {
   "ntk:unknown_scroll": unknownMagicSpell,
 };
 
+// projeteis lancados aqui: se o evento de impacto da entidade nao rodar, o script dispara ele (efeito e area originais)
+const launched = new Map(); // id -> entidade
+
 function castScroll(player, staff, st, scroll, slot) {
   const t = system.currentTick;
   if (t - (lastCast.get(player.id) ?? -999) < CAST_GAP) return;
@@ -77,6 +79,9 @@ function castScroll(player, staff, st, scroll, slot) {
     const ent = player.dimension.spawnEntity(proj, { x: h.x + v.x, y: h.y + v.y - 0.1, z: h.z + v.z });
     const pc = ent.getComponent("minecraft:projectile");
     if (pc) { pc.owner = player; pc.shoot({ x: v.x * POWER, y: v.y * POWER, z: v.z * POWER }); }
+    launched.set(ent.id, ent);
+    // o timer da entidade estoura o feitico em 4 s; se ele nao rodar, estoura aqui
+    system.runTimeout(() => fire(ent, "event:on_timer_down"), 85);
     player.dimension.playSound("block.enchanting_table.use", player.location, { pitch: 1.3, volume: 1.0 });
   }
   if (spent) {
@@ -86,37 +91,73 @@ function castScroll(player, staff, st, scroll, slot) {
   }
 }
 
+function fire(ent, event) {
+  if (!launched.has(ent.id)) return;
+  launched.delete(ent.id);
+  try { if (ent.isValid) ent.triggerEvent(event); } catch (e) {}
+}
+const onProjectileHit = ({ projectile }) => {
+  if (!projectile || !launched.has(projectile.id)) return;
+  // o proprio impacto da entidade some com ela no tick seguinte; se ela continuar ali, o impacto nao rodou
+  system.runTimeout(() => fire(projectile, "event:on_hit"), 2);
+};
+world.afterEvents.projectileHitBlock.subscribe(onProjectileHit);
+world.afterEvents.projectileHitEntity.subscribe(onProjectileHit);
+
+function scrollFor(player, item) {
+  return item.hasTag("ntk:spellweaver_wand") ? scrollInInventory(player) : { item: scrollInOffhand(player) };
+}
 function castWith(player, item, st) {
-  const found = item.hasTag("ntk:spellweaver_wand") ? scrollInInventory(player) : { item: scrollInOffhand(player) };
+  const found = scrollFor(player, item);
   if (!found?.item) return;
   try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
 }
 
-const isWandItem = (it) => !!it && !STAFFS[it.typeId] && it.hasTag("ntk:wand");
-const charging = new Set(); // jogadores segurando uma varinha (conjuracao em andamento)
+// Conjuracao: segurar o botao de usar pelo tempo de cast da varinha/cajado; o pergaminho sai no fim da animacao.
+// Soltar antes cancela. Se o jogo nao comecar o uso (sem itemStartUse), o pergaminho sai na hora do toque.
+const castInfo = (it) => {
+  if (!it) return undefined;
+  const st = STAFFS[it.typeId];
+  if (st) return { st, ticks: CAST_TICKS[it.typeId] ?? STAFF_CAST_TICKS };
+  if (it.hasTag("ntk:wand")) return { st: WAND, ticks: CAST_TICKS[it.typeId] ?? 30 };
+  return undefined;
+};
+const charging = new Map(); // jogador -> conjuracao em andamento
+
+function finishCast(player, item, info, c) {
+  if (charging.get(player.id) !== c || c.done) return;
+  c.done = true;
+  charging.delete(player.id);
+  if (player.isValid) castWith(player, item, info.st);
+}
 
 world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
-  if (source?.typeId !== "minecraft:player" || !itemStack) return;
-  if (isWandItem(itemStack)) {
-    // a varinha lanca ao completar o uso; se o jogo nao comecar o uso (item que nao da para segurar), lanca agora
-    system.runTimeout(() => {
-      if (!charging.has(source.id) && source.isValid) castWith(source, itemStack, WAND);
-    }, 2);
-    return;
-  }
-  const st = STAFFS[itemStack.typeId];
-  if (st) castWith(source, itemStack, st);
+  if (source?.typeId !== "minecraft:player") return;
+  const info = castInfo(itemStack);
+  if (!info || !scrollFor(source, itemStack)?.item) return;
+  system.runTimeout(() => {
+    if (!charging.has(source.id) && source.isValid) castWith(source, itemStack, info.st);
+  }, 2);
 });
 world.afterEvents.itemStartUse.subscribe(({ source, itemStack }) => {
-  if (source?.typeId === "minecraft:player" && isWandItem(itemStack)) charging.add(source.id);
+  if (source?.typeId !== "minecraft:player") return;
+  const info = castInfo(itemStack);
+  if (!info) return;
+  const c = { start: system.currentTick, ticks: info.ticks, done: false };
+  charging.set(source.id, c);
+  system.runTimeout(() => finishCast(source, itemStack, info, c), info.ticks);
 });
 world.afterEvents.itemCompleteUse.subscribe(({ source, itemStack }) => {
-  if (source?.typeId !== "minecraft:player" || !isWandItem(itemStack)) return;
-  system.runTimeout(() => charging.delete(source.id), 3);
-  castWith(source, itemStack, WAND);
+  if (source?.typeId !== "minecraft:player") return;
+  const info = castInfo(itemStack);
+  const c = charging.get(source.id);
+  if (info && c) finishCast(source, itemStack, info, c);
 });
 const stopCharging = ({ source, itemStack }) => {
-  if (source?.typeId === "minecraft:player" && isWandItem(itemStack)) system.runTimeout(() => charging.delete(source.id), 3);
+  if (source?.typeId !== "minecraft:player" || !castInfo(itemStack)) return;
+  const c = charging.get(source.id);
+  // soltou antes do fim da conjuracao: cancela (o fim natural do uso tambem dispara este evento)
+  if (c && !c.done && system.currentTick < c.start + c.ticks - 2) charging.delete(source.id);
 };
 world.afterEvents.itemReleaseUse.subscribe(stopCharging);
 world.afterEvents.itemStopUse.subscribe(stopCharging);
