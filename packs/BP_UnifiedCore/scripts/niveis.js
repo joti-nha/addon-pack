@@ -50,6 +50,9 @@ export const MINERIOS = {
   "mnra_cata:platinum_ore": 4, "mnra_cata:deepslate_platinum_ore": 4, "mnra_cata:floret_ore": 4,
   "mnra_cata:solar_ore": 5, "mnra_cata:astral_ore": 5, "mnra_cata:lunar_ore": 5,
   "mnra_cata:twilight_ore": 6, "mnra_cata:exodius_ore": 6,
+  // blocos que antes so davam drop com a picareta Sunflare/diamante (ferramentas/drops_picaretas.py liberou o drop)
+  "mnra_cata:abyssal_stone": 8, "mnra_cata:abyssal_stone_brick": 8, "mnra_cata:polished_abyssal_stone": 8, "mnra_cata:ecliptic_block": 8,
+  "mnra_cata:mourning_stone": 4, "mnra_cata:polished_mourning_stone": 4,
   // RPG Addon
   "test:vibranium_ore": 7,
   // Eternal Caves (escada propria: cada minerio exige a picareta do anterior)

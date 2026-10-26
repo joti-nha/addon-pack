@@ -1,0 +1,23 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "unified:darkalita_ingot_panascais_caves_cryorite_hoe"
+    },
+    "key": {
+      "A": "dk:darkalita_ingot",
+      "B": "panascais_caves:titanium_rod"
+    },
+    "pattern": [
+      "AA",
+      "B ",
+      "B "
+    ],
+    "tags": [
+      "panascais_common:forge"
+    ],
+    "result": {
+      "item": "panascais_caves:cryorite_hoe"
+    }
+  }
+}

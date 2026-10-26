@@ -1,0 +1,21 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "unified:darkalita_ingot_panascais_caves_cryorite_boots"
+    },
+    "key": {
+      "#": "dk:darkalita_ingot"
+    },
+    "pattern": [
+      "# #",
+      "# #"
+    ],
+    "tags": [
+      "panascais_common:forge"
+    ],
+    "result": {
+      "item": "panascais_caves:cryorite_boots"
+    }
+  }
+}

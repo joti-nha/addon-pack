@@ -336,3 +336,12 @@ export const SCROLL_PROJECTILES = {
 "ntk:summoning_scroll_of_sulfur_cube": "ntk:projectile_sulfur_cube_summoning_spell_missile",
 "ntk:summoning_scroll_of_wither_skeleton": "ntk:projectile_wither_skeleton_summoning_spell_missile"
 };
+
+// Ticks de conjuração (igual ao use_duration do item). Cajados sem entrada usam STAFF_CAST_TICKS.
+export const STAFF_CAST_TICKS = 30;
+export const CAST_TICKS = {
+  "ntk:golden_wand": 30, "ntk:golden_spellweaver_wand": 30,
+  "ntk:diamond_wand": 36, "ntk:diamond_spellweaver_wand": 36,
+  "ntk:amethyst_wand": 50, "ntk:amethyst_spellweaver_wand": 50,
+  "ntk:quartz_wand": 60, "ntk:quartz_spellweaver_wand": 60,
+};
