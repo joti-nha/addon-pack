@@ -69,15 +69,27 @@
         }
       },
       {
-        "livro@fgr_atril.slot": {
-          "collection_index": 9,
+        "livro_painel": {
+          "type": "collection_panel",
+          "collection_name": "container_items",
+          "size": [
+            18,
+            18
+          ],
           "offset": [
             25,
             35
           ],
           "anchor_from": "top_left",
           "anchor_to": "top_left",
-          "layer": 2
+          "layer": 2,
+          "controls": [
+            {
+              "livro@fgr_atril.slot": {
+                "collection_index": 9
+              }
+            }
+          ]
         }
       },
       {

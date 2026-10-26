@@ -5,6 +5,7 @@ Uso: python ferramentas/tomos.py
 Precisa do Pillow. Grava:
   - os itens dos tomos (BP_ForsakenGrimoire/items/tomes), os icones (RP_ForsakenGrimoire/textures/fgr/tomes),
     as entradas em item_texture.json e os nomes em pt_BR/en_US;
+  - o grupo "Grimorios e Tomos" do criativo (BP_ForsakenGrimoire/item_catalog);
   - as receitas de cor: Grimorio de qualquer cor + corante = Grimorio daquela cor; Grimorio + vidro = invisivel.
     Usam a etiqueta fgr:grimoire, entao sao 17 receitas no total (nao uma por par de cores).
 Os tomos sao o que a loja de magias do Simple RPG Buffs vende para o Mago (no lugar das magias dele): cada compra
@@ -97,6 +98,8 @@ def montar_tomos():
 TOMOS = montar_tomos()
 CORANTES = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan',
             'purple', 'blue', 'brown', 'green', 'red', 'black']
+# grupo proprio no inventario do criativo (aba Equipamentos), com os Grimorios e os tomos
+GRUPO = 'fgr:itemGroup.name.grimorios'
 OURO = [(255, 221, 85, 255), (214, 158, 46, 255)]
 
 
@@ -140,7 +143,7 @@ def main():
         icone(perg).save(os.path.join(RP, 'textures', 'fgr', 'tomes', f'{nome}.png'))
         tex['texture_data'][f'fgr_tome_{nome}'] = {'textures': f'textures/fgr/tomes/{nome}'}
         gravar(os.path.join(BP, 'items', 'tomes', f'{nome}.json'), {'format_version': '1.21.90', 'minecraft:item': {
-            'description': {'identifier': ident, 'menu_category': {'category': 'equipment'}},
+            'description': {'identifier': ident, 'menu_category': {'category': 'equipment', 'group': GRUPO}},
             'components': {'minecraft:icon': {'textures': {'default': f'fgr_tome_{nome}'}},
                            'minecraft:display_name': {'value': f'item.{ident}.name'},
                            'minecraft:max_stack_size': 1, 'minecraft:allow_off_hand': True, 'minecraft:glint': True, 'minecraft:rarity': 'epic',
@@ -149,6 +152,12 @@ def main():
             chave = f'item.{ident}.name='
             langs[l] = [x for x in langs[l] if not x.startswith(chave)] + [chave + texto]
     gravar(os.path.join(RP, 'textures', 'item_texture.json'), tex)
+    for l, texto in (('pt_BR', 'Grimórios e Tomos'), ('en_US', 'Grimoires and Tomes')):
+        langs[l] = [x for x in langs[l] if not x.startswith(GRUPO + '=')] + [f'{GRUPO}={texto}']
+    grimorios = ['fgr:grimoire'] + [f'fgr:grimoire_{c}' for c in CORANTES if c != 'purple'] + ['fgr:grimoire_invisible']
+    gravar(os.path.join(BP, 'item_catalog', 'crafting_item_catalog.json'), {'format_version': '1.21.60', 'minecraft:crafting_items_catalog': {
+        'categories': [{'category_name': 'equipment', 'groups': [{'group_identifier': {'icon': 'fgr:grimoire', 'name': GRUPO},
+                                                                  'items': grimorios + [f'fgr:infinite_tome_{n}' for n in TOMOS]}]}]}})
     for l, linhas in langs.items():
         with open(os.path.join(RP, 'texts', f'{l}.lang'), 'w', encoding='utf-8') as f: f.write('\n'.join(linhas) + '\n')
     # receitas de cor: qualquer Grimorio (etiqueta) + corante; + vidro = invisivel
