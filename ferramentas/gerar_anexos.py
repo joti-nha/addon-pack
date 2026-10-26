@@ -6,10 +6,8 @@ Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff_RP e grava:
   - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
     (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
      textures/ap/aqc_rod_*.png)
-  - Grimorios (todas as cores e o invisivel) com o modelo de livro do A&S
-    (packs/RP_ForsakenGrimoire/attachables, models/entity, textures/fgr)
-  - Tomos Infinitos com o mesmo livro, na cor da magia do RPG que libera cada um
-    (packs/RP_ForsakenGrimoire/attachables/tomes, textures/fgr/livro/tomo_*.png)
+  - icones dos Grimorios (todas as cores e o invisivel); na mao eles e os Tomos Infinitos ficam em pixel art, sem modelo 3D
+    (packs/RP_ForsakenGrimoire/textures/fgr; o invisivel tem um anexo vazio)
 Rode de novo depois de atualizar o A&S.
 """
 import colorsys, copy, json, math, os, sys
@@ -179,7 +177,6 @@ CORANTES = {
     'light_gray': (157, 157, 151), 'cyan': (22, 156, 156), 'purple': (137, 50, 184), 'blue': (60, 68, 170),
     'brown': (131, 84, 50), 'green': (94, 124, 22), 'red': (176, 46, 38), 'black': (45, 45, 52),
 }
-GEO_LIVRO = 'geometry.fgr_grimorio_livro'
 GEO_VAZIA = 'geometry.fgr_vazio'
 
 
@@ -189,7 +186,6 @@ def ident(cor): return 'fgr:grimoire' if cor == 'purple' else f'fgr:grimoire_{co
 def tom(c, f): return tuple(max(0, min(255, int(v * f))) for v in c)
 
 
-LIVRO_REF = (149, 81, 35)  # marrom principal da capa do livro do A&S
 ICONE_REF = (101, 75, 23)  # marrom principal do icone do livro (Bare Bones, que fica no topo dos packs)
 ICONE_LIVRO = os.path.join(RAIZ, 'packs', 'RP_BareBones_RP', 'textures', 'items', 'book_normal.png')
 
@@ -200,10 +196,6 @@ def tingir(im, cor, ref, capa):
     out = im.copy()
     out.putdata([(*tom(alvo, luz(c) / r), c[3]) if c[3] and capa(c) else c for c in im.getdata()])
     return out
-
-
-def capa_livro(c):  # paginas sao claras (luz alta); o resto e capa
-    return colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))[1] < 0.52
 
 
 def capa_icone(c):  # paginas do icone sao cinza (sem saturacao)
@@ -232,21 +224,13 @@ EMBLEMAS = {
 
 
 def emblema(im, cor, x0, y0):
-    _, desenho, c1, c2 = EMBLEMAS[cor] if isinstance(cor, str) else cor
+    _, desenho, c1, c2 = EMBLEMAS[cor]
     out = im.copy()
     px = out.load()
     for y, linha in enumerate(desenho):
         for x, ch in enumerate(linha):
             if ch != '.': px[x0 + x, y0 + y] = (*(c1 if ch == '#' else c2), 255)
     return out
-
-
-def livro_as():
-    """Geometria e textura do livro comum do A&S (minecraft:book), com o atlas reduzido ao que o livro usa."""
-    d = brarchive.anexo(AS, 'minecraft:book')['minecraft:attachable']['description']
-    geo, img = reempacotar(brarchive.geometria(AS, d['geometry']['default']), textura_as(d['textures']['default'].split('/')[-1]))
-    geo['description']['identifier'] = GEO_LIVRO
-    return geo, img
 
 
 def icone_invisivel(original):
@@ -263,30 +247,24 @@ def icone_invisivel(original):
 
 
 def grimorios():
-    base_anexo = brarchive.anexo(AS, 'minecraft:book')
-    geo, textura = livro_as()
-    gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_grimorio_livro.geo.json'),
-                {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
+    # versoes anteriores davam aos Grimorios e aos Tomos Infinitos o livro 3D do A&S; o Joao preferiu o desenho plano
+    import shutil
+    for velho in ('attachables/tomes', 'textures/fgr/livro'):
+        shutil.rmtree(os.path.join(FGR, velho), ignore_errors=True)
+    for velho in ('models/entity/fgr_grimorio_livro.geo.json', 'render_controllers/fgr_livro.render_controllers.json'):
+        if os.path.exists(os.path.join(FGR, velho)): os.remove(os.path.join(FGR, velho))
     gravar_json(os.path.join(FGR, 'models', 'entity', 'fgr_vazio.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [
         {'description': {'identifier': GEO_VAZIA, 'texture_width': 16, 'texture_height': 16},
          'bones': [{'name': 'root', 'pivot': [0, 0, 0]}]}]})
     livro = Image.open(ICONE_LIVRO).convert('RGBA')
-    os.makedirs(os.path.join(FGR, 'textures', 'fgr', 'livro'), exist_ok=True)
     itens = json.load(open(os.path.join(FGR, 'textures', 'item_texture.json'), encoding='utf-8'))
+    # Grimorios coloridos: so o desenho em pixel art (o icone), como no addon original; sem anexo 3D na mao.
     for cor in CORANTES:
-        emblema(tingir(textura, cor, LIVRO_REF, capa_livro), cor, 1, 2).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'{cor}.png'))
         emblema(tingir(livro, cor, ICONE_REF, capa_icone), cor, 6, 3).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire.png' if cor == 'purple' else f'grimoire_{cor}.png'))
         if cor != 'purple':
             itens['texture_data'][f'fgr_grimoire_{cor}'] = {'textures': f'textures/fgr/grimoire_{cor}'}
-        a = copy.deepcopy(base_anexo)
-        d = a['minecraft:attachable']['description']
-        d['identifier'] = ident(cor)
-        d['geometry'] = {'default': GEO_LIVRO}
-        d['textures'] = {'default': f'textures/fgr/livro/{cor}', 'enchanted': 'textures/misc/enchanted_item_glint'}
-        d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
-        d['render_controllers'] = ['controller.render.fgr.livro']
-        nome = 'grimoire' if cor == 'purple' else f'grimoire_{cor}'
-        gravar_json(os.path.join(FGR, 'attachables', f'{nome}.json'), a)
+        anexo = os.path.join(FGR, 'attachables', ('grimoire' if cor == 'purple' else f'grimoire_{cor}') + '.json')
+        if os.path.exists(anexo): os.remove(anexo)
     icone_invisivel(emblema(tingir(livro, 'purple', ICONE_REF, capa_icone), 'purple', 6, 3)).save(os.path.join(FGR, 'textures', 'fgr', 'grimoire_invisible.png'))
     itens['texture_data']['fgr_grimoire_invisible'] = {'textures': 'textures/fgr/grimoire_invisible'}
     gravar_json(os.path.join(FGR, 'textures', 'item_texture.json'), itens)
@@ -296,42 +274,7 @@ def grimorios():
         'textures': {'default': 'textures/fgr/blank'}, 'geometry': {'default': GEO_VAZIA},
         'render_controllers': ['controller.render.default'],
         'scripts': {'parent_setup': "c.item_slot == 'main_hand' ? { v.oreville_mainhand_visible = 1; v.oreville_mainhand_custom_pos = 1; } : c.item_slot == 'off_hand' ? { v.oreville_offhand_visible = 1; } : 0;"}}}})
-    gravar_json(os.path.join(FGR, 'render_controllers', 'fgr_livro.render_controllers.json'), {
-        'format_version': '1.10.0', 'render_controllers': {'controller.render.fgr.livro': {
-            'geometry': 'Geometry.default',
-            'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
-            'textures': ['Texture.default', 'Texture.enchanted']}}})
     print(f'grimorios: {len(CORANTES)} cores + invisivel')
-
-
-# Tomos Infinitos: livro do Grimorio com a capa e o desenho da magia do RPG que libera o tomo.
-TOMO_ESTILO = {  # magia: (cor da capa, desenho)
-    'fireball': ('red', EMBLEMAS['orange']),
-    'frost': ('light_blue', EMBLEMAS['white']),
-    'lightning': ('blue', ('raio', ['..##.', '.##..', '####.', '..##.', '.##..'], (255, 230, 60), (255, 255, 200))),
-    'invisibility': ('light_gray', EMBLEMAS['purple']),
-}
-
-
-def tomos():
-    from tomos import TOMOS
-    base_anexo = brarchive.anexo(AS, 'minecraft:book')
-    _, textura = livro_as()
-    pasta = os.path.join(FGR, 'attachables', 'tomes')
-    os.makedirs(pasta, exist_ok=True)
-    for f in os.listdir(pasta): os.remove(os.path.join(pasta, f))
-    for magia, (capa, desenho) in TOMO_ESTILO.items():
-        emblema(tingir(textura, capa, LIVRO_REF, capa_livro), desenho, 1, 2).save(os.path.join(FGR, 'textures', 'fgr', 'livro', f'tomo_{magia}.png'))
-    for nome, (_, _, _, magia, _) in TOMOS.items():
-        a = copy.deepcopy(base_anexo)
-        d = a['minecraft:attachable']['description']
-        d['identifier'] = f'fgr:infinite_tome_{nome}'
-        d['geometry'] = {'default': GEO_LIVRO}
-        d['textures'] = {'default': f'textures/fgr/livro/tomo_{magia}', 'enchanted': 'textures/misc/enchanted_item_glint'}
-        d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
-        d['render_controllers'] = ['controller.render.fgr.livro']
-        gravar_json(os.path.join(pasta, f'{nome}.json'), a)
-    print(f'tomos: {len(TOMOS)} anexos')
 
 
 NOMES = {  # pt_BR, en_US
@@ -346,7 +289,7 @@ BP_FGR = os.path.join(RAIZ, 'packs', 'BP_ForsakenGrimoire')
 
 def item_grimorio(identificador, icone_nome):
     return {'format_version': '1.21.90', 'minecraft:item': {
-        'description': {'identifier': identificador, 'menu_category': {'category': 'equipment'}},
+        'description': {'identifier': identificador, 'menu_category': {'category': 'equipment', 'group': 'fgr:itemGroup.name.grimorios'}},
         'components': {'minecraft:icon': {'textures': {'default': icone_nome}},
                        'minecraft:display_name': {'value': f'item.{identificador}.name'},
                        'minecraft:max_stack_size': 1, 'minecraft:allow_off_hand': True, 'minecraft:hand_equipped': False,
@@ -377,5 +320,4 @@ if __name__ == '__main__':
     controlador()
     varas()
     grimorios()
-    tomos()
     itens_grimorio()

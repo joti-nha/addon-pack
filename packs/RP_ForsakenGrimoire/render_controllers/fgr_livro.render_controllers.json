@@ -1,1 +1,0 @@
-{"format_version":"1.10.0","render_controllers":{"controller.render.fgr.livro":{"geometry":"Geometry.default","materials":[{"*":"variable.is_enchanted ? Material.enchanted : Material.default"}],"textures":["Texture.default","Texture.enchanted"]}}}
