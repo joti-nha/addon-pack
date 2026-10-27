@@ -5,7 +5,7 @@ const BossConfigs = [
         typeId: "mnra_cata:sun_tribunal",
         maxDistance: 50,
         despawnEvent: "despawn_from_distance",
-        message: "§cThe Sun Tribunal has been resealed."
+        message: "§cO Tribunal do Sol foi selado de novo."
     },
     {
         typeId: "mnra_cata:soul_terror",

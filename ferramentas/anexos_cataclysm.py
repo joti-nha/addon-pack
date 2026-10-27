@@ -7,7 +7,7 @@ is_mace, is_hoe, is_pickaxe), copia o anexo do item de ferro correspondente do A
 enxada ou picareta) e troca so o modelo e a textura, de modo que as animacoes do A&S servem para a arma:
   - armas feitas de bloco (o modelo 3D do Cataclysmical): o modelo e girado para ficar de pe, com o cabo
     na origem e a lamina para cima, como o modelo 3D do A&S, e redimensionado pela animacao ap_escala;
-  - armas com icone: o icone vira um modelo plano, na mesma posicao do modo 2D do A&S.
+  - armas com icone: o icone vira um modelo de cubos de 1 pixel, na mesma posicao do modo 2D do A&S.
 As lancas (Sunflare Glaive, Exodius, Crepusculo) tem tratamento proprio e ficam de fora.
 Os anexos so valem com o A&S ativo (campo "item"); sem ele o jogo usa o desenho original.
 Grava em packs/RP_AddonPack_Compat (attachables/as_compat/mnra_cata, models/entity/ap_cata.geo.json,
@@ -39,7 +39,6 @@ FATOR = 0.9
 COMPRIMENTO_MIN, COMPRIMENTO_MAX = 22, 40
 # cabo no lado oposto ao trecho mais largo (cabeca), em vez do lado da guarda
 VIRAR = {'verdant_blade': True}
-SPRITE = {'texture': 'default', 'position': [-11.31, -11.31, 0.5], 'rotation': [-90, 0, -45]}  # modo 2D do A&S
 
 
 def ler(caminho): return json.load(open(caminho, encoding='utf-8'))
@@ -179,11 +178,25 @@ def geo_bloco(ident, g0, molde_geo, img, quadros, cabeca):
             'bones': novos}, comp
 
 
-def geo_icone(ident, molde_geo):
+def geo_icone(ident, molde_geo, img):
+    """Icone em cubos de 1 pixel (a malha plana texture_meshes nao aparecia na mao). O icone fica na diagonal,
+    como no modo 2D do A&S: o canto de baixo a esquerda (cabo) no pomo e a ponta de cima a direita para +y."""
     pele, preso = esqueleto(molde_geo)
-    return {'description': {'identifier': ident, 'texture_width': 16, 'texture_height': 16,
+    larg, alt = img.size
+    px = img.convert('RGBA').load()
+    cheios = [(x, y) for y in range(alt) for x in range(larg) if px[x, y][3] >= 20]
+    base = min(x + (alt - 1 - y) for x, y in cheios)  # pixel mais perto do cabo (menor u+v)
+    deslize = POMO[1] * math.sqrt(2) / 2 - base / 2  # leva esse pixel ao pomo na diagonal
+    cubos = []
+    for x, y in cheios:
+        u, v = x + deslize, alt - 1 - y + deslize
+        face = {'uv': [x, y], 'uv_size': [1, 1]}
+        cubos.append({'origin': [round(u, 4), round(v, 4), -0.5], 'size': [1, 1, 1],
+                      'uv': {f: dict(face) for f in ('north', 'south', 'east', 'west', 'up', 'down')}})
+    return {'description': {'identifier': ident, 'texture_width': larg, 'texture_height': alt,
                             'visible_bounds_width': 3, 'visible_bounds_height': 3, 'visible_bounds_offset': [0, 1, 0]},
-            'bones': pele + [{'name': 'ap_arma', 'parent': preso, 'pivot': [0, 0, 0], 'texture_meshes': [SPRITE]}]}
+            'bones': pele + [{'name': 'ap_arma', 'parent': preso, 'pivot': [0, 0, 0], 'rotation': [0, 0, -45],
+                              'cubes': cubos}]}
 
 
 def anexo(molde, ident, geo, tex, escala=None, quadros=None):
@@ -257,8 +270,8 @@ def main():
         else:
             tile = c.get('minecraft:icon'); tile = tile if isinstance(tile, str) else (tile or {}).get('textures', {}).get('default')
             cam = itens_tex[tile]['textures']; cam = cam[0] if isinstance(cam, list) else cam
-            gid = f'geometry.ap.cata.icone.{sufixo}'
-            if gid not in feitas: novas.append(geo_icone(gid, molde_geo)); feitas[gid] = gid
+            gid = f'geometry.ap.cata.icone.{nome}'
+            novas.append(geo_icone(gid, molde_geo, textura(cam)))
             a = anexo(molde, ident, gid, cam)
         gravar(os.path.join(COMPAT, 'attachables', 'as_compat', 'mnra_cata', f'{nome}.json'), a)
         total += 1

@@ -68,7 +68,7 @@ const cannotEnchantMessage = [
 function enchantUi(block, player, itemTag, enchants) {
     const equippable = player.getComponent(EntityEquippableComponent.componentId);
     const form = new ActionFormData()
-    .title("Miner Bench")
+    .title("Bancada do Minerador")
     .body("");
 
     let enchantButtons = [];

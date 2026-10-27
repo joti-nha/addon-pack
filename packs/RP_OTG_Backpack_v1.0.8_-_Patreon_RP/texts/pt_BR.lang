@@ -2101,3 +2101,7 @@ item.otg:backpack_smithing_table_button.name=§aColocar Mesa de Ferraria
 item.otg:backpack_ender_chest_button.name=§aColocar Baú do Ender
 item.otg:backpack_jukebox_play_button.name=§aTocar música
 item.otg:backpack_jukebox_stop_button.name=§cParar música
+## >>> Addon Pack: tradução pt-BR (ferramentas/traduzir_ptbr.py)
+item.otg:backpack_place_button=§aColocar Mochila\n§7Coloca a mochila no chão
+item.otg:backpack_place_button.name=§aColocar Mochila\n§7Coloca a mochila no chão
+## <<< Addon Pack: tradução pt-BR

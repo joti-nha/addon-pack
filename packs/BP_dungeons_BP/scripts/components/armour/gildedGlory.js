@@ -87,7 +87,7 @@ world.beforeEvents.entityHurt.subscribe((e) => {
         deathBarterScore.setScore(hurt, 0)
         var levelsToLose = minLevels + Math.round((hurt.level - minLevels) * 0.25)
         if (hurt.level > 50) levelsToLose += Math.round(hurt.level * 0.2)
-        if (hurt.hasTag("dungeons:debug")) hurt.sendMessage(`§o§eDeath Barter §aConsumed ${levelsToLose} Levels`)
+        if (hurt.hasTag("dungeons:debug")) hurt.sendMessage(`§o§eEscambo da Morte §aconsumiu ${levelsToLose} níveis`)
         const expToLose = Math.floor(getXpFromLevelCount(levelsToLose) / 20) * 20
         for (let i = 0; i < 20; i++) {
             system.runTimeout(() => {

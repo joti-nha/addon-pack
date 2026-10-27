@@ -31,7 +31,7 @@ function applyCompassTarget(item, id, x, y, z) {
     try { item.setDynamicProperty(DP_BIOME, id); } catch (e) { hasProp = false; }
     const rest = [`§8X: ${x}`, `§8Y: ${y}`, `§8Z: ${z}`];
     try {
-        item.setLore([hasProp ? { rawtext: [{ text: "§7Biome: " }, biomeLabel(id)] } : `§7Biome: ${id}`, ...rest]);
+        item.setLore([hasProp ? { rawtext: [{ text: "§7Bioma: " }, biomeLabel(id)] } : `§7Biome: ${id}`, ...rest]);
     } catch (e) {
         item.setLore([`§7Biome: ${hasProp ? plainName(id) : id}`, ...rest]);
     }
@@ -54,7 +54,7 @@ function getCompassData(item) {
     if (!lore || lore.length < 4) return null;
     let biome;
     try { biome = item.getDynamicProperty(DP_BIOME); } catch (e) { }
-    if (typeof biome !== "string") biome = lore[0].replace("§7Biome: ", "");
+    if (typeof biome !== "string") biome = lore[0].replace("§7Bioma: ", "");
     const x = Number(lore[1].replace("§8X: ", ""));
     const y = Number(lore[2].replace("§8Y: ", ""));
     const z = Number(lore[3].replace("§8Z: ", ""));

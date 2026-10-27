@@ -60,7 +60,7 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
         player.addEffect("slow_falling", 200, { amplifier: 15 });
         player.runCommand(`clear @s dk:smoke_bomb 0 1`);
         player.dimension.spawnParticle("huge_explosion_lab_misc_emitter", { ...player.location, y: y - 1 });
-        player.onScreenDisplay.setActionBar("A player just escaped")
+        player.onScreenDisplay.setActionBar("Um jogador acabou de escapar")
 
         let new_location = player.location;
 

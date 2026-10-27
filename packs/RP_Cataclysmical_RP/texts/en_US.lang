@@ -253,7 +253,7 @@ tile.mnra_cata:ancient_sun_statue.name=Ancient Sun Statue
 
 
 ##dummy
-entity.mnra_cata:trinkets_ent.name= Trinkets Bag
+entity.mnra_cata:trinkets_ent.name= Trinkets Bag
 entity.mnra_cata:trinket_container.name=Trinket Container=Trinket Container
 entity.mnra_cata:terror_skull_launcher_impact.name=Terror Skull Launcher Impact
 entity.mnra_cata:flare_stone_meteor_dummy.name=Flare Stone Meteor Dummy

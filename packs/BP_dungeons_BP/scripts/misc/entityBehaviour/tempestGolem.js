@@ -45,7 +45,7 @@ world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
     if (player.hasTag('dungeons:tempest_warn')) return;
 
     if (item.typeId === 'dungeons:tempest_golem_resting_spawn_egg') {
-        player.sendMessage("§7The Tempest Golem cannot be harmed unless you place the \'wind_totem_left\' and \'wind_totem_right\' entities nearby")
+        player.sendMessage("§7O Golem da Tempestade não pode ser ferido a menos que você coloque as entidades \'wind_totem_left\' e \'wind_totem_right\' por perto")
 
         system.run(() => {
             player.addTag('dungeons:tempest_warn');

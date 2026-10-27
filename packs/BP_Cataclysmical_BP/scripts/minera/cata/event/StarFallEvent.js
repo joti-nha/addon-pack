@@ -5,7 +5,7 @@ let nightChecked = false;
 let starfallIntervalId = null;
 
 function startStarfallEvent() {
-    world.sendMessage("§dStarling's are Falling from the Heavens!")
+    world.sendMessage("§dStarlings estão caindo do céu!")
 
     const MinDistance = 40;
     const MaxDistance = 60;
@@ -83,7 +83,7 @@ function startStarfallEvent() {
 }
 
 export function stopStarfallEvent() {
-    world.sendMessage("§dStarFall event is over")
+    world.sendMessage("§dO evento Chuva de Estrelas acabou")
     if (starfallIntervalId !== null) {
         system.clearRun(starfallIntervalId);
         starfallIntervalId = null;
@@ -278,12 +278,12 @@ world.afterEvents.itemUse.subscribe((event) => {
     if (!item || item.typeId !== "mnra_cata:cosmic_clock") return;
 
     if (starfallActive) {
-        player.onScreenDisplay.setActionBar("§cStarFall Event is Active");
+        player.onScreenDisplay.setActionBar("§cO evento Chuva de Estrelas está ativo");
         return;
     }
 
     if (!isNight()) {
-        player.onScreenDisplay.setActionBar("§7Can only be summoned at night");
+        player.onScreenDisplay.setActionBar("§7Só pode ser invocado à noite");
         return;
     }
 

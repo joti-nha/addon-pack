@@ -6,13 +6,13 @@ const playerCooldowns = new Map(); // Variável para evitar que o menu abra 2x s
 
 const FEATURES = [
 	{ key: "bv:give_guide", defaultState: false, label: "Give Guidebook on Death", score: "bv:give_guidebook", prefix: "" },
-	{ key: "bv:dynamic_light", defaultState: false, label: "Dynamic Light", score: "bv:dylight", prefix: "[F1] " },
+	{ key: "bv:dynamic_light", defaultState: false, label: "Luz Dinâmica", score: "bv:dylight", prefix: "[F1] " },
 	{ key: "bv:horse_leaves", defaultState: false, label: "Horses Break Leaves", score: "bv:breakleaves", prefix: "[F2] " },
 	{ key: "bv:campfire", defaultState: true, label: "Campfire Heal Effect", score: "bv:campheal", prefix: "" },
 	{ key: "bv:nohurtpets_owner", defaultState: true, label: "No hurt pets (Owner Only)", score: "bv:nohurtowner", prefix: "" },
 	{ key: "bv:no_hurt", defaultState: false, label: "No hurt pets (All Players)", score: "bv:nohurt", prefix: "" },
 	{ key: "bv:auto_totem", defaultState: false, label: "Auto Totem of Undying", score: "bv:auto_totem", prefix: "" },
-	{ key: "bv:offtorch", defaultState: true, label: "Better Off-hand", score: "bv:off_hand_torch", prefix: "" },
+	{ key: "bv:offtorch", defaultState: true, label: "Mão Secundária Melhor", score: "bv:off_hand_torch", prefix: "" },
 	{ key: "bv:hotbar_lantern", defaultState: false, label: "Lanterns light on Hotbar", score: "bv:dlight_hotbar_toggle", prefix: "" }
 ];
 
@@ -74,7 +74,7 @@ function triggerMenu(player) {
 export function showSimpleToggleMenu(player) {
 	try {
 		const form = new ModalFormData();
-		form.title("§lCommon Sense Settings");
+		form.title("§lConfigurações do Common Sense");
 
 		const currentStates = [];
 		for (const feature of FEATURES) {
@@ -99,7 +99,7 @@ export function showSimpleToggleMenu(player) {
 						world.setDynamicProperty(feature.key, newValue);
 						changeCount++;
 
-						const statusText = newValue ? "§aENABLED" : "§cDISABLED";
+						const statusText = newValue ? "§aATIVADO" : "§cDESATIVADO";
 						player.onScreenDisplay.setActionBar(`§7${feature.prefix}${feature.label}: ${statusText}`);
 
 						const score = newValue ? 2 : 1;
@@ -110,9 +110,9 @@ export function showSimpleToggleMenu(player) {
 				}
 
 				if (changeCount === 0) {
-					player.onScreenDisplay.setActionBar("§6None Settings have been changed.");
+					player.onScreenDisplay.setActionBar("§6Nenhuma configuração foi alterada.");
 				} else {
-					player.sendMessage(`§b[Config] Settings Saved. ${changeCount} Feature(s) Changed.`);
+					player.sendMessage(`§b[Config] Configurações salvas. ${changeCount} recurso(s) alterado(s).`);
 				}
 			});
 		}).catch(e => {

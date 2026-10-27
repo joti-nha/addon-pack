@@ -80,7 +80,7 @@ const credits = [
         discipline: "Special Thanks",
         titles: [
             {
-                title: "Enchanted Mobs",
+                title: "Criaturas Encantadas",
                 names: [
                     "Xorkent"
                 ]
@@ -143,7 +143,7 @@ function toolProgression(player) {
         "%bob.info.toolProgression";
 
     new ActionFormData()
-        .title("Tool Progression")
+        .title("Progressão de Ferramentas")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -153,7 +153,7 @@ function oreDistribution(player) {
         "%bob.info.ores";
 
     new ActionFormData()
-        .title("Ore Distribution")
+        .title("Distribuição de Minérios")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -167,7 +167,7 @@ function stardustUpgrade(player) {
         + "- %bob.info.stardustStepFour\n";
 
     new ActionFormData()
-        .title("Stardust Upgrade")
+        .title("Melhoria de Poeira Estelar")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -177,7 +177,7 @@ function armorSets(player) {
         "%bob.info.armorSets";
 
     new ActionFormData()
-        .title("Armor Sets")
+        .title("Conjuntos de Armadura")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -204,7 +204,7 @@ function endProgression(player) {
         "%bob.info.endProgression";
 
     new ActionFormData()
-        .title("End Progression")
+        .title("Progressão do End")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -244,7 +244,7 @@ function enchantedMobs(player) {
         "%bob.info.enchantedMobs";
 
     new ActionFormData()
-        .title("Enchanted Mobs")
+        .title("Criaturas Encantadas")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -265,7 +265,7 @@ function magicStaffs(player) {
         + "%bob.info.runeLocations";
 
     new ActionFormData()
-        .title("Magic Staffs")
+        .title("Cajados Mágicos")
         .body(body)
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));
@@ -275,21 +275,21 @@ function magicStaffs(player) {
 export function lostJournal(player) {
     new ActionFormData()
         .title("Info")
-        .body("Welcome to the info book!\nHere you will find important information regarding Better on Bedrock")
+        .body("Bem-vindo ao livro de informações!\nAqui você encontra informações importantes sobre o Better on Bedrock")
         .button("Contributions", "textures/items/misc/poggy_boss/the_ardent_crystal")
-        .button("Welcome!", "textures/items/diamond")
-        .button("Tool Progression", "textures/items/stone_pickaxe")
-        .button("Ore Distribution", "textures/items/coal")
-        .button("Stardust Upgrade", "textures/items/tool_progression/stardust_upgrade")
-        .button("Armor Sets", "textures/items/diamond_chestplate")
+        .button("Bem-vindo!", "textures/items/diamond")
+        .button("Progressão de Ferramentas", "textures/items/stone_pickaxe")
+        .button("Distribuição de Minérios", "textures/items/coal")
+        .button("Melhoria de Poeira Estelar", "textures/items/tool_progression/stardust_upgrade")
+        .button("Conjuntos de Armadura", "textures/items/diamond_chestplate")
         .button("Enchantments", "textures/items/book_normal")
-        .button("End Progression", "textures/items/ender_eye")
+        .button("Progressão do End", "textures/items/ender_eye")
         .button("Trophies", "textures/items/trophies/fixed_ghost_necklace")
         .button("Quests", "textures/items/bounty_system/bounty_paper_open")
         .button("Bounties", "textures/items/bounty_system/bounty_scroll_open")
-        .button("Enchanted Mobs", "textures/items/spawn_egg")
+        .button("Criaturas Encantadas", "textures/items/spawn_egg")
         .button("Waystone", "textures/items/waystone/waystone")
-        .button("Magic Staffs", "textures/items/staffs/ice_staff")
+        .button("Cajados Mágicos", "textures/items/staffs/ice_staff")
         .show(player).then((response) => {
             if (response.canceled)
                 return;
@@ -316,7 +316,7 @@ export function lostJournal(player) {
 /** @param { import("@minecraft/server").Player } player */
 export function beginnerPage(player) {
     new ActionFormData()
-        .title("Welcome!")
+        .title("Bem-vindo!")
         .body("bob.welcomePage")
         .button("§c< %gui.goBack§r")
         .show(player).then(() => lostJournal(player));

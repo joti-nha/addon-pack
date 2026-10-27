@@ -1,7 +1,7 @@
 import { world, system, ItemStack } from "@minecraft/server";
 
 const XP = 1;
-const Mirror = "Recall Mirror";
+const Mirror = "Espelho do Retorno";
 
 const Dimensions = {
     "minecraft:overworld": "Overworld",
@@ -16,7 +16,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
     if (!player || !item || item.typeId !== "mnra_cata:recall_mirror") return;
 
     if (player.isSneaking) {
-        player.onScreenDisplay.setActionBar("§cThis mirror cannot be bound");
+        player.onScreenDisplay.setActionBar("§cEste espelho não pode ser vinculado");
         return;
     }
 
@@ -39,17 +39,17 @@ world.afterEvents.itemUse.subscribe((ev) => {
             inv.setItem(slot, cleanItem);
         }
 
-        player.onScreenDisplay.setActionBar("§cYou have no spawn point");
+        player.onScreenDisplay.setActionBar("§cVocê não tem ponto de renascimento");
         return;
     }
 
     if (player.level < XP) {
-        player.onScreenDisplay.setActionBar("§cNot enough levels");
+        player.onScreenDisplay.setActionBar("§cNíveis insuficientes");
         return;
     }
 
     if (spawn.dimension.id !== player.dimension.id) {
-        player.onScreenDisplay.setActionBar("§cYou cannot teleport between dimensions");
+        player.onScreenDisplay.setActionBar("§cVocê não pode se teletransportar entre dimensões");
         return;
     }
 
@@ -147,5 +147,5 @@ system.runInterval(() => {
 
 
 
-//"mnra_cata:warped_mirror": ["", "§r§7On Right Click:", "§r§8 Bound the mirror to a location, crouch", "§r§8 to telport to that location.", "", "§r§7Requires 3+ levels"],
+//"mnra_cata:warped_mirror": ["", "§r§7Ao Usar:", "§r§8 Vincula o espelho a um local; agache", "§r§8 para se teletransportar até lá.", "", "§r§7Exige 3 níveis ou mais"],
 //newItem.nameTag = `§r§7${baseName} §r§b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`;

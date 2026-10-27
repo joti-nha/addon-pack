@@ -130,7 +130,7 @@ export const STAFFS = {
     "durability_damage_chance": 100.0,
     "release_effect": "conduit_power",
     "release_valid_blocks": "water_type",
-    "release_fail_guide": "§eYou have to be in water to activate the staff's effect.§r",
+    "release_fail_guide": "§eVocê precisa estar na água para ativar o efeito do cajado.§r",
     "release_effect_duration": 1800,
     "release_effect_amplifier": 0,
     "release_effect_particles": true,

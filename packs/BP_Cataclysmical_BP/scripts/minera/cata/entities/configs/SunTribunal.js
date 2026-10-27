@@ -356,7 +356,7 @@ system.runInterval(() => {
 
                 player.applyDamage(10);
                 player.setOnFire(8)
-                player.sendMessage("§6Your Wings Bursts in Solar Flare");
+                player.sendMessage("§6Suas asas explodem numa erupção solar");
 
                 break;
             }

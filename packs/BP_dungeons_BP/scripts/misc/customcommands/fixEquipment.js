@@ -51,10 +51,10 @@ system.beforeEvents.startup.subscribe(event => {
                     }
                 }
                 if(didAnything && feedback) {
-                    player.sendMessage("All equipment repaired! :)")
+                    player.sendMessage("Todo o equipamento foi reparado! :)")
                     player.playSound("random.anvil_use", {pitch: Math.random() + 0.5})
                 }  else if(!didAnything && feedback) {
-                    player.sendMessage("Nothing was found that needed repairing")
+                    player.sendMessage("Nada precisava de reparo")
                 }
             })
         }

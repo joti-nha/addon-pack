@@ -17,3 +17,18 @@ item.bv:config=Configuração Common Sense
 item.bv:armadillo_fox_armor=Armadura para Raposa\n§9Common Sense
 tile.bv:woodcutter.name=Woodcutter§w§c
 item.bv:view=Editor de Visão\n§8agacha+interage pra abrir o menu
+## >>> Addon Pack: tradução pt-BR (ferramentas/traduzir_ptbr.py)
+tile.bv:light_source.name=Fonte de Luz
+item.bv:guidebook=Livro do CommonSense
+commonsense.guide.title=Guia do Common Sense
+commonsense.guide.body=Bem-vindo ao guia oficial! Escolha uma categoria abaixo para saber mais sobre as mecânicas do addon.
+commonsense.guide.btn.back=Voltar
+commonsense.guide.btn.recipes=Receitas
+commonsense.guide.btn.=Receitas
+commonsense.guide.btn.functions=Novas Funções
+commonsense.guide.btn.items=Informações dos Itens
+commonsense.guide.btn.about=Sobre a JFAddons
+commonsense.guide.about.title=Sobre a JFAddons
+commonsense.guide.about.body=O Common Sense é desenvolvido pelo estúdio JFAddons.\n\nAcompanhe as atualizações e os novos vídeos no YouTube para ficar por dentro das novidades e tutoriais!
+commonsense.guide.btn.close=Fechar
+## <<< Addon Pack: tradução pt-BR

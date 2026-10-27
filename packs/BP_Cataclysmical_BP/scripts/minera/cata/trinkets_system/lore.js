@@ -1,11 +1,11 @@
 import { world } from "@minecraft/server";
 
 const trinketLore = {
-    1: ["§6Trinket Slot I", "§7A mysterious item"],
-    2: ["§6Trinket Slot II", "§7Empowered by magic"],
-    3: ["§6Trinket Slot III", "§7Ancient power flows through"],
-    4: ["§6Trinket Slot IV", "§7Beware its strength"],
-    5: ["§6Trinket Slot V", "§7Ultimate trinket"]
+    1: ["§6Espaço de Bugiganga I", "§7Um item misterioso"],
+    2: ["§6Espaço de Bugiganga II", "§7Fortalecido pela magia"],
+    3: ["§6Espaço de Bugiganga III", "§7Um poder ancestral flui por ele"],
+    4: ["§6Espaço de Bugiganga IV", "§7Cuidado com a sua força"],
+    5: ["§6Espaço de Bugiganga V", "§7A bugiganga suprema"]
 };
 
 function applyLoreToTaggedItems(player, slotNumber) {

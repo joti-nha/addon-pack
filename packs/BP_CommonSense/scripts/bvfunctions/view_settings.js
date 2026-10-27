@@ -121,7 +121,7 @@ function handleViewInteraction(player) {
 				safeCommand(player, getResolvedCommand(player, mode));
 			}
 
-			player.onScreenDisplay.setActionBar(`§aCamera Mode: §f${mode.name}`);
+			player.onScreenDisplay.setActionBar(`§aModo de câmera: §f${mode.name}`);
 		});
 	}
 }
@@ -244,12 +244,12 @@ function showViewMenu(player) {
 		const sDist = player.getDynamicProperty(FEATURE_KEY_DIST) ?? DEFAULT_DIST;
 
 		const form = new ModalFormData();
-		form.title("§lMy View Settings");
+		form.title("§lMinhas Configurações de Visão");
 
-		form.toggle("§fGive View Changer(onDeath)", { defaultValue: s8 });
-		form.toggle("§fAuto Horse Camera", { defaultValue: s9 });
-		form.toggle("§fAuto Bow Camera", { defaultValue: s10 });
-		form.slider("§fCamera Distance", 2, 7, { valueStep: 1, defaultValue: sDist });
+		form.toggle("§fDar o Editor de Visão (ao morrer)", { defaultValue: s8 });
+		form.toggle("§fCâmera automática no cavalo", { defaultValue: s9 });
+		form.toggle("§fCâmera automática no arco", { defaultValue: s10 });
+		form.slider("§fDistância da câmera", 2, 7, { valueStep: 1, defaultValue: sDist });
 
 		form.show(player).then(response => {
 			if (response.canceled) return;
@@ -270,7 +270,7 @@ function showViewMenu(player) {
 				}
 
 				if (changeCount > 0) {
-					player.onScreenDisplay.setActionBar("§b[Personal Settings] Saved.");
+					player.onScreenDisplay.setActionBar("§b[Configurações pessoais] Salvas.");
 
 					// SE O ZOOM MUDOU, ATUALIZA A CÂMERA NA HORA
 					if (distanceChanged) {
@@ -286,7 +286,7 @@ function showViewMenu(player) {
 						}
 					}
 				} else {
-					player.onScreenDisplay.setActionBar("§6No changes were made.");
+					player.onScreenDisplay.setActionBar("§6Nada foi alterado.");
 				}
 			});
 		}).catch(e => {

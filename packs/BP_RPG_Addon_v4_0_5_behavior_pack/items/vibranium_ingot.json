@@ -1,1 +1,1 @@
-{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"test:vibranium_ingot","menu_category":{"category":"items"}},"components":{"minecraft:display_name":{"value":"Vibranium Ingot"},"minecraft:icon":{"texture":"vibranium_ingot"}}}}
+{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"test:vibranium_ingot","menu_category":{"category":"items"}},"components":{"minecraft:display_name":{"value":"Lingote de Vibrânio"},"minecraft:icon":{"texture":"vibranium_ingot"}}}}

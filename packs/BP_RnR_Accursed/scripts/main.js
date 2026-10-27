@@ -171,7 +171,7 @@ const BEASTFOLK_SUBRACES = [
     scale: 1.0,
     description: "Feline kin with catlike grace and keen reflexes.",
     effects: [],
-    abilityDescription: "§8In Development",
+    abilityDescription: "§8Em Desenvolvimento",
   },
   {
     key: "beastfolk_ursa",
@@ -182,7 +182,7 @@ const BEASTFOLK_SUBRACES = [
     scale: 1.08,
     description: "Bear kin — broad-shouldered, tough, and hard to put down.",
     effects: [],
-    abilityDescription: "§8In Development",
+    abilityDescription: "§8Em Desenvolvimento",
   },
   {
     key: "beastfolk_foxkin",
@@ -193,7 +193,7 @@ const BEASTFOLK_SUBRACES = [
     scale: 0.95,
     description: "Fox kin — light on their feet and sharp of eye.",
     effects: [],
-    abilityDescription: "§8In Development",
+    abilityDescription: "§8Em Desenvolvimento",
   },
 ];
 
@@ -673,8 +673,8 @@ function activateRitualDaggerInHand(player) {
   } catch (_) {}
 
   if (!setMainhandItem(player, activated)) return false;
-  player.sendMessage("§4The dagger drinks the bats blood and thrums with cursed-light.");
-  player.onScreenDisplay?.setActionBar?.("§4Ritual Dagger (Activated)");
+  player.sendMessage("§4A adaga bebe o sangue do morcego e vibra com uma luz amaldiçoada.");
+  player.onScreenDisplay?.setActionBar?.("§4Adaga Ritual (Ativada)");
   return true;
 }
 
@@ -727,7 +727,7 @@ function isEdibleItemStack(itemStack) {
 }
 
 function notifyVampireFoodRejected(player) {
-  player.onScreenDisplay?.setActionBar?.("§4This isn't within your appetite.");
+  player.onScreenDisplay?.setActionBar?.("§4Isso não faz parte do seu apetite.");
 }
 
 function onVampireFoodBeforeItemUse(event) {
@@ -936,7 +936,7 @@ function syncVampireSunBurn(player) {
 
   startVampireBurn(player);
   if (mc.system.currentTick % 20 === 0) {
-    player.onScreenDisplay?.setActionBar?.("§4You are too weak to sustain sun exposure");
+    player.onScreenDisplay?.setActionBar?.("§4Você está fraco demais para aguentar o sol");
   }
 }
 
@@ -1033,7 +1033,7 @@ function revertVampireBatForm(player, forced = false) {
   } catch (_) {}
 
   if (forced) {
-    player.onScreenDisplay?.setActionBar?.("§8Bat form fades with the dawn.");
+    player.onScreenDisplay?.setActionBar?.("§8A forma de morcego some com o amanhecer.");
   } else {
     player.onScreenDisplay?.setActionBar?.("§7Vampire form");
   }
@@ -1042,7 +1042,7 @@ function revertVampireBatForm(player, forced = false) {
 function enterVampireBatForm(player) {
   if (!isVampirePlayer(player)) return false;
   if (!isNightTime()) {
-    player.onScreenDisplay?.setActionBar?.("§8Bat form only works at night.");
+    player.onScreenDisplay?.setActionBar?.("§8A forma de morcego só funciona à noite.");
     return false;
   }
   if (isVampireBatForm(player)) return false;
@@ -1087,8 +1087,8 @@ function enterVampireBatForm(player) {
       player.addEffect("night_vision", 999999, { amplifier: 0, showParticles: false });
     }
   } catch (_) {}
-  player.sendMessage("§8You unravel into bat form!");
-  player.onScreenDisplay?.setActionBar?.("§8Bat form — WASD to glide, jump up, sneak down (max 20 blocks)");
+  player.sendMessage("§8Você se desfaz em forma de morcego!");
+  player.onScreenDisplay?.setActionBar?.("§8Forma de morcego: mova-se para planar, pule para subir, agache para descer (máx. 20 blocos)");
   return true;
 }
 
@@ -1186,7 +1186,7 @@ function syncVampireBatFlight(player) {
 
   if (Math.abs(ix) < 0.001 && Math.abs(iy) < 0.001 && Math.abs(iz) < 0.001) {
     if (wingsBlocked) {
-      player.onScreenDisplay?.setActionBar?.("§8Your wings cannot put you any higher");
+      player.onScreenDisplay?.setActionBar?.("§8Suas asas não conseguem levar você mais alto");
     }
     return;
   }
@@ -1196,9 +1196,9 @@ function syncVampireBatFlight(player) {
   } catch (_) {}
 
   if (wingsBlocked) {
-    player.onScreenDisplay?.setActionBar?.("§8Your wings cannot put you any higher");
+    player.onScreenDisplay?.setActionBar?.("§8Suas asas não conseguem levar você mais alto");
   } else if (overHeightLimit && tick % 40 === 0) {
-    player.onScreenDisplay?.setActionBar?.("§8Above height limit — sneak to descend.");
+    player.onScreenDisplay?.setActionBar?.("§8Acima do limite de altura: agache para descer.");
   }
 }
 
@@ -1498,7 +1498,7 @@ function breakVampireFeed(feederId, reason = "interrupted") {
 
   if (feeder instanceof mc.Player && feeder.isValid?.()) {
     if (reason === "victim_struggle") {
-      feeder.onScreenDisplay?.setActionBar?.("§8Your prey broke free.");
+      feeder.onScreenDisplay?.setActionBar?.("§8Sua presa se soltou.");
     } else if (reason === "distance") {
       feeder.onScreenDisplay?.setActionBar?.("§8Target broke free.");
     } else {
@@ -1508,10 +1508,10 @@ function breakVampireFeed(feederId, reason = "interrupted") {
 
   if (session.isPlayerTarget && target instanceof mc.Player && target.isValid?.()) {
     if (reason === "victim_struggle") {
-      target.onScreenDisplay?.setActionBar?.("§aYou broke free!");
-      target.sendMessage("§eYou wrench free from the vampire!");
+      target.onScreenDisplay?.setActionBar?.("§aVocê se soltou!");
+      target.sendMessage("§eVocê se solta do vampiro!");
     } else if (reason === "damaged") {
-      target.onScreenDisplay?.setActionBar?.("§aThe vampire was knocked away!");
+      target.onScreenDisplay?.setActionBar?.("§aO vampiro foi arremessado para longe!");
     }
   }
 }
@@ -1662,13 +1662,13 @@ function startVampireFeed(attacker, targetEntity) {
 
   if (feedingPlayer) {
     try {
-      target.sendMessage("§4A vampire locks onto you and drains your blood! §7(Sneak+Jump to break free)");
+      target.sendMessage("§4Um vampiro se prende a você e drena seu sangue! §7(Agachar+Pular para se soltar)");
     } catch (_) {}
   }
 
   spawnVampireFeedFx(attacker, target, feedingPlayer);
 
-  attacker.onScreenDisplay?.setActionBar?.("§4You latch on and begin to feed...");
+  attacker.onScreenDisplay?.setActionBar?.("§4Você se prende e começa a se alimentar...");
   return true;
 }
 
@@ -1742,22 +1742,22 @@ function finishVampireAscension(player) {
   if (!VAMPIRE_TURN_PENDING.has(player.id)) return;
   VAMPIRE_TURN_PENDING.delete(player.id);
   setRace(player, VAMPIRE_RACE);
-  player.sendMessage("§4You rise from the sacrifice — reborn as Vampire.");
+  player.sendMessage("§4Você se ergue do sacrifício, renascido como Vampiro.");
   player.runCommand(`title @s title §4§lReborn`);
-  player.runCommand(`title @s subtitle §7The curse lives in your veins`);
+  player.runCommand(`title @s subtitle §7A maldição vive em suas veias`);
 }
 
 function showVampireRitualConfirm(player) {
   mc.system.run(() => {
     const form = new MessageFormData()
-      .title("§4Vampiric Ritual")
-      .body("§7Drive the bloodbound blade into yourself.\n\n§cAccept§7 and you die — §8all belongings§7 are sacrificed.\n§8You will rise again as §4Vampire§8.")
-      .button1("§4Accept the curse")
-      .button2("§8§lRefuse the curse");
+      .title("§4Ritual Vampírico")
+      .body("§7Crave a lâmina de sangue em si mesmo.\n\n§cAceite§7 e você morre: §8todos os seus pertences§7 serão sacrificados.\n§8Você se erguerá de novo como §4Vampiro§8.")
+      .button1("§4Aceitar a maldição")
+      .button2("§8§lRecusar a maldição");
 
     form.show(player).then((result) => {
       if (result.canceled || result.selection !== 0) {
-        player.onScreenDisplay?.setActionBar?.("§8You resist the curse... for now.");
+        player.onScreenDisplay?.setActionBar?.("§8Você resiste à maldição... por enquanto.");
         return;
       }
       beginVampireTransformation(player);
@@ -1768,15 +1768,15 @@ function showVampireRitualConfirm(player) {
 function tryBeginVampireRitual(player, itemStack) {
   if ((itemStack?.typeId ?? "") !== RITUAL_DAGGER_ACTIVATED_ID) return false;
   if (!isAccursedPlayer(player)) {
-    player.onScreenDisplay?.setActionBar?.("§8Only the Accursed can answer this call.");
+    player.onScreenDisplay?.setActionBar?.("§8Só os Amaldiçoados podem atender a este chamado.");
     return true;
   }
   if (isVampirePlayer(player)) {
-    player.onScreenDisplay?.setActionBar?.("§8You are already damned.");
+    player.onScreenDisplay?.setActionBar?.("§8Você já está condenado.");
     return true;
   }
   if ((getMainhandTool(player)?.typeId ?? "") !== RITUAL_DAGGER_ACTIVATED_ID) {
-    player.onScreenDisplay?.setActionBar?.("§8Hold the activated dagger in your main hand.");
+    player.onScreenDisplay?.setActionBar?.("§8Segure a adaga ativada na mão principal.");
     return true;
   }
   showVampireRitualConfirm(player);
@@ -1785,25 +1785,25 @@ function tryBeginVampireRitual(player, itemStack) {
 
 function beginVampireTransformation(player) {
   if (!isAccursedPlayer(player)) {
-    player.sendMessage("§8Only the Accursed can become a vampire.");
+    player.sendMessage("§8Só os Amaldiçoados podem se tornar vampiros.");
     return;
   }
   if (isVampirePlayer(player)) return;
   if ((getMainhandTool(player)?.typeId ?? "") !== RITUAL_DAGGER_ACTIVATED_ID) {
-    player.onScreenDisplay?.setActionBar?.("§8You must hold the activated dagger.");
+    player.onScreenDisplay?.setActionBar?.("§8Você precisa segurar a adaga ativada.");
     return;
   }
   if (!consumeMainhandIfType(player, RITUAL_DAGGER_ACTIVATED_ID)) {
-    player.onScreenDisplay?.setActionBar?.("§8The bloodbound dagger slips from your grasp.");
+    player.onScreenDisplay?.setActionBar?.("§8A adaga de sangue escapa das suas mãos.");
     return;
   }
 
   clearPlayerBelongings(player);
   VAMPIRE_TURN_PENDING.add(player.id);
 
-  player.sendMessage("§4The blade takes its due. Your old life ends.");
-  player.runCommand(`title @s title §4§lThe Fall`);
-  player.runCommand(`title @s subtitle §7Everything you were is offered up`);
+  player.sendMessage("§4A lâmina cobra o seu preço. Sua antiga vida termina.");
+  player.runCommand(`title @s title §4§lA Queda`);
+  player.runCommand(`title @s subtitle §7Tudo o que você foi é oferecido`);
 
   mc.system.runTimeout(() => {
     if (!player?.isValid?.()) return;
@@ -2577,7 +2577,7 @@ function releaseAllUndeadMinions(owner, silent = false) {
   }
   UNDEAD_MINION_OWNER_TARGET.delete(owner.id);
   if (!silent) {
-    owner.onScreenDisplay?.setActionBar?.("§8Your bound minions have been released.");
+    owner.onScreenDisplay?.setActionBar?.("§8Seus lacaios vinculados foram libertados.");
   }
 }
 
@@ -2587,17 +2587,17 @@ function tryBindUndeadMinion(player, mob) {
 
   const existingOwner = getUndeadMinionOwnerId(mob.id);
   if (existingOwner && existingOwner !== player.id) {
-    player.onScreenDisplay?.setActionBar?.("§8That undead already serves another.");
+    player.onScreenDisplay?.setActionBar?.("§8Esse morto-vivo já serve a outro.");
     return false;
   }
   if (existingOwner === player.id) {
-    player.onScreenDisplay?.setActionBar?.("§8Already bound to you.");
+    player.onScreenDisplay?.setActionBar?.("§8Já está vinculado a você.");
     return false;
   }
 
   const distSq = locationDistanceSq(player.location, mob.location);
   if (distSq > UNDEAD_MINION_BIND_RANGE * UNDEAD_MINION_BIND_RANGE) {
-    player.onScreenDisplay?.setActionBar?.("§8Too far to bind that undead.");
+    player.onScreenDisplay?.setActionBar?.("§8Longe demais para vincular esse morto-vivo.");
     return false;
   }
 
@@ -2610,7 +2610,7 @@ function tryBindUndeadMinion(player, mob) {
   }
 
   if (getUndeadMinionCount(player.id) >= UNDEAD_MINION_MAX) {
-    player.onScreenDisplay?.setActionBar?.(`§8Minion limit reached (${UNDEAD_MINION_MAX}). Sneak + drop Rotten Flesh on a minion to release.`);
+    player.onScreenDisplay?.setActionBar?.(`§8Limite de lacaios atingido (${UNDEAD_MINION_MAX}). Agache e solte Carne Podre num lacaio para libertá-lo.`);
     return false;
   }
 
@@ -2624,7 +2624,7 @@ function tryBindUndeadMinion(player, mob) {
 
   const label = formatUndeadMobLabel(mob);
   const count = getUndeadMinionCount(player.id);
-  player.sendMessage(`§8You bind the ${label} to your will. (${count}/${UNDEAD_MINION_MAX})`);
+  player.sendMessage(`§8Você submete o(a) ${label} à sua vontade. (${count}/${UNDEAD_MINION_MAX})`);
   player.onScreenDisplay?.setActionBar?.(`§8Bound: ${label} (${count}/${UNDEAD_MINION_MAX})`);
   return true;
 }
@@ -2648,7 +2648,7 @@ function commandUndeadMinionsAttack(owner, target) {
     } catch (_) {}
   }
 
-  owner.onScreenDisplay?.setActionBar?.("§8The bound dead turn on your foe.");
+  owner.onScreenDisplay?.setActionBar?.("§8Os mortos vinculados se voltam contra seu inimigo.");
 }
 
 function syncUndeadMinions() {
@@ -2687,7 +2687,7 @@ function syncUndeadMinions() {
     const distHorizSq = distHoriz * distHoriz;
     if (distHorizSq > followRangeSq) {
       releaseUndeadMinion(mobId, owner);
-      owner.onScreenDisplay?.setActionBar?.("§8A minion wandered too far and broke free.");
+      owner.onScreenDisplay?.setActionBar?.("§8Um lacaio se afastou demais e se libertou.");
       continue;
     }
 
@@ -2994,8 +2994,8 @@ function blockUndeadVillagerTrade(player, target) {
 }
 
 function notifyUndeadTradeRefused(player) {
-  player.sendMessage("§8The villager recoils and refuses to trade with you.");
-  player.onScreenDisplay?.setActionBar?.("§8Villagers refuse your presence.");
+  player.sendMessage("§8O aldeão recua e se recusa a negociar com você.");
+  player.onScreenDisplay?.setActionBar?.("§8Os aldeões rejeitam sua presença.");
 }
 
 function normalizeTypeId(typeId) {
@@ -3135,7 +3135,7 @@ function syncUndeadUndying(player) {
         startUndeadUndyingCooldown(player.id);
       }
       UNDEAD_UNDYING_GRASP.add(player.id);
-      player.onScreenDisplay?.setActionBar?.("§8Undying — you refuse to fall...");
+      player.onScreenDisplay?.setActionBar?.("§8Imortal: você se recusa a cair...");
     }
 
     if (!UNDEAD_UNDYING_GRASP.has(player.id)) return;
@@ -3189,7 +3189,7 @@ function mineOreVein(player, origin, oreFamily) {
 
   if (mined > 1) {
     spawnVeinMineConfirm(player, { x: sx, y: sy, z: sz });
-    player.onScreenDisplay?.setActionBar?.(`§6Your Brute Strength Mined: ${mined} Blocks`);
+    player.onScreenDisplay?.setActionBar?.(`§6Sua Força Bruta minerou ${mined} blocos`);
   }
 }
 
@@ -3330,7 +3330,7 @@ function hydrateSiren(player, silent = false) {
   const wasDry = SIREN_DRIED_OUT.delete(player.id);
   clearSirenDryEffects(player);
   if (!silent && wasDry) {
-    player.sendMessage("§3The water soaks into your scales - you feel restored.");
+    player.sendMessage("§3A água penetra suas escamas e você se sente restaurado.");
   }
   player.onScreenDisplay?.setActionBar?.("§3Hydrated");
 }
@@ -3424,13 +3424,13 @@ function syncSirenLandHydration(player, tickCounter) {
   if (landMs >= SIREN_LAND_DRYOUT_MS) {
     if (!SIREN_DRIED_OUT.has(player.id)) {
       SIREN_DRIED_OUT.add(player.id);
-      player.sendMessage("§cYour scales crack and flake - you are drying out!");
+      player.sendMessage("§cSuas escamas racham e descascam: você está ressecando!");
     }
     applySirenDryEffects(player);
     tickSirenDryDamage(player, tickCounter);
     if (tickCounter % 15 === 0) spawnSirenDryParticles(player);
     if (tickCounter % 8 === 0) {
-      player.onScreenDisplay?.setActionBar?.("§cDried out - enter water, stand in rain, or drink a water bottle");
+      player.onScreenDisplay?.setActionBar?.("§cRessecado: entre na água, fique na chuva ou beba uma garrafa de água");
     }
     return;
   }
@@ -4028,7 +4028,7 @@ function triggerSirenSong(player) {
   if (mobCount > 0) parts.push(`${mobCount} mob(s)`);
   if (playerCount > 0) parts.push(`${playerCount} player(s)`);
   const summary = parts.length > 0 ? parts.join(" and ") : "nothing nearby";
-  player.sendMessage(`§3Siren's Song! Enthralling ${summary} for 5s.`);
+  player.sendMessage(`§3Canto da Sereia! Encantando ${summary} por 5 s.`);
   player.onScreenDisplay?.setActionBar?.("§3Siren's Song...");
 }
 
@@ -4378,7 +4378,7 @@ function resetPlayerRace(player) {
     try {
       player.nameTag = getPlayerDisplayName(player);
     } catch (_) {}
-    player.sendMessage("§eYour race has been reset. Choose again!");
+    player.sendMessage("§eSua raça foi redefinida. Escolha de novo!");
     mc.system.runTimeout(() => showRaceSelector(player), 10);
   } catch (e) {
     console.warn(`[DnD] reset_race failed: ${e}`);
@@ -4623,10 +4623,10 @@ function setRace(player, race) {
   mc.system.runTimeout(() => {
     player.sendMessage("§r");
     player.sendMessage("§l§e==============================");
-    player.sendMessage(`§l§e  ${race.label}§l§e selected!`);
+    player.sendMessage(`§l§e  ${race.label}§l§e escolhida!`);
     player.sendMessage("§l§e==============================");
     player.sendMessage(`§7${race.description}`);
-    player.sendMessage(`§bAbility: §f${race.abilityDescription}`);
+    player.sendMessage(`§bHabilidade: §f${race.abilityDescription}`);
     player.sendMessage("§r");
     // Title on screen
     player.runCommand(`title @s title ${race.label}`);
@@ -4640,17 +4640,17 @@ function setRace(player, race) {
 function showBeastfolkSubraceSelector(player) {
   mc.system.run(() => {
     const form = new ActionFormData()
-      .title("Choose Your Beastfolk Kin")
-      .body("§7Pick the beast bloodline that runs in your veins.\n§6Leonin§7 is available now.\n§8Catfolk, Ursa, and Foxkin are in development.\n");
+      .title("Escolha Sua Linhagem de Povo-Fera")
+      .body("§7Escolha a linhagem animal que corre em suas veias.\n§6Leonino§7 já está disponível.\n§8Felinos, Ursa e Raposinos estão em desenvolvimento.\n");
 
     for (const subrace of BEASTFOLK_SUBRACES) {
       if (subrace.inDevelopment) {
-        form.button(`${subrace.label}\n§8In Development`);
+        form.button(`${subrace.label}\n§8Em Desenvolvimento`);
       } else {
         form.button(`${subrace.label}\n§7${subrace.abilityDescription}`);
       }
     }
-    form.button("§8← Back to Races\n§7Return to the main list");
+    form.button("§8← Voltar às Raças\n§7Retorna à lista principal");
 
     RACE_FORM_PENDING.set(player.id, mc.system.currentTick);
     form.show(player).then((result) => {
@@ -4667,8 +4667,8 @@ function showBeastfolkSubraceSelector(player) {
       }
       const chosen = BEASTFOLK_SUBRACES[result.selection];
       if (chosen?.inDevelopment) {
-        player.onScreenDisplay?.setActionBar?.("§cIn Development — coming soon!");
-        player.sendMessage(`§7${chosen.label} §8is still in development.`);
+        player.onScreenDisplay?.setActionBar?.("§cEm desenvolvimento: em breve!");
+        player.sendMessage(`§7${chosen.label} §8ainda está em desenvolvimento.`);
         mc.system.runTimeout(() => showBeastfolkSubraceSelector(player), 100);
         return;
       }
@@ -4706,8 +4706,8 @@ function showRaceSelector(player) {
     if ((RACE_FORM_PAUSE.get(player.id) ?? 0) > mc.system.currentTick) return; // pausa de seguranca
     RACE_FORM_PENDING.set(player.id, mc.system.currentTick);
     const form = new ActionFormData()
-      .title("Choose Your Race")
-      .body("§7Your choice is §cpermanent§7. Choose wisely!\n");
+      .title("Escolha Sua Raça")
+      .body("§7Sua escolha é §cpermanente§7. Escolha com sabedoria!\n");
 
     for (const race of RACES) {
       form.button(`${race.label}\n§7${race.abilityDescription}`);
@@ -5150,7 +5150,7 @@ function notifyWeaponBanned(player) {
   const now = Date.now();
   if (now < (WEAPON_BAN_MSG_CD.get(player.id) ?? 0)) return;
   WEAPON_BAN_MSG_CD.set(player.id, now + WEAPON_BAN_MSG_MS);
-  player.onScreenDisplay?.setActionBar?.("§cLeonin may only fight with maces and spears.");
+  player.onScreenDisplay?.setActionBar?.("§cLeoninos só podem lutar com maças e lanças.");
 }
 
 function isLeoninClawsOut(player) {
@@ -5354,7 +5354,7 @@ function tryHalflingPickpocket(halfling, victim) {
   if (getRideTarget(halfling)) return false;
 
   if (getDistanceBetween(halfling, victim) > HALFLING_PICKPOCKET_RANGE) {
-    halfling.sendMessage("§7Too far to pickpocket.");
+    halfling.sendMessage("§7Longe demais para bater carteira.");
     return false;
   }
 
@@ -5363,25 +5363,25 @@ function tryHalflingPickpocket(halfling, victim) {
   markHalflingPickpocketUsed(halfling);
 
   if (Math.random() > HALFLING_PICKPOCKET_SUCCESS) {
-    victim.sendMessage(`§c${getBasePlayerName(halfling)} tried to pick your pocket!`);
-    halfling.sendMessage("§cCaught red-handed!");
+    victim.sendMessage(`§c${getBasePlayerName(halfling)} tentou bater sua carteira!`);
+    halfling.sendMessage("§cPego no flagra!");
     halfling.onScreenDisplay?.setActionBar?.("§cPickpocket failed!");
     return false;
   }
 
   const stolen = stealRandomInventoryItem(victim, halfling);
   if (!stolen) {
-    halfling.sendMessage("§7Their pockets are empty, or inventory access is blocked.");
-    halfling.onScreenDisplay?.setActionBar?.("§7Nothing to steal.");
+    halfling.sendMessage("§7Os bolsos estão vazios, ou o acesso ao inventário está bloqueado.");
+    halfling.onScreenDisplay?.setActionBar?.("§7Nada para roubar.");
     return false;
   }
 
   const label = formatItemLabel(stolen.typeId);
-  halfling.sendMessage(`§ePickpocketed §f${stolen.amount}x ${label}§e.`);
+  halfling.sendMessage(`§eVocê furtou §f${stolen.amount}x ${label}§e.`);
   halfling.onScreenDisplay?.setActionBar?.("§eLight fingers...");
 
   if (Math.random() < HALFLING_PICKPOCKET_NOTICE_CHANCE) {
-    victim.sendMessage("§7You feel something slip from your pocket...");
+    victim.sendMessage("§7Você sente algo escorregar do seu bolso...");
   }
 
   try {
@@ -5447,7 +5447,7 @@ function tryMountHalfling(halfling, mount) {
   if (!halfling.hasTag("race_halfling")) return false;
   if (!isMountablePlayer(mount)) {
     if (isPlayerEntity(mount) && mount.hasTag("race_halfling")) {
-      halfling.sendMessage("§cHalflings can't ride other Halflings!");
+      halfling.sendMessage("§cPequeninos não podem montar em outros Pequeninos!");
     }
     return false;
   }
@@ -5455,7 +5455,7 @@ function tryMountHalfling(halfling, mount) {
   if (getRideTarget(halfling)) return false;
 
   if (mountHasPlayerRider(mount, halfling)) {
-    halfling.onScreenDisplay?.setActionBar?.("§cSomeone is already riding them!");
+    halfling.onScreenDisplay?.setActionBar?.("§cAlguém já está montado nesse jogador!");
     return false;
   }
 
@@ -5465,8 +5465,8 @@ function tryMountHalfling(halfling, mount) {
     const rideable = mount.getComponent("minecraft:rideable");
     if (rideable?.addRider?.(halfling)) {
       HALFLING_MOUNT_GRACE.set(halfling.id, tick);
-      halfling.onScreenDisplay?.setActionBar?.(`§eRiding ${mountName} - sneak to dismount`);
-      mount.sendMessage(`§e${getBasePlayerName(halfling)} climbed onto your shoulders!`);
+      halfling.onScreenDisplay?.setActionBar?.(`§eMontado em ${mountName}: agache para descer`);
+      mount.sendMessage(`§e${getBasePlayerName(halfling)} subiu nos seus ombros!`);
       return true;
     }
   } catch (_) {}
@@ -5475,19 +5475,19 @@ function tryMountHalfling(halfling, mount) {
     const name = mountName.replace(/"/g, '\\"');
     halfling.runCommand(`ride @s start_riding @a[name="${name}",c=1]`);
     HALFLING_MOUNT_GRACE.set(halfling.id, tick);
-    halfling.onScreenDisplay?.setActionBar?.(`§eRiding ${mountName} - sneak to dismount`);
-    mount.sendMessage(`§e${getBasePlayerName(halfling)} climbed onto your shoulders!`);
+    halfling.onScreenDisplay?.setActionBar?.(`§eMontado em ${mountName}: agache para descer`);
+    mount.sendMessage(`§e${getBasePlayerName(halfling)} subiu nos seus ombros!`);
     return true;
   } catch (_) {}
 
   try {
     halfling.mount(mount);
     HALFLING_MOUNT_GRACE.set(halfling.id, tick);
-    halfling.onScreenDisplay?.setActionBar?.(`§eRiding ${mountName} - sneak to dismount`);
-    mount.sendMessage(`§e${getBasePlayerName(halfling)} climbed onto your shoulders!`);
+    halfling.onScreenDisplay?.setActionBar?.(`§eMontado em ${mountName}: agache para descer`);
+    mount.sendMessage(`§e${getBasePlayerName(halfling)} subiu nos seus ombros!`);
     return true;
   } catch (e) {
-    halfling.sendMessage("§cCouldn't mount that player.");
+    halfling.sendMessage("§cNão foi possível montar nesse jogador.");
     console.warn(`Halfling mount failed: ${e}`);
     return false;
   }
@@ -5562,7 +5562,7 @@ mc.world.afterEvents.entityHurt.subscribe((event) => {
     if (attacker) {
       try {
         attacker.addEffect("slowness", 60, { amplifier: 2, showParticles: true });
-        player.sendMessage("§eNimble! Attacker slowed.");
+        player.sendMessage("§eÁgil! Atacante desacelerado.");
       } catch (_) {}
     }
   }
@@ -6404,11 +6404,11 @@ function applyWerewolfHumanRevertDebuff(player, forced = false) {
 
   player.onScreenDisplay?.setActionBar?.("§7Reversion sickness");
   if (forced) {
-    player.sendMessage("§7Sunlight tears the beast away — you feel wrung out.");
+    player.sendMessage("§7A luz do sol arranca a fera de você e você se sente esgotado.");
   } else {
-    player.sendMessage("§7The beast recedes, leaving you weak and sluggish.");
+    player.sendMessage("§7A fera recua, deixando você fraco e lento.");
   }
-  player.sendMessage(`§7Crouch on a bed for ${WEREWOLF_REST_REQUIRED_SECONDS} seconds to recover.`);
+  player.sendMessage(`§7Agache em uma cama por ${WEREWOLF_REST_REQUIRED_SECONDS} segundos para se recuperar.`);
 }
 
 function syncWerewolfReversionSickness(player) {
@@ -6423,18 +6423,18 @@ function syncWerewolfReversionSickness(player) {
 
     if (rested >= WEREWOLF_REST_REQUIRED_SECONDS) {
       clearWerewolfReversionSickness(player);
-      player.sendMessage("§aA long rest shakes off the reversion sickness.");
+      player.sendMessage("§aUm longo descanso afasta o mal-estar da reversão.");
       player.onScreenDisplay?.setActionBar?.("§aRecovered");
       return;
     }
 
     const remaining = WEREWOLF_REST_REQUIRED_SECONDS - rested;
-    player.onScreenDisplay?.setActionBar?.(`§7Resting on bed... ${remaining}s`);
+    player.onScreenDisplay?.setActionBar?.(`§7Descansando na cama... ${remaining} s`);
     return;
   }
 
   if (isPlayerNearBedBlock(player) && WEREWOLF_BED_REST_SECONDS.has(player.id)) {
-    player.onScreenDisplay?.setActionBar?.("§7Crouch on the bed to keep resting");
+    player.onScreenDisplay?.setActionBar?.("§7Agache na cama para continuar descansando");
   }
 
   WEREWOLF_BED_REST_SECONDS.delete(player.id);
@@ -6469,7 +6469,7 @@ function revertWerewolfHumanForm(player, forced = false) {
 function enterWerewolfBeastForm(player) {
   if (!player.hasTag("race_werewolf")) return false;
   if (!isNightTime()) {
-    player.onScreenDisplay?.setActionBar?.("§7The beast only rises at night.");
+    player.onScreenDisplay?.setActionBar?.("§7A fera só desperta à noite.");
     return false;
   }
   if (isWerewolfBeastForm(player)) return false;
@@ -6497,7 +6497,7 @@ function enterWerewolfBeastForm(player) {
     WEREWOLF_BEAST_ACTIVE.add(p.id);
     WEREWOLF_TRANSFORM_COOLDOWNS.set(p.id, Date.now() + WEREWOLF_TRANSFORM_CD_MS);
     syncWerewolfBeastBuffs(p);
-    p.sendMessage("§8You shift into beast form!");
+    p.sendMessage("§8Você assume a forma de fera!");
     p.onScreenDisplay?.setActionBar?.("§8Beast form");
   });
 
@@ -6620,7 +6620,7 @@ function releaseWerewolfDrag(predator, throwVictim) {
     spawnParticleSafe(predator.dimension, "minecraft:critical_hit_emitter", target.location);
     predator.onScreenDisplay?.setActionBar?.("§8Thrown!");
     if (target instanceof mc.Player && target.id !== predator.id) {
-      target.onScreenDisplay?.setActionBar?.("§8The beast hurls you away!");
+      target.onScreenDisplay?.setActionBar?.("§8A fera arremessa você para longe!");
     }
   }
 }
@@ -6644,7 +6644,7 @@ function startWerewolfDrag(predator, target) {
   applyWerewolfDragPosition(predator, target);
   predator.onScreenDisplay?.setActionBar?.("§8Dragging prey — 5s");
   if (target instanceof mc.Player && target.id !== predator.id) {
-    target.onScreenDisplay?.setActionBar?.("§8The werewolf has you!");
+    target.onScreenDisplay?.setActionBar?.("§8O lobisomem pegou você!");
   }
   try {
     predator.dimension.playSound("mob.wolf.growl", predator.location, { volume: 1.0, pitch: 0.75 });
@@ -6662,7 +6662,7 @@ function tryGrabWerewolfLungeTarget(predator, target) {
 function triggerWerewolfLunge(player, forcedTarget) {
   if (!isWerewolfBeastForm(player)) return;
   if (WEREWOLF_DRAG.has(player.id)) {
-    player.onScreenDisplay?.setActionBar?.("§8Already dragging prey.");
+    player.onScreenDisplay?.setActionBar?.("§8Já está arrastando uma presa.");
     return;
   }
 
@@ -6685,7 +6685,7 @@ function triggerWerewolfLunge(player, forcedTarget) {
   if (!target) {
     const dir = player.getViewDirection();
     applyKnockbackCompat(player, dir.x, dir.z, 1.6, 0.2);
-    player.onScreenDisplay?.setActionBar?.("§8Lunge — no prey in sight.");
+    player.onScreenDisplay?.setActionBar?.("§8Bote: nenhuma presa à vista.");
     try {
       dim.playSound("mob.wolf.step", loc, { volume: 0.9, pitch: 0.7 });
     } catch (_) {}
@@ -6766,7 +6766,7 @@ function tickWerewolfDrags() {
 function triggerWerewolfLeap(player) {
   if (!isWerewolfBeastForm(player)) return;
   if (WEREWOLF_DRAG.has(player.id)) {
-    player.onScreenDisplay?.setActionBar?.("§8Can't leap while dragging prey.");
+    player.onScreenDisplay?.setActionBar?.("§8Não dá para saltar arrastando uma presa.");
     return;
   }
 
@@ -6812,7 +6812,7 @@ function onWerewolfCrouchJump(player) {
   if (isWerewolfTransforming(player)) return;
 
   if (!isNightTime()) {
-    player.onScreenDisplay?.setActionBar?.("§7Beast form only at night.");
+    player.onScreenDisplay?.setActionBar?.("§7Forma de fera só à noite.");
     return;
   }
 
@@ -6868,7 +6868,7 @@ function triggerWerewolfHowl(player) {
 
   player.onScreenDisplay?.setActionBar?.("§8Moon Howl!");
   if (mobCount > 0) {
-    player.sendMessage(`§8Your howl unsettles ${mobCount} nearby creature(s).`);
+    player.sendMessage(`§8Seu uivo perturba ${mobCount} criatura(s) próxima(s).`);
   }
 }
 
@@ -7089,7 +7089,7 @@ function triggerLeoninRoar(player) {
   if (playerCount > 0) parts.push(`${playerCount} player(s) flung`);
   if (beastfolkCount > 0) parts.push(`${beastfolkCount} Beastfolk rallied`);
   if (parts.length > 0) {
-    player.sendMessage(`§6Your roar: ${parts.join(", ")}.`);
+    player.sendMessage(`§6Seu rugido: ${parts.join(", ")}.`);
   }
 }
 
@@ -7154,7 +7154,7 @@ function triggerOrcFearYell(player) {
 
   player.onScreenDisplay?.setActionBar?.("§2Berserker's War Cry!");
   if (mobCount > 0 || playerCount > 0) {
-    player.sendMessage(`§2Your war cry breaks ${mobCount} mob(s) and afflicts ${playerCount} player(s).`);
+    player.sendMessage(`§2Seu grito de guerra quebra ${mobCount} criatura(s) e aflige ${playerCount} jogador(es).`);
   }
 }
 
@@ -7328,7 +7328,7 @@ function triggerAbility(player, race) {
     if (mobCount > 0) parts.push(`${mobCount} mob(s)`);
     if (playerCount > 0) parts.push(`${playerCount} player(s)`);
     const summary = parts.length > 0 ? parts.join(" and ") : "nothing nearby";
-    player.sendMessage(`§4Hellfire! Ignited ${summary}.`);
+    player.sendMessage(`§4Fogo do Inferno! ${summary} em chamas.`);
     player.onScreenDisplay?.setActionBar?.("§4Hellfire!");
   }
 
@@ -7377,7 +7377,7 @@ function triggerAbility(player, race) {
     try {
       player.dimension.playSound("mob.enderdragon.flap", player.location, { volume: 0.6, pitch: 1.4 });
     } catch (_) {}
-    player.sendMessage(`§cDragon Breath! Hit ${count} enemies.`);
+    player.sendMessage(`§cSopro de Dragão! Atingiu ${count} inimigos.`);
     player.onScreenDisplay?.setActionBar?.("§cDragon Breath!");
   }
 
@@ -7568,4 +7568,4 @@ try {
 } catch (_) {}
 
 mc.world.sendMessage("§arnr-v1.4-the-accursed loaded!");
-mc.world.sendMessage("§7Enable §eBeta APIs§7 for full race abilities.");
+mc.world.sendMessage("§7Ative as §eAPIs Beta§7 para todas as habilidades das raças.");

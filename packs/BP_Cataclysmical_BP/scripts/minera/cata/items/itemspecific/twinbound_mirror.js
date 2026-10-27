@@ -1,7 +1,7 @@
 import { world, system, ItemStack } from "@minecraft/server";
 
 const XP = 5;
-const Mirror = "TwinBound Mirror";
+const Mirror = "Espelho Gêmeo";
 
 const Dimensions = {
     "minecraft:overworld": "Overworld",
@@ -32,7 +32,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
     if (player.isSneaking) {
         if (player.level < XP) {
-            player.onScreenDisplay.setActionBar("§cNot enough levels");
+            player.onScreenDisplay.setActionBar("§cNíveis insuficientes");
             return;
         }
 
@@ -50,7 +50,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
         player.playSound('lodestone_compass.link_compass_to_lodestone', { pitch: 1, location: player.location, volume: 1 })
         player.onScreenDisplay.setActionBar(
-            `§aMirror bound to: §b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`
+            `§aEspelho vinculado a: §b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`
         );
         return;
     }
@@ -58,18 +58,18 @@ world.afterEvents.itemUse.subscribe((ev) => {
     if (!player.isSneaking && !player.getItemCooldown('twinbound_mirror')) {
         const stored = parseLocation(item.nameTag);
         if (!stored) {
-            player.onScreenDisplay.setActionBar("§cMirror has no bound location");
+            player.onScreenDisplay.setActionBar("§cO espelho não tem local vinculado");
             return;
         }
 
         if (player.level < XP) {
-            player.onScreenDisplay.setActionBar("§cNot enough levels");
+            player.onScreenDisplay.setActionBar("§cNíveis insuficientes");
             return;
         }
 
         const teleportDim = world.getDimension(stored.dimensionId);
         if (!teleportDim) {
-            player.onScreenDisplay.setActionBar("§cYou cannot teleport between dimensions");
+            player.onScreenDisplay.setActionBar("§cVocê não pode se teletransportar entre dimensões");
             return;
         }
         const newStoredPos = {
@@ -84,7 +84,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
             { dimension: teleportDim, keepVelocity: false }
         );
         player.startItemCooldown('twinbound_mirror', 300)
-        player.onScreenDisplay.setActionBar(`§eMirror is now Bound to: §b${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)}`);
+        player.onScreenDisplay.setActionBar(`§eO espelho agora está vinculado a: §b${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)}`);
 
         const updatedNameTag =
             `§r§e${Mirror} §r§b(${newStoredPos.dimName}: ${newStoredPos.x}, ${newStoredPos.y}, ${newStoredPos.z})`;

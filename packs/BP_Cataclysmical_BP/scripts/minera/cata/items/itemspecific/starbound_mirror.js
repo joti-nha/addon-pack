@@ -1,7 +1,7 @@
 import { world, system, ItemStack } from "@minecraft/server";
 
 const XP = 3;
-const Mirror = "Starbound Mirror";
+const Mirror = "Espelho Estelar";
 
 const Dimensions = {
     "minecraft:overworld": "Overworld",
@@ -24,7 +24,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
     if (player.isSneaking) {
         if (player.level < XP) {
-            player.onScreenDisplay.setActionBar("§cNot enough levels");
+            player.onScreenDisplay.setActionBar("§cNíveis insuficientes");
             return;
         }
 
@@ -44,7 +44,7 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
         player.playSound('lodestone_compass.link_compass_to_lodestone', { pitch: 1, location: player.location, volume: 1 })
         player.onScreenDisplay.setActionBar(
-            `§aMirror bound to: §b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`
+            `§aEspelho vinculado a: §b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`
         );
         return;
     }
@@ -52,13 +52,13 @@ world.afterEvents.itemUse.subscribe((ev) => {
     if (!player.isSneaking && !player.getItemCooldown('starbound_mirror')) {
         const nameTag = item.nameTag;
         if (!nameTag) {
-            player.onScreenDisplay.setActionBar("§cMirror has no bound location");
+            player.onScreenDisplay.setActionBar("§cO espelho não tem local vinculado");
             return;
         }
 
         const match = nameTag.match(/\((.+?): (-?\d+), (-?\d+), (-?\d+)\)$/);
         if (!match) {
-            player.onScreenDisplay.setActionBar("§cMirror has no bound location");
+            player.onScreenDisplay.setActionBar("§cO espelho não tem local vinculado");
             return;
         }
 
@@ -67,17 +67,17 @@ world.afterEvents.itemUse.subscribe((ev) => {
             .find(id => Dimensions[id] === savedDimName);
 
         if (!savedDimId) {
-            player.onScreenDisplay.setActionBar("§cYou cannot teleport between dimensions");
+            player.onScreenDisplay.setActionBar("§cVocê não pode se teletransportar entre dimensões");
             return;
         }
         if (savedDimId !== currentDim.id) {
-            player.onScreenDisplay.setActionBar("§cYou cannot teleport between dimensions");
+            player.onScreenDisplay.setActionBar("§cVocê não pode se teletransportar entre dimensões");
             return;
         }
         const teleportDim = world.getDimension(savedDimId);
 
         if (player.level < XP) {
-            player.onScreenDisplay.setActionBar("§cNot enough levels");
+            player.onScreenDisplay.setActionBar("§cNíveis insuficientes");
             return;
         }
 
@@ -107,5 +107,5 @@ world.afterEvents.itemUse.subscribe((ev) => {
 
 
 
-//"mnra_cata:warped_mirror": ["", "§r§7On Right Click:", "§r§8 Bound the mirror to a location, crouch", "§r§8 to telport to that location.", "", "§r§7Requires 3+ levels"],
+//"mnra_cata:warped_mirror": ["", "§r§7Ao Usar:", "§r§8 Vincula o espelho a um local; agache", "§r§8 para se teletransportar até lá.", "", "§r§7Exige 3 níveis ou mais"],
 //newItem.nameTag = `§r§7${baseName} §r§b(${dimName}: ${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(pos.z)})`;

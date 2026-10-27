@@ -137,14 +137,14 @@ export class EffectHandler {
      * Called when trinket is activated
      */
     onActivate(player, manager) {
-        player.onScreenDisplay.setActionBar(`§a${this.name} activated!`);
+        player.onScreenDisplay.setActionBar(`§a${this.name} ativado!`);
     }
 
     /**
      * Called when trinket is deactivated
      */
     onDeactivate(player, manager) {
-        player.onScreenDisplay.setActionBar(`§c${this.name} deactivated.`);
+        player.onScreenDisplay.setActionBar(`§c${this.name} desativado.`);
     }
 
     /**

@@ -111,7 +111,7 @@ system.beforeEvents.startup.subscribe((ev) => {
           playSoundSafe("note.harp", block, player, 1.2, 0.5);
 
           player.onScreenDisplay.setActionBar(
-            `§cThe Cosmic Bell is recharging §e${secondsLeft}s §cleft.`
+            `§cO Sino Cósmico está recarregando: faltam §e${secondsLeft}s§c.`
           );
           return;
         }
@@ -123,7 +123,7 @@ system.beforeEvents.startup.subscribe((ev) => {
 
       if (time < 13000) {
         world.setTimeOfDay(13000);
-        player.onScreenDisplay.setActionBar("§bThe Cosmic Bell hums... §dNight falls.");
+        player.onScreenDisplay.setActionBar("§bO Sino Cósmico vibra... §dA noite cai.");
         animateCosmicBell(block, 1);
 
         playSoundSafe("block.bell.use", block, player, 0.75, 1.2);
@@ -146,7 +146,7 @@ system.beforeEvents.startup.subscribe((ev) => {
 
       } else {
         world.setTimeOfDay(1000);
-        player.onScreenDisplay.setActionBar("§bThe Cosmic Bell resonates... §eDay breaks.");
+        player.onScreenDisplay.setActionBar("§bO Sino Cósmico ressoa... §eO dia amanhece.");
         animateCosmicBell(block, 1);
 
         playSoundSafe("block.bell.use", block, player, 1.25, 1.2);

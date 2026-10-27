@@ -260,7 +260,7 @@ function* findSpawnerJob(player, dim, loc, state) {
                 if (!player.isValid) return "abort";
                 const checkBlock = dim.getBlock(blockLoc)
                 if (checkBlock && checkBlock.typeId == "dungeons:spawner_obsidian") {
-                    console.warn(`§a${player.name} has entered an Ancient Hunt`)
+                    console.warn(`§a${player.name} entrou numa Caçada Ancestral`)
                     state.active = false
                     player.teleport(checkBlock.above().bottomCenter())
                     const marker = dim.getEntities({ type: "dungeons:ancient_hunt_marker", location: checkBlock.above().bottomCenter(), maxDistance: 64 })

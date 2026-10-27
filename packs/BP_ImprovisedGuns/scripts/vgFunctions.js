@@ -267,7 +267,7 @@ export function enchantRemover(playerData, heldItem, enchantment)
 	{
 		heldItem.getComponent("enchantable").removeEnchantment(enchantment);
 		inventory.setItem(playerData.selectedSlotIndex, heldItem);
-		playerData.sendMessage("§eThis item cannot be enchanted with " + (formatString(enchantment)))
+		playerData.sendMessage("§eEste item não pode ser encantado com " + (formatString(enchantment)))
 	}
 
 }
