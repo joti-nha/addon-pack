@@ -10,12 +10,12 @@ export function configScreen(itemStack, player) {
         return;
 
     const form = new ModalFormData()
-    .title("World Config")
+    .title("Configurações do Mundo")
     if (!world.gameRules.keepInventory)
-        form.toggle("Corpse On Death - Enables Player Corpse", { defaultValue: player.hasTag("allow_corpse") });
-    form.toggle("What Block Is This? [UI] - Enables the 'WAILA' UI", { defaultValue: player.hasTag("toolTip") })
-    .toggle("Ambient Sounds", { defaultValue: player.hasTag("pog:ambientSounds") })
-    .toggle("End Biome Fog - Enables fog for End biomes", { defaultValue: player.hasTag("endFog") })
+        form.toggle("Corpo ao Morrer - Ativa o corpo do jogador", { defaultValue: player.hasTag("allow_corpse") });
+    form.toggle("O Que É Este Bloco? [UI] - Ativa a interface 'WAILA'", { defaultValue: player.hasTag("toolTip") })
+    .toggle("Sons Ambientes", { defaultValue: player.hasTag("pog:ambientSounds") })
+    .toggle("Névoa dos Biomas do End - Ativa a névoa nos biomas do End", { defaultValue: player.hasTag("endFog") })
     .show(player).then((response) => {
         if (response.canceled)
             return;
@@ -45,7 +45,7 @@ export function configScreen(itemStack, player) {
                 player.addTag("allow_corpse");
             else
                 player.removeTag("allow_corpse");
-            player.sendMessage(" §8- §7Player Corpse: ".concat(isPlayerCorpseEnabled ? enabled : disabled));
+            player.sendMessage(" §8- §7Corpo do Jogador: ".concat(isPlayerCorpseEnabled ? enabled : disabled));
         };
 
         // Waila
@@ -53,7 +53,7 @@ export function configScreen(itemStack, player) {
             player.addTag("toolTip");
         else
             player.removeTag("toolTip");
-        player.sendMessage(" §8- §7What's That UI: ".concat(isWailaEnabled ? enabled : disabled));
+        player.sendMessage(" §8- §7Interface O Que É Isso: ".concat(isWailaEnabled ? enabled : disabled));
         
         // Ambient Sounds
         if (true == isAmbientSoundsEnabled)
@@ -62,7 +62,7 @@ export function configScreen(itemStack, player) {
             player.removeTag("pog:ambientSounds");
             player.stopMusic();
         }
-        player.sendMessage(" §8- §7Ambient Sounds: ".concat(isAmbientSoundsEnabled ? enabled : disabled));
+        player.sendMessage(" §8- §7Sons Ambientes: ".concat(isAmbientSoundsEnabled ? enabled : disabled));
 
         // End Biome Fog
         if (true == isEndBiomeFogEnabled)
@@ -76,7 +76,7 @@ export function configScreen(itemStack, player) {
             player.removeTag("chorus");
             player.runCommand("fog @s remove test");
         };
-        player.sendMessage(" §8- §7End Biome Fog: ".concat(isEndBiomeFogEnabled ? enabled : disabled));
+        player.sendMessage(" §8- §7Névoa dos Biomas do End: ".concat(isEndBiomeFogEnabled ? enabled : disabled));
     });
 };
 

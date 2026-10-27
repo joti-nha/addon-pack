@@ -113,11 +113,11 @@ export function usedArtefact(player, item, finalShout) {
   if (finalShout) player.runCommand("scriptevent dungeons:force_artefact " + item.typeId)
 
   if (player.hasTag('dungeons:debug')) {
-    player.sendMessage([{ text: "You have used: " }, { translate: item.localizationKey }]);
-    player.sendMessage(`Cooldown : §e${cd.cooldownTicks / 20}s`);
+    player.sendMessage([{ text: "Você usou: " }, { translate: item.localizationKey }]);
+    player.sendMessage(`Recarga: §e${cd.cooldownTicks / 20}s`);
     if (mult !== 1) {
-      player.sendMessage(`Modified Cooldown :§e${Math.floor(cd.cooldownTicks * mult) / 20}s`);
-      player.sendMessage(`Cooldown Modifier :§b${mult}x`);
+      player.sendMessage(`Recarga Modificada:§e${Math.floor(cd.cooldownTicks * mult) / 20}s`);
+      player.sendMessage(`Modificador de Recarga:§b${mult}x`);
     }
   }
 }

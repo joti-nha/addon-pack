@@ -96,7 +96,7 @@ system.beforeEvents.startup.subscribe(eventData => {
 
           altarUses.delete(key);
         } else {
-          player.onScreenDisplay.setActionBar(`${usesLeft} uses remaining`);
+          player.onScreenDisplay.setActionBar(`${usesLeft} usos restantes`);
         }
       }
 

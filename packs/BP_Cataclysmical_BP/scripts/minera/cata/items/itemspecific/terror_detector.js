@@ -6,44 +6,44 @@ const RareChance = 0.03;
 //will add here sometime... i think
 const ItemLore = {
     HasTerrorStage1: {
-        icon: "",
+        icon: "",
         lines: [
-            "§8You feel terrified",
+            "§8Você se sente aterrorizado",
             // i cant think of anything lol
         ]
     },
     HasTerrorStage2: {
-        icon: "",
+        icon: "",
         lines: [
-            "§8Your soul starts to tremble",
+            "§8Sua alma começa a tremer",
         ]
     },
     HasTerrorStage3: {
-        icon: "",
+        icon: "",
         lines: [
-            "§8The air is getting colder around you",
+            "§8O ar fica mais frio ao seu redor",
         ]
     },
     HasTerrorStage4: {
-        icon: "",
+        icon: "",
         lines: [
-            "§8Something ancient stirs beyond the void",
-            "§8You feel your soul start to burn"
+            "§8Algo ancestral se agita além do vazio",
+            "§8Você sente sua alma começar a queimar"
         ]
     },
     HasTerrorStage5: {
-        icon: "",
+        icon: "",
         lines: [
-            "§8§oTerrors are watching"
+            "§8§oOs Terrores estão observando"
         ]
     }
 };
 
 const RareMessages = [
-    "§dHii Minecwaff ",
-    "§8Horrible chills go down your spine... (not a reference)",
-    "§8§6PLAGUE NUKE BARRAGE ARMED, PREPARING FOR LAUNCH!!!",
-    "§dThis is a ultra rare super rare mega rare message..."
+    "§dHii Minecwaff ",
+    "§8Calafrios horríveis descem pela sua espinha... (não é referência)",
+    "§8§6BARRAGEM NUCLEAR DA PRAGA ARMADA, PREPARANDO O LANÇAMENTO!!!",
+    "§dEsta é uma mensagem ultra rara super rara mega rara..."
 ];
 const TerrorStages = [
     "HasTerrorStage5",
@@ -70,8 +70,8 @@ system.runInterval(() => {
                 }
             }
 
-            let icon = "";
-            let bottomLine = "§8You feel calm...";
+            let icon = "";
+            let bottomLine = "§8Você se sente calmo...";
 
             if (stageFound && ItemLore[stageFound]) {
                 const info = ItemLore[stageFound];

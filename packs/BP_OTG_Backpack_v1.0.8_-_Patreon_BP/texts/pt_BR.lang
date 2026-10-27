@@ -2093,3 +2093,7 @@ item.otg:backpack_upgrade_overload.name=§dMódulo Overload\n§7Expansão exclus
 item.otg:backpack_theme_toggle_button_light=§7Modo de tema\n§fAtual: Claro\n§7Clique para trocar
 item.otg:backpack_theme_toggle_button_light.name=§7Modo de tema\n§fAtual: Claro\n§7Clique para trocar
 tile.otg:placed_backpack.name=Mochila colocada
+## >>> Addon Pack: tradução pt-BR (ferramentas/traduzir_ptbr.py)
+item.otg:backpack_place_button=§aColocar Mochila\n§7Coloca a mochila no chão
+item.otg:backpack_place_button.name=§aColocar Mochila\n§7Coloca a mochila no chão
+## <<< Addon Pack: tradução pt-BR

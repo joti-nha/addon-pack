@@ -25,7 +25,7 @@ system.beforeEvents.startup.subscribe(eventData => {
       }
       function ShowTerror(Stage) {
         player.startItemCooldown("terror_detector", 20);
-        player.onScreenDisplay.setActionBar(`§7Terror is Stage ${Stage}`);
+        player.onScreenDisplay.setActionBar(`§7O Terror está no estágio ${Stage}`);
         player.playSound('note.bass', { pitch: 1.6, location: player.location, volume: 0.3 })
 
         dimension.runCommand(`particle mnra_cata:terror_stabilizer_ectoplasm_flame ${x} ${y + 1} ${z}`);
@@ -48,7 +48,7 @@ system.beforeEvents.startup.subscribe(eventData => {
         }
 
         player.onScreenDisplay.setActionBar(
-          `§7Terror Stage is now ${NewStage}`
+          `§7O Terror agora está no estágio ${NewStage}`
         );
 
         player.runCommand("clear @s mnra_cata:ectoplasm 0 1");
@@ -76,7 +76,7 @@ system.beforeEvents.startup.subscribe(eventData => {
         if (newTag) player.addTag(newTag);
 
         player.onScreenDisplay.setActionBar(
-          `§7Terror Stage is now ${NewStage}`
+          `§7O Terror agora está no estágio ${NewStage}`
         );
 
         player.runCommand("clear @s mnra_cata:phantasma_matter 0 1");

@@ -335,10 +335,10 @@ export function waystoneMenu(player, block) {
         warpTags.push(pinnedWarp);
 
         if (/(?:Warp:)(.*?)-(minecraft:.+)/.test(pinnedWarp)) {
-            menu.button(" Waystone: §q".concat(pinnedWarp.match(/(?<=Warp:).*?(?=-)/)[0]));
+            menu.button(" Pedra de Teleporte: §q".concat(pinnedWarp.match(/(?<=Warp:).*?(?=-)/)[0]));
         }
         else {
-            menu.button(" Waystone: §v".concat(pinnedWarp.match(/(?<=Warp:).*?(?=-)/)[0]));
+            menu.button(" Pedra de Teleporte: §v".concat(pinnedWarp.match(/(?<=Warp:).*?(?=-)/)[0]));
         };
     };
 
@@ -347,7 +347,7 @@ export function waystoneMenu(player, block) {
             continue;
 
         warpTags.push(tag);
-        menu.button("Waystone: §q".concat(tag.match(/(?<=Warp:).*?(?=-)/)[0]));
+        menu.button("Pedra de Teleporte: §q".concat(tag.match(/(?<=Warp:).*?(?=-)/)[0]));
     };
 
     for (const tag of warps.reverse()) {
@@ -355,7 +355,7 @@ export function waystoneMenu(player, block) {
             continue;
 
         warpTags.push(tag);
-        menu.button("Waystone: §v".concat(tag.match(/(?<=Warp:).*?(?=-)/)[0]));
+        menu.button("Pedra de Teleporte: §v".concat(tag.match(/(?<=Warp:).*?(?=-)/)[0]));
     };
 
     menu.show(player).then((response) => {

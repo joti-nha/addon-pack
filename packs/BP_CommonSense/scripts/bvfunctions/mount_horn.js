@@ -40,7 +40,7 @@ world.beforeEvents.playerInteractWithEntity.subscribe(event => {
     if (!target || !isRideable || !isAllowedType) {
         // system.run é necessário pois não podemos exibir texto na tela dentro do beforeEvents
         system.run(() => {
-            player.onScreenDisplay.setActionBar("§cThis mob cannot be bound to the horn.");
+            player.onScreenDisplay.setActionBar("§cEsta criatura não pode ser vinculada ao chifre.");
         });
         event.cancel = true; // Bloqueia a interação
         return;
@@ -72,7 +72,7 @@ world.beforeEvents.playerInteractWithEntity.subscribe(event => {
             target.triggerEvent("bv:chunk_loader_enabler");
         } catch (e) { }
 
-        player.onScreenDisplay.setActionBar("§aThis mount is now tied to your horn!");
+        player.onScreenDisplay.setActionBar("§aEsta montaria agora está vinculada ao seu chifre!");
         player.dimension.playSound("random.levelup", player.location);
     });
 });
@@ -122,12 +122,12 @@ function handleHornUse(player) {
             try {
                 // NOVO PADRÃO: Teleporte nativo exigindo objeto de dimensão
                 mount.teleport(player.location, { dimension: player.dimension });
-                player.onScreenDisplay.setActionBar("§aYour mount has been teleported to you!");
+                player.onScreenDisplay.setActionBar("§aSua montaria foi teletransportada até você!");
             } catch (e) {
                 player.onScreenDisplay.setActionBar("§cErro: A montaria não pôde ser movida.");
             }
         } else {
-            player.onScreenDisplay.setActionBar("§cNo binded mount found nearby.");
+            player.onScreenDisplay.setActionBar("§cNenhuma montaria vinculada por perto.");
         }
     }, 10);
 }

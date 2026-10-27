@@ -105,7 +105,7 @@ world.afterEvents.entityDie.subscribe(({ deadEntity, damageSource }) => {
   terrorEffects(player, stage);
 
   if (stage === 5) {
-    player.runCommand(`tellraw @s {"rawtext":[{"text":"§5Terrors are watching..."}]}`);
+    player.runCommand(`tellraw @s {"rawtext":[{"text":"§5Os Terrores estão observando..."}]}`);
   }
 });
 

@@ -20,7 +20,7 @@ world.afterEvents.entityHitEntity.subscribe((event) => {
 
 		// --- LÓGICA DE TEMPO DE RECARGA (COOLDOWN) ---
 		if (target.hasTag("cooldown_penas")) {
-			attacker.onScreenDisplay.setActionBar("§eCooldown: let the chicken recover!");
+			attacker.onScreenDisplay.setActionBar("§eRecarga: deixe a galinha se recuperar!");
 			return;
 		}
 

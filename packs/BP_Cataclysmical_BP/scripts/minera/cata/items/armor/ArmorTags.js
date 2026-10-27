@@ -6,7 +6,7 @@ const Debug = false;
 
 function debug(msg) {
   if (!Debug) return;
-  world.sendMessage(`§7[§bCombat§7] §f${msg}`);
+  world.sendMessage(`§7[§bCombate§7] §f${msg}`);
 }
 
 function getLevelFromItem(item, prefix) {

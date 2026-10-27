@@ -353,7 +353,7 @@ function percentageColour(count, max, player) {
 function makeLockedPage(player, dimensionCheck) {
   const form = new ActionFormData();
   form.title({ text: "???" });
-  form.body("You can visit this Ancient Hunt with the following runes")
+  form.body("Você pode visitar esta Caçada Ancestral com as seguintes runas")
   var runeString = "";
   for (const rune of dimensionCheck.runes) runeString += runeIcon(rune);
   form.label("");
@@ -361,7 +361,7 @@ function makeLockedPage(player, dimensionCheck) {
   form.label("");
   form.label("");
   form.label("");
-  form.button("Okay!")
+  form.button("Certo!")
   form.show(player).then((r) => {
     player.playSound("item.book.page_turn");
     if (r.canceled) return;

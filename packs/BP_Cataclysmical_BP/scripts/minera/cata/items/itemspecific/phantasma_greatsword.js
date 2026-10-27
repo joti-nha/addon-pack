@@ -4,12 +4,12 @@ import { GetPlayerTerrorStage } from "../../CataSystem/TerrorConfig.js";
 const TerrorScaling = "§r§bTerror ";
 
 const TerrorLore = [
-    `${TerrorScaling}Scale: +0`,
-    `${TerrorScaling}I Scale: +2`,
-    `${TerrorScaling}II Scale: +4`,
-    `${TerrorScaling}III Scale: +6`,
-    `${TerrorScaling}IV Scale: +8`,
-    `${TerrorScaling}V Scale: +10`,
+    `${TerrorScaling}Escala: +0`,
+    `${TerrorScaling}I · Escala: +2`,
+    `${TerrorScaling}II · Escala: +4`,
+    `${TerrorScaling}III · Escala: +6`,
+    `${TerrorScaling}IV · Escala: +8`,
+    `${TerrorScaling}V · Escala: +10`,
 ];
 
 system.runInterval(() => {

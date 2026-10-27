@@ -132,7 +132,7 @@ const ticks = (player) => {
             item?.typeId == "better_on_bedrock:coconut"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eBreak open on stone"]);
+            item.setLore(["§r§eQuebre numa pedra para abrir"]);
             inventory.setItem(slot, item);
         };
 
@@ -140,28 +140,28 @@ const ticks = (player) => {
             item?.typeId == "better_on_bedrock:fixed_ghost_necklace"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§cRequires souls in your offhand\nto work."]);
+            item.setLore(["§r§cPrecisa de almas na mão secundária\npara funcionar."]);
             inventory.setItem(slot, item);
         };
         if (
             item?.typeId == "better_on_bedrock:ghost_necklace_fragment"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eCombine 4 to make a Ghost Necklace"]);
+            item.setLore(["§r§eJunte 4 para fazer um Colar Fantasma"]);
             inventory.setItem(slot, item);
         };
         if (
             item?.typeId == "better_on_bedrock:stardust_nugget"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eSmelt in a furnace/blast furnace"]);
+            item.setLore(["§r§eFunda numa fornalha/alto-forno"]);
             inventory.setItem(slot, item);
         };
         if (
             item?.typeId == "better_on_bedrock:amethyst_helmet"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eFull set grants knockback to attacking mob"]);
+            item.setLore(["§r§eO conjunto completo repele a criatura que atacar"]);
             inventory.setItem(slot, item);
         };
 
@@ -169,21 +169,21 @@ const ticks = (player) => {
             item?.typeId == "better_on_bedrock:amethyst_chestplate"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eFull set grants knockback to attacking mob"]);
+            item.setLore(["§r§eO conjunto completo repele a criatura que atacar"]);
             inventory.setItem(slot, item);
         };
         if (
             item?.typeId == "better_on_bedrock:amethyst_leggings"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eFull set grants knockback to attacking mob"]);
+            item.setLore(["§r§eO conjunto completo repele a criatura que atacar"]);
             inventory.setItem(slot, item);
         };
         if (
             item?.typeId == "better_on_bedrock:amethyst_boots"
             && !item.getLore().length
         ) {
-            item.setLore(["§r§eFull set grants knockback to attacking mob"]);
+            item.setLore(["§r§eO conjunto completo repele a criatura que atacar"]);
             inventory.setItem(slot, item);
         };
 

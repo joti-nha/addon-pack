@@ -48,7 +48,7 @@ system.beforeEvents.startup.subscribe((ev) => {
 
       if (!xp) {
         const readableName = getReadableItemName(selectedItem);
-        player.onScreenDisplay.setActionBar(`§c${readableName} cannot be absorbed.`);
+        player.onScreenDisplay.setActionBar(`§c${readableName} não pode ser absorvido.`);
 
         player.playSound("note.harp", {
           location: block.location,

@@ -354,27 +354,27 @@ system.runInterval(() => {
             if (player.hasTag("mnra_cata:terror_necklace")) {
 
                 if (player.hasTag("HasTerrorStage5")) {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
 
                 else if (player.hasTag("HasTerrorStage4")) {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
 
                 else if (player.hasTag("HasTerrorStage3")) {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
 
                 else if (player.hasTag("HasTerrorStage2")) {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
 
                 else if (player.hasTag("HasTerrorStage1")) {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
 
                 else {
-                    player.onScreenDisplay.setActionBar("");
+                    player.onScreenDisplay.setActionBar("");
                 }
             }
 

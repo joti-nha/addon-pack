@@ -42,7 +42,7 @@ const bossConfig = {
             }
         ],
         deathCommands: [
-            `tellraw @a {"rawtext":[{"text":"§eBlazing Spirits surge through the Nether..."}]}`,
+            `tellraw @a {"rawtext":[{"text":"§eEspíritos Flamejantes irrompem pelo Nether..."}]}`,
             `tellraw @a {"rawtext":[{"text":"§dAncient evil awakens..."}]}`
         ],
         onBuffedMobDeath: {
@@ -81,7 +81,7 @@ const bossConfig = {
             }
         ],
         deathCommands: [
-            `tellraw @a {"rawtext":[{"text":"§2The Dungeon Grows Restless..."}]}`
+            `tellraw @a {"rawtext":[{"text":"§2A Masmorra fica inquieta..."}]}`
         ],
         onBuffedMobDeath: {
             "mnra_cata:verdant_skeleton": [

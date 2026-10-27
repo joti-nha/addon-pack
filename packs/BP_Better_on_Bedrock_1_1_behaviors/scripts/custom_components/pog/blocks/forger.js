@@ -22,10 +22,10 @@ function getItemCount(player, itemId) {
 /** @param { import("@minecraft/server").Player } player */
 function ironToolHead(player) {
     new ActionFormData()
-    .title("Iron Tool Head")
-    .body("You require §7Iron Ingots §8x2§r to forge an Iron Tool Head.")
+    .title("Cabeça de Ferramenta de Ferro")
+    .body("Você precisa de §7Lingotes de Ferro §8x2§r para forjar uma Cabeça de Ferramenta de Ferro.")
     .button("Forge")
-    .button("§cClose§r")
+    .button("§cFechar§r")
     .show(player).then((response) => {
         if (response.canceled)
             return;
@@ -38,7 +38,7 @@ function ironToolHead(player) {
                     player.playSound("random.anvil_use");
                 }
                 else {
-                    player.sendMessage("§c[!] §rYou don't have the required amount of §7Iron Ingots§r.");
+                    player.sendMessage("§c[!] §rVocê não tem a quantidade necessária de §7Lingotes de Ferro§r.");
                 };
                 break;
             };
@@ -50,10 +50,10 @@ function ironToolHead(player) {
 export const events = {
     onPlayerInteract: ({ player }) => {
         new ActionFormData()
-        .title("Welcome to the Forger")
-        .body("This block will allow you to craft specific resources for crafting unique items!")
-        .button("Iron Tool Head")
-        .button("§cClose§r")
+        .title("Bem-vindo à Forja")
+        .body("Este bloco permite fabricar recursos específicos para criar itens únicos!")
+        .button("Cabeça de Ferramenta de Ferro")
+        .button("§cFechar§r")
         .show(player).then((response) => {
         if (response.canceled)
             return;

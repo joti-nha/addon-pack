@@ -105,7 +105,7 @@ system.runInterval(() => {
 
                 // Dispara o alerta apenas uma vez (evita spam)
                 if (!player.hasTag(ALERT_TAG)) {
-                    player.onScreenDisplay.setActionBar("§c§lCRITICAL DAMAGE! AUTO TOTEM ACTIVATING!");
+                    player.onScreenDisplay.setActionBar("§c§lDANO CRÍTICO! ATIVANDO O TOTEM AUTOMÁTICO!");
                     player.dimension.playSound('mob.ghast.scream', player.location, { volume: 0.6, pitch: 0.8 });
                     player.addTag(ALERT_TAG);
                 }

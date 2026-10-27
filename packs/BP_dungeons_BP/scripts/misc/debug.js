@@ -69,7 +69,7 @@ world.afterEvents.entityHurt.subscribe((e) => {
     const damage = Math.round(100 * e.damage) / 100;
     const hurt = e.hurtEntity;
     if (hurt && hurt.isValid && hurt.typeId == "minecraft:player" && hurt.hasTag("dungeons:debug_damage")) {
-        hurt.sendMessage("§eYou§7 took: " + getDamageColour(damage) + `${damage}§7 Damage`)
+        hurt.sendMessage("§eVocê§7 levou: " + getDamageColour(damage) + `${damage}§7 Damage`)
     }
     if (player) {
         if (!player.isValid) return;

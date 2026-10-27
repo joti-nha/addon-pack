@@ -4857,9 +4857,9 @@ async function showChangeLogForm(player) {
     form.title({ translate: "tm_aqc.form.button.changelog" });
     form.divider();
     changeLogData.slice().reverse().forEach(log => {
-        form.label({ text: `§dDate§r: ${log.date}` });
-        form.label({ text: `§bVersion§r: ${log.version}` });
-        form.label({ text: `§eInfo§r:\n${log.changeLog}` });
+        form.label({ text: `§dData§r: ${log.date}` });
+        form.label({ text: `§bVersão§r: ${log.version}` });
+        form.label({ text: `§eInformações§r:\n${log.changeLog}` });
         form.divider();
     });
     form.button({ translate: "tm_aqc.form.button.back" }, "textures/tm/aqc/icons/forms/arrow");

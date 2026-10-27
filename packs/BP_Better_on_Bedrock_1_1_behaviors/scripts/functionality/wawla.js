@@ -38,11 +38,11 @@ function healthToText(currentHealth, maxHealth, split) {
         const health = Math.floor(currentHealth / 2);
         const half = currentHealth % 2 === 1 && health < max;
         const empty = max - health - (half ? 1 : 0);
-        const hearts = "".repeat(health).concat(half ? "" : "").concat("".repeat(empty));
+        const hearts = "".repeat(health).concat(half ? "" : "").concat("".repeat(empty));
 
         return splitHearts(hearts, split);
     }
-    else return "§7%bob.gui.wawla.health:  ".concat(currentHealth, " / ", maxHealth);
+    else return "§7%bob.gui.wawla.health:  ".concat(currentHealth, " / ", maxHealth);
 };
 
 function splitHearts(string, split = 10) {

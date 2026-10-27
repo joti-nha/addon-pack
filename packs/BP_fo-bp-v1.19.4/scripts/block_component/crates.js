@@ -131,7 +131,7 @@ world.beforeEvents.playerInteractWithBlock.subscribe(event => {
       const pitchRange = Math.random() * (1.2 - 1.0) + 1.0;
       system.run(() => {
         block.dimension.playSound("game.player.attack.nodamage", block.location, { pitch: pitchRange, volume: 1.0 });
-        player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Flint Axe to open the crate.§r\"}]}`);
+        player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse um Machado de Sílex para abrir o caixote.§r\"}]}`);
       });
     }
     if (block.hasTag("ntk:locked_crate") && !player.isSneaking) {
@@ -139,43 +139,43 @@ world.beforeEvents.playerInteractWithBlock.subscribe(event => {
       if (block.typeId === "ntk:copper_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Copper Crate Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave de Caixote de Cobre para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:diamond_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Diamond Crate Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave de Caixote de Diamante para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:golden_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Golden Crate Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave de Caixote de Ouro para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:iron_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Iron Crate Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave de Caixote de Ferro para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:piglin_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Piglin Crate Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave de Caixote Piglin para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:trial_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse a Trial Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave do Desafio para abrir o caixote.§r\"}]}`);
         });
       }
       if (block.typeId === "ntk:ominous_trial_crate") {
         system.run(() => {
           block.dimension.playSound("block.ntk_locked_crate.lock", block.location, { pitch: pitchRange, volume: 1.0 });
-          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse an Ominous Trial Key to open the crate.§r\"}]}`);
+          player.runCommand(`tellraw @p {\"rawtext\":[{\"text\":\"§eUse uma Chave do Desafio Sinistra para abrir o caixote.§r\"}]}`);
         });
       }
     }

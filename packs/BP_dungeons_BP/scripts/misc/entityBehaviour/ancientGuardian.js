@@ -16,7 +16,7 @@ world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
     if (player.hasTag('dungeons:guardian_warn')) return;
     if (player.isInWater) return;
     if (item.typeId === 'dungeons:ancient_guardian_resting_spawn_egg') {
-        player.sendMessage("§7This boss is best suited for underwater locations, if spawned on land it may not work properly!")
+        player.sendMessage("§7Este chefe funciona melhor em locais debaixo d\'água. Se invocado em terra, pode não funcionar direito!")
 
         system.run(() => {
             player.addTag('dungeons:guardian_warn');

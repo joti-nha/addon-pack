@@ -126,7 +126,7 @@ class NewTrinkets extends EntityRun.EntityObject {
                             if (seenTrinketTypes.has(currentItem.typeId)) {
                                 if (owner) {
                                     owner.dimension.spawnItem(currentItem, owner.location);
-                                    owner.sendMessage("§cYou already have this trinket equipped.");
+                                    owner.sendMessage("§cVocê já está com esta bugiganga equipada.");
                                 }
                                 const placeholder = new mc.ItemStack(expectedPlaceholderId, 1);
                                 slot.setItem(placeholder);
@@ -403,7 +403,7 @@ class Player extends EntityRun.EntityObject {
 
             if (isMoving) {
                 entity.playSound("bundle.insert_fail")
-                entity.onScreenDisplay.setActionBar("Stand still to open the Trinkets Menu.")
+                entity.onScreenDisplay.setActionBar("Fique parado para abrir o menu de bugigangas.")
                 return // Prevent opening if moving
             }
 

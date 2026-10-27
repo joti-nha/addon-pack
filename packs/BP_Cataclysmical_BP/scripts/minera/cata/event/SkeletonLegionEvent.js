@@ -74,7 +74,7 @@ export function startSkeletonLegionEvent() {
 
         if (!spawnY) continue;
 
-        world.sendMessage(`§cA Skeleton Legion is Approaching at ${baseX}, ${baseZ}!`);
+        world.sendMessage(`§cUma Legião de Esqueletos está chegando em ${baseX}, ${baseZ}!`);
         player.runCommand(`playsound legion.spawn @a[r=64] ${baseX + 0.5} ${spawnY} ${baseZ + 0.5} 0.5 0.8 1`)
 
         dim.runCommand(`summon ${Paladin.id} ${baseX + 0.5} ${spawnY} ${baseZ + 0.5}`);
