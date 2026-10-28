@@ -41,7 +41,8 @@ system.run(() => {
 
     system.runInterval(() => {
         for (const dimension of dimensions) {
-            for (const entity of dimension.getEntities()) {
+            // [Addon Pack] so os tipos configurados (antes: todas as entidades das 3 dimensoes a cada tick)
+            for (const entity of Object.keys(ProjectileImpulseConfig).flatMap((type) => dimension.getEntities({ type }))) {
                 if (!entity.isValid) continue;
 
                 const config = ProjectileImpulseConfig[entity.typeId];
@@ -116,7 +117,8 @@ system.run(() => {
             const players = dimension.getPlayers();
             if (players.length === 0) continue;
 
-            for (const entity of dimension.getEntities()) {
+            // [Addon Pack] so os tipos configurados (antes: todas as entidades das 3 dimensoes a cada tick)
+            for (const entity of Object.keys(ProjectileConfigSpawning).flatMap((type) => dimension.getEntities({ type }))) {
                 const config = ProjectileConfigSpawning[entity.typeId];
                 if (!config || !entity.isValid) continue;
 

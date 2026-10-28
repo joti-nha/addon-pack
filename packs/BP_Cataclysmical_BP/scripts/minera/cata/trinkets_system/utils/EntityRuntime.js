@@ -433,7 +433,8 @@ system.runInterval(() => {
     for (let dimen of Object.values(activeDimensions)) {
         /** @type {Dimension} */
         const dimension = dimen;
-        dimension.getEntities().forEach(e => {
+        // [Addon Pack] so os tipos registrados (antes: todas as entidades a cada tick)
+        Object.keys(CREATORS).flatMap((type) => dimension.getEntities({ type })).forEach(e => {
             if (e && e.typeId in CREATORS) {
                 entities.push(e);
             }

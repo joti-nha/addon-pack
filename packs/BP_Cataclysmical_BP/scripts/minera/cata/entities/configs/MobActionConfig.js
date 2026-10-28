@@ -104,7 +104,8 @@ system.runInterval(() => {
     ];
 
     for (const dimension of dimensions) {
-        for (const entity of dimension.getEntities()) {
+        // [Addon Pack] so os tipos configurados (antes: todas as entidades das 3 dimensoes a cada tick)
+        for (const entity of Object.keys(MobActionConfig).flatMap((type) => dimension.getEntities({ type }))) {
             if (!entity.isValid) continue;
 
             const configs = MobActionConfig[entity.typeId];

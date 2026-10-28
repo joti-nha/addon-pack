@@ -204,10 +204,12 @@ world.afterEvents.projectileHitEntity.subscribe(data => {
 
     //aura monster
 
-    let chainValue = target.getDynamicProperty('rev:chain_damage') ?? 0;
+    // [Addon Pack] so os alvos atingidos ha pouco entram na contagem (antes: todas as entidades do mundo a cada tick)
+    let chainValue = chainTargets.has(target.id) ? (target.getDynamicProperty('rev:chain_damage') ?? 0) : 0;
     {
         {
             target.setDynamicProperty('rev:chain_reset', 8);
+            chainTargets.set(target.id, target);
             const isPlayer = target.typeId.includes('player');
             target.setDynamicProperty('rev:chain_damage', chainValue + damageValue);
             const finalValue = (chainValue + damageValue) * (isPlayer ? 0.5 : 1.0);
@@ -261,22 +263,22 @@ world.afterEvents.projectileHitEntity.subscribe(data => {
     }
 });
 
+// [Addon Pack] alvos com dano em cadeia ativo (id -> entidade)
+const chainTargets = new Map();
 server.system.runInterval(() => {
-    const overworld = world.getDimension('minecraft:overworld').getEntities();
-    const nether = world.getDimension('minecraft:nether').getEntities();
-    const end = world.getDimension('minecraft:the_end').getEntities();
-    const entities = overworld.concat(nether).concat(end);
-    entities.forEach(e => {
+    if (chainTargets.size === 0) return;
+    for (const [id, e] of chainTargets) {
+        if (!e.isValid) { chainTargets.delete(id); continue; }
         const reset = e.getDynamicProperty('rev:chain_reset')
-        if (reset != undefined) {
-            if (reset > 0) {
-                e.setDynamicProperty('rev:chain_reset', reset - 1);
-            }
-            else if (reset <= 0) {
-                e.setDynamicProperty('rev:chain_damage', 0);
-            }
+        if (reset != undefined && reset > 0) {
+            e.setDynamicProperty('rev:chain_reset', reset - 1);
         }
-    });
+        else {
+            e.setDynamicProperty('rev:chain_damage', 0);
+            e.setDynamicProperty('rev:chain_reset', undefined);
+            chainTargets.delete(id);
+        }
+    }
 });
 
 server.system.runInterval(() => {
