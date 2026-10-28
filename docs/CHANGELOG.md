@@ -61,6 +61,7 @@ Nada desta versão foi testado no jogo.
 - **Bare Bones** e **Bare Bones & Stuff** saíram do pack (pedido do João, 2026-10-28): os itens, blocos e mobs voltam às texturas do jogo. O ícone base dos grimórios ficou guardado em `ferramentas/recursos/livro_base.png`.
 - **Actions & Stuff** enxugado (`ferramentas/enxugar_ans.py`): saíram os móveis e construções que apareciam ao dar um item a um suporte de armadura com a etiqueta "§§" (125 render controllers, 417 modelos e 123 texturas sem uso) e as 881 texturas de itens do subpack Full Experience, que voltam às do jogo. As texturas de blocos, entidades, céu e água do Full Experience ficam, assim como as animações e os modelos 3D dos itens na mão.
 - **Actions & Stuff**: correção do João, ficou só o subpack Vanilla Experience (texturas do jogo, animações e efeitos do A&S). Saíram o Full Experience (texturas de blocos, itens e mundo) e o Custom; quem já usava outro subpack cai no Vanilla. As laterais dos troncos descascados que o `troncos_finos.py` usa foram guardadas em `ferramentas/recursos/troncos`.
+- **Actions & Stuff**: as 881 texturas de itens do Full Experience foram copiadas para o subpack Vanilla (pedido do João): itens com a cara do A&S, blocos e mundo do jogo.
 
 ### Desempenho (2026-10-28)
 - **Cataclysmical**: 4 laços (impulso e ações de mobs, projéteis e trinkets) varriam todas as entidades das 3 dimensões a cada tick; agora consultam só os tipos configurados. A limpeza dos itens de interface caídos roda a cada 10 ticks.
