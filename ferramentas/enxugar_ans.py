@@ -6,7 +6,7 @@
    a parte do nome.
 2. Remove as geometrias e as texturas soltas de textures/oreville/ans que nada mais usa
    (procura em todos os packs do modpack, nao so no A&S).
-3. Remove as texturas de itens do subpack Full Experience (SP2): voltam as do jogo. Blocos, entidades e o resto do mundo ficam.
+3. Os subpacks Custom (SP0) e Full Experience (SP2) sairam do pack: fica so o Vanilla Experience (SP1).
 
 Rodar uma vez a partir da raiz do repositorio: python ferramentas/enxugar_ans.py
 """
@@ -156,12 +156,7 @@ def texturas():
     return sum(apagar_sem_ref(p, refs) for p in glob.glob(os.path.join(ANS, '**', 'textures', 'oreville', 'ans'), recursive=True))
 
 
-def itens_sp2():
-    """Os anexos do A&S que usam textures/items/ apontam para nomes do jogo, que existem sem o SP2."""
-    return apagar_sem_ref(os.path.join(ANS, 'subpacks', 'SP2', 'textures', 'items'), set())
-
-
-MEXIDAS = ('textures/oreville/ans/', 'textures/items/')
+MEXIDAS = ('textures/oreville/ans/',)
 
 
 def indices():
@@ -187,5 +182,4 @@ if __name__ == '__main__':
     print('controllers de construcao removidos:', anexos())
     print('geometrias removidas:', geometrias())
     print('texturas do A&S removidas:', texturas())
-    print('texturas de itens do SP2 removidas:', itens_sp2())
     indices()

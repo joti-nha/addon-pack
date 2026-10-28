@@ -2,7 +2,7 @@
 
 O terrain_texture.json do BoB aponta para textures/blocks/thin_logs/small_log_<madeira>_stripped_{side,top},
 mas os arquivos nunca vieram no pack (o bloco aparecia roxo e preto).
-A lateral é a textura descascada do jogo (cópia do A&S SP2) recortada em 12 px de largura.
+A lateral é a textura descascada do jogo (cópia do A&S SP2, guardada em ferramentas/recursos/troncos) recortada em 12 px de largura.
 O topo usa o miolo do small_log_<madeira>_top e troca o anel de casca pela madeira descascada.
 Precisa do Pillow.
 """
@@ -11,7 +11,7 @@ from PIL import Image
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FINOS = os.path.join(RAIZ, 'packs', 'RP_Better_on_Bedrock_1_1_resources', 'textures', 'blocks', 'thin_logs')
-VANILLA = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff_RP', 'subpacks', 'SP2', 'textures', 'blocks')
+VANILLA = os.path.join(RAIZ, 'ferramentas', 'recursos', 'troncos')
 
 for madeira in ('cherry', 'mangrove', 'pale_oak'):
     lado_v = Image.open(os.path.join(VANILLA, f'stripped_{madeira}_log_side.png')).convert('RGBA')
