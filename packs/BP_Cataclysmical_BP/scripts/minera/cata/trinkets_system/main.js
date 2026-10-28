@@ -135,4 +135,4 @@ system.runInterval(() => {
         }
     }
 
-}, 1);
+}, 10); // [Addon Pack] era a cada tick

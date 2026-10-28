@@ -45,7 +45,8 @@ system.runInterval(() => {
         world.getDimension("the_end"),
     ];
     for (const dimension of dimensions) {
-        for (const entity of dimension.getEntities()) {
+        // [Addon Pack] so os tipos configurados (antes: todas as entidades das 3 dimensoes a cada tick)
+        for (const entity of Object.keys(MobImpulseConfig).flatMap((type) => dimension.getEntities({ type }))) {
             if (!entity.isValid) continue;
 
             const configs = MobImpulseConfig[entity.typeId];

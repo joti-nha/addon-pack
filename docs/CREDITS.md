@@ -7,11 +7,8 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | Addon | Criador(es) declarado(s) | Observação |
 |---|---|---|
 | Actions & Stuff 1.11.1 | Oreville Studios Ltd | base de animações do pack |
-| Bare Bones & Stuff 1.11.1 Drop 4 | Pochilito (com a comunidade Bare Bones) | o autor pede para não redistribuir fora de CurseForge/MCPEDL |
-| Bare Bones (RP 1.21.130) | RobotPants | |
 | Eternal Caves 1.1 | Panascais | |
 | Eternal End 1.1 | Panascais | |
-| Realistic Biomes 1.3 | Oreville Studios Ltd | |
 | Mowzie's Mobs Add-On 1.1 | Honeyfrost | adaptação dos mobs do mod Java Mowzie's Mobs |
 | OTG Backpack 1.0.8 | dinorawrski / dinorawr | **uso restrito**, ver abaixo |
 | Cataclysmical | Minera Studios | |
@@ -36,5 +33,4 @@ Autores marcados como "não declarado" precisam ser levantados nas páginas de o
 - **OTG Backpack** (© 2026 dinorawrski, todos os direitos reservados): **não** é permitido reenviar o addon a nenhum site/app sem
   permissão, nem modificá-lo e distribuí-lo como addon novo. É permitido editar os arquivos para **uso pessoal e privado**.
   Este pacote só deve ser usado de forma pessoal e privada enquanto não houver autorização do autor.
-- **Bare Bones & Stuff**: o autor pede para não redistribuir; uso pessoal e teste não são afetados.
 - **Eternal Caves**: cabeçalho do script proprietário, todos os direitos reservados. Não redistribuir; o script de montagem aplica só diferenças ao arquivo do usuário.
