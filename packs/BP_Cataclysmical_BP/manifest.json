@@ -47,21 +47,5 @@
 				"0.11.7"
 			]
 		}
-	},
-	"settings": [
-		{
-			"type": "label",
-			"text": "§dCataclysmical Settings §8Can be changed at any time.\n"
-		},
-		{
-			"type": "toggle",
-			"text": "Activate §cMalevolence Mode §8A challenge for the worthy",
-			"name": "mnra_cata:malevolence_mode",
-			"default": false
-		},
-		{
-			"type": "label",
-			"text": "§c(IS WORK IN PROGRESS, TOGGLES DO NOTHING)"
-		}
-	]
+	}
 }

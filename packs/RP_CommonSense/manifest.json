@@ -47,32 +47,5 @@
 				0
 			]
 		}
-	],
-	"subpacks": [
-		{
-			"folder_name": "sub5",
-			"name": "§950% Opacity§r crosshair.",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "sub3",
-			"name": "§930% Opacity§r crosshair.",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "sub1",
-			"name": "§910% Opacity§r crosshair.",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "sub0",
-			"name": "§90% Opacity§r crosshair.",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "subvnla",
-			"name": "§9Vanilla Possition§r crosshair(less precise).",
-			"memory_tier": 0
-		}
 	]
 }

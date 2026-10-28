@@ -534,7 +534,7 @@ system.runInterval(() => {
       tickPlayer(p, tick);
       if (tick % 2 === 0 && !bars.has(p.id) && !p.getDynamicProperty(P_STASH)) { autoWand(p); maintain(p); }
       if (tick % 10 === 0 && !bars.has(p.id) && !p.getDynamicProperty(P_STASH)) reclaimScrolls(p);
-      if (tick % 20 === 0 && !bars.has(p.id)) purgeFreeCopies(p);
+      if (tick % 40 === 0 && !bars.has(p.id)) purgeFreeCopies(p); // [Addon Pack] era a cada 20 ticks
     } catch (e) { log("erro", e); }
   }
 }, 1);
@@ -546,11 +546,13 @@ system.afterEvents.scriptEventReceive.subscribe(({ id, message, sourceEntity }) 
 // Tomo Infinito nao pode ser descartado: o item que cair no chao volta na hora para o dono (ou o jogador mais perto).
 world.afterEvents.entitySpawn.subscribe(({ entity }) => {
   if (entity?.typeId !== "minecraft:item") return;
+  // [Addon Pack] le o item na hora; so agenda o resto quando e um tomo (antes agendava para todo item que caia)
+  let it;
+  try { it = entity.getComponent("minecraft:item")?.itemStack; } catch { return; }
+  if (!isTome(it)) return;
   system.run(() => {
     try {
       if (!entity.isValid) return;
-      const it = entity.getComponent("minecraft:item")?.itemStack;
-      if (!isTome(it)) return;
       let owner = ownerOf(it);
       let p = owner ? world.getPlayers().find((x) => x.id === owner) : undefined;
       if (!p && !owner) p = entity.dimension.getPlayers({ location: entity.location, maxDistance: 4, closest: 1 })[0];
@@ -586,7 +588,7 @@ world.afterEvents.itemUse.subscribe(({ source, itemStack }) => {
 // qualquer parte dele abre a tela dela, e bater nele quebra o bloco (como um bloco comum). A tela e desenhada em RP_ForsakenGrimoire/ui/fgr_atril.json (escolhida pelo nome "§5Atril Arcano"):
 //   espacos 0-8 = os 9 feiticos em 3x3, na ordem;  espaco 9 = o Grimorio.
 // Grimorio no espaco 9: os pergaminhos e tomos dele aparecem nos 9 espacos; tudo o que voce mexer ali e gravado nele
-// a cada tick; ao tirar o Grimorio, os espacos esvaziam (o conteudo ja esta dentro dele).
+// a cada 4 ticks; ao tirar o Grimorio, os espacos esvaziam (o conteudo ja esta dentro dele).
 const VITRINE = "fgr:atril_vitrine";
 const V_TITLE = "§5Atril Arcano"; // a tela propria e escolhida por este nome (ui/fgr_atril.json)
 const V_BOOK = 9;
@@ -749,18 +751,25 @@ function tickVitrine(ent) {
     ent.setDynamicProperty(V_SNAP, snap);
   }
 }
+// [Addon Pack] procura as vitrines perto dos jogadores a cada 20 ticks (antes: a cada tick) e atualiza as achadas a
+// cada 4 ticks
+let vitrines = [];
 system.runInterval(() => {
-  const seen = new Set();
+  const seen = new Map();
   for (const p of world.getPlayers()) {
     let list;
     try { list = p.dimension.getEntities({ type: VITRINE, location: p.location, maxDistance: 12 }); } catch { continue; }
-    for (const ent of list) {
-      if (seen.has(ent.id)) continue;
-      seen.add(ent.id);
-      try { tickVitrine(ent); } catch (e) { log("atril", e); }
-    }
+    for (const ent of list) seen.set(ent.id, ent);
   }
-}, 1);
+  vitrines = [...seen.values()];
+}, 20);
+system.runInterval(() => {
+  if (vitrines.length === 0) return;
+  for (const ent of vitrines) {
+    if (!ent.isValid) continue;
+    try { tickVitrine(ent); } catch (e) { log("atril", e); }
+  }
+}, 4);
 
 world.afterEvents.playerPlaceBlock.subscribe(({ block }) => {
   if (block.typeId === LECTERN) system.run(() => { try { ensureVitrine(block); } catch (e) { log("atril", e); } });
@@ -926,7 +935,7 @@ system.runInterval(() => {
     try { settlePlayer(p); } catch (e) { log("settle", e); }
     try { claimTomes(p); } catch (e) { log("tomos", e); }
   }
-}, 40);
+}, 100); // [Addon Pack] era a cada 40 ticks
 
 // ---------- atris antigos (entidade fgr:lectern com inventario) ----------
 // Versoes anteriores punham uma entidade com 18 espacos sobre o bloco. Ela e desfeita: o que estiver dentro cai no
@@ -952,4 +961,4 @@ system.runInterval(() => {
     try { list = p.dimension.getEntities({ type: LECTERN_ENT, location: p.location, maxDistance: 32 }); } catch { continue; }
     for (const ent of list) { try { retireOldLectern(ent); } catch (e) { log("atril antigo", e); } }
   }
-}, 40);
+}, 200); // [Addon Pack] era a cada 40 ticks
