@@ -11,7 +11,6 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | Bare Bones (RP 1.21.130) | RobotPants | |
 | Eternal Caves 1.1 | Panascais | |
 | Eternal End 1.1 | Panascais | |
-| Realistic Biomes 1.3 | Oreville Studios Ltd | |
 | Mowzie's Mobs Add-On 1.1 | Honeyfrost | adaptação dos mobs do mod Java Mowzie's Mobs |
 | OTG Backpack 1.0.8 | dinorawrski / dinorawr | **uso restrito**, ver abaixo |
 | Cataclysmical | Minera Studios | |

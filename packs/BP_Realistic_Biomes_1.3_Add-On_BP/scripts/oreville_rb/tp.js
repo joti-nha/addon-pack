@@ -1,1 +1,0 @@
-import{world}from"@minecraft/server";import{djixls}from"oreville_rb/sd";import"oreville_rb/sy";world.afterEvents.playerSpawn.subscribe(({player:r,initialSpawn:e})=>{e&&(r.getDynamicProperty("dzujsem")||(r.setDynamicProperty("dzujsem",!0)))});export default function(){return{oexpzu({yrcwet:r}){djixls.show("cfaqsf",r)}}}

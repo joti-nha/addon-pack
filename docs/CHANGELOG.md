@@ -57,6 +57,12 @@ Nada desta versão foi testado no jogo.
 - **Luneta da Vidência**: textura refeita sobre a distribuição pintada pelo João (corpo preto, lente branca), com os tons de sombra e brilho do A&S. A textura anterior seguia outro mapa de UV e não casava com o modelo da luneta do A&S.
 
 ### Removido
+- **Realistic Biomes** saiu do pack (pedido do João, 2026-10-28): era quase só visual (447 partículas, 25 MB de sons) e repetia o que o Better on Bedrock e o Forsaken já fazem com biomas. Os blocos e itens dele somem dos mundos existentes, e as entradas dele saíram dos catálogos de criação dos outros packs.
+
+### Desempenho (2026-10-28)
+- **Cataclysmical**: 4 laços (impulso e ações de mobs, projéteis e trinkets) varriam todas as entidades das 3 dimensões a cada tick; agora consultam só os tipos configurados. A limpeza dos itens de interface caídos roda a cada 10 ticks.
+- **Improvised Guns**: o dano em cadeia lia uma propriedade de todas as entidades do mundo a cada tick; agora acompanha só os alvos atingidos há pouco.
+- **Mowzie's Mobs**: a busca pelo Sculptor e o `/stopsound` por jogador passam de cada tick para cada 20 ticks.
 - Livro de Progresso RPG e Livro do Viajante (Unified Core).
 - Itens de configuração, papel de missão e diário perdido que o Better on Bedrock dava nos primeiros passos.
 
