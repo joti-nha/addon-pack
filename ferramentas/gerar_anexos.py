@@ -229,8 +229,8 @@ def ident(cor): return 'fgr:grimoire' if cor == 'purple' else f'fgr:grimoire_{co
 def tom(c, f): return tuple(max(0, min(255, int(v * f))) for v in c)
 
 
-ICONE_REF = (101, 75, 23)  # marrom principal do icone do livro (Bare Bones, que fica no topo dos packs)
-ICONE_LIVRO = os.path.join(RAIZ, 'packs', 'RP_BareBones_RP', 'textures', 'items', 'book_normal.png')
+ICONE_REF = (101, 75, 23)  # marrom principal do icone do livro (copia do Bare Bones, removido do pack em 0.6)
+ICONE_LIVRO = os.path.join(RAIZ, 'ferramentas', 'recursos', 'livro_base.png')
 
 
 def tingir(im, cor, ref, capa):

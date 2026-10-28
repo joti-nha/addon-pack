@@ -58,6 +58,7 @@ Nada desta versão foi testado no jogo.
 
 ### Removido
 - **Realistic Biomes** saiu do pack (pedido do João, 2026-10-28): era quase só visual (447 partículas, 25 MB de sons) e repetia o que o Better on Bedrock e o Forsaken já fazem com biomas. Os blocos e itens dele somem dos mundos existentes, e as entradas dele saíram dos catálogos de criação dos outros packs.
+- **Bare Bones** e **Bare Bones & Stuff** saíram do pack (pedido do João, 2026-10-28): os itens, blocos e mobs voltam às texturas do jogo. O ícone base dos grimórios ficou guardado em `ferramentas/recursos/livro_base.png`.
 
 ### Desempenho (2026-10-28)
 - **Cataclysmical**: 4 laços (impulso e ações de mobs, projéteis e trinkets) varriam todas as entidades das 3 dimensões a cada tick; agora consultam só os tipos configurados. A limpeza dos itens de interface caídos roda a cada 10 ticks.

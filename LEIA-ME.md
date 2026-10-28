@@ -1,6 +1,6 @@
 # Addon Pack
 
-Modpack para Minecraft Bedrock que junta 36 addons de vários criadores e 5 packs próprios (Unified Core, Addon Pack Compat e Forsaken Grimoires) em um único `.mcaddon`. Créditos e licenças em [docs/CREDITS.md](docs/CREDITS.md).
+Modpack para Minecraft Bedrock que junta 34 addons de vários criadores e 5 packs próprios (Unified Core, Addon Pack Compat e Forsaken Grimoires) em um único `.mcaddon`. Créditos e licenças em [docs/CREDITS.md](docs/CREDITS.md).
 
 **Repositório privado, para uso pessoal.** Ele contém os addons originais de terceiros. Não torne o repositório público nem compartilhe o pacote gerado.
 
@@ -8,7 +8,7 @@ Modpack para Minecraft Bedrock que junta 36 addons de vários criadores e 5 pack
 
 | Pasta | O que tem |
 |---|---|
-| `packs/` | Os 40 packs prontos: os originais com as alterações do modpack já aplicadas, mais os packs próprios. É aqui que se edita. |
+| `packs/` | Os 38 packs prontos: os originais com as alterações do modpack já aplicadas, mais os packs próprios. É aqui que se edita. |
 | `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/` (comando). |
 | `Empacotador Addon Pack.bat` | Abre o empacotador com janela no Windows (precisa do Python instalado). |
 | `ferramentas/empacotador_janela.py` | O código da janela do Windows. |
@@ -52,10 +52,10 @@ Cada montagem sai com versão maior que a anterior (o número é a quantidade de
 
 1. No Minecraft, em Configurações > Armazenamento, apague todos os packs do Addon Pack (de comportamento e de recursos). Não apague mundos.
 2. Feche o Minecraft por completo.
-3. Abra o `Addon_Pack_Completo.mcaddon` com o Minecraft e espere a importação dos 40 packs terminar.
+3. Abra o `Addon_Pack_Completo.mcaddon` com o Minecraft e espere a importação dos 38 packs terminar.
 4. Num mundo (de preferência novo), ative todos os packs. Se o jogo pedir, ligue as APIs beta em Experimentos.
 
-Ordem dos packs de recursos (topo = maior prioridade): Bare Bones & Stuff, Bare Bones, Unified Core, Addon Pack Compat, Forsaken Grimoires, os demais, e Actions & Stuff por último. Nos de comportamento, deixe Unified Core e Forsaken Grimoires no topo.
+Ordem dos packs de recursos (topo = maior prioridade): Unified Core, Addon Pack Compat, Forsaken Grimoires, os demais, e Actions & Stuff por último. Nos de comportamento, deixe Unified Core e Forsaken Grimoires no topo.
 
 
 ## Otimização
