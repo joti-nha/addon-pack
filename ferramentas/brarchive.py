@@ -1,4 +1,4 @@
-"""Leitura dos arquivos .brarchive (formato em que o Actions & Stuff guarda seus JSON).
+"""Leitura e escrita dos arquivos .brarchive (formato em que o Actions & Stuff guarda seus JSON).
 
 Formato: cabecalho de 16 bytes (magica, quantidade de entradas, versao), depois uma tabela com
 256 bytes por entrada (1 byte com o tamanho do nome, o nome, e nos ultimos 8 bytes deslocamento e
@@ -20,6 +20,17 @@ def ler(caminho):
         desl, tam = struct.unpack_from('<II', e, 248)
         out[nome] = b[base + desl:base + desl + tam]
     return out
+
+
+def escrever(caminho, itens):
+    """Grava {nome: bytes} no mesmo formato (entradas vazias ficam com deslocamento 0, como no original)."""
+    tab, dados = bytearray(), bytearray()
+    for nome, d in itens.items():
+        e, nb = bytearray(256), nome.encode()
+        e[0] = len(nb); e[1:1 + len(nb)] = nb
+        struct.pack_into('<II', e, 248, len(dados) if d else 0, len(d))
+        tab += e; dados += d
+    open(caminho, 'wb').write(struct.pack('<QII', MAGICA, len(itens), 1) + bytes(tab) + bytes(dados))
 
 
 def jsons(pack, pasta):
