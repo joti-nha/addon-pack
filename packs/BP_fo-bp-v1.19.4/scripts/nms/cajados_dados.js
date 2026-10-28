@@ -337,7 +337,7 @@ export const SCROLL_PROJECTILES = {
 "ntk:summoning_scroll_of_wither_skeleton": "ntk:projectile_wither_skeleton_summoning_spell_missile"
 };
 
-// Ticks de conjuração (igual ao use_duration do item). Cajados sem entrada usam STAFF_CAST_TICKS.
+// Ticks de conjuração (nos cajados, igual ao use_duration do item; as varinhas têm uso longo, ver ferramentas/varinhas.py). Cajados sem entrada usam STAFF_CAST_TICKS.
 export const STAFF_CAST_TICKS = 30;
 export const CAST_TICKS = {
   "ntk:golden_wand": 30, "ntk:golden_spellweaver_wand": 30,
