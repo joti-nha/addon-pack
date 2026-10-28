@@ -21,18 +21,6 @@
             "entry": "scripts/main.js"
         }
     ],
-    "settings": [
-        {
-            "type": "label",
-            "text": "§l§6Ancient Hunts§r\nControls if Ancient Hunts (Custom Dimensions) can be visited. \n§aDisabling this may improve performance\n§cRecommended: ON"
-        },
-        {
-            "type": "toggle",
-            "text": "Ancient Hunts",
-            "name": "dungeons:ancient_hunts",
-            "default": true
-        }
-    ],
     "dependencies": [
         {
             "uuid": "ab296f68-bb16-4ede-a49c-d0ed99b5b87b",

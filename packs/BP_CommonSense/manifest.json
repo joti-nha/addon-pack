@@ -66,17 +66,5 @@
 				0
 			]
 		}
-	],
-	"subpacks": [
-		{
-			"folder_name": "disabled",
-			"name": "Trinkets Disabled",
-			"memory_tier": 0
-		},
-		{
-			"folder_name": "enabled",
-			"name": "Trinkets Enabled",
-			"memory_tier": 0
-		}
 	]
 }

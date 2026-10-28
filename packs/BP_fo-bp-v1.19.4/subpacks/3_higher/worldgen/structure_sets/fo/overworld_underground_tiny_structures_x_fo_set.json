@@ -1,1 +1,0 @@
-{"format_version":"1.26.10","minecraft:structure_set":{"description":{"identifier":"ntk:overworld_underground_tiny_structures_x_fo_set"},"placement":{"type":"minecraft:random_spread","spread_type":"triangular","salt":94733158,"spacing":8,"separation":3},"structures":[{"structure":"ntk:miners_tent","weight":100},{"structure":"ntk:ruin_column_underground","weight":100}]}}
