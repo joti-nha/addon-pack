@@ -1,0 +1,290 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.backpack_mainhand.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "root_item": {
+          "rotation": [
+            93.397,
+            -3.323,
+            5.707
+          ],
+          "position": [
+            1.218,
+            14.346,
+            21.684
+          ]
+        },
+        "Straps": {
+          "scale": 0
+        },
+        "Straps2": {
+          "scale": 0
+        }
+      }
+    },
+    "animation.creeper_backpack_mainhand.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "root_item": {
+          "rotation": [
+            92.234,
+            6.919,
+            -80.612
+          ],
+          "position": [
+            0.541,
+            13.683,
+            9.975
+          ],
+          "scale": 0.9
+        },
+        "LightBone": {
+          "rotation": [
+            0,
+            "-query.life_time * -100",
+            0
+          ]
+        },
+        "bone2": {
+          "scale": 0
+        }
+      }
+    },
+    "animation.enderman_backpack_mainhand.first_person_hold": {
+      "loop": true,
+      "animation_length": 2.2917,
+      "bones": {
+        "root_item": {
+          "rotation": [
+            46.691,
+            50.969,
+            -65.19
+          ],
+          "position": [
+            -9.97,
+            -0.655,
+            -0.22
+          ]
+        },
+        "heart": {
+          "rotation": [
+            0,
+            0,
+            "math.sin(query.anim_time * 1200) * 6"
+          ]
+        },
+        "bone5": {
+          "position": {
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.0833": [
+              4,
+              0,
+              0
+            ]
+          },
+          "scale": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.0": [
+              0.8,
+              0.8,
+              0.8
+            ],
+            "1.8333": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "bone7": {
+          "position": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "1.1667": [
+              0,
+              2,
+              2
+            ]
+          },
+          "scale": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "0.4583": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "1.1667": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "bone4": {
+          "position": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "2.0833": [
+              -1,
+              0,
+              0
+            ]
+          },
+          "scale": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "0.75": [
+              0.2,
+              0.2,
+              0.2
+            ],
+            "1.0833": [
+              0.8,
+              0.8,
+              0.8
+            ],
+            "1.5": [
+              0.94,
+              0.94,
+              0.94
+            ],
+            "2.0833": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "bone3": {
+          "position": {
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.375": [
+              -2,
+              0,
+              0
+            ]
+          },
+          "scale": {
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.0": [
+              0.8,
+              0.8,
+              0.8
+            ],
+            "1.8333": [
+              1,
+              1,
+              1
+            ]
+          }
+        },
+        "bone8": {
+          "position": {
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.5": [
+              3,
+              0,
+              0
+            ]
+          },
+          "scale": {
+            "0.0": [
+              0,
+              0,
+              0
+            ],
+            "0.4167": [
+              0,
+              0,
+              0
+            ],
+            "1.0": [
+              0.8,
+              0.8,
+              0.8
+            ]
+          }
+        },
+        "Straps": {
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "scale": 0.5
+        }
+      }
+    },
+    "animation.snowfox_backpack_mainhand.first_person_hold": {
+      "loop": true,
+      "bones": {
+        "root_item": {
+          "rotation": [
+            97.873,
+            0.177,
+            5.104
+          ],
+          "position": [
+            2.212,
+            16.937,
+            19.174
+          ],
+          "scale": 0.8
+        },
+        "bone4": {
+          "scale": 0
+        },
+        "bone5": {
+          "scale": 0
+        },
+        "berry": {
+          "rotation": [
+            "-math.sin(query.anim_time * 60) * 3",
+            0,
+            "math.sin(query.anim_time * 1000) * 5"
+          ]
+        }
+      }
+    }
+  }
+}

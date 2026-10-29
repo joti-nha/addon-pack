@@ -84,6 +84,11 @@ Nada desta versão foi testado no jogo.
 - **Moldura do zoom da Relíquia não aparecia**: o JavaCombat troca o título da tela a cada tick (barra de recarga) e apagava a marca que mostra a moldura. Durante o zoom o jogador ganha a etiqueta `unified:luneta` e o JavaCombat não mexe no título.
 - **Recarga de ataque menor** (pedido do João): no Cataclysmical, adaga 8 → 6 ticks, espadas 12 → 9, espadas grandes 16 → 12, montantes 24/26/29 → 16/18/20 (Sun Striker 24 → 16). As 6 claymores do Dungeons (Claymore, Broadsword, Great Axeblade, Heartstealer, Claymore de Obsidiana, Noite sem Estrelas) caíam no valor da espada (12) e agora têm 10.
 
+### Ajustes depois do teste (2026-10-29)
+- **Pântano do DarkAge quase impossível** (pedido do João): o único "bioma" do DarkAge é o pântano com colunas, árvores mutantes e ruínas que ele cria dentro dos oceanos, sorteado por células de 256 blocos (1 em cada 3 células de oceano). Agora sai em 1 de cada 100 (`features/wetland/*_determinant.json`).
+- **Moldura do zoom da Relíquia** não cobria a tela: a lente tinha altura `100%y` (a própria altura, ou seja zero) e as bordas, imagem de 1 pixel, mantinham a proporção 1:1 e viravam quadrados no meio da altura. A lente agora tem a altura da tela e as bordas esticam (`keep_ratio` falso).
+- **Mochilas do OTG em primeira pessoa** ainda fora do lugar: com qualquer item na mão o A&S gira o braço para a pose de segurar dele, diferente da do jogo base para a qual o OTG acertou a mochila. `ferramentas/mochila_1p.py` calcula a pose que compensa o braço do A&S e grava as 4 animações de primeira pessoa (mochila, creeper, enderman, raposa-do-ártico) com os mesmos nomes no Compat; sem o Compat o OTG usa as dele.
+
 ## 0.5
 
 Nada desta versão foi testado no jogo.
