@@ -1,162 +1,234 @@
-import { world, system } from "@minecraft/server";
-import { ActionFormData, MessageFormData } from "@minecraft/server-ui";
-import { showMainMenu } from "./guidebook.js";
-import { pagesound } from "./guidebook.js";
+import { showMainMenu, pagesound, createPage, openPage, goTo } from "./guidebook.js";
+
+//=====================================================================
+// COMO ADICIONAR COISAS NOVAS
+//---------------------------------------------------------------------
+// Adicione um objeto na lista RECIPES:
+//   { name: "Nome do botão", title: "Título (opcional)", text: ... }
+//
+// "text" pode ser:
+//   - uma string                      -> uma página simples
+//   - uma lista de strings            -> várias seções separadas por divider
+// Em vez de "text" você pode usar "children: [ ... ]" para criar um submenu.
+//
+// Para receitas de craft use os helpers:
+//   crafting(grade, resultado, ...legenda)
+//   grade   = lista de linhas, cada linha é uma lista de células ("" = vazio)
+//   legenda = ["1", "Iron Ingot"], ["2", "Stick"] ...
+//=====================================================================
+
+//=========================
+// HELPERS DE FORMATAÇÃO
+//=========================
+// Cores: §a verde (títulos/bordas) | §f branco (texto) | §e amarelo (destaques)
+
+/** Junta blocos separados por uma linha em branco */
+const join = (...blocks) => blocks.filter(Boolean).join("\n\n");
+
+/** Título verde + linhas de texto branco */
+const section = (title, ...lines) => `§a${title}§f\n${lines.join("\n")}`;
+
+/** Desenha a grade de craft. Ex: grid([["1",""],["1","1"]], "4x Stairs") */
+function grid(rows, result) {
+	const mid = Math.floor(rows.length / 2); // o resultado aparece na linha do meio
+	return rows
+		.map((row, i) => {
+			const cells = row.map((c) => `§a[§f${c || " "}§a]`).join("");
+			return i === mid && result ? `${cells}§f = ${result}` : `${cells}§f`;
+		})
+		.join("\n");
+}
+
+/** Legenda: "1 = Iron Ingot" */
+const legend = (...pairs) => pairs.map(([key, value]) => `${key} = ${value}`).join("\n");
+
+/** Bloco completo de craft: título + grade + legenda */
+const crafting = (rows, result, ...pairs) =>
+	`§aReceita:§f\n${grid(rows, result)}` + (pairs.length ? `\n${legend(...pairs)}` : "");
 
 //=========================
 // RECEITAS
-//=======================
-export function showRecipesMenu(player) {
-	const form = new ActionFormData()
-		.title("Recipes")
-		.body("Choose:")
-		.button("Voltar ao Menu", "textures/gui/newgui/undo")
-		.button("Receitas Gerais", "textures/items/iron_pickaxe")
-		.button("Armaduras para Cavalo", "textures/items/iron_horse_armor")
-		.button("Armaduras para Náutilo", "textures/items/nautilus")
-		.button("Receitas de Cobre", "textures/items/copper_ingot")
-		.button("Escadas Melhores", "textures/guidebook/Stair")
-		.button("Flecha de 'Ferro'", "textures/items/arrow")
-		.button("Elytra", "textures/items/elytra");
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showMainMenu(player); // Volta
-			pagesound(player)
-		} else if (response.selection === 1) {
-			showGeneralRecipes(player)
-			pagesound(player)
-			player.sendMessage("§a");
-			// Aqui você poderia abrir um MessageFormData mostrando a receita detalhada
-		} else if (response.selection === 2) {
-			showHorseArmor(player)
-			pagesound(player)
-		} else if (response.selection === 3) {
-			showNautilusArmor(player)
-			pagesound(player)
-		} else if (response.selection === 4) {
-			showCopperRecipes(player)
-			pagesound(player)
-		} else if (response.selection === 5) {
-			showBetterStairs(player)
-			pagesound(player)
-		} else if (response.selection === 6) {
-			showIronArrow(player)
-			pagesound(player)
-		} else if (response.selection === 7) {
-			showElytraRecipe(player)
-			pagesound(player)
-		}
-	});
-}
-
-function showGeneralRecipes(player) {
-	const form = new ActionFormData()
-		.title("General")
-		.body("===============================\n§a'Serra de Madeira'§f\ncolocando troncos e blocos de madeira no CORTADOR DE PEDRAS você faz todas as receitas de madeira mais rápido\n===============================\n§aDesmontar§f\nCom um cortador de pedras vanilla você pode 'desmontar' itens como ferramentas, armaduras, escadas, portas, lajes, botões, cercas, placas de pressão, alçapões etc... e recebe parte dos itens usados\n===============================\n§aCarne em Couro§f\nVocê transforma carne podre em couro na fornalha! \nÉ só pôr a carne podre na fornalha com carvão e esperar\n===============================\n§aFundir Blocos Brutos§f\nvocê pode fundir blocos de minério bruto no alto-forno, que funde mais rápido\n===============================\n§aBloco de Carvão§f\nVocê pode fazer bloco de carvão com carvão vegetal\n===============================\n§aCarvão de Bambu§f\nvocê pode usar bloco de bambu para fazer carvão vegetal, como os outros troncos\n===============================\n§aLinha Fácil§f\nVocê faz linha com uma trepadeira\n===============================\n§aDiscos de Música§r\nTodos os discos podem ser feitos com ardósia profunda polida e corantes.\nMenos o disco 'Relic', que usa netherrack\n===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showHorseArmor(player) {
-	const form = new ActionFormData()
-		.title("Armadura para Cavalo")
-		.body("§a===============================§f\nVocê pode fabricar armaduras para cavalo de ferro, cobre, ouro e diamante\n(ainda dá para melhorar para netherite na mesa de ferraria)\ne desmontar no cortador de pedras\n\n§aReceita:§f\n§a[§f §a][§f §a][§f1§a]§f\n§a[§f1§a][§f2§a][§f1§a]§f\n§a[§f1§a][§f §a][§f1§a]§f\n1 = Metal (ferro, cobre...)\n2 = Couro\n§a===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showNautilusArmor(player) {
-	const form = new ActionFormData()
-		.title("Armadura para Náutilo")
-		.body("§a===============================§f\nVocê pode fabricar armaduras para náutilo de ferro, cobre, ouro e diamante\n(ainda dá para melhorar para netherite na mesa de ferraria)\ne desmontar no cortador de pedras\n\n§aReceita:§f\n§a[§f1§a][§f1§a][§f1§a]§f\n§a[§f1§a][§f §a][§f1§a]§f\n§a[§f §a][§f1§a][§f1§a]§f\n1 = Metal (ferro, cobre...)\n§a===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showCopperRecipes(player) {
-	const form = new ActionFormData()
-		.title("Receitas de Cobre")
-		.body("§2===============================\n§r§eEtiqueta:§r\nVocê pode fazer etiquetas com cobre no lugar do ferro\n§2Receita:\n§r§8[§r§eC§r§8]§r §eC§r - Lingote de Cobre\n§8[§r§eP§r§8]§r§e P§r - Papel\n§8[§r§eP§r§8]§r\n\nVocê pode fazer trilhos com lingotes de cobre no lugar dos de ouro\n§eTrilhos Elétricos:\n§r§2Receita:\n§r§8[§r§e1§r§8][ ][§r§e1§r§8]\n[§r§e1§r§8][§r§e2§r§8][§r§e1§r§8]§r = 6x Trilho Elétrico\n§8[§r§e1§r§8][§r§e3§r§8][§r§e1§r§8]\n§r§e1§r§2 §r- Lingote de Cobre\n§e2§r§2 §r- Graveto\n§e3§r - Redstone\n\n§eTrilhos Ativadores:\n§r§2Receita:\n§r§8[§r§e1§r§8][§r§e2§r§8][§r§e1§r§8]\n[§r§e1§r§8][§r§e3§r§8][§r§e1§r§8]§r = 6x Trilho Ativador \n§8[§r§e1§r§8][§r§e2§r§8][§r§e1§r§8]\n§r§e1§r§2 §r- Lingote de Cobre\n§e2§r§2 §r- Graveto\n§e3§r - Tocha de Redstone\n\n§eTrilho Detector:\n§r§2Receita:\n§r§8[§r§e1§r§8][ ][§r§e1§r§8]\n[§r§e1§r§8][§r§e3§r§8][§r§e1§r§8]§r = 6x Trilho Detector \n§8[§r§e1§r§8][§r§e2§r§8][§r§e1§r§8]\n§r§e1§r§2 §r- Lingote de Cobre\n§e2§r§2 §r- Redstone\n§e3§r - Placa de Pressão de Pedra\n§2===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showBetterStairs(player) {
-	const form = new ActionFormData()
-		.title("Escadas Melhores")
-		.body("§a===============================§f\nTodas as escadas vanilla ficam mais baratas e podem ser desmontadas\n\n§aReceita:§f\n§a[§f1§a][§f §a]\n§a[§f1§a][§f1§a]§f = 4x Escadas \n 1 = Qualquer bloco\n\n§aDesmontar:§f\n§a[§f1§a][§f1§a]\n§a[§f1§a][§f1§a]§f = 3x Blocos \n 1 = Quaisquer escadas\n\n§a===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showIronArrow(player) {
-	const form = new ActionFormData()
-		.title("Escadas Melhores")
-		.body("§a===============================§f\nVocê fabrica o dobro de flechas usando lingote de ferro no lugar do sílex\n\n§aReceita:§f\n§a[§f1§a][§f2§a][§f3§a]§f= 8x Flecha\n1 = lingote de ferro\n2 = graveto\n3 = pena\n§a===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
-function showElytraRecipe(player) {
-	const form = new ActionFormData()
-		.title("ElytraRecipe")
-		.body("§2===============================\n§r§eÉlitro:§r\nVocê pode fabricar élitros, mas a receita é de fim de jogo, então ainda precisa ir ao End para fazer um\n\n§e1§r. Primeiro você precisa de 2 Asas de Phantom\n§2Receita:\n§r§8[§r§eM§r§8][§r§eC§r§8][ ] \n[§r§eM§r§8][§r§eM§r§8][§r§eC§r§8] =§r§e 1x§r Asas de Phantom\n§8[ ][§r§eM§r§8][§r§eC§r§8]\n§r§eM§r§8 - §rMembrana de Phantom\n§eC§r§8 - §rFruta do Coro Estourada\n\n2. Depois você precisa de 1 Creme de Magma\n§2Receita:\n§r§8[ ][§r§eM§r§8][ ]\n[§r§eP§r§8][ ][§r§eP§r§8]§r §8= §r§e1x§r Élitro\n \n§eM§r§2 §r- Creme de Magma\n§eP§r§2 §r- Membrana de Phantom\n§2===============================")
-		.button("Back", "textures/gui/newgui/undo")
-
-	form.show(player).then((response) => {
-		if (response.canceled) return;
-
-		if (response.selection === 0) {
-			showRecipesMenu(player); // Volta
-			pagesound(player)
-		}
-	});
-}
 //=========================
-// RECEITAS FIM
-//=======================
+const RECIPES = [
+	{
+		name: "Receitas Gerais",
+		title: "Gerais",
+		text: [
+			section("'Serraria'", "colocando toras e blocos de madeira no CORTADOR DE PEDRAS você faz todas as receitas de madeira mais rápido"),
+			section("Desmontar itens", "No Cortador de Pedras vanilla você 'desmonta' itens como ferramentas, armaduras, escadas, portas, lajes, botões, cercas, placas de pressão, alçapões etc. e recebe parte do material usado"),
+			section("Carne podre em couro", "Você transforma Carne Podre em Couro na fornalha!\nÉ só pôr a carne podre na fornalha com carvão e esperar"),
+			section("Blocos brutos no alto-forno", "você funde Blocos de Minério Bruto no Alto-Forno, mais rápido"),
+			section("Bloco de carvão", "Você faz bloco de carvão com Carvão Vegetal"),
+			section("Carvão de bambu", "blocos de bambu viram carvão vegetal, como as outras toras"),
+			section("Linha fácil", "Você faz linha com uma trepadeira"),
+			section("Discos de música", "Todos os discos de música podem ser feitos com Ardósia Profunda Polida e Corantes.\nMenos o disco 'Relic', que usa Netherrack"),
+			section("Pólvora", "Você faz pólvora com carvão vegetal e Espinho de Enxofre na mesa de trabalho"),
+		],
+	},
+	{
+		name: "Armaduras para Cavalo",
+		title: "Armadura para Cavalo",
+		text: join(
+			"Você faz armaduras para cavalo de ferro, cobre, ouro e diamante\n(ainda dá para melhorar para netherite na mesa de ferraria)\ne pode desmontá-las no cortador de pedras",
+			crafting(
+				[["", "", "1"], ["1", "2", "1"], ["1", "", "1"]],
+				"",
+				["1", "Metal (ferro, cobre...)"],
+				["2", "Couro"],
+			),
+		),
+	},
+	{
+		name: "Armaduras para Náutilo",
+		title: "Armadura para Náutilo",
+		text: join(
+			"Você faz armaduras para náutilo de ferro, cobre, ouro e diamante\n(ainda dá para melhorar para netherite na mesa de ferraria)\ne pode desmontá-las no cortador de pedras",
+			crafting(
+				[["1", "1", "1"], ["1", "", "1"], ["", "1", "1"]],
+				"",
+				["1", "Metal (ferro, cobre...)"],
+			),
+		),
+	},
+	{
+		// Submenu: um botão para cada receita de cobre
+		name: "Receitas de Cobre",
+		children: [
+			{
+				name: "Etiqueta",
+				text: join(
+					"Você faz etiquetas com cobre no lugar de ferro",
+					crafting([["C"], ["P"], ["P"]], "1x Etiqueta", ["C", "Lingote de Cobre"], ["P", "Papel"]),
+				),
+			},
+			{
+				name: "Trilho Elétrico",
+				text: join(
+					"Você faz trilhos com lingotes de cobre no lugar de lingotes de ouro",
+					crafting(
+						[["1", "", "1"], ["1", "2", "1"], ["1", "3", "1"]],
+						"6x Trilho Elétrico",
+						["1", "Lingote de Cobre"], ["2", "Graveto"], ["3", "Redstone"],
+					),
+				),
+			},
+			{
+				name: "Trilho Ativador",
+				text: join(
+					"Você faz trilhos com lingotes de cobre no lugar de lingotes de ferro",
+					crafting(
+						[["1", "2", "1"], ["1", "3", "1"], ["1", "2", "1"]],
+						"6x Trilho Ativador",
+						["1", "Lingote de Cobre"], ["2", "Graveto"], ["3", "Tocha de Redstone"],
+					),
+				),
+			},
+			{
+				name: "Trilho Detector",
+				text: join(
+					"Você faz trilhos com lingotes de cobre no lugar de lingotes de ferro",
+					crafting(
+						[["1", "", "1"], ["1", "3", "1"], ["1", "2", "1"]],
+						"6x Trilho Detector",
+						["1", "Lingote de Cobre"], ["2", "Redstone"], ["3", "Placa de Pressão de Pedra"],
+					),
+				),
+			},
+		],
+	},
+	{
+		name: "Escadas Melhores",
+		text: join(
+			"Todas as escadas vanilla ficam mais baratas e podem ser desmontadas",
+			crafting([["1", ""], ["1", "1"]], "4x Escadas", ["1", "Qualquer bloco"]),
+			`§aDesmontar:§f\n${grid([["1", "1"], ["1", "1"]], "3x Blocos")}\n${legend(["1", "Qualquer escada"])}`,
+		),
+	},
+	{
+		name: "Flecha de 'Ferro'",
+		text: join(
+			"Você faz o dobro de flechas usando lingote de ferro no lugar de sílex",
+			crafting(
+				[["1"], ["2"], ["3"]],
+				"8x Flecha",
+				["1", "Lingote de Ferro"], ["2", "Graveto"], ["3", "Pena"],
+			),
+		),
+	},
+	{
+		name: "Élitra",
+		// Lista = várias seções com divider entre elas
+		text: [
+			"§eÉlitra:§r\nVocê pode fazer élitras, mas a receita é de fim de jogo: ainda é preciso ir ao End para fazer uma",
+			join(
+				"§e1.§f Primeiro você precisa de 2 Asas de Phantom",
+				crafting(
+					[["M", "C", ""], ["M", "M", "C"], ["", "M", "C"]],
+					"1x Asas de Phantom",
+					["M", "Membrana de Phantom"], ["C", "Fruta do Coro Estourada"],
+				),
+			),
+			join(
+				"§e2.§f Depois você precisa de 1 Creme de Magma",
+				crafting(
+					[["", "M", ""], ["P", "", "P"]],
+					"1x Élitra",
+					["M", "Creme de Magma"], ["P", "Membrana de Phantom"],
+				),
+			),
+		],
+	},
+];
+
+//=========================
+// MENUS (não precisa mexer aqui para adicionar conteúdo)
+//=========================
+export function showRecipesMenu(player) {
+	showMenu(player, "Receitas", RECIPES, () => showMainMenu(player), "Voltar ao Menu");
+}
+
+/** Menu com botões. Itens com "children" abrem um submenu, itens com "text" abrem uma página. */
+function showMenu(player, title, items, onBack, backLabel = "Voltar") {
+	const form = createPage(player, title);
+
+	form.label("Escolha:");
+	form.divider();
+
+	for (const item of items) {
+		form.button(item.name, () => {
+			pagesound(player);
+			const backHere = () => showMenu(player, title, items, onBack, backLabel);
+			goTo(form, () =>
+				item.children
+					? showMenu(player, item.title ?? item.name, item.children, backHere)
+					: showPage(player, item, backHere)
+			);
+		});
+	}
+
+	form.divider();
+	form.button(backLabel, () => {
+		pagesound(player);
+		goTo(form, onBack);
+	});
+
+	openPage(form);
+}
+
+function showPage(player, item, onBack) {
+	const form = createPage(player, item.title ?? item.name);
+
+	const sections = Array.isArray(item.text) ? item.text : [item.text];
+	sections.forEach((section, i) => {
+		form.label(section);
+		if (i < sections.length - 1) form.divider();
+	});
+
+	form.divider();
+	form.button("Voltar", () => {
+		pagesound(player);
+		goTo(form, onBack);
+	});
+
+	openPage(form);
+}

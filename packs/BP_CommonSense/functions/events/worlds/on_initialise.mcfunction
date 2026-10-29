@@ -14,6 +14,7 @@ scoreboard objectives add bv:horse_cam_toggle dummy
 scoreboard objectives add bv:bow_cam_toggle dummy
 scoreboard objectives add bv:dlight_hotbar_toggle dummy
 scoreboard objectives add bv:give_guidebook dummy
+scoreboard objectives add bv:java_saturation_toggle dummy
 scoreboard players add .Initialised bv:world 0
 scoreboard players add .Initialised bv:dylight 0
 scoreboard players add .Initialised bv:breakleaves 0
@@ -27,6 +28,7 @@ scoreboard players add .Initialised bv:horse_cam_toggle 0
 scoreboard players add .Initialised bv:bow_cam_toggle 0
 scoreboard players add .Initialised bv:dlight_hotbar_toggle 0
 scoreboard players add .Initialised bv:give_guidebook 0
+scoreboard players add .Initialised bv:java_saturation_toggle 0
 execute as @e[type=horse] run tag @s add mount
 execute as @e[type=donkey] run tag @s add mount
 execute as @e[type=mule] run tag @s add mount

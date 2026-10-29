@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:green_wool_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:green_wool_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:green_wool","count":3}}}

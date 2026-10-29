@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:chiseled_sulfur_nback"},"tags":["crafting_table"],"ingredients":[{"item":"minecraft:chiseled_sulfur"}],"result":[{"item":"minecraft:sulfur_slab","count":2}]}}

@@ -33,7 +33,7 @@ system.runInterval(() => {
 
         if (player.isSneaking && !wasSneaking) {
             const last = lastSneakTick.get(player.id) || 0;
-            if (tick - last <= 12) {
+            if (tick - last <= 18) {
                 swapOffhand(player);
             }
             lastSneakTick.set(player.id, tick);

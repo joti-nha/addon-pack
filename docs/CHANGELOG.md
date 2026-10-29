@@ -89,6 +89,14 @@ Nada desta versão foi testado no jogo.
 - **Moldura do zoom da Relíquia** não cobria a tela: a lente tinha altura `100%y` (a própria altura, ou seja zero) e as bordas, imagem de 1 pixel, mantinham a proporção 1:1 e viravam quadrados no meio da altura. A lente agora tem a altura da tela e as bordas esticam (`keep_ratio` falso).
 - **Mochilas do OTG em primeira pessoa** ainda fora do lugar: com qualquer item na mão o A&S gira o braço para a pose de segurar dele, diferente da do jogo base para a qual o OTG acertou a mochila. `ferramentas/mochila_1p.py` calcula a pose que compensa o braço do A&S e grava as 4 animações de primeira pessoa (mochila, creeper, enderman, raposa-do-ártico) com os mesmos nomes no Compat; sem o Compat o OTG usa as dele.
 
+### Common Sense 1.8.1 (2026-10-29)
+- **Common Sense 1.7.1 → 1.8.1** (pedido do João: a versão nova funciona com o Actions & Stuff). Os UUIDs continuam os da 1.7.1, para a importação atualizar o pack nos mundos que já existem (a 1.8.1 trocou os UUIDs). Trinkets ligados, como antes.
+- O que veio da 1.8.1: guia, receitas, recursos e configurações na tela nova do `@minecraft/server-ui` 2.2.0; Bola de Fogo (carga de fogo na mesa de trabalho); coelho domável (osso); chifre de cabra chamado "Pet Horn" chama os pets; assistência de mira na câmera de ombro; opção de saturação do Java; a Bola de Fogo já vem com anexo do A&S. O item de configurações (`bv:config`) saiu: as configurações abrem pelo guia, só para o OP (o primeiro jogador do mundo vira OP sozinho). As receitas de armadura de cobre e a poção de retorno saíram, e o Espelho Mágico não aparece mais em portais em ruínas.
+- Reaplicado do modpack: tabelas de saque unidas com o Better on Bedrock (mina abandonada, bastião, pirâmide do deserto, masmorra, escambo dos piglins; o portal em ruínas do BoB volta ao original), padrões das configurações (cura da fogueira, não ferir pets do dono e mão secundária melhor ligados), jogador e `tick.json` unidos, primeira entrada sem guia e sem Editor de Visão, anexos com `parent_setup` do A&S, `inventory_screen` na base (a 1.8.1 só tem nos subpacks, que saem pelo `sem_opcoes.py`) e as correções de API dos scripts que a 1.8.1 não mudou.
+- Menus novos traduzidos (guia, receitas, recursos, configurações, gerenciar OPs, câmera, Chifre dos Pets) e nomes novos no `pt_BR.lang`. A Bola de Fogo usa a chave de tradução no nome.
+- Anexos 2D do A&S refeitos (`anexos_2d.py`): saíram os do item de configurações e do bloco de luz (agora invisível).
+- Fica pendente: o coelho novo do Common Sense também é redefinido pelo Better on Bedrock (como o urso-polar), e só o pack mais alto vale.
+
 ## 0.5
 
 Nada desta versão foi testado no jogo.

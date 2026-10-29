@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:disassemble_netherite_hoe"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:netherite_hoe"}],"result":[{"item":"minecraft:netherite_ingot","count":1}]}}

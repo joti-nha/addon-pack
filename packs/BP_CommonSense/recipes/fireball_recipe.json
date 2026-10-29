@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:fireball_recipe"},"tags":["crafting_table"],"ingredients":[{"item":"gunpowder","count":1},{"item":"blaze_powder","count":1},{"item":"charcoal","count":1},{"item":"ghast_tear","count":1}],"result":{"item":"bv:fireball","count":3}}}

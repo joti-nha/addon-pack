@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:orange_wool_stairnback"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:orange_wool_stairs"}},"pattern":["PP","PP"],"result":{"item":"minecraft:orange_wool","count":3}}}

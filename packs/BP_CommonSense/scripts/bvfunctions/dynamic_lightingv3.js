@@ -5,8 +5,8 @@ import { world, system, EquipmentSlot, BlockPermutation, EntityComponentTypes } 
 // =====================
 const lightItems5 = ["minecraft:ominous_trial_key", "minecraft:glow_ink_sac", "minecraft:glow_lichen", "minecraft:magma", "minecraft:redstone_torch", "minecraft:glow_berries", "minecraft:glow_frame", "minecraft:enchanted_golden_apple"];
 const lightItems7 = ["minecraft:soul_torch", "minecraft:sea_pickle", "minecraft:glowstone_dust", "minecraft:blaze_powder"];
-const lightItems9 = ["minecraft:torch", "minecraft:soul_lantern", "minecraft:lava_bucket", "minecraft:blaze_rod", "minecraft:end_rod", "minecraft:shroomlight"];
-const lightItems11 = ["minecraft:lantern", "minecraft:waxed_oxidized_copper_lantern", "minecraft:waxed_weathered_copper_lantern", "minecraft:oxidized_copper_lantern", "minecraft:weathered_copper_lantern", "minecraft:copper_torch", "minecraft:soul_campfire"];
+const lightItems9 = ["minecraft:soul_lantern", "minecraft:lava_bucket", "minecraft:blaze_rod", "minecraft:end_rod", "minecraft:shroomlight"];
+const lightItems11 = ["minecraft:torch", "minecraft:lantern", "minecraft:waxed_oxidized_copper_lantern", "minecraft:waxed_weathered_copper_lantern", "minecraft:oxidized_copper_lantern", "minecraft:weathered_copper_lantern", "minecraft:copper_torch", "minecraft:soul_campfire"];
 const lightItems13 = ["minecraft:copper_lantern", "minecraft:exposed_copper_lantern", "minecraft:waxed_copper_lantern", "minecraft:waxed_exposed_copper_lantern", "minecraft:campfire", "minecraft:glowstone", "minecraft:sea_lantern", "minecraft:verdant_froglight", "minecraft:pearlescent_froglight", "minecraft:ochre_froglight"];
 const lightItems15 = ["minecraft:nether_star"];
 const lanternItems = ["minecraft:lantern", "minecraft:soul_lantern", "minecraft:copper_lantern", "minecraft:exposed_copper_lantern", "minecraft:oxidized_copper_lantern", "minecraft:waxed_copper_lantern", "minecraft:waxed_exposed_copper_lantern", "minecraft:waxed_weathered_copper_lantern", "minecraft:weathered_copper_lantern", "minecraft:weathered_lantern"];
@@ -36,19 +36,23 @@ function hasLanternInHotbar(player) {
         if (!inv) return false;
         for (let i = 0; i < 9; i++) {
             const slot = inv.getSlot(i);
-            // Verifica com segurança se o slot existe e tem item antes de ler o typeId
             if (slot?.hasItem() && lanternItems.includes(slot.typeId)) return true;
         }
     } catch (e) { }
     return false;
 }
 
+// ATUALIZADO: Usando includes() e setType() para garantir que a luz vanilla seja deletada
 function clearLightBlock(dimension, pos) {
     if (!pos) return;
     try {
         const block = dimension.getBlock(pos);
-        if (block && block.typeId === "bv:light_source") {
-            block.setPermutation(BlockPermutation.resolve("minecraft:air"));
+        if (block) {
+            const type = block.typeId;
+            // Se for o customizado ou QUALQUER variante do light_block vanilla, ele apaga
+            if (type === "bv:light_source" || type.includes("light_block")) {
+                block.setType("minecraft:air");
+            }
         }
     } catch (e) { }
 }
@@ -77,15 +81,12 @@ system.runInterval(() => {
                 continue;
             }
 
-            // --- CORREÇÃO DO ERRO FATAL AQUI ---
             const equip = player.getComponent(EntityComponentTypes.Equippable);
 
             const mainSlot = equip?.getEquipmentSlot(EquipmentSlot.Mainhand);
-            // Só tenta ler o typeId se o slot acusar que tem um item dentro
             const mainType = mainSlot?.hasItem() ? mainSlot.typeId : undefined;
 
             const offSlot = equip?.getEquipmentSlot(EquipmentSlot.Offhand);
-            // Faz o mesmo para a mão secundária
             const offType = offSlot?.hasItem() ? offSlot.typeId : undefined;
 
             let targetLight = Math.max(getLightLevel(mainType), getLightLevel(offType));
@@ -138,9 +139,41 @@ system.runInterval(() => {
                     const block = dimension.getBlock(tryPos);
 
                     if (block && !block.isLiquid) {
-                        if (block.typeId === "minecraft:air" || block.typeId === "bv:light_source") {
+                        const type = block.typeId;
+
+                        // ATUALIZADO: Uso de includes() também na hora de validar o espaço para colocar a luz
+                        if (type === "minecraft:air" || type === "bv:light_source" || type.includes("light_block")) {
                             try {
-                                const lightPerm = BlockPermutation.resolve("bv:light_source", { "bv:level": currentLight });
+                                let isNearFence = false;
+
+                                for (let dx = -1; dx <= 1; dx++) {
+                                    for (let dy = -1; dy <= 1; dy++) {
+                                        for (let dz = -1; dz <= 1; dz++) {
+                                            if (dx === 0 && dy === 0 && dz === 0) continue;
+
+                                            try {
+                                                const checkBlock = dimension.getBlock({ x: tryPos.x + dx, y: tryPos.y + dy, z: tryPos.z + dz });
+                                                if (checkBlock) {
+                                                    const tId = checkBlock.typeId;
+                                                    if (tId.includes("fence") || tId.includes("wall") || tId.includes("pane") || tId === "minecraft:iron_bars") {
+                                                        isNearFence = true;
+                                                        break;
+                                                    }
+                                                }
+                                            } catch (e) { }
+                                        }
+                                        if (isNearFence) break;
+                                    }
+                                    if (isNearFence) break;
+                                }
+
+                                let lightPerm;
+                                if (isNearFence) {
+                                    lightPerm = BlockPermutation.resolve("minecraft:light_block", { "block_light_level": currentLight });
+                                } else {
+                                    lightPerm = BlockPermutation.resolve("bv:light_source", { "bv:level": currentLight });
+                                }
+
                                 block.setPermutation(lightPerm);
                                 placedPos = tryPos;
                                 break;

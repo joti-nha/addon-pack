@@ -35,3 +35,7 @@ commonsense.guide.about.title=About JFAddons
 commonsense.guide.about.body=Common Sense is developed by JFAddons studio.\n\nFollow the updates and new YouTube videos to stay informed about news and tutorials!
 commonsense.guide.btn.back=Back
 commonsense.guide.btn.close=Close
+tile.bv:display_frame.name=Display Frame
+item.bv:fireball=Fireball
+item.spawn_egg.entity.bv:fireball_projectile.name=Spawn fireball
+entity.bv:fireball_projectile.name=fireball

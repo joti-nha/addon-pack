@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:fireball_b_recipe"},"tags":["crafting_table"],"ingredients":[{"item":"fire_charge","count":1},{"item":"ghast_tear","count":1}],"result":{"item":"bv:fireball","count":1}}}
