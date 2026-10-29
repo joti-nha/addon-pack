@@ -15,7 +15,9 @@ O icone vira um modelo de faixas de 1 pixel (uma por trecho continuo de cada lin
 texture_meshes nao aparece (ver modpack-armas-anexos).
 Ficam de fora: itens com anexo (de qualquer pack), armaduras e itens vestiveis, arcos/bestas/escudos e o que tem
 animacao de uso propria, blocos escondidos do inventario e blocos com modelo proprio (nao cubo).
-Os anexos so valem com o A&S ativo (campo "item"), como os do Cataclysmical.
+Os anexos so valem com o A&S ativo (campo "item"), como os do Cataclysmical. Item com o mesmo nome de uma entidade
+(peixes, flechas, Boneco de Treino) ganha '.ap' no identificador do anexo: com o nome igual, o anexo toma o lugar da
+entidade no mundo.
 
 Grava em packs/RP_AddonPack_Compat: attachables/as_2d/<namespace>/, models/entity/ap_2d_*.geo.json e
 textures/ap/blocos/ (texturas de blocos com faces diferentes). Rode de novo depois de atualizar um addon ou o A&S.
@@ -76,8 +78,10 @@ def anexos_existentes():
     for p in glob.glob(os.path.join(PACKS, 'RP_*', 'attachables', '**', '*.json'), recursive=True):
         if p.startswith(SAIDA): continue
         j = tentar(p)
-        try: ids.add(j['minecraft:attachable']['description']['identifier'])
-        except (TypeError, KeyError): pass
+        try: d = j['minecraft:attachable']['description']
+        except (TypeError, KeyError): continue
+        ids.add(d['identifier'])
+        ids.update(d.get('item') or {})  # anexo com outro nome ligado ao item pelo campo "item"
     return ids
 
 
@@ -213,7 +217,7 @@ def anexo(molde, ident, geo, tex):
     d = a['minecraft:attachable']['description']
     for k in ('initialize', 'pre_animation'):
         if k in d['scripts']: d['scripts'][k] = so_na_mao(d['scripts'][k])
-    d['identifier'] = ident
+    d['identifier'] = cata.id_anexo(ident)
     d['item'] = {ident: 'c.owning_entity -> v.actions_and_stuff;'}
     d['geometry'] = {'default': geo}
     d['textures'] = {'default': tex, 'enchanted': 'textures/misc/enchanted_item_glint'}

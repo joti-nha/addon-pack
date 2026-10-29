@@ -22,26 +22,34 @@ export const FIXED_TICKS = {
    "minecraft:golden_spear": 19,
    "minecraft:diamond_spear": 21,
    "minecraft:netherite_spear": 23,
+   // [Addon Pack] Claymores do Dungeons: sem entrada caiam no slot de espada (12); o Joao achou lento (2026-10-29)
+   "dungeons:claymore": 10,
+   "dungeons:broadsword": 10,
+   "dungeons:great_axeblade": 10,
+   "dungeons:heartstealer": 10,
+   "dungeons:obsidian_claymore": 10,
+   "dungeons:starless_night": 10,
+   // [fim Dungeons]
    // [Addon Pack] Cataclysmical: resfriamento por tamanho (20 / velocidade de ataque Java). Fonte: cata_cooldowns
-   // adaga: 8 ticks - menor que uma espada comum
-   "mnra_cata:plasm_dagger": 8,
-   // espada: 12 ticks - tamanho de espada comum (= espada Java)
-   "mnra_cata:platinum_sword": 12,
-   "mnra_cata:verdant_sword": 12,
-   "mnra_cata:star_sword": 12,
-   "mnra_cata:twilight_edge": 12,
-   "mnra_cata:underlight": 12,
-   "mnra_cata:moonsickle": 12,
-   // espada_grande: 16 ticks - lamina lendaria/ampliada, mas de uma mao
-   "mnra_cata:blazing_excalibur": 16,
-   "mnra_cata:crescent_carver": 16,
-   "mnra_cata:eternity_edge": 16,
-   "mnra_cata:moonlight": 16,
-   "mnra_cata:sunlight": 16,
-   "mnra_cata:verdant_blade": 16,
-   "mnra_cata:phoenix_blade": 16,
-   "mnra_cata:star_fallen": 16,
-   "mnra_cata:star_fracture": 16,
+   // adaga: 6 ticks - menor que uma espada comum
+   "mnra_cata:plasm_dagger": 6,
+   // espada: 9 ticks - um pouco mais rapida que a espada do jogo (12); o Joao achou 12 lento (2026-10-29)
+   "mnra_cata:platinum_sword": 9,
+   "mnra_cata:verdant_sword": 9,
+   "mnra_cata:star_sword": 9,
+   "mnra_cata:twilight_edge": 9,
+   "mnra_cata:underlight": 9,
+   "mnra_cata:moonsickle": 9,
+   // espada_grande: 12 ticks - lamina lendaria/ampliada, mas de uma mao (= espada do jogo)
+   "mnra_cata:blazing_excalibur": 12,
+   "mnra_cata:crescent_carver": 12,
+   "mnra_cata:eternity_edge": 12,
+   "mnra_cata:moonlight": 12,
+   "mnra_cata:sunlight": 12,
+   "mnra_cata:verdant_blade": 12,
+   "mnra_cata:phoenix_blade": 12,
+   "mnra_cata:star_fallen": 12,
+   "mnra_cata:star_fracture": 12,
    // machado: 22 ticks - = machado de ferro do JavaCombat
    "mnra_cata:verdant_hatchet": 22,
    "mnra_cata:floret_hatchet": 22,
@@ -57,23 +65,23 @@ export const FIXED_TICKS = {
    // alabarda_foice: 26 ticks - arma de haste grande: machado de ferro + 4
    "mnra_cata:platinum_halberd": 26,
    "mnra_cata:divine_scythe_of_heaven": 26,
-   // montante_pesado: 29 ticks - montante de material fraco: machado de madeira/pedra + 4
-   "mnra_cata:wooden_greatsword": 29,
-   "mnra_cata:stone_greatsword": 29,
-   "mnra_cata:copper_greatsword": 29,
-   // montante_medio: 26 ticks - montante de ferro/platina: machado de ferro + 4
-   "mnra_cata:iron_greatsword": 26,
-   "mnra_cata:platinum_greatsword": 26,
-   // montante_nobre: 24 ticks - montante de ouro/diamante/netherite e lendarios: machado de diamante + 4
-   "mnra_cata:gold_greatsword": 24,
-   "mnra_cata:diamond_greatsword": 24,
-   "mnra_cata:netherite_greatsword": 24,
-   "mnra_cata:stellar_greatsword": 24,
-   "mnra_cata:phantasma_greatsword": 24,
-   "mnra_cata:ecliptic_greatsword": 24,
-   "mnra_cata:exodius_greatsword": 24,
-   "mnra_cata:verdant_greatsword": 24,
-   "mnra_cata:sun_striker_claymore": 24,
+   // montante_pesado: 20 ticks - montante de material fraco
+   "mnra_cata:wooden_greatsword": 20,
+   "mnra_cata:stone_greatsword": 20,
+   "mnra_cata:copper_greatsword": 20,
+   // montante_medio: 18 ticks - montante de ferro/platina
+   "mnra_cata:iron_greatsword": 18,
+   "mnra_cata:platinum_greatsword": 18,
+   // montante_nobre: 16 ticks - montante de ouro/diamante/netherite e lendarios
+   "mnra_cata:gold_greatsword": 16,
+   "mnra_cata:diamond_greatsword": 16,
+   "mnra_cata:netherite_greatsword": 16,
+   "mnra_cata:stellar_greatsword": 16,
+   "mnra_cata:phantasma_greatsword": 16,
+   "mnra_cata:ecliptic_greatsword": 16,
+   "mnra_cata:exodius_greatsword": 16,
+   "mnra_cata:verdant_greatsword": 16,
+   "mnra_cata:sun_striker_claymore": 16,
    // maca: 33 ticks - = maca do Java/JavaCombat (0,6 de velocidade)
    "mnra_cata:stellar_mace": 33,
    "mnra_cata:anchor": 33,

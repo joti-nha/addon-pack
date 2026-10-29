@@ -9,13 +9,21 @@ const RELIC = "panascais_caves:seers_relic";
 const ZOOM_FOV = 25;          // campo de visao com zoom (o normal e ~70)
 const zooming = new Set();    // ids de jogadores em zoom
 // Borda da luneta: o hud_screen unificado mostra a moldura (textures/ui/spyglass_scope) enquanto o titulo e esta marca;
-// titulos que comecam com "!" nao aparecem na tela.
+// titulos que comecam com "!" nao aparecem na tela. O JavaCombat troca o titulo a cada tick (barra de recarga);
+// com a etiqueta SCOPE_TAG ele para enquanto dura o zoom.
 const SCOPE_MARK = "!unified:luneta";
+const SCOPE_TAG = "unified:luneta";
 
 function setScope(player, on) {
   try {
-    if (on) player.onScreenDisplay.setTitle(SCOPE_MARK, { fadeInDuration: 0, stayDuration: 72000, fadeOutDuration: 0 });
-    else { player.onScreenDisplay.setTitle("!", { fadeInDuration: 0, stayDuration: 1, fadeOutDuration: 0 }); player.onScreenDisplay.clearTitle(); }
+    if (on) {
+      player.addTag(SCOPE_TAG);
+      player.onScreenDisplay.setTitle(SCOPE_MARK, { fadeInDuration: 0, stayDuration: 72000, fadeOutDuration: 0 });
+    } else {
+      player.removeTag(SCOPE_TAG);
+      player.onScreenDisplay.setTitle("!", { fadeInDuration: 0, stayDuration: 1, fadeOutDuration: 0 });
+      player.onScreenDisplay.clearTitle();
+    }
   } catch (e) { }
 }
 
@@ -77,6 +85,7 @@ function darItensIniciais(player) {
   darUmaVez(player, MOCHILA, "unified:mochila_dada", false);
 }
 world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
+  if (!zooming.has(player.id)) try { player.removeTag(SCOPE_TAG); } catch (e) { } // saiu do mundo com o zoom ligado
   if (initialSpawn) system.runTimeout(() => darItensIniciais(player), 100);
 });
 system.runTimeout(() => { for (const p of world.getAllPlayers()) darItensIniciais(p); }, 200);

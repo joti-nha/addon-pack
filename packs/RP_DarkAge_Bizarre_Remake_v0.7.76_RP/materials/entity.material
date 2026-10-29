@@ -852,7 +852,6 @@
       ],
       "depthFunc": "LessEqual"
     },
-    "armor:entity_alphatest_change_color": {},
     "zyrdrt:entity": {
       "+states": [
         "DisableColorWrite",
@@ -2321,10 +2320,8 @@
     "bell:entity": {},
     "blaze_head:entity_emissive_alpha": {},
     "blaze_body:entity_emissive": {},
-    "boat:entity": {},
     "chalkboard:entity": {},
     "chest:entity": {},
-    "chicken:entity": {},
     "chicken_legs:entity_alphatest": {},
     "cow:entity": {},
     "creeper:entity": {},
@@ -2390,7 +2387,6 @@
     "player_alphatest:entity_alphatest": {},
     "polar_bear:entity": {},
     "panda:entity": {},
-    "rabbit:entity": {},
     "sheep:entity_change_color": {},
     "shulker:entity_alphatest": {},
     "shulker_box:entity_alphatest": {},
