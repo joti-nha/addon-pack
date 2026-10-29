@@ -14,7 +14,7 @@ Grava em packs/RP_AddonPack_Compat (attachables/as_compat/mnra_cata, models/enti
 animations/ap_as_escala.animation.json e render_controllers/ap_as_item_animado.render_controllers.json)
 e acrescenta as etiquetas que faltam no BP do Cataclysmical. Rode de novo depois de atualizar o A&S ou o Cataclysmical.
 """
-import copy, glob, json, math, os, sys
+import copy, functools, glob, json, math, os, sys
 import numpy as np
 from PIL import Image
 
@@ -42,6 +42,22 @@ VIRAR = {'verdant_blade': True}
 
 
 def ler(caminho): return json.load(open(caminho, encoding='utf-8'))
+
+
+@functools.lru_cache(None)
+def entidades():
+    """Identificadores das entidades de cliente dos RPs. Um anexo com o mesmo identificador de uma entidade toma o
+    lugar dela no mundo (o Boneco de Treino do Dungeons e os peixes do Aquaculture viravam o icone do item)."""
+    ids = set()
+    for p in glob.glob(os.path.join(PACKS, 'RP_*', 'entity', '**', '*.json'), recursive=True):
+        try: ids.add(json.load(open(p, encoding='utf-8-sig'))['minecraft:client_entity']['description']['identifier'])
+        except (ValueError, UnicodeDecodeError, KeyError, TypeError): pass
+    return ids
+
+
+def id_anexo(ident):
+    """Identificador do anexo: o do item, ou com '.ap' quando ha entidade com esse nome (o campo "item" liga ao item)."""
+    return ident + '.ap' if ident in entidades() else ident
 
 
 def gravar(caminho, obj):
@@ -173,7 +189,9 @@ def geo_bloco(ident, g0, molde_geo, img, quadros, cabeca):
             c['origin'] = [round(a + x, 4) for a, x in zip(c['origin'], delta)]
             if 'pivot' in c: c['pivot'] = [round(a + x, 4) for a, x in zip(c['pivot'], delta)]
         novos.append(b)
-    return {'description': {'identifier': ident, 'texture_width': larg, 'texture_height': alt,
+    # textura animada: a altura declarada e a da faixa inteira de quadros (os UV continuam no primeiro quadro) e o
+    # uv_anim so desloca um quadro por vez; com a altura de um quadro e escala 1/quadros a lamina saia listrada
+    return {'description': {'identifier': ident, 'texture_width': larg, 'texture_height': alt * quadros,
                             'visible_bounds_width': 4, 'visible_bounds_height': 4, 'visible_bounds_offset': [0, 1, 0]},
             'bones': novos}, comp
 
@@ -202,7 +220,7 @@ def geo_icone(ident, molde_geo, img):
 def anexo(molde, ident, geo, tex, escala=None, quadros=None):
     a = copy.deepcopy(molde)
     d = a['minecraft:attachable']['description']
-    d['identifier'] = ident
+    d['identifier'] = id_anexo(ident)
     d['item'] = {ident: 'c.owning_entity -> v.actions_and_stuff;'}
     d['geometry'] = {'default': geo}
     d['textures'] = {'default': tex, 'enchanted': 'textures/misc/enchanted_item_glint'}
@@ -281,7 +299,7 @@ def main():
     rc = {'geometry': 'Geometry.default', 'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
           'textures': ['Texture.default', 'Texture.enchanted'],
           'uv_anim': {'offset': [0, 'math.mod(math.floor(q.life_time * 20 / v.ap_ticks), v.ap_quadros) / v.ap_quadros'],
-                      'scale': [1, '1 / v.ap_quadros']}}
+                      'scale': [1, 1]}}
     gravar(os.path.join(COMPAT, 'render_controllers', 'ap_as_item_animado.render_controllers.json'),
            {'format_version': '1.10.0', 'render_controllers': {'controller.render.ap.as_item_animado': rc}})
     print(f'armas do Cataclysmical: {total} anexos, {len(novas)} modelos')

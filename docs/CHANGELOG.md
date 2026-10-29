@@ -74,6 +74,16 @@ Nada desta versão foi testado no jogo.
 - Livro de Progresso RPG e Livro do Viajante (Unified Core).
 - Itens de configuração, papel de missão e diário perdido que o Better on Bedrock dava nos primeiros passos.
 
+### Correções do teste do João (2026-10-28)
+- **Armaduras pretas e piscando** (todas as que usam o material `armor`; as do Mowzie, com `entity_alphatest`, estavam certas): o `materials/entity.material` unificado (igual em 9 packs) definia `armor` duas vezes, como `entity_alphatest_change_color` (do A&S) e como `entity_alphatest` (cópia antiga do jogo, do DarkAge). Ficou só `armor:entity_alphatest`, o mesmo das armaduras do Mowzie. As outras definições repetidas (`boat`, `chicken`, `rabbit`) ficaram só com a versão `entity_alphatest` do A&S.
+- **Boneco de treino do Dungeons virava o ícone do item**, e o mesmo com outros 97 itens com entidade de mesmo nome (peixes do Aquaculture, flechas, totens do Dungeons): um anexo com o mesmo identificador de uma entidade toma o lugar dela no mundo. Os anexos gerados (`anexos_2d.py`, `anexos_cataclysm.py`) usam `<item>.ap` quando há entidade com esse nome; o campo `item` continua ligando ao item.
+- **Excalibur e as outras 5 armas animadas do Cataclysmical** com a textura bugada: o modelo declarava a altura de um quadro só, e o `uv_anim` passava do quadro. Agora a altura é a da tira inteira e o deslocamento é quadro/total.
+- **Mochilas do OTG na mão**: voltaram à animação original de primeira pessoa do OTG (de pé, no canto da tela).
+- **Manopla do Better on Bedrock** (amuletos do Nether, 10 variações) fora da mão: usa a posição de terceira pessoa.
+- **Relíquia dos Videntes**: a textura estava espelhada na horizontal (o fundo do retângulo trocado com a lente).
+- **Moldura do zoom da Relíquia não aparecia**: o JavaCombat troca o título da tela a cada tick (barra de recarga) e apagava a marca que mostra a moldura. Durante o zoom o jogador ganha a etiqueta `unified:luneta` e o JavaCombat não mexe no título.
+- **Recarga de ataque menor** (pedido do João): no Cataclysmical, adaga 8 → 6 ticks, espadas 12 → 9, espadas grandes 16 → 12, montantes 24/26/29 → 16/18/20 (Sun Striker 24 → 16). As 6 claymores do Dungeons (Claymore, Broadsword, Great Axeblade, Heartstealer, Claymore de Obsidiana, Noite sem Estrelas) caíam no valor da espada (12) e agora têm 10.
+
 ## 0.5
 
 Nada desta versão foi testado no jogo.

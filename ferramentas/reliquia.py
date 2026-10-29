@@ -45,10 +45,11 @@ def textura():
     return im
 
 
-def uv(lado, ponta_oeste, ponta_leste):
-    """Cubo deitado no eixo x: as 4 laterais usam `lado`, as pontas oeste (-x) e leste (+x) as outras regiões."""
+def uv(lado, ponta_x_menor, ponta_x_maior):
+    """Cubo deitado no eixo x: as 4 laterais usam `lado`, as pontas usam as outras regiões. No JSON do Bedrock o x é
+    espelhado (como no Blockbench): a face "east" fica no x menor e a "west" no x maior."""
     def r(n): u, v, w, h, _ = REGIOES[n]; return {'uv': [u, v], 'uv_size': [w, h]}
-    return {'north': r(lado), 'south': r(lado), 'up': r(lado), 'down': r(lado), 'west': r(ponta_oeste), 'east': r(ponta_leste)}
+    return {'north': r(lado), 'south': r(lado), 'up': r(lado), 'down': r(lado), 'east': r(ponta_x_menor), 'west': r(ponta_x_maior)}
 
 
 def geometria():
@@ -59,7 +60,9 @@ def geometria():
         'bones': [
             {'name': 'khq8d2kk', 'pivot': [0, 0, 0], 'binding': "c.item_slot=='torso'?'body':q.item_slot_to_bone_name(c.item_slot)"},
             {'name': 'khq8d2kk_2pak', 'parent': 'khq8d2kk', 'pivot': [0, 0, -5.25], 'cubes': [
+                # ocular de x -5 a 0: a ponta de dentro (x -5) fica no tubo maior, a do olho em x 0
                 {'origin': [-5, -1, -1], 'size': [5, 2, 2], 'pivot': [0, 0, 0], 'rotation': [0, -90, 0], 'uv': uv('ocular', 'fundo', 'olho')},
+                # tubo maior de x -11 a -5: a lente na ponta de fora (x -11), o aro onde entra a ocular
                 {'origin': [-11, -1, -1], 'size': [6, 2, 2], 'inflate': 0.1, 'pivot': [0, 0, 0], 'rotation': [0, -90, 0], 'uv': uv('corpo', 'lente', 'aro')},
             ]},
         ]}]}
@@ -87,8 +90,9 @@ def previa(caminho, tex, geo):
         defs = {
             'north': ((b[0], b[1], a[2]), (a[0] - b[0], 0, 0), (0, a[1] - b[1], 0), 0.8),
             'south': ((a[0], b[1], b[2]), (b[0] - a[0], 0, 0), (0, a[1] - b[1], 0), 0.8),
-            'west': ((a[0], b[1], a[2]), (0, 0, b[2] - a[2]), (0, a[1] - b[1], 0), 0.6),
-            'east': ((b[0], b[1], b[2]), (0, 0, a[2] - b[2]), (0, a[1] - b[1], 0), 0.6),
+            # x espelhado como no jogo: "east" no x menor, "west" no x maior
+            'east': ((a[0], b[1], a[2]), (0, 0, b[2] - a[2]), (0, a[1] - b[1], 0), 0.6),
+            'west': ((b[0], b[1], b[2]), (0, 0, a[2] - b[2]), (0, a[1] - b[1], 0), 0.6),
             'up': ((a[0], b[1], a[2]), (b[0] - a[0], 0, 0), (0, 0, b[2] - a[2]), 1.0),
             'down': ((a[0], a[1], b[2]), (b[0] - a[0], 0, 0), (0, 0, a[2] - b[2]), 0.5),
         }
