@@ -21,7 +21,7 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | DarkAge Bizarre Remake 0.7.76 | autor **não declarado** no manifest | |
 | JavaCombat 2.6.5 | autor **não declarado** no manifest | |
 | A&S Compatibility | pack de compatibilidade fornecido pelo usuário (autoria **não declarada**); versão 1.2 estendida neste projeto | |
-| CommonSense 1.7.1 | autor **não declarado** no manifest | |
+| CommonSense 1.8.1 | JFAddons (Jerry), segundo o guia do próprio addon | |
 | Improvised Guns 3.0.5 | autor **não declarado** no manifest | |
 | RnR v1.4 The Accursed | autor **não declarado** no manifest | |
 | Forsaken Grimoires | Addon Pack (camada própria; usa os pergaminhos e o sistema de varinhas do Forsaken Odyssey, sem copiar arquivos dele) | |

@@ -20,3 +20,6 @@ execute if score .Initialised bv:bow_cam_toggle matches 2 run execute as @a[tag=
 execute if score .Initialised bv:bow_cam_toggle matches 1 run execute as @a[tag=bv:bowcam] run tag @s remove bv:bowcam
 execute if score .Initialised bv:dlight_hotbar_toggle matches 2 run execute as @a[tag=!bv:dlight_hotbar] run tag @s add bv:dlight_hotbar
 execute if score .Initialised bv:dlight_hotbar_toggle matches 1 run execute as @a[tag=bv:dlight_hotbar] run tag @s remove bv:dlight_hotbar
+execute if score .Initialised bv:java_saturation_toggle matches 2 run execute as @a[tag=!bv:java_saturation_on] run tag @s add bv:java_saturation_on
+execute if score .Initialised bv:java_saturation_toggle matches 1 run execute as @a[tag=bv:java_saturation_on] run tag @s remove bv:java_saturation_on
+execute if score .Initialised bv:java_saturation_toggle matches 2 run gamerule naturalregeneration true

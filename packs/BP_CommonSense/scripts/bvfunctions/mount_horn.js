@@ -82,14 +82,6 @@ world.beforeEvents.playerInteractWithEntity.subscribe(event => {
 // LISTENER 2: CHAMAR A MONTARIA (Usar o item no ar sem agachar)
 // ====================================================================
 
-// ROTA A: Componente Customizado (Mais Rápido/Recomendado)
-system.beforeEvents.startup.subscribe((initEvent) => {
-    initEvent.itemComponentRegistry.registerCustomComponent("bv:mount_horn_use", {
-        onUse: (event) => {
-            handleHornUse(event.source);
-        }
-    });
-});
 
 // ROTA B: Evento Global (Rede de Segurança)
 world.afterEvents.itemUse.subscribe(event => {

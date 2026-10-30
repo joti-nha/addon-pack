@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:poplar_stripped_log_stairs"},"tags":["stonecutter"],"priority":1,"ingredients":[{"item":"minecraft:stripped_poplar_log"}],"result":{"item":"minecraft:poplar_stairs","count":4}}}

@@ -12,7 +12,7 @@
 		}
 	},
 	"header": {
-		"name": "Common Sense 1.7.1 BE",
+		"name": "Common Sense 1.8.1 BE",
 		"description": "Qol and others Fun Features",
 		"min_engine_version": [
 			1,
@@ -56,7 +56,7 @@
 		},
 		{
 			"module_name": "@minecraft/server-ui",
-			"version": "2.0.0"
+			"version": "2.2.0"
 		},
 		{
 			"uuid": "cb355f71-36ce-46da-a135-92db99634f8d",

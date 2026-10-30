@@ -12761,5 +12761,9 @@
   " Rare Maxmium Hunger: ": " Fome máxima do raro: ",
   " Rare Soul Consumption: 3.3/s": " Consumo de almas do raro: 3,3/s",
   " Rare Speed Boost: 40%%": " Aumento de velocidade do raro: 40%%",
-  " Rare: Replicates rare effect of copied Artefact": " Raro: repete o efeito raro do artefato copiado"
+  " Rare: Replicates rare effect of copied Artefact": " Raro: repete o efeito raro do artefato copiado",
+  "Fireball": "Bola de Fogo",
+  "fireball": "Bola de Fogo",
+  "Spawn fireball": "Gerar Bola de Fogo",
+  "Display Frame": "Moldura de Exibição"
 }

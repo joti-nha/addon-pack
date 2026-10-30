@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:poplar_fencenback"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:poplar_fence"}],"result":{"item":"minecraft:poplar_planks","count":3}}}

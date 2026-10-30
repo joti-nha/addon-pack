@@ -1,1 +1,0 @@
-{"format_version":"1.12","minecraft:recipe_brewing_mix":{"description":{"identifier":"bv:recall_potion_recipe"},"tags":["brewing_stand"],"input":"minecraft:potion","reagent":"minecraft:amethyst_shard","output":"bv:recall_potion"}}

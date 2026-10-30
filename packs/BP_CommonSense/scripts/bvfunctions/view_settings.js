@@ -8,18 +8,8 @@ import { ModalFormData } from '@minecraft/server-ui';
 const CAMERA_MODES = [
 	{ name: "Clear ('F5' unlocked)", tick: false, vanilla: true, command: `camera @s clear` },
 	{ name: "Third Person", tick: false, vanilla: true, command: `camera @s set minecraft:third_person` },
-	{ name: "Third Person(Front)", tick: false, vanilla: true, command: `camera @s set minecraft:third_person_front` },
-
-	// A MÁGICA ACONTECE AQUI: 
-	// 1. tick mudou para FALSE (Fim do lag de câmera!)
-	// 2. O comando agora chama o preset customizado, e o seu script vai preencher o número no final automaticamente.
 	{ name: "Shoulder View custom", tick: false, vanilla: false, command: `camera @s set bv:shoulder_cam_{DIST}` },
-
-	// Caso queira fazer o mesmo para o cavalo depois, crie um JSON para ele e mude o tick para false também.
-	// Por enquanto, mantive o seu comando original para não quebrar.
-	{ name: "Shoulder View(horse)", tick: false, vanilla: false, command: `camera @s set bv:shoulder_cam_6` },
-
-	{ name: "First Person", tick: false, vanilla: true, command: `camera @s set minecraft:first_person` },
+	{ name: "Shoulder View(horse)", tick: false, vanilla: false, command: `camera @s set bv:shoulder_cam_6` }
 ];
 
 const FEATURE_KEY_8 = "bv:view_respawn_toggle";
@@ -33,6 +23,10 @@ const DEFAULT_STATE_10 = false;
 
 const FEATURE_KEY_DIST = "bv:camera_distance";
 const DEFAULT_DIST = 2;
+
+// CONFIGURAÇÃO: Aim Assist
+const FEATURE_KEY_AIM = "bv:aim_assist_toggle";
+const DEFAULT_AIM = false;
 
 const VIEW_ITEM_ID = "bv:view";
 const playerCooldowns = new Map();
@@ -68,26 +62,40 @@ function getMainhandItem(player) {
 	}
 }
 
-// NOVA FUNÇÃO: Executa comandos com segurança sem quebrar o script
+// Executa comandos com segurança sem quebrar o script
 function safeCommand(player, cmd) {
 	try {
 		player.runCommand(cmd);
 	} catch (e) {
-		// Ignora silenciosamente se o comando falhar (ex: limpar uma câmera já limpa)
+		// Ignora silenciosamente se o comando falhar
 	}
+}
+
+// Centraliza a mudança de câmera e aplica o Aim Assist com 1 tick de atraso para evitar conflitos
+function applyCameraAndAimAssist(player, mode) {
+	// 1. Aplica a câmera imediatamente
+	if (mode.vanilla) safeCommand(player, "camera @s clear");
+
+	if (mode.command !== "camera @s clear") {
+		safeCommand(player, getResolvedCommand(player, mode));
+	}
+
+	// 2. Aplica o Aim Assist com 1 tick de atraso para garantir que a câmera já foi processada pela engine
+	system.runTimeout(() => {
+		if (!player.isValid) return;
+
+		const aimAssistEnabled = player.getDynamicProperty(FEATURE_KEY_AIM) ?? DEFAULT_AIM;
+		if (aimAssistEnabled && !mode.vanilla) {
+			safeCommand(player, "aimassist @s set 60 60 16 angle bv:aim_preset");
+		} else {
+			safeCommand(player, "aimassist @s clear");
+		}
+	}, 1);
 }
 
 // =============================================================================
 // --- EVENTOS DE INTERAÇÃO (CUSTOM COMPONENT + GLOBAL) ---
 // =============================================================================
-
-system.beforeEvents.startup.subscribe((initEvent) => {
-	initEvent.itemComponentRegistry.registerCustomComponent("bv:view_menu", {
-		onUse: (event) => {
-			handleViewInteraction(event.source);
-		}
-	});
-});
 
 world.afterEvents.itemUse.subscribe((event) => {
 	const player = event.source;
@@ -113,18 +121,13 @@ function handleViewInteraction(player) {
 			setPlayerViewIndex(player, next);
 			const mode = CAMERA_MODES[next];
 
-			// 1. Tenta limpar a câmera (se falhar porque já está limpa, o safeCommand absorve)
-			if (mode.vanilla) safeCommand(player, "camera @s clear");
-
-			// 2. Se o comando não for apenas "limpar", ele aplica a nova câmera
-			if (mode.command !== "camera @s clear") {
-				safeCommand(player, getResolvedCommand(player, mode));
-			}
+			applyCameraAndAimAssist(player, mode);
 
 			player.onScreenDisplay.setActionBar(`§aModo de câmera: §f${mode.name}`);
 		});
 	}
 }
+
 // =============================================================================
 // --- LÓGICA AUTOMÁTICA (LOOPS) ---
 // =============================================================================
@@ -143,11 +146,11 @@ system.runInterval(() => {
 			const prevIndex = getPlayerViewIndex(player);
 			player.addTag(`prevview_${prevIndex}`);
 
-			// CORREÇÃO: Puxando o índice correto para o cavalo
 			const horseIndex = CAMERA_MODES.findIndex(m => m.name === "Shoulder View(horse)");
 			if (horseIndex !== -1) {
 				setPlayerViewIndex(player, horseIndex);
-				safeCommand(player, getResolvedCommand(player, CAMERA_MODES[horseIndex]));
+				const horseMode = CAMERA_MODES[horseIndex];
+				applyCameraAndAimAssist(player, horseMode);
 			}
 		}
 
@@ -162,10 +165,7 @@ system.runInterval(() => {
 				}
 			}
 			const mode = CAMERA_MODES[prevIndex];
-
-			if (mode.vanilla) safeCommand(player, "camera @s clear");
-			if (mode.command !== "camera @s clear") safeCommand(player, getResolvedCommand(player, mode));
-
+			applyCameraAndAimAssist(player, mode);
 			setPlayerViewIndex(player, prevIndex);
 		}
 	}
@@ -178,7 +178,7 @@ system.runInterval(() => {
 		if (!isEnabled) continue;
 
 		const main = getMainhandItem(player);
-		const forceItems = ["minecraft:bow", "minecraft:crossbow"];
+		const forceItems = ["minecraft:bow", "minecraft:crossbow", "bv:fireball"];
 		const mainType = main?.typeId;
 		const isForceItem = mainType && forceItems.includes(mainType);
 		const hasSaved = bowForceState.has(player.id);
@@ -190,7 +190,7 @@ system.runInterval(() => {
 			const firstIndex = CAMERA_MODES.findIndex(m => m.name === "Clear ('F5' unlocked)");
 			if (firstIndex !== -1) {
 				setPlayerViewIndex(player, firstIndex);
-				safeCommand(player, "camera @s clear");
+				applyCameraAndAimAssist(player, CAMERA_MODES[firstIndex]);
 				player.addTag("bv:force_first");
 			}
 			continue;
@@ -202,9 +202,7 @@ system.runInterval(() => {
 			const mode = CAMERA_MODES[prev];
 
 			setPlayerViewIndex(player, prev);
-
-			if (mode.vanilla) safeCommand(player, "camera @s clear");
-			if (mode.command !== "camera @s clear") safeCommand(player, getResolvedCommand(player, mode));
+			applyCameraAndAimAssist(player, mode);
 
 			bowForceState.delete(player.id);
 			player.removeTag("bv:force_first");
@@ -242,6 +240,7 @@ function showViewMenu(player) {
 		const s9 = player.getDynamicProperty(FEATURE_KEY_9) ?? DEFAULT_STATE_9;
 		const s10 = player.getDynamicProperty(FEATURE_KEY_10) ?? DEFAULT_STATE_10;
 		const sDist = player.getDynamicProperty(FEATURE_KEY_DIST) ?? DEFAULT_DIST;
+		const sAim = player.getDynamicProperty(FEATURE_KEY_AIM) ?? DEFAULT_AIM;
 
 		const form = new ModalFormData();
 		form.title("§lMinhas Configurações de Visão");
@@ -250,39 +249,36 @@ function showViewMenu(player) {
 		form.toggle("§fCâmera automática no cavalo", { defaultValue: s9 });
 		form.toggle("§fCâmera automática no arco", { defaultValue: s10 });
 		form.slider("§fDistância da câmera", 2, 7, { valueStep: 1, defaultValue: sDist });
+		form.toggle("§fAtivar assistência de mira", { defaultValue: sAim });
 
 		form.show(player).then(response => {
 			if (response.canceled) return;
 
 			system.run(() => {
-				const [res8, res9, res10, resDist] = response.formValues;
+				const [res8, res9, res10, resDist, resAim] = response.formValues;
 				let changeCount = 0;
-				let distanceChanged = false; // Flag para rastrear se o slider mexeu
+				let distanceChanged = false;
 
 				if (res8 !== s8) { player.setDynamicProperty(FEATURE_KEY_8, res8); changeCount++; }
 				if (res9 !== s9) { player.setDynamicProperty(FEATURE_KEY_9, res9); changeCount++; }
 				if (res10 !== s10) { player.setDynamicProperty(FEATURE_KEY_10, res10); changeCount++; }
+				if (resAim !== sAim) { player.setDynamicProperty(FEATURE_KEY_AIM, resAim); changeCount++; }
 
 				if (resDist !== sDist) {
 					player.setDynamicProperty(FEATURE_KEY_DIST, resDist);
 					changeCount++;
-					distanceChanged = true; // Confirma que o zoom foi alterado
+					distanceChanged = true;
 				}
 
 				if (changeCount > 0) {
 					player.onScreenDisplay.setActionBar("§b[Configurações pessoais] Salvas.");
 
-					// SE O ZOOM MUDOU, ATUALIZA A CÂMERA NA HORA
 					if (distanceChanged) {
 						const currentIndex = getPlayerViewIndex(player);
 						const currentMode = CAMERA_MODES[currentIndex];
 
-						// Checa se o jogador está com a câmera customizada ativa
 						if (currentMode.name === "Shoulder View custom") {
-							// Limpa a câmera antes para evitar que o Minecraft recuse a atualização
-							safeCommand(player, "camera @s clear");
-							// Aplica o novo JSON (ex: commonsense:camera_ombro_5)
-							safeCommand(player, getResolvedCommand(player, currentMode));
+							applyCameraAndAimAssist(player, currentMode);
 						}
 					}
 				} else {

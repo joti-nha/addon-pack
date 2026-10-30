@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:poplar_wc_button_recipe"},"tags":["stonecutter"],"priority":1,"ingredients":[{"item":"minecraft:poplar_planks"}],"result":{"item":"minecraft:poplar_button","count":1,"data":0}}}

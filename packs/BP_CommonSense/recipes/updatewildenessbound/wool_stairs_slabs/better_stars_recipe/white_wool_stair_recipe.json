@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:better_white_wool_stair_recipe"},"tags":["crafting_table"],"key":{"P":{"item":"minecraft:white_wool"}},"pattern":["P ","PP"],"result":{"item":"minecraft:white_wool_stairs","count":4}}}

@@ -25,6 +25,9 @@ function* saturation() {
 
       if (player.getGameMode() !== GameMode.Survival) continue;
 
+      // Se o player não tiver a tag necessária, o código de saturação não roda para ele
+      if (!player.hasTag("bv:java_saturation_on")) continue;
+
       const saturationComp = player.getComponent(EntityComponentTypes.Saturation);
       const hungerComp = player.getComponent(EntityComponentTypes.Hunger);
       const healthComp = player.getComponent(EntityComponentTypes.Health);

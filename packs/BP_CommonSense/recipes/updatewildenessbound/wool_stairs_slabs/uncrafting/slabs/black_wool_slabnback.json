@@ -1,0 +1,1 @@
+{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:black_wool_slabnback"},"tags":["crafting_table"],"pattern":["AA"],"key":{"A":{"item":"minecraft:black_wool_slab"}},"result":{"item":"minecraft:black_wool","count":1}}}

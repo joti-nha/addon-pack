@@ -31,4 +31,8 @@ commonsense.guide.btn.about=Sobre a JFAddons
 commonsense.guide.about.title=Sobre a JFAddons
 commonsense.guide.about.body=O Common Sense é desenvolvido pelo estúdio JFAddons.\n\nAcompanhe as atualizações e os novos vídeos no YouTube para ficar por dentro das novidades e tutoriais!
 commonsense.guide.btn.close=Fechar
+tile.bv:display_frame.name=Moldura de Exibição
+item.bv:fireball=Bola de Fogo
+item.spawn_egg.entity.bv:fireball_projectile.name=Gerar Bola de Fogo
+entity.bv:fireball_projectile.name=Bola de Fogo
 ## <<< Addon Pack: tradução pt-BR

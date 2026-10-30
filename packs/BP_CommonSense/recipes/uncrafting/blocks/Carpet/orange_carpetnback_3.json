@@ -1,1 +1,1 @@
-{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:orange_carpetnback_3"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:orange_carpet"}],"result":[{"item":"minecraft:orange_wool","count":2}]}}
+{"format_version":"1.12","minecraft:recipe_shapeless":{"description":{"identifier":"bv:orange_carpetnback_3"},"tags":["stonecutter"],"ingredients":[{"item":"minecraft:orange_carpet"}],"result":[{"item":"minecraft:orange_wool","count":1}]}}
