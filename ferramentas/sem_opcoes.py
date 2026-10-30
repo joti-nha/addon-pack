@@ -3,7 +3,7 @@
 O botao aparece quando o manifest tem "subpacks" ou "settings". Aqui:
 - cada pack com subpacks recebe o conteudo do subpack padrao (o ultimo da lista, que e o que o jogo
   escolhe) e perde a lista: A&S (Vanilla Experience), Forsaken (spawn normal de estruturas),
-  CommonSense BP (trinkets ligados) e CommonSense RP (os 5 subpacks so traziam a mesma tela e um
+  CommonSense BP (trinkets desligados desde 2026-10-30, pedido do João) e CommonSense RP (os 5 subpacks so traziam a mesma tela e um
   _global_variables vazio que escondia o unificado);
 - as configuracoes saem dos manifests e as consultas q.is_pack_setting_* viram o valor padrao,
   em todos os packs (o A&S e os anexos copiados dele no Compat e no Unified Core).
@@ -20,7 +20,7 @@ PACKS = os.path.join(RAIZ, 'packs')
 SUBPACK_PADRAO = {
     'RP_ActionsAndStuff_RP': 'SP1',
     'BP_fo-bp-v1.19.4': '1_default',
-    'BP_CommonSense': 'enabled',
+    'BP_CommonSense': 'disabled',
     'RP_CommonSense': None,  # os subpacks so traziam a mesma tela e um _global_variables vazio, que apagava o unificado
 }
 

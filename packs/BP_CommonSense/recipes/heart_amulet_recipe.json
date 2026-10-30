@@ -1,1 +1,0 @@
-{"format_version":"1.12","minecraft:recipe_shaped":{"description":{"identifier":"bv:heart_amulet_recipe"},"tags":["crafting_table"],"key":{"L":{"item":"minecraft:gold_ingot"},"C":{"item":"minecraft:creaking_heart"},"A":{"item":"minecraft:amethyst_shard"}},"pattern":[" L ","LAL"," C "],"result":{"item":"bv:heart_amulet","count":1}}}
