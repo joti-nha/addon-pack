@@ -8,3 +8,6 @@ entity.rpg:pillager_boss.name=Senhor da Guerra Saqueador
 entity.rpg:pillager_boss_clone.name=Ilusão do Senhor da Guerra
 item.spawn_egg.entity.rpg:pillager_boss.name=Gerar Senhor da Guerra Saqueador
 item.spawn_egg.entity.rpg:pillager_boss_clone.name=Gerar Ilusão do Senhor da Guerra
+## >>> Addon Pack: tradução pt-BR (ferramentas/traduzir_ptbr.py)
+pack.name=RPG_Resources
+## <<< Addon Pack: tradução pt-BR

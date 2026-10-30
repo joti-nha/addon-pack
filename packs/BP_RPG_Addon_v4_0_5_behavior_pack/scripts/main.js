@@ -25,11 +25,13 @@ for (const __F of [__AFD, __MFD, __MSG]) {
 import { world, ItemStack, ItemLockMode } from "@minecraft/server";
 var SCOREBOARDS = ["class", "souls", "level"];
 function initScoreboards() {
-  for (const sb of SCOREBOARDS) {
-    if (!world.scoreboard.getObjective(sb)) {
-      world.scoreboard.addObjective(sb, sb);
+  try {
+    for (const sb of SCOREBOARDS) {
+      if (!world.scoreboard.getObjective(sb)) {
+        world.scoreboard.addObjective(sb, sb);
+      }
     }
-  }
+  } catch (e) {}
 }
 world.afterEvents.playerSpawn.subscribe((event) => {
   initScoreboards();
@@ -1959,9 +1961,9 @@ function spawnSkillTreeUI(player) {
     form.button(choice.text);
   }
   form.button("Sair");
-  form.button("Melhorar habilidade");
-  form.button("Devolver todas as vantagens");
-  form.button("Lista de habilidades");
+  form.button("Melhorar Habilidade");
+  form.button("Resetar Talentos");
+  form.button("Lista de Habilidades");
   form.show(player).then((res) => {
     if (res.canceled || res.selection === void 0) return;
     const choiceIdx = res.selection - 13;
@@ -5217,9 +5219,6 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
 // ==========================================
 import "./systems/boss_pillager.js";
 
-// ==========================================
-// SWORD ON BACK SYSTEM (4 VERTICAL SLOTS)
-// ==========================================
-import { initBackSwordSystem } from "./systems/back_sword.js";
-initBackSwordSystem();
+
+
 

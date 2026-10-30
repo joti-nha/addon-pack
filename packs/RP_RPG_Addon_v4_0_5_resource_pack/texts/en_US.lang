@@ -8,3 +8,4 @@ entity.rpg:pillager_boss.name=Pillager Warlord
 entity.rpg:pillager_boss_clone.name=Warlord Illusion
 item.spawn_egg.entity.rpg:pillager_boss.name=Spawn Pillager Warlord
 item.spawn_egg.entity.rpg:pillager_boss_clone.name=Spawn Warlord Illusion
+pack.name=RPG_Resources
