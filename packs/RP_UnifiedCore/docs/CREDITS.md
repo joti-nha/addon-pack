@@ -15,7 +15,7 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | Cataclysmical | Minera Studios | |
 | Better on Bedrock | Poggy | |
 | Forsaken Odyssey 1.19.4 | NicoTheKid | |
-| RPG Addon 4.0.5 | Max | |
+| Simple RPG Addon 4.1.3 | Max (Dead_Maxyt no CurseForge) | |
 | Nature's Compass 2.3 | DustVeyn Studio | o manifest indica "Unofficial Post" |
 | Alylica's Dungeons | Alylica (nome do addon; autor **não declarado** no manifest) | |
 | Aquaculture Add-On | autor **não declarado** no manifest | |

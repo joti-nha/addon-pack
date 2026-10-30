@@ -98,6 +98,13 @@ Nada desta versão foi testado no jogo.
 - **Trinkets desligados** (pedido do João, 2026-10-30, como no arquivo "Trinkets OFF"): saíram os 5 itens (Espelho Mágico, Caveira de Netherite, Bênção do Minerador, Balão, Amuleto do Coração de Rangedor), as receitas do Balão e do Amuleto, a função de efeitos deles no `tick.json` e a seção de bugigangas do guia. Nas tabelas de saque unidas com o BoB, a vaga de cada um nos baús virou vazia com o mesmo peso, para os outros itens saírem com a mesma chance de antes; no escambo dos piglins a Caveira saiu. `sem_opcoes.py` agora usa o subpack "disabled".
 - Fica pendente: o coelho novo do Common Sense também é redefinido pelo Better on Bedrock (como o urso-polar), e só o pack mais alto vale.
 
+### Simple RPG 4.1.3 (2026-10-30)
+- **Simple RPG 4.0.5 → 4.1.3** (pedido do João). Os UUIDs são os mesmos; as pastas continuam com o nome antigo. O commit "Simple RPG 4.1.3 original" guarda os packs como vieram, e o `mesclar_jogador.py` lê o jogador do RPG dele (`ORIGINAIS_POR_PACK`).
+- O que veio da 4.1.3: a espada nas costas saiu (o jogador do RPG não acrescenta mais nada; o jogador mesclado do Compat perdeu o controle de render e as texturas dela) e a tela da árvore de habilidades reconhece os botões em português.
+- Reaplicado do modpack: `main.js` (tradução, tomos e compras de magia) unido com a mudança do autor sem conflito; minério e lingote de vibrânio, itens, saque do minério, chefe saqueador, `blocks.json`, `_ui_defs` unido e `pt_BR.lang`.
+- **Árvore de habilidades**: os botões traduzidos não batiam com os nomes que a tela procura e ficavam fora do lugar. Agora são "Sair", "Melhorar Habilidade", "Resetar Talentos" e "Lista de Habilidades", os que a tela da 4.1.3 reconhece.
+- **Torres dos saqueadores**: a 4.1.3 desligou o surgimento natural da Torre e deixou desligado o script que a substituiria, então nenhuma torre aparecia. Fica a regra da 4.0.5 (torres surgindo como antes).
+
 ## 0.5
 
 Nada desta versão foi testado no jogo.

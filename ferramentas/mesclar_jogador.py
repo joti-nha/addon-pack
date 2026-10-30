@@ -6,7 +6,7 @@ Uso: python ferramentas/mesclar_jogador.py
 RnR, RPG e OTG trazem cada um o proprio player.entity.json (feito a partir do jogador do jogo base). Como eles
 ficam acima do A&S na ordem, o jogador do A&S (todas as animacoes de braco, item e corpo) era substituido e nunca
 rodava. Este script parte do jogador do A&S e acrescenta so o que e de outros addons: racas e lobisomem/morcego do
-RnR (escala, modelos, controles), mochila do OTG e espada nas costas do RPG. Entradas do jogo base que o A&S trocou
+RnR (escala, modelos, controles), mochila do OTG e o que o RPG acrescentar (a espada nas costas saiu na 4.1.3). Entradas do jogo base que o A&S trocou
 pelas dele nao voltam.
 O resultado vai so para o Addon Pack Compat, que fica acima dos tres e so e usado junto com o A&S. Os tres packs
 ficam com o jogador original de cada um (o do RnR com a raca em skin_id, como no BP), para funcionarem sozinhos:
@@ -21,6 +21,8 @@ import brarchive  # noqa: E402
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff_RP')
 ORIGINAIS = '91bb9dc23'  # commit 'Packs originais extraidos (sem alteracoes do modpack)'
+# packs atualizados depois: commit com o pack original novo, antes das alteracoes do modpack
+ORIGINAIS_POR_PACK = {'RP_RPG_Addon_v4_0_5_resource_pack': '2e293ccd3'}  # Simple RPG 4.1.3
 FONTES = ['RP_RnR_Accursed', 'RP_OTG_Backpack_v1.0.8_-_Patreon_RP', 'RP_RPG_Addon_v4_0_5_resource_pack']
 DESTINO = 'RP_AddonPack_Compat'
 # raca do RnR: o BP usa minecraft:skin_id (o variant e da mochila do OTG); o RP original lia query.variant
@@ -84,7 +86,7 @@ def mesclar(a, outro):
 def jogador_original(pack):
     """player.entity.json original do pack (do commit dos packs originais), com a raca do RnR em skin_id."""
     caminho = f'packs/{pack}/entity/player.entity.json'
-    texto = subprocess.run(['git', 'show', f'{ORIGINAIS}:{caminho}'], cwd=RAIZ, capture_output=True, text=True, encoding='utf-8', check=True).stdout
+    texto = subprocess.run(['git', 'show', f'{ORIGINAIS_POR_PACK.get(pack, ORIGINAIS)}:{caminho}'], cwd=RAIZ, capture_output=True, text=True, encoding='utf-8', check=True).stdout
     if pack == 'RP_RnR_Accursed': texto = VARIANT.sub(lambda m: m.group(1) + '.skin_id', texto)
     return json.loads(texto)
 
