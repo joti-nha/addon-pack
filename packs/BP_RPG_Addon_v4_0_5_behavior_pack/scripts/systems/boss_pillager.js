@@ -28,7 +28,7 @@ function triggerBossDeath(boss, bState, dimension) {
     dimension.playSound("mob.enderdragon.death", boss.location, { volume: 1.0, pitch: 0.8 });
     dimension.spawnParticle("minecraft:huge_explosion_emitter", boss.location);
     dimension.runCommandAsync('title @a title §6VICTORY');
-    dimension.runCommandAsync('title @a subtitle §eO Chefe Saqueador caiu!');
+    dimension.runCommandAsync('title @a subtitle §eThe Pillager Boss has fallen!');
   } catch (e) {}
 
   system9.runTimeout(() => {
@@ -168,7 +168,7 @@ system9.runInterval(() => {
           boss.addEffect("minecraft:slowness", tauntDuration, { amplifier: 255, showParticles: false });
           boss.addEffect("minecraft:resistance", tauntDuration, { amplifier: 255, showParticles: false });
           dimension.playSound("mob.wither.spawn", boss.location, { volume: 1.0, pitch: 0.9 });
-          dimension.runCommandAsync('title @a actionbar §cO Chefe Saqueador desafia você!');
+          dimension.runCommandAsync('title @a actionbar §cThe Pillager Boss challenges you!');
         } catch (e) {}
 
         system9.runTimeout(() => {
@@ -193,7 +193,7 @@ system9.runInterval(() => {
           boss.addEffect("minecraft:slowness", tauntDuration, { amplifier: 255, showParticles: false });
           boss.addEffect("minecraft:resistance", tauntDuration, { amplifier: 255, showParticles: false });
           dimension.playSound("ambient.weather.thunder", boss.location, { volume: 1.0, pitch: 1.0 });
-          dimension.runCommandAsync('title @a actionbar §4O Chefe solta um grito de guerra sombrio!');
+          dimension.runCommandAsync('title @a actionbar §4The Boss unleashes a dark battle cry!');
           dimension.spawnParticle("minecraft:large_explosion", boss.location);
         } catch (e) {}
 
@@ -221,7 +221,7 @@ system9.runInterval(() => {
           
           try {
             dimension.playSound("mob.wither.spawn", boss.location, { volume: 1.0, pitch: 0.8 });
-            dimension.runCommandAsync('title @a actionbar §dO Chefe entra na Fase 2!');
+            dimension.runCommandAsync('title @a actionbar §dThe Boss enters Phase 2!');
           } catch (e) {}
           
           // Block head tracking so attempt_67 (roar) and fly (launch) animate cleanly without head twisting
@@ -316,7 +316,7 @@ system9.runInterval(() => {
           bState.hasCloned = true;
           try { 
             dimension.playSound("mob.endermen.teleport", boss.location, { volume: 1.0, pitch: 0.5 });
-            dimension.runCommandAsync('title @a actionbar §cO Chefe se dividiu em clones!');
+            dimension.runCommandAsync('title @a actionbar §cThe Boss has split into clones!');
           } catch (e) {}
           
           // Spawn 2 clones
@@ -409,7 +409,7 @@ system9.runInterval(() => {
           boss.addEffect("minecraft:resistance", tauntDuration, { amplifier: 255, showParticles: false });
           dimension.playSound("mob.enderdragon.flap", boss.location, { volume: 1.0, pitch: 0.7 });
           dimension.playSound("ambient.weather.thunder", boss.location, { volume: 0.8, pitch: 1.4 });
-          dimension.runCommandAsync('title @a actionbar §5O Chefe canaliza o antigo poder do vazio!');
+          dimension.runCommandAsync('title @a actionbar §5The Boss channels ancient void power!');
           dimension.spawnParticle("minecraft:dragon_breath_trail", boss.location);
           dimension.spawnParticle("minecraft:sculk_charge_pop_particle", boss.location);
         } catch (e) {}
@@ -432,7 +432,7 @@ system9.runInterval(() => {
           try { 
             dimension.playSound("mob.wither.spawn", boss.location, { volume: 1.0, pitch: 1.2 });
             dimension.playSound("mob.endermen.teleport", boss.location, { volume: 1.0, pitch: 0.6 });
-            dimension.runCommandAsync('title @a actionbar §cO Chefe invoca 3 Clones Aéreos!');
+            dimension.runCommandAsync('title @a actionbar §cThe Boss summons 3 Aerial Clones!');
           } catch (e) {}
 
           const airY = (bState.flyTargetY != null) ? bState.flyTargetY : boss.location.y;
@@ -678,7 +678,7 @@ system9.runInterval(() => {
                 const v = dimension.spawnEntity("minecraft:vindicator", { x: sx, y: boss.location.y, z: sz });
                 dimension.spawnParticle("minecraft:dragon_breath_trail", { x: sx, y: boss.location.y + 1, z: sz });
                 if (v) {
-                  v.nameTag = "Vingador Corrompido";
+                  v.nameTag = "Corrupted Vindicator";
                   currentWaveMobs.push(v);
                 }
               } catch (e) {}
@@ -693,7 +693,7 @@ system9.runInterval(() => {
                 const p = dimension.spawnEntity("minecraft:pillager", { x: sx, y: boss.location.y, z: sz });
                 dimension.spawnParticle("minecraft:dragon_breath_trail", { x: sx, y: boss.location.y + 1, z: sz });
                 if (p) {
-                  p.nameTag = "Saqueador Corrompido";
+                  p.nameTag = "Corrupted Pillager";
                   currentWaveMobs.push(p);
                   // 1-tick delay guarantees equipment initialization before /enchant
                   system9.runTimeout(() => {
@@ -724,7 +724,7 @@ system9.runInterval(() => {
                 const r = dimension.spawnEntity("minecraft:ravager", { x: rx, y: boss.location.y, z: rz });
                 dimension.spawnParticle("minecraft:large_explosion", { x: rx, y: boss.location.y + 1, z: rz });
                 if (r) {
-                  r.nameTag = "Devastador Corrompido";
+                  r.nameTag = "Corrupted Ravager";
                   currentWaveMobs.push(r);
                 }
               } catch (e) {}

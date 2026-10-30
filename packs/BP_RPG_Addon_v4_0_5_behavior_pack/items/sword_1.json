@@ -1,1 +1,28 @@
-{"format_version":"1.20.50","minecraft:item":{"description":{"identifier":"test:sword_1","menu_category":{"category":"equipment","group":"itemGroup.name.sword"}},"components":{"minecraft:tags":{"tags":["oreville:is_sword"]},"minecraft:display_name":{"value":"Espada 1"},"minecraft:icon":"sword_1","minecraft:max_stack_size":1,"minecraft:hand_equipped":true,"minecraft:damage":4,"minecraft:durability":{"max_durability":59},"minecraft:enchantable":{"slot":"sword","value":15}}}}
+{
+  "format_version": "1.20.50",
+  "minecraft:item": {
+    "description": {
+      "identifier": "test:sword_1",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.sword"
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "Sword 1"
+      },
+      "minecraft:icon": "sword_1",
+      "minecraft:max_stack_size": 1,
+      "minecraft:hand_equipped": true,
+      "minecraft:damage": 4,
+      "minecraft:durability": {
+        "max_durability": 59
+      },
+      "minecraft:enchantable": {
+        "slot": "sword",
+        "value": 15
+      }
+    }
+  }
+}

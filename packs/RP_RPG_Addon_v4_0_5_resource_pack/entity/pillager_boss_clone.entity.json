@@ -1,1 +1,54 @@
-{"format_version":"1.10.0","minecraft:client_entity":{"description":{"identifier":"rpg:pillager_boss_clone","materials":{"default":"entity_alphatest"},"textures":{"default":"textures/entity/pillager_boss/head_main"},"geometry":{"default":"geometry.rpg_pillager_boss"},"particle_effects":{"smash_particle":"minecraft:knockback_roar_particle","magic_particle":"minecraft:dragon_breath_trail"},"animations":{"phase_2":"animation.model.phase_2","walk":"animation.model.walk","idle":"animation.boss.idle","death2":"animation.model.death2","fly_loop_save":"animation.model.fly_loop_save","attempt_67":"animation.model.attempt_67","fly":"animation.model.fly","taunt_2":"animation.model.taunt-2","melee_attack":"animation.model.melee_attack","look_at_target":"animation.pillager_boss.look_at_target","ctrl_melee":"controller.animation.pillager_boss.melee","ctrl_ranged":"controller.animation.pillager_boss.ranged","ctrl_phase2":"controller.animation.pillager_boss.phase2","arrow_position":"animation.projectile.arrow","arrow_attack":"animation.arrow_potition","arrow_down":"animation.down_arrowoff"},"scripts":{"animate":["look_at_target","ctrl_melee","ctrl_ranged","ctrl_phase2"]},"render_controllers":["controller.render.pillager_boss"],"spawn_egg":{"base_color":"#FF0000","overlay_color":"#000000"}}}}
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "rpg:pillager_boss_clone",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/pillager_boss/head_main"
+			},
+			"geometry": {
+				"default": "geometry.unknown"
+			},
+			"particle_effects": {
+				"smash_particle": "minecraft:knockback_roar_particle",
+				"magic_particle": "minecraft:dragon_breath_trail"
+			},
+			"animations": {
+				"phase_2": "animation.model.phase_2",
+				"walk": "animation.model.walk",
+				"idle": "animation.boss.idle",
+				"death2": "animation.model.death2",
+				"fly_loop_save": "animation.model.fly_loop_save",
+				"attempt_67": "animation.model.attempt_67",
+				"fly": "animation.model.fly",
+				"taunt_2": "animation.model.taunt-2",
+				"melee_attack": "animation.model.melee_attack",
+				"look_at_target": "animation.pillager_boss.look_at_target",
+				"ctrl_melee": "controller.animation.pillager_boss.melee",
+				"ctrl_ranged": "controller.animation.pillager_boss.ranged",
+				"ctrl_phase2": "controller.animation.pillager_boss.phase2",
+				"arrow_position": "animation.projectile.arrow",
+				"arrow_attack": "animation.arrow_potition",
+				"arrow_down": "animation.down_arrowoff"
+			},
+			"scripts": {
+				"animate": [
+					"look_at_target",
+					"ctrl_melee",
+					"ctrl_ranged",
+					"ctrl_phase2"
+				]
+			},
+			"render_controllers": [
+				"controller.render.pillager_boss"
+			],
+			"spawn_egg": {
+				"base_color": "#FF0000",
+				"overlay_color": "#000000"
+			}
+		}
+	}
+}

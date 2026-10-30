@@ -1,1 +1,80 @@
-{"format_version":"1.10.0","animation_controllers":{"controller.animation.pillager_boss.melee":{"initial_state":"idle","states":{"idle":{"animations":["idle"],"transitions":[{"attack":"query.is_roaring"},{"phase2":"query.mark_variant == 2 || query.variant == 2 || query.variant == 3"}],"blend_transition":0.2},"phase2":{"transitions":[{"idle":"query.mark_variant != 2 && query.variant != 2 && query.variant != 3"}]},"attack":{"animations":["melee_attack"],"transitions":[{"idle":"!query.is_roaring"}],"blend_transition":0.2}}},"controller.animation.pillager_boss.ranged":{"initial_state":"default","states":{"default":{"transitions":[{"aim":"query.variant == 1"}]},"aim":{"animations":["arrow_position"],"transitions":[{"down":"query.variant != 1"},{"shoot":"query.any_animation_finished"}],"blend_transition":0.15},"shoot":{"animations":["arrow_attack"],"transitions":[{"down":"query.variant != 1"}],"blend_transition":0.15},"down":{"animations":["arrow_down"],"transitions":[{"aim":"query.variant == 1"},{"default":"query.any_animation_finished"}],"blend_transition":0.15}}},"controller.animation.pillager_boss.phase2":{"initial_state":"default","states":{"default":{"transitions":[{"fly_loop":"query.mark_variant == 2 || query.variant == 3"}]},"fly_loop":{"animations":["fly_loop_save"],"transitions":[{"default":"query.mark_variant != 2 && query.variant != 3"}],"blend_transition":0.2}}}}}
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.pillager_boss.melee": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [ "idle" ],
+					"transitions": [
+						{ "attack": "query.is_roaring" },
+						{ "phase2": "query.mark_variant == 2 || query.variant == 2 || query.variant == 3" }
+					],
+					"blend_transition": 0.2
+				},
+				"phase2": {
+					"transitions": [
+						{ "idle": "query.mark_variant != 2 && query.variant != 2 && query.variant != 3" }
+					]
+				},
+				"attack": {
+					"animations": [ "melee_attack" ],
+					"transitions": [
+						{ "idle": "!query.is_roaring" }
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.pillager_boss.ranged": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{ "aim": "query.variant == 1" }
+					]
+				},
+				"aim": {
+					"animations": [ "arrow_position" ],
+					"transitions": [
+						{ "down": "query.variant != 1" },
+						{ "shoot": "query.any_animation_finished" }
+					],
+					"blend_transition": 0.15
+				},
+				"shoot": {
+					"animations": [ "arrow_attack" ],
+					"transitions": [
+						{ "down": "query.variant != 1" }
+					],
+					"blend_transition": 0.15
+				},
+				"down": {
+					"animations": [ "arrow_down" ],
+					"transitions": [
+						{ "aim": "query.variant == 1" },
+						{ "default": "query.any_animation_finished" }
+					],
+					"blend_transition": 0.15
+				}
+			}
+		},
+		"controller.animation.pillager_boss.phase2": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{ "fly_loop": "query.mark_variant == 2 || query.variant == 3" }
+					]
+				},
+				"fly_loop": {
+					"animations": [ "fly_loop_save" ],
+					"transitions": [
+						{ "default": "query.mark_variant != 2 && query.variant != 3" }
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}
