@@ -196,31 +196,6 @@ const ITEMS = [
 		text: "§bChifre das Montarias§r\nUm chifre que você vincula à sua montaria§7 (qualquer montaria vanilla)§r e usa para teletransportá-la até você quando estiver longe\n\n§2Uso:\n§r§e1§r. Agache e interaja com a montaria para vinculá-la a você\n§e2.§r Use o chifre para teletransportar a montaria\n\n§2Receita:\n§r§b[ ][ ][§r§eC§r§b]\n[ ][§r§eH§r§b][ ]§r - §eC§r = Lingote de Cobre \n§e[C§r§b][ ][ ]§r - §eH§r = Qualquer Chifre de Cabra \n\n§7(PS: agora as cabras soltam chifres quando morrem)"
 	},
 	{
-		name: "Espelho Mágico",
-		tag: "Trinkets",
-		text: "§bEspelho Mágico§r\nAo usar, leva você de volta para sua cama ou para o ponto de nascimento do mundo, se não tiver cama\n\n§2Onde encontrar:§r\n- Pirâmides\n- Geradores de monstros"
-	},
-	{
-		name: "Caveira de Netherite",
-		tag: "Trinkets",
-		text: "§bCaveira de Netherite §r§e(RARA)§r\nDá resistência a fogo e lava quando está na barra rápida\n\n§2Onde encontrar:§r\n- Tesouro do bastião\n- Escambo com piglins"
-	},
-	{
-		name: "Bênção do Minerador",
-		tag: "Trinkets",
-		text: "§bBênção do Minerador§r\nDá Pressa quando está na barra rápida\n\n§2Onde encontrar:§r\n- Minas abandonadas"
-	},
-	{
-		name: "Balão",
-		tag: "Trinkets",
-		text: "§bBalão§r\nDá Queda Suave quando está na mão\n\n§2Uso:§r dá Levitação por 5 segundos\n§2Recarga:§r 30 s\n\n§2Receita:\n§r§b[ ][§r§eP§r§b][ ]§r§e P§r§7=§r§2 §rPapel\n§b[§r§eP§r§b][§r§eW§r§b][§r§eP§r§b]§r§2 §r§eW§r§7=§r§2 §rCarga de Vento\n§b[ ][§r§eP§r§b][§r§eS§r§b]§r§2 §r§eS§r§7=§r§2 §rLinha"
-	},
-	{
-		name: "Amuleto do Coração de Rangedor",
-		tag: "Trinkets",
-		text: "§bAmuleto do Coração de Rangedor§r\nDá 6 corações extras quando está na barra rápida\n\n§2Uso:§r dá Regeneração por 5 segundos\n§2Recarga:§r 90 s\n\n§2Receita:\n§r§b[ ][§r§eG§r§b][ ]§r§2 §r§eG§r§2 §r§7=§r Lingote de Ouro\n§b[§r§eG§r§b][§r§eA§r§b][§r§eG§r§b]§r§2 §r§eA§r§2 §r§7=§r§2 §rFragmento de Ametista\n§b[ ][§r§eH§r§b][ ]§r§2 §r§eH§r§2 §r§7=§r§2 §rBloco de Coração de Rangedor"
-	},
-	{
 		name: "Armadura para Raposa",
 		text: "§eArmadura para Raposa§r\n- Raposas podem ser domadas e equipadas com armadura\n- A armadura para raposa é consertada com escamas de tatu, igual à armadura para lobo\n\n§2Receita:\n§r§8[ ][ ][ §r§eS§r§8]\n[§r§eS§r§8][§r§eS§r§8][§r§eS§r§8] = §r§e1x§r§8 §rArmadura para Raposa\n§8[§r§eS§r§8][§r§eB§r§8][§r§eS§r§8]§r\n\n§eS§r - Escama de Tatu\n§eB§r - Bagas Doces"
 	}
@@ -246,9 +221,7 @@ function showItemsMenu(player) {
 	form.header("Itens");
 	addButtons(ITEMS.filter((item) => !item.tag));
 
-	form.divider();
-	form.header("Bugigangas");
-	addButtons(ITEMS.filter((item) => item.tag === "Trinkets"));
+	// [Addon Pack] Trinkets desligados no modpack (pedido do João, 2026-10-30): sem a seção de bugigangas
 
 	form.divider();
 	form.button("Voltar ao Menu", () => {
