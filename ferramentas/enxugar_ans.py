@@ -17,7 +17,7 @@ import brarchive as br
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKS = os.path.join(RAIZ, 'packs')
-ANS = os.path.join(PACKS, 'RP_ActionsAndStuff_RP')
+ANS = os.path.join(PACKS, 'RP_ActionsAndStuff')
 NOME = "q.is_name_any('§§')"
 SUPORTE = "q.is_owner_identifier_any('minecraft:armor_stand','minecraft:sulfur_cube')"
 

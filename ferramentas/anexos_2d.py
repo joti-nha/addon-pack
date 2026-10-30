@@ -32,7 +32,7 @@ import anexos_cataclysm as cata  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKS = os.path.join(RAIZ, 'packs')
-AS = os.path.join(PACKS, 'RP_ActionsAndStuff_RP')
+AS = os.path.join(PACKS, 'RP_ActionsAndStuff')
 COMPAT = os.path.join(PACKS, 'RP_AddonPack_Compat')
 SAIDA = os.path.join(COMPAT, 'attachables', 'as_2d')
 TEX_BLOCOS = os.path.join(COMPAT, 'textures', 'ap', 'blocos')

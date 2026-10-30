@@ -23,15 +23,15 @@ TROCAS = [
     ("better_on_bedrock:tin_ingot", "ntk:tin_ingot"),
     ("better_on_bedrock:alluminum_ingot", "ntk:zinc_ingot"),
 ]
-CHEFES = ["BP_Mowzie_s_Mobs_Add-On_1.1_BP/loot_tables/hf/mzs/" + n for n in
+CHEFES = ["BP_MowziesMobs/loot_tables/hf/mzs/" + n for n in
           ("wroughtnaut.json", "frostmaw.json", "sculptor.json")] + \
-         ["BP_Better_on_Bedrock_1_1_behaviors/loot_tables/entities/" + n for n in
+         ["BP_BetterOnBedrock/loot_tables/entities/" + n for n in
           ("withered_samurai.json", "inferior.json", "frostaeris.json", "willager.json", "flender.json", "enchanter.json")] + \
-         ["BP_Eternal_Caves_1.1_Add-On_BP/loot_tables/panascais/caves/" + n for n in
+         ["BP_EternalCaves/loot_tables/panascais/caves/" + n for n in
           ("specter.json", "lava_widow.json", "ancient_serpent.json")] + \
-         ["BP_Cataclysmical_BP/loot_tables/minera/cata/entities/" + p + n for p in ("", "flawless/")
+         ["BP_Cataclysmical/loot_tables/minera/cata/entities/" + p + n for p in ("", "flawless/")
           for n in ("sun_tribunal.json", "verdant_sentinel.json")]
-DARKAGE = "BP_DarkAge_Bizarre_Remake_v0.7.76_BP/loot_tables/entities/"
+DARKAGE = "BP_DarkAgeBizarreRemake/loot_tables/entities/"
 # tabela -> [(item, chance, min, max)]
 DROPS = {t: [("test:vibranium_ingot", 0.4, 1, 3)] for t in CHEFES}
 DROPS[DARKAGE + "unbound_elemental.json"] = [("dk:darkalita_ingot", 1.0, 2, 4)]

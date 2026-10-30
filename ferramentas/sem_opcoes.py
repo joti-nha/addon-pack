@@ -18,8 +18,8 @@ import brarchive as br
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKS = os.path.join(RAIZ, 'packs')
 SUBPACK_PADRAO = {
-    'RP_ActionsAndStuff_RP': 'SP1',
-    'BP_fo-bp-v1.19.4': '1_default',
+    'RP_ActionsAndStuff': 'SP1',
+    'BP_ForsakenOdyssey': '1_default',
     'BP_CommonSense': 'disabled',
     'RP_CommonSense': None,  # os subpacks so traziam a mesma tela e um _global_variables vazio, que apagava o unificado
 }

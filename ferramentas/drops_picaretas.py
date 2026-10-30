@@ -17,7 +17,7 @@ TAG = ["minecraft:is_pickaxe"]
 # Tabelas reescritas inteiras. Vibranio (RPG): so caia com Toque Suave e 50% de chance, entao quase nunca saia nada;
 # agora o minerio sempre cai e vira lingote no forno.
 FIXAS = {
-    "BP_RPG_Addon_v4_0_5_behavior_pack/loot_tables/blocks/vibranium_ore.json": {"pools": [{
+    "BP_SimpleRPG/loot_tables/blocks/vibranium_ore.json": {"pools": [{
         "rolls": 1,
         "conditions": [{"condition": "match_tool", "item_tags_any": TAG}],
         "entries": [{"type": "item", "name": "test:vibranium_ore", "weight": 1}],

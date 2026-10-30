@@ -18,7 +18,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKS = os.path.join(RAIZ, 'packs')
 BP = os.path.join(PACKS, 'BP_ForsakenGrimoire')
 RP = os.path.join(PACKS, 'RP_ForsakenGrimoire')
-FO = os.path.join(PACKS, 'RP_fo-rp-v1.19.4')
+FO = os.path.join(PACKS, 'RP_ForsakenOdyssey')
 
 # Todo pergaminho magico do Forsaken (menos o Pergaminho Desconhecido, que e aleatorio) tem um Tomo Infinito.
 # familia: (nome pt_BR, nome en_US, magia do RPG que libera, niveis). Nivel N pede N compras da magia no RPG.
@@ -177,7 +177,7 @@ def main():
                 '// magia da loja do Simple RPG Buffs -> tomos que o Mago pode escolher ao comprar\n'
                 'export const RPG_SPELL_TOMES = ' + json.dumps(opcoes_rpg(), ensure_ascii=False) + ';\n')
     # a mesma tabela vai para o script do RPG (entre os marcadores)
-    rpg = os.path.join(PACKS, 'BP_RPG_Addon_v4_0_5_behavior_pack', 'scripts', 'main.js')
+    rpg = os.path.join(PACKS, 'BP_SimpleRPG', 'scripts', 'main.js')
     s = open(rpg, encoding='utf-8').read()
     ini, fim = '// <tomos.py>\n', '// </tomos.py>\n'
     if ini in s and fim in s:

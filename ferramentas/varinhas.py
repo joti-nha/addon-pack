@@ -13,7 +13,7 @@ Rodar de novo não muda nada.
 import json, os, re
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BP = os.path.join(RAIZ, 'packs', 'BP_fo-bp-v1.19.4')
+BP = os.path.join(RAIZ, 'packs', 'BP_ForsakenOdyssey')
 COMPAT = os.path.join(RAIZ, 'packs', 'RP_AddonPack_Compat')
 USO_LONGO = 3600
 

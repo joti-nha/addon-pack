@@ -18,7 +18,7 @@ import json, os
 import numpy as np
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OTG = os.path.join(RAIZ, 'packs', 'RP_OTG_Backpack_v1.0.8_-_Patreon_RP', 'animations', 'attachables')
+OTG = os.path.join(RAIZ, 'packs', 'RP_OTGBackpack', 'animations', 'attachables')
 DESTINO = os.path.join(RAIZ, 'packs', 'RP_AddonPack_Compat', 'animations', 'ap_mochila_1p.animation.json')
 PIVO_BRACO = (-5, 22, 0)  # rightArm de geometry.humanoid.custom
 # braço direito em primeira pessoa: jogo base (first_person.empty_hand) e A&S com item na mão (anspom + rikfbu)

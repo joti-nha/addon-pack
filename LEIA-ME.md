@@ -55,7 +55,9 @@ Cada montagem sai com versão maior que a anterior (o número é a quantidade de
 3. Abra o `Addon_Pack_Completo.mcaddon` com o Minecraft e espere a importação dos 38 packs terminar.
 4. Num mundo (de preferência novo), ative todos os packs. Se o jogo pedir, ligue as APIs beta em Experimentos.
 
-Ordem dos packs de recursos (topo = maior prioridade): Unified Core, Addon Pack Compat, Forsaken Grimoires, os demais, e Actions & Stuff por último. Nos de comportamento, deixe Unified Core e Forsaken Grimoires no topo.
+Ordem dos packs de recursos (topo = maior prioridade): Addon Pack Unified Core, Addon Pack Compat, Addon Pack Forsaken Grimoires, os demais, e Actions & Stuff por último. Nos de comportamento, deixe Addon Pack Unified Core e Addon Pack Forsaken Grimoires no topo.
+
+No jogo, cada pack aparece como "Nome original Versão (BP)" ou "(RP)", por exemplo "Simple RPG 4.1.3 (BP)". As pastas em `packs/` têm o nome do addon sem a versão (ex.: `BP_SimpleRPG`).
 
 
 ## Otimização

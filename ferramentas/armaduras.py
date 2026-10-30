@@ -75,7 +75,7 @@ def espacos(tags):
 
 def pecas():
     for pack in sorted(os.listdir(PACKS)):
-        if not pack.startswith('BP_') or 'Eternal_Caves' in pack or 'dungeons' in pack: continue
+        if not pack.startswith('BP_') or pack in ('BP_EternalCaves', 'BP_AlylicasDungeons'): continue
         for raiz, _, arqs in os.walk(os.path.join(PACKS, pack, 'items')):
             for a in arqs:
                 cam = os.path.join(raiz, a)

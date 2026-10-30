@@ -1,0 +1,67 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "OTG Backpack 1.0.8 (BP)",
+        "description": "The ultimate modular backpack system with fluid tanks, portable workstations, modules, cosmetics, and survival upgrades. Developed by dinorawrski.",
+        "uuid": "7f5a7c31-98be-4572-9a6d-1db09a31a777",
+        "version": [
+            1,
+            0,
+            8
+        ],
+        "min_engine_version": [
+            1,
+            20,
+            50
+        ]
+    },
+    "modules": [
+        {
+            "description": "Core Logic & Data",
+            "type": "data",
+            "uuid": "3ef6238f-7f2b-4c6a-902c-1a46acd7c897",
+            "version": [
+                1,
+                0,
+                8
+            ]
+        },
+        {
+            "description": "Modular JS Engine",
+            "type": "script",
+            "language": "javascript",
+            "uuid": "6d32f921-ddb1-4cb1-b643-4573e4abf514",
+            "version": [
+                1,
+                0,
+                8
+            ],
+            "entry": "scripts/main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "@minecraft/server",
+            "version": "2.3.0"
+        },
+        {
+            "module_name": "@minecraft/server-ui",
+            "version": "2.0.0"
+        },
+        {
+            "uuid": "59f5020f-93ce-4176-be01-22b3ec440777",
+            "version": [
+                1,
+                0,
+                8
+            ]
+        }
+    ],
+    "metadata": {
+        "authors": [
+            "dinorawr"
+        ],
+        "url": "https://www.youtube.com/@dinorawr",
+        "product_type": "addon"
+    }
+}

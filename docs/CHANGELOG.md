@@ -99,11 +99,15 @@ Nada desta versão foi testado no jogo.
 - Fica pendente: o coelho novo do Common Sense também é redefinido pelo Better on Bedrock (como o urso-polar), e só o pack mais alto vale.
 
 ### Simple RPG 4.1.3 (2026-10-30)
-- **Simple RPG 4.0.5 → 4.1.3** (pedido do João). Os UUIDs são os mesmos; as pastas continuam com o nome antigo. O commit "Simple RPG 4.1.3 original" guarda os packs como vieram, e o `mesclar_jogador.py` lê o jogador do RPG dele (`ORIGINAIS_POR_PACK`).
+- **Simple RPG 4.0.5 → 4.1.3** (pedido do João). Os UUIDs são os mesmos; as pastas continuaram com o nome antigo até a normalização dos nomes (abaixo). O commit "Simple RPG 4.1.3 original" guarda os packs como vieram, e o `mesclar_jogador.py` lê o jogador do RPG dele (`ORIGINAIS_POR_PACK`).
 - O que veio da 4.1.3: a espada nas costas saiu (o jogador do RPG não acrescenta mais nada; o jogador mesclado do Compat perdeu o controle de render e as texturas dela) e a tela da árvore de habilidades reconhece os botões em português.
 - Reaplicado do modpack: `main.js` (tradução, tomos e compras de magia) unido com a mudança do autor sem conflito; minério e lingote de vibrânio, itens, saque do minério, chefe saqueador, `blocks.json`, `_ui_defs` unido e `pt_BR.lang`.
 - **Árvore de habilidades**: os botões traduzidos não batiam com os nomes que a tela procura e ficavam fora do lugar. Agora são "Sair", "Melhorar Habilidade", "Resetar Talentos" e "Lista de Habilidades", os que a tela da 4.1.3 reconhece.
 - **Torres dos saqueadores**: a 4.1.3 desligou o surgimento natural da Torre e deixou desligado o script que a substituiria, então nenhuma torre aparecia. Fica a regra da 4.0.5 (torres surgindo como antes).
+
+### Nomes dos packs (2026-10-30)
+- **Nomes no jogo normalizados** (pedido do João): todo pack aparece como "Nome original Versão (BP)" ou "(RP)", sem cores nem textos soltos, com a versão do addon que está no pack. Ex.: "RPG_Behavior" → "Simple RPG 4.1.3 (BP)", "Java Combat[§dv2.6.5] Beharviors Packs" → "Java Combat 2.6.5 (BP)", "rnr-v1.4-the-accursed - Resource Pack" → "Realms & Races 1.4 (RP)", "Melhor em Bedrock - Pacote de recursos" → "Better on Bedrock 1.2.1 (RP)". O DarkAge dizia V0.7.75 no manifest, mas o arquivo é a 0.7.76. Os packs próprios ficam "Addon Pack Unified Core", "Addon Pack Forsaken Grimoires" e "Addon Pack Compat". Só muda o `header.name` dos manifests; UUIDs e versões continuam os mesmos, então a importação atualiza os packs dos mundos que já existem.
+- **Pastas dos packs** (que também dão nome aos `.mcpack` dentro do `.mcaddon`) com o nome do addon e sem versão, para não ficarem velhas a cada atualização: `BP_RPG_Addon_v4_0_5_behavior_pack` → `BP_SimpleRPG`, `BP_Better_on_Bedrock_1_1_behaviors` → `BP_BetterOnBedrock`, `BP_fo-bp-v1.19.4` → `BP_ForsakenOdyssey`, `BP_dungeons_BP` → `BP_AlylicasDungeons`, `BP_RnR_Accursed` → `BP_RealmsAndRaces` e assim por diante. As ferramentas usam os nomes novos; o `mesclar_jogador.py` lê os jogadores originais pelo caminho antigo (`PASTA_NOS_ORIGINAIS`).
 
 ## 0.5
 
