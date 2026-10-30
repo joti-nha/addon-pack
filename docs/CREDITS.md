@@ -9,21 +9,21 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | Actions & Stuff 1.11.1 | Oreville Studios Ltd | base de animações do pack |
 | Eternal Caves 1.1 | Panascais | |
 | Eternal End 1.1 | Panascais | |
-| Mowzie's Mobs Add-On 1.1 | Honeyfrost | adaptação dos mobs do mod Java Mowzie's Mobs |
+| Mowzie's Mobs 1.1 | Honeyfrost | adaptação dos mobs do mod Java Mowzie's Mobs |
 | OTG Backpack 1.0.8 | dinorawrski / dinorawr | **uso restrito**, ver abaixo |
-| Cataclysmical | Minera Studios | |
-| Better on Bedrock | Poggy | |
+| Cataclysmical 1.7.2 | Minera Studios | |
+| Better on Bedrock 1.2.1 | Poggy | |
 | Forsaken Odyssey 1.19.4 | NicoTheKid | |
-| Simple RPG Addon 4.1.3 | Max (Dead_Maxyt no CurseForge) | |
+| Simple RPG 4.1.3 | Max (Dead_Maxyt no CurseForge) | |
 | Nature's Compass 2.3 | DustVeyn Studio | o manifest indica "Unofficial Post" |
-| Alylica's Dungeons | Alylica (nome do addon; autor **não declarado** no manifest) | |
-| Aquaculture Add-On | autor **não declarado** no manifest | |
-| DarkAge Bizarre Remake 0.7.76 | autor **não declarado** no manifest | |
-| JavaCombat 2.6.5 | autor **não declarado** no manifest | |
+| Alylica's Dungeons 2.1.0 | Alylica (nome do addon; autor **não declarado** no manifest) | |
+| Aquaculture 1.0.9 | Team Metallurgy, segundo a descrição do pack | |
+| DarkAge Bizarre Remake 0.7.76 | Dark Garden Team (PetergamerXD, líder do projeto), segundo a descrição do pack | |
+| Java Combat 2.6.5 | Raiyon, segundo a descrição do pack | |
 | A&S Compatibility | pack de compatibilidade fornecido pelo usuário (autoria **não declarada**); versão 1.2 estendida neste projeto | |
-| CommonSense 1.8.1 | JFAddons (Jerry), segundo o guia do próprio addon | |
-| Improvised Guns 3.0.5 | autor **não declarado** no manifest | |
-| RnR v1.4 The Accursed | autor **não declarado** no manifest | |
+| Common Sense 1.8.1 | JFAddons (Jerry), segundo o guia do próprio addon | |
+| Improvised Guns 3.0.5 | R401/JERA, segundo a descrição do pack | |
+| Realms & Races 1.4 (The Accursed) | UrDailyJoe, segundo a página do addon no MCPEDL | |
 | Forsaken Grimoires | Addon Pack (camada própria; usa os pergaminhos e o sistema de varinhas do Forsaken Odyssey, sem copiar arquivos dele) | |
 | Unified Core | Addon Pack (camada própria deste projeto) | textos e ajustes de unificação |
 

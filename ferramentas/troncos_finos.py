@@ -10,7 +10,7 @@ import os
 from PIL import Image
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-FINOS = os.path.join(RAIZ, 'packs', 'RP_Better_on_Bedrock_1_1_resources', 'textures', 'blocks', 'thin_logs')
+FINOS = os.path.join(RAIZ, 'packs', 'RP_BetterOnBedrock', 'textures', 'blocks', 'thin_logs')
 VANILLA = os.path.join(RAIZ, 'ferramentas', 'recursos', 'troncos')
 
 for madeira in ('cherry', 'mangrove', 'pale_oak'):

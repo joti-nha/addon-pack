@@ -23,10 +23,10 @@ import brarchive  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PACKS = os.path.join(RAIZ, 'packs')
-AS = os.path.join(PACKS, 'RP_ActionsAndStuff_RP')
+AS = os.path.join(PACKS, 'RP_ActionsAndStuff')
 COMPAT = os.path.join(PACKS, 'RP_AddonPack_Compat')
-CATA = os.path.join(PACKS, 'RP_Cataclysmical_RP')
-CATA_BP = os.path.join(PACKS, 'BP_Cataclysmical_BP')
+CATA = os.path.join(PACKS, 'RP_Cataclysmical')
+CATA_BP = os.path.join(PACKS, 'BP_Cataclysmical')
 
 MOLDES = {'oreville:is_mace': 'minecraft:mace', 'oreville:is_hoe': 'minecraft:iron_hoe',
           'oreville:is_pickaxe': 'minecraft:iron_pickaxe', 'oreville:is_sword': 'minecraft:iron_sword',

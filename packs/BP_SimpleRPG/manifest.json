@@ -1,0 +1,63 @@
+{
+  "format_version": 2,
+  "metadata": {
+    "authors": [
+      "Max"
+    ]
+  },
+  "header": {
+    "name": "Simple RPG 4.1.3 (BP)",
+    "description": "An epic RPG Add-On featuring 5 classes, custom magic, unique weapons, boss fights, and a sprawling skill tree! Built by Max.",
+    "min_engine_version": [
+      1,
+      21,
+      0
+    ],
+    "uuid": "29ba4d9f-352a-47fb-931d-42f8138083e8",
+    "version": [
+      4,
+      1,
+      3
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "df725ed1-c6e0-420f-9b03-cf4b644b548b",
+      "version": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "d9405a90-3bf2-41e8-85fc-0d1682235913",
+      "entry": "scripts/main.js",
+      "version": [
+        4,
+        1,
+        3
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "f4fb0487-86b4-449d-9915-93f18c4693d2",
+      "version": [
+        4,
+        1,
+        3
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.11.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "1.2.0"
+    }
+  ]
+}

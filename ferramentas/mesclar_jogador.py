@@ -19,11 +19,14 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import brarchive  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff_RP')
+AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff')
 ORIGINAIS = '91bb9dc23'  # commit 'Packs originais extraidos (sem alteracoes do modpack)'
 # packs atualizados depois: commit com o pack original novo, antes das alteracoes do modpack
-ORIGINAIS_POR_PACK = {'RP_RPG_Addon_v4_0_5_resource_pack': '2e293ccd3'}  # Simple RPG 4.1.3
-FONTES = ['RP_RnR_Accursed', 'RP_OTG_Backpack_v1.0.8_-_Patreon_RP', 'RP_RPG_Addon_v4_0_5_resource_pack']
+ORIGINAIS_POR_PACK = {'RP_SimpleRPG': '2e293ccd3'}  # Simple RPG 4.1.3
+# nesses commits as pastas ainda tinham o nome antigo (renomeadas em 2026-10-30)
+PASTA_NOS_ORIGINAIS = {'RP_RealmsAndRaces': 'RP_RnR_Accursed', 'RP_OTGBackpack': 'RP_OTG_Backpack_v1.0.8_-_Patreon_RP',
+                       'RP_SimpleRPG': 'RP_RPG_Addon_v4_0_5_resource_pack'}
+FONTES = ['RP_RealmsAndRaces', 'RP_OTGBackpack', 'RP_SimpleRPG']
 DESTINO = 'RP_AddonPack_Compat'
 # raca do RnR: o BP usa minecraft:skin_id (o variant e da mochila do OTG); o RP original lia query.variant
 VARIANT = re.compile(r'\b(query|q)\.variant\b')
@@ -85,9 +88,9 @@ def mesclar(a, outro):
 
 def jogador_original(pack):
     """player.entity.json original do pack (do commit dos packs originais), com a raca do RnR em skin_id."""
-    caminho = f'packs/{pack}/entity/player.entity.json'
+    caminho = f'packs/{PASTA_NOS_ORIGINAIS.get(pack, pack)}/entity/player.entity.json'
     texto = subprocess.run(['git', 'show', f'{ORIGINAIS_POR_PACK.get(pack, ORIGINAIS)}:{caminho}'], cwd=RAIZ, capture_output=True, text=True, encoding='utf-8', check=True).stdout
-    if pack == 'RP_RnR_Accursed': texto = VARIANT.sub(lambda m: m.group(1) + '.skin_id', texto)
+    if pack == 'RP_RealmsAndRaces': texto = VARIANT.sub(lambda m: m.group(1) + '.skin_id', texto)
     return json.loads(texto)
 
 

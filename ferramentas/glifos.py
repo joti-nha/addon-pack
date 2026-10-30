@@ -10,7 +10,7 @@ import glob, os, re
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOVER = {
-    'Better_on_Bedrock_1_1': {0xE3: 0xE5, 0xE4: 0xE6},
+    'BetterOnBedrock': {0xE3: 0xE5, 0xE4: 0xE6},
     'Cataclysmical': {0xE3: 0xE7, 0xE4: 0xE9},
 }
 # O  nos hud_screen.json é um marcador de texto compartilhado por vários packs, não um ícone.

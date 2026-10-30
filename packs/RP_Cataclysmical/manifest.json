@@ -1,0 +1,36 @@
+{
+	"format_version": 3,
+	"header": {
+		"name": "Cataclysmical 1.7.2 (RP)",
+		"description": "Cataclysmical Add-On by Minera Studios",
+		"min_engine_version": "1.21.10",
+		"uuid": "946a13c1-3f86-43c4-a514-cc8f1bef18de",
+		"version": "1.7.2"
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "a636f53a-2633-4430-bb21-734e41b86eb8",
+			"version": "1.0.0"
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "65e68ae0-db3f-4813-9452-8b5ca5b90e27",
+			"version": "1.7.2"
+		}
+	],
+	"metadata": {
+		"authors": [
+			"Minera Studios"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.54"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	}
+}

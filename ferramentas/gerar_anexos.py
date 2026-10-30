@@ -2,7 +2,7 @@
 """Gera anexos (modelos 3D na mao) derivados do Actions & Stuff para itens de outros addons.
 
 Uso: python ferramentas/gerar_anexos.py
-Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff_RP e grava:
+Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff e grava:
   - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
     (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
      textures/ap/aqc_rod_*.png)
@@ -19,10 +19,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import brarchive  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff_RP')
+AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff')
 COMPAT = os.path.join(RAIZ, 'packs', 'RP_AddonPack_Compat')
 FGR = os.path.join(RAIZ, 'packs', 'RP_ForsakenGrimoire')
-AQC = os.path.join(RAIZ, 'packs', 'RP_Aquaculture_Add-On_RP')
+AQC = os.path.join(RAIZ, 'packs', 'RP_Aquaculture')
 
 
 def gravar_json(caminho, obj):
