@@ -1,6 +1,6 @@
 execute if score .Initialised bv:dylight matches 2 run execute as @a[tag=!bv:dlighton] at @s run tag @s add bv:dlighton
 execute if score .Initialised bv:dylight matches 1 run execute as @a[tag=bv:dlighton] at @s run tag @s remove bv:dlighton
-execute if score .Initialised bv:breakleaves matches 2 run function leave_touch
+# [Addon Pack] leave_touch roda a cada 2 ticks pelo Unified Core (scripts/funcoes.js)
 execute if score .Initialised bv:campheal matches 2 run function campfire_heal
 execute if score .Initialised bv:nohurtowner matches 2 run execute as @a[tag=!nohurtowner] run tag @s add nohurtowner
 execute if score .Initialised bv:nohurtowner matches 1 run execute as @a[tag=nohurtowner] run tag @s remove nohurtowner

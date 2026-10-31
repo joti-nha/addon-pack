@@ -6,6 +6,7 @@ const DIM_ID = "dungeons:ancientdim_deepsea_monument"
 system.runInterval(() => {
     if (!hunts) return;
     const dim = world.getDimension(DIM_ID)
+    if (dim.getPlayers().length === 0) return; // [Addon Pack] ninguem no monumento: nao varre itens a cada tick
     for(const entity of dim.getEntities({type:"minecraft:item"})) {
         if(entity.isInWater && !entity.isOnGround) entity.applyImpulse({x:0,y:-0.005,z:0})
     }

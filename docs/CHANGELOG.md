@@ -13,6 +13,13 @@ Nada desta versão foi testado no jogo.
 
 - **Martelo de Guerra Piglin** (Forsaken Odyssey) com as animações da maça do A&S: o anexo da maça do A&S com o modelo do martelo de pé (`ferramentas/martelo_piglin.py`) e a etiqueta `oreville:is_mace` no item.
 
+### Otimizado
+- **Funções por tick**: o `functions/tick.json` unido estava em 6 packs (Dungeons, Better on Bedrock, CommonSense, DarkAge, Mowzie e RnR), então as funções dele podiam rodar até 6 vezes por tick. Agora só o Dungeons tem `tick.json` (só o `stun_cd`, que conta tempo por tick) e o Unified Core roda o resto espaçado (`BP_UnifiedCore/scripts/funcoes.js`): opções, efeitos de itens, morte e primeira entrada do CommonSense e armaduras do DarkAge a cada 0,5 s; a preparação do mundo do CommonSense (17 placares, 14 valores e a etiqueta das montarias) e as regras de comando do BoB a cada 2 s. A quebra de folhas pela montaria (opção do CommonSense) roda a cada 2 ticks, só se estiver ligada. Os efeitos dessas funções duram 1 s ou mais, então nada muda no jogo.
+- **Simple RPG**: o HUD atualiza a cada 2 ticks em vez de todo tick (os atributos continuam a cada 1 s) e a busca de chefes perto do jogador roda a cada 0,5 s, com a lista guardada entre uma busca e outra.
+- **Dungeons**: o HUD dos artefatos atualiza a cada 2 ticks, e o monumento do mar profundo não roda sem jogador na dimensão.
+- **Aquaculture**: o laço das iscas das varas de pesca não roda quando ninguém está com a linha na água.
+- **Cajados e varinhas do Forsaken lançam no tempo de cast em tempo real** (pedido do João): o tempo contava em ticks do servidor e esperava o fim do uso do item, então com o jogo travado o feitiço demorava muito mais que o tempo de cast. Agora sai quando passa o tempo em tempo real (ou em ticks, o que vier primeiro), sem esperar a animação; soltar o botão depois do tempo também lança, e soltar antes continua cancelando.
+
 ### Removido
 - **Java Combat** (BP e RP), a pedido do João: era o addon que mais pesava e dava mais bugs, porque rodava o tempo todo (recarga de ataque, barra no HUD e troca de título a cada tick). Também saíram do jogador mesclado (`entities/player.json` do CommonSense, OTG e RnR) os controles `attacking`/`blocking`, o bloqueio de escudo por etiqueta, a resistência a empurrão no pulo, os grupos `valid_attack`/`custom_attack` e o sensor de chuva; do `hud_screen` e do `_ui_defs` unificados, o painel de recarga; e das `sound_definitions` unificadas, o som `sprint_attack`. As espadas e montantes voltam ao ritmo de ataque do jogo (os montantes não têm recarga própria desde o PR #14).
 
