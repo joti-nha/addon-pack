@@ -8,8 +8,11 @@ jogador). Ele percebe a troca por q.armor_texture_slot(N), que só muda com as a
 diamante...): as armaduras de addons não têm tipo de textura, então vesti-las não mudava nada e a animação não
 tocava. Este script faz os três controles também perceberem quando o espaço da armadura passa de vazio para
 ocupado (e o contrário), com q.is_item_name_any('slot.armor.<parte>',''), que vale para qualquer item.
+O controle do capacete também saía do estado da animação com !q.has_armor_slot(0), que vale 1 o tempo todo com um
+capacete de addon: o estado saía e voltava a cada quadro e a animação repetia sem parar (teste do João, 2026-10-31).
+Essa saída sai daqui; tirar o capacete já é percebido pelo espaço vazio.
 """
-import json, os, sys
+import json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import brarchive  # noqa: E402
@@ -36,6 +39,11 @@ def main():
         vazio = f"q.is_item_name_any('slot.armor.{parte}','')"
         var = f'v.ap_vazio{n}'
         tocar = next(s for s in st if s != 'default')  # o estado que toca a animação
+        # sem a saída "não é armadura do jogo", que repete a animação com uma armadura de addon
+        so_jogo = re.compile(rf'\|\|!q\.has_armor_slot\({n}\)|!q\.has_armor_slot\({n}\)\|\|')
+        for t in st[tocar]['transitions']:
+            if 'default' in t and so_jogo.search(t['default']):
+                t['default'] = so_jogo.sub('', t['default']); mudou += 1
         if any(var in x for x in st[tocar].get('on_entry', [])):
             continue
         # entra no estado (e toca) também quando há um item de addon no espaço
@@ -48,7 +56,7 @@ def main():
     if mudou:
         itens[nome] = json.dumps(j, ensure_ascii=False, separators=(',', ':')).encode()
         brarchive.escrever(arq, itens)
-    print(f'vestir: {mudou} controles de armadura do A&S ajustados' if mudou else 'vestir: o A&S já estava ajustado')
+    print(f'vestir: {mudou} ajustes nos controles de armadura do A&S' if mudou else 'vestir: o A&S já estava ajustado')
 
 
 if __name__ == '__main__': main()
