@@ -1,7 +1,7 @@
 // Addon Pack - Unified Core: combate (pedido do João em 2026-10-31, quando o Java Combat saiu do pack).
 // Tudo roda so nos eventos de golpe e de dano; o unico laco por tick guarda a altura do jogador (para a queda das marretas).
 //  - Espadas: golpe em area (sweep) no 1o golpe de uma sequencia do A&S: metade do dano do golpe nos mobs a ate 2,1
-//    blocos de um ponto 2,5 blocos a frente (area do Java Combat), parado ou correndo, sem exigir recarga do ataque.
+//    blocos de um ponto 2,5 blocos a frente (area do Java Combat), so no chao e sem correr (regra do Java Combat), sem exigir recarga do ataque.
 //  - Machados: o critico (golpe caindo) da o dobro do dano, em vez de 1,5x.
 //  - Marretas: dano extra pela altura da queda, como a maca do jogo, e o jogador nao toma o dano da queda.
 import { world, system, Player, EntityDamageCause, EquipmentSlot } from "@minecraft/server";
@@ -88,6 +88,7 @@ world.afterEvents.entityHitEntity.subscribe(({ damagingEntity: p, hitEntity: alv
     try {
       const c = combo.get(p.id);
       if (!c || c.estado !== 1 || system.currentTick - c.desde > 3) return;
+      if (!p.isOnGround || p.isSprinting) return; // como no Java Combat: so no chao e sem correr
       const g = golpe.get(p.id); // dano do golpe original (evento de dano do mesmo tick)
       if (!g || g.alvo !== alvoId || system.currentTick - g.tick > 3) return;
       varrer(p, alvoId, g.dano / 2);
