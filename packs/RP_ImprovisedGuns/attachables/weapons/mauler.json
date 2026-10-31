@@ -1,1 +1,58 @@
-{"format_version":"1.10.0","minecraft:attachable":{"description":{"identifier":"rev:mauler","materials":{"default":"entity_alphatest","enchanted":"entity_alphatest_glint"},"textures":{"default":"textures/models/mauler","enchanted":"textures/models/rev_glint"},"geometry":{"default":"geometry.mauler"},"sound_effects":{"pull":"mob.witch.throw","open":"open.wooden_trapdoor","reload":"block.barrel.close","close":"close.wooden_trapdoor"},"animations":{"first_person":"animation.player.ajolote.first_person","empty":"animation.player.ajolote.aim","default":"animation.player.ajolote.third2","start":"animation.mauler.start","reload_controller":"controller.animation.musket.reload","fire_controller":"controller.animation.musket.fire","fire_controller_empty":"controller.animation.empty.fire","reload":"animation.mauler.reload","fire":"animation.mauler.shoot","fire_off":"animation.mauler.shoot.off","first_person_spear":"animation.player.ajolote.first_person_spear"},"scripts":{"animate":[{"first_person":"c.is_first_person"},{"fire_controller":"c.is_first_person"},{"reload_controller":"c.is_first_person"},{"default":"!c.is_first_person"}],"parent_setup":"c.item_slot == 'main_hand' ? { v.oreville_mainhand_visible = 1; v.oreville_mainhand_custom_pos = 1; } : c.item_slot == 'off_hand' ? { v.oreville_offhand_visible = 1; } : 0;"},"render_controllers":["controller.render.item_default"]}}}
+{
+	"format_version": "1.10.0",
+	"minecraft:attachable": {
+		"description": {
+			"identifier": "rev:mauler",
+			"materials": {
+				"default": "entity_alphatest",
+				"enchanted": "entity_alphatest_glint"
+			},
+			"textures": {
+				"default": "textures/models/mauler",
+				"enchanted": "textures/models/rev_glint"
+			},
+			"geometry": {
+				"default": "geometry.mauler"
+			},
+			"sound_effects": {
+				"pull": "mob.witch.throw",
+				"open": "open.wooden_trapdoor",
+				"reload": "block.barrel.close",
+				"close": "close.wooden_trapdoor"
+			},
+			"animations": {
+				"first_person": "animation.player.ajolote.first_person",
+				"empty": "animation.player.ajolote.aim",
+				"default": "animation.player.ajolote.third2",
+				"start": "animation.mauler.start",
+				"reload_controller": "controller.animation.musket.reload",
+				"fire_controller": "controller.animation.musket.fire",
+				"fire_controller_empty": "controller.animation.empty.fire",
+				"reload": "animation.mauler.reload",
+				"fire": "animation.mauler.shoot",
+				"fire_off": "animation.mauler.shoot.off",
+				"first_person_spear": "animation.player.ajolote.first_person_spear"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"first_person": "c.is_first_person"
+					},
+					
+					{
+						"fire_controller": "c.is_first_person"
+					},
+					{
+						"reload_controller": "c.is_first_person"
+					},
+					{
+						"default": "!c.is_first_person"
+					}
+				]
+			},
+			"render_controllers": [
+				"controller.render.item_default"
+			]
+		}
+	}
+}
