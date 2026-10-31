@@ -459,7 +459,7 @@ var WarriorShopItems = [
   {
     id: "shield_buff",
     name: "Baluarte",
-    description: "(Passiva) Cura 5 cora\xE7\xF5es na hora a cada 75 segundos quando h\xE1 um Escudo na m\xE3o secund\xE1ria.",
+    description: "(Passiva) Cura 5 cora\xE7\xF5es na hora a cada 35 segundos quando h\xE1 um Escudo na m\xE3o secund\xE1ria.",
     costXP: 5,
     costSouls: 500,
     tag: "shop_shield",
@@ -2066,7 +2066,7 @@ var warriorSkillDescriptions = {
   "groundsmash": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Concede Resist\xEAncia I cont\xEDnua, deixando voc\xEA mais resistente em todas as lutas.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
   "dual_sword": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Dobra o dano ao atacar com os punhos ou qualquer espada (de Madeira a Netherite).\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
   "attack_strength": "\xA7dTipo: Habilidade Especial\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma habilidade ativa na Loja de Almas.\n- For\xE7a de Ataque: agache e pule para ganhar For\xE7a, Resist\xEAncia, Resist\xEAncia ao Fogo, Regenera\xE7\xE3o e Cora\xE7\xF5es Extras no m\xE1ximo por 10 segundos.\n- Todos os mobs hostis a at\xE9 10 blocos recebem 20 de dano e Lentid\xE3o III por 10 segundos.\n- Recarga: 5 minutos.\n\n\xA77Nota: para usar, equipe a habilidade e fa\xE7a Agachar + Pular.\xA7r",
-  "shield": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Cura 5 cora\xE7\xF5es na hora a cada 30 segundos, mas S\xD3 com um Escudo na m\xE3o secund\xE1ria.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
+  "shield": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Cura 5 cora\xE7\xF5es na hora a cada 35 segundos, mas S\xD3 com um Escudo na m\xE3o secund\xE1ria.\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r",
   "fire_slash": "\xA7dTipo: Habilidade Passiva\xA7r\n\n\xA7eBenef\xEDcios:\xA7r\n- Desbloqueia uma vantagem passiva na Loja de Almas.\n- Queima passivamente todo inimigo que causar dano a voc\xEA (funciona em zumbis, creepers, jogadores etc.).\n\n\xA77Nota: depois de desbloquear aqui, compre esta vantagem passiva na Loja de Almas. Ela fica sempre ativa depois de comprada.\xA7r"
 };
 var mageSkillDescriptions = {
@@ -3669,6 +3669,10 @@ var MAGE_BLESSING_EFFECTS = [
   "minecraft:water_breathing", "minecraft:invisibility", "minecraft:night_vision", "minecraft:absorption", "minecraft:saturation", "minecraft:slow_falling", "minecraft:conduit_power"
 ];
 
+// Addon Pack: arcos de addons (etiqueta de arco do A&S, como os do Dungeons) contam como arco nas passivas do Patrulheiro
+function isAnyBow(item) {
+  return item.typeId === "minecraft:bow" || item.hasTag("oreville:is_bow") || item.hasTag("minecraft:is_bow");
+}
 function initCombatSystem() {
 
 
@@ -3679,7 +3683,7 @@ function initCombatSystem() {
     if (doRangerBowRecovery) {
       rangerBowRecoveryTickTimer = 0;
     }
-    const doShieldHeal = shieldTickTimer >= 1500;
+    const doShieldHeal = shieldTickTimer >= 700; // Addon Pack: 35 s (era 75 s)
     if (doShieldHeal) {
       shieldTickTimer = 0;
     }
@@ -3823,7 +3827,8 @@ function initCombatSystem() {
         const equippable = player.getComponent("minecraft:equippable");
         if (equippable) {
           const offhand = equippable.getEquipment("Offhand");
-          if (offhand && offhand.typeId === "minecraft:shield") {
+          // Addon Pack: vale qualquer escudo (o do jogo e os de addons, com a etiqueta de escudo do A&S)
+          if (offhand && (offhand.typeId === "minecraft:shield" || offhand.hasTag("oreville:is_shield"))) {
             const health = player.getComponent("minecraft:health");
             if (health) {
               const newHealth = Math.min(health.currentValue + 10, health.effectiveMax);
@@ -3972,7 +3977,7 @@ function initCombatSystem() {
         const equippable = player.getComponent("minecraft:equippable");
         if (equippable) {
           const mainhand = equippable.getEquipment("Mainhand");
-          if (mainhand && mainhand.typeId === "minecraft:bow") {
+          if (mainhand && isAnyBow(mainhand)) {
             player.addEffect("minecraft:speed", 300, { amplifier: 1, showParticles: false });
             if (hasRangerHearts) {
               targetRangerAmplifier = 3;
@@ -4013,7 +4018,7 @@ function initCombatSystem() {
         if (equippable) {
           const mainhand = equippable.getEquipment("Mainhand");
           const offhand = equippable.getEquipment("Offhand");
-          if (mainhand && mainhand.typeId === "minecraft:bow" || offhand && offhand.typeId === "minecraft:bow") {
+          if (mainhand && isAnyBow(mainhand) || offhand && isAnyBow(offhand)) {
             const inv = player.getComponent("minecraft:inventory");
             if (inv && inv.container) {
               let hasArrow = false;
@@ -4083,6 +4088,14 @@ function initCombatSystem() {
         else if (weapon.typeId === "minecraft:iron_sword") extraDamage = 4;
         else if (weapon.typeId === "minecraft:diamond_sword") extraDamage = 4;
         else if (weapon.typeId === "minecraft:netherite_sword") extraDamage = 5;
+      } else if (weapon.hasTag("minecraft:is_sword") || weapon.hasTag("oreville:is_sword")) {
+        // Addon Pack: espadas de addons pelo nivel (etiqueta *_tier); sem nivel, como a de ferro
+        const tiers = weapon.getTags().filter((t) => t.endsWith("_tier"));
+        const tem = (n) => tiers.some((t) => t.endsWith(":" + n + "_tier"));
+        if (tem("wooden") || tem("golden") || tem("gold")) extraDamage = 2;
+        else if (tem("stone") || tem("copper") || tem("bone") || tem("chitin")) extraDamage = 3;
+        else if (tem("netherite") || tem("enderite")) extraDamage = 5;
+        else extraDamage = 4;
       }
       if (extraDamage > 0) {
         dealTrueDamage(target, extraDamage, player);
