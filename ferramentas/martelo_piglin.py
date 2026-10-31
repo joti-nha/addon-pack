@@ -6,9 +6,16 @@ Copia o anexo da maca do A&S e troca so o modelo e a textura, como as armas de b
 (anexos_cataclysm.py): o modelo do martelo fica de pe, com o cabo na mao e a cabeca para cima. Grava
 packs/RP_AddonPack_Compat/attachables/as_compat/ntk/piglin_war_hammer.json e models/entity/ap_ntk_martelo.geo.json
 e poe a etiqueta oreville:is_mace no item (BP_ForsakenOdyssey), que liga o golpe da maca no braco do A&S.
-Rode de novo depois de atualizar o A&S ou o Forsaken Odyssey.
+
+Golpe unico (pedido do João, 2026-10-31): o martelo toca so o 1o golpe da maca do A&S, sem a sequencia.
+  - O item perde o minecraft:swing_duration de 4 s: o A&S passa de um golpe para o seguinte enquanto
+    v.attack_time nao zera, entao um so toque emendava golpes por 4 s.
+  - O item ganha a etiqueta ap:golpe_unico, e os dois controles da maca do A&S (braco: camimd; posicao do item:
+    pwqhcf) ganham, so para essa etiqueta, a volta para o 1o golpe a cada toque (por um estado gemeo, ja que um
+    estado nao pode ir para ele mesmo) e ficam sem as poses de queda, de pouso e da sequencia rapida.
+Rode de novo depois de atualizar o A&S (e depois do enxugar_ans.py) ou o Forsaken Odyssey.
 """
-import json, os, sys
+import copy, json, os, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import brarchive  # noqa: E402
@@ -31,6 +38,60 @@ def uv_por_face(uv, tam):
             'south': f(u + 2 * d + w, v + d, w, h), 'up': f(u + d + w, v + d, -w, -d), 'down': f(u + d + 2 * w, v, -w, d)}
 
 
+UNICO = "q.equipped_item_any_tag('slot.weapon.mainhand','ap:golpe_unico')"
+GEMEO = 'ap_golpe_unico'
+
+
+def _mudar(trans, destino, extra, so_primeiro=False):
+    """Acrescenta '&&extra' as transicoes para 'destino' (lista de {estado: condicao})."""
+    for t in trans:
+        if destino in t:
+            t[destino] = f'({t[destino]})&&{extra}'
+            if so_primeiro: return
+
+
+def _antes(trans, destino, novo):
+    """Poe a transicao 'novo' antes da primeira transicao para 'destino' (ou no fim)."""
+    i = next((k for k, t in enumerate(trans) if destino in t), len(trans))
+    trans.insert(i, novo)
+
+
+def golpe_unico():
+    arq = os.path.join(cata.AS, '__brarchive', 'animation_controllers.brarchive')
+    itens = brarchive.ler(arq)
+    nome = next(n for n, d in itens.items() if d and b'controller.animation.oreville_ans.camimd' in d)
+    j = json.loads(itens[nome])
+    acs = j['animation_controllers']
+    braco = acs['controller.animation.oreville_ans.camimd']['states']
+    item = acs['controller.animation.oreville_ans.pwqhcf']['states']
+    if GEMEO in braco:
+        print('golpe unico: o A&S ja tem o estado', GEMEO)
+        return
+    nao = f'!{UNICO}'
+    # braco: maca parada -> 1o golpe (aqfcvc) a cada toque, no chao ou no ar; sem pulo alto, queda e 2o golpe
+    t = braco['mace']['transitions']
+    for d in ('bcyrdi', 'aqfcvc', 'hjmytu', 'azdvph'): _mudar(t, d, nao)
+    t.insert(1, {'aqfcvc': f'{UNICO}&&v.attack_time'})
+    g = copy.deepcopy(braco['aqfcvc'])
+    t = braco['aqfcvc']['transitions']
+    for d in ('hjmytu', 'bcyrdi'): _mudar(t, d, nao)
+    _antes(t, 'hjmytu', {GEMEO: f'{UNICO}&&q.state_time>=0.3&&v.attack_time'})
+    g['transitions'] = [x for x in t if 'default' in x or 'mace' in x]
+    _antes(g['transitions'], 'mace', {'aqfcvc': 'q.state_time>=0.3&&v.attack_time'})
+    braco[GEMEO] = g
+    # posicao do item: sem a pose de queda, o pouso e a sequencia rapida; fpenke <-> opctuq ja e o mesmo golpe
+    _mudar(item['hpajvt']['transitions'], 'azdvph', nao)
+    for est, outro in (('fpenke', 'opctuq'), ('opctuq', 'fpenke')):
+        t = item[est]['transitions']
+        for x in t:
+            if 'hpajvt' in x: x['hpajvt'] = f"q.all_animations_finished&&(q.is_on_ground||{UNICO})"
+        for d in ('qbiqbl', 'psitzj', outro): _mudar(t, d, nao)
+        _antes(t, outro, {outro: f'{UNICO}&&q.state_time>=0.3&&v.attack_time'})
+    itens[nome] = json.dumps(j, ensure_ascii=False, separators=(',', ':')).encode()
+    brarchive.escrever(arq, itens)
+    print('golpe unico: controles camimd e pwqhcf do A&S ajustados')
+
+
 def main():
     molde = brarchive.anexo(cata.AS, 'minecraft:mace')
     gd = molde['minecraft:attachable']['description']['geometry']
@@ -50,12 +111,16 @@ def main():
                 {'format_version': '1.16.0', 'minecraft:geometry': [g]})
     a = cata.anexo(molde, IDENT, GEO, TEX, round(COMPRIMENTO / comp, 4))
     cata.gravar(os.path.join(cata.COMPAT, 'attachables', 'as_compat', 'ntk', 'piglin_war_hammer.json'), a)
-    # etiqueta da maca do A&S no item
+    # etiquetas da maca do A&S e do golpe unico no item, sem o swing_duration longo
     t = open(ITEM, encoding='utf-8').read()
     if '"oreville:is_mace"' not in t:
         t = t.replace('"ntk:hammer",', '"ntk:hammer","oreville:is_mace",', 1)
-        json.loads(t)
-        open(ITEM, 'w', encoding='utf-8').write(t)
+    if '"ap:golpe_unico"' not in t:
+        t = t.replace('"oreville:is_mace",', '"oreville:is_mace","ap:golpe_unico",', 1)
+    t = t.replace('"minecraft:swing_duration":{"value":4.0},', '')
+    json.loads(t)
+    open(ITEM, 'w', encoding='utf-8').write(t)
+    golpe_unico()
     print(f'martelo piglin: anexo da maca do A&S (comprimento do modelo {comp:.1f}, escala {COMPRIMENTO / comp:.3f})')
 
 
