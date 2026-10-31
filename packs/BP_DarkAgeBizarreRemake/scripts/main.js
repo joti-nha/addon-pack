@@ -95,25 +95,9 @@ world.beforeEvents.worldInitialize.subscribe((initEvent) => {
     },
   });
 });
-system.runInterval(() => {
-  const players = world.getPlayers();
-
-  players.forEach((player) => {
-    const itemMainhand = player?.getComponent("minecraft:equippable")?.getEquipmentSlot(`Mainhand`).getItem();
-    const itemOffhand = player?.getComponent("minecraft:equippable")?.getEquipmentSlot(`Offhand`).getItem();
-
-    if (player?.isSneaking && (itemMainhand?.typeId === `dk:sentinel_shield` || itemOffhand?.typeId === `dk:sentinel_shield`)) {
-      player?.playAnimation(`animation.player.first_person.sentinel_shield_block`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || (!q.is_item_name_any('slot.weapon.mainhand', 0, 'dk:sentinel_shield') && !q.is_item_name_any('slot.weapon.offhand', 0, 'dk:sentinel_shield'))", controller: `shield` });
-      player?.playAnimation(`animation.player.sentinel_shield_block_main_hand`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || !q.is_item_name_any('slot.weapon.mainhand', 0, 'dk:sentinel_shield')", controller: `shield` });
-      player?.playAnimation(`animation.player.sentinel_shield_block_off_hand`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || !q.is_item_name_any('slot.weapon.offhand', 0, 'dk:sentinel_shield')", controller: `shield` })
-    }
-    if (player?.isSneaking && (itemMainhand?.typeId === `dk:unboned_shield` || itemOffhand?.typeId === `dk:unboned_shield`)) {
-      player?.playAnimation(`animation.player.first_person.unboned_shield_block`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || (!q.is_item_name_any('slot.weapon.mainhand', 0, 'dk:unboned_shield') && !q.is_item_name_any('slot.weapon.offhand', 0, 'dk:unboned_shield'))", controller: `shield` });
-      player?.playAnimation(`animation.player.unboned_shield_block_main_hand`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || !q.is_item_name_any('slot.weapon.mainhand', 0, 'dk:unboned_shield')", controller: `shield` });
-      player?.playAnimation(`animation.player.unboned_shield_block_off_hand`, { blendOutTime: 0, stopExpression: "!q.is_sneaking || v.attack_time > 0.0 || !q.is_item_name_any('slot.weapon.offhand', 0, 'dk:unboned_shield')", controller: `shield` })
-    }
-  })
-}, 1);
+// Addon Pack: as poses de defesa ao agachar com os escudos (Sentinela e Desossado) agora sao as do A&S
+// (ferramentas/escudos_dk.py). Este laco tocava, a cada tick, tres animacoes no mesmo controle "shield",
+// uma trocando a outra, e o braco piscava ao defender.
 
 world.afterEvents.entityHurt.subscribe((data) => {
   const player = data.hurtEntity;
