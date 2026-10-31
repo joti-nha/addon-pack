@@ -4,6 +4,8 @@
 //    blocos de um ponto 2,5 blocos a frente (area do Java Combat), so no chao e sem correr (regra do Java Combat), sem exigir recarga do ataque.
 //  - Machados: o critico (golpe caindo) da o dobro do dano, em vez de 1,5x (no evento antes do dano, como dano do jogo).
 //  - Marretas: dano extra pela altura da queda, como a maca do jogo, e o jogador nao toma o dano da queda.
+//  - Escudos de addon (etiqueta ap:escudo_agachar, como os do Dark Age): agachado, bloqueiam golpes, flechas e explosoes
+//    vindos da frente (45 graus para cada lado), como o escudo do jogo.
 import { world, system, Player, EntityDamageCause, EquipmentSlot } from "@minecraft/server";
 
 // ---------- classe da arma (mesma ordem do A&S: machado vem antes de marreta e espada) ----------
@@ -164,3 +166,55 @@ world.afterEvents.entityHurt.subscribe(({ hurtEntity: alvo, damage, damageSource
     }
   } catch (e) { }
 });
+
+// ---------- escudos de addon: defender agachado ----------
+// Escudo de addon nao liga o bloqueio do jogo. O Dark Age devolvia a vida depois do golpe (golpe fatal matava e dano sem
+// atacante dava erro); aqui o dano e cancelado antes de acontecer. Respeita a recarga "shield" (o Cataclysmical a usa para
+// desarmar escudos), entao os mesmos mobs que desarmam o escudo do jogo desarmam estes.
+const ESCUDO_TAG = "ap:escudo_agachar";
+const COS_45 = Math.SQRT1_2;
+// mobs do Cataclysmical que desarmam o escudo do jogo (DisablePlayerShield): com escudo de addon, o golpe passa e o
+// escudo fica 7,5 s sem defender, igual ao escudo do jogo
+const QUEBRA_ESCUDO = new Set(["mnra_cata:skeleton_paladin", "mnra_cata:verdant_skeleton", "mnra_cata:gneiss_golem",
+  "mnra_cata:sun_tribunal", "mnra_cata:solar_tesla", "mnra_cata:eternal_seal"]);
+function escudoNaMao(p) {
+  try {
+    const eq = p.getComponent("minecraft:equippable");
+    for (const slot of [EquipmentSlot.Offhand, EquipmentSlot.Mainhand]) {
+      const it = eq?.getEquipment(slot);
+      if (it?.hasTag(ESCUDO_TAG)) return it;
+    }
+  } catch (e) { }
+  return undefined;
+}
+world.beforeEvents.entityHurt.subscribe((ev) => {
+  const p = ev.hurtEntity;
+  if (!(p instanceof Player) || !p.isSneaking || !(ev.damage > 0)) return;
+  try {
+    if (!escudoNaMao(p) || p.getItemCooldown("shield") > 0) return;
+    const fonte = ev.damageSource.damagingProjectile ?? ev.damageSource.damagingEntity;
+    if (!fonte) return;
+    const a = fonte.location, l = p.location, v = p.getViewDirection();
+    const dx = a.x - l.x, dz = a.z - l.z;
+    const dist = Math.hypot(dx, dz), olhar = Math.hypot(v.x, v.z);
+    if (dist < 0.01 || olhar < 0.01) return;
+    if ((dx * v.x + dz * v.z) / (dist * olhar) < COS_45) return; // fora da frente do escudo
+    const atacante = ev.damageSource.damagingEntity;
+    if (atacante && QUEBRA_ESCUDO.has(atacante.typeId)) {
+      system.run(() => {
+        try { p.startItemCooldown("shield", 150); p.dimension.playSound("random.break", p.location); } catch (e) { }
+      });
+      return;
+    }
+    ev.cancel = true;
+    const corpoACorpo = ev.damageSource.cause === EntityDamageCause.entityAttack;
+    system.run(() => {
+      try { p.dimension.playSound("item.shield.block", p.location); } catch (e) { }
+      // empurra quem bateu, como o Dark Age fazia
+      if (corpoACorpo && atacante?.isValid && !(atacante instanceof Player)) {
+        try { atacante.applyKnockback({ x: dx / dist * 1.3, z: dz / dist * 1.3 }, 0.52); } catch (e) { }
+      }
+    });
+  } catch (e) { }
+}, { allowedDamageCauses: [EntityDamageCause.entityAttack, EntityDamageCause.projectile,
+  EntityDamageCause.entityExplosion, EntityDamageCause.ramAttack] });

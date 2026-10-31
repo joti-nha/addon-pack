@@ -16,6 +16,7 @@ Modpack para Minecraft Bedrock que junta 34 addons de vários criadores e 5 pack
 | `ferramentas/otimizar.py` | Compacta JSON e PNG sem perder nada (ver abaixo). |
 | `ferramentas/mesclar_jogador.py` | Monta o jogador único (A&S + RnR, RPG e OTG). Rode depois de atualizar um deles. |
 | `ferramentas/gerar_anexos.py`, `armas_pesadas.py`, `armaduras.py` | Geram os modelos na mão (varas, grimórios, armas pesadas) e as etiquetas e descrições das armaduras. Rode de novo depois de atualizar os addons envolvidos. |
+| `ferramentas/armas_niveis.py` | Dá nível (`*_tier`) às armas e ferramentas de addons para terem espaço de gema no Eternal Caves. Rode de novo depois de atualizar um addon. |
 | `ferramentas/tomos.py` | Gera os Tomos Infinitos (itens, ícones, nomes), as receitas de cor do Grimório e a lista que o script do Grimório usa. A loja do RPG tem a mesma lista em `SPELL_TOMES`. |
 | `docs/` | CHANGELOG, créditos, roteiro de pedidos e levantamentos. |
 

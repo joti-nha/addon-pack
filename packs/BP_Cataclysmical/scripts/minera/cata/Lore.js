@@ -38,7 +38,7 @@ const lores = {
 	"mnra_cata:terror_eye": ["§r§6Espaço de Bugiganga:§e Amuleto", "§r§7Reduz a Chance de Terror em 0,8"],
 	"mnra_cata:calibrated_stellar_core": ["§r§6Espaço de Bugiganga:§e Amuleto", "§r§6Recarga:§e 5", "§r§7Ganha Regeneração II abaixo de 10 corações,", "§r§7mas ganha Fraqueza acima de 10 corações"],
 
-	"mnra_cata:verdant_aegis": ["§r§6Espaço de Bugiganga:§e Costas", "§r§6Recarga:§e 35", "§r§7+1 de Proteção da Égide", "§r§7+1,5 de Reflexão da Égide"],
+	"mnra_cata:verdant_aegis": ["§r§6Espaço de Bugiganga:§e Costas", "§r§6Recarga:§e 35", "§r§7+1,5 de Proteção da Égide", "§r§7+1,5 de Reflexão da Égide"],
 	"mnra_cata:celestial_aegis": ["§r§6Espaço de Bugiganga:§e Costas", "§r§6Recarga:§e 35", "§r§7+2,5 de Proteção da Égide", "§r§7+3 de Reflexão da Égide"],
 
 

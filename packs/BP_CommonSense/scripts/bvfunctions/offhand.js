@@ -81,8 +81,9 @@ function swapOffhand(player) {
         const mainCount = mainItem.amount;
 
         // Verifica em qual lista o item se encaixa
-        const isNative = EQUIP_ITEMS.includes(mainType);
         const tags = mainItem.getTags() ?? [];
+        // Addon Pack: escudos de addons (etiqueta de escudo do A&S) trocam de mao como o escudo do jogo
+        const isNative = EQUIP_ITEMS.includes(mainType) || tags.includes("oreville:is_shield");
         const isForced = VALID_ITEMS.includes(mainType) || tags.some(t => VALID_TAGS.includes(t));
 
         // Se o item não estiver em nenhuma lista, cancela a troca
