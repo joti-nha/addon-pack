@@ -6,7 +6,7 @@ Nada desta versão foi testado no jogo.
 
 ### Novo
 - **Combate no Unified Core** (`BP_UnifiedCore/scripts/combate.js`), no lugar do Java Combat, só nos eventos de golpe e de dano:
-  - **Espadas**: golpe em área no 1º golpe de cada sequência do A&S (a 1ª animação), com a regra do Java Combat: no chão e sem correr, 2 de dano nos mobs a até 2,1 blocos de um ponto 2,5 blocos à frente, com o efeito de corte e o som. Não exige recarga, então bater sem parar não tem penalidade. Ficam de fora jogadores, animais domados, lobos, suportes de armadura e entidades de interface.
+  - **Espadas**: golpe em área no 1º golpe de cada sequência do A&S (a 1ª animação): metade do dano do golpe nos mobs a até 2,1 blocos de um ponto 2,5 blocos à frente (a área do Java Combat), parado ou andando, com o efeito de corte e o som. Não exige recarga, então bater sem parar não tem penalidade. Ficam de fora jogadores, animais domados, lobos, suportes de armadura e entidades de interface.
   - **Machados** (inclui os montantes, que o A&S trata como machado): o crítico (golpe caindo) dá 2x o dano em vez de 1,5x.
   - **Marretas** (etiqueta de maça do A&S e martelos do Forsaken; a maça do jogo já faz isso sozinha): dano extra pela queda como a maça (4 por bloco nos 3 primeiros, 2 nos 5 seguintes, 1 depois), com o som da maça, e o golpe tira o dano do pouso.
   - O script do Unified Core passou para `@minecraft/server` 2.9.0 (o mesmo do Dungeons) para ver o balanço do braço mesmo sem acertar nada, como o A&S conta a sequência.

@@ -1,7 +1,7 @@
 // Addon Pack - Unified Core: combate (pedido do João em 2026-10-31, quando o Java Combat saiu do pack).
 // Tudo roda so nos eventos de golpe e de dano; o unico laco por tick guarda a altura do jogador (para a queda das marretas).
-//  - Espadas: golpe em area (sweep) no 1o golpe de uma sequencia do A&S, com a regra do Java Combat (no chao, sem
-//    correr, 2 de dano a ate 2,1 blocos de um ponto 2,5 blocos a frente), mas sem exigir a recarga do ataque.
+//  - Espadas: golpe em area (sweep) no 1o golpe de uma sequencia do A&S: metade do dano do golpe nos mobs a ate 2,1
+//    blocos de um ponto 2,5 blocos a frente (area do Java Combat), parado ou correndo, sem exigir recarga do ataque.
 //  - Machados: o critico (golpe caindo) da o dobro do dano, em vez de 1,5x.
 //  - Marretas: dano extra pela altura da queda, como a maca do jogo, e o jogador nao toma o dano da queda.
 import { world, system, Player, EntityDamageCause, EquipmentSlot } from "@minecraft/server";
@@ -54,7 +54,7 @@ if (temBalanco) {
 const SEM_AREA_TIPOS = new Set(["minecraft:item", "minecraft:xp_orb", "minecraft:armor_stand", "minecraft:wolf"]);
 const SEM_AREA_FAMILIAS = ["inanimate", "dummy"];
 
-function varrer(p, alvo) {
+function varrer(p, alvoId, dano) {
   const d = p.getViewDirection();
   const l = p.location;
   const centro = { x: l.x + d.x * 2.5, y: l.y + d.y * 2.5, z: l.z + d.z * 2.5 };
@@ -63,9 +63,9 @@ function varrer(p, alvo) {
   try { vitimas = dim.getEntities({ location: centro, maxDistance: 2.1, excludeFamilies: SEM_AREA_FAMILIAS }); } catch (e) { return; }
   for (const e of vitimas) {
     try {
-      if (e.id === p.id || e.id === alvo.id || e instanceof Player || SEM_AREA_TIPOS.has(e.typeId)) continue;
+      if (e.id === p.id || e.id === alvoId || e instanceof Player || SEM_AREA_TIPOS.has(e.typeId)) continue;
       if (!e.getComponent("minecraft:health") || e.getComponent("minecraft:is_tamed")) continue;
-      e.applyDamage(2, { cause: EntityDamageCause.thorns, damagingEntity: p });
+      e.applyDamage(dano, { cause: EntityDamageCause.thorns, damagingEntity: p });
     } catch (err) { }
   }
   const h = Math.hypot(d.x, d.z) || 1;
@@ -77,16 +77,20 @@ function varrer(p, alvo) {
   } catch (e) { }
 }
 
+const golpe = new Map(); // id do jogador -> { alvo, dano, tick } do ultimo golpe de espada que causou dano
+
 world.afterEvents.entityHitEntity.subscribe(({ damagingEntity: p, hitEntity: alvo }) => {
   if (!(p instanceof Player) || classe(naMao(p)) !== "espada") return;
   if (!temBalanco) avancar(p, system.currentTick);
+  const alvoId = alvo.id;
   // espera o fim do tick: o evento do balanco pode chegar depois do acerto
   system.run(() => {
     try {
       const c = combo.get(p.id);
       if (!c || c.estado !== 1 || system.currentTick - c.desde > 3) return;
-      if (!p.isOnGround || p.isSprinting || !alvo.isValid) return;
-      varrer(p, alvo);
+      const g = golpe.get(p.id); // dano do golpe original (evento de dano do mesmo tick)
+      if (!g || g.alvo !== alvoId || system.currentTick - g.tick > 3) return;
+      varrer(p, alvoId, g.dano / 2);
     } catch (e) { }
   });
 });
@@ -100,7 +104,7 @@ system.runInterval(() => {
     else topo.set(p.id, Math.max(topo.get(p.id) ?? y, y));
   }
 }, 1);
-world.beforeEvents.playerLeave.subscribe(({ player }) => { combo.delete(player.id); topo.delete(player.id); });
+world.beforeEvents.playerLeave.subscribe(({ player }) => { combo.delete(player.id); topo.delete(player.id); golpe.delete(player.id); });
 
 // dano da maca do jogo pela queda: 4 por bloco nos 3 primeiros, 2 por bloco nos 5 seguintes, 1 por bloco depois
 function bonusQueda(q) {
@@ -129,8 +133,9 @@ world.afterEvents.entityHurt.subscribe(({ hurtEntity: alvo, damage, damageSource
   const p = damageSource.damagingEntity;
   if (!(p instanceof Player) || damageSource.cause !== EntityDamageCause.entityAttack || damage <= 0) return;
   try {
-    if (!alvo.isValid || !(alvo.getComponent("minecraft:health")?.currentValue > 0)) return;
     const tipo = classe(naMao(p));
+    if (tipo === "espada") { golpe.set(p.id, { alvo: alvo.id, dano: damage, tick: system.currentTick }); return; }
+    if (!alvo.isValid || !(alvo.getComponent("minecraft:health")?.currentValue > 0)) return;
     if (tipo === "machado") {
       if (critico(p)) somarDano(alvo, p, damage / 3); // o jogo ja deu 1,5x; +1/3 do dano chega a 2x
     } else if (tipo === "marreta") {
