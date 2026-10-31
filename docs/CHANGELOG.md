@@ -11,6 +11,8 @@ Nada desta versão foi testado no jogo.
   - **Marretas** (etiqueta de maça do A&S e martelos do Forsaken; a maça do jogo já faz isso sozinha): dano extra pela queda como a maça (4 por bloco nos 3 primeiros, 2 nos 5 seguintes, 1 depois), com o som da maça, e o golpe tira o dano do pouso.
   - O script do Unified Core passou para `@minecraft/server` 2.9.0 (o mesmo do Dungeons) para ver o balanço do braço mesmo sem acertar nada, como o A&S conta a sequência.
 
+- **Martelo de Guerra Piglin** (Forsaken Odyssey) com as animações da maça do A&S: o anexo da maça do A&S com o modelo do martelo de pé (`ferramentas/martelo_piglin.py`) e a etiqueta `oreville:is_mace` no item.
+
 ### Removido
 - **Java Combat** (BP e RP), a pedido do João: era o addon que mais pesava e dava mais bugs, porque rodava o tempo todo (recarga de ataque, barra no HUD e troca de título a cada tick). Também saíram do jogador mesclado (`entities/player.json` do CommonSense, OTG e RnR) os controles `attacking`/`blocking`, o bloqueio de escudo por etiqueta, a resistência a empurrão no pulo, os grupos `valid_attack`/`custom_attack` e o sensor de chuva; do `hud_screen` e do `_ui_defs` unificados, o painel de recarga; e das `sound_definitions` unificadas, o som `sprint_attack`. As espadas e montantes voltam ao ritmo de ataque do jogo (os montantes não têm recarga própria desde o PR #14).
 
