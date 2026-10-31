@@ -29,15 +29,15 @@ function setScope(player, on) {
   } catch (e) { }
 }
 
-function setZoom(player, on) {
+function setZoom(player, on, fov = ZOOM_FOV) {
   // 1) API de camera; 2) comando /camera fov_set (alternativa se a API nao existir nesta versao)
   try {
-    if (on) player.camera.setFov({ fov: ZOOM_FOV, easeOptions: { easeTime: 0.15, easeType: "Linear" } });
+    if (on) player.camera.setFov({ fov, easeOptions: { easeTime: 0.15, easeType: "Linear" } });
     else player.camera.setFov({ easeOptions: { easeTime: 0.1, easeType: "Linear" } });
     return true;
   } catch (e) { }
   try {
-    player.runCommand(on ? `camera @s fov_set ${ZOOM_FOV} 0.15 linear` : "camera @s fov_clear 0.1 linear");
+    player.runCommand(on ? `camera @s fov_set ${fov} 0.15 linear` : "camera @s fov_clear 0.1 linear");
     return true;
   } catch (e) { }
   return false;
@@ -51,8 +51,8 @@ function zoomOn(player) {
 }
 function zoomOff(player, sound = true) {
   if (!zooming.delete(player.id)) return;
-  setZoom(player, false);
-  setScope(player, false);
+  if (mirando.has(player.id)) setZoom(player, true, MOSQUETE_FOV); // continua mirando com o Mosquete de Caca
+  else { setZoom(player, false); setScope(player, false); }
   if (sound) { try { player.playSound("item.spyglass.stop_using"); } catch (e) { } }
 }
 
@@ -65,7 +65,30 @@ world.afterEvents.itemStopUse.subscribe(({ source, itemStack }) => {
 world.afterEvents.itemReleaseUse.subscribe(({ source, itemStack }) => {
   if (itemStack?.typeId === RELIC) zoomOff(source);
 });
-world.beforeEvents.playerLeave.subscribe(({ player }) => { zooming.delete(player.id); });
+world.beforeEvents.playerLeave.subscribe(({ player }) => { zooming.delete(player.id); mirando.delete(player.id); });
+
+// Luneta do Mosquete de Caca (Improvised Guns, pedido do Joao, 2026-10-31): agachado com o mosquete na mao, o mesmo zoom
+// e a mesma borda da Reliquia. A moldura 3D do addon fica na cabeca do jogador do jogo base e nao aparece com o A&S;
+// ferramentas/luneta_mosquete.py a esconde. A Lentidao do proprio addon continua (revZoom.js), por isso o campo e mais aberto.
+const MOSQUETES = new Set(["rev:hunting_musket", "rev:shadow_hunting_musket"]);
+const MOSQUETE_FOV = 35;
+const mirando = new Set(); // ids de jogadores mirando com o mosquete
+system.runInterval(() => {
+  for (const player of world.getAllPlayers()) {
+    let mira = false;
+    try {
+      if (player.isSneaking) {
+        const eq = player.getComponent("minecraft:equippable");
+        mira = MOSQUETES.has(eq?.getEquipment("Mainhand")?.typeId) || MOSQUETES.has(eq?.getEquipment("Offhand")?.typeId);
+      }
+    } catch (e) { }
+    if (mira === mirando.has(player.id)) continue;
+    if (mira) mirando.add(player.id); else mirando.delete(player.id);
+    if (zooming.has(player.id)) continue; // a Reliquia ja cuida do zoom e da borda
+    setZoom(player, mira, MOSQUETE_FOV);
+    setScope(player, mira);
+  }
+}, 4);
 
 // Itens iniciais, uma vez por jogador: a Luneta da Videncia (nao cai na morte) e a mochila de couro do OTG.
 const MOCHILA = "otg:backpack";
@@ -87,7 +110,7 @@ function darItensIniciais(player) {
   darUmaVez(player, MOCHILA, "unified:mochila_dada", false);
 }
 world.afterEvents.playerSpawn.subscribe(({ player, initialSpawn }) => {
-  if (!zooming.has(player.id)) try { player.removeTag(SCOPE_TAG); } catch (e) { } // saiu do mundo com o zoom ligado
+  if (!zooming.has(player.id) && !mirando.has(player.id)) try { player.removeTag(SCOPE_TAG); } catch (e) { } // saiu do mundo com o zoom ligado
   if (initialSpawn) system.runTimeout(() => darItensIniciais(player), 100);
 });
 system.runTimeout(() => { for (const p of world.getAllPlayers()) darItensIniciais(p); }, 200);
