@@ -13,9 +13,11 @@ Golpe unico (pedido do João, 2026-10-31): o martelo toca so o 1o golpe da maca 
   - O item ganha a etiqueta ap:golpe_unico, e os dois controles da maca do A&S (braco: camimd; posicao do item:
     pwqhcf) ganham, so para essa etiqueta, a volta para o 1o golpe a cada toque (por um estado gemeo, ja que um
     estado nao pode ir para ele mesmo) e ficam sem as poses de queda, de pouso e da sequencia rapida.
-Rode de novo depois de atualizar o A&S (e depois do enxugar_ans.py) ou o Forsaken Odyssey.
+  - A mesma correcao vale para as outras marretas do A&S com swing_duration longo (OUTROS_GOLPE_UNICO: ancoras e
+    clavas de osso do Dungeons, pedido do João no mesmo dia).
+Rode de novo depois de atualizar o A&S (e depois do enxugar_ans.py), o Forsaken Odyssey ou o Dungeons.
 """
-import copy, json, os, sys
+import copy, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import brarchive  # noqa: E402
@@ -27,6 +29,9 @@ ITEM = os.path.join(RAIZ, 'packs', 'BP_ForsakenOdyssey', 'items', 'nmd', 'ntk_pi
 IDENT = 'ntk:piglin_war_hammer'
 GEO = 'geometry.ap.ntk.martelo_piglin'
 TEX = 'textures/models/nmd/ntk_piglin_war_hammer'
+DG = os.path.join(RAIZ, 'packs', 'BP_AlylicasDungeons', 'items', 'melee')
+OUTROS_GOLPE_UNICO = [os.path.join(DG, a) for a in ('anchor/anchor.json', 'anchor/anchor_encrusted.json',
+                                                     'boneclub/bone_club.json', 'boneclub/bone_cudgel.json')]
 COMPRIMENTO = 30  # na mao, em pixels do modelo (a maca do A&S tem ~26; o martelo piglin e maior)
 
 
@@ -54,6 +59,17 @@ def _antes(trans, destino, novo):
     """Poe a transicao 'novo' antes da primeira transicao para 'destino' (ou no fim)."""
     i = next((k for k, t in enumerate(trans) if destino in t), len(trans))
     trans.insert(i, novo)
+
+
+def marcar_golpe_unico(arq):
+    """Etiqueta ap:golpe_unico (logo depois de oreville:is_mace) e sem o minecraft:swing_duration."""
+    t = open(arq, encoding='utf-8').read()
+    if '"ap:golpe_unico"' not in t:
+        assert '"oreville:is_mace"' in t, arq
+        t = t.replace('"oreville:is_mace"', '"oreville:is_mace","ap:golpe_unico"', 1)
+    t = re.sub(r'"minecraft:swing_duration":\{"value":[0-9.]+\},?', '', t)
+    json.loads(t)
+    open(arq, 'w', encoding='utf-8').write(t)
 
 
 def golpe_unico():
@@ -111,15 +127,13 @@ def main():
                 {'format_version': '1.16.0', 'minecraft:geometry': [g]})
     a = cata.anexo(molde, IDENT, GEO, TEX, round(COMPRIMENTO / comp, 4))
     cata.gravar(os.path.join(cata.COMPAT, 'attachables', 'as_compat', 'ntk', 'piglin_war_hammer.json'), a)
-    # etiquetas da maca do A&S e do golpe unico no item, sem o swing_duration longo
+    # etiqueta da maca do A&S no item
     t = open(ITEM, encoding='utf-8').read()
     if '"oreville:is_mace"' not in t:
         t = t.replace('"ntk:hammer",', '"ntk:hammer","oreville:is_mace",', 1)
-    if '"ap:golpe_unico"' not in t:
-        t = t.replace('"oreville:is_mace",', '"oreville:is_mace","ap:golpe_unico",', 1)
-    t = t.replace('"minecraft:swing_duration":{"value":4.0},', '')
-    json.loads(t)
-    open(ITEM, 'w', encoding='utf-8').write(t)
+        json.loads(t)
+        open(ITEM, 'w', encoding='utf-8').write(t)
+    for arq in [ITEM] + OUTROS_GOLPE_UNICO: marcar_golpe_unico(arq)
     golpe_unico()
     print(f'martelo piglin: anexo da maca do A&S (comprimento do modelo {comp:.1f}, escala {COMPRIMENTO / comp:.3f})')
 
