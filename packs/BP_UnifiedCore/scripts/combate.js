@@ -2,7 +2,7 @@
 // Tudo roda so nos eventos de golpe e de dano; o unico laco por tick guarda a altura do jogador (para a queda das marretas).
 //  - Espadas: golpe em area (sweep) no 1o golpe de uma sequencia do A&S: metade do dano do golpe nos mobs a ate 2,1
 //    blocos de um ponto 2,5 blocos a frente (area do Java Combat), so no chao e sem correr (regra do Java Combat), sem exigir recarga do ataque.
-//  - Machados: o critico (golpe caindo) da o dobro do dano, em vez de 1,5x.
+//  - Machados: o critico (golpe caindo) da o dobro do dano, em vez de 1,5x (no evento antes do dano, como dano do jogo).
 //  - Marretas: dano extra pela altura da queda, como a maca do jogo, e o jogador nao toma o dano da queda.
 import { world, system, Player, EntityDamageCause, EquipmentSlot } from "@minecraft/server";
 
@@ -113,7 +113,7 @@ function bonusQueda(q) {
   return 4 * Math.min(q, 3) + 2 * Math.min(Math.max(q - 3, 0), 5) + Math.max(q - 8, 0);
 }
 
-// ---------- dano extra (critico do machado e queda da marreta) ----------
+// ---------- dano extra (queda da marreta) ----------
 const finalizando = new Set(); // alvos que levaram o golpe fatal daqui (o evento de dano dele chega no fim do tick)
 function somarDano(alvo, p, extra) {
   const h = alvo.getComponent("minecraft:health");
@@ -125,9 +125,23 @@ function somarDano(alvo, p, extra) {
   try { alvo.applyDamage(100000, { cause: EntityDamageCause.entityAttack, damagingEntity: p }); } catch (e) { }
 }
 
+// as mesmas condicoes do critico do jogo (distancia de queda > 0, fora do chao, da agua e da escada, sem cegueira e sem montaria)
 function critico(p) {
-  return !p.isOnGround && p.isFalling && !p.isInWater && !p.isClimbing && !p.isGliding && !p.getComponent("minecraft:riding");
+  return !p.isOnGround && p.isFalling && !p.isInWater && !p.isClimbing && !p.isGliding &&
+    !p.getComponent("minecraft:riding") && !p.getEffect("blindness");
 }
+
+// ---------- critico do machado: 2x em vez de 1,5x ----------
+// Antes era somado depois do golpe, mexendo direto na vida do alvo: o dano extra nao passava pela armadura nem aparecia
+// em quem mostra o dano do golpe (o numero do boneco de treino do Dungeons ficava em 1,5x). Agora o dano do golpe muda
+// no evento antes do dano, e o jogo aplica o golpe ja dobrado. x4/3 sobre o critico do jogo (1,5x) da 2x.
+world.beforeEvents.entityHurt.subscribe((ev) => {
+  const p = ev.damageSource.damagingEntity;
+  if (!(p instanceof Player) || !(ev.damage > 0)) return;
+  try {
+    if (classe(naMao(p)) === "machado" && critico(p)) ev.damage = ev.damage * 4 / 3;
+  } catch (e) { }
+}, { allowedDamageCauses: [EntityDamageCause.entityAttack] });
 
 world.afterEvents.entityHurt.subscribe(({ hurtEntity: alvo, damage, damageSource }) => {
   if (finalizando.has(alvo.id)) return;
@@ -137,9 +151,7 @@ world.afterEvents.entityHurt.subscribe(({ hurtEntity: alvo, damage, damageSource
     const tipo = classe(naMao(p));
     if (tipo === "espada") { golpe.set(p.id, { alvo: alvo.id, dano: damage, tick: system.currentTick }); return; }
     if (!alvo.isValid || !(alvo.getComponent("minecraft:health")?.currentValue > 0)) return;
-    if (tipo === "machado") {
-      if (critico(p)) somarDano(alvo, p, damage / 3); // o jogo ja deu 1,5x; +1/3 do dano chega a 2x
-    } else if (tipo === "marreta") {
+    if (tipo === "marreta") {
       const queda = (topo.get(p.id) ?? p.location.y) - p.location.y;
       const extra = bonusQueda(queda);
       if (extra > 0 && !p.isOnGround) {
