@@ -3124,6 +3124,7 @@ function centerHudLines(lines) {
 import { world as world10, system as system7 } from "@minecraft/server";
 var statsCache = /* @__PURE__ */ new Map();
 var tickCount = 0;
+var bossCache = /* @__PURE__ */ new Map(); // [Addon Pack] chefes perto de cada jogador, procurados a cada 10 ticks
 system7.runInterval(() => {
   tickCount++;
   const classObj = world10.scoreboard.getObjective("class");
@@ -3132,7 +3133,7 @@ system7.runInterval(() => {
   if (!classObj || !levelObj || !soulsObj) return;
   for (const player of world10.getAllPlayers()) {
     const playerId = player.id;
-    if (tickCount % 20 === 0 || !statsCache.has(playerId)) {
+    if (tickCount % 10 === 0 || !statsCache.has(playerId)) {
       const classId = classObj.getScore(player) ?? 0;
       const level = levelObj.getScore(player) ?? 0;
       const souls = soulsObj.getScore(player) ?? 0;
@@ -3168,9 +3169,12 @@ system7.runInterval(() => {
     let nearestBoss = null;
     let minBossDist = 999;
     try {
-      const bosses = player.dimension.getEntities({ location: player.location, maxDistance: maxBossDetectDist, type: "rpg:pillager_boss" });
-      const clones = player.dimension.getEntities({ location: player.location, maxDistance: maxBossDetectDist, type: "rpg:pillager_boss_clone" });
-      for (const b of [...bosses, ...clones]) {
+      if (tickCount % 5 === 0 || !bossCache.has(playerId)) {
+        const bosses = player.dimension.getEntities({ location: player.location, maxDistance: maxBossDetectDist, type: "rpg:pillager_boss" });
+        const clones = player.dimension.getEntities({ location: player.location, maxDistance: maxBossDetectDist, type: "rpg:pillager_boss_clone" });
+        bossCache.set(playerId, [...bosses, ...clones]);
+      }
+      for (const b of bossCache.get(playerId).filter((e) => e.isValid)) {
         const dx = b.location.x - player.location.x;
         const dy = b.location.y - player.location.y;
         const dz = b.location.z - player.location.z;
@@ -3240,7 +3244,7 @@ system7.runInterval(() => {
       }
     }
   }
-}, 1);
+}, 2); // [Addon Pack] era a cada tick
 
 // src/systems/combat.ts
 import { world as world11, system as system8, Player as Player11, EntityDamageCause as EntityDamageCause2, ItemStack as ItemStack5, EnchantmentTypes as EnchantmentTypes4, BlockPermutation as BlockPermutation2 } from "@minecraft/server";

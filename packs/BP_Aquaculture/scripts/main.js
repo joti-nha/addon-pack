@@ -2622,6 +2622,9 @@ class RodManager {
             }
         }, 1);
         system.runInterval(() => {
+            // [Addon Pack] sem nenhuma vara lancada nao ha boia: nao procura nas 3 dimensoes a cada tick
+            if (!world.getAllPlayers().some(player => this.hasCast(player)))
+                return;
             const overworldBobbers = world.getDimension(Dimensions.Overworld).getEntities({ type: "tm_aqc:bobber", propertyOptions: [{ propertyId: ActorPropertiesEnum.LureCooldown, value: { greaterThan: 0 } }] });
             const netherBobbers = world.getDimension(Dimensions.Nether).getEntities({ type: "tm_aqc:bobber", propertyOptions: [{ propertyId: ActorPropertiesEnum.LureCooldown, value: { greaterThan: 0 } }] });
             const endBobbers = world.getDimension(Dimensions.TheEnd).getEntities({ type: "tm_aqc:bobber", propertyOptions: [{ propertyId: ActorPropertiesEnum.LureCooldown, value: { greaterThan: 0 } }] });

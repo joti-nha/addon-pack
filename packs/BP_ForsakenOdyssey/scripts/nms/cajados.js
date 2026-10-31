@@ -113,9 +113,11 @@ function castWith(player, item, st) {
   try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
 }
 
-// Conjuracao: a varinha gira enquanto o botao de usar fica apertado e so para quando conjura (CAST_TICKS).
-// As varinhas tem uso longo (ferramentas/varinhas.py): o uso nao recomeca sozinho, o timer conjura uma vez por toque
-// e o anexo fica no quadro carregado ate soltar. Os cajados terminam o uso no tempo de cast. Soltar antes cancela.
+// Conjuracao: a varinha gira enquanto o botao de usar fica apertado (CAST_TICKS).
+// As varinhas tem uso longo (ferramentas/varinhas.py): o uso nao recomeca sozinho, o feitico sai uma vez por toque
+// e o anexo fica no quadro carregado ate soltar. Soltar antes cancela.
+// [Addon Pack, 2026-10-31] O tempo de cast conta em tempo real (Date.now), sem esperar a animacao nem o fim do uso:
+// com o jogo travado os ticks andam devagar e o feitico demorava muito mais que o tempo de cast (pedido do João).
 const castInfo = (it) => {
   if (!it) return undefined;
   const st = STAFFS[it.typeId];
@@ -138,10 +140,22 @@ function startCharging({ source, itemStack }) {
   if (!info) return;
   const old = charging.get(source.id);
   if (old && !old.done && system.currentTick - old.start < 3) return;
-  const c = { start: system.currentTick, ticks: info.ticks, done: false };
+  const c = { start: system.currentTick, ticks: info.ticks, ms: Date.now(), done: false, player: source, item: itemStack, info };
   charging.set(source.id, c);
-  // o timer conjura no tempo de cast; nos cajados o fim do uso (itemCompleteUse) chega junto e conjura antes
-  system.runTimeout(() => finishCast(source, itemStack, info, c), info.ticks + 1);
+  vigiar();
+}
+// um laco so enquanto alguem conjura: lanca quando passa o tempo de cast em tempo real (ou em ticks, o que vier antes)
+let vigia;
+function vigiar() {
+  if (vigia !== undefined) return;
+  vigia = system.runInterval(() => {
+    const agora = Date.now();
+    for (const c of [...charging.values()]) {
+      if (c.done) continue;
+      if (agora - c.ms >= c.ticks * 50 || system.currentTick - c.start >= c.ticks) finishCast(c.player, c.item, c.info, c);
+    }
+    if (charging.size === 0) { system.clearRun(vigia); vigia = undefined; }
+  }, 1);
 }
 world.afterEvents.itemUse.subscribe(startCharging);
 world.afterEvents.itemStartUse.subscribe(startCharging);
@@ -154,8 +168,10 @@ world.afterEvents.itemCompleteUse.subscribe(({ source, itemStack }) => {
 const stopCharging = ({ source, itemStack }) => {
   if (source?.typeId !== "minecraft:player" || !castInfo(itemStack)) return;
   const c = charging.get(source.id);
-  // soltou antes do fim da conjuracao: cancela (o fim natural do uso tambem dispara este evento)
-  if (c && !c.done && system.currentTick < c.start + c.ticks - 2) charging.delete(source.id);
+  if (!c || c.done) return;
+  // soltou antes do tempo de cast (em tempo real): cancela; se o tempo ja passou, lanca agora
+  if (Date.now() - c.ms < c.ticks * 50 - 100) charging.delete(source.id);
+  else finishCast(source, c.item, c.info, c);
 };
 world.afterEvents.itemReleaseUse.subscribe(stopCharging);
 world.afterEvents.itemStopUse.subscribe(stopCharging);
