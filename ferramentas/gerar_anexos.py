@@ -6,10 +6,10 @@ Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff e grava:
   - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
     (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
      textures/ap/aqc_rod_*.png)
-  - arpoes do Aquaculture com o molde da espada de ferro do A&S e o icone em faixas de 1 pixel
-    (attachables/as_compat/tm_aqc, models/entity/ap_aqc_arpao.geo.json)
   - icones dos Grimorios (todas as cores e o invisivel); na mao eles e os Tomos Infinitos ficam em pixel art, sem modelo 3D
     (packs/RP_ForsakenGrimoire/textures/fgr; o invisivel tem um anexo vazio)
+Os arpoes do Aquaculture ficam com o anexo original do addon (pedido do João, 2026-10-31): nenhuma versao com o
+A&S (molde do tridente com o modelo 3D, molde da espada com o icone) aparecia na mao no jogo dele.
 Rode de novo depois de atualizar o A&S.
 """
 import colorsys, copy, json, math, os, sys
@@ -87,7 +87,6 @@ VARAS = {
 }
 GEO_VARA = 'geometry.ap_aqc_rod'
 ESCALA_VARA_FP = 0.6
-METAIS_ARPAO = ('iron', 'gold', 'diamond', 'netherite', 'neptunium')
 
 
 def tipo_pixel(c):
@@ -167,33 +166,6 @@ def varas():
     print('varas do Aquaculture: 5 anexos')
 
 
-def arpoes():
-    """Arpoes do Aquaculture com o molde da espada de ferro do A&S e o icone em faixas de 1 pixel na diagonal, como as
-    ferramentas do anexos_2d.py (pedido do João, 2026-10-31: "force aparecer na mao"). O modelo 3D do arpao com o
-    molde do tridente nao aparecia na mao. Disparado, a textura 'cast' (so o cabo) apaga a ponta, como no original.
-    Os itens (BP_Aquaculture/items/tools/harpoons) usam a etiqueta oreville:is_sword, igual ao molde."""
-    import anexos_2d
-    m = brarchive.anexo(AS, 'minecraft:iron_sword')
-    mg = brarchive.geometria(AS, m['minecraft:attachable']['description']['geometry']['default'])
-    tex = os.path.join(AQC, 'textures', 'tm', 'aqc', 'items', 'tools')
-    uniao = Image.new('RGBA', (16, 16))
-    for metal in METAIS_ARPAO:  # o modelo cobre o desenho de todos os metais (o de netuno tem pixels a mais)
-        im = Image.open(os.path.join(tex, f'{metal}_harpoon.png')).convert('RGBA')
-        uniao.paste(im, (0, 0), im)
-    gid = 'geometry.ap.aqc.arpao'
-    geo = anexos_2d.geo_icone_diagonal(gid, mg, uniao, 16)
-    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_arpao.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
-    for metal in METAIS_ARPAO:
-        ident = f'tm_aqc:{metal}_harpoon'
-        a = anexos_2d.anexo(m, ident, gid, f'textures/tm/aqc/items/tools/{metal}_harpoon')
-        d = a['minecraft:attachable']['description']
-        d['textures']['cast'] = f'textures/tm/aqc/items/tools/{metal}_harpoon_cast'
-        d['render_controllers'] = ['controller.render.ap.sprite_cast']
-        d['scripts']['parent_setup'] = 't.cast = (v.cast ?? 0); ' + d['scripts'].get('parent_setup', '')
-        gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{metal}_harpoon.json'), a)
-    print('arpoes do Aquaculture: 5 anexos (icone na diagonal, molde da espada de ferro)')
-
-
 def controlador():
     """Render controller com brilho de encantamento, para os anexos gerados aqui."""
     gravar_json(os.path.join(COMPAT, 'render_controllers', 'ap_as_item.render_controllers.json'), {
@@ -201,12 +173,6 @@ def controlador():
             'geometry': 'Geometry.default',
             'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
             'textures': ['Texture.default', 'Texture.enchanted']}}})
-    # arpoes: troca para a textura 'cast' (so o cabo) enquanto o arpao esta disparado
-    gravar_json(os.path.join(COMPAT, 'render_controllers', 'ap_sprite_cast.render_controllers.json'), {
-        'format_version': '1.10.0', 'render_controllers': {'controller.render.ap.sprite_cast': {
-            'geometry': 'Geometry.default',
-            'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
-            'textures': ['t.cast == 1 ? Texture.cast : Texture.default', 'Texture.enchanted']}}})
 
 
 
@@ -362,6 +328,5 @@ def itens_grimorio():
 if __name__ == '__main__':
     controlador()
     varas()
-    arpoes()
     grimorios()
     itens_grimorio()

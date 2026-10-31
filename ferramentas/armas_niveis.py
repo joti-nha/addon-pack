@@ -20,6 +20,7 @@ from armaduras import NIVEIS_EC  # noqa: E402
 
 TIPOS = ('sword', 'axe', 'pickaxe', 'shovel', 'hoe', 'trident', 'spear', 'mace')
 ETIQUETAS = {f'{ns}:is_{t}' for ns in ('minecraft', 'oreville') for t in TIPOS}
+ETIQUETAS.add('tm_aqc:harpoon')  # arpoes do Aquaculture (sem etiqueta de arma desde que voltaram ao anexo original)
 FORA = ('BP_EternalCaves',)
 
 

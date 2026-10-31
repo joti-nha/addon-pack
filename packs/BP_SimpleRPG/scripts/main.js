@@ -489,7 +489,7 @@ var RangerShopItems = [
   {
     id: "ranger_firearrow",
     name: "Flechas de Fogo",
-    description: "(Passiva) As flechas incendeiam o alvo por 12 segundos e causam dano extra de fogo.",
+    description: "(Passiva) As flechas e os tiros das armas de fogo incendeiam o alvo por 12 segundos e causam dano extra de fogo.",
     costSouls: 150,
     costXP: 5,
     tag: "shop_ranger_firearrow",
@@ -499,7 +499,7 @@ var RangerShopItems = [
   {
     id: "ranger_poisonarrow",
     name: "Flechas Envenenadas",
-    description: "(Passiva) As flechas envenenam o alvo por 6 segundos.",
+    description: "(Passiva) As flechas e os tiros das armas de fogo envenenam o alvo por 6 segundos.",
     costSouls: 150,
     costXP: 5,
     tag: "shop_ranger_poisonarrow",
@@ -579,7 +579,7 @@ var RangerShopItems = [
   {
     id: "ranger_archersafe",
     name: "F\xF4lego do Ca\xE7ador",
-    description: "(Passiva) Concede Resist\xEAncia I permanente. Segurar um arco d\xE1 Velocidade II e +2 cora\xE7\xF5es extras.",
+    description: "(Passiva) Concede Resist\xEAncia I permanente. Segurar um arco ou uma arma de fogo d\xE1 Velocidade II e +2 cora\xE7\xF5es extras.",
     costSouls: 300,
     costXP: 5,
     tag: "shop_ranger_archersafe",
@@ -589,7 +589,7 @@ var RangerShopItems = [
   {
     id: "ranger_explosion",
     name: "Flechas Explosivas",
-    description: "(Passiva) As flechas explodem ao acertar.",
+    description: "(Passiva) As flechas e os tiros das armas de fogo explodem ao acertar (as armas, no m\xE1ximo uma vez a cada meio segundo).",
     costSouls: 200,
     costXP: 5,
     tag: "shop_ranger_explosion",
@@ -3977,7 +3977,8 @@ function initCombatSystem() {
         const equippable = player.getComponent("minecraft:equippable");
         if (equippable) {
           const mainhand = equippable.getEquipment("Mainhand");
-          if (mainhand && isAnyBow(mainhand)) {
+          // Addon Pack: armas do Improvised Guns contam como arco no Fôlego do Caçador (pedido do João, 2026-10-31)
+          if (mainhand && (isAnyBow(mainhand) || mainhand.hasTag("rev:improvised_gun"))) {
             player.addEffect("minecraft:speed", 300, { amplifier: 1, showParticles: false });
             if (hasRangerHearts) {
               targetRangerAmplifier = 3;
