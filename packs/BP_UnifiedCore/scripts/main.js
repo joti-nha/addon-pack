@@ -4,13 +4,14 @@
 import { world, system, GameMode, ItemStack } from "@minecraft/server";
 import { FERRAMENTAS, POR_DURABILIDADE, MINERIOS, NOME_NIVEL, QUEBRA_TUDO } from "./niveis.js";
 import "./armaduras.js";
+import "./combate.js";
 
 const RELIC = "panascais_caves:seers_relic";
 const ZOOM_FOV = 25;          // campo de visao com zoom (o normal e ~70)
 const zooming = new Set();    // ids de jogadores em zoom
 // Borda da luneta: o hud_screen unificado mostra a moldura (textures/ui/spyglass_scope) enquanto o titulo e esta marca;
-// titulos que comecam com "!" nao aparecem na tela. O JavaCombat troca o titulo a cada tick (barra de recarga);
-// com a etiqueta SCOPE_TAG ele para enquanto dura o zoom.
+// titulos que comecam com "!" nao aparecem na tela. A etiqueta SCOPE_TAG marca o jogador enquanto dura o zoom
+// (servia para o JavaCombat, que saiu do pack em 2026-10-31, nao trocar o titulo).
 const SCOPE_MARK = "!unified:luneta";
 const SCOPE_TAG = "unified:luneta";
 

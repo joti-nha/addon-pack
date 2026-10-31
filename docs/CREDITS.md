@@ -19,7 +19,6 @@ de terceiros estão listadas em `CHANGELOG.md`.
 | Alylica's Dungeons 2.1.0 | Alylica (nome do addon; autor **não declarado** no manifest) | |
 | Aquaculture 1.0.9 | Team Metallurgy, segundo a descrição do pack | |
 | DarkAge Bizarre Remake 0.7.76 | Dark Garden Team (PetergamerXD, líder do projeto), segundo a descrição do pack | |
-| Java Combat 2.6.5 | Raiyon, segundo a descrição do pack | |
 | A&S Compatibility | pack de compatibilidade fornecido pelo usuário (autoria **não declarada**); versão 1.2 estendida neste projeto | |
 | Common Sense 1.8.1 | JFAddons (Jerry), segundo o guia do próprio addon | |
 | Improvised Guns 3.0.5 | R401/JERA, segundo a descrição do pack | |

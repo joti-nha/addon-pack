@@ -4,7 +4,18 @@
 
 Nada desta versão foi testado no jogo.
 
+### Novo
+- **Combate no Unified Core** (`BP_UnifiedCore/scripts/combate.js`), no lugar do Java Combat, só nos eventos de golpe e de dano:
+  - **Espadas**: golpe em área no 1º golpe de cada sequência do A&S (a 1ª animação): metade do dano do golpe nos mobs a até 2,1 blocos de um ponto 2,5 blocos à frente (a área do Java Combat), parado ou andando, com o efeito de corte e o som. Não exige recarga, então bater sem parar não tem penalidade. Ficam de fora jogadores, animais domados, lobos, suportes de armadura e entidades de interface.
+  - **Machados** (inclui os montantes, que o A&S trata como machado): o crítico (golpe caindo) dá 2x o dano em vez de 1,5x.
+  - **Marretas** (etiqueta de maça do A&S e martelos do Forsaken; a maça do jogo já faz isso sozinha): dano extra pela queda como a maça (4 por bloco nos 3 primeiros, 2 nos 5 seguintes, 1 depois), com o som da maça, e o golpe tira o dano do pouso.
+  - O script do Unified Core passou para `@minecraft/server` 2.9.0 (o mesmo do Dungeons) para ver o balanço do braço mesmo sem acertar nada, como o A&S conta a sequência.
+
+### Removido
+- **Java Combat** (BP e RP), a pedido do João: era o addon que mais pesava e dava mais bugs, porque rodava o tempo todo (recarga de ataque, barra no HUD e troca de título a cada tick). Também saíram do jogador mesclado (`entities/player.json` do CommonSense, OTG e RnR) os controles `attacking`/`blocking`, o bloqueio de escudo por etiqueta, a resistência a empurrão no pulo, os grupos `valid_attack`/`custom_attack` e o sensor de chuva; do `hud_screen` e do `_ui_defs` unificados, o painel de recarga; e das `sound_definitions` unificadas, o som `sprint_attack`. As espadas e montantes voltam ao ritmo de ataque do jogo (os montantes não têm recarga própria desde o PR #14).
+
 ### Corrigido
+- **Arpões do Aquaculture**: não apareciam na mão. Agora usam o molde da espada de ferro do A&S com o ícone em faixas de 1 pixel (`ferramentas/gerar_anexos.py`), trocando para a textura sem a ponta quando disparados. O disparo vale também do barco ou da margem, alcança 16 blocos e avisa na barra de ação quando não há peixe na mira.
 - **Tela do Atril Arcano**: o OTG Backpack e o Better on Bedrock redefinem a tela de baú inteira e apagavam a vitrine do Grimório. Os dois agora reconhecem o título "§5Atril Arcano" e mostram a vitrine.
 - **Itens do A&S fora da mão ou invisíveis**: 651 anexos de Dungeons, DarkAge, OTG, Forsaken, Eternal Caves/End, BoB, ImprovisedGuns, Aquaculture, Mowzie, Cataclysmical, CommonSense e Grimório ganharam a linha `parent_setup` do A&S (o A&S só mostra e posiciona o item com ela).
 - **Lanças, cajados e martelos** (Forsaken, Mowzie, Dungeons, Cataclysmical): saíram as tags de lança/maça/vara que o modpack tinha posto em itens com anexo próprio; elas trocavam a animação do braço e desalinhavam o modelo.

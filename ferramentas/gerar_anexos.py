@@ -6,7 +6,7 @@ Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff e grava:
   - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
     (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
      textures/ap/aqc_rod_*.png)
-  - arpoes do Aquaculture com o esqueleto e as animacoes do tridente do A&S e o icone plano
+  - arpoes do Aquaculture com o molde da espada de ferro do A&S e o icone em faixas de 1 pixel
     (attachables/as_compat/tm_aqc, models/entity/ap_aqc_arpao.geo.json)
   - icones dos Grimorios (todas as cores e o invisivel); na mao eles e os Tomos Infinitos ficam em pixel art, sem modelo 3D
     (packs/RP_ForsakenGrimoire/textures/fgr; o invisivel tem um anexo vazio)
@@ -87,7 +87,7 @@ VARAS = {
 }
 GEO_VARA = 'geometry.ap_aqc_rod'
 ESCALA_VARA_FP = 0.6
-COMPRIMENTO_ARPAO = 28  # comprimento na mao; o tridente do A&S tem ~32
+METAIS_ARPAO = ('iron', 'gold', 'diamond', 'netherite', 'neptunium')
 
 
 def tipo_pixel(c):
@@ -168,36 +168,30 @@ def varas():
 
 
 def arpoes():
-    """Arpoes do Aquaculture (etiqueta oreville:is_trident) com o esqueleto e as animacoes do tridente do A&S e o
-    modelo 3D original do arpao (cubos), posto de pe com o cabo na mao como as armas do Cataclysmical. A malha
-    plana (texture_meshes) do modo 2D do A&S deixava o arpao sem textura na mao. Disparado, a textura 'cast'
-    (sem a ponta) apaga os cubos da ponta, como no anexo original."""
-    from anexos_cataclysm import geo_bloco
-    molde = brarchive.anexo(AS, 'minecraft:trident')
-    molde_geo = brarchive.geometria(AS, molde['minecraft:attachable']['description']['geometry']['default'])
-    orig = json.load(open(os.path.join(AQC, 'models', 'entity', 'tools', 'harpoon.json'), encoding='utf-8-sig'))['minecraft:geometry'][0]
-    vara = {k: copy.deepcopy(v) for k, v in next(b for b in orig['bones'] if b['name'] == 'rod').items() if k != 'parent'}
-    img = Image.open(os.path.join(AQC, 'textures', 'tm', 'aqc', 'items', 'tools', 'iron_harpoon.png')).convert('RGBA')
-    geo, comp = geo_bloco('geometry.ap.aqc.arpao', {'description': orig['description'], 'bones': [vara]}, molde_geo, img, 1, False)  # False: o trecho mais largo deste modelo e o do cabo
+    """Arpoes do Aquaculture com o molde da espada de ferro do A&S e o icone em faixas de 1 pixel na diagonal, como as
+    ferramentas do anexos_2d.py (pedido do João, 2026-10-31: "force aparecer na mao"). O modelo 3D do arpao com o
+    molde do tridente nao aparecia na mao. Disparado, a textura 'cast' (so o cabo) apaga a ponta, como no original.
+    Os itens (BP_Aquaculture/items/tools/harpoons) usam a etiqueta oreville:is_sword, igual ao molde."""
+    import anexos_2d
+    m = brarchive.anexo(AS, 'minecraft:iron_sword')
+    mg = brarchive.geometria(AS, m['minecraft:attachable']['description']['geometry']['default'])
+    tex = os.path.join(AQC, 'textures', 'tm', 'aqc', 'items', 'tools')
+    uniao = Image.new('RGBA', (16, 16))
+    for metal in METAIS_ARPAO:  # o modelo cobre o desenho de todos os metais (o de netuno tem pixels a mais)
+        im = Image.open(os.path.join(tex, f'{metal}_harpoon.png')).convert('RGBA')
+        uniao.paste(im, (0, 0), im)
+    gid = 'geometry.ap.aqc.arpao'
+    geo = anexos_2d.geo_icone_diagonal(gid, mg, uniao, 16)
     gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_arpao.geo.json'), {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
-    escala = round(COMPRIMENTO_ARPAO / comp, 4)
-    for metal in ('iron', 'gold', 'diamond', 'netherite', 'neptunium'):
+    for metal in METAIS_ARPAO:
         ident = f'tm_aqc:{metal}_harpoon'
-        a = copy.deepcopy(molde)
+        a = anexos_2d.anexo(m, ident, gid, f'textures/tm/aqc/items/tools/{metal}_harpoon')
         d = a['minecraft:attachable']['description']
-        d['identifier'] = ident
-        d['item'] = {ident: 'c.owning_entity -> v.actions_and_stuff;'}
-        d['geometry'] = {'default': 'geometry.ap.aqc.arpao', 'cast': 'geometry.ap.aqc.arpao'}
-        d['textures'] = {'default': f'textures/tm/aqc/items/tools/{metal}_harpoon',
-                         'cast': f'textures/tm/aqc/items/tools/{metal}_harpoon_cast', 'enchanted': 'textures/misc/enchanted_item_glint'}
-        d['materials'] = {'default': 'entity_alphatest', 'enchanted': 'entity_alphatest_glint'}
+        d['textures']['cast'] = f'textures/tm/aqc/items/tools/{metal}_harpoon_cast'
         d['render_controllers'] = ['controller.render.ap.sprite_cast']
-        d['scripts']['parent_setup'] = 't.cast = (v.cast ?? 0); ' + d['scripts']['parent_setup']
-        d['scripts'].setdefault('initialize', []).append(f'v.ap_escala = {escala};')
-        d.setdefault('animations', {})['ap_escala'] = 'animation.ap.as_escala'
-        d['scripts'].setdefault('animate', []).append('ap_escala')
+        d['scripts']['parent_setup'] = 't.cast = (v.cast ?? 0); ' + d['scripts'].get('parent_setup', '')
         gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{metal}_harpoon.json'), a)
-    print(f'arpoes do Aquaculture: 5 anexos (modelo 3D, escala {escala})')
+    print('arpoes do Aquaculture: 5 anexos (icone na diagonal, molde da espada de ferro)')
 
 
 def controlador():
@@ -207,6 +201,12 @@ def controlador():
             'geometry': 'Geometry.default',
             'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
             'textures': ['Texture.default', 'Texture.enchanted']}}})
+    # arpoes: troca para a textura 'cast' (so o cabo) enquanto o arpao esta disparado
+    gravar_json(os.path.join(COMPAT, 'render_controllers', 'ap_sprite_cast.render_controllers.json'), {
+        'format_version': '1.10.0', 'render_controllers': {'controller.render.ap.sprite_cast': {
+            'geometry': 'Geometry.default',
+            'materials': [{'*': 'variable.is_enchanted ? Material.enchanted : Material.default'}],
+            'textures': ['t.cast == 1 ? Texture.cast : Texture.default', 'Texture.enchanted']}}})
 
 
 

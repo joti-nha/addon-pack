@@ -3781,9 +3781,9 @@ class HarpoonManager {
             this.cast(player, item);
     }
     static cast(player, item) {
-        if (!player.isInWater)
-            return;
-        const raycast = player.getEntitiesFromViewDirection({ maxDistance: 10, includeLiquidBlocks: false, families: ["tm_aqc_fish"] });
+        // [Addon Pack] o original so disparava com o jogador dentro da agua e sem nenhum aviso; agora vale tambem do
+        // barco ou da margem (o peixe ja esta na agua), com alcance de 16 blocos e aviso quando nao ha peixe na mira
+        const raycast = player.getEntitiesFromViewDirection({ maxDistance: 16, includeLiquidBlocks: false, families: ["tm_aqc_fish"] });
         if (raycast === undefined || raycast.length == 0) {
             this.failedCast(player, item);
             return;
@@ -3824,6 +3824,7 @@ class HarpoonManager {
     }
     static failedCast(player, item) {
         //player.setDynamicProperty(DynamicPropertyEnum.HasCastHarpoon, undefined);
+        player.onScreenDisplay.setActionBar("§7Mire num peixe na água (até 16 blocos)");
         player.playAnimation("animation.tm_aqc.rod.set_uncast");
         player.playAnimation("animation.tm_aqc.rod.first_person_use");
         const harpoon = this.getPlayerHarpoon(player);
