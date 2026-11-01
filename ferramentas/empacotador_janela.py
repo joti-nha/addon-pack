@@ -9,7 +9,7 @@ import tkinter as tk
 from tkinter import filedialog, font as tkfont, messagebox
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from empacotar import SAIDA_PADRAO, ErroEmpacotar, achar_raiz, empacotar  # noqa: E402
+from empacotar import PASTA_POR_PACK, SAIDA_PADRAO, ErroEmpacotar, achar_raiz, empacotar  # noqa: E402
 
 COR = {
     'fundo': '#14151a', 'cartao': '#1e2028', 'borda': '#2c2f3a', 'texto': '#e8e9ee', 'fraco': '#8b8fa3',
@@ -100,6 +100,7 @@ class Janela:
         self.fila = queue.Queue(); self.trabalhando = False; self.saida_final = None
         self.raiz = achar_raiz(pasta_do_programa(), os.getcwd())
         self.saida = os.path.join(self.raiz, SAIDA_PADRAO) if self.raiz else ''
+        self.por_pack = False
         self.inicio = 0.0; self.total = 0; self.np = 0
 
         raiz_tk.title('Addon Pack · Empacotador')
@@ -164,9 +165,14 @@ class Janela:
     def _cartao_pastas(self, pai):
         c = self._cartao(pai, pady=(0, 14))
         self.l_raiz, self.b_raiz = self._linha_pasta(c, 'Repositório', self._escolher_raiz)
-        self.l_saida, self.b_saida = self._linha_pasta(c, 'Salvar em', self._escolher_saida)
+        self.l_saida, self.b_saida = self._linha_pasta(c, 'Destino', self._escolher_saida)
         self.l_info = tk.Label(c, text='', bg=COR['cartao'], fg=COR['fraco'], font=self.f_texto, anchor='w')
         self.l_info.pack(fill='x', pady=(6, 0))
+        self.modo_por_pack = tk.BooleanVar(value=False)
+        self.c_modo = tk.Checkbutton(c, text='Baixar pack por pack (um .mcaddon por pack)', variable=self.modo_por_pack,
+                         command=self._alternar_modo, bg=COR['cartao'], fg=COR['texto'], selectcolor=COR['fundo'],
+                         activebackground=COR['cartao'], activeforeground=COR['texto'], font=self.f_texto)
+        self.c_modo.pack(anchor='w', pady=(8, 0))
 
     def _cartao_progresso(self, pai):
         c = self._cartao(pai, pady=(0, 0))
@@ -192,8 +198,9 @@ class Janela:
         self.depois = tk.Frame(c, bg=COR['cartao'])
         self.b_minecraft = Botao(self.depois, '▶  Abrir no Minecraft', self._abrir_minecraft, largura=200, altura=40, fonte=self.f_negrito)
         self.b_minecraft.pack(side='left', pady=(12, 0))
-        Botao(self.depois, '📁  Abrir pasta', self._abrir_pasta, largura=150, altura=40, cor=COR['borda'],
-              cor_sobre='#3a3e4c', fonte=self.f_negrito).pack(side='left', padx=10, pady=(12, 0))
+        self.b_pasta = Botao(self.depois, '📁  Abrir pasta', self._abrir_pasta, largura=150, altura=40, cor=COR['borda'],
+                             cor_sobre='#3a3e4c', fonte=self.f_negrito)
+        self.b_pasta.pack(side='left', padx=10, pady=(12, 0))
 
     # ---------------------------------------------------------------- acoes
     def _escreve(self, texto, tag=None):
@@ -211,6 +218,7 @@ class Janela:
         else:
             self.l_info.config(text='Dica: abra pelo .bat da pasta do repositório para ele achar sozinho.')
         self.b_montar.configurar(ativo=bool(self.raiz) and not self.trabalhando)
+        self.c_modo.config(state=tk.DISABLED if self.trabalhando else tk.NORMAL)
 
     def _escolher_raiz(self):
         if self.trabalhando: return
@@ -218,19 +226,30 @@ class Janela:
         if not d: return
         r = achar_raiz(d)
         if not r: messagebox.showwarning('Addon Pack', 'Essa pasta não tem a pasta packs/.'); return
-        self.raiz = r; self.saida = os.path.join(r, SAIDA_PADRAO); self._atualizar_pastas()
+        self.raiz = r; self.saida = os.path.join(r, PASTA_POR_PACK if self.por_pack else SAIDA_PADRAO); self._atualizar_pastas()
 
     def _escolher_saida(self):
         if self.trabalhando: return
+        if self.por_pack:
+            pasta = filedialog.askdirectory(title='Pasta para salvar os .mcaddon')
+            if pasta: self.saida = pasta; self._atualizar_pastas()
+            return
         f = filedialog.asksaveasfilename(title='Salvar o .mcaddon em', defaultextension='.mcaddon', initialfile=SAIDA_PADRAO,
                                          filetypes=[('Addon do Minecraft', '*.mcaddon')])
         if f: self.saida = f; self._atualizar_pastas()
+
+    def _alternar_modo(self):
+        pasta = os.path.dirname(self.saida) if not self.por_pack else self.saida
+        self.por_pack = self.modo_por_pack.get()
+        self.saida = os.path.join(pasta, PASTA_POR_PACK) if self.por_pack else os.path.join(pasta, SAIDA_PADRAO)
+        self._atualizar_pastas()
 
     def _montar(self):
         if self.trabalhando or not self.raiz: return
         self.trabalhando = True; self.saida_final = None
         self.depois.pack_forget()
         self.b_montar.configurar('Montando…', ativo=False); self.b_raiz.configurar(ativo=False); self.b_saida.configurar(ativo=False)
+        self.c_modo.config(state=tk.DISABLED)
         self.log.config(state='normal'); self.log.delete('1.0', 'end'); self.log.config(state='disabled')
         self.barra.valor(0); self.l_pct.config(text='0%', fg=COR['texto'])
         self.l_estado.config(text='Lendo os packs…', fg=COR['amarelo'])
@@ -239,7 +258,7 @@ class Janela:
 
     def _trabalho(self):
         try:
-            empacotar(self.raiz, self.saida, None, lambda ev, d: self.fila.put((ev, d)))
+            empacotar(self.raiz, self.saida, None, lambda ev, d: self.fila.put((ev, d)), self.por_pack)
         except ErroEmpacotar as e:
             self.fila.put(('erro', str(e)))
         except Exception as e:  # noqa: BLE001 (mostra qualquer falha na janela em vez de fechar)
@@ -277,23 +296,27 @@ class Janela:
     def _ev_fim(self, d):
         self._escreve(f'  ✔ {self.pack_atual}', 'ok')
         mb = d['bytes'] / 1048576
-        self._escreve(f'\nPronto! {mb:.0f} MiB em {d["segundos"]:.0f}s', 'ok')
+        quantidade = f'{len(d["saidas"])} .mcaddon criados' if d['por_pack'] else 'montagem concluída'
+        self._escreve(f'\nPronto! {quantidade} · {mb:.0f} MiB em {d["segundos"]:.0f}s', 'ok')
         self._escreve('Antes de importar, apague do jogo os packs antigos do Addon Pack.', 'fraco')
-        self.saida_final = d['saida']
+        self.saida_final = None if d['por_pack'] else d['saida']
         self.barra.valor(1); self.l_pct.config(text='100% ✔', fg=COR['verde'])
-        self.l_estado.config(text='✅ Pronto! O .mcaddon foi criado.', fg=COR['verde'])
+        self.l_estado.config(text=f'✅ Pronto! {quantidade}.', fg=COR['verde'])
         self.l_detalhe.config(text=d['saida'])
         self._acabou()
+        if d['por_pack']: self.b_minecraft.pack_forget()
+        else: self.b_minecraft.pack(side='left', before=self.b_pasta, pady=(12, 0))
         self.depois.pack(fill='x')
 
     def _ev_erro(self, msg):
         self._escreve(f'\nERRO: {msg}', 'erro')
-        self.l_estado.config(text='Falhou. Nenhum .mcaddon foi criado.', fg=COR['vermelho'])
+        self.l_estado.config(text='Falha ao montar os .mcaddon.', fg=COR['vermelho'])
         self._acabou()
 
     def _acabou(self):
         self.trabalhando = False
         self.b_montar.configurar('⛏  Montar de novo', ativo=True); self.b_raiz.configurar(ativo=True); self.b_saida.configurar(ativo=True)
+        self.c_modo.config(state=tk.NORMAL)
         self.tk.bell()
 
     def _abrir_minecraft(self):
@@ -302,7 +325,10 @@ class Janela:
             except OSError as e: messagebox.showerror('Addon Pack', f'Não consegui abrir: {e}')
 
     def _abrir_pasta(self):
-        if self.saida_final: abrir(os.path.dirname(self.saida_final))
+        if self.saida_final:
+            abrir(os.path.dirname(self.saida_final))
+        elif self.por_pack:
+            abrir(self.saida)
 
 
 def main():

@@ -9,7 +9,7 @@ Modpack para Minecraft Bedrock que junta 34 addons de vários criadores e 5 pack
 | Pasta | O que tem |
 |---|---|
 | `packs/` | Os 38 packs prontos: os originais com as alterações do modpack já aplicadas, mais os packs próprios. É aqui que se edita. |
-| `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/` (comando). |
+| `ferramentas/empacotar.py` | Gera o `.mcaddon` a partir de `packs/` (comando), ou um por pack com `--por-pack`. |
 | `Empacotador Addon Pack.bat` | Abre o empacotador com janela no Windows (precisa do Python instalado). |
 | `ferramentas/empacotador_janela.py` | O código da janela do Windows. |
 | `ferramentas/menu_celular.py` | O menu para o celular (Termux). |
@@ -46,6 +46,8 @@ Escolha **3** para montar e abrir direto no Minecraft. O arquivo fica na pasta D
 python ferramentas/empacotar.py
 ```
 Mostra uma barra de progresso colorida e termina com **Pronto**. O `Addon_Pack_Completo.mcaddon` só aparece quando termina; antes disso existe só um `.mcaddon.parcial`, que não deve ser aberto. Use `--simples` para uma linha por pack, sem cores.
+
+Para gerar um `.mcaddon` separado para cada pasta de `packs/`, use `python ferramentas/empacotar.py --por-pack`. Os arquivos são salvos em `Addon_Pack_Por_Pack/`; na janela, marque **Baixar pack por pack** e escolha a pasta de destino.
 
 Cada montagem sai com versão maior que a anterior (o número é a quantidade de minutos desde 01/10/2026), então o jogo aceita como atualização, seja ela feita no GitHub ou no seu aparelho.
 

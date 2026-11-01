@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Empacota a pasta packs/ em um unico .mcaddon pronto para importar no Minecraft.
+"""Empacota a pasta packs/ em um ou varios arquivos .mcaddon prontos para importar.
 
-Uso:   python ferramentas/empacotar.py [-o Addon_Pack_Completo.mcaddon] [--build N] [--simples]
+Uso:   python ferramentas/empacotar.py [-o DESTINO] [--build N] [--simples] [--por-pack]
 
 Os packs ja estao prontos no repositorio (originais + alteracoes do modpack), entao nao e preciso
 mais nenhum arquivo externo. O script so carimba uma versao nova nos manifests, para o jogo aceitar
@@ -14,6 +14,7 @@ import argparse, datetime, io, json, os, re, shutil, sys, time, zipfile
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SAIDA_PADRAO = 'Addon_Pack_Completo.mcaddon'
+PASTA_POR_PACK = 'Addon_Pack_Por_Pack'
 IGNORAR = {'desktop.ini', 'thumbs.db', '.ds_store', '.gitkeep'}
 # Numero da montagem = minutos desde 01/10/2026. Sempre cresce, no GitHub e no seu aparelho, entao cada
 # montagem nova tem versao maior que a anterior. As montagens antigas chegaram a 208; esta conta ja passa disso.
@@ -62,15 +63,15 @@ def achar_raiz(*inicios):
     return None
 
 
-def empacotar(raiz=RAIZ, saida=None, build=None, progresso=None):
+def empacotar(raiz=RAIZ, saida=None, build=None, progresso=None, por_pack=False):
     """Monta o .mcaddon. progresso(evento, dados) recebe:
        'inicio' {packs, arquivos, build}, 'pack' {indice, nome}, 'arquivo' {feitos, total},
        'fim' {saida, packs, arquivos, bytes, segundos, build}.
-    Grava num .parcial e so renomeia no fim, para nunca existir um .mcaddon pela metade."""
+    Com por_pack=True, grava um .mcaddon por pasta em packs/ dentro do destino informado."""
     avisar = progresso or (lambda evento, dados: None)
     pasta = os.path.join(raiz, 'packs')
     if not os.path.isdir(pasta): raise ErroEmpacotar(f'Nao achei a pasta packs/ em {raiz}')
-    saida = saida or os.path.join(raiz, SAIDA_PADRAO)
+    saida = saida or os.path.join(raiz, PASTA_POR_PACK if por_pack else SAIDA_PADRAO)
     build = build_automatico() if build is None else build
     inicio = time.monotonic()
 
@@ -88,40 +89,57 @@ def empacotar(raiz=RAIZ, saida=None, build=None, progresso=None):
         base = os.path.join(pasta, p)
         listas[p] = [os.path.join(r, f) for r, _, fs in os.walk(base) for f in sorted(fs) if f.lower() not in IGNORAR]
     total = sum(len(v) for v in listas.values())
-    avisar('inicio', {'packs': len(packs), 'arquivos': total, 'build': build})
+    avisar('inicio', {'packs': len(packs), 'arquivos': total, 'build': build, 'por_pack': por_pack})
 
     def fmt(novo, antigo): return '.'.join(map(str, novo)) if isinstance(antigo, str) else list(novo)
 
-    # Cada pack vira um .mcpack proprio dentro do .mcaddon. Um zip unico com os ~75 mil arquivos passa
-    # de 65.535 entradas e exige ZIP64, que o importador do Minecraft recusa como "zip invalido".
-    parcial = saida + '.parcial'
-    if os.path.exists(saida): os.remove(saida)
+    def criar_mcpack(p):
+        nonlocal feitos
+        j = manifests[p]
+        h = j['header']; h['version'] = fmt(novas[h['uuid']], h.get('version', [0, 0, 0]))
+        for d in j.get('dependencies', []) or []:
+            if d.get('uuid') in novas: d['version'] = fmt(novas[d['uuid']], d.get('version', [0, 0, 0]))
+        base = os.path.join(pasta, p)
+        buf = io.BytesIO()
+        with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=False) as mp:
+            for full in listas[p]:
+                arc = os.path.relpath(full, base).replace(os.sep, '/')
+                if arc == 'manifest.json': mp.writestr(arc, json.dumps(j, indent=2, ensure_ascii=False))
+                else: mp.write(full, arc)
+                feitos += 1
+                if feitos % 50 == 0 or feitos == total: avisar('arquivo', {'feitos': feitos, 'total': total})
+        return buf.getvalue()
+
     feitos = 0
+    saidas = []
     try:
-        with zipfile.ZipFile(parcial, 'w', zipfile.ZIP_STORED, allowZip64=False) as out:
+        if por_pack:
+            os.makedirs(saida, exist_ok=True)
             for n, p in enumerate(packs, 1):
                 avisar('pack', {'indice': n, 'nome': p})
-                j = manifests[p]
-                h = j['header']; h['version'] = fmt(novas[h['uuid']], h.get('version', [0, 0, 0]))
-                for d in j.get('dependencies', []) or []:
-                    if d.get('uuid') in novas: d['version'] = fmt(novas[d['uuid']], d.get('version', [0, 0, 0]))
-                base = os.path.join(pasta, p)
-                buf = io.BytesIO()
-                with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED, compresslevel=9, allowZip64=False) as mp:
-                    for full in listas[p]:
-                        arc = os.path.relpath(full, base).replace(os.sep, '/')
-                        if arc == 'manifest.json': mp.writestr(arc, json.dumps(j, indent=2, ensure_ascii=False))
-                        else: mp.write(full, arc)
-                        feitos += 1
-                        if feitos % 50 == 0 or feitos == total: avisar('arquivo', {'feitos': feitos, 'total': total})
-                out.writestr(p + '.mcpack', buf.getvalue())
-        os.replace(parcial, saida)
+                destino = os.path.join(saida, p + '.mcaddon')
+                parcial = destino + '.parcial'
+                with zipfile.ZipFile(parcial, 'w', zipfile.ZIP_STORED, allowZip64=False) as out:
+                    out.writestr(p + '.mcpack', criar_mcpack(p))
+                os.replace(parcial, destino)
+                saidas.append(destino)
+        else:
+            parcial = saida + '.parcial'
+            if os.path.exists(saida): os.remove(saida)
+            with zipfile.ZipFile(parcial, 'w', zipfile.ZIP_STORED, allowZip64=False) as out:
+                for n, p in enumerate(packs, 1):
+                    avisar('pack', {'indice': n, 'nome': p})
+                    out.writestr(p + '.mcpack', criar_mcpack(p))
+            os.replace(parcial, saida)
+            saidas.append(saida)
     except BaseException:
-        try: os.remove(parcial)
-        except OSError: pass
+        for destino in (locals().get('parcial'),):
+            try: os.remove(destino)
+            except (OSError, TypeError): pass
         raise
-    info = {'saida': saida, 'packs': len(packs), 'arquivos': total, 'bytes': os.path.getsize(saida),
-            'segundos': time.monotonic() - inicio, 'build': build}
+    info = {'saida': saida, 'saidas': saidas, 'packs': len(packs), 'arquivos': total,
+            'bytes': sum(os.path.getsize(arq) for arq in saidas), 'segundos': time.monotonic() - inicio,
+            'build': build, 'por_pack': por_pack}
     avisar('fim', info)
     return info
 
@@ -198,8 +216,9 @@ class Tela:
     def _fim(self, d):
         self._fechar_pack()
         mb = d['bytes'] / 1048576
+        resultado = f'{len(d["saidas"])} .mcaddon' if d['por_pack'] else f'{d["packs"]} packs'
         print()
-        print(self.c('verde', '  ✅ Pronto!') + f'  {d["packs"]} packs, {mb:.0f} MiB, em {d["segundos"]:.0f}s (montagem {d["build"]})')
+        print(self.c('verde', '  ✅ Pronto!') + f'  {resultado}, {mb:.0f} MiB, em {d["segundos"]:.0f}s (montagem {d["build"]})')
         print(f'  📦 {d["saida"]}')
         print(self.c('cinza', '  Antes de importar, apague do jogo os packs antigos do Addon Pack (Configuracoes > Armazenamento).'))
         print()
@@ -210,9 +229,10 @@ def main():
     ap.add_argument('-o', '--saida', help=f'arquivo de saida (padrao: {SAIDA_PADRAO} na raiz do repositorio)')
     ap.add_argument('--build', type=int, help='numero somado ao 3o numero da versao (padrao: minutos desde 01/10/2026)')
     ap.add_argument('--simples', action='store_true', help='sem cores nem barra animada (uma linha por pack)')
+    ap.add_argument('--por-pack', action='store_true', help='gera um .mcaddon separado para cada pack em DESTINO')
     a = ap.parse_args()
     try:
-        empacotar(RAIZ, a.saida, a.build, Tela(a.simples))
+        empacotar(RAIZ, a.saida, a.build, Tela(a.simples), a.por_pack)
     except ErroEmpacotar as e:
         sys.exit(f'ERRO: {e}')
     except KeyboardInterrupt:

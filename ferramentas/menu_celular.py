@@ -9,16 +9,17 @@ O comando de sempre continua valendo: python ferramentas/empacotar.py
 import os, shutil, subprocess, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from empacotar import RAIZ, SAIDA_PADRAO, ErroEmpacotar, Tela, empacotar  # noqa: E402
+from empacotar import PASTA_POR_PACK, RAIZ, SAIDA_PADRAO, ErroEmpacotar, Tela, empacotar  # noqa: E402
 
 DOWNLOADS = os.path.expanduser('~/storage/downloads')
 T = Tela()
 
 
-def destino():
+def destino(por_pack=False):
     """No Termux com acesso aos arquivos, salva em Download (onde o gerenciador de arquivos acha)."""
-    if os.path.isdir(DOWNLOADS): return os.path.join(DOWNLOADS, SAIDA_PADRAO)
-    return os.path.join(RAIZ, SAIDA_PADRAO)
+    nome = PASTA_POR_PACK if por_pack else SAIDA_PADRAO
+    if os.path.isdir(DOWNLOADS): return os.path.join(DOWNLOADS, nome)
+    return os.path.join(RAIZ, nome)
 
 
 def abrir_no_minecraft(arq):
@@ -31,13 +32,13 @@ def abrir_no_minecraft(arq):
         print(f'  Abra este arquivo com o Minecraft pelo gerenciador de arquivos:\n  {arq}')
 
 
-def montar():
+def montar(por_pack=False):
     try:
-        info = empacotar(RAIZ, destino(), None, Tela())
+        info = empacotar(RAIZ, destino(por_pack), None, Tela(), por_pack)
     except ErroEmpacotar as e:
         print(T.c('vermelho', f'  ERRO: {e}')); return None
     except KeyboardInterrupt:
-        print(T.c('amarelo', '\n  Cancelado. Nenhum .mcaddon foi criado.')); return None
+        print(T.c('amarelo', '\n  Cancelado. A montagem foi interrompida.')); return None
     if not DOWNLOADS or not os.path.isdir(DOWNLOADS):
         print(T.c('amarelo', '  Dica: rode "termux-setup-storage" uma vez para salvar direto na pasta Download.'))
     return info['saida']
@@ -61,17 +62,20 @@ def menu():
         print(T.c('cinza', f'  .mcaddon: {estado}'))
         print()
         print(f'  {T.c("verde", "1")}  Montar o .mcaddon')
-        print(f'  {T.c("verde", "2")}  Abrir no Minecraft')
-        print(f'  {T.c("verde", "3")}  Montar e abrir no Minecraft')
-        print(f'  {T.c("verde", "4")}  Onde fica o arquivo')
+        print(f'  {T.c("verde", "2")}  Baixar pack por pack')
+        print(f'  {T.c("verde", "3")}  Abrir no Minecraft')
+        print(f'  {T.c("verde", "4")}  Montar e abrir no Minecraft')
+        print(f'  {T.c("verde", "5")}  Onde fica o arquivo')
         print(f'  {T.c("verde", "0")}  Sair')
         op = perguntar(T.c('amarelo', '\n  Escolha: '))
         if op == '1': montar()
-        elif op == '2': abrir_no_minecraft(arq)
+        elif op == '2': montar(por_pack=True)
         elif op == '3':
+            abrir_no_minecraft(arq)
+        elif op == '4':
             feito = montar()
             if feito: abrir_no_minecraft(feito)
-        elif op == '4': print(f'  {arq}')
+        elif op == '5': print(f'  Arquivo único: {arq}\n  Packs separados: {destino(True)}')
         elif op in ('0', 'q', 'sair', ''): return
         else: print(T.c('vermelho', '  Opcao invalida.'))
 
