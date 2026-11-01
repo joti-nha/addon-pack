@@ -1,28 +1,19 @@
 #!/usr/bin/env python3
-"""Gera anexos (modelos 3D na mao) derivados do Actions & Stuff para itens de outros addons.
+"""Gera os icones dos Grimorios e o render controller com brilho dos anexos do Compat.
 
 Uso: python ferramentas/gerar_anexos.py
-Precisa do Pillow. Le o A&S de packs/RP_ActionsAndStuff e grava:
-  - varas de pescar do Aquaculture com a vara 3D do A&S, pintada conforme o icone de cada vara
-    (packs/RP_AddonPack_Compat/attachables/as_compat/tm_aqc, models/entity/ap_aqc_rod.geo.json,
-     textures/ap/aqc_rod_*.png)
+Precisa do Pillow. Grava:
   - icones dos Grimorios (todas as cores e o invisivel); na mao eles e os Tomos Infinitos ficam em pixel art, sem modelo 3D
     (packs/RP_ForsakenGrimoire/textures/fgr; o invisivel tem um anexo vazio)
-Os arpoes do Aquaculture ficam com o anexo original do addon (pedido do João, 2026-10-31): nenhuma versao com o
-A&S (molde do tridente com o modelo 3D, molde da espada com o icone) aparecia na mao no jogo dele.
-Rode de novo depois de atualizar o A&S.
+As varas e os arpoes do Aquaculture ficam com o anexo original do addon (pedidos do João, 2026-10-31): itens com
+animacao propria ficam como no addon (ver ferramentas/animacao_propria.py).
 """
-import colorsys, copy, json, math, os, sys
+import colorsys, json, os
 from PIL import Image
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import brarchive  # noqa: E402
-
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-AS = os.path.join(RAIZ, 'packs', 'RP_ActionsAndStuff')
 COMPAT = os.path.join(RAIZ, 'packs', 'RP_AddonPack_Compat')
 FGR = os.path.join(RAIZ, 'packs', 'RP_ForsakenGrimoire')
-AQC = os.path.join(RAIZ, 'packs', 'RP_Aquaculture')
 
 
 def gravar_json(caminho, obj):
@@ -30,144 +21,11 @@ def gravar_json(caminho, obj):
     with open(caminho, 'w', encoding='utf-8') as f: json.dump(obj, f, ensure_ascii=False, separators=(',', ':'))
 
 
-def textura_as(nome):
-    return Image.open(os.path.join(AS, 'textures', 'oreville', 'ans', nome + '.png')).convert('RGBA')
-
-
-def reempacotar(geo, atlas):
-    """Copia so os pedacos do atlas (1024x1024) usados pela geometria para uma textura pequena e
-    reescreve os UV. Devolve (geometria nova, imagem)."""
-    geo = copy.deepcopy(geo)
-    faces = [u for b in geo['bones'] for c in b.get('cubes', []) for u in c.get('uv', {}).values()]
-    retang = {}
-    for u in faces:
-        (x, y), (w, h) = u['uv'], u['uv_size']
-        r = (math.floor(min(x, x + w)), math.floor(min(y, y + h)), math.ceil(max(x, x + w)), math.ceil(max(y, y + h)))
-        retang.setdefault(r, []).append(u)
-    # empacotamento em prateleiras, do mais alto para o mais baixo, com 1 px de folga
-    larg = 64
-    lugar, cx, cy, alt = {}, 0, 0, 0
-    for r in sorted(retang, key=lambda r: -(r[3] - r[1])):
-        w, h = r[2] - r[0], r[3] - r[1]
-        if cx + w > larg: cx, cy, alt = 0, cy + alt + 1, 0
-        lugar[r] = (cx, cy); cx += w + 1; alt = max(alt, h)
-    altura = 1
-    while altura < cy + alt + 1: altura *= 2
-    img = Image.new('RGBA', (larg, altura))
-    for r, (nx, ny) in lugar.items():
-        img.paste(atlas.crop(r), (nx, ny))
-        for u in retang[r]: u['uv'] = [u['uv'][0] - r[0] + nx, u['uv'][1] - r[1] + ny]
-    geo['description']['texture_width'], geo['description']['texture_height'] = larg, altura
-    return geo, img
-
-
 def luz(c): return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]
 
 
-def mapear_quantis(cores, paleta):
-    """Cada cor (ordenada por brilho) recebe a cor da paleta na mesma posicao relativa."""
-    cores = sorted(set(cores), key=luz)
-    paleta = sorted(paleta, key=luz)
-    return {c: paleta[min(len(paleta) - 1, int(i * len(paleta) / len(cores)))] for i, c in enumerate(cores)}
-
-
-# ------------------------------------------------------------------ varas do Aquaculture
-
-# Paletas tiradas dos icones de cada vara (escuro -> claro): corpo da vara e partes de metal.
-VARAS = {
-    'iron': ([(40, 30, 11), (73, 54, 21), (104, 78, 30), (137, 103, 39)], [(68, 68, 68), (100, 100, 100), (150, 150, 150), (216, 216, 216)]),
-    'gold': ([(63, 46, 14), (130, 93, 22), (152, 104, 14), (185, 139, 17), (233, 177, 21), (238, 192, 72)],
-             [(130, 93, 22), (185, 139, 17), (238, 192, 72), (253, 255, 118)]),
-    'diamond': ([(9, 45, 47), (14, 63, 54), (21, 99, 85), (5, 135, 99), (17, 179, 150)],
-                [(21, 99, 85), (17, 179, 150), (51, 235, 203), (164, 253, 240)]),
-    'netherite': ([(35, 16, 18), (47, 33, 34), (50, 39, 39), (74, 41, 64), (96, 52, 50), (115, 69, 67)],
-                  [(81, 68, 78), (93, 86, 93), (112, 103, 112), (134, 123, 134)]),
-    'neptunium': ([(1, 12, 33), (0, 25, 57), (3, 62, 80), (19, 72, 103), (65, 107, 142)],
-                  [(7, 163, 160), (9, 208, 178), (27, 245, 193), (140, 251, 220)]),
-}
-GEO_VARA = 'geometry.ap_aqc_rod'
-ESCALA_VARA_FP = 0.6
-
-
-def tipo_pixel(c):
-    h, l, s = colorsys.rgb_to_hls(*(v / 255 for v in c[:3]))
-    if s < 0.22 or (0.45 < h < 0.65 and s < 0.4): return 'metal' if l < 0.8 else 'linha'
-    if 0.04 < h < 0.13 and l < 0.85: return 'madeira'
-    return 'outro'
-
-
-def varas():
-    anexo = brarchive.anexo(AS, 'minecraft:carrot_on_a_stick')
-    d = anexo['minecraft:attachable']['description']
-    geo = copy.deepcopy(brarchive.geometria(AS, d['geometry']['default']))
-    # tira a cenoura (filhos de g3b64l) e pendura um anzol de metal no fim da linha
-    pai = {b['name']: b.get('parent') for b in geo['bones']}
-    def sob(nome, alvo):
-        while nome:
-            if nome == alvo: return True
-            nome = pai.get(nome)
-        return False
-    ponta = next(b for b in geo['bones'] if b['name'] == 'g3b64l')
-    geo['bones'] = [b for b in geo['bones'] if b['name'] == 'g3b64l' or not sob(b['name'], 'g3b64l')]
-    geo, img = reempacotar(geo, textura_as('czc'))
-    # um pixel de metal do proprio modelo para o anzol
-    metal = next((x, y) for y in range(img.height) for x in range(img.width)
-                 if img.getpixel((x, y))[3] and tipo_pixel(img.getpixel((x, y))) == 'metal')
-    uv = {f: {'uv': list(metal), 'uv_size': [1, 1]} for f in ('north', 'south', 'east', 'west', 'up', 'down')}
-    px, py, pz = ponta['pivot']
-    geo['bones'].append({'name': 'anzol', 'parent': 'g3b64l', 'pivot': [px, py, pz], 'cubes': [
-        {'origin': [px - 0.25, py - 0.25, pz - 2.5], 'size': [0.5, 0.5, 2.5], 'uv': uv},
-        {'origin': [px - 0.25, py - 1.25, pz - 2.5], 'size': [0.5, 1, 0.5], 'uv': uv}]})
-    geo['description']['identifier'] = GEO_VARA
-    gravar_json(os.path.join(COMPAT, 'models', 'entity', 'ap_aqc_rod.geo.json'),
-                {'format_version': '1.16.0', 'minecraft:geometry': [geo]})
-
-    # pixels da linha de pesca (ossos gh2im6fg72f4q*): no A&S tem cor de barbante; numa vara de pesca, linha clara
-    linha = set()
-    for b in geo['bones']:
-        if not b['name'].startswith('gh2im6fg72f4q'): continue
-        for c in b.get('cubes', []):
-            for u in c['uv'].values():
-                (x, y), (w, h) = u['uv'], u['uv_size']
-                for yy in range(math.floor(min(y, y + h)), math.ceil(max(y, y + h))):
-                    for xx in range(math.floor(min(x, x + w)), math.ceil(max(x, x + w))): linha.add((xx, yy))
-    px = img.load()
-    for (x, y) in linha:
-        if px[x, y][3]: px[x, y] = (*tom((236, 236, 236), luz(px[x, y]) / 230), px[x, y][3])
-    usadas = [img.getpixel((x, y)) for y in range(img.height) for x in range(img.width)
-              if img.getpixel((x, y))[3] and (x, y) not in linha]
-    for nome, (corpo, metal_pal) in VARAS.items():
-        troca = {}
-        troca.update(mapear_quantis([c[:3] for c in usadas if tipo_pixel(c) == 'madeira'], corpo))
-        troca.update(mapear_quantis([c[:3] for c in usadas if tipo_pixel(c) == 'metal'], metal_pal))
-        nova = img.copy()
-        npx = nova.load()
-        for y in range(img.height):
-            for x in range(img.width):
-                c = npx[x, y]
-                if c[3] and (x, y) not in linha and c[:3] in troca: npx[x, y] = (*troca[c[:3]], c[3])
-        tex = f'textures/ap/aqc_rod_{nome}'
-        os.makedirs(os.path.join(COMPAT, 'textures', 'ap'), exist_ok=True)
-        nova.save(os.path.join(COMPAT, tex + '.png'))
-        a = copy.deepcopy(anexo)
-        da = a['minecraft:attachable']['description']
-        da['identifier'] = f'tm_aqc:{nome}_fishing_rod'
-        da['geometry'] = {'default': GEO_VARA}
-        da['textures'] = {'default': tex, 'enchanted': 'textures/misc/enchanted_item_glint'}
-        da['materials'] = {'default': da['materials']['default'], 'enchanted': 'entity_alphatest_glint'}
-        da['render_controllers'] = ['controller.render.ap.as_item']
-        # em primeira pessoa a linha de pesca do jogo sai de um ponto fixo, perto do meio da vara do A&S:
-        # a vara encolhe ali para a linha sair da ponta
-        da['animations']['ap_vara_fp'] = 'animation.ap.vara_primeira_pessoa'
-        da['scripts']['animate'].append({'ap_vara_fp': 'c.is_first_person'})
-        gravar_json(os.path.join(COMPAT, 'attachables', 'as_compat', 'tm_aqc', f'{nome}_fishing_rod.json'), a)
-    gravar_json(os.path.join(COMPAT, 'animations', 'ap_aqc_vara.animation.json'), {'format_version': '1.8.0', 'animations': {
-        'animation.ap.vara_primeira_pessoa': {'loop': True, 'bones': {'7ak9af8jg5': {'scale': ESCALA_VARA_FP}}}}})
-    print('varas do Aquaculture: 5 anexos')
-
-
 def controlador():
-    """Render controller com brilho de encantamento, para os anexos gerados aqui."""
+    """Render controller com brilho de encantamento, usado pelos anexos gerados do Compat (armas do Cataclysmical)."""
     gravar_json(os.path.join(COMPAT, 'render_controllers', 'ap_as_item.render_controllers.json'), {
         'format_version': '1.10.0', 'render_controllers': {'controller.render.ap.as_item': {
             'geometry': 'Geometry.default',
@@ -327,6 +185,5 @@ def itens_grimorio():
 
 if __name__ == '__main__':
     controlador()
-    varas()
     grimorios()
     itens_grimorio()

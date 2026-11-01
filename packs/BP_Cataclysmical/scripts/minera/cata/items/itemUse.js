@@ -93,7 +93,7 @@ world.afterEvents.itemUse.subscribe(ev => {
                 player.startItemCooldown('spear', 30)
                 player.runCommand("particle mnra_cata:twilight_edge_phantom ~ ~ ~")
                 player.runCommand("particle mnra_cata:twilight_edge_impact ~ ~ ~")
-                player.runCommand("playanimation @s animation.ap.lanca_golpe") // [Addon Pack] golpe normal em vez do giro da lanca
+                player.runCommand("playanimation @s animation.mnra_cataclysmplayer.spear")
                 player.runCommand("playsound sound.spear_dash @s ^^^1 1 1 1")
 
             }
@@ -103,7 +103,7 @@ world.afterEvents.itemUse.subscribe(ev => {
             if (!player.getItemCooldown('spear')) {
                 player.applyKnockback({ x: -player.getViewDirection().x * 2.5, z: -player.getViewDirection().z * 2.5 }, 0.3);
                 player.startItemCooldown('spear', 10)
-                player.runCommand("playanimation @s animation.ap.lanca_golpe") // [Addon Pack] golpe normal em vez do giro da lanca
+                player.runCommand("playanimation @s animation.mnra_cataclysmplayer.spear")
                 player.runCommand("playsound sound.spear_dash @s ^^^1 1 1.7 1")
 
             }

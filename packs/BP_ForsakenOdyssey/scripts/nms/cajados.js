@@ -113,9 +113,9 @@ function castWith(player, item, st) {
   try { castScroll(player, item, st, found.item, found.slot); } catch (e) { console.warn("[Addon Pack] cajado", e); }
 }
 
-// Conjuracao: a varinha gira enquanto o botao de usar fica apertado (CAST_TICKS).
-// As varinhas tem uso longo (ferramentas/varinhas.py): o uso nao recomeca sozinho, o feitico sai uma vez por toque
-// e o anexo fica no quadro carregado ate soltar. Soltar antes cancela.
+// Conjuracao: o feitico sai depois de CAST_TICKS com o botao de usar apertado (a varinha gira com a animacao original
+// do Forsaken enquanto o botao esta apertado). As varinhas tem uso longo (ferramentas/varinhas.py): o uso nao recomeca
+// sozinho e o feitico sai uma vez por toque. Soltar antes cancela.
 // [Addon Pack, 2026-10-31] O tempo de cast conta em tempo real (Date.now), sem esperar a animacao nem o fim do uso:
 // com o jogo travado os ticks andam devagar e o feitico demorava muito mais que o tempo de cast (pedido do João).
 const castInfo = (it) => {
