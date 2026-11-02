@@ -12,6 +12,7 @@ Nada desta versão foi testado no jogo.
   - O script do Unified Core passou para `@minecraft/server` 2.9.0 (o mesmo do Dungeons) para ver o balanço do braço mesmo sem acertar nada, como o A&S conta a sequência.
 
 - **Martelo de Guerra Piglin** (Forsaken Odyssey) com as animações da maça do A&S: o anexo da maça do A&S com o modelo do martelo de pé (`ferramentas/martelo_piglin.py`) e a etiqueta `oreville:is_mace` no item.
+- **Animações de comer/beber e arremesso do A&S**: agora cobrem 351 comidas/bebidas e 53 itens arremessáveis de addons. Anexos próprios mantêm geometria, texturas, scripts e renderizadores; o Compat acrescenta o osso-pai neutro exigido pelas animações e usa a textura já referenciada quando não há PNG local (`ferramentas/anexos_2d.py`).
 
 ### Otimizado
 - **Funções por tick**: o `functions/tick.json` unido estava em 6 packs (Dungeons, Better on Bedrock, CommonSense, DarkAge, Mowzie e RnR), então as funções dele podiam rodar até 6 vezes por tick. Agora só o Dungeons tem `tick.json` (só o `stun_cd`, que conta tempo por tick) e o Unified Core roda o resto espaçado (`BP_UnifiedCore/scripts/funcoes.js`): opções, efeitos de itens, morte e primeira entrada do CommonSense e armaduras do DarkAge a cada 0,5 s; a preparação do mundo do CommonSense (17 placares, 14 valores e a etiqueta das montarias) e as regras de comando do BoB a cada 2 s. A quebra de folhas pela montaria (opção do CommonSense) roda a cada 2 ticks, só se estiver ligada. Os efeitos dessas funções duram 1 s ou mais, então nada muda no jogo.

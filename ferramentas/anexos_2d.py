@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Anexos do Actions & Stuff para os itens e blocos de addons que ainda nao tem modelo na mao (pedido do João,
-2026-10-28: "todos os itens de addons receberem suas animacoes mesmo em 2d").
+"""Anexos e animacoes do Actions & Stuff para itens e blocos de addons.
 
-Sem anexo, o A&S desenha o item com a pose generica. Com um anexo copiado de um item do jogo, o item ganha a pose e as
-animacoes daquele item: segurar bloco com as duas maos, arremessar, comer, golpear com ferramenta etc. Para cada item
-ou bloco de addon sem anexo, este script copia o anexo do A&S do molde certo e troca so o modelo e a textura:
+Sem anexo, o A&S desenha o item com a pose generica. Para itens sem anexo, este script copia o anexo do A&S do molde
+certo e troca so o modelo e a textura:
   - bloco de cubo inteiro: molde minecraft:dirt (segurar bloco); o modelo e um cubo com as texturas do bloco;
   - item arremessavel (minecraft:throwable): molde minecraft:snowball;
   - comida e bebida: molde minecraft:apple (comer);
@@ -12,9 +10,11 @@ ou bloco de addon sem anexo, este script copia o anexo do A&S do molde certo e t
     icone na diagonal como no modo 2D do A&S (mesmo jeito das armas do Cataclysmical);
   - o resto: molde minecraft:feather (pose comum, item de pe).
 O icone vira um modelo de faixas de 1 pixel (uma por trecho continuo de cada linha), que aparece na mao; a malha plana
-texture_meshes nao aparece (ver modpack-armas-anexos).
-Ficam de fora: itens com anexo (de qualquer pack), armaduras e itens vestiveis, arcos/bestas/escudos e o que tem
-animacao de uso propria, blocos escondidos do inventario e blocos com modelo proprio (nao cubo).
+texture_meshes nao aparece (ver modpack-armas-anexos). Anexos existentes de comidas e itens arremessaveis recebem
+apenas as animacoes de uso do A&S, mantendo geometria, texturas, scripts e renderizadores originais.
+Quando a geometria nao tem o osso `item` usado pelo A&S, o Compat adiciona um osso-pai neutro sem alterar a pose.
+Ficam de fora da geracao 2D: armaduras e itens vestiveis, arcos/bestas/escudos e o que tem animacao de uso propria,
+blocos escondidos do inventario e blocos com modelo proprio (nao cubo).
 Os anexos so valem com o A&S ativo (campo "item"), como os do Cataclysmical. Item com o mesmo nome de uma entidade
 (peixes, flechas, Boneco de Treino) ganha '.ap' no identificador do anexo: com o nome igual, o anexo toma o lugar da
 entidade no mundo.
@@ -74,15 +74,19 @@ def tentar(p):
 # ---------- o que ja existe ----------
 
 def anexos_existentes():
-    ids = set()
-    for p in glob.glob(os.path.join(PACKS, 'RP_*', 'attachables', '**', '*.json'), recursive=True):
+    anexos = {}
+    for p in sorted(glob.glob(os.path.join(PACKS, 'RP_*', 'attachables', '**', '*.json'), recursive=True)):
         if p.startswith(SAIDA): continue
         j = tentar(p)
         try: d = j['minecraft:attachable']['description']
         except (TypeError, KeyError): continue
-        ids.add(d['identifier'])
-        ids.update(d.get('item') or {})  # anexo com outro nome ligado ao item pelo campo "item"
-    return ids
+        anexos.setdefault(d['identifier'], j)
+        itens = d.get('item') or {}
+        if not isinstance(itens, dict):
+            raise ValueError(f'{p}: description.item nao e um objeto')
+        for ident in itens:
+            anexos.setdefault(ident, j)
+    return anexos
 
 
 def indice_texturas(arquivo):
@@ -226,12 +230,143 @@ def anexo(molde, ident, geo, tex):
     return a
 
 
+def anexo_com_animacao(anexo_original, molde, ident):
+    a = copy.deepcopy(anexo_original)
+    d = a['minecraft:attachable']['description']
+    dm = molde['minecraft:attachable']['description']
+    animacoes = d.setdefault('animations', {})
+    scripts = d.setdefault('scripts', {})
+    if not isinstance(animacoes, dict) or not isinstance(scripts, dict):
+        raise ValueError(f'{d["identifier"]}: animations/scripts nao sao objetos')
+    aliases = {}
+
+    for chave, valor in dm.get('animations', {}).items():
+        alias = f'ap_as_{chave}'
+        sufixo = 2
+        while alias in animacoes and animacoes[alias] != valor:
+            alias = f'ap_as_{chave}_{sufixo}'
+            sufixo += 1
+        animacoes.setdefault(alias, copy.deepcopy(valor))
+        aliases[chave] = alias
+
+    for chave in ('initialize', 'pre_animation'):
+        destino = scripts.setdefault(chave, [])
+        if not isinstance(destino, list):
+            raise ValueError(f'{d["identifier"]}: scripts.{chave} nao e uma lista')
+        for linha in so_na_mao(dm.get('scripts', {}).get(chave, [])):
+            if linha not in destino:
+                destino.append(copy.deepcopy(linha))
+
+    animate = scripts.setdefault('animate', [])
+    if not isinstance(animate, list):
+        raise ValueError(f'{d["identifier"]}: scripts.animate nao e uma lista')
+    for entrada in dm.get('scripts', {}).get('animate', []):
+        if isinstance(entrada, str):
+            entrada = aliases.get(entrada, entrada)
+        elif isinstance(entrada, dict):
+            entrada = {aliases.get(nome, nome): condicao for nome, condicao in entrada.items()}
+        if entrada not in animate:
+            animate.append(copy.deepcopy(entrada))
+
+    variaveis = dm.get('scripts', {}).get('variables', {})
+    destino_variaveis = scripts.setdefault('variables', {})
+    if not isinstance(variaveis, dict) or not isinstance(destino_variaveis, dict):
+        raise ValueError(f'{d["identifier"]}: scripts.variables nao e um objeto')
+    for nome, valor in variaveis.items():
+        destino_variaveis.setdefault(nome, copy.deepcopy(valor))
+
+    parent = dm.get('scripts', {}).get('parent_setup')
+    if isinstance(parent, str):
+        parent_atual = scripts.get('parent_setup')
+        if parent_atual is None:
+            scripts['parent_setup'] = parent
+        elif not isinstance(parent_atual, str):
+            raise ValueError(f'{d["identifier"]}: scripts.parent_setup nao e uma expressao')
+        elif parent not in parent_atual:
+            scripts['parent_setup'] = f'{parent.rstrip(";")};{parent_atual}'
+
+    if 'scale' in dm.get('scripts', {}):
+        scripts.setdefault('scale', copy.deepcopy(dm['scripts']['scale']))
+
+    itens = d.setdefault('item', {})
+    if not isinstance(itens, dict):
+        raise ValueError(f'{d["identifier"]}: description.item nao e um objeto')
+    itens.setdefault(ident, 'c.owning_entity -> v.actions_and_stuff;')
+    return a
+
+
+def indice_geometrias():
+    geometrias = {}
+    for p in sorted(glob.glob(os.path.join(PACKS, 'RP_*', 'models', '**', '*.json'), recursive=True)):
+        j = tentar(p)
+        if not j: continue
+        for geo in j.get('minecraft:geometry', []):
+            ident = geo.get('description', {}).get('identifier')
+            if ident: geometrias.setdefault(ident, geo)
+    return geometrias
+
+
+def geometria_com_osso_item(ident, namespace, geometrias, adicionadas, cache):
+    chave = (namespace, ident)
+    if chave in cache: return cache[chave]
+    original = geometrias.get(ident)
+    if original is None:
+        original = brarchive.geometria(AS, ident)
+    geo = copy.deepcopy(original)
+    ossos = geo['bones']
+    if any(osso.get('name') == 'item' for osso in ossos):
+        cache[chave] = ident
+        return ident
+
+    nome = ident.replace(':', '_').replace('.', '_')
+    novo_ident = f'geometry.ap.as_use.{namespace}.{nome}'
+    existentes = {g['description']['identifier'] for g in adicionadas[namespace]}
+    base = novo_ident
+    sufixo = 2
+    while novo_ident in existentes:
+        novo_ident = f'{base}_{sufixo}'
+        sufixo += 1
+    for osso in ossos:
+        if osso.get('parent') is None:
+            osso['parent'] = 'item'
+    ossos.insert(0, {'name': 'item', 'pivot': [0, 0, 0]})
+    geo['description']['identifier'] = novo_ident
+    adicionadas[namespace].append(geo)
+    cache[chave] = novo_ident
+    return novo_ident
+
+
+def aplicar_osso_item(anexo, ident, geometrias, adicionadas, cache):
+    namespace = ident.split(':', 1)[0]
+    referencias = anexo['minecraft:attachable']['description'].get('geometry')
+    if not isinstance(referencias, dict):
+        raise ValueError(f'{ident}: description.geometry nao e um objeto')
+    for variante, geo in referencias.items():
+        if not isinstance(geo, str):
+            raise ValueError(f'{ident}: geometria {variante} nao e um identificador')
+        referencias[variante] = geometria_com_osso_item(geo, namespace, geometrias, adicionadas, cache)
+
+
 # ---------- itens e blocos dos addons ----------
 
 def icone_do_item(c, itex):
     ic = c.get('minecraft:icon')
     if isinstance(ic, dict): ic = ic.get('textures', {}).get('default') or ic.get('texture')
     return itex.get(ic) if isinstance(ic, str) else None
+
+
+def icone_por_identificador(ident, c, itex, terreno):
+    candidatos = [ident]
+    placer = c.get('minecraft:block_placer')
+    bloco = placer.get('block') if isinstance(placer, dict) else None
+    if isinstance(bloco, str) and bloco not in candidatos:
+        candidatos.append(bloco)
+    for candidato in candidatos:
+        chave = candidato.replace(':', '_')
+        caminho = itex.get(candidato) or terreno.get(candidato) or itex.get(chave) or terreno.get(chave)
+        if caminho:
+            return caminho
+    return None
 
 
 def tipo_do_item(c):
@@ -310,6 +445,7 @@ def main():
         return moldes[nome]
 
     geos = defaultdict(list)  # namespace -> geometrias
+    geometrias, geometrias_adicionadas, geometrias_cache = None, defaultdict(list), {}
     cubos_feitos = {}
     cont, pulos = Counter(), Counter()
 
@@ -317,12 +453,29 @@ def main():
         j = tentar(p)
         if not j or 'minecraft:item' not in j: continue
         it = j['minecraft:item']; ident = it['description']['identifier']
-        if ident.startswith('minecraft:') or ident in tem: continue
+        if ident.startswith('minecraft:'): continue
         c = it.get('components', {})
         tipo = tipo_do_item(c)
+        if ident in tem:
+            if tipo in ('arremesso', 'comida') and tem[ident] is not None:
+                molde_anexo, _ = molde(MOLDE[tipo])
+                adaptado = anexo_com_animacao(tem[ident], molde_anexo, ident)
+                if geometrias is None:
+                    geometrias = indice_geometrias()
+                aplicar_osso_item(adaptado, ident, geometrias, geometrias_adicionadas, geometrias_cache)
+                ns, nome = ident.split(':', 1)
+                gravar(os.path.join(SAIDA, ns, nome.replace('/', '_') + '.json'), adaptado)
+                tem[ident] = adaptado
+                cont[f'{tipo}_com_anexo'] += 1
+            continue
         if not tipo: pulos['uso proprio/vestivel'] += 1; continue
         cam = icone_do_item(c, itex)
+        if not cam and tipo in ('arremesso', 'comida'):
+            cam = icone_por_identificador(ident, c, itex, terreno)
         img = imagem(cam) if cam else None
+        if not img and cam and tipo in ('arremesso', 'comida'):
+            # Texturas vanilla podem existir no jogo sem uma copia PNG nos packs.
+            img = Image.new('RGBA', (16, 16), (255, 255, 255, 255))
         if not img: pulos['sem icone'] += 1; continue
         quadro = min(img.height, img.width) if img.height > img.width else img.height
         ns, nome = ident.split(':', 1)
@@ -337,7 +490,7 @@ def main():
         geos[ns].append(g)
         gravar(os.path.join(SAIDA, ns, nome.replace('/', '_') + '.json'), anexo(m, ident, gid, cam))
         cont[tipo.split(':')[-1]] += 1
-        tem.add(ident)
+        tem[ident] = None
 
     m, mg = molde(MOLDE['bloco'])
     for p in sorted(glob.glob(os.path.join(PACKS, 'BP_*', 'blocks', '**', '*.json'), recursive=True)):
@@ -359,9 +512,11 @@ def main():
         ns, nome = ident.split(':', 1)
         gravar(os.path.join(SAIDA, ns, 'bloco_' + nome.replace('/', '_') + '.json'), anexo(m, ident, cubos_feitos[chave], cam))
         cont['bloco'] += 1
-        tem.add(ident)
+        tem[ident] = None
 
-    for ns, lista in geos.items():
+    for ns in set(geos) | set(geometrias_adicionadas):
+        lista = geos[ns]
+        lista.extend(geometrias_adicionadas[ns])
         gravar(os.path.join(COMPAT, 'models', 'entity', f'ap_2d_{ns.replace(".", "_")}.geo.json'),
                {'format_version': '1.16.0', 'minecraft:geometry': lista})
     print('anexos:', dict(cont), 'total', sum(cont.values()))
