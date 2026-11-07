@@ -91,7 +91,12 @@ function initPlayer(player) {
   if (inv && inv.container) {
     for (let i = 0; i < inv.container.size; i++) {
       const item = inv.container.getItem(i);
-      if (item && item.typeId === "minecraft:book" && item.nameTag === "\xA7l\xA76RPG Guide") {
+      if (isLegacyRPGGuide(item)) {
+        inv.container.setItem(i, createRPGGuideItem());
+        hasBook = true;
+        break;
+      }
+      if (isRPGGuideItem(item)) {
         hasBook = true;
         break;
       }
@@ -161,16 +166,28 @@ export function giveOrDropItem(player, itemStack) {
 }
 
 function giveRPGBook(player) {
-  const book = new ItemStack("minecraft:book", 1);
-  book.nameTag = "\xA7l\xA76RPG Guide";
-  book.keepOnDeath = true;
-  book.lockMode = ItemLockMode.inventory;
+  const book = createRPGGuideItem();
   const added = giveOrDropItem(player, book);
   if (added) {
     player.sendMessage("\xA7a[Sistema] Voc\xEA recebeu o \xA76RPG Guide\xA7a!");
   } else {
     player.sendMessage("\xA7a[Sistema] Seu invent\xE1rio estava cheio! O \xA76RPG Guide\xA7a caiu aos seus p\xE9s.");
   }
+}
+
+function isLegacyRPGGuide(item) {
+  return item?.typeId === "minecraft:book" && item.nameTag === "\xA7l\xA76RPG Guide";
+}
+
+function isRPGGuideItem(item) {
+  return item?.typeId === "rpg:guide_book" || isLegacyRPGGuide(item);
+}
+
+function createRPGGuideItem() {
+  const book = new ItemStack("rpg:guide_book", 1);
+  book.keepOnDeath = true;
+  book.lockMode = ItemLockMode.inventory;
+  return book;
 }
 
 
@@ -2472,7 +2489,7 @@ function getPlayerScoreSafe(objective, player, fallback = 0) {
 world8.afterEvents.itemUse.subscribe((event) => {
   const player = event.source;
   if (player.typeId !== "minecraft:player") return;
-  const isGuideBook = event.itemStack.nameTag === "\xA7l\xA76RPG Guide" || (event.itemStack.typeId === "minecraft:book" && player.isSneaking);
+  const isGuideBook = isRPGGuideItem(event.itemStack) || (event.itemStack.typeId === "minecraft:book" && player.isSneaking);
   if (!isGuideBook) return;
   system6.run(() => {
       try {
@@ -2845,7 +2862,7 @@ function showItemLockUI(player) {
   if (inv && inv.container) {
     for (let i = 0; i < inv.container.size; i++) {
       const item = inv.container.getItem(i);
-      if (item && item.typeId === "minecraft:book" && item.nameTag === "\xA7l\xA76RPG Guide") {
+      if (isRPGGuideItem(item)) {
         if (item.lockMode && item.lockMode !== "none") {
           isLocked = true;
         }
@@ -5156,7 +5173,7 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
       for (let i = 0; i < inv.container.size; i++) {
         const item = inv.container.getItem(i);
         if (item) {
-          const isRpgGuide = item.typeId === "minecraft:book" && item.nameTag === "\xA7l\xA76RPG Guide";
+          const isRpgGuide = isRPGGuideItem(item);
           const isRangerBow = item.typeId === "minecraft:bow" && item.nameTag === "\xA76Ranger Bow";
           if (isRpgGuide || isRangerBow) {
             item.lockMode = unlocking ? ItemLockMode5.none : ItemLockMode5.inventory;
@@ -5236,7 +5253,6 @@ system9.afterEvents.scriptEventReceive.subscribe((event) => {
 // PILLAGER BOSS FIGHT SYSTEM
 // ==========================================
 import "./systems/boss_pillager.js";
-
 
 
 

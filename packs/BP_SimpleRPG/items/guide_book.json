@@ -1,0 +1,40 @@
+{
+  "format_version": "1.26.30",
+  "minecraft:item": {
+    "description": {
+      "identifier": "rpg:guide_book",
+      "menu_category": {
+        "category": "equipment",
+        "is_hidden_in_commands": false
+      }
+    },
+    "components": {
+      "minecraft:display_name": {
+        "value": "item.rpg:guide_book.name"
+      },
+      "minecraft:icon": {
+        "textures": {
+          "default": "rpg_guide"
+        }
+      },
+      "minecraft:max_stack_size": {
+        "value": 1
+      },
+      "minecraft:keep_on_death": {},
+      "minecraft:item_lock": {
+        "mode": "lock_in_inventory"
+      },
+      "minecraft:fire_resistant": {
+        "value": true
+      },
+      "minecraft:should_despawn": {
+        "value": false
+      },
+      "minecraft:tags": {
+        "tags": [
+          "rpg:guide_book"
+        ]
+      }
+    }
+  }
+}
